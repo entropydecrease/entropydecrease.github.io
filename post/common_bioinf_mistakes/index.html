@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>bioinf常见的一些错误（转载） - Even - A super concise theme for Hugo</title>
+  <meta name="renderer" content="webkit" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+<meta name="theme-color" content="#f8f5ec" />
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+
+
+<meta name="author" content="Entropy Decrease" /><meta name="description" content="This nice thread(https://www.biostars.org/p/7126/) summarized a lot of common mistakes people (including me, of course) might make in daily work. * forget to check both strands * generate random genomic sites without avoiding masked (NNN) gaps * confuse genome freezes and even species * a lot of off-by-one errors due to switching between formats: Bed is 0 based; GFF/GTF are 1-based * Trusting that a downloaded file is actually fully downloaded" /><meta name="keywords" content="Hugo, theme, even" />
+
+
+
+
+
+
+<meta name="generator" content="Hugo 0.109.0 with theme even" />
+
+
+<link rel="canonical" href="http://localhost:1313/post/common_bioinf_mistakes/" />
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/manifest.json">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+
+
+
+<link href="/sass/main.min.f92fd13721ddf72129410fd8250e73152cc6f2438082b6c0208dc24ee7c13fc4.css" rel="stylesheet">
+<link href="/lib/fancybox/jquery.fancybox-3.1.20.min.css" rel="stylesheet">
+
+
+<meta property="og:title" content="bioinf常见的一些错误（转载）" />
+<meta property="og:description" content="This nice thread(https://www.biostars.org/p/7126/) summarized a lot of common mistakes people (including me, of course) might make in daily work. * forget to check both strands * generate random genomic sites without avoiding masked (NNN) gaps * confuse genome freezes and even species * a lot of off-by-one errors due to switching between formats: Bed is 0 based; GFF/GTF are 1-based * Trusting that a downloaded file is actually fully downloaded" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://localhost:1313/post/common_bioinf_mistakes/" /><meta property="article:section" content="post" />
+<meta property="article:published_time" content="2015-03-14T00:00:00+00:00" />
+<meta property="article:modified_time" content="2015-03-14T00:00:00+00:00" />
+<meta itemprop="name" content="bioinf常见的一些错误（转载）">
+<meta itemprop="description" content="This nice thread(https://www.biostars.org/p/7126/) summarized a lot of common mistakes people (including me, of course) might make in daily work. * forget to check both strands * generate random genomic sites without avoiding masked (NNN) gaps * confuse genome freezes and even species * a lot of off-by-one errors due to switching between formats: Bed is 0 based; GFF/GTF are 1-based * Trusting that a downloaded file is actually fully downloaded"><meta itemprop="datePublished" content="2015-03-14T00:00:00+00:00" />
+<meta itemprop="dateModified" content="2015-03-14T00:00:00+00:00" />
+<meta itemprop="wordCount" content="411">
+<meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="bioinf常见的一些错误（转载）"/>
+<meta name="twitter:description" content="This nice thread(https://www.biostars.org/p/7126/) summarized a lot of common mistakes people (including me, of course) might make in daily work. * forget to check both strands * generate random genomic sites without avoiding masked (NNN) gaps * confuse genome freezes and even species * a lot of off-by-one errors due to switching between formats: Bed is 0 based; GFF/GTF are 1-based * Trusting that a downloaded file is actually fully downloaded"/>
+
+<!--[if lte IE 9]>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
+<![endif]-->
+
+<!--[if lt IE 9]>
+  <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+<![endif]-->
+
+</head>
+<body>
+  <div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/" class="logo">阅读、思考、写作，都是熵减的过程</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    <a href="/">
+        <li class="mobile-menu-item">Home</li>
+      </a><a href="/post/">
+        <li class="mobile-menu-item">Archives</li>
+      </a><a href="/tags/">
+        <li class="mobile-menu-item">Tags</li>
+      </a><a href="/categories/">
+        <li class="mobile-menu-item">Categories</li>
+      </a>
+  </ul>
+
+  
+
+
+</nav>
+
+  <div class="container" id="mobile-panel">
+    <header id="header" class="header">
+        <div class="logo-wrapper">
+  <a href="/" class="logo">阅读、思考、写作，都是熵减的过程</a>
+</div>
+
+
+
+
+
+<nav class="site-navbar">
+  <ul id="menu" class="menu">
+    <li class="menu-item">
+        <a class="menu-item-link" href="/">Home</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/post/">Archives</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/tags/">Tags</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/categories/">Categories</a>
+      </li>
+  </ul>
+</nav>
+
+    </header>
+
+    <main id="main" class="main">
+      <div class="content-wrapper">
+        <div id="content" class="content">
+          <article class="post">
+    
+    <header class="post-header">
+      <h1 class="post-title">bioinf常见的一些错误（转载）</h1>
+
+      <div class="post-meta">
+        <span class="post-time"> 2015-03-14 </span>
+        <div class="post-category">
+            <a href="/categories/bioinf/"> bioinf </a>
+            </div>
+        
+      </div>
+    </header>
+
+    <div class="post-toc" id="post-toc">
+  <h2 class="post-toc-title">Contents</h2>
+  <div class="post-toc-content always-active">
+    <nav id="TableOfContents"></nav>
+  </div>
+</div>
+    <div class="post-content">
+      <p>This nice thread(<a href="https://www.biostars.org/p/7126/">https://www.biostars.org/p/7126/</a>) summarized a lot of common mistakes people (including me, of course) might make in daily work.</p>
+<pre><code>* forget to check both strands
+* generate random genomic sites without avoiding masked (NNN) gaps
+* confuse genome freezes and even species
+* a lot of off-by-one errors due to switching between formats: Bed is 0 based;  GFF/GTF are 1-based
+* Trusting that a downloaded file is actually fully downloaded
+* Trusting that an aligner will accept a list of query files instead of just taking the first and ignoring the rest (quiz: which ones am i talking about?)
+* Assuming that the quality scores in a FASTQ file are from a great Sanger-encoded run instead of a very poor Illumina-1.3 run
+* Assuming chr1 is followed by chr2 not chr10
+* off-by-one errors
+* regex errors
+* parsing a complex alignment/file format incorrectly (e.g. BLAST or GenBank, probably the original rationale for developing BioPerl)
+* failing to account for strand
+* failing to revcomp sequences
+* failing to account for the last element in a file (because of a improper loop condition or no EOL character on last line)
+* failing to account for OS dependent line breaks
+* using the wrong assembly/annotation/release
+* using the wrong genome coordinate system
+* using the wrong file (multiple versions, version skew)
+* failing to account for nested/intercalated annotation features (e.g. genes)
+* assuming all jobs have completed on a cluster
+* deleting files
+* not randomizing your data properly
+* improper use of statistical tests
+* not documenting methods fully (to check and correct all of the above)
+* Run a batch BLAST job and forgetting to put the &quot;-o something.out&quot; option. Then switching off the monitor and coming the next day to see a bunch of characters in my terminal
+* &quot;tar -zxvf&quot; without checking the tar file before, I have decompressed thousands of files in my current directory assuming they came in their own folder.
+</code></pre>
+<p>Another very important one is: <code>gene name might be hacked by MS Excel.</code></p>
+<p>There are 11 human gene names in March: MARCH1 to MARCH11, and one in December: DEC1. And excel will treat them as date!</p>
+<p>So make sure to ask excel to open data as text when working with gene names.</p>
+<p>Please refer to this paper for more info.</p>
+<p>1.Zeeberg, B. R. et al. Mistaken Identifiers: Gene name errors can be introduced inadvertently when using Excel in bioinformatics. BMC Bioinformatics 5, 80 (2004).  <a href="http://www.biomedcentral.com/1471-2105/5/80">http://www.biomedcentral.com/1471-2105/5/80</a></p>
+
+    </div>
+
+    
+<footer class="post-footer">
+      
+      <nav class="post-nav">
+        <a class="prev" href="/post/some_history_of_my_hometown/">
+            <i class="iconfont icon-left"></i>
+            <span class="prev-text nav-default">说说我的家乡</span>
+            <span class="prev-text nav-mobile">Prev</span>
+          </a>
+        
+      </nav>
+    </footer>
+  </article>
+        </div>
+        
+
+  
+
+  
+
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="social-links">
+      <a href="mailto:your@email.com" class="iconfont icon-email" title="email"></a>
+      <a href="http://localhost:1313" class="iconfont icon-github" title="github"></a>
+  <a href="http://localhost:1313/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+</div>
+
+<div class="copyright">
+  <span class="power-by">
+    Powered by <a class="hexo-link" href="https://gohugo.io">Hugo</a>
+  </span>
+  <span class="division">|</span>
+  <span class="theme-info">
+    Theme - 
+    <a class="theme-link" href="https://github.com/olOwOlo/hugo-theme-even">Even</a>
+  </span>
+
+  
+
+  <span class="copyright-year">
+    &copy; 
+    2015 - 
+    2023<span class="heart"><i class="iconfont icon-heart"></i></span><span>Entropy Decrease</span>
+  </span>
+</div>
+
+    </footer>
+
+    <div class="back-to-top" id="back-to-top">
+      <i class="iconfont icon-up"></i>
+    </div>
+  </div>
+  <script type="text/javascript" src="/lib/jquery/jquery-3.2.1.min.js"></script>
+  <script type="text/javascript" src="/lib/slideout/slideout-1.0.1.min.js"></script>
+  <script type="text/javascript" src="/lib/fancybox/jquery.fancybox-3.1.20.min.js"></script>
+
+
+
+<script type="text/javascript" src="/js/main.min.4ae89da218555efa0e7093a20b92017d2e1202b66fff9fc2edf4cb8d44b44c6e.js"></script>
+  <script type="text/javascript">
+    window.MathJax = {
+      tex: {
+        inlineMath: [['$','$'], ['\\(','\\)']],
+        }
+    };
+  </script>
+  <script async src="https://cdn.jsdelivr.net/npm/mathjax@3.0.5/es5/tex-mml-chtml.js" integrity="sha256-HGLuEfFcsUJGhvB8cQ8nr0gai9EucOOaIxFw7qxmd+w=" crossorigin="anonymous"></script>
+
+
+
+
+
+
+
+
+</body>
+</html>
