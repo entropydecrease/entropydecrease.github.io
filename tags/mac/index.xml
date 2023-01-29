@@ -6,22 +6,13 @@
     <description>Recent content in Mac on Entropy Decrease</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Thu, 28 Jan 2016 00:00:00 +0000</lastBuildDate><atom:link href="https://entropydecrease.github.io/tags/mac/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>install perl environment on Mac</title>
-      <link>https://entropydecrease.github.io/post/install-perl-environment-on-mac/</link>
-      <pubDate>Thu, 28 Jan 2016 00:00:00 +0000</pubDate>
-      
-      <guid>https://entropydecrease.github.io/post/install-perl-environment-on-mac/</guid>
-      <description>install perlbrew 1 2 3 4 5 6 7 # override the default installation directory ($HOME/perl5) in .zshrc export PERLBREW_ROOT=$HOME/.local/perl5 export PERLBREW_CPAN_MIRROR=http://mirrors.ustc.edu.cn/CPAN/ &amp;gt; curl -L http://xrl.us/perlbrewinstall | bash &amp;gt; echo &amp;#34;source ~/.local/perl5/perlbrew/etc/bashrc&amp;#34; &amp;gt;&amp;gt; ~/.zshrc install perl and cpanm 1 2 3 4 5 6 7 &amp;gt; perlbrew available &amp;gt; perlbrew install stable &amp;gt; perlbrew list &amp;gt; perlbrew switch perl-5.22.1 &amp;gt; perlbrew install install-cpanm &amp;gt; alias cpanm=&amp;#39;cpanm --from http://mirrors.ustc.edu.cn/CPAN/ &amp;#39; install</description>
-    </item>
-    
+    <lastBuildDate>Mon, 13 Apr 2015 00:00:00 +0000</lastBuildDate><atom:link href="https://entropydecrease.github.io/tags/mac/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>设置hostname，避免DHCP修改hostname</title>
-      <link>https://entropydecrease.github.io/post/2015_04_13_set-hostname-not-modifed-by-dhcp/</link>
+      <link>https://entropydecrease.github.io/post/set_hostname/</link>
       <pubDate>Mon, 13 Apr 2015 00:00:00 +0000</pubDate>
       
-      <guid>https://entropydecrease.github.io/post/2015_04_13_set-hostname-not-modifed-by-dhcp/</guid>
+      <guid>https://entropydecrease.github.io/post/set_hostname/</guid>
       <description>It can be annoying to see my hostname being modifed each time I connect to a different WIFI. It is because the hostname was never set. &amp;gt; scutil --get HostName HostName: not set So we just need to set the hostname: &amp;gt; sudo scutil --set HostName &amp;quot;new_hostname&amp;quot; Password: &amp;gt; scutil --get HostName new_hostname</description>
     </item>
     

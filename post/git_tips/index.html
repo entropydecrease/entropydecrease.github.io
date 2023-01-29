@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>git tips - Entropy Decrease</title>
+  <meta name="renderer" content="webkit" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+<meta name="theme-color" content="#f8f5ec" />
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+
+
+<meta name="author" content="Entropy Decrease" /><meta name="description" content="从现有仓库克隆 $ git clone git://github.com/schacon/grit.git $ git clone git://github.com/schacon/grit.git mygrit .gitignore $ cat ~/.gitignore *~ 撤消操作 * 修改最后一次提交 $ git commit --amend 如果刚才提交时忘了暂存某些修改，可以先补上暂存操作，然后再运行 --amend" /><meta name="keywords" content="Hugo, theme, even" />
+
+
+
+
+
+
+<meta name="generator" content="Hugo 0.109.0 with theme even" />
+
+
+<link rel="canonical" href="https://entropydecrease.github.io/post/git_tips/" />
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/manifest.json">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+<link href="/sass/main.min.f92fd13721ddf72129410fd8250e73152cc6f2438082b6c0208dc24ee7c13fc4.css" rel="stylesheet">
+<link href="/lib/fancybox/jquery.fancybox-3.1.20.min.css" rel="stylesheet">
+
+
+<meta property="og:title" content="git tips" />
+<meta property="og:description" content="从现有仓库克隆 $ git clone git://github.com/schacon/grit.git $ git clone git://github.com/schacon/grit.git mygrit .gitignore $ cat ~/.gitignore *~ 撤消操作 * 修改最后一次提交 $ git commit --amend 如果刚才提交时忘了暂存某些修改，可以先补上暂存操作，然后再运行 --amend" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://entropydecrease.github.io/post/git_tips/" /><meta property="article:section" content="post" />
+
+<meta property="article:modified_time" content="2015-03-25T00:00:00+00:00" />
+<meta itemprop="name" content="git tips">
+<meta itemprop="description" content="从现有仓库克隆 $ git clone git://github.com/schacon/grit.git $ git clone git://github.com/schacon/grit.git mygrit .gitignore $ cat ~/.gitignore *~ 撤消操作 * 修改最后一次提交 $ git commit --amend 如果刚才提交时忘了暂存某些修改，可以先补上暂存操作，然后再运行 --amend">
+<meta itemprop="dateModified" content="2015-03-25T00:00:00+00:00" />
+<meta itemprop="wordCount" content="1247">
+<meta itemprop="keywords" content="git," /><meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="git tips"/>
+<meta name="twitter:description" content="从现有仓库克隆 $ git clone git://github.com/schacon/grit.git $ git clone git://github.com/schacon/grit.git mygrit .gitignore $ cat ~/.gitignore *~ 撤消操作 * 修改最后一次提交 $ git commit --amend 如果刚才提交时忘了暂存某些修改，可以先补上暂存操作，然后再运行 --amend"/>
+
+<!--[if lte IE 9]>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
+<![endif]-->
+
+<!--[if lt IE 9]>
+  <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+<![endif]-->
+
+</head>
+<body>
+  <div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/" class="logo">阅读、思考、写作，都是熵减的过程</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    <a href="/">
+        <li class="mobile-menu-item">Home</li>
+      </a><a href="/post/">
+        <li class="mobile-menu-item">Archives</li>
+      </a><a href="/tags/">
+        <li class="mobile-menu-item">Tags</li>
+      </a><a href="/categories/">
+        <li class="mobile-menu-item">Categories</li>
+      </a>
+  </ul>
+
+  
+
+
+</nav>
+
+  <div class="container" id="mobile-panel">
+    <header id="header" class="header">
+        <div class="logo-wrapper">
+  <a href="/" class="logo">阅读、思考、写作，都是熵减的过程</a>
+</div>
+
+
+
+
+
+<nav class="site-navbar">
+  <ul id="menu" class="menu">
+    <li class="menu-item">
+        <a class="menu-item-link" href="/">Home</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/post/">Archives</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/tags/">Tags</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/categories/">Categories</a>
+      </li>
+  </ul>
+</nav>
+
+    </header>
+
+    <main id="main" class="main">
+      <div class="content-wrapper">
+        <div id="content" class="content">
+          <article class="post">
+    
+    <header class="post-header">
+      <h1 class="post-title">git tips</h1>
+
+      <div class="post-meta">
+        <span class="post-time"> 2015-03-25 </span>
+        <div class="post-category">
+            <a href="/categories/%E5%B7%A5%E5%85%B7/"> 工具 </a>
+            </div>
+        <span id="busuanzi_container_page_pv" class="more-meta"> <span id="busuanzi_value_page_pv"><img src="/img/spinner.svg" alt="spinner.svg"/></span> times read </span>
+      </div>
+    </header>
+
+    <div class="post-toc" id="post-toc">
+  <h2 class="post-toc-title">Contents</h2>
+  <div class="post-toc-content always-active">
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#从现有仓库克隆">从现有仓库克隆</a></li>
+    <li><a href="#gitignore">.gitignore</a></li>
+    <li><a href="#撤消操作">撤消操作</a></li>
+    <li><a href="#远程仓库的使用">远程仓库的使用</a></li>
+  </ul>
+</nav>
+  </div>
+</div>
+    <div class="post-content">
+      <h1 id="从现有仓库克隆">从现有仓库克隆</h1>
+<pre><code>$ git clone git://github.com/schacon/grit.git
+
+$ git clone git://github.com/schacon/grit.git mygrit
+</code></pre>
+<h1 id="gitignore">.gitignore</h1>
+<pre><code>$ cat ~/.gitignore
+*~
+</code></pre>
+<h1 id="撤消操作">撤消操作</h1>
+<pre><code>* 修改最后一次提交
+
+  $ git commit --amend
+
+  如果刚才提交时忘了暂存某些修改，可以先补上暂存操作，然后再运行 --amend 提交：
+
+  $ git commit -m 'initial commit'  
+  $ git add forgotten_file  
+  $ git commit --amend  
+
+* 取消已经暂存的文件 - 其实，git status 的命令输出已经告诉了我们该怎么做
+
+  $ git add .  
+  $ git status  
+  On branch master  
+  Changes to be committed:  
+  (use &quot;git reset HEAD &lt;file&gt;...&quot; to unstage)  
+
+       modified:   README.txt  
+   modified:   benchmarks.rb    
+  $ git reset HEAD benchmarks.rb  
+  Unstaged changes after reset:   
+  M       benchmarks.rb   
+
+* 取消对文件的修改 - git status 同样提示了具体的撤消方法
+
+  Changes not staged for commit:  
+  (use &quot;git add &lt;file&gt;...&quot; to update what will be committed)   
+  (use &quot;git checkout -- &lt;file&gt;...&quot; to discard changes in working directory)  
+
+      modified:   benchmarks.rb  
+
+ $ git checkout -- benchmarks.rb  
+ $ git status  
+ On branch master  
+ Changes to be committed:  
+ (use &quot;git reset HEAD &lt;file&gt;...&quot; to unstage)  
+
+     modified:   README.txt   
+
+ 任何已经提交到 Git 的都可以被恢复。即便在已经删除的分支中的提交，或者用 --amend 重新改写的提交，都可以被恢复（关于数据恢复的内容见第九章）。所以，你可能失去的数据，仅限于没有提交过的，对 Git 来说它们就像从未存在过一样。
+</code></pre>
+<h1 id="远程仓库的使用">远程仓库的使用</h1>
+<pre><code>* 查看当前的远程库
+
+  $ git remote  
+  $ git remote -v  
+
+* 添加远程仓库 - git remote add [shortname] [url]
+
+  $ git remote  
+  origin  
+  $ git remote add pb git://github.com/paulboone/ticgit.git  
+  $ git remote -v  
+  origin  git://github.com/schacon/ticgit.git  
+  pb  git://github.com/paulboone/ticgit.git  
+
+  现在可以用字符串 pb 指代对应的仓库地址了。比如说，要抓取所有 Paul 有的，但本地仓库没有的信息，可以运行 git fetch pb：
+
+  $ git fetch pb  
+  remote: Counting objects: 58, done.  
+  remote: Compressing objects: 100% (41/41), done.  
+  remote: Total 44 (delta 24), reused 1 (delta 0)  
+  Unpacking objects: 100% (44/44), done.  
+  From git://github.com/paulboone/ticgit  
+   * [new branch]      master     -&gt; pb/master  
+   * [new branch]      ticgit     -&gt; pb/ticgit  
+
+* 从远程仓库抓取数据
+
+  $ git fetch [remote-name]
+
+  如果是克隆了一个仓库，此命令会自动将远程仓库归于 origin 名下。所以，git fetch origin 会抓取从你上次克隆以来别人上传到此远程仓库中的所有更新（或是上次 fetch 以来别人提交的更新）。有一点很重要，需要记住，fetch 命令只是将远端的数据拉到本地仓库，并不自动合并到当前工作分支，只有当你确实准备好了，才能手工合并。
+
+  如果设置了某个分支用于跟踪某个远端仓库的分支（参见下节及第三章的内容），可以使用 git pull 命令自动抓取数据下来，然后将远端分支自动合并到本地仓库中当前分支。在日常工作中我们经常这么用，既快且好。实际上，默认情况下 git clone 命令本质上就是自动创建了本地的 master 分支用于跟踪远程仓库中的 master 分支（假设远程仓库确实有 master 分支）。所以一般我们运行 git pull，目的都是要从原始克隆的远端仓库中抓取数据后，合并到工作目录中的当前分支。
+
+* 推送数据到远程仓库 - git push [remote-name] [branch-name]
+
+  如果要把本地的 master 分支推送到 origin 服务器上（再次说明下，克隆操作会自动使用默认的 master 和 origin 名字），可以运行下面的命令：
+
+  $ git push origin master  
+
+  只有在所克隆的服务器上有写权限，或者同一时刻没有其他人在推数据，这条命令才会如期完成任务。如果在你推数据前，已经有其他人推送了若干更新，那你的推送操作就会被驳回。你必须先把他们的更新抓取到本地，合并到自己的项目中，然后才可以再次推送
+
+* 查看远程仓库信息 - git remote show [remote-name]
+
+  $ git remote show origin  
+  * remote origin  
+    URL: git://github.com/schacon/ticgit.git  
+    Remote branch merged with 'git pull' while on branch master  
+     master  
+    Tracked remote branches  
+     master  
+     ticgit  
+
+* 远程仓库的删除和重命名 - git remote rename
+
+  比如想把 pb 改成 paul，可以这么运行：
+
+  $ git remote rename pb paul    
+  $ git remote    
+  origin    
+  paul  
+
+  注意，对远程仓库的重命名，也会使对应的分支名称发生变化，原来的 pb/master 分支现在成了 paul/master。
+  
+  碰到远端仓库服务器迁移，或者原来的克隆镜像不再使用，又或者某个参与者不再贡献代码，那么需要移除对应的远端仓库，可以运行 git remote rm 命令：
+  
+  $ git remote rm paul  
+  $ git remote  
+  origin  
+</code></pre>
+
+    </div>
+
+    
+<footer class="post-footer">
+      <div class="post-tags">
+          <a href="/tags/git/">git</a>
+          </div>
+      <nav class="post-nav">
+        <a class="prev" href="/post/atrun/">
+            <i class="iconfont icon-left"></i>
+            <span class="prev-text nav-default">run job with at on Mac</span>
+            <span class="prev-text nav-mobile">Prev</span>
+          </a>
+        <a class="next" href="/post/import_ost/">
+            <span class="next-text nav-default">export mail in .ost file to mail.app on Mac</span>
+            <span class="next-text nav-mobile">Next</span>
+            <i class="iconfont icon-right"></i>
+          </a>
+      </nav>
+    </footer>
+  </article>
+        </div>
+        
+
+  
+
+  
+    <script src="https://utteranc.es/client.js"
+            repo="entropydecrease/utterancescomment"
+            issue-term="pathname"
+            theme="github-light"
+            crossorigin="anonymous"
+            async>
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="https://github.com/utterance">comments powered by utterances.</a></noscript>
+
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="social-links">
+      <a href="mailto:en&#43;tr-op*ydecr_ea%5ese@outlook.com%5eremove_unnecessary_chars%5e" class="iconfont icon-email" title="email"></a>
+      <a href="https://github.com/entropydecrease" class="iconfont icon-github" title="github"></a>
+  <a href="https://entropydecrease.github.io/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+</div>
+
+<div class="copyright">
+  <span class="power-by">
+    Powered by <a class="hexo-link" href="https://gohugo.io">Hugo</a>
+  </span>
+  <span class="division">|</span>
+  <span class="theme-info">
+    Theme - 
+    <a class="theme-link" href="https://github.com/olOwOlo/hugo-theme-even">Even</a>
+  </span>
+
+  <div class="busuanzi-footer">
+    <span id="busuanzi_container_site_pv"> site pv: <span id="busuanzi_value_site_pv"><img src="/img/spinner.svg" alt="spinner.svg"/></span> </span>
+      <span class="division">|</span>
+    <span id="busuanzi_container_site_uv"> site uv: <span id="busuanzi_value_site_uv"><img src="/img/spinner.svg" alt="spinner.svg"/></span> </span>
+  </div>
+
+  <span class="copyright-year">
+    &copy; 
+    2015 - 
+    2023<span class="heart"><i class="iconfont icon-heart"></i></span><span>Entropy Decrease</span>
+  </span>
+</div>
+
+    </footer>
+
+    <div class="back-to-top" id="back-to-top">
+      <i class="iconfont icon-up"></i>
+    </div>
+  </div>
+  <script type="text/javascript" src="/lib/jquery/jquery-3.2.1.min.js"></script>
+  <script type="text/javascript" src="/lib/slideout/slideout-1.0.1.min.js"></script>
+  <script type="text/javascript" src="/lib/fancybox/jquery.fancybox-3.1.20.min.js"></script>
+
+
+
+<script type="text/javascript" src="/js/main.min.4ae89da218555efa0e7093a20b92017d2e1202b66fff9fc2edf4cb8d44b44c6e.js"></script>
+  <script type="text/javascript">
+    window.MathJax = {
+      tex: {
+        inlineMath: [['$','$'], ['\\(','\\)']],
+        }
+    };
+  </script>
+  <script async src="https://cdn.jsdelivr.net/npm/mathjax@3.0.5/es5/tex-mml-chtml.js" integrity="sha256-HGLuEfFcsUJGhvB8cQ8nr0gai9EucOOaIxFw7qxmd+w=" crossorigin="anonymous"></script>
+
+
+
+
+
+
+
+
+</body>
+</html>

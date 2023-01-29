@@ -9,19 +9,19 @@
     <lastBuildDate>Sun, 01 May 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://entropydecrease.github.io/post/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>生成af only的gnomad vcf文件</title>
-      <link>https://entropydecrease.github.io/post/2022_05_01_af_only_gnomad/</link>
+      <link>https://entropydecrease.github.io/post/gnome_af_only/</link>
       <pubDate>Sun, 01 May 2022 00:00:00 +0000</pubDate>
       
-      <guid>https://entropydecrease.github.io/post/2022_05_01_af_only_gnomad/</guid>
+      <guid>https://entropydecrease.github.io/post/gnome_af_only/</guid>
       <description>gnomAD VCF 文件(af-only-gnomad.hg38.vcf.gz)太大了，超过200G，对于GATK来说，只需要用里面的‘AF’信息就够了，所</description>
     </item>
     
     <item>
       <title>bcftools notes (转载)</title>
-      <link>https://entropydecrease.github.io/post/2021_10_01_bcftools_notes/</link>
+      <link>https://entropydecrease.github.io/post/bcftools_notes/</link>
       <pubDate>Fri, 01 Oct 2021 00:00:00 +0000</pubDate>
       
-      <guid>https://entropydecrease.github.io/post/2021_10_01_bcftools_notes/</guid>
+      <guid>https://entropydecrease.github.io/post/bcftools_notes/</guid>
       <description>copied from https://gist.github.com/elowy01/93922762e131d7abd3c7e8e166a74a0b Filter variants per region (in this example, print out only variants mapped to chr1 and chr2) bcftools filter -r1,2 ALL.chip.omni_broad_sanger_combined.20140818.snps.genotypes.hg38.vcf.gz printing out info for only 2 samples: bcftools view -s NA20818,NA20819 filename.vcf.gz printing stats only for variants passing the filter: bcftools view -f PASS filename.vcf.gz printing variants withoud header: bcftools view -H printing variants on a particular region: bcftools view -r chr20:1-200000 -s NA20818,NA20819 filename.vcf.gz print all</description>
     </item>
     
@@ -53,15 +53,6 @@
     </item>
     
     <item>
-      <title>install perl environment on Mac</title>
-      <link>https://entropydecrease.github.io/post/install-perl-environment-on-mac/</link>
-      <pubDate>Thu, 28 Jan 2016 00:00:00 +0000</pubDate>
-      
-      <guid>https://entropydecrease.github.io/post/install-perl-environment-on-mac/</guid>
-      <description>install perlbrew 1 2 3 4 5 6 7 # override the default installation directory ($HOME/perl5) in .zshrc export PERLBREW_ROOT=$HOME/.local/perl5 export PERLBREW_CPAN_MIRROR=http://mirrors.ustc.edu.cn/CPAN/ &amp;gt; curl -L http://xrl.us/perlbrewinstall | bash &amp;gt; echo &amp;#34;source ~/.local/perl5/perlbrew/etc/bashrc&amp;#34; &amp;gt;&amp;gt; ~/.zshrc install perl and cpanm 1 2 3 4 5 6 7 &amp;gt; perlbrew available &amp;gt; perlbrew install stable &amp;gt; perlbrew list &amp;gt; perlbrew switch perl-5.22.1 &amp;gt; perlbrew install install-cpanm &amp;gt; alias cpanm=&amp;#39;cpanm --from http://mirrors.ustc.edu.cn/CPAN/ &amp;#39; install</description>
-    </item>
-    
-    <item>
       <title>说说我的家乡，没什么文笔，自娱自乐</title>
       <link>https://entropydecrease.github.io/post/some_history_of_my_hometown/</link>
       <pubDate>Sun, 06 Dec 2015 00:00:00 +0000</pubDate>
@@ -72,28 +63,28 @@
     
     <item>
       <title>a few Unix and Shell tips</title>
-      <link>https://entropydecrease.github.io/post/2015_11_03_a-few-unix-and-shell-tips/</link>
+      <link>https://entropydecrease.github.io/post/ssh_tmux/</link>
       <pubDate>Tue, 03 Nov 2015 00:00:00 +0000</pubDate>
       
-      <guid>https://entropydecrease.github.io/post/2015_11_03_a-few-unix-and-shell-tips/</guid>
+      <guid>https://entropydecrease.github.io/post/ssh_tmux/</guid>
       <description>automatically attach to a tmux session via SSH 1 2 3 4 5 6 7 alias alias_name=&amp;#39;ssh username@servername -t &amp;#34;tmux attach || tmux&amp;#34; &amp;#39; -t Force pseudo-tty allocation. This can be used to execute arbitrary screen-based programs on a remote machine, which can be very useful, e.g., when implementing menu services. &amp;#34;tmux attach&amp;#34; tries to attach a tmux session. and if it fails, &amp;#34;tmux&amp;#34; will create a new session. to</description>
     </item>
     
     <item>
-      <title>case insenstivity on MAC OS X</title>
-      <link>https://entropydecrease.github.io/post/2015_05_07_case-insenstivity-on-mac-os-x/</link>
+      <title>case insensitivity on MAC OS X</title>
+      <link>https://entropydecrease.github.io/post/mac_case_insensitivity/</link>
       <pubDate>Thu, 07 May 2015 00:00:00 +0000</pubDate>
       
-      <guid>https://entropydecrease.github.io/post/2015_05_07_case-insenstivity-on-mac-os-x/</guid>
+      <guid>https://entropydecrease.github.io/post/mac_case_insensitivity/</guid>
       <description>Note: 新版本的Mac操作系统可能会有不同 http://apple.stackexchange.com/questions/22297/is-bash-in-osx-case-insensitive HFS+ (the Mac filesystem) is usually configured to be case insensitive but case preserving. This means that the file system will consider foo and FoO to be the same, but when you create a new file it will remember which letters where capitalized and which were not. When you format a</description>
     </item>
     
     <item>
       <title>设置hostname，避免DHCP修改hostname</title>
-      <link>https://entropydecrease.github.io/post/2015_04_13_set-hostname-not-modifed-by-dhcp/</link>
+      <link>https://entropydecrease.github.io/post/set_hostname/</link>
       <pubDate>Mon, 13 Apr 2015 00:00:00 +0000</pubDate>
       
-      <guid>https://entropydecrease.github.io/post/2015_04_13_set-hostname-not-modifed-by-dhcp/</guid>
+      <guid>https://entropydecrease.github.io/post/set_hostname/</guid>
       <description>It can be annoying to see my hostname being modifed each time I connect to a different WIFI. It is because the hostname was never set. &amp;gt; scutil --get HostName HostName: not set So we just need to set the hostname: &amp;gt; sudo scutil --set HostName &amp;quot;new_hostname&amp;quot; Password: &amp;gt; scutil --get HostName new_hostname</description>
     </item>
     
@@ -117,28 +108,28 @@
     
     <item>
       <title>run job with at on Mac</title>
-      <link>https://entropydecrease.github.io/post/2015_04_01_run_job_with_at_on_mac/</link>
+      <link>https://entropydecrease.github.io/post/atrun/</link>
       <pubDate>Wed, 01 Apr 2015 00:00:00 +0000</pubDate>
       
-      <guid>https://entropydecrease.github.io/post/2015_04_01_run_job_with_at_on_mac/</guid>
+      <guid>https://entropydecrease.github.io/post/atrun/</guid>
       <description>Mac 上的 at 是由 atrun 运行的，而后者是由launchd 启动的，问题是在Mac上atrun默认是不启动的。 The atrun utility runs commands queued by at(1). It is invoked periodically by launchd(8) as specified in the com.apple.atrun.plist property list. By</description>
     </item>
     
     <item>
       <title>git tips</title>
-      <link>https://entropydecrease.github.io/post/2015_03_25_git_tips/</link>
+      <link>https://entropydecrease.github.io/post/git_tips/</link>
       <pubDate>Wed, 25 Mar 2015 00:00:00 +0000</pubDate>
       
-      <guid>https://entropydecrease.github.io/post/2015_03_25_git_tips/</guid>
+      <guid>https://entropydecrease.github.io/post/git_tips/</guid>
       <description>从现有仓库克隆 $ git clone git://github.com/schacon/grit.git $ git clone git://github.com/schacon/grit.git mygrit .gitignore $ cat ~/.gitignore *~ 撤消操作 * 修改最后一次提交 $ git commit --amend 如果刚才提交时忘了暂存某些修改，可以先补上暂存操作，然后再运行 --amend</description>
     </item>
     
     <item>
       <title>export mail in .ost file to mail.app on Mac</title>
-      <link>https://entropydecrease.github.io/post/2015_03_24_export_email_in_ost/</link>
+      <link>https://entropydecrease.github.io/post/import_ost/</link>
       <pubDate>Tue, 24 Mar 2015 00:00:00 +0000</pubDate>
       
-      <guid>https://entropydecrease.github.io/post/2015_03_24_export_email_in_ost/</guid>
+      <guid>https://entropydecrease.github.io/post/import_ost/</guid>
       <description>export mail in .ost file to mbox file (the file may not end with .mbox). &amp;gt; readpst -j 3 outlook.ost mail.app &amp;ndash;&amp;gt; File &amp;ndash;&amp;gt; import mailboxes, and select the folder generated in step 1. That&amp;rsquo;s all. Your emails in the ost file will be imported into a directory under &amp;ldquo;on my Mac&amp;rdquo;.</description>
     </item>
     

@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-  <title>re-attach a lftp process - Entropy Decrease</title>
+  <title>a few Unix and Shell tips - Entropy Decrease</title>
   <meta name="renderer" content="webkit" />
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
 
@@ -16,7 +16,7 @@
 <meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
 
 
-<meta name="author" content="Entropy Decrease" /><meta name="description" content="lftp很好的一个功能是退出之后，正在运行的任务会自动提交到后台继续运行。 但是有时候终端窗口退出之后还想重新连接这些任务，该如何连接呢？lf" /><meta name="keywords" content="Hugo, theme, even" />
+<meta name="author" content="Entropy Decrease" /><meta name="description" content="automatically attach to a tmux session via SSH 1 2 3 4 5 6 7 alias alias_name=&amp;#39;ssh username@servername -t &amp;#34;tmux attach || tmux&amp;#34; &amp;#39; -t Force pseudo-tty allocation. This can be used to execute arbitrary screen-based programs on a remote machine, which can be very useful, e.g., when implementing menu services. &amp;#34;tmux attach&amp;#34; tries to attach a tmux session. and if it fails, &amp;#34;tmux&amp;#34; will create a new session. to" /><meta name="keywords" content="Hugo, theme, even" />
 
 
 
@@ -26,7 +26,7 @@
 <meta name="generator" content="Hugo 0.109.0 with theme even" />
 
 
-<link rel="canonical" href="https://entropydecrease.github.io/post/reattach_lftp/" />
+<link rel="canonical" href="https://entropydecrease.github.io/post/ssh_tmux/" />
 <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
 <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
 <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
@@ -39,19 +39,19 @@
 <link href="/lib/fancybox/jquery.fancybox-3.1.20.min.css" rel="stylesheet">
 
 
-<meta property="og:title" content="re-attach a lftp process" />
-<meta property="og:description" content="lftp很好的一个功能是退出之后，正在运行的任务会自动提交到后台继续运行。 但是有时候终端窗口退出之后还想重新连接这些任务，该如何连接呢？lf" />
+<meta property="og:title" content="a few Unix and Shell tips" />
+<meta property="og:description" content="automatically attach to a tmux session via SSH 1 2 3 4 5 6 7 alias alias_name=&#39;ssh username@servername -t &#34;tmux attach || tmux&#34; &#39; -t Force pseudo-tty allocation. This can be used to execute arbitrary screen-based programs on a remote machine, which can be very useful, e.g., when implementing menu services. &#34;tmux attach&#34; tries to attach a tmux session. and if it fails, &#34;tmux&#34; will create a new session. to" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://entropydecrease.github.io/post/reattach_lftp/" /><meta property="article:section" content="post" />
+<meta property="og:url" content="https://entropydecrease.github.io/post/ssh_tmux/" /><meta property="article:section" content="post" />
 
-<meta property="article:modified_time" content="2015-04-05T00:00:00+00:00" />
-<meta itemprop="name" content="re-attach a lftp process">
-<meta itemprop="description" content="lftp很好的一个功能是退出之后，正在运行的任务会自动提交到后台继续运行。 但是有时候终端窗口退出之后还想重新连接这些任务，该如何连接呢？lf">
-<meta itemprop="dateModified" content="2015-04-05T00:00:00+00:00" />
-<meta itemprop="wordCount" content="134">
-<meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="re-attach a lftp process"/>
-<meta name="twitter:description" content="lftp很好的一个功能是退出之后，正在运行的任务会自动提交到后台继续运行。 但是有时候终端窗口退出之后还想重新连接这些任务，该如何连接呢？lf"/>
+<meta property="article:modified_time" content="2015-11-03T00:00:00+00:00" />
+<meta itemprop="name" content="a few Unix and Shell tips">
+<meta itemprop="description" content="automatically attach to a tmux session via SSH 1 2 3 4 5 6 7 alias alias_name=&#39;ssh username@servername -t &#34;tmux attach || tmux&#34; &#39; -t Force pseudo-tty allocation. This can be used to execute arbitrary screen-based programs on a remote machine, which can be very useful, e.g., when implementing menu services. &#34;tmux attach&#34; tries to attach a tmux session. and if it fails, &#34;tmux&#34; will create a new session. to">
+<meta itemprop="dateModified" content="2015-11-03T00:00:00+00:00" />
+<meta itemprop="wordCount" content="72">
+<meta itemprop="keywords" content="shell," /><meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="a few Unix and Shell tips"/>
+<meta name="twitter:description" content="automatically attach to a tmux session via SSH 1 2 3 4 5 6 7 alias alias_name=&#39;ssh username@servername -t &#34;tmux attach || tmux&#34; &#39; -t Force pseudo-tty allocation. This can be used to execute arbitrary screen-based programs on a remote machine, which can be very useful, e.g., when implementing menu services. &#34;tmux attach&#34; tries to attach a tmux session. and if it fails, &#34;tmux&#34; will create a new session. to"/>
 
 <!--[if lte IE 9]>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
@@ -124,10 +124,10 @@
           <article class="post">
     
     <header class="post-header">
-      <h1 class="post-title">re-attach a lftp process</h1>
+      <h1 class="post-title">a few Unix and Shell tips</h1>
 
       <div class="post-meta">
-        <span class="post-time"> 2015-04-05 </span>
+        <span class="post-time"> 2015-11-03 </span>
         <div class="post-category">
             <a href="/categories/%E5%B7%A5%E5%85%B7/"> 工具 </a>
             </div>
@@ -138,34 +138,57 @@
     <div class="post-toc" id="post-toc">
   <h2 class="post-toc-title">Contents</h2>
   <div class="post-toc-content always-active">
-    <nav id="TableOfContents"></nav>
+    <nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#automatically-attach-to-a-tmux-session-via-ssh">automatically attach to a tmux session via SSH</a></li>
+        <li><a href="#to-be-continued">to be continued.</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
   </div>
 </div>
     <div class="post-content">
-      <p>lftp很好的一个功能是退出之后，正在运行的任务会自动提交到后台继续运行。</p>
-<p>但是有时候终端窗口退出之后还想重新连接这些任务，该如何连接呢？lftp提供了一个很好的命令<code>attach</code>。</p>
-<ol>
-<li>
-<p>首先用ps查到要连接的任务的pid;</p>
-</li>
-<li>
-<p>然后打开lftp，在lftp内运行<code>attach pid</code>。</p>
-</li>
-</ol>
+      <h2 id="automatically-attach-to-a-tmux-session-via-ssh">automatically attach to a tmux session via SSH</h2>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">alias alias_name=&#39;ssh username@servername -t &#34;tmux attach || tmux&#34; &#39;
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">-t Force pseudo-tty allocation. This can be used to execute arbitrary
+</span></span><span class="line"><span class="cl">   screen-based programs on a remote machine, which can be very useful, e.g., when
+</span></span><span class="line"><span class="cl">   implementing menu services.
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">&#34;tmux attach&#34; tries to attach a tmux session. and if it fails, &#34;tmux&#34; will create a new session.
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h2 id="to-be-continued">to be continued.</h2>
 
     </div>
 
     
 <footer class="post-footer">
-      
+      <div class="post-tags">
+          <a href="/tags/shell/">shell</a>
+          </div>
       <nav class="post-nav">
-        <a class="prev" href="/post/disable_timemachine_local_backup/">
+        <a class="prev" href="/post/some_history_of_my_hometown/">
             <i class="iconfont icon-left"></i>
-            <span class="prev-text nav-default">disable local backup of timemachine</span>
+            <span class="prev-text nav-default">说说我的家乡，没什么文笔，自娱自乐</span>
             <span class="prev-text nav-mobile">Prev</span>
           </a>
-        <a class="next" href="/post/atrun/">
-            <span class="next-text nav-default">run job with at on Mac</span>
+        <a class="next" href="/post/mac_case_insensitivity/">
+            <span class="next-text nav-default">case insensitivity on MAC OS X</span>
             <span class="next-text nav-mobile">Next</span>
             <i class="iconfont icon-right"></i>
           </a>

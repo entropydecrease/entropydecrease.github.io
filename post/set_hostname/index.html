@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-  <title>bcftools · Entropy Decrease</title>
+  <title>设置hostname，避免DHCP修改hostname - Entropy Decrease</title>
   <meta name="renderer" content="webkit" />
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
 
@@ -16,7 +16,7 @@
 <meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
 
 
-<meta name="author" content="Entropy Decrease" /><meta name="description" content="Hugo theme even powered." /><meta name="keywords" content="Hugo, theme, even" />
+<meta name="author" content="Entropy Decrease" /><meta name="description" content="It can be annoying to see my hostname being modifed each time I connect to a different WIFI. It is because the hostname was never set. &amp;gt; scutil --get HostName HostName: not set So we just need to set the hostname: &amp;gt; sudo scutil --set HostName &amp;quot;new_hostname&amp;quot; Password: &amp;gt; scutil --get HostName new_hostname" /><meta name="keywords" content="Hugo, theme, even" />
 
 
 
@@ -26,9 +26,7 @@
 <meta name="generator" content="Hugo 0.109.0 with theme even" />
 
 
-<link rel="canonical" href="https://entropydecrease.github.io/tags/bcftools/" />
-  <link href="https://entropydecrease.github.io/tags/bcftools/index.xml" rel="alternate" type="application/rss+xml" title="Entropy Decrease" />
-  <link href="https://entropydecrease.github.io/tags/bcftools/index.xml" rel="feed" type="application/rss+xml" title="Entropy Decrease" />
+<link rel="canonical" href="https://entropydecrease.github.io/post/set_hostname/" />
 <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
 <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
 <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
@@ -41,14 +39,19 @@
 <link href="/lib/fancybox/jquery.fancybox-3.1.20.min.css" rel="stylesheet">
 
 
-<meta property="og:title" content="bcftools" />
-<meta property="og:description" content="Hugo theme even powered." />
-<meta property="og:type" content="website" />
-<meta property="og:url" content="https://entropydecrease.github.io/tags/bcftools/" />
-<meta itemprop="name" content="bcftools">
-<meta itemprop="description" content="Hugo theme even powered."><meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="bcftools"/>
-<meta name="twitter:description" content="Hugo theme even powered."/>
+<meta property="og:title" content="设置hostname，避免DHCP修改hostname" />
+<meta property="og:description" content="It can be annoying to see my hostname being modifed each time I connect to a different WIFI. It is because the hostname was never set. &gt; scutil --get HostName HostName: not set So we just need to set the hostname: &gt; sudo scutil --set HostName &quot;new_hostname&quot; Password: &gt; scutil --get HostName new_hostname" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://entropydecrease.github.io/post/set_hostname/" /><meta property="article:section" content="post" />
+
+<meta property="article:modified_time" content="2015-04-13T00:00:00+00:00" />
+<meta itemprop="name" content="设置hostname，避免DHCP修改hostname">
+<meta itemprop="description" content="It can be annoying to see my hostname being modifed each time I connect to a different WIFI. It is because the hostname was never set. &gt; scutil --get HostName HostName: not set So we just need to set the hostname: &gt; sudo scutil --set HostName &quot;new_hostname&quot; Password: &gt; scutil --get HostName new_hostname">
+<meta itemprop="dateModified" content="2015-04-13T00:00:00+00:00" />
+<meta itemprop="wordCount" content="53">
+<meta itemprop="keywords" content="Mac," /><meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="设置hostname，避免DHCP修改hostname"/>
+<meta name="twitter:description" content="It can be annoying to see my hostname being modifed each time I connect to a different WIFI. It is because the hostname was never set. &gt; scutil --get HostName HostName: not set So we just need to set the hostname: &gt; sudo scutil --set HostName &quot;new_hostname&quot; Password: &gt; scutil --get HostName new_hostname"/>
 
 <!--[if lte IE 9]>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
@@ -118,29 +121,73 @@
     <main id="main" class="main">
       <div class="content-wrapper">
         <div id="content" class="content">
-          <section id="archive" class="archive">
-  <div class="archive-title tag">
-        <h2 class="archive-name">bcftools</h2>
+          <article class="post">
+    
+    <header class="post-header">
+      <h1 class="post-title">设置hostname，避免DHCP修改hostname</h1>
+
+      <div class="post-meta">
+        <span class="post-time"> 2015-04-13 </span>
+        <div class="post-category">
+            <a href="/categories/%E5%B7%A5%E5%85%B7/"> 工具 </a>
+            </div>
+        <span id="busuanzi_container_page_pv" class="more-meta"> <span id="busuanzi_value_page_pv"><img src="/img/spinner.svg" alt="spinner.svg"/></span> times read </span>
       </div>
+    </header>
 
-  <div class="archive-post">
-      <span class="archive-post-time">
-        2021-10-01
-      </span>
-      <span class="archive-post-title">
-        <a href="/post/bcftools_notes/" class="archive-post-link">
-          bcftools notes (转载)
-        </a>
-      </span>
+    <div class="post-toc" id="post-toc">
+  <h2 class="post-toc-title">Contents</h2>
+  <div class="post-toc-content always-active">
+    <nav id="TableOfContents"></nav>
+  </div>
+</div>
+    <div class="post-content">
+      <p>It can be annoying to see my hostname being modifed each time I connect to a different WIFI. It is because the hostname was never set.</p>
+<pre><code>&gt; scutil --get HostName 
+HostName: not set 
+</code></pre>
+<p>So we just need to set the hostname:</p>
+<pre><code>&gt; sudo scutil --set HostName &quot;new_hostname&quot;  
+Password:  
+&gt; scutil --get HostName              
+new_hostname  
+</code></pre>
+
     </div>
-</section>
 
-<nav class="pagination">
-  
-  
-</nav>
+    
+<footer class="post-footer">
+      <div class="post-tags">
+          <a href="/tags/mac/">Mac</a>
+          </div>
+      <nav class="post-nav">
+        <a class="prev" href="/post/mac_case_insensitivity/">
+            <i class="iconfont icon-left"></i>
+            <span class="prev-text nav-default">case insensitivity on MAC OS X</span>
+            <span class="prev-text nav-mobile">Prev</span>
+          </a>
+        <a class="next" href="/post/disable_timemachine_local_backup/">
+            <span class="next-text nav-default">disable local backup of timemachine</span>
+            <span class="next-text nav-mobile">Next</span>
+            <i class="iconfont icon-right"></i>
+          </a>
+      </nav>
+    </footer>
+  </article>
         </div>
         
+
+  
+
+  
+    <script src="https://utteranc.es/client.js"
+            repo="entropydecrease/utterancescomment"
+            issue-term="pathname"
+            theme="github-light"
+            crossorigin="anonymous"
+            async>
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="https://github.com/utterance">comments powered by utterances.</a></noscript>
 
       </div>
     </main>
@@ -188,6 +235,14 @@
 
 
 <script type="text/javascript" src="/js/main.min.4ae89da218555efa0e7093a20b92017d2e1202b66fff9fc2edf4cb8d44b44c6e.js"></script>
+  <script type="text/javascript">
+    window.MathJax = {
+      tex: {
+        inlineMath: [['$','$'], ['\\(','\\)']],
+        }
+    };
+  </script>
+  <script async src="https://cdn.jsdelivr.net/npm/mathjax@3.0.5/es5/tex-mml-chtml.js" integrity="sha256-HGLuEfFcsUJGhvB8cQ8nr0gai9EucOOaIxFw7qxmd+w=" crossorigin="anonymous"></script>
 
 
 

@@ -121,27 +121,6 @@
           <section id="posts" class="posts">
     <article class="post">
   <header class="post-header">
-    <h1 class="post-title"><a class="post-link" href="/post/install-perl-environment-on-mac/">install perl environment on Mac</a></h1>
-    <div class="post-meta">
-      <span class="post-time"> 2016-01-28 </span>
-      <div class="post-category">
-          <a href="/categories/%E7%BC%96%E7%A8%8B/"> 编程 </a>
-          </div>
-    </div>
-  </header>
-  
-  <div class="post-content">
-    <div class="post-summary">
-      install perlbrew 1 2 3 4 5 6 7 # override the default installation directory ($HOME/perl5) in .zshrc export PERLBREW_ROOT=$HOME/.local/perl5 export PERLBREW_CPAN_MIRROR=http://mirrors.ustc.edu.cn/CPAN/ &gt; curl -L http://xrl.us/perlbrewinstall | bash &gt; echo &#34;source ~/.local/perl5/perlbrew/etc/bashrc&#34; &gt;&gt; ~/.zshrc install perl and cpanm 1 2 3 4 5 6 7 &gt; perlbrew available &gt; perlbrew install stable &gt; perlbrew list &gt; perlbrew switch perl-5.22.1 &gt; perlbrew install install-cpanm &gt; alias cpanm=&#39;cpanm --from http://mirrors.ustc.edu.cn/CPAN/ &#39; install
-    </div>
-    <div class="read-more">
-      <a href="/post/install-perl-environment-on-mac/" class="read-more-link">Read more...</a>
-    </div>
-  </div>
-</article>
-
-    <article class="post">
-  <header class="post-header">
     <h1 class="post-title"><a class="post-link" href="/post/some_history_of_my_hometown/">说说我的家乡，没什么文笔，自娱自乐</a></h1>
     <div class="post-meta">
       <span class="post-time"> 2015-12-06 </span>
@@ -163,7 +142,7 @@
 
     <article class="post">
   <header class="post-header">
-    <h1 class="post-title"><a class="post-link" href="/post/2015_11_03_a-few-unix-and-shell-tips/">a few Unix and Shell tips</a></h1>
+    <h1 class="post-title"><a class="post-link" href="/post/ssh_tmux/">a few Unix and Shell tips</a></h1>
     <div class="post-meta">
       <span class="post-time"> 2015-11-03 </span>
       <div class="post-category">
@@ -177,14 +156,14 @@
       automatically attach to a tmux session via SSH 1 2 3 4 5 6 7 alias alias_name=&#39;ssh username@servername -t &#34;tmux attach || tmux&#34; &#39; -t Force pseudo-tty allocation. This can be used to execute arbitrary screen-based programs on a remote machine, which can be very useful, e.g., when implementing menu services. &#34;tmux attach&#34; tries to attach a tmux session. and if it fails, &#34;tmux&#34; will create a new session. to
     </div>
     <div class="read-more">
-      <a href="/post/2015_11_03_a-few-unix-and-shell-tips/" class="read-more-link">Read more...</a>
+      <a href="/post/ssh_tmux/" class="read-more-link">Read more...</a>
     </div>
   </div>
 </article>
 
     <article class="post">
   <header class="post-header">
-    <h1 class="post-title"><a class="post-link" href="/post/2015_05_07_case-insenstivity-on-mac-os-x/">case insenstivity on MAC OS X</a></h1>
+    <h1 class="post-title"><a class="post-link" href="/post/mac_case_insensitivity/">case insensitivity on MAC OS X</a></h1>
     <div class="post-meta">
       <span class="post-time"> 2015-05-07 </span>
       <div class="post-category">
@@ -198,14 +177,14 @@
       Note: 新版本的Mac操作系统可能会有不同 http://apple.stackexchange.com/questions/22297/is-bash-in-osx-case-insensitive HFS+ (the Mac filesystem) is usually configured to be case insensitive but case preserving. This means that the file system will consider foo and FoO to be the same, but when you create a new file it will remember which letters where capitalized and which were not. When you format a
     </div>
     <div class="read-more">
-      <a href="/post/2015_05_07_case-insenstivity-on-mac-os-x/" class="read-more-link">Read more...</a>
+      <a href="/post/mac_case_insensitivity/" class="read-more-link">Read more...</a>
     </div>
   </div>
 </article>
 
     <article class="post">
   <header class="post-header">
-    <h1 class="post-title"><a class="post-link" href="/post/2015_04_13_set-hostname-not-modifed-by-dhcp/">设置hostname，避免DHCP修改hostname</a></h1>
+    <h1 class="post-title"><a class="post-link" href="/post/set_hostname/">设置hostname，避免DHCP修改hostname</a></h1>
     <div class="post-meta">
       <span class="post-time"> 2015-04-13 </span>
       <div class="post-category">
@@ -219,7 +198,26 @@
       It can be annoying to see my hostname being modifed each time I connect to a different WIFI. It is because the hostname was never set. &gt; scutil --get HostName HostName: not set So we just need to set the hostname: &gt; sudo scutil --set HostName &quot;new_hostname&quot; Password: &gt; scutil --get HostName new_hostname
     </div>
     <div class="read-more">
-      <a href="/post/2015_04_13_set-hostname-not-modifed-by-dhcp/" class="read-more-link">Read more...</a>
+      <a href="/post/set_hostname/" class="read-more-link">Read more...</a>
+    </div>
+  </div>
+</article>
+
+    <article class="post">
+  <header class="post-header">
+    <h1 class="post-title"><a class="post-link" href="/post/disable_timemachine_local_backup/">disable local backup of timemachine</a></h1>
+    <div class="post-meta">
+      <span class="post-time"> 2015-04-11 </span>
+      
+    </div>
+  </header>
+  
+  <div class="post-content">
+    <div class="post-summary">
+      timemachine 默认会在本地生成local backup，这个比较占空间，如何取消local backup: Finder -&gt; goto &ldquo;/Volumes&rdquo; will see a backup disk &lsquo;sudo tmutil disablelocal&rsquo; will disable local cache of time machine &lsquo;sudo tmutil enablelocal&rsquo; will enable it again
+    </div>
+    <div class="read-more">
+      <a href="/post/disable_timemachine_local_backup/" class="read-more-link">Read more...</a>
     </div>
   </div>
 </article>

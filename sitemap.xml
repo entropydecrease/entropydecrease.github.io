@@ -44,7 +44,7 @@
   </url>
   
   <url>
-    <loc>https://entropydecrease.github.io/post/2022_05_01_af_only_gnomad/</loc>
+    <loc>https://entropydecrease.github.io/post/gnome_af_only/</loc>
     <lastmod>2022-05-01T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
@@ -65,7 +65,7 @@
   </url>
   
   <url>
-    <loc>https://entropydecrease.github.io/post/2021_10_01_bcftools_notes/</loc>
+    <loc>https://entropydecrease.github.io/post/bcftools_notes/</loc>
     <lastmod>2021-10-01T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
@@ -107,34 +107,6 @@
   </url>
   
   <url>
-    <loc>https://entropydecrease.github.io/post/install-perl-environment-on-mac/</loc>
-    <lastmod>2016-01-28T00:00:00+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://entropydecrease.github.io/tags/mac/</loc>
-    <lastmod>2016-01-28T00:00:00+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://entropydecrease.github.io/tags/perl/</loc>
-    <lastmod>2016-01-28T00:00:00+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://entropydecrease.github.io/categories/%E7%BC%96%E7%A8%8B/</loc>
-    <lastmod>2016-01-28T00:00:00+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
     <loc>https://entropydecrease.github.io/tags/%E5%8E%86%E5%8F%B2/</loc>
     <lastmod>2015-12-06T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
@@ -163,7 +135,7 @@
   </url>
   
   <url>
-    <loc>https://entropydecrease.github.io/post/2015_11_03_a-few-unix-and-shell-tips/</loc>
+    <loc>https://entropydecrease.github.io/post/ssh_tmux/</loc>
     <lastmod>2015-11-03T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
@@ -184,14 +156,21 @@
   </url>
   
   <url>
-    <loc>https://entropydecrease.github.io/post/2015_05_07_case-insenstivity-on-mac-os-x/</loc>
+    <loc>https://entropydecrease.github.io/post/mac_case_insensitivity/</loc>
     <lastmod>2015-05-07T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>https://entropydecrease.github.io/post/2015_04_13_set-hostname-not-modifed-by-dhcp/</loc>
+    <loc>https://entropydecrease.github.io/tags/mac/</loc>
+    <lastmod>2015-04-13T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://entropydecrease.github.io/post/set_hostname/</loc>
     <lastmod>2015-04-13T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
@@ -212,7 +191,7 @@
   </url>
   
   <url>
-    <loc>https://entropydecrease.github.io/post/2015_04_01_run_job_with_at_on_mac/</loc>
+    <loc>https://entropydecrease.github.io/post/atrun/</loc>
     <lastmod>2015-04-01T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
@@ -226,14 +205,14 @@
   </url>
   
   <url>
-    <loc>https://entropydecrease.github.io/post/2015_03_25_git_tips/</loc>
+    <loc>https://entropydecrease.github.io/post/git_tips/</loc>
     <lastmod>2015-03-25T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>https://entropydecrease.github.io/post/2015_03_24_export_email_in_ost/</loc>
+    <loc>https://entropydecrease.github.io/post/import_ost/</loc>
     <lastmod>2015-03-24T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
