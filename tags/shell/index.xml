@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>shell on Entropy Decrease</title>
+    <link>https://entropydecrease.github.io/tags/shell/</link>
+    <description>Recent content in shell on Entropy Decrease</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Tue, 03 Nov 2015 00:00:00 +0000</lastBuildDate><atom:link href="https://entropydecrease.github.io/tags/shell/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>a few Unix and Shell tips</title>
+      <link>https://entropydecrease.github.io/post/2015_11_03_a-few-unix-and-shell-tips/</link>
+      <pubDate>Tue, 03 Nov 2015 00:00:00 +0000</pubDate>
+      
+      <guid>https://entropydecrease.github.io/post/2015_11_03_a-few-unix-and-shell-tips/</guid>
+      <description>automatically attach to a tmux session via SSH 1 2 3 4 5 6 7 alias alias_name=&amp;#39;ssh username@servername -t &amp;#34;tmux attach || tmux&amp;#34; &amp;#39; -t Force pseudo-tty allocation. This can be used to execute arbitrary screen-based programs on a remote machine, which can be very useful, e.g., when implementing menu services. &amp;#34;tmux attach&amp;#34; tries to attach a tmux session. and if it fails, &amp;#34;tmux&amp;#34; will create a new session. to</description>
+    </item>
+    
+  </channel>
+</rss>

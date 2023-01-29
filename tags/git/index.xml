@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>git on Entropy Decrease</title>
+    <link>https://entropydecrease.github.io/tags/git/</link>
+    <description>Recent content in git on Entropy Decrease</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Wed, 25 Mar 2015 00:00:00 +0000</lastBuildDate><atom:link href="https://entropydecrease.github.io/tags/git/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>git tips</title>
+      <link>https://entropydecrease.github.io/post/2015_03_25_git_tips/</link>
+      <pubDate>Wed, 25 Mar 2015 00:00:00 +0000</pubDate>
+      
+      <guid>https://entropydecrease.github.io/post/2015_03_25_git_tips/</guid>
+      <description>从现有仓库克隆 $ git clone git://github.com/schacon/grit.git $ git clone git://github.com/schacon/grit.git mygrit .gitignore $ cat ~/.gitignore *~ 撤消操作 * 修改最后一次提交 $ git commit --amend 如果刚才提交时忘了暂存某些修改，可以先补上暂存操作，然后再运行 --amend</description>
+    </item>
+    
+  </channel>
+</rss>

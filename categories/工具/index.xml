@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>工具 on Entropy Decrease</title>
+    <link>https://entropydecrease.github.io/categories/%E5%B7%A5%E5%85%B7/</link>
+    <description>Recent content in 工具 on Entropy Decrease</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Tue, 03 Nov 2015 00:00:00 +0000</lastBuildDate><atom:link href="https://entropydecrease.github.io/categories/%E5%B7%A5%E5%85%B7/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>a few Unix and Shell tips</title>
+      <link>https://entropydecrease.github.io/post/2015_11_03_a-few-unix-and-shell-tips/</link>
+      <pubDate>Tue, 03 Nov 2015 00:00:00 +0000</pubDate>
+      
+      <guid>https://entropydecrease.github.io/post/2015_11_03_a-few-unix-and-shell-tips/</guid>
+      <description>automatically attach to a tmux session via SSH 1 2 3 4 5 6 7 alias alias_name=&amp;#39;ssh username@servername -t &amp;#34;tmux attach || tmux&amp;#34; &amp;#39; -t Force pseudo-tty allocation. This can be used to execute arbitrary screen-based programs on a remote machine, which can be very useful, e.g., when implementing menu services. &amp;#34;tmux attach&amp;#34; tries to attach a tmux session. and if it fails, &amp;#34;tmux&amp;#34; will create a new session. to</description>
+    </item>
+    
+    <item>
+      <title>case insenstivity on MAC OS X</title>
+      <link>https://entropydecrease.github.io/post/2015_05_07_case-insenstivity-on-mac-os-x/</link>
+      <pubDate>Thu, 07 May 2015 00:00:00 +0000</pubDate>
+      
+      <guid>https://entropydecrease.github.io/post/2015_05_07_case-insenstivity-on-mac-os-x/</guid>
+      <description>Note: 新版本的Mac操作系统可能会有不同 http://apple.stackexchange.com/questions/22297/is-bash-in-osx-case-insensitive HFS+ (the Mac filesystem) is usually configured to be case insensitive but case preserving. This means that the file system will consider foo and FoO to be the same, but when you create a new file it will remember which letters where capitalized and which were not. When you format a</description>
+    </item>
+    
+    <item>
+      <title>设置hostname，避免DHCP修改hostname</title>
+      <link>https://entropydecrease.github.io/post/2015_04_13_set-hostname-not-modifed-by-dhcp/</link>
+      <pubDate>Mon, 13 Apr 2015 00:00:00 +0000</pubDate>
+      
+      <guid>https://entropydecrease.github.io/post/2015_04_13_set-hostname-not-modifed-by-dhcp/</guid>
+      <description>It can be annoying to see my hostname being modifed each time I connect to a different WIFI. It is because the hostname was never set. &amp;gt; scutil --get HostName HostName: not set So we just need to set the hostname: &amp;gt; sudo scutil --set HostName &amp;quot;new_hostname&amp;quot; Password: &amp;gt; scutil --get HostName new_hostname</description>
+    </item>
+    
+    <item>
+      <title>re-attach a lftp process</title>
+      <link>https://entropydecrease.github.io/post/reattach_lftp/</link>
+      <pubDate>Sun, 05 Apr 2015 00:00:00 +0000</pubDate>
+      
+      <guid>https://entropydecrease.github.io/post/reattach_lftp/</guid>
+      <description>lftp很好的一个功能是退出之后，正在运行的任务会自动提交到后台继续运行。 但是有时候终端窗口退出之后还想重新连接这些任务，该如何连接呢？lf</description>
+    </item>
+    
+    <item>
+      <title>git tips</title>
+      <link>https://entropydecrease.github.io/post/2015_03_25_git_tips/</link>
+      <pubDate>Wed, 25 Mar 2015 00:00:00 +0000</pubDate>
+      
+      <guid>https://entropydecrease.github.io/post/2015_03_25_git_tips/</guid>
+      <description>从现有仓库克隆 $ git clone git://github.com/schacon/grit.git $ git clone git://github.com/schacon/grit.git mygrit .gitignore $ cat ~/.gitignore *~ 撤消操作 * 修改最后一次提交 $ git commit --amend 如果刚才提交时忘了暂存某些修改，可以先补上暂存操作，然后再运行 --amend</description>
+    </item>
+    
+    <item>
+      <title>export mail in .ost file to mail.app on Mac</title>
+      <link>https://entropydecrease.github.io/post/2015_03_24_export_email_in_ost/</link>
+      <pubDate>Tue, 24 Mar 2015 00:00:00 +0000</pubDate>
+      
+      <guid>https://entropydecrease.github.io/post/2015_03_24_export_email_in_ost/</guid>
+      <description>export mail in .ost file to mbox file (the file may not end with .mbox). &amp;gt; readpst -j 3 outlook.ost mail.app &amp;ndash;&amp;gt; File &amp;ndash;&amp;gt; import mailboxes, and select the folder generated in step 1. That&amp;rsquo;s all. Your emails in the ost file will be imported into a directory under &amp;ldquo;on my Mac&amp;rdquo;.</description>
+    </item>
+    
+  </channel>
+</rss>
