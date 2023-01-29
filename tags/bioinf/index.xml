@@ -2,11 +2,11 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>bioinf on Entropy Decrease</title>
-    <link>https://entropydecrease.github.io/categories/bioinf/</link>
+    <link>https://entropydecrease.github.io/tags/bioinf/</link>
     <description>Recent content in bioinf on Entropy Decrease</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Sat, 14 Mar 2015 00:00:00 +0000</lastBuildDate><atom:link href="https://entropydecrease.github.io/categories/bioinf/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 14 Mar 2015 00:00:00 +0000</lastBuildDate><atom:link href="https://entropydecrease.github.io/tags/bioinf/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>bioinf常见的一些错误</title>
       <link>https://entropydecrease.github.io/post/common_bioinf_mistakes/</link>

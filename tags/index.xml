@@ -1,10 +1,38 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Tags on Even - A super concise theme for Hugo</title>
+    <title>Tags on Entropy Decrease</title>
     <link>https://entropydecrease.github.io/tags/</link>
-    <description>Recent content in Tags on Even - A super concise theme for Hugo</description>
+    <description>Recent content in Tags on Entropy Decrease</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en</language><atom:link href="https://entropydecrease.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    <language>en</language>
+    <lastBuildDate>Sun, 06 Dec 2015 00:00:00 +0000</lastBuildDate><atom:link href="https://entropydecrease.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>历史</title>
+      <link>https://entropydecrease.github.io/tags/%E5%8E%86%E5%8F%B2/</link>
+      <pubDate>Sun, 06 Dec 2015 00:00:00 +0000</pubDate>
+      
+      <guid>https://entropydecrease.github.io/tags/%E5%8E%86%E5%8F%B2/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>家乡</title>
+      <link>https://entropydecrease.github.io/tags/%E5%AE%B6%E4%B9%A1/</link>
+      <pubDate>Sun, 06 Dec 2015 00:00:00 +0000</pubDate>
+      
+      <guid>https://entropydecrease.github.io/tags/%E5%AE%B6%E4%B9%A1/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>bioinf</title>
+      <link>https://entropydecrease.github.io/tags/bioinf/</link>
+      <pubDate>Sat, 14 Mar 2015 00:00:00 +0000</pubDate>
+      
+      <guid>https://entropydecrease.github.io/tags/bioinf/</guid>
+      <description></description>
+    </item>
+    
   </channel>
 </rss>

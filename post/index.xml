@@ -1,28 +1,28 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Posts on Even - A super concise theme for Hugo</title>
+    <title>Posts on Entropy Decrease</title>
     <link>https://entropydecrease.github.io/post/</link>
-    <description>Recent content in Posts on Even - A super concise theme for Hugo</description>
+    <description>Recent content in Posts on Entropy Decrease</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <lastBuildDate>Sun, 06 Dec 2015 00:00:00 +0000</lastBuildDate><atom:link href="https://entropydecrease.github.io/post/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>说说我的家乡</title>
+      <title>说说我的家乡，没什么文笔，自娱自乐</title>
       <link>https://entropydecrease.github.io/post/some_history_of_my_hometown/</link>
       <pubDate>Sun, 06 Dec 2015 00:00:00 +0000</pubDate>
       
       <guid>https://entropydecrease.github.io/post/some_history_of_my_hometown/</guid>
-      <description>说说我的家乡，没什么文笔，自娱自乐。 我的家乡新郑，洛阳与开封之间、黄河以南四十公里的一个小县，归郑州管辖。 这个小县，在今天的年代里默默无闻，</description>
+      <description>我的家乡新郑，洛阳与开封之间、黄河以南四十公里的一个小县，归郑州管辖。 这个小县，在今天的年代里默默无闻，但是就像河南很多地方一样，过去的千百</description>
     </item>
     
     <item>
-      <title>bioinf常见的一些错误（转载）</title>
+      <title>bioinf常见的一些错误</title>
       <link>https://entropydecrease.github.io/post/common_bioinf_mistakes/</link>
       <pubDate>Sat, 14 Mar 2015 00:00:00 +0000</pubDate>
       
       <guid>https://entropydecrease.github.io/post/common_bioinf_mistakes/</guid>
-      <description>This nice thread(https://www.biostars.org/p/7126/) summarized a lot of common mistakes people (including me, of course) might make in daily work. * forget to check both strands * generate random genomic sites without avoiding masked (NNN) gaps * confuse genome freezes and even species * a lot of off-by-one errors due to switching between formats: Bed is 0 based; GFF/GTF are 1-based * Trusting that a downloaded file is actually fully downloaded</description>
+      <description>biostar上的这篇文章总结了在生物信息学日常工作中容易犯的一些共性的错误： * forget to check both strands * generate random genomic sites without avoiding masked (NNN) gaps * confuse genome freezes and even species * try to see which headers it contained</description>
     </item>
     
   </channel>
