@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>bioinf on Even - A super concise theme for Hugo</title>
-    <link>http://localhost:1313/categories/bioinf/</link>
+    <link>https://entropydecrease.github.io/categories/bioinf/</link>
     <description>Recent content in bioinf on Even - A super concise theme for Hugo</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Sat, 14 Mar 2015 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/categories/bioinf/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 14 Mar 2015 00:00:00 +0000</lastBuildDate><atom:link href="https://entropydecrease.github.io/categories/bioinf/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>bioinf常见的一些错误（转载）</title>
-      <link>http://localhost:1313/post/common_bioinf_mistakes/</link>
+      <link>https://entropydecrease.github.io/post/common_bioinf_mistakes/</link>
       <pubDate>Sat, 14 Mar 2015 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/post/common_bioinf_mistakes/</guid>
+      <guid>https://entropydecrease.github.io/post/common_bioinf_mistakes/</guid>
       <description>This nice thread(https://www.biostars.org/p/7126/) summarized a lot of common mistakes people (including me, of course) might make in daily work. * forget to check both strands * generate random genomic sites without avoiding masked (NNN) gaps * confuse genome freezes and even species * a lot of off-by-one errors due to switching between formats: Bed is 0 based; GFF/GTF are 1-based * Trusting that a downloaded file is actually fully downloaded</description>
     </item>
     
