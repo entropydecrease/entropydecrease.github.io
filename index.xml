@@ -6,7 +6,25 @@
     <description>Recent content on Entropy Decrease</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Sun, 01 May 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://entropydecrease.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 07 Feb 2023 18:25:57 +0800</lastBuildDate><atom:link href="https://entropydecrease.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>下载m3u8格式的视频文件并合并为mp4</title>
+      <link>https://entropydecrease.github.io/post/download_m3u8/</link>
+      <pubDate>Tue, 07 Feb 2023 18:25:57 +0800</pubDate>
+      
+      <guid>https://entropydecrease.github.io/post/download_m3u8/</guid>
+      <description>尝试了一下下载网络的视频，以illumina的一个视频为例： https://www.illumina.vh.sauos.com/watch/205 得到m3u8文件 在firefox中，安装「Video DownloadHelpe</description>
+    </item>
+    
+    <item>
+      <title>ElementBio 在2022年NGS开发者大会上的介绍</title>
+      <link>https://entropydecrease.github.io/post/elementbio_intro/</link>
+      <pubDate>Sat, 19 Nov 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://entropydecrease.github.io/post/elementbio_intro/</guid>
+      <description>Element Bio 是一家新兴的测序仪公司，其产品具有精度高、成本低、通量高的优势，下面是创始人何敏在2022年NGS开发者大会上的介绍，讲的比较清楚。</description>
+    </item>
+    
     <item>
       <title>生成af only的gnomad vcf文件</title>
       <link>https://entropydecrease.github.io/post/gnome_af_only/</link>

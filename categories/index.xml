@@ -6,7 +6,25 @@
     <description>Recent content in Categories on Entropy Decrease</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Sun, 01 May 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://entropydecrease.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 07 Feb 2023 18:25:57 +0800</lastBuildDate><atom:link href="https://entropydecrease.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>工具</title>
+      <link>https://entropydecrease.github.io/categories/%E5%B7%A5%E5%85%B7/</link>
+      <pubDate>Tue, 07 Feb 2023 18:25:57 +0800</pubDate>
+      
+      <guid>https://entropydecrease.github.io/categories/%E5%B7%A5%E5%85%B7/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>tech</title>
+      <link>https://entropydecrease.github.io/categories/tech/</link>
+      <pubDate>Sat, 19 Nov 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://entropydecrease.github.io/categories/tech/</guid>
+      <description></description>
+    </item>
+    
     <item>
       <title>bioinf</title>
       <link>https://entropydecrease.github.io/categories/bioinf/</link>
@@ -22,15 +40,6 @@
       <pubDate>Sun, 06 Dec 2015 00:00:00 +0000</pubDate>
       
       <guid>https://entropydecrease.github.io/categories/%E9%9A%8F%E7%AC%94/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>工具</title>
-      <link>https://entropydecrease.github.io/categories/%E5%B7%A5%E5%85%B7/</link>
-      <pubDate>Tue, 03 Nov 2015 00:00:00 +0000</pubDate>
-      
-      <guid>https://entropydecrease.github.io/categories/%E5%B7%A5%E5%85%B7/</guid>
       <description></description>
     </item>
     

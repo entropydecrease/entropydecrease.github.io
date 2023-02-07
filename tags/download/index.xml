@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>download on Entropy Decrease</title>
+    <link>https://entropydecrease.github.io/tags/download/</link>
+    <description>Recent content in download on Entropy Decrease</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Tue, 07 Feb 2023 18:25:57 +0800</lastBuildDate><atom:link href="https://entropydecrease.github.io/tags/download/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>下载m3u8格式的视频文件并合并为mp4</title>
+      <link>https://entropydecrease.github.io/post/download_m3u8/</link>
+      <pubDate>Tue, 07 Feb 2023 18:25:57 +0800</pubDate>
+      
+      <guid>https://entropydecrease.github.io/post/download_m3u8/</guid>
+      <description>尝试了一下下载网络的视频，以illumina的一个视频为例： https://www.illumina.vh.sauos.com/watch/205 得到m3u8文件 在firefox中，安装「Video DownloadHelpe</description>
+    </item>
+    
+  </channel>
+</rss>

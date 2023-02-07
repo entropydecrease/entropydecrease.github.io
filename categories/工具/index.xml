@@ -6,7 +6,16 @@
     <description>Recent content in 工具 on Entropy Decrease</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Tue, 03 Nov 2015 00:00:00 +0000</lastBuildDate><atom:link href="https://entropydecrease.github.io/categories/%E5%B7%A5%E5%85%B7/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 07 Feb 2023 18:25:57 +0800</lastBuildDate><atom:link href="https://entropydecrease.github.io/categories/%E5%B7%A5%E5%85%B7/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>下载m3u8格式的视频文件并合并为mp4</title>
+      <link>https://entropydecrease.github.io/post/download_m3u8/</link>
+      <pubDate>Tue, 07 Feb 2023 18:25:57 +0800</pubDate>
+      
+      <guid>https://entropydecrease.github.io/post/download_m3u8/</guid>
+      <description>尝试了一下下载网络的视频，以illumina的一个视频为例： https://www.illumina.vh.sauos.com/watch/205 得到m3u8文件 在firefox中，安装「Video DownloadHelpe</description>
+    </item>
+    
     <item>
       <title>a few Unix and Shell tips</title>
       <link>https://entropydecrease.github.io/post/ssh_tmux/</link>
