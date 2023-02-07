@@ -48,7 +48,7 @@
 <meta itemprop="name" content="下载m3u8格式的视频文件并合并为mp4">
 <meta itemprop="description" content="尝试了一下下载网络的视频，以illumina的一个视频为例： https://www.illumina.vh.sauos.com/watch/205 得到m3u8文件 在firefox中，安装「Video DownloadHelpe"><meta itemprop="datePublished" content="2023-02-07T18:25:57+08:00" />
 <meta itemprop="dateModified" content="2023-02-07T00:00:00+00:00" />
-<meta itemprop="wordCount" content="600">
+<meta itemprop="wordCount" content="681">
 <meta itemprop="keywords" content="download," /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="下载m3u8格式的视频文件并合并为mp4"/>
 <meta name="twitter:description" content="尝试了一下下载网络的视频，以illumina的一个视频为例： https://www.illumina.vh.sauos.com/watch/205 得到m3u8文件 在firefox中，安装「Video DownloadHelpe"/>
@@ -235,7 +235,8 @@
 </span></span></span><span class="line"><span class="cl"><span class="se"></span>	<span class="p">|</span> awk <span class="s1">&#39;{i+=$1; if (i &gt;= 2000 &amp;&amp; i &lt;= 2050) print $2}&#39;</span> &gt; url_list.txt
 </span></span></code></pre></td></tr></table>
 </div>
-</div><p>并行下载：</p>
+</div><p>需要说明的是，这个视频比较长，所以我只下载了2000至2050秒的视频，使用了awk来计算累计的时间。假如需要直接下载全部视频的话，可以把awk的那部分命令删掉。</p>
+<p>并行下载：</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
