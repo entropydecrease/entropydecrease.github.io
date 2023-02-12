@@ -16,7 +16,7 @@
 <meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
 
 
-<meta name="author" content="Entropy Decrease" /><meta name="description" content="https://help.basespace.illumina.com/articles/descriptive/fastq-files/ 一个例子 注意read number之前的空格 @SIM:1:FCX:1:15:6329:1045 1:N:0:2 TCGCACTCAACGCCCTGCATATGACAAGACAGAATC &#43; &amp;lt;&amp;gt;;##=&amp;gt;&amp;lt;9=AAAAAAAAAA9#:&amp;lt;#&amp;lt;;&amp;lt;&amp;lt;&amp;lt;????#= 第一行：信息量比较大，有多个字段，详见下文 第二行：测序所得序列，[AGTCN] 第三行：" /><meta name="keywords" content="Hugo, theme, even" />
+<meta name="author" content="Entropy Decrease" /><meta name="description" content="https://help.basespace.illumina.com/articles/descriptive/fastq-files/ fastq文件的命名 示例：Data\Intensities\BaseCalls\samplename_S1_L001_R1_001.fas" /><meta name="keywords" content="Hugo, theme, even" />
 
 
 
@@ -40,18 +40,18 @@
 
 
 <meta property="og:title" content="fastq文件格式" />
-<meta property="og:description" content="https://help.basespace.illumina.com/articles/descriptive/fastq-files/ 一个例子 注意read number之前的空格 @SIM:1:FCX:1:15:6329:1045 1:N:0:2 TCGCACTCAACGCCCTGCATATGACAAGACAGAATC &#43; &lt;&gt;;##=&gt;&lt;9=AAAAAAAAAA9#:&lt;#&lt;;&lt;&lt;&lt;????#= 第一行：信息量比较大，有多个字段，详见下文 第二行：测序所得序列，[AGTCN] 第三行：" />
+<meta property="og:description" content="https://help.basespace.illumina.com/articles/descriptive/fastq-files/ fastq文件的命名 示例：Data\Intensities\BaseCalls\samplename_S1_L001_R1_001.fas" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://entropydecrease.github.io/post/2022_05_01_fastq_format/" /><meta property="article:section" content="post" />
 <meta property="article:published_time" content="2022-05-01T00:00:00+00:00" />
 <meta property="article:modified_time" content="2022-05-01T00:00:00+00:00" />
 <meta itemprop="name" content="fastq文件格式">
-<meta itemprop="description" content="https://help.basespace.illumina.com/articles/descriptive/fastq-files/ 一个例子 注意read number之前的空格 @SIM:1:FCX:1:15:6329:1045 1:N:0:2 TCGCACTCAACGCCCTGCATATGACAAGACAGAATC &#43; &lt;&gt;;##=&gt;&lt;9=AAAAAAAAAA9#:&lt;#&lt;;&lt;&lt;&lt;????#= 第一行：信息量比较大，有多个字段，详见下文 第二行：测序所得序列，[AGTCN] 第三行："><meta itemprop="datePublished" content="2022-05-01T00:00:00+00:00" />
+<meta itemprop="description" content="https://help.basespace.illumina.com/articles/descriptive/fastq-files/ fastq文件的命名 示例：Data\Intensities\BaseCalls\samplename_S1_L001_R1_001.fas"><meta itemprop="datePublished" content="2022-05-01T00:00:00+00:00" />
 <meta itemprop="dateModified" content="2022-05-01T00:00:00+00:00" />
-<meta itemprop="wordCount" content="370">
+<meta itemprop="wordCount" content="749">
 <meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="fastq文件格式"/>
-<meta name="twitter:description" content="https://help.basespace.illumina.com/articles/descriptive/fastq-files/ 一个例子 注意read number之前的空格 @SIM:1:FCX:1:15:6329:1045 1:N:0:2 TCGCACTCAACGCCCTGCATATGACAAGACAGAATC &#43; &lt;&gt;;##=&gt;&lt;9=AAAAAAAAAA9#:&lt;#&lt;;&lt;&lt;&lt;????#= 第一行：信息量比较大，有多个字段，详见下文 第二行：测序所得序列，[AGTCN] 第三行："/>
+<meta name="twitter:description" content="https://help.basespace.illumina.com/articles/descriptive/fastq-files/ fastq文件的命名 示例：Data\Intensities\BaseCalls\samplename_S1_L001_R1_001.fas"/>
 
 <!--[if lte IE 9]>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
@@ -142,7 +142,9 @@
   <ul>
     <li>
       <ul>
+        <li><a href="#fastq文件的命名">fastq文件的命名</a></li>
         <li><a href="#一个例子">一个例子</a></li>
+        <li><a href="#格式">格式</a></li>
         <li><a href="#第一行header格式">第一行(header)格式</a>
           <ul>
             <li><a href="#control-values">Control values</a></li>
@@ -156,6 +158,20 @@
 </div>
     <div class="post-content">
       <p><a href="https://help.basespace.illumina.com/articles/descriptive/fastq-files/">https://help.basespace.illumina.com/articles/descriptive/fastq-files/</a></p>
+<h2 id="fastq文件的命名">fastq文件的命名</h2>
+<p>示例：<code>Data\Intensities\BaseCalls\samplename_S1_L001_R1_001.fastq.gz</code></p>
+<pre><code>* samplename - The sample name provided in the sample sheet. If a sample name is not provided, the file name includes the sample ID, which is a required field in the sample sheet and must be unique.
+* S1 — The sample number based on the order that samples are listed in the sample sheet starting with 1. In this example, S1 indicates that this sample is the first sample listed in the sample sheet. [^1]
+</code></pre>
+<blockquote>
+<ul>
+<li>Reads that cannot be assigned to any sample are written to a FASTQ file for sample number 0, and excluded from downstream analysis.</li>
+</ul>
+</blockquote>
+<pre><code>* L001—The lane number.
+* R1—The read. In this example, R1 means Read 1. For a paired-end run, there is at least one file with R2 in the file name for Read 2.
+* 001—The last segment is always 001.
+</code></pre>
 <h2 id="一个例子">一个例子</h2>
 <p>注意<code>read number</code>之前的空格</p>
 <pre><code>@SIM:1:FCX:1:15:6329:1045 1:N:0:2
@@ -163,11 +179,13 @@ TCGCACTCAACGCCCTGCATATGACAAGACAGAATC
 +
 &lt;&gt;;##=&gt;&lt;9=AAAAAAAAAA9#:&lt;#&lt;;&lt;&lt;&lt;????#=
 </code></pre>
+<h2 id="格式">格式</h2>
+<p>fastq中每条记录由4行组成：</p>
 <ul>
-<li>第一行：信息量比较大，有多个字段，详见下文</li>
-<li>第二行：测序所得序列，[AGTCN]</li>
-<li>第三行：<code>+</code>，只有<code>+</code></li>
-<li>第四行：和第二行的序列一一对应，字母相应的ASCII数值加上offset对应测序质量的Q值。</li>
+<li>第一行：sequence identifier, 信息量比较大，有多个字段，详见下文</li>
+<li>第二行：sequence, 测序所得序列，[AGTCN]</li>
+<li>第三行：Quality score identifier line，只有<code>+</code></li>
+<li>第四行：Quality score, 和第二行的序列一一对应，字母相应的ASCII数值加上offset对应测序质量的Q值。</li>
 </ul>
 <h2 id="第一行header格式">第一行(header)格式</h2>
 <div class="highlight"><div class="chroma">
@@ -178,7 +196,10 @@ TCGCACTCAACGCCCTGCATATGACAAGACAGAATC
 <pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">@&lt;instrument&gt;:&lt;run number&gt;:&lt;flowcell ID&gt;:&lt;lane&gt;:&lt;tile&gt;:&lt;x-pos&gt;:&lt;y-pos&gt; &lt;read&gt;:&lt;is filtered&gt;:&lt;control number&gt;:&lt;sample number&gt;
 </span></span></code></pre></td></tr></table>
 </div>
-</div><p>各字段定义：</p>
+</div><blockquote>
+<p>对于 Undetermined FASTQ文件，index的序列会写入FASTQ的header中sample number的位置，该信息对于demultiplexing的troubleshooting比较有用。</p>
+</blockquote>
+<p>各字段定义：</p>
 <table>
 <thead>
 <tr>
