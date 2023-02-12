@@ -167,7 +167,7 @@
 </span><span class="lnt">18
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">&gt; cp ~/igv/genomes/hg19.genome .
+<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">&gt; cp ~/igv/genomes/hg19.genome .
 </span></span><span class="line"><span class="cl">&gt; unzip hg19.genome
 </span></span><span class="line"><span class="cl">Archive:  hg19.genome
 </span></span><span class="line"><span class="cl">inflating: cytoBand.txt
@@ -175,16 +175,16 @@
 </span></span><span class="line"><span class="cl">inflating: property.txt
 </span></span><span class="line"><span class="cl">inflating: refGene.txt
 </span></span><span class="line"><span class="cl">&gt; cat property.txt
-</span></span><span class="line"><span class="cl">id=hg19
-</span></span><span class="line"><span class="cl">name=Human hg19
-</span></span><span class="line"><span class="cl">cytobandFile=cytoBand.txt
-</span></span><span class="line"><span class="cl">ordered=true
-</span></span><span class="line"><span class="cl">geneFile=refGene.txt
-</span></span><span class="line"><span class="cl">geneTrackName=RefSeq Genes
-</span></span><span class="line"><span class="cl">chrAliasFile=hg19_alias.tab
-</span></span><span class="line"><span class="cl">fasta=True
-</span></span><span class="line"><span class="cl">sequenceLocation=http://s3.amazonaws.com/igv.broadinstitute.org/genomes/seq/hg19/hg19.fasta
-</span></span><span class="line"><span class="cl">url=http://www.ncbi.nlm.nih.gov/gene?term=$$
+</span></span><span class="line"><span class="cl"><span class="nv">id</span><span class="o">=</span>hg19
+</span></span><span class="line"><span class="cl"><span class="nv">name</span><span class="o">=</span>Human hg19
+</span></span><span class="line"><span class="cl"><span class="nv">cytobandFile</span><span class="o">=</span>cytoBand.txt
+</span></span><span class="line"><span class="cl"><span class="nv">ordered</span><span class="o">=</span><span class="nb">true</span>
+</span></span><span class="line"><span class="cl"><span class="nv">geneFile</span><span class="o">=</span>refGene.txt
+</span></span><span class="line"><span class="cl"><span class="nv">geneTrackName</span><span class="o">=</span>RefSeq Genes
+</span></span><span class="line"><span class="cl"><span class="nv">chrAliasFile</span><span class="o">=</span>hg19_alias.tab
+</span></span><span class="line"><span class="cl"><span class="nv">fasta</span><span class="o">=</span>True
+</span></span><span class="line"><span class="cl"><span class="nv">sequenceLocation</span><span class="o">=</span>http://s3.amazonaws.com/igv.broadinstitute.org/genomes/seq/hg19/hg19.fasta
+</span></span><span class="line"><span class="cl"><span class="nv">url</span><span class="o">=</span>http://www.ncbi.nlm.nih.gov/gene?term<span class="o">=</span><span class="nv">$$</span>
 </span></span></code></pre></td></tr></table>
 </div>
 </div><p>可以看到，里面的cytoband文件，gene文件都是本地的，但是序列文件是在AWS上面的。而最近AWS的访问有问题，非常不稳定，所以igv也不能打开hg19.genome了。</p>
@@ -223,7 +223,7 @@
 </span><span class="lnt">2
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">&gt; zip hg19_local.genome cytoBand.txt refGene.txt hg19_alias.tab property.txt
+<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">&gt; zip hg19_local.genome cytoBand.txt refGene.txt hg19_alias.tab property.txt
 </span></span><span class="line"><span class="cl">&gt; mv hg19_local.genome ~/igv/genomes/
 </span></span></code></pre></td></tr></table>
 </div>

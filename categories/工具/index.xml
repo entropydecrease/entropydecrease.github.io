@@ -17,6 +17,15 @@
     </item>
     
     <item>
+      <title>github镜像</title>
+      <link>https://entropydecrease.github.io/post/github_mirror/</link>
+      <pubDate>Mon, 23 Jan 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://entropydecrease.github.io/post/github_mirror/</guid>
+      <description>githhub有时候访问很慢，甚至不能访问，有人做了一个镜像。 https://kgithub.com 可以当作github一样使用，假定此时需要 git clone bwa-mem2 ，原始命令是 git clone https://github.com/bwa-mem2/bwa-mem2.git 现在的命令</description>
+    </item>
+    
+    <item>
       <title>a few Unix and Shell tips</title>
       <link>https://entropydecrease.github.io/post/ssh_tmux/</link>
       <pubDate>Tue, 03 Nov 2015 00:00:00 +0000</pubDate>

@@ -51,6 +51,13 @@
   </url>
   
   <url>
+    <loc>https://entropydecrease.github.io/post/github_mirror/</loc>
+    <lastmod>2023-01-23T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
     <loc>https://entropydecrease.github.io/tags/elementbio/</loc>
     <lastmod>2022-11-19T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
@@ -72,6 +79,13 @@
   </url>
   
   <url>
+    <loc>https://entropydecrease.github.io/tags/bam/</loc>
+    <lastmod>2022-05-01T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
     <loc>https://entropydecrease.github.io/categories/bioinf/</loc>
     <lastmod>2022-05-01T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
@@ -86,7 +100,21 @@
   </url>
   
   <url>
+    <loc>https://entropydecrease.github.io/post/2022_05_01_fastq_format/</loc>
+    <lastmod>2022-05-01T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
     <loc>https://entropydecrease.github.io/post/gnome_af_only/</loc>
+    <lastmod>2022-05-01T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://entropydecrease.github.io/post/2022_05_01_bam_coverage/</loc>
     <lastmod>2022-05-01T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
