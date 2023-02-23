@@ -23,7 +23,7 @@
 
 
 
-<meta name="generator" content="Hugo 0.109.0 with theme even" />
+<meta name="generator" content="Hugo 0.110.0 with theme even" />
 
 
 <link rel="canonical" href="https://entropydecrease.github.io/post/download_m3u8/" />
@@ -48,7 +48,7 @@
 <meta itemprop="name" content="下载m3u8格式的视频文件并合并为mp4">
 <meta itemprop="description" content="尝试了一下下载网络的视频，以illumina的一个视频为例： https://www.illumina.vh.sauos.com/watch/205 得到m3u8文件 在firefox中，安装「Video DownloadHelpe"><meta itemprop="datePublished" content="2023-02-07T18:25:57+08:00" />
 <meta itemprop="dateModified" content="2023-02-07T00:00:00+00:00" />
-<meta itemprop="wordCount" content="681">
+<meta itemprop="wordCount" content="710">
 <meta itemprop="keywords" content="download," /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="下载m3u8格式的视频文件并合并为mp4"/>
 <meta name="twitter:description" content="尝试了一下下载网络的视频，以illumina的一个视频为例： https://www.illumina.vh.sauos.com/watch/205 得到m3u8文件 在firefox中，安装「Video DownloadHelpe"/>
@@ -212,12 +212,13 @@
 </div><p>表头信息可以忽略，我猜测<code>#EXTINF:4.520000</code>是每一个视频文件的长度，紧接的下一行是视频的路径，但是没有hostname。</p>
 <h2 id="下载ts文件">下载ts文件</h2>
 <p>观察一下m3u8文件的地址，前面一段是<code>https://tehlsvodhls02.vhallyun.com/vhallyun/</code>，所以我猜测hostname就是<code>https://tehlsvodhls02.vhallyun.com</code>，后面下载了一个ts文件，发现是正确的。</p>
+<p>下载的ts文件，转换成mp4文件:</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl"><span class="nv">Root</span><span class="o">=</span>https://tehlsvodhls02.vhallyun.com
+<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">ffmpeg -i livestream002243.ts -acodec copy -vcodec copy -absf aac_adtstoasc livestream002243.mp4
 </span></span></code></pre></td></tr></table>
 </div>
 </div><p>从m3u8文件中得到ts文件名，并构造完整的url：</p>
@@ -240,9 +241,13 @@
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">cat url_list.txt <span class="p">|</span> parallel -j <span class="m">5</span> aria2c -c <span class="s2">&#34;</span><span class="si">${</span><span class="nv">Root</span><span class="si">}</span><span class="s2">&#34;</span><span class="o">{}</span>
+<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl"><span class="nv">Root</span><span class="o">=</span>https://tehlsvodhls02.vhallyun.com
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">cat url_list.txt <span class="p">|</span> parallel -j <span class="m">5</span> aria2c -c <span class="s2">&#34;</span><span class="si">${</span><span class="nv">Root</span><span class="si">}</span><span class="s2">&#34;</span><span class="o">{}</span>
 </span></span></code></pre></td></tr></table>
 </div>
 </div><h2 id="合并ts文件生成mp4文件">合并ts文件，生成mp4文件</h2>
@@ -292,7 +297,11 @@
           <a href="/tags/download/">download</a>
           </div>
       <nav class="post-nav">
-        
+        <a class="prev" href="/post/no_one_cares/">
+            <i class="iconfont icon-left"></i>
+            <span class="prev-text nav-default">文摘两则，可以对照着看</span>
+            <span class="prev-text nav-mobile">Prev</span>
+          </a>
         <a class="next" href="/post/github_mirror/">
             <span class="next-text nav-default">github镜像</span>
             <span class="next-text nav-mobile">Next</span>

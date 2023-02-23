@@ -6,7 +6,25 @@
     <description>Recent content on Entropy Decrease</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Tue, 07 Feb 2023 18:25:57 +0800</lastBuildDate><atom:link href="https://entropydecrease.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 23 Feb 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://entropydecrease.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>破解typora</title>
+      <link>https://entropydecrease.github.io/post/crack_typora/</link>
+      <pubDate>Thu, 23 Feb 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://entropydecrease.github.io/post/crack_typora/</guid>
+      <description>基于electron的app有一个问题，没有很好的隐藏源码的机制，所以typora收费之后，破解版层出不穷。 网上搜了一下，针对Mac： 官方网</description>
+    </item>
+    
+    <item>
+      <title>文摘两则，可以对照着看</title>
+      <link>https://entropydecrease.github.io/post/no_one_cares/</link>
+      <pubDate>Thu, 16 Feb 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://entropydecrease.github.io/post/no_one_cares/</guid>
+      <description>在阮一峰的blog看到两则文摘，挺有意思，可以对照着看。 从少年到成年的过渡是痛苦的 No One Cares The transition from childhood to adult life is hard. Our parents give us attention all our adolescent years. But as soon as we cross an age</description>
+    </item>
+    
     <item>
       <title>下载m3u8格式的视频文件并合并为mp4</title>
       <link>https://entropydecrease.github.io/post/download_m3u8/</link>
