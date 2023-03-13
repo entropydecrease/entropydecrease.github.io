@@ -6,7 +6,25 @@
     <description>Recent content in 工具 on Entropy Decrease</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Thu, 23 Feb 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://entropydecrease.github.io/categories/%E5%B7%A5%E5%85%B7/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 13 Mar 2023 22:25:19 +0800</lastBuildDate><atom:link href="https://entropydecrease.github.io/categories/%E5%B7%A5%E5%85%B7/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Hugo 关于 google_news的错误</title>
+      <link>https://entropydecrease.github.io/post/google_news_error/</link>
+      <pubDate>Mon, 13 Mar 2023 22:25:19 +0800</pubDate>
+      
+      <guid>https://entropydecrease.github.io/post/google_news_error/</guid>
+      <description>hugo 前段时间会报错 &amp;quot;_internal/google_news.html&amp;quot;: google_news internal template should be deprecated 这次就完全不能运行，warning变成error了。 解决办法是： 打开 themes/even/layouts/partials/head.html 删掉 {{- template &amp;quot;_internal/google_news.html&amp;quot; . -}} 这一行</description>
+    </item>
+    
+    <item>
+      <title>homebrew 使用镜像的方式</title>
+      <link>https://entropydecrease.github.io/post/homebrew_mirror/</link>
+      <pubDate>Mon, 13 Mar 2023 22:01:49 +0800</pubDate>
+      
+      <guid>https://entropydecrease.github.io/post/homebrew_mirror/</guid>
+      <description>Homebrew也在不停进化，现在使用清华镜像已经很方便了 日常使用 可设置如下环境变量使用本站提供的 Homebrew 镜像： 1 2 3 4 5 export HOMEBREW_INSTALL_FROM_API=1 export HOMEBREW_API_DOMAIN=&amp;#34;https://mirrors.tuna.tsinghua.edu.cn/homebrew-bottles/api&amp;#34; export HOMEBREW_BOTTLE_DOMAIN=&amp;#34;https://mirrors.tuna.tsinghua.edu.cn/homebrew-bottles&amp;#34; export HOMEBREW_BREW_GIT_REMOTE=&amp;#34;https://mirrors.tuna.tsinghua.edu.cn/git/homebrew/brew.git&amp;#34; export HOMEBREW_CORE_GIT_REMOTE=&amp;#34;https://mirrors.tuna.tsinghua.edu.cn/git/homebrew/homebrew-core.git&amp;#34; 首次</description>
+    </item>
+    
     <item>
       <title>破解typora</title>
       <link>https://entropydecrease.github.io/post/crack_typora/</link>

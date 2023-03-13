@@ -23,7 +23,7 @@
 
 
 
-<meta name="generator" content="Hugo 0.110.0 with theme even" />
+<meta name="generator" content="Hugo 0.111.3 with theme even" />
 
 
 <link rel="canonical" href="https://entropydecrease.github.io/" />
@@ -121,6 +121,48 @@
           <section id="posts" class="posts">
     <article class="post">
   <header class="post-header">
+    <h1 class="post-title"><a class="post-link" href="/post/github_mirror/">github镜像</a></h1>
+    <div class="post-meta">
+      <span class="post-time"> 2023-01-23 </span>
+      <div class="post-category">
+          <a href="/categories/%E5%B7%A5%E5%85%B7/"> 工具 </a>
+          </div>
+    </div>
+  </header>
+  
+  <div class="post-content">
+    <div class="post-summary">
+      githhub有时候访问很慢，甚至不能访问，有人做了一个镜像。 https://kgithub.com 可以当作github一样使用，假定此时需要 git clone bwa-mem2 ，原始命令是 git clone https://github.com/bwa-mem2/bwa-mem2.git 现在的命令
+    </div>
+    <div class="read-more">
+      <a href="/post/github_mirror/" class="read-more-link">Read more...</a>
+    </div>
+  </div>
+</article>
+
+    <article class="post">
+  <header class="post-header">
+    <h1 class="post-title"><a class="post-link" href="/post/elementbio_intro/">ElementBio 在2022年NGS开发者大会上的介绍</a></h1>
+    <div class="post-meta">
+      <span class="post-time"> 2022-11-19 </span>
+      <div class="post-category">
+          <a href="/categories/tech/"> tech </a>
+          </div>
+    </div>
+  </header>
+  
+  <div class="post-content">
+    <div class="post-summary">
+      Element Bio 是一家新兴的测序仪公司，其产品具有精度高、成本低、通量高的优势，下面是创始人何敏在2022年NGS开发者大会上的介绍，讲的比较清楚。
+    </div>
+    <div class="read-more">
+      <a href="/post/elementbio_intro/" class="read-more-link">Read more...</a>
+    </div>
+  </div>
+</article>
+
+    <article class="post">
+  <header class="post-header">
     <h1 class="post-title"><a class="post-link" href="/post/2022_05_01_fastq_format/">fastq文件格式</a></h1>
     <div class="post-meta">
       <span class="post-time"> 2022-05-01 </span>
@@ -178,48 +220,6 @@
     </div>
     <div class="read-more">
       <a href="/post/2022_05_01_bam_coverage/" class="read-more-link">Read more...</a>
-    </div>
-  </div>
-</article>
-
-    <article class="post">
-  <header class="post-header">
-    <h1 class="post-title"><a class="post-link" href="/post/bcftools_notes/">bcftools notes (转载)</a></h1>
-    <div class="post-meta">
-      <span class="post-time"> 2021-10-01 </span>
-      <div class="post-category">
-          <a href="/categories/bioinf/"> bioinf </a>
-          </div>
-    </div>
-  </header>
-  
-  <div class="post-content">
-    <div class="post-summary">
-      copied from https://gist.github.com/elowy01/93922762e131d7abd3c7e8e166a74a0b Filter variants per region (in this example, print out only variants mapped to chr1 and chr2) bcftools filter -r1,2 ALL.chip.omni_broad_sanger_combined.20140818.snps.genotypes.hg38.vcf.gz printing out info for only 2 samples: bcftools view -s NA20818,NA20819 filename.vcf.gz printing stats only for variants passing the filter: bcftools view -f PASS filename.vcf.gz printing variants withoud header: bcftools view -H printing variants on a particular region: bcftools view -r chr20:1-200000 -s NA20818,NA20819 filename.vcf.gz print all
-    </div>
-    <div class="read-more">
-      <a href="/post/bcftools_notes/" class="read-more-link">Read more...</a>
-    </div>
-  </div>
-</article>
-
-    <article class="post">
-  <header class="post-header">
-    <h1 class="post-title"><a class="post-link" href="/post/igv_local_genome/">igv 生成本地的.genome文件</a></h1>
-    <div class="post-meta">
-      <span class="post-time"> 2020-02-23 </span>
-      <div class="post-category">
-          <a href="/categories/bioinf/"> bioinf </a>
-          </div>
-    </div>
-  </header>
-  
-  <div class="post-content">
-    <div class="post-summary">
-      igv假如每次都要从远程加载genome信息的话，网络不好的情况下会很慢，这时候最好做一个本地版的.genome文件。 igv的.genome
-    </div>
-    <div class="read-more">
-      <a href="/post/igv_local_genome/" class="read-more-link">Read more...</a>
     </div>
   </div>
 </article>

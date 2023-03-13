@@ -23,7 +23,7 @@
 
 
 
-<meta name="generator" content="Hugo 0.110.0 with theme even" />
+<meta name="generator" content="Hugo 0.111.3 with theme even" />
 
 
 <link rel="canonical" href="https://entropydecrease.github.io/" />
@@ -121,6 +121,48 @@
           <section id="posts" class="posts">
     <article class="post">
   <header class="post-header">
+    <h1 class="post-title"><a class="post-link" href="/post/google_news_error/">Hugo 关于 google_news的错误</a></h1>
+    <div class="post-meta">
+      <span class="post-time"> 2023-03-13 </span>
+      <div class="post-category">
+          <a href="/categories/%E5%B7%A5%E5%85%B7/"> 工具 </a>
+          </div>
+    </div>
+  </header>
+  
+  <div class="post-content">
+    <div class="post-summary">
+      hugo 前段时间会报错 &quot;_internal/google_news.html&quot;: google_news internal template should be deprecated 这次就完全不能运行，warning变成error了。 解决办法是： 打开 themes/even/layouts/partials/head.html 删掉 {{- template &quot;_internal/google_news.html&quot; . -}} 这一行
+    </div>
+    <div class="read-more">
+      <a href="/post/google_news_error/" class="read-more-link">Read more...</a>
+    </div>
+  </div>
+</article>
+
+    <article class="post">
+  <header class="post-header">
+    <h1 class="post-title"><a class="post-link" href="/post/homebrew_mirror/">homebrew 使用镜像的方式</a></h1>
+    <div class="post-meta">
+      <span class="post-time"> 2023-03-13 </span>
+      <div class="post-category">
+          <a href="/categories/%E5%B7%A5%E5%85%B7/"> 工具 </a>
+          </div>
+    </div>
+  </header>
+  
+  <div class="post-content">
+    <div class="post-summary">
+      Homebrew也在不停进化，现在使用清华镜像已经很方便了 日常使用 可设置如下环境变量使用本站提供的 Homebrew 镜像： 1 2 3 4 5 export HOMEBREW_INSTALL_FROM_API=1 export HOMEBREW_API_DOMAIN=&#34;https://mirrors.tuna.tsinghua.edu.cn/homebrew-bottles/api&#34; export HOMEBREW_BOTTLE_DOMAIN=&#34;https://mirrors.tuna.tsinghua.edu.cn/homebrew-bottles&#34; export HOMEBREW_BREW_GIT_REMOTE=&#34;https://mirrors.tuna.tsinghua.edu.cn/git/homebrew/brew.git&#34; export HOMEBREW_CORE_GIT_REMOTE=&#34;https://mirrors.tuna.tsinghua.edu.cn/git/homebrew/homebrew-core.git&#34; 首次
+    </div>
+    <div class="read-more">
+      <a href="/post/homebrew_mirror/" class="read-more-link">Read more...</a>
+    </div>
+  </div>
+</article>
+
+    <article class="post">
+  <header class="post-header">
     <h1 class="post-title"><a class="post-link" href="/post/crack_typora/">破解typora</a></h1>
     <div class="post-meta">
       <span class="post-time"> 2023-02-23 </span>
@@ -178,48 +220,6 @@
     </div>
     <div class="read-more">
       <a href="/post/download_m3u8/" class="read-more-link">Read more...</a>
-    </div>
-  </div>
-</article>
-
-    <article class="post">
-  <header class="post-header">
-    <h1 class="post-title"><a class="post-link" href="/post/github_mirror/">github镜像</a></h1>
-    <div class="post-meta">
-      <span class="post-time"> 2023-01-23 </span>
-      <div class="post-category">
-          <a href="/categories/%E5%B7%A5%E5%85%B7/"> 工具 </a>
-          </div>
-    </div>
-  </header>
-  
-  <div class="post-content">
-    <div class="post-summary">
-      githhub有时候访问很慢，甚至不能访问，有人做了一个镜像。 https://kgithub.com 可以当作github一样使用，假定此时需要 git clone bwa-mem2 ，原始命令是 git clone https://github.com/bwa-mem2/bwa-mem2.git 现在的命令
-    </div>
-    <div class="read-more">
-      <a href="/post/github_mirror/" class="read-more-link">Read more...</a>
-    </div>
-  </div>
-</article>
-
-    <article class="post">
-  <header class="post-header">
-    <h1 class="post-title"><a class="post-link" href="/post/elementbio_intro/">ElementBio 在2022年NGS开发者大会上的介绍</a></h1>
-    <div class="post-meta">
-      <span class="post-time"> 2022-11-19 </span>
-      <div class="post-category">
-          <a href="/categories/tech/"> tech </a>
-          </div>
-    </div>
-  </header>
-  
-  <div class="post-content">
-    <div class="post-summary">
-      Element Bio 是一家新兴的测序仪公司，其产品具有精度高、成本低、通量高的优势，下面是创始人何敏在2022年NGS开发者大会上的介绍，讲的比较清楚。
-    </div>
-    <div class="read-more">
-      <a href="/post/elementbio_intro/" class="read-more-link">Read more...</a>
     </div>
   </div>
 </article>
