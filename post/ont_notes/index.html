@@ -16,7 +16,7 @@
 <meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
 
 
-<meta name="author" content="Entropy Decrease" /><meta name="description" content="准确度 Kit V14 &#43; R10.4.1 simplex: 99.6%, Q24 duplex: 99.92%, Q31 duplex 一个双链文库分子，两端都有motor protein（马达蛋白）。一段的马达蛋白牵引双链文库靠近纳米孔，并解开双链" /><meta name="keywords" content="nanopore" />
+<meta name="author" content="Entropy Decrease" /><meta name="description" content="准确度 Kit V14 &#43; R10.4.1 simplex: 99.6%, Q24 duplex: 99.92%, Q31 duplex 一个双链文库分子，两端都有motor protein（马达蛋白）。一端的马达蛋白牵引双链文库靠近纳米孔，并解开双链" /><meta name="keywords" content="nanopore" />
 
 
 
@@ -40,18 +40,18 @@
 
 
 <meta property="og:title" content="ONT相关的一些笔记" />
-<meta property="og:description" content="准确度 Kit V14 &#43; R10.4.1 simplex: 99.6%, Q24 duplex: 99.92%, Q31 duplex 一个双链文库分子，两端都有motor protein（马达蛋白）。一段的马达蛋白牵引双链文库靠近纳米孔，并解开双链" />
+<meta property="og:description" content="准确度 Kit V14 &#43; R10.4.1 simplex: 99.6%, Q24 duplex: 99.92%, Q31 duplex 一个双链文库分子，两端都有motor protein（马达蛋白）。一端的马达蛋白牵引双链文库靠近纳米孔，并解开双链" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://entropydecrease.github.io/post/ont_notes/" /><meta property="article:section" content="post" />
 <meta property="article:published_time" content="2023-04-01T00:00:00+00:00" />
 <meta property="article:modified_time" content="2023-04-01T00:00:00+00:00" />
 <meta itemprop="name" content="ONT相关的一些笔记">
-<meta itemprop="description" content="准确度 Kit V14 &#43; R10.4.1 simplex: 99.6%, Q24 duplex: 99.92%, Q31 duplex 一个双链文库分子，两端都有motor protein（马达蛋白）。一段的马达蛋白牵引双链文库靠近纳米孔，并解开双链"><meta itemprop="datePublished" content="2023-04-01T00:00:00+00:00" />
+<meta itemprop="description" content="准确度 Kit V14 &#43; R10.4.1 simplex: 99.6%, Q24 duplex: 99.92%, Q31 duplex 一个双链文库分子，两端都有motor protein（马达蛋白）。一端的马达蛋白牵引双链文库靠近纳米孔，并解开双链"><meta itemprop="datePublished" content="2023-04-01T00:00:00+00:00" />
 <meta itemprop="dateModified" content="2023-04-01T00:00:00+00:00" />
 <meta itemprop="wordCount" content="1522">
 <meta itemprop="keywords" content="nanopore," /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="ONT相关的一些笔记"/>
-<meta name="twitter:description" content="准确度 Kit V14 &#43; R10.4.1 simplex: 99.6%, Q24 duplex: 99.92%, Q31 duplex 一个双链文库分子，两端都有motor protein（马达蛋白）。一段的马达蛋白牵引双链文库靠近纳米孔，并解开双链"/>
+<meta name="twitter:description" content="准确度 Kit V14 &#43; R10.4.1 simplex: 99.6%, Q24 duplex: 99.92%, Q31 duplex 一个双链文库分子，两端都有motor protein（马达蛋白）。一端的马达蛋白牵引双链文库靠近纳米孔，并解开双链"/>
 
 <!--[if lte IE 9]>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
@@ -176,7 +176,7 @@
 <h2 id="duplex">duplex</h2>
 <ul>
 <li>
-<p>一个双链文库分子，两端都有motor protein（马达蛋白）。一段的马达蛋白牵引双链文库靠近纳米孔，并解开双链让其中一条单链进入纳米孔，在其完全进入纳米孔之后，文库另外一端的马达蛋白有可能会牵引文库另外一头直接以单链的形式（无需解链）进入纳米孔（此时也有可能是其他的片段进入纳米孔测序）。这样测得的序列是一条原始分子的正负链都被测到了，所以叫duplex，可以提高测序精度。</p>
+<p>一个双链文库分子，两端都有motor protein（马达蛋白）。一端的马达蛋白牵引双链文库靠近纳米孔，并解开双链让其中一条单链进入纳米孔，在其完全进入纳米孔之后，文库另外一端的马达蛋白有可能会牵引文库另外一头直接以单链的形式（无需解链）进入纳米孔（此时也有可能是其他的片段进入纳米孔测序）。这样测得的序列是一条原始分子的正负链都被测到了，所以叫duplex，可以提高测序精度。</p>
 </li>
 <li>
 <p>duplex不是通过新的试剂，只是protocol，让互补链紧跟着正义链过同一个孔而已，有一些reads是duplex，也有很多是simplex。
