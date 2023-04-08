@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>tech on Entropy Decrease</title>
-    <link>https://entropydecrease.github.io/categories/tech/</link>
-    <description>Recent content in tech on Entropy Decrease</description>
+    <title>nanopore on Entropy Decrease</title>
+    <link>https://entropydecrease.github.io/tags/nanopore/</link>
+    <description>Recent content in nanopore on Entropy Decrease</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Sat, 08 Apr 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://entropydecrease.github.io/categories/tech/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 08 Apr 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://entropydecrease.github.io/tags/nanopore/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>图解三代测序（Nanopore） (转载作为备份)</title>
       <link>https://entropydecrease.github.io/post/ont_basics/</link>
@@ -23,15 +23,6 @@
       
       <guid>https://entropydecrease.github.io/post/ont_notes/</guid>
       <description>准确度 Kit V14 + R10.4.1 simplex: 99.6%, Q24 duplex: 99.92%, Q31 duplex 一个双链文库分子，两端都有motor protein（马达蛋白）。一段的马达蛋白牵引双链文库靠近纳米孔，并解开双链</description>
-    </item>
-    
-    <item>
-      <title>ElementBio 在2022年NGS开发者大会上的介绍</title>
-      <link>https://entropydecrease.github.io/post/elementbio_intro/</link>
-      <pubDate>Sat, 19 Nov 2022 00:00:00 +0000</pubDate>
-      
-      <guid>https://entropydecrease.github.io/post/elementbio_intro/</guid>
-      <description>Element Bio 是一家新兴的测序仪公司，其产品具有精度高、成本低、通量高的优势，下面是创始人何敏在2022年NGS开发者大会上的介绍，讲的比较清楚。</description>
     </item>
     
   </channel>

@@ -6,7 +6,25 @@
     <description>Recent content in Posts on Entropy Decrease</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Mon, 13 Mar 2023 22:25:19 +0800</lastBuildDate><atom:link href="https://entropydecrease.github.io/post/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 08 Apr 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://entropydecrease.github.io/post/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>图解三代测序（Nanopore） (转载作为备份)</title>
+      <link>https://entropydecrease.github.io/post/ont_basics/</link>
+      <pubDate>Sat, 08 Apr 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://entropydecrease.github.io/post/ont_basics/</guid>
+      <description>转载自 baimoc - 博客园 一、测序原理 先介绍 Nanopore 测序中的几位主角： Reader ：在自然界中，有一种可以嵌入到细胞膜中作为离子或分子通道的跨膜蛋白，具有天然的蛋白纳</description>
+    </item>
+    
+    <item>
+      <title>ONT相关的一些笔记</title>
+      <link>https://entropydecrease.github.io/post/ont_notes/</link>
+      <pubDate>Sat, 01 Apr 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://entropydecrease.github.io/post/ont_notes/</guid>
+      <description>准确度 Kit V14 + R10.4.1 simplex: 99.6%, Q24 duplex: 99.92%, Q31 duplex 一个双链文库分子，两端都有motor protein（马达蛋白）。一段的马达蛋白牵引双链文库靠近纳米孔，并解开双链</description>
+    </item>
+    
     <item>
       <title>Hugo 关于 google_news的错误</title>
       <link>https://entropydecrease.github.io/post/google_news_error/</link>

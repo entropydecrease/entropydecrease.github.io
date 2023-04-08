@@ -121,9 +121,9 @@
           <section id="posts" class="posts">
     <article class="post">
   <header class="post-header">
-    <h1 class="post-title"><a class="post-link" href="/post/ref_genome/">应该使用哪个genome</a></h1>
+    <h1 class="post-title"><a class="post-link" href="/post/common_bioinf_mistakes/">bioinf常见的一些错误</a></h1>
     <div class="post-meta">
-      <span class="post-time"> 2020-02-23 </span>
+      <span class="post-time"> 2015-03-14 </span>
       <div class="post-category">
           <a href="/categories/bioinf/"> bioinf </a>
           </div>
@@ -132,94 +132,10 @@
   
   <div class="post-content">
     <div class="post-summary">
-      GRCh37 还是 GRCh38 GRCh37 == hg19，GRCh38 ＝＝ hg38 理论上来讲，GRCh38是新的人类基因组的参考组装，相对GRCh37(hg19)来说，更接近人类真正
+      biostar上的这篇文章总结了在生物信息学日常工作中容易犯的一些共性的错误： * forget to check both strands * generate random genomic sites without avoiding masked (NNN) gaps * confuse genome freezes and even species * try to see which headers it contained
     </div>
     <div class="read-more">
-      <a href="/post/ref_genome/" class="read-more-link">Read more...</a>
-    </div>
-  </div>
-</article>
-
-    <article class="post">
-  <header class="post-header">
-    <h1 class="post-title"><a class="post-link" href="/post/some_history_of_my_hometown/">说说我的家乡，没什么文笔，自娱自乐</a></h1>
-    <div class="post-meta">
-      <span class="post-time"> 2015-12-06 </span>
-      <div class="post-category">
-          <a href="/categories/%E9%9A%8F%E7%AC%94/"> 随笔 </a>
-          </div>
-    </div>
-  </header>
-  
-  <div class="post-content">
-    <div class="post-summary">
-      我的家乡新郑，洛阳与开封之间、黄河以南四十公里的一个小县，归郑州管辖。 这个小县，在今天的年代里默默无闻，但是就像河南很多地方一样，过去的千百
-    </div>
-    <div class="read-more">
-      <a href="/post/some_history_of_my_hometown/" class="read-more-link">Read more...</a>
-    </div>
-  </div>
-</article>
-
-    <article class="post">
-  <header class="post-header">
-    <h1 class="post-title"><a class="post-link" href="/post/ssh_tmux/">a few Unix and Shell tips</a></h1>
-    <div class="post-meta">
-      <span class="post-time"> 2015-11-03 </span>
-      <div class="post-category">
-          <a href="/categories/%E5%B7%A5%E5%85%B7/"> 工具 </a>
-          </div>
-    </div>
-  </header>
-  
-  <div class="post-content">
-    <div class="post-summary">
-      automatically attach to a tmux session via SSH 1 2 3 4 5 6 7 alias alias_name=&#39;ssh username@servername -t &#34;tmux attach || tmux&#34; &#39; -t Force pseudo-tty allocation. This can be used to execute arbitrary screen-based programs on a remote machine, which can be very useful, e.g., when implementing menu services. &#34;tmux attach&#34; tries to attach a tmux session. and if it fails, &#34;tmux&#34; will create a new session. to
-    </div>
-    <div class="read-more">
-      <a href="/post/ssh_tmux/" class="read-more-link">Read more...</a>
-    </div>
-  </div>
-</article>
-
-    <article class="post">
-  <header class="post-header">
-    <h1 class="post-title"><a class="post-link" href="/post/mac_case_insensitivity/">case insensitivity on MAC OS X</a></h1>
-    <div class="post-meta">
-      <span class="post-time"> 2015-05-07 </span>
-      <div class="post-category">
-          <a href="/categories/%E5%B7%A5%E5%85%B7/"> 工具 </a>
-          </div>
-    </div>
-  </header>
-  
-  <div class="post-content">
-    <div class="post-summary">
-      Note: 新版本的Mac操作系统可能会有不同 http://apple.stackexchange.com/questions/22297/is-bash-in-osx-case-insensitive HFS+ (the Mac filesystem) is usually configured to be case insensitive but case preserving. This means that the file system will consider foo and FoO to be the same, but when you create a new file it will remember which letters where capitalized and which were not. When you format a
-    </div>
-    <div class="read-more">
-      <a href="/post/mac_case_insensitivity/" class="read-more-link">Read more...</a>
-    </div>
-  </div>
-</article>
-
-    <article class="post">
-  <header class="post-header">
-    <h1 class="post-title"><a class="post-link" href="/post/set_hostname/">设置hostname，避免DHCP修改hostname</a></h1>
-    <div class="post-meta">
-      <span class="post-time"> 2015-04-13 </span>
-      <div class="post-category">
-          <a href="/categories/%E5%B7%A5%E5%85%B7/"> 工具 </a>
-          </div>
-    </div>
-  </header>
-  
-  <div class="post-content">
-    <div class="post-summary">
-      It can be annoying to see my hostname being modifed each time I connect to a different WIFI. It is because the hostname was never set. &gt; scutil --get HostName HostName: not set So we just need to set the hostname: &gt; sudo scutil --set HostName &quot;new_hostname&quot; Password: &gt; scutil --get HostName new_hostname
-    </div>
-    <div class="read-more">
-      <a href="/post/set_hostname/" class="read-more-link">Read more...</a>
+      <a href="/post/common_bioinf_mistakes/" class="read-more-link">Read more...</a>
     </div>
   </div>
 </article>
@@ -227,14 +143,11 @@
     </section>
   
   <nav class="pagination">
-    <a class="prev" href="/page/3/">
+    <a class="prev" href="/page/5/">
         <i class="iconfont icon-left"></i>
         <span class="prev-text">Prev</span>
       </a>
-    <a class="next" href="/page/5/">
-        <span class="next-text">Next</span>
-        <i class="iconfont icon-right"></i>
-      </a>
+    
   </nav>
         </div>
         
