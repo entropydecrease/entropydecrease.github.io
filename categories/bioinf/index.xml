@@ -6,7 +6,16 @@
     <description>Recent content in bioinf on Entropy Decrease</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Sun, 01 May 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://entropydecrease.github.io/categories/bioinf/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 28 Apr 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://entropydecrease.github.io/categories/bioinf/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>datamash tips</title>
+      <link>https://entropydecrease.github.io/post/datamash_tips1/</link>
+      <pubDate>Fri, 28 Apr 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://entropydecrease.github.io/post/datamash_tips1/</guid>
+      <description>1 2 3 4 5 6 7 8 9 10 &amp;gt; (cat &amp;lt;&amp;lt;-EOF a 1 a 2 b 3 c 4 EOF ) | datamash groupby 1 collapse 2 a 1,2 b 3 c 4 collapse 操作可以将对应的列（本例中为第二列）进行合并，在本例子，根据第一例的</description>
+    </item>
+    
     <item>
       <title>fastq文件格式</title>
       <link>https://entropydecrease.github.io/post/2022_05_01_fastq_format/</link>

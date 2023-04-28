@@ -121,6 +121,27 @@
           <section id="posts" class="posts">
     <article class="post">
   <header class="post-header">
+    <h1 class="post-title"><a class="post-link" href="/post/datamash_tips1/">datamash tips</a></h1>
+    <div class="post-meta">
+      <span class="post-time"> 2023-04-28 </span>
+      <div class="post-category">
+          <a href="/categories/bioinf/"> bioinf </a>
+          </div>
+    </div>
+  </header>
+  
+  <div class="post-content">
+    <div class="post-summary">
+      1 2 3 4 5 6 7 8 9 10 &gt; (cat &lt;&lt;-EOF a 1 a 2 b 3 c 4 EOF ) | datamash groupby 1 collapse 2 a 1,2 b 3 c 4 collapse 操作可以将对应的列（本例中为第二列）进行合并，在本例子，根据第一例的
+    </div>
+    <div class="read-more">
+      <a href="/post/datamash_tips1/" class="read-more-link">Read more...</a>
+    </div>
+  </div>
+</article>
+
+    <article class="post">
+  <header class="post-header">
     <h1 class="post-title"><a class="post-link" href="/post/cancer_early_diagnostics/">肿瘤早诊的思路</a></h1>
     <div class="post-meta">
       <span class="post-time"> 2023-04-28 </span>
@@ -199,27 +220,6 @@
     </div>
     <div class="read-more">
       <a href="/post/ont_notes/" class="read-more-link">Read more...</a>
-    </div>
-  </div>
-</article>
-
-    <article class="post">
-  <header class="post-header">
-    <h1 class="post-title"><a class="post-link" href="/post/google_news_error/">Hugo 关于 google_news的错误</a></h1>
-    <div class="post-meta">
-      <span class="post-time"> 2023-03-13 </span>
-      <div class="post-category">
-          <a href="/categories/%E5%B7%A5%E5%85%B7/"> 工具 </a>
-          </div>
-    </div>
-  </header>
-  
-  <div class="post-content">
-    <div class="post-summary">
-      hugo 前段时间会报错 &quot;_internal/google_news.html&quot;: google_news internal template should be deprecated 这次就完全不能运行，warning变成error了。 解决办法是： 打开 themes/even/layouts/partials/head.html 删掉 {{- template &quot;_internal/google_news.html&quot; . -}} 这一行
-    </div>
-    <div class="read-more">
-      <a href="/post/google_news_error/" class="read-more-link">Read more...</a>
     </div>
   </div>
 </article>

@@ -121,6 +121,27 @@
           <section id="posts" class="posts">
     <article class="post">
   <header class="post-header">
+    <h1 class="post-title"><a class="post-link" href="/post/google_news_error/">Hugo 关于 google_news的错误</a></h1>
+    <div class="post-meta">
+      <span class="post-time"> 2023-03-13 </span>
+      <div class="post-category">
+          <a href="/categories/%E5%B7%A5%E5%85%B7/"> 工具 </a>
+          </div>
+    </div>
+  </header>
+  
+  <div class="post-content">
+    <div class="post-summary">
+      hugo 前段时间会报错 &quot;_internal/google_news.html&quot;: google_news internal template should be deprecated 这次就完全不能运行，warning变成error了。 解决办法是： 打开 themes/even/layouts/partials/head.html 删掉 {{- template &quot;_internal/google_news.html&quot; . -}} 这一行
+    </div>
+    <div class="read-more">
+      <a href="/post/google_news_error/" class="read-more-link">Read more...</a>
+    </div>
+  </div>
+</article>
+
+    <article class="post">
+  <header class="post-header">
     <h1 class="post-title"><a class="post-link" href="/post/homebrew_mirror/">homebrew 使用镜像的方式</a></h1>
     <div class="post-meta">
       <span class="post-time"> 2023-03-13 </span>
@@ -199,27 +220,6 @@
     </div>
     <div class="read-more">
       <a href="/post/download_m3u8/" class="read-more-link">Read more...</a>
-    </div>
-  </div>
-</article>
-
-    <article class="post">
-  <header class="post-header">
-    <h1 class="post-title"><a class="post-link" href="/post/github_mirror/">github镜像</a></h1>
-    <div class="post-meta">
-      <span class="post-time"> 2023-01-23 </span>
-      <div class="post-category">
-          <a href="/categories/%E5%B7%A5%E5%85%B7/"> 工具 </a>
-          </div>
-    </div>
-  </header>
-  
-  <div class="post-content">
-    <div class="post-summary">
-      githhub有时候访问很慢，甚至不能访问，有人做了一个镜像。 https://kgithub.com 可以当作github一样使用，假定此时需要 git clone bwa-mem2 ，原始命令是 git clone https://github.com/bwa-mem2/bwa-mem2.git 现在的命令
-    </div>
-    <div class="read-more">
-      <a href="/post/github_mirror/" class="read-more-link">Read more...</a>
     </div>
   </div>
 </article>
