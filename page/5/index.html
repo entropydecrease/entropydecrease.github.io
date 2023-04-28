@@ -121,6 +121,48 @@
           <section id="posts" class="posts">
     <article class="post">
   <header class="post-header">
+    <h1 class="post-title"><a class="post-link" href="/post/mac_case_insensitivity/">case insensitivity on MAC OS X</a></h1>
+    <div class="post-meta">
+      <span class="post-time"> 2015-05-07 </span>
+      <div class="post-category">
+          <a href="/categories/%E5%B7%A5%E5%85%B7/"> 工具 </a>
+          </div>
+    </div>
+  </header>
+  
+  <div class="post-content">
+    <div class="post-summary">
+      Note: 新版本的Mac操作系统可能会有不同 http://apple.stackexchange.com/questions/22297/is-bash-in-osx-case-insensitive HFS+ (the Mac filesystem) is usually configured to be case insensitive but case preserving. This means that the file system will consider foo and FoO to be the same, but when you create a new file it will remember which letters where capitalized and which were not. When you format a
+    </div>
+    <div class="read-more">
+      <a href="/post/mac_case_insensitivity/" class="read-more-link">Read more...</a>
+    </div>
+  </div>
+</article>
+
+    <article class="post">
+  <header class="post-header">
+    <h1 class="post-title"><a class="post-link" href="/post/set_hostname/">设置hostname，避免DHCP修改hostname</a></h1>
+    <div class="post-meta">
+      <span class="post-time"> 2015-04-13 </span>
+      <div class="post-category">
+          <a href="/categories/%E5%B7%A5%E5%85%B7/"> 工具 </a>
+          </div>
+    </div>
+  </header>
+  
+  <div class="post-content">
+    <div class="post-summary">
+      It can be annoying to see my hostname being modifed each time I connect to a different WIFI. It is because the hostname was never set. &gt; scutil --get HostName HostName: not set So we just need to set the hostname: &gt; sudo scutil --set HostName &quot;new_hostname&quot; Password: &gt; scutil --get HostName new_hostname
+    </div>
+    <div class="read-more">
+      <a href="/post/set_hostname/" class="read-more-link">Read more...</a>
+    </div>
+  </div>
+</article>
+
+    <article class="post">
+  <header class="post-header">
     <h1 class="post-title"><a class="post-link" href="/post/disable_timemachine_local_backup/">disable local backup of timemachine</a></h1>
     <div class="post-meta">
       <span class="post-time"> 2015-04-11 </span>
@@ -174,48 +216,6 @@
     </div>
     <div class="read-more">
       <a href="/post/atrun/" class="read-more-link">Read more...</a>
-    </div>
-  </div>
-</article>
-
-    <article class="post">
-  <header class="post-header">
-    <h1 class="post-title"><a class="post-link" href="/post/git_tips/">git tips</a></h1>
-    <div class="post-meta">
-      <span class="post-time"> 2015-03-25 </span>
-      <div class="post-category">
-          <a href="/categories/%E5%B7%A5%E5%85%B7/"> 工具 </a>
-          </div>
-    </div>
-  </header>
-  
-  <div class="post-content">
-    <div class="post-summary">
-      从现有仓库克隆 $ git clone git://github.com/schacon/grit.git $ git clone git://github.com/schacon/grit.git mygrit .gitignore $ cat ~/.gitignore *~ 撤消操作 * 修改最后一次提交 $ git commit --amend 如果刚才提交时忘了暂存某些修改，可以先补上暂存操作，然后再运行 --amend
-    </div>
-    <div class="read-more">
-      <a href="/post/git_tips/" class="read-more-link">Read more...</a>
-    </div>
-  </div>
-</article>
-
-    <article class="post">
-  <header class="post-header">
-    <h1 class="post-title"><a class="post-link" href="/post/import_ost/">export mail in .ost file to mail.app on Mac</a></h1>
-    <div class="post-meta">
-      <span class="post-time"> 2015-03-24 </span>
-      <div class="post-category">
-          <a href="/categories/%E5%B7%A5%E5%85%B7/"> 工具 </a>
-          </div>
-    </div>
-  </header>
-  
-  <div class="post-content">
-    <div class="post-summary">
-      export mail in .ost file to mbox file (the file may not end with .mbox). &gt; readpst -j 3 outlook.ost mail.app &ndash;&gt; File &ndash;&gt; import mailboxes, and select the folder generated in step 1. That&rsquo;s all. Your emails in the ost file will be imported into a directory under &ldquo;on my Mac&rdquo;.
-    </div>
-    <div class="read-more">
-      <a href="/post/import_ost/" class="read-more-link">Read more...</a>
     </div>
   </div>
 </article>

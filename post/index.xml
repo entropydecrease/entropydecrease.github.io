@@ -6,7 +6,25 @@
     <description>Recent content in Posts on Entropy Decrease</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Sat, 08 Apr 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://entropydecrease.github.io/post/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 28 Apr 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://entropydecrease.github.io/post/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>肿瘤早诊的思路</title>
+      <link>https://entropydecrease.github.io/post/cancer_early_diagnostics/</link>
+      <pubDate>Fri, 28 Apr 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://entropydecrease.github.io/post/cancer_early_diagnostics/</guid>
+      <description>全国临床分子诊断技术及其规范化应用高峰论坛，听了邵建永的讲座，有一些启发，总结一下： 肿瘤早诊的思路 1）做早诊，而不是早筛 2）开始用粪便做结直</description>
+    </item>
+    
+    <item>
+      <title>世和的MRD</title>
+      <link>https://entropydecrease.github.io/post/geneseeq_mrd/</link>
+      <pubDate>Thu, 27 Apr 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://entropydecrease.github.io/post/geneseeq_mrd/</guid>
+      <description>邵阳对世和MRD的介绍 - MRD的技术创新与应用案例分享 个人总结 对个体化panel与固定panel的优劣，做了全面而深入的分析 采用固定化的大p</description>
+    </item>
+    
     <item>
       <title>图解三代测序（Nanopore） (转载作为备份)</title>
       <link>https://entropydecrease.github.io/post/ont_basics/</link>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>MRD on Entropy Decrease</title>
+    <link>https://entropydecrease.github.io/tags/mrd/</link>
+    <description>Recent content in MRD on Entropy Decrease</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Thu, 27 Apr 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://entropydecrease.github.io/tags/mrd/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>世和的MRD</title>
+      <link>https://entropydecrease.github.io/post/geneseeq_mrd/</link>
+      <pubDate>Thu, 27 Apr 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://entropydecrease.github.io/post/geneseeq_mrd/</guid>
+      <description>邵阳对世和MRD的介绍 - MRD的技术创新与应用案例分享 个人总结 对个体化panel与固定panel的优劣，做了全面而深入的分析 采用固定化的大p</description>
+    </item>
+    
+  </channel>
+</rss>
