@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>早诊 on Entropy Decrease</title>
-    <link>https://entropydecrease.github.io/tags/%E6%97%A9%E8%AF%8A/</link>
-    <description>Recent content in 早诊 on Entropy Decrease</description>
+    <title>甲基化 on Entropy Decrease</title>
+    <link>https://entropydecrease.github.io/tags/%E7%94%B2%E5%9F%BA%E5%8C%96/</link>
+    <description>Recent content in 甲基化 on Entropy Decrease</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Tue, 02 May 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://entropydecrease.github.io/tags/%E6%97%A9%E8%AF%8A/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 02 May 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://entropydecrease.github.io/tags/%E7%94%B2%E5%9F%BA%E5%8C%96/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>甲基化肿瘤检测产品-1</title>
       <link>https://entropydecrease.github.io/post/2023_05_02_methylation_cancer/</link>
@@ -14,15 +14,6 @@
       
       <guid>https://entropydecrease.github.io/post/2023_05_02_methylation_cancer/</guid>
       <description>1. 甲基化肿瘤检测产品综述 Koch, A. et al. Analysis of DNA methylation in cancer: location revisited. Nat Rev Clin Oncol 15, 459–466 (2018). The Cancer Genome Atlas (TCGA) data for all biomarkers with commercially available assays were analysed for differential methylation between tumour and nonmalignant samples and to determine whether or not methylation status at the</description>
-    </item>
-    
-    <item>
-      <title>肿瘤早诊的思路</title>
-      <link>https://entropydecrease.github.io/post/cancer_early_diagnostics/</link>
-      <pubDate>Fri, 28 Apr 2023 00:00:00 +0000</pubDate>
-      
-      <guid>https://entropydecrease.github.io/post/cancer_early_diagnostics/</guid>
-      <description>全国临床分子诊断技术及其规范化应用高峰论坛，听了邵建永的讲座，有一些启发，总结一下： 肿瘤早诊的思路 1）做早诊，而不是早筛 2）开始用粪便做结直</description>
     </item>
     
   </channel>
