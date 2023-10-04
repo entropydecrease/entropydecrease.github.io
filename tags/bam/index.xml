@@ -1,20 +1,18 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>bam on Entropy Decrease</title>
-    <link>https://entropydecrease.github.io/tags/bam/</link>
-    <description>Recent content in bam on Entropy Decrease</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en</language>
-    <lastBuildDate>Sun, 01 May 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://entropydecrease.github.io/tags/bam/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>计算bam文件中的覆盖度</title>
-      <link>https://entropydecrease.github.io/post/2022_05_01_bam_coverage/</link>
-      <pubDate>Sun, 01 May 2022 00:00:00 +0000</pubDate>
-      
-      <guid>https://entropydecrease.github.io/post/2022_05_01_bam_coverage/</guid>
-      <description>Things to consider to exclude some reads, like samtools depth/bedcov and mosdepth do. &amp;lsquo;UNMAP,SECONDARY,QCFAIL,DUP or 0x704 or 1796&amp;rsquo; to only summarize target regions or whole genome Tools to use mosdepth 1 2 3 4 5 6 7 8 9 10 11 12 13 14 for Bam in *.mkdup.bam do # skip if index file doesn&amp;#39;t exist [ -s ${Bam}.bai ] || continue Base=$(basename ${Bam%.mkdup.bam}) # run mosdepth [ -s ${Base}.mosdepth.summary.txt</description>
-    </item>
-    
-  </channel>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>bam - Tag - Entropy Decrease</title>
+        <link>https://entropydecrease.github.io/tags/bam/</link>
+        <description>bam - Tag - Entropy Decrease</description>
+        <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Sun, 01 May 2022 00:00:00 &#43;0000</lastBuildDate><atom:link href="https://entropydecrease.github.io/tags/bam/" rel="self" type="application/rss+xml" /><item>
+    <title>计算bam文件中的覆盖度</title>
+    <link>https://entropydecrease.github.io/2022_05_01_bam_coverage/</link>
+    <pubDate>Sun, 01 May 2022 00:00:00 &#43;0000</pubDate>
+    <author>entropydecrease</author>
+    <guid>https://entropydecrease.github.io/2022_05_01_bam_coverage/</guid>
+    <description><![CDATA[Things to consider to exclude some reads, like samtools depth/bedcov and mosdepth do.
+&lsquo;UNMAP,SECONDARY,QCFAIL,DUP or 0x704 or 1796&rsquo;
+to only summarize target regions or whole genome
+Tools to use mosdepth 1 2 3 4 5 6 7 8 9 10 11 12 13 14 for Bam in *.mkdup.bam do # skip if index file doesn&#39;t exist [ -s ${Bam}.bai ] || continue Base=$(basename ${Bam%.mkdup.bam}) # run mosdepth [ -s ${Base}.mosdepth.summary.txt ] &amp;&amp; continue echo $Bam mosdepth --by target_hg38.]]></description>
+</item>
+</channel>
 </rss>

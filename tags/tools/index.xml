@@ -1,0 +1,21 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>tools - Tag - Entropy Decrease</title>
+        <link>https://entropydecrease.github.io/tags/tools/</link>
+        <description>tools - Tag - Entropy Decrease</description>
+        <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Thu, 15 Jun 2023 00:00:00 &#43;0000</lastBuildDate><atom:link href="https://entropydecrease.github.io/tags/tools/" rel="self" type="application/rss+xml" /><item>
+    <title>mosh: Did not find mosh server startup message</title>
+    <link>https://entropydecrease.github.io/2023_06_15_mosh_startup_message/</link>
+    <pubDate>Thu, 15 Jun 2023 00:00:00 &#43;0000</pubDate>
+    <author>entropydecrease</author>
+    <guid>https://entropydecrease.github.io/2023_06_15_mosh_startup_message/</guid>
+    <description><![CDATA[Mac使用mosh登录新的服务器，发现如下错误：
+bash: warning: setlocale: LC_ALL: cannot change locale (en_US.UTF-8) The locale requested by LC_ALL=en_US.UTF-8 isn&rsquo;t available here. Running `locale-gen en_US.UTF-8&rsquo; may be necessary.
+The locale requested by LC_ALL=en_US.UTF-8 isn&rsquo;t available here. Running `locale-gen en_US.UTF-8&rsquo; may be necessary.
+mosh-server needs a UTF-8 native locale to run.
+Unfortunately, the local environment (LC_ALL=en_US.UTF-8) specifies the character set &ldquo;US-ASCII&rdquo;,
+The client-supplied environment (LC_ALL=en_US.UTF-8) specifies the character set &ldquo;US-ASCII&rdquo;.
+locale: Cannot set LC_CTYPE to default locale: No such file or directory locale: Cannot set LC_MESSAGES to default locale: No such file or directory locale: Cannot set LC_ALL to default locale: No such file or directory LANG=en_US.]]></description>
+</item>
+</channel>
+</rss>

@@ -1,305 +1,247 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-  <title>Entropy Decrease</title>
-  <meta name="renderer" content="webkit" />
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
-
-<meta http-equiv="Cache-Control" content="no-transform" />
-<meta http-equiv="Cache-Control" content="no-siteapp" />
-
-<meta name="theme-color" content="#f8f5ec" />
-<meta name="msapplication-navbutton-color" content="#f8f5ec">
-<meta name="apple-mobile-web-app-capable" content="yes">
-<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
-
-
-<meta name="author" content="Entropy Decrease" /><meta name="description" content="Hugo theme even powered." /><meta name="keywords" content="Hugo, theme, even" />
-
-
-
-
-
-
-<meta name="generator" content="Hugo 0.111.3 with theme even" />
-
-
-<link rel="canonical" href="https://entropydecrease.github.io/" />
-  <link href="https://entropydecrease.github.io/index.xml" rel="alternate" type="application/rss+xml" title="Entropy Decrease" />
-  <link href="https://entropydecrease.github.io/index.xml" rel="feed" type="application/rss+xml" title="Entropy Decrease" />
-<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-<link rel="manifest" href="/manifest.json">
-<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
-
-<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
-
-<link href="/sass/main.min.f92fd13721ddf72129410fd8250e73152cc6f2438082b6c0208dc24ee7c13fc4.css" rel="stylesheet">
-<link href="/lib/fancybox/jquery.fancybox-3.1.20.min.css" rel="stylesheet">
-
-
-<meta property="og:title" content="Entropy Decrease" />
-<meta property="og:description" content="Hugo theme even powered." />
+    <head>
+	<meta name="generator" content="Hugo 0.113.0">
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="robots" content="noodp" />
+        <title>Entropy Decrease</title><meta name="Description" content="阅读、思考、写作，都是熵减的过程"><meta property="og:title" content="Entropy Decrease" />
+<meta property="og:description" content="阅读、思考、写作，都是熵减的过程" />
 <meta property="og:type" content="website" />
-<meta property="og:url" content="https://entropydecrease.github.io/" />
-<meta itemprop="name" content="Entropy Decrease">
-<meta itemprop="description" content="Hugo theme even powered."><meta name="twitter:card" content="summary"/>
+<meta property="og:url" content="https://entropydecrease.github.io/" /><meta property="og:site_name" content="Entropy Decrease" />
+<meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Entropy Decrease"/>
-<meta name="twitter:description" content="Hugo theme even powered."/>
+<meta name="twitter:description" content="阅读、思考、写作，都是熵减的过程"/>
+<meta name="application-name" content="Entropy Decrease">
+<meta name="apple-mobile-web-app-title" content="Entropy Decrease"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="https://entropydecrease.github.io/" /><link rel="alternate" href="/index.xml" type="application/rss+xml" title="Entropy Decrease">
+    <link rel="feed" href="/index.xml" type="application/rss+xml" title="Entropy Decrease"><link rel="stylesheet" href="/css/style.min.css"><link rel="preload" href="/lib/fontawesome-free/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"></noscript><link rel="preload" href="/lib/animate/animate.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript><link rel="stylesheet" href="/lib/animate/animate.min.css"></noscript><script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "WebSite",
+        "url": "https:\/\/entropydecrease.github.io\/","inLanguage": "en","author": {
+                "@type": "Person",
+                "name": "entropydecrease"
+            },"description": "阅读、思考、写作，都是熵减的过程","name": "Entropy Decrease"
+    }
+    </script></head>
+    <body data-header-desktop="fixed" data-header-mobile="auto"><script type="text/javascript">(window.localStorage && localStorage.getItem('theme') ? localStorage.getItem('theme') === 'dark' : ('auto' === 'auto' ? window.matchMedia('(prefers-color-scheme: dark)').matches : 'auto' === 'dark')) && document.body.setAttribute('theme', 'dark');</script>
 
-<!--[if lte IE 9]>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
-<![endif]-->
-
-<!--[if lt IE 9]>
-  <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
-<![endif]-->
-
-</head>
-<body>
-  <div id="mobile-navbar" class="mobile-navbar">
-  <div class="mobile-header-logo">
-    <a href="/" class="logo">阅读、思考、写作，都是熵减的过程</a>
-  </div>
-  <div class="mobile-navbar-icon">
-    <span></span>
-    <span></span>
-    <span></span>
-  </div>
-</div>
-<nav id="mobile-menu" class="mobile-menu slideout-menu">
-  <ul class="mobile-menu-list">
-    <a href="/">
-        <li class="mobile-menu-item">Home</li>
-      </a><a href="/post/">
-        <li class="mobile-menu-item">Archives</li>
-      </a><a href="/tags/">
-        <li class="mobile-menu-item">Tags</li>
-      </a><a href="/categories/">
-        <li class="mobile-menu-item">Categories</li>
-      </a>
-  </ul>
-
-  
-
-
-</nav>
-
-  <div class="container" id="mobile-panel">
-    <header id="header" class="header">
-        <div class="logo-wrapper">
-  <a href="/" class="logo">阅读、思考、写作，都是熵减的过程</a>
-</div>
-
-
-
-
-
-<nav class="site-navbar">
-  <ul id="menu" class="menu">
-    <li class="menu-item">
-        <a class="menu-item-link" href="/">Home</a>
-      </li><li class="menu-item">
-        <a class="menu-item-link" href="/post/">Archives</a>
-      </li><li class="menu-item">
-        <a class="menu-item-link" href="/tags/">Tags</a>
-      </li><li class="menu-item">
-        <a class="menu-item-link" href="/categories/">Categories</a>
-      </li>
-  </ul>
-</nav>
-
-    </header>
-
-    <main id="main" class="main">
-      <div class="content-wrapper">
-        <div id="content" class="content">
-          <section id="posts" class="posts">
-    <article class="post">
-  <header class="post-header">
-    <h1 class="post-title"><a class="post-link" href="/post/2022_05_01_bam_coverage/">计算bam文件中的覆盖度</a></h1>
-    <div class="post-meta">
-      <span class="post-time"> 2022-05-01 </span>
-      <div class="post-category">
-          <a href="/categories/bioinf/"> bioinf </a>
-          </div>
-    </div>
-  </header>
-  
-  <div class="post-content">
-    <div class="post-summary">
-      Things to consider to exclude some reads, like samtools depth/bedcov and mosdepth do. &lsquo;UNMAP,SECONDARY,QCFAIL,DUP or 0x704 or 1796&rsquo; to only summarize target regions or whole genome Tools to use mosdepth 1 2 3 4 5 6 7 8 9 10 11 12 13 14 for Bam in *.mkdup.bam do # skip if index file doesn&#39;t exist [ -s ${Bam}.bai ] || continue Base=$(basename ${Bam%.mkdup.bam}) # run mosdepth [ -s ${Base}.mosdepth.summary.txt
-    </div>
-    <div class="read-more">
-      <a href="/post/2022_05_01_bam_coverage/" class="read-more-link">Read more...</a>
-    </div>
-  </div>
-</article>
-
-    <article class="post">
-  <header class="post-header">
-    <h1 class="post-title"><a class="post-link" href="/post/bcftools_notes/">bcftools notes (转载)</a></h1>
-    <div class="post-meta">
-      <span class="post-time"> 2021-10-01 </span>
-      <div class="post-category">
-          <a href="/categories/bioinf/"> bioinf </a>
-          </div>
-    </div>
-  </header>
-  
-  <div class="post-content">
-    <div class="post-summary">
-      copied from https://gist.github.com/elowy01/93922762e131d7abd3c7e8e166a74a0b Filter variants per region (in this example, print out only variants mapped to chr1 and chr2) bcftools filter -r1,2 ALL.chip.omni_broad_sanger_combined.20140818.snps.genotypes.hg38.vcf.gz printing out info for only 2 samples: bcftools view -s NA20818,NA20819 filename.vcf.gz printing stats only for variants passing the filter: bcftools view -f PASS filename.vcf.gz printing variants withoud header: bcftools view -H printing variants on a particular region: bcftools view -r chr20:1-200000 -s NA20818,NA20819 filename.vcf.gz print all
-    </div>
-    <div class="read-more">
-      <a href="/post/bcftools_notes/" class="read-more-link">Read more...</a>
-    </div>
-  </div>
-</article>
-
-    <article class="post">
-  <header class="post-header">
-    <h1 class="post-title"><a class="post-link" href="/post/igv_local_genome/">igv 生成本地的.genome文件</a></h1>
-    <div class="post-meta">
-      <span class="post-time"> 2020-02-23 </span>
-      <div class="post-category">
-          <a href="/categories/bioinf/"> bioinf </a>
-          </div>
-    </div>
-  </header>
-  
-  <div class="post-content">
-    <div class="post-summary">
-      igv假如每次都要从远程加载genome信息的话，网络不好的情况下会很慢，这时候最好做一个本地版的.genome文件。 igv的.genome
-    </div>
-    <div class="read-more">
-      <a href="/post/igv_local_genome/" class="read-more-link">Read more...</a>
-    </div>
-  </div>
-</article>
-
-    <article class="post">
-  <header class="post-header">
-    <h1 class="post-title"><a class="post-link" href="/post/bcl2fastq_install/">安装bcl2fastq</a></h1>
-    <div class="post-meta">
-      <span class="post-time"> 2020-02-23 </span>
-      <div class="post-category">
-          <a href="/categories/bioinf/"> bioinf </a>
-          </div>
-    </div>
-  </header>
-  
-  <div class="post-content">
-    <div class="post-summary">
-      安装 1 2 3 4 5 6 7 8 9 10 11 wget ftp://webdata2:webdata2@ussd-ftp.illumina.com/downloads/software/bcl2fastq/bcl2fastq2-v2.17.1.14.tar.zip tar -zxvf bcl2fastq2-v2.17.1.14.tar.zip cd bcl2fastq2 mkdir build; cd build ../src/configure --prefix=$HOME &gt; build.txt.log 2&gt;&amp;1 tail -f build.txt.log 可能出现的问题 CMake complains Required header sys/stat.h not found 1 &gt; sudo apt-get install libc6-dev-amd64 no support for gzip compression 1 &gt; sudo apt-get install zlib1g-dev bcl2fastq also complains no libxml2 and libxslt,
-    </div>
-    <div class="read-more">
-      <a href="/post/bcl2fastq_install/" class="read-more-link">Read more...</a>
-    </div>
-  </div>
-</article>
-
-    <article class="post">
-  <header class="post-header">
-    <h1 class="post-title"><a class="post-link" href="/post/ref_genome/">应该使用哪个genome</a></h1>
-    <div class="post-meta">
-      <span class="post-time"> 2020-02-23 </span>
-      <div class="post-category">
-          <a href="/categories/bioinf/"> bioinf </a>
-          </div>
-    </div>
-  </header>
-  
-  <div class="post-content">
-    <div class="post-summary">
-      GRCh37 还是 GRCh38 GRCh37 == hg19，GRCh38 ＝＝ hg38 理论上来讲，GRCh38是新的人类基因组的参考组装，相对GRCh37(hg19)来说，更接近人类真正
-    </div>
-    <div class="read-more">
-      <a href="/post/ref_genome/" class="read-more-link">Read more...</a>
-    </div>
-  </div>
-</article>
-
-    </section>
-  
-  <nav class="pagination">
-    <a class="prev" href="/page/3/">
-        <i class="iconfont icon-left"></i>
-        <span class="prev-text">Prev</span>
-      </a>
-    <a class="next" href="/page/5/">
-        <span class="next-text">Next</span>
-        <i class="iconfont icon-right"></i>
-      </a>
-  </nav>
+        <div id="mask"></div><div class="wrapper"><header class="desktop" id="header-desktop">
+    <div class="header-wrapper">
+        <div class="header-title">
+            <a href="/" title="Entropy Decrease">Entropy Decrease</a>
         </div>
-        
-
-      </div>
-    </main>
-
-    <footer id="footer" class="footer">
-      <div class="social-links">
-      <a href="mailto:en&#43;tr-op*ydecr_ea%5ese@outlook.com%5eremove_unnecessary_chars%5e" class="iconfont icon-email" title="email"></a>
-      <a href="https://github.com/entropydecrease" class="iconfont icon-github" title="github"></a>
-  <a href="https://entropydecrease.github.io/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
-</div>
-
-<div class="copyright">
-  <span class="power-by">
-    Powered by <a class="hexo-link" href="https://gohugo.io">Hugo</a>
-  </span>
-  <span class="division">|</span>
-  <span class="theme-info">
-    Theme - 
-    <a class="theme-link" href="https://github.com/olOwOlo/hugo-theme-even">Even</a>
-  </span>
-
-  <div class="busuanzi-footer">
-    <span id="busuanzi_container_site_pv"> site pv: <span id="busuanzi_value_site_pv"><img src="/img/spinner.svg" alt="spinner.svg"/></span> </span>
-      <span class="division">|</span>
-    <span id="busuanzi_container_site_uv"> site uv: <span id="busuanzi_value_site_uv"><img src="/img/spinner.svg" alt="spinner.svg"/></span> </span>
-  </div>
-
-  <span class="copyright-year">
-    &copy; 
-    2015 - 
-    2023<span class="heart"><i class="iconfont icon-heart"></i></span><span>Entropy Decrease</span>
-  </span>
-</div>
-
-    </footer>
-
-    <div class="back-to-top" id="back-to-top">
-      <i class="iconfont icon-up"></i>
+        <div class="menu">
+            <div class="menu-inner"><a class="menu-item active" href="/"> Home </a><a class="menu-item" href="/posts/"> Posts </a><a class="menu-item" href="/tags/"> Tags </a><a class="menu-item" href="/categories/"> Categories </a><a class="menu-item" href="/about"> About </a><span class="menu-item delimiter"></span><span class="menu-item search" id="search-desktop">
+                        <input type="text" placeholder="Search titles or contents..." id="search-input-desktop">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-desktop" title="Search">
+                            <i class="fas fa-search fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-desktop" title="Clear">
+                            <i class="fas fa-times-circle fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-desktop">
+                            <i class="fas fa-spinner fa-fw fa-spin" aria-hidden="true"></i>
+                        </span>
+                    </span><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
+                    <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
+                </a></div>
+        </div>
     </div>
-  </div>
-  <script type="text/javascript" src="/lib/jquery/jquery-3.2.1.min.js"></script>
-  <script type="text/javascript" src="/lib/slideout/slideout-1.0.1.min.js"></script>
-  <script type="text/javascript" src="/lib/fancybox/jquery.fancybox-3.1.20.min.js"></script>
+</header><header class="mobile" id="header-mobile">
+    <div class="header-container">
+        <div class="header-wrapper">
+            <div class="header-title">
+                <a href="/" title="Entropy Decrease">Entropy Decrease</a>
+            </div>
+            <div class="menu-toggle" id="menu-toggle-mobile">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+        <div class="menu" id="menu-mobile"><div class="search-wrapper">
+                    <div class="search mobile" id="search-mobile">
+                        <input type="text" placeholder="Search titles or contents..." id="search-input-mobile">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-mobile" title="Search">
+                            <i class="fas fa-search fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-mobile" title="Clear">
+                            <i class="fas fa-times-circle fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-mobile">
+                            <i class="fas fa-spinner fa-fw fa-spin" aria-hidden="true"></i>
+                        </span>
+                    </div>
+                    <a href="javascript:void(0);" class="search-cancel" id="search-cancel-mobile">
+                        Cancel
+                    </a>
+                </div><a class="menu-item" href="/" title="">Home</a><a class="menu-item" href="/posts/" title="">Posts</a><a class="menu-item" href="/tags/" title="">Tags</a><a class="menu-item" href="/categories/" title="">Categories</a><a class="menu-item" href="/about" title="">About</a><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
+                <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
+            </a></div>
+    </div>
+</header><div class="search-dropdown desktop">
+        <div id="search-dropdown-desktop"></div>
+    </div>
+    <div class="search-dropdown mobile">
+        <div id="search-dropdown-mobile"></div>
+    </div><main class="main">
+                <div class="container"><div class="page home" data-home="posts"><div class="home-profile"><div class="home-subtitle">阅读、思考、写作，都是熵减的过程</div><div class="links"><a href="https://github.com/entropydecrease" title="GitHub" target="_blank" rel="noopener noreffer me"><i class="fab fa-github fa-fw" aria-hidden="true"></i></a><a href="mailto:mailto:en&#43;tr-op*ydecr_ea%5ese@outlook.com%5eremove_unnecessary_chars%5e" title="Email" rel="me"><i class="far fa-envelope fa-fw" aria-hidden="true"></i></a><a href="/index.xml" title="RSS" target="_blank" rel="noopener noreffer me"><i class="fas fa-rss fa-fw" aria-hidden="true"></i></a></div></div>
+<article class="single summary" itemscope itemtype="http://schema.org/Article"><h1 class="single-title" itemprop="name headline">
+        <a href="/2022_05_01_bam_coverage/">计算bam文件中的覆盖度</a>
+    </h1><div class="post-meta"><span class="post-author"><a href="/" title="Author" rel="author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>entropydecrease</a></span>&nbsp;<span class="post-publish">published on <time datetime="2022-05-01">2022-05-01</time></span>&nbsp;<span class="post-category">included in <a href="/categories/bioinf/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>bioinf</a></span></div><div class="content">Things to consider to exclude some reads, like samtools depth/bedcov and mosdepth do.
+&lsquo;UNMAP,SECONDARY,QCFAIL,DUP or 0x704 or 1796&rsquo;
+to only summarize target regions or whole genome
+Tools to use mosdepth 1 2 3 4 5 6 7 8 9 10 11 12 13 14 for Bam in *.mkdup.bam do # skip if index file doesn&#39;t exist [ -s ${Bam}.bai ] || continue Base=$(basename ${Bam%.mkdup.bam}) # run mosdepth [ -s ${Base}.mosdepth.summary.txt ] &amp;&amp; continue echo $Bam mosdepth --by target_hg38.</div><div class="post-footer">
+        <a href="/2022_05_01_bam_coverage/">Read More</a><div class="post-tags">
+                <i class="fas fa-tags fa-fw" aria-hidden="true"></i>&nbsp;<a href="/tags/bam/">bam</a></div></div>
+</article><article class="single summary" itemscope itemtype="http://schema.org/Article"><h1 class="single-title" itemprop="name headline">
+        <a href="/2021_10_01_bcftools_notes/">bcftools notes (转载)</a>
+    </h1><div class="post-meta"><span class="post-author"><a href="/" title="Author" rel="author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>entropydecrease</a></span>&nbsp;<span class="post-publish">published on <time datetime="2021-10-01">2021-10-01</time></span>&nbsp;<span class="post-category">included in <a href="/categories/bioinf/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>bioinf</a></span></div><div class="content">copied from https://gist.github.com/elowy01/93922762e131d7abd3c7e8e166a74a0b
+Filter variants per region (in this example, print out only variants mapped to chr1 and chr2)
+bcftools filter -r1,2 ALL.chip.omni_broad_sanger_combined.20140818.snps.genotypes.hg38.vcf.gz
+printing out info for only 2 samples:
+bcftools view -s NA20818,NA20819 filename.vcf.gz
+printing stats only for variants passing the filter:
+bcftools view -f PASS filename.vcf.gz
+printing variants withoud header:
+bcftools view -H
+printing variants on a particular region:
+bcftools view -r chr20:1-200000 -s NA20818,NA20819 filename.vcf.gz
+print all variants except for the ones falling within region:</div><div class="post-footer">
+        <a href="/2021_10_01_bcftools_notes/">Read More</a><div class="post-tags">
+                <i class="fas fa-tags fa-fw" aria-hidden="true"></i>&nbsp;<a href="/tags/bcftools/">bcftools</a></div></div>
+</article><article class="single summary" itemscope itemtype="http://schema.org/Article"><h1 class="single-title" itemprop="name headline">
+        <a href="/2020_02_23_igv_local_genome/">igv 生成本地的.genome文件</a>
+    </h1><div class="post-meta"><span class="post-author"><a href="/" title="Author" rel="author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>entropydecrease</a></span>&nbsp;<span class="post-publish">published on <time datetime="2020-02-23">2020-02-23</time></span>&nbsp;<span class="post-category">included in <a href="/categories/bioinf/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>bioinf</a></span></div><div class="content">igv假如每次都要从远程加载genome信息的话，网络不好的情况下会很慢，这时候最好做一个本地版的.genome文件。
+igv的.genome文件其实是一个zip文件。
+先看一下hg19.genome的内容：
+1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 &gt; cp ~/igv/genomes/hg19.genome . &gt; unzip hg19.genome Archive: hg19.genome inflating: cytoBand.txt inflating: hg19_alias.tab inflating: property.txt inflating: refGene.txt &gt; cat property.txt id=hg19 name=Human hg19 cytobandFile=cytoBand.txt ordered=true geneFile=refGene.txt geneTrackName=RefSeq Genes chrAliasFile=hg19_alias.tab fasta=True sequenceLocation=http://s3.amazonaws.com/igv.broadinstitute.org/genomes/seq/hg19/hg19.fasta url=http://www.ncbi.nlm.nih.gov/gene?term=$$ 可以看到，里面的cytoband文件，gene文件都是本地的，但是序列文件是在AWS上面的。而最近AWS的访问有问题，非常不稳定，所以igv也不能打开hg19.genome了。
+让igv都使用本地的文件，只需要修改property.txt即可，修改property.txt如下：
+1 2 3 4 5 6 7 8 9 10 id=hg19-local name=Human hg19 local cytobandFile=cytoBand.txt ordered=true geneFile=refGene.</div><div class="post-footer">
+        <a href="/2020_02_23_igv_local_genome/">Read More</a><div class="post-tags">
+                <i class="fas fa-tags fa-fw" aria-hidden="true"></i>&nbsp;<a href="/tags/igv/">igv</a>,&nbsp;<a href="/tags/genome/">genome</a></div></div>
+</article><article class="single summary" itemscope itemtype="http://schema.org/Article"><h1 class="single-title" itemprop="name headline">
+        <a href="/2020_02_23_bcl2fastq_install/">安装bcl2fastq</a>
+    </h1><div class="post-meta"><span class="post-author"><a href="/" title="Author" rel="author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>entropydecrease</a></span>&nbsp;<span class="post-publish">published on <time datetime="2020-02-23">2020-02-23</time></span>&nbsp;<span class="post-category">included in <a href="/categories/bioinf/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>bioinf</a></span></div><div class="content">安装 1 2 3 4 5 6 7 8 9 10 11 wget ftp://webdata2:webdata2@ussd-ftp.illumina.com/downloads/software/bcl2fastq/bcl2fastq2-v2.17.1.14.tar.zip tar -zxvf bcl2fastq2-v2.17.1.14.tar.zip cd bcl2fastq2 mkdir build; cd build ../src/configure --prefix=$HOME &gt; build.txt.log 2&gt;&amp;1 tail -f build.txt.log 可能出现的问题 CMake complains Required header sys/stat.h not found 1 &gt; sudo apt-get install libc6-dev-amd64 no support for gzip compression 1 &gt; sudo apt-get install zlib1g-dev bcl2fastq also complains no libxml2 and libxslt, but it could build by itself. And the version installed with ubuntu is too new :( 1 &gt; sudo apt-get install gfortran doxygen graphviz </div><div class="post-footer">
+        <a href="/2020_02_23_bcl2fastq_install/">Read More</a></div>
+</article><article class="single summary" itemscope itemtype="http://schema.org/Article"><h1 class="single-title" itemprop="name headline">
+        <a href="/2020_02_23_ref_genome/">应该使用哪个genome</a>
+    </h1><div class="post-meta"><span class="post-author"><a href="/" title="Author" rel="author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>entropydecrease</a></span>&nbsp;<span class="post-publish">published on <time datetime="2020-02-23">2020-02-23</time></span>&nbsp;<span class="post-category">included in <a href="/categories/bioinf/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>bioinf</a></span></div><div class="content">GRCh37 还是 GRCh38 GRCh37 == hg19，GRCh38 ＝＝ hg38
+理论上来讲，GRCh38是新的人类基因组的参考组装，相对GRCh37(hg19)来说，更接近人类真正的基因组。但是由于历史原因，之前很多的数据库对老版本的GRCh37支持的比较好。 dbSNP和ClinVar已经同时支持 GRCh37和38，但是1k genomes还是对GRCh37支持更好一些.
+我看到有公司还在使用GRCh37，并且声称效果更好。但是，我的看法是，T2T才是未来，现在应该尽早转到GRCh38。
+1k genomes 使用的hs37d5 是什么 1k genomes项目组在做alignment的时候，使用的是hs37d5
+主要是因为在align的时候，有一些reads不能比对到参考基因组上，然后做align的软件就要非费尽心思来给这些reads找次优的位置，而这是非常费时的一步。经过研究发现，这些reads主要是来自于疱疹病毒和一些简单的重复片段，把这些序列加进参考基因组，可以省不少时间，因为一下子就可以找到reads的最优位置，不用费心去找次优位置。
+下面是1k genomes的官方说明
+hs37d5.fa.gz
+Integrated reference sequence from the GRCh37 primary assembly (chromosomal plus unlocalized and unplaced contigs), the rCRS mitochondrial sequence (AC:NC_012920), Human herpesvirus 4 type 1 (AC:NC_007605) and the concatenated decoy sequences (hs37d5cs.fa.gz). This file is compressed by razip from the samtools package for random access. Gzip may complain &ldquo;decompression OK, trailing garbage ignored&rdquo;, but this does not affect the correctness of the decompressed file.</div><div class="post-footer">
+        <a href="/2020_02_23_ref_genome/">Read More</a><div class="post-tags">
+                <i class="fas fa-tags fa-fw" aria-hidden="true"></i>&nbsp;<a href="/tags/genome/">genome</a></div></div>
+</article><article class="single summary" itemscope itemtype="http://schema.org/Article"><h1 class="single-title" itemprop="name headline">
+        <a href="/2015_12_06-hometown_history/">说说我的家乡，没什么文笔，自娱自乐</a>
+    </h1><div class="post-meta"><span class="post-author"><a href="/" title="Author" rel="author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>entropydecrease</a></span>&nbsp;<span class="post-publish">published on <time datetime="0001-01-01">0001-01-01</time></span>&nbsp;<span class="post-category">included in <a href="/categories/%E9%9A%8F%E7%AC%94/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>随笔</a></span></div><div class="content">我的家乡新郑，洛阳与开封之间、黄河以南四十公里的一个小县，归郑州管辖。
+这个小县，在今天的年代里默默无闻，但是就像河南很多地方一样，过去的千百年里，也有不少历史的风云变幻星河璀璨。“轩辕故里”，或者“黄帝故里”，“郑韩故城”，都是说的新郑。
+新郑有一座山，叫具茨山，是中岳嵩山的余脉，绵延新郑、新密、禹州等几个县，在本县俗称“西南山”，因为山在县城西南，据说是“炎黄子孙”的“黄”的那个轩辕黄帝出生、活动、建都之地。山上有一座轩辕庙，据说还有一些岩画（整个具茨山地区有大规模岩画）。有人曾问为什么山上什么当时的古迹都没有，只有后人留下的，乍一想，也觉得好像少了点什么，不似其它名胜古迹那般丰富，不过再想想，那个时代不可能留下寺庙、道观、园林、字画、雕像，毕竟那时候才传说开始造文字。
+小时候看过一本“轩辕故里的传说”，里面搜集了很多关于的传说，比如黄帝战蚩尤、制鼓、编制历法、造指南车，皇帝的妻子嫘祖养蚕，仓颉造字等。
+黄帝生在新郑，那是怎么死的呢？在传说里，这样神一样的人物，肯定不能像一般人一样死去。于是，在传说里，黄帝在今天河南灵宝的荆山下铸鼎，铸成之后，天上下来神龙把黄帝接走了，人们舍不得皇帝走，赶紧去拉，拉下来了靴子和黄帝的弓，埋在铸鼎的地方作为衣冠冢，就是荆山黄帝陵。史记里有一句“黄帝崩，葬桥山”，陕西的桥山（黄陵县）就也有一个黄帝陵，另外还有河北和甘肃说自己是黄帝陵正宗，不知道真正葬在哪里。
+黄帝以姬为姓，其后代一部分姓姬，还有很多是其他姓的始祖，“黄帝二十五子，其得姓者十四人”，五帝和之后的夏、商、周都是黄帝的后代，周朝也是用姬姓，周武王建立周朝之后分封诸侯的时候，跟周天子同姓的诸侯国有几十个，包括郑国、晋国、鲁国、蔡国等，秦国姓嬴，据说是黄帝的某个儿子的后代。一些国名，后来也演化为姓，比如郑国亡国之后，很多人改姓郑。
+抄一段网上的：
+《姬姓史话》一书中介绍，人口数量排名前300的姓氏中，直接源于姬姓的有120多个。不过，这些姓氏的演化方式不同，大体分为五类。
+第一类是直接发源于黄帝的姓。黄帝直接演化而来的12个姓分别是姬、酉、祁、己、滕、箴、任、荀、僖、姞、儇（xuān）、衣。
+第二类是周王朝分封的53个姬姓诸侯国。当时曹、吴、韩、杨、郑、蔡、晋、魏、沈等都是姬姓国，其国名后来都演化成为姓氏。
+第三类是发源于姬姓的衍生姓氏。直接源于黄帝的12个姓，后来也逐渐分化为其他姓氏。比如，其中的祁姓被尧帝的祖先继承，后来衍生出刘、唐、杜、范、司空等姓；己姓被少昊继承，衍生出张、安、金、苏、温、顾等姓。
+第四类是姬姓族人以祖先或自己的官职、职业、称号、名字、居住地为姓。比如，林姓的一支主要来源是姬姓，其祖先是周平王的庶子姬开。姬开的字是“林”，子孙以其字为氏，称“林氏”，后来演化成为林姓。
+第五类是秦汉之后的改姓。姬传东介绍，姬姓先后经历过四次改姓，其中规模最大的两次，分别发生在东周灭亡时和唐朝中期，“秦灭东周，大多姬姓人改姓为周；唐朝时为避讳李隆基的名字，又有大部分姬姓人改姓为周。”
+之前很多故事都是传说下来的，找不到什么史料。诗经大概算比较早的文字资料了。
+诗经 郑风 溱洧
+溱与洧、方涣涣兮。
+士与女、方秉兰兮。
+女曰观乎。
+士曰既且。
+且往观乎。
+洧之外、洵吁且乐。
+维士与女、伊其相谑、赠之以勺药。
+溱与洧、浏其清矣。
+士与女、殷其盈兮。
+女曰观乎。
+士曰既且。
+且往观乎。
+洧之外、洵吁且乐。
+维士与女、伊其将谑、赠之以勺药。
+大意是说，春天的时候，溱水和洧水汇流的地方，碧波荡漾，年轻男女拿着兰草在河边玩，一个女孩子说，去看吗？男孩子说，已经看过了，女孩子说，再去看看吧。后来玩得很开心，并以芍药相赠订情。
+多么浪漫的故事，里面提到的溱水和洧水，古时候应该是很美丽的河吧。洧水是现在新郑的双洎河（不知道有多少人有和我一样的冲动念“双咱河”的）；溱水，有的说是新郑的黄水河，也有说是隔壁新密县的溱水。
+说到新密，顺便说说郑州的几个县。
+新密和新郑挨着，新密也是最早黄帝活动的区域，也是后来的郑国、韩国的地方；
+巩县（现在叫巩义市），杜甫及其祖父杜审言生在这里，北宋皇陵所在，北宋除了徽钦二帝被掳走，剩下的都在这了，包拯墓也在这；
+登封，有中岳嵩山、少林寺，除此之外，曾经也是夏朝都城，还有郭守敬的观星台；
+中牟，处在郑汴之间，是兵家必争之地，比如官渡之战，沿着黄河往东打开封，一般都在中牟开打，后来岳飞在这打过，李自成在这打过，民国也在这里打过，列子是这里的，“貌若潘安”的“潘安”的祖籍；
+荥阳，鸿沟就是从荥阳引黄河水，经中牟、开封，入颍河而通淮河，陈胜吴广起义后吴广攻荥阳不克死在这，楚汉争霸在这里相持很久，后来以鸿沟为界，三国演义里刘关张三英战吕布的虎牢关就是荥阳的泗水镇。
+另一首诗经里的诗：
+诗经 郑风 野有蔓草
+野有蔓草、零露漙兮。
+有美一人、清扬婉兮。
+邂逅相遇、适我愿兮。
+野有蔓草、零露瀼瀼。
+有美一人、婉如清扬。
+邂逅相遇、与子偕臧。
+天龙八部木婉清的“婉清”二字，估计就是从这里出的。
+还有另外一首我很喜欢的：
+诗经 郑风 子衿
+青青子衿、悠悠我心。
+纵我不往、子宁不嗣音。
+青青子佩、悠悠我思。
+纵我不往、子宁不来。
+挑兮达兮、在城阙兮。
+一日不见、如三月兮。
+左传里面，也有关于新郑的很多故事。
+中学课本有一篇“郑伯克段于鄢”就是出自左传第一篇“隐公元年”，“多行不义必自毙”、“其乐融融”、“黄泉（不及黄泉，无相见也）”就是从这里出的。
+郑国作为和周天子同姓（都姓姬）的诸侯国，刚开始还是比较猛的，隐公三年：“四月，郑祭足帅师取温之麦。秋，又取成周之禾。周、郑交恶。”后来周天子又联合几个诸侯国攻打郑国，被郑国击溃，将士要乘胜追击，郑庄公阻止了，然后派人慰问了周天子及其左右。
+中原小国众多，而且四面都是对手，很难发展起来，不像外围的国家，至少一面或者两面是没有后顾之忧的，专心向中心打就好。战国七雄，都是从外围发展起来的。郑国慢慢衰落了，被秦、晋这些大国欺负。
+抄一段百度：
+在公元前632年（僖公二十八年）发生的城濮（在今河南陈留县）之战中，晋文公战胜楚国，建立了霸业。公元前631年（僖公二十九年），晋、周、鲁、宋、齐、陈、蔡、秦在翟泉（今河南洛阳）会盟，晋国在会上“谋伐郑”。公元前630年（僖公三十年），晋国和秦国合兵围郑。
+郑国被围，烛之武晚上用绳子出城见秦穆公说，你帮晋国把郑国打下来的地方肯定是归晋国（晋国和郑国挨着，秦国和郑国之间比较远，还隔着周天子的洛阳），晋国的实力更强了，秦国相对就弱了，这样对你们没啥好处。假如放郑国一马，我们就是你东边道路上热情好客的主人，以后你的人来往路过，我们管吃管住，这样对你绝对没有坏处啊。文言是：若舍郑以为东道主，行李之往来，共其乏困，君亦无所害。
+所以各位亲爱的朋友们，我们新郑才是世上最早的(被逼出来的)“东道主”。
+然后秦穆公同意了，撤兵，还留下三个将军帮郑国守北门（晋国在郑国的北面）。晋国的将士还想打，晋文公说，我是靠秦穆公才上位的，打他不好，撤了。
+这还没完，后面还有一堆事。</div><div class="post-footer">
+        <a href="/2015_12_06-hometown_history/">Read More</a><div class="post-tags">
+                <i class="fas fa-tags fa-fw" aria-hidden="true"></i>&nbsp;<a href="/tags/%E5%AE%B6%E4%B9%A1/">家乡</a>,&nbsp;<a href="/tags/%E5%8E%86%E5%8F%B2/">历史</a></div></div>
+</article><ul class="pagination"><li class="page-item ">
+                    <span class="page-link">
+                        <a href="/">1</a>
+                    </span>
+                </li><li class="page-item ">
+                    <span class="page-link">
+                        <a href="/page/2/">2</a>
+                    </span>
+                </li><li class="page-item ">
+                    <span class="page-link">
+                        <a href="/page/3/">3</a>
+                    </span>
+                </li><li class="page-item active">
+                    <span class="page-link">
+                        <a href="/page/4/">4</a>
+                    </span>
+                </li><li class="page-item ">
+                    <span class="page-link">
+                        <a href="/page/5/">5</a>
+                    </span>
+                </li><li class="page-item ">
+                    <span class="page-link">
+                        <a href="/page/6/">6</a>
+                    </span>
+                </li></ul></div></div>
+            </main><footer class="footer">
+        <div class="footer-container"><div class="footer-line">Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.113.0">Hugo</a> | Theme - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.2.11"><i class="far fa-kiss-wink-heart fa-fw" aria-hidden="true"></i> LoveIt</a>
+                </div><div class="footer-line" itemscope itemtype="http://schema.org/CreativeWork"><i class="far fa-copyright fa-fw" aria-hidden="true"></i><span itemprop="copyrightYear">2015 - 2023</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/" target="_blank">entropydecrease</a></span></div>
+        </div>
+    </footer></div>
 
-
-
-<script type="text/javascript" src="/js/main.min.4ae89da218555efa0e7093a20b92017d2e1202b66fff9fc2edf4cb8d44b44c6e.js"></script>
-  <script type="text/javascript">
-    window.MathJax = {
-      tex: {
-        inlineMath: [['$','$'], ['\\(','\\)']],
-        }
-    };
-  </script>
-  <script async src="https://cdn.jsdelivr.net/npm/mathjax@3.0.5/es5/tex-mml-chtml.js" integrity="sha256-HGLuEfFcsUJGhvB8cQ8nr0gai9EucOOaIxFw7qxmd+w=" crossorigin="anonymous"></script>
-
-
-
-
-
-
-
-
-</body>
+        <div id="fixed-buttons"><a href="#" id="back-to-top" class="fixed-button" title="Back to Top">
+                <i class="fas fa-arrow-up fa-fw" aria-hidden="true"></i>
+            </a><a href="#" id="view-comments" class="fixed-button" title="View Comments">
+                <i class="fas fa-comment fa-fw" aria-hidden="true"></i>
+            </a>
+        </div><link rel="stylesheet" href="/lib/katex/katex.min.css"><script type="text/javascript" src="/lib/autocomplete/autocomplete.min.js"></script><script type="text/javascript" src="/lib/lunr/lunr.min.js"></script><script type="text/javascript" src="/lib/lazysizes/lazysizes.min.js"></script><script type="text/javascript" src="/lib/clipboard/clipboard.min.js"></script><script type="text/javascript" src="/lib/sharer/sharer.min.js"></script><script type="text/javascript" src="/lib/katex/katex.min.js"></script><script type="text/javascript" src="/lib/katex/contrib/auto-render.min.js"></script><script type="text/javascript" src="/lib/katex/contrib/copy-tex.min.js"></script><script type="text/javascript" src="/lib/katex/contrib/mhchem.min.js"></script><script type="text/javascript">window.config={"code":{"copyTitle":"Copy to clipboard","maxShownLines":50},"math":{"delimiters":[{"display":true,"left":"$$","right":"$$"},{"display":true,"left":"\\[","right":"\\]"},{"display":true,"left":"\\begin{equation}","right":"\\end{equation}"},{"display":true,"left":"\\begin{equation*}","right":"\\end{equation*}"},{"display":true,"left":"\\begin{align}","right":"\\end{align}"},{"display":true,"left":"\\begin{align*}","right":"\\end{align*}"},{"display":true,"left":"\\begin{alignat}","right":"\\end{alignat}"},{"display":true,"left":"\\begin{alignat*}","right":"\\end{alignat*}"},{"display":true,"left":"\\begin{gather}","right":"\\end{gather}"},{"display":true,"left":"\\begin{CD}","right":"\\end{CD}"},{"display":false,"left":"$","right":"$"},{"display":false,"left":"\\(","right":"\\)"}],"strict":false},"search":{"highlightTag":"em","lunrIndexURL":"/index.json","maxResultLength":10,"noResultsFound":"No results found","snippetLength":30,"type":"lunr"}};</script><script type="text/javascript" src="/js/theme.min.js"></script></body>
 </html>

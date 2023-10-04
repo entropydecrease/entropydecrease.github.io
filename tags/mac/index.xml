@@ -1,20 +1,17 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>Mac on Entropy Decrease</title>
-    <link>https://entropydecrease.github.io/tags/mac/</link>
-    <description>Recent content in Mac on Entropy Decrease</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en</language>
-    <lastBuildDate>Mon, 13 Apr 2015 00:00:00 +0000</lastBuildDate><atom:link href="https://entropydecrease.github.io/tags/mac/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>设置hostname，避免DHCP修改hostname</title>
-      <link>https://entropydecrease.github.io/post/set_hostname/</link>
-      <pubDate>Mon, 13 Apr 2015 00:00:00 +0000</pubDate>
-      
-      <guid>https://entropydecrease.github.io/post/set_hostname/</guid>
-      <description>It can be annoying to see my hostname being modifed each time I connect to a different WIFI. It is because the hostname was never set. &amp;gt; scutil --get HostName HostName: not set So we just need to set the hostname: &amp;gt; sudo scutil --set HostName &amp;quot;new_hostname&amp;quot; Password: &amp;gt; scutil --get HostName new_hostname</description>
-    </item>
-    
-  </channel>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>Mac - Tag - Entropy Decrease</title>
+        <link>https://entropydecrease.github.io/tags/mac/</link>
+        <description>Mac - Tag - Entropy Decrease</description>
+        <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Mon, 13 Apr 2015 00:00:00 &#43;0000</lastBuildDate><atom:link href="https://entropydecrease.github.io/tags/mac/" rel="self" type="application/rss+xml" /><item>
+    <title>设置hostname，避免DHCP修改hostname</title>
+    <link>https://entropydecrease.github.io/2015_04_13_set-hostname-not-modifed-by-dhcp/</link>
+    <pubDate>Mon, 13 Apr 2015 00:00:00 &#43;0000</pubDate>
+    <author>entropydecrease</author>
+    <guid>https://entropydecrease.github.io/2015_04_13_set-hostname-not-modifed-by-dhcp/</guid>
+    <description><![CDATA[It can be annoying to see my hostname being modifed each time I connect to a different WIFI. It is because the hostname was never set.
+&gt; scutil --get HostName HostName: not set So we just need to set the hostname:
+&gt; sudo scutil --set HostName &quot;new_hostname&quot; Password: &gt; scutil --get HostName new_hostname ]]></description>
+</item>
+</channel>
 </rss>

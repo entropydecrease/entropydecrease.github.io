@@ -1,300 +1,187 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-  <title>Entropy Decrease</title>
-  <meta name="renderer" content="webkit" />
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
-
-<meta http-equiv="Cache-Control" content="no-transform" />
-<meta http-equiv="Cache-Control" content="no-siteapp" />
-
-<meta name="theme-color" content="#f8f5ec" />
-<meta name="msapplication-navbutton-color" content="#f8f5ec">
-<meta name="apple-mobile-web-app-capable" content="yes">
-<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
-
-
-<meta name="author" content="Entropy Decrease" /><meta name="description" content="Hugo theme even powered." /><meta name="keywords" content="Hugo, theme, even" />
-
-
-
-
-
-
-<meta name="generator" content="Hugo 0.111.3 with theme even" />
-
-
-<link rel="canonical" href="https://entropydecrease.github.io/" />
-  <link href="https://entropydecrease.github.io/index.xml" rel="alternate" type="application/rss+xml" title="Entropy Decrease" />
-  <link href="https://entropydecrease.github.io/index.xml" rel="feed" type="application/rss+xml" title="Entropy Decrease" />
-<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-<link rel="manifest" href="/manifest.json">
-<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
-
-<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
-
-<link href="/sass/main.min.f92fd13721ddf72129410fd8250e73152cc6f2438082b6c0208dc24ee7c13fc4.css" rel="stylesheet">
-<link href="/lib/fancybox/jquery.fancybox-3.1.20.min.css" rel="stylesheet">
-
-
-<meta property="og:title" content="Entropy Decrease" />
-<meta property="og:description" content="Hugo theme even powered." />
+    <head>
+	<meta name="generator" content="Hugo 0.113.0">
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="robots" content="noodp" />
+        <title>Entropy Decrease</title><meta name="Description" content="阅读、思考、写作，都是熵减的过程"><meta property="og:title" content="Entropy Decrease" />
+<meta property="og:description" content="阅读、思考、写作，都是熵减的过程" />
 <meta property="og:type" content="website" />
-<meta property="og:url" content="https://entropydecrease.github.io/" />
-<meta itemprop="name" content="Entropy Decrease">
-<meta itemprop="description" content="Hugo theme even powered."><meta name="twitter:card" content="summary"/>
+<meta property="og:url" content="https://entropydecrease.github.io/" /><meta property="og:site_name" content="Entropy Decrease" />
+<meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Entropy Decrease"/>
-<meta name="twitter:description" content="Hugo theme even powered."/>
+<meta name="twitter:description" content="阅读、思考、写作，都是熵减的过程"/>
+<meta name="application-name" content="Entropy Decrease">
+<meta name="apple-mobile-web-app-title" content="Entropy Decrease"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="https://entropydecrease.github.io/" /><link rel="alternate" href="/index.xml" type="application/rss+xml" title="Entropy Decrease">
+    <link rel="feed" href="/index.xml" type="application/rss+xml" title="Entropy Decrease"><link rel="stylesheet" href="/css/style.min.css"><link rel="preload" href="/lib/fontawesome-free/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"></noscript><link rel="preload" href="/lib/animate/animate.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript><link rel="stylesheet" href="/lib/animate/animate.min.css"></noscript><script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "WebSite",
+        "url": "https:\/\/entropydecrease.github.io\/","inLanguage": "en","author": {
+                "@type": "Person",
+                "name": "entropydecrease"
+            },"description": "阅读、思考、写作，都是熵减的过程","name": "Entropy Decrease"
+    }
+    </script></head>
+    <body data-header-desktop="fixed" data-header-mobile="auto"><script type="text/javascript">(window.localStorage && localStorage.getItem('theme') ? localStorage.getItem('theme') === 'dark' : ('auto' === 'auto' ? window.matchMedia('(prefers-color-scheme: dark)').matches : 'auto' === 'dark')) && document.body.setAttribute('theme', 'dark');</script>
 
-<!--[if lte IE 9]>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
-<![endif]-->
-
-<!--[if lt IE 9]>
-  <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
-<![endif]-->
-
-</head>
-<body>
-  <div id="mobile-navbar" class="mobile-navbar">
-  <div class="mobile-header-logo">
-    <a href="/" class="logo">阅读、思考、写作，都是熵减的过程</a>
-  </div>
-  <div class="mobile-navbar-icon">
-    <span></span>
-    <span></span>
-    <span></span>
-  </div>
-</div>
-<nav id="mobile-menu" class="mobile-menu slideout-menu">
-  <ul class="mobile-menu-list">
-    <a href="/">
-        <li class="mobile-menu-item">Home</li>
-      </a><a href="/post/">
-        <li class="mobile-menu-item">Archives</li>
-      </a><a href="/tags/">
-        <li class="mobile-menu-item">Tags</li>
-      </a><a href="/categories/">
-        <li class="mobile-menu-item">Categories</li>
-      </a>
-  </ul>
-
-  
-
-
-</nav>
-
-  <div class="container" id="mobile-panel">
-    <header id="header" class="header">
-        <div class="logo-wrapper">
-  <a href="/" class="logo">阅读、思考、写作，都是熵减的过程</a>
-</div>
-
-
-
-
-
-<nav class="site-navbar">
-  <ul id="menu" class="menu">
-    <li class="menu-item">
-        <a class="menu-item-link" href="/">Home</a>
-      </li><li class="menu-item">
-        <a class="menu-item-link" href="/post/">Archives</a>
-      </li><li class="menu-item">
-        <a class="menu-item-link" href="/tags/">Tags</a>
-      </li><li class="menu-item">
-        <a class="menu-item-link" href="/categories/">Categories</a>
-      </li>
-  </ul>
-</nav>
-
-    </header>
-
-    <main id="main" class="main">
-      <div class="content-wrapper">
-        <div id="content" class="content">
-          <section id="posts" class="posts">
-    <article class="post">
-  <header class="post-header">
-    <h1 class="post-title"><a class="post-link" href="/post/methylation_and_cancer/">甲基化与膀胱癌检测</a></h1>
-    <div class="post-meta">
-      <span class="post-time"> 2023-05-02 </span>
-      
-    </div>
-  </header>
-  
-  <div class="post-content">
-    <div class="post-summary">
-      1. 甲基化肿瘤检测产品综述 1.1 截至2018年的国外商业化甲基化肿瘤检测 Koch, A. et al. Analysis of DNA methylation in cancer: location revisited. Nat Rev Clin Oncol 15, 459–466 (2018). The Cancer Genome Atlas (TCGA) data for all biomarkers with commercially available
-    </div>
-    <div class="read-more">
-      <a href="/post/methylation_and_cancer/" class="read-more-link">Read more...</a>
-    </div>
-  </div>
-</article>
-
-    <article class="post">
-  <header class="post-header">
-    <h1 class="post-title"><a class="post-link" href="/post/datamash_tips1/">datamash tips</a></h1>
-    <div class="post-meta">
-      <span class="post-time"> 2023-04-28 </span>
-      <div class="post-category">
-          <a href="/categories/bioinf/"> bioinf </a>
-          </div>
-    </div>
-  </header>
-  
-  <div class="post-content">
-    <div class="post-summary">
-      1 2 3 4 5 6 7 8 9 10 &gt; (cat &lt;&lt;-EOF a 1 a 2 b 3 c 4 EOF ) | datamash groupby 1 collapse 2 a 1,2 b 3 c 4 collapse 操作可以将对应的列（本例中为第二列）进行合并，在本例子，根据第一例的
-    </div>
-    <div class="read-more">
-      <a href="/post/datamash_tips1/" class="read-more-link">Read more...</a>
-    </div>
-  </div>
-</article>
-
-    <article class="post">
-  <header class="post-header">
-    <h1 class="post-title"><a class="post-link" href="/post/cancer_early_diagnostics/">肿瘤早诊的思路</a></h1>
-    <div class="post-meta">
-      <span class="post-time"> 2023-04-28 </span>
-      <div class="post-category">
-          <a href="/categories/clinical/"> clinical </a>
-          </div>
-    </div>
-  </header>
-  
-  <div class="post-content">
-    <div class="post-summary">
-      全国临床分子诊断技术及其规范化应用高峰论坛，听了邵建永的讲座，有一些启发，总结一下： 肿瘤早诊的思路 1）做早诊，而不是早筛 2）开始用粪便做结直
-    </div>
-    <div class="read-more">
-      <a href="/post/cancer_early_diagnostics/" class="read-more-link">Read more...</a>
-    </div>
-  </div>
-</article>
-
-    <article class="post">
-  <header class="post-header">
-    <h1 class="post-title"><a class="post-link" href="/post/geneseeq_mrd/">邵阳对世和MRD的介绍 - MRD的技术创新与应用案例分享</a></h1>
-    <div class="post-meta">
-      <span class="post-time"> 2023-04-27 </span>
-      <div class="post-category">
-          <a href="/categories/clinical/"> clinical </a>
-          </div>
-    </div>
-  </header>
-  
-  <div class="post-content">
-    <div class="post-summary">
-      个人总结 对个体化panel与固定panel的优劣，做了全面而深入的分析 采用固定化的大panel来做MRD，克服了定制panel的一些问题，想
-    </div>
-    <div class="read-more">
-      <a href="/post/geneseeq_mrd/" class="read-more-link">Read more...</a>
-    </div>
-  </div>
-</article>
-
-    <article class="post">
-  <header class="post-header">
-    <h1 class="post-title"><a class="post-link" href="/post/ont_basics/">图解三代测序（Nanopore） (转载作为备份)</a></h1>
-    <div class="post-meta">
-      <span class="post-time"> 2023-04-08 </span>
-      <div class="post-category">
-          <a href="/categories/tech/"> tech </a>
-          </div>
-    </div>
-  </header>
-  
-  <div class="post-content">
-    <div class="post-summary">
-      转载自 baimoc - 博客园 一、测序原理 先介绍 Nanopore 测序中的几位主角： Reader ：在自然界中，有一种可以嵌入到细胞膜中作为离子或分子通道的跨膜蛋白，具有天然的蛋白纳
-    </div>
-    <div class="read-more">
-      <a href="/post/ont_basics/" class="read-more-link">Read more...</a>
-    </div>
-  </div>
-</article>
-
-    </section>
-  
-  <nav class="pagination">
-    
-    <a class="next" href="/page/2/">
-        <span class="next-text">Next</span>
-        <i class="iconfont icon-right"></i>
-      </a>
-  </nav>
+        <div id="mask"></div><div class="wrapper"><header class="desktop" id="header-desktop">
+    <div class="header-wrapper">
+        <div class="header-title">
+            <a href="/" title="Entropy Decrease">Entropy Decrease</a>
         </div>
-        
-
-      </div>
-    </main>
-
-    <footer id="footer" class="footer">
-      <div class="social-links">
-      <a href="mailto:en&#43;tr-op*ydecr_ea%5ese@outlook.com%5eremove_unnecessary_chars%5e" class="iconfont icon-email" title="email"></a>
-      <a href="https://github.com/entropydecrease" class="iconfont icon-github" title="github"></a>
-  <a href="https://entropydecrease.github.io/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
-</div>
-
-<div class="copyright">
-  <span class="power-by">
-    Powered by <a class="hexo-link" href="https://gohugo.io">Hugo</a>
-  </span>
-  <span class="division">|</span>
-  <span class="theme-info">
-    Theme - 
-    <a class="theme-link" href="https://github.com/olOwOlo/hugo-theme-even">Even</a>
-  </span>
-
-  <div class="busuanzi-footer">
-    <span id="busuanzi_container_site_pv"> site pv: <span id="busuanzi_value_site_pv"><img src="/img/spinner.svg" alt="spinner.svg"/></span> </span>
-      <span class="division">|</span>
-    <span id="busuanzi_container_site_uv"> site uv: <span id="busuanzi_value_site_uv"><img src="/img/spinner.svg" alt="spinner.svg"/></span> </span>
-  </div>
-
-  <span class="copyright-year">
-    &copy; 
-    2015 - 
-    2023<span class="heart"><i class="iconfont icon-heart"></i></span><span>Entropy Decrease</span>
-  </span>
-</div>
-
-    </footer>
-
-    <div class="back-to-top" id="back-to-top">
-      <i class="iconfont icon-up"></i>
+        <div class="menu">
+            <div class="menu-inner"><a class="menu-item active" href="/"> Home </a><a class="menu-item" href="/posts/"> Posts </a><a class="menu-item" href="/tags/"> Tags </a><a class="menu-item" href="/categories/"> Categories </a><a class="menu-item" href="/about"> About </a><span class="menu-item delimiter"></span><span class="menu-item search" id="search-desktop">
+                        <input type="text" placeholder="Search titles or contents..." id="search-input-desktop">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-desktop" title="Search">
+                            <i class="fas fa-search fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-desktop" title="Clear">
+                            <i class="fas fa-times-circle fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-desktop">
+                            <i class="fas fa-spinner fa-fw fa-spin" aria-hidden="true"></i>
+                        </span>
+                    </span><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
+                    <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
+                </a></div>
+        </div>
     </div>
-  </div>
-  <script type="text/javascript" src="/lib/jquery/jquery-3.2.1.min.js"></script>
-  <script type="text/javascript" src="/lib/slideout/slideout-1.0.1.min.js"></script>
-  <script type="text/javascript" src="/lib/fancybox/jquery.fancybox-3.1.20.min.js"></script>
+</header><header class="mobile" id="header-mobile">
+    <div class="header-container">
+        <div class="header-wrapper">
+            <div class="header-title">
+                <a href="/" title="Entropy Decrease">Entropy Decrease</a>
+            </div>
+            <div class="menu-toggle" id="menu-toggle-mobile">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+        <div class="menu" id="menu-mobile"><div class="search-wrapper">
+                    <div class="search mobile" id="search-mobile">
+                        <input type="text" placeholder="Search titles or contents..." id="search-input-mobile">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-mobile" title="Search">
+                            <i class="fas fa-search fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-mobile" title="Clear">
+                            <i class="fas fa-times-circle fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-mobile">
+                            <i class="fas fa-spinner fa-fw fa-spin" aria-hidden="true"></i>
+                        </span>
+                    </div>
+                    <a href="javascript:void(0);" class="search-cancel" id="search-cancel-mobile">
+                        Cancel
+                    </a>
+                </div><a class="menu-item" href="/" title="">Home</a><a class="menu-item" href="/posts/" title="">Posts</a><a class="menu-item" href="/tags/" title="">Tags</a><a class="menu-item" href="/categories/" title="">Categories</a><a class="menu-item" href="/about" title="">About</a><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
+                <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
+            </a></div>
+    </div>
+</header><div class="search-dropdown desktop">
+        <div id="search-dropdown-desktop"></div>
+    </div>
+    <div class="search-dropdown mobile">
+        <div id="search-dropdown-mobile"></div>
+    </div><main class="main">
+                <div class="container"><div class="page home" data-home="posts"><div class="home-profile"><div class="home-subtitle">阅读、思考、写作，都是熵减的过程</div><div class="links"><a href="https://github.com/entropydecrease" title="GitHub" target="_blank" rel="noopener noreffer me"><i class="fab fa-github fa-fw" aria-hidden="true"></i></a><a href="mailto:mailto:en&#43;tr-op*ydecr_ea%5ese@outlook.com%5eremove_unnecessary_chars%5e" title="Email" rel="me"><i class="far fa-envelope fa-fw" aria-hidden="true"></i></a><a href="/index.xml" title="RSS" target="_blank" rel="noopener noreffer me"><i class="fas fa-rss fa-fw" aria-hidden="true"></i></a></div></div>
+<article class="single summary" itemscope itemtype="http://schema.org/Article"><h1 class="single-title" itemprop="name headline">
+        <a href="/2023_09_01_%E6%B2%88%E9%86%89%E5%9B%9E%E5%BF%86%E5%BD%95/">沈醉回忆录读书笔记</a>
+    </h1><div class="post-meta"><span class="post-author"><a href="/" title="Author" rel="author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>entropydecrease</a></span>&nbsp;<span class="post-publish">published on <time datetime="2023-09-01">2023-09-01</time></span>&nbsp;<span class="post-category">included in <a href="/categories/%E6%96%87%E6%91%98/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>文摘</a></span></div><div class="content">笔记几则 沈醉1914年生，18岁投奔余乐醒(也是一个重要的特务)开始当特务，28岁成为军统局总务处少将处长，1947年成为云南站站长，1949年被迫参加龙云的云南起义，才35岁。后接受改造至1960年释放，之后作为政协文史资料委员会文史委员，文革期间曾入狱。1980年身份由战犯改为起义将领。
+沈醉曾打电话恐吓宋庆龄，并计划开车撞车宋庆龄以警告，后未实行。
+沈醉曾受命计划刺杀李宗仁，后未实行。李宗仁回国后曾找沈醉当面了解此事。
+余乐醒也是一个资深特务，汪精卫初逃至越南时，余赴越南主持刺杀行动。确实汪精卫运气好，躲过多次暗杀，最后一次暗杀也是运气好睡在了隔壁房间。进屋刺杀的特务后来被越南当局囚禁至抗日战争胜利，余在附近指挥故及时逃脱。汪精卫之后也担惊受怕，日本人把汪运走的过程中也担心军统再次袭击，但是可惜军统后来没有再次刺杀。
+军统当时权力太大，民航的机票、全国水陆交通检查站都是军统的，而且有一个有2000量汽车的运输队。
+渣滓洞这个地方原来是一个煤矿，是沈醉选中作为监狱的，煤矿老板被逼死。
+王耀武杀了方志敏，宋希濂杀了瞿秋白。
+杜聿明等战犯，被俘后，除了文革期间，没有被刑讯，没有被洗脑，通过自己学习、参观、轻微劳动进行改造。党在这方面，称得上有耐心，有气量。
+杜聿明出狱后，其在台湾的妻子即经美国辗转回大陆。还有一个例子是末代皇帝溥仪的兄弟溥杰在特赦之后，其在日本的妻子也回到大陆与其团聚。但是还有将领在被俘之后妻子跟副官卷款跑路的。
+政协文史专员一行人跟溥仪一起去游故宫，需要买票，溥仪说，“到这里来，我还得买门票！？”
+溥仪，这位被中国共产党改造过来的中国末代皇帝，在文革中死去。
+徐远举，白公馆和渣滓洞的刽子手，也曾一心悔改，文革中死去。
+张国焘回忆录中欠缺的一段经历，在军统担任特种政治问题研究室少将主任，丢脸。
+郑萍如，可能是色戒里汤唯那个角色的原型，只是军统的一个“运用人员”，不是正式人员，后来被沈醉要求补上作为军统在抗战时在沦陷区殉职的烈士，“据认识她的特务告诉我，说她完全是出于爱国和好奇，才去干这一冒生命危险的工作的。”
+七七事变之后，军统要在日战区设立潜伏组，沈醉任组长，确实潜伏进去了，虽然没有做长。
+唐生明受蒋介石之命投靠汪精卫，此后在汪伪政权里竟然成为日本人、重庆和南京方面三方优待的对象，甚至可以直接找日本人释放被捕的重庆方面的人，闻所未闻。也反映了蒋介石一直跟日本有联络，投降或者合作，曾经是一种可能。
+汪伪政权的几个大特务，最后都没有好下场。
+抗日战争胜利后，唐生明回到重庆，被排挤，由到湖南，然后在解放前夕参加了湖南起义。自云，在汪伪政权任职时，在家里藏了重庆方面的电台，在湖南的时候家里藏了共产党的电台。这个人的故事，后面值得细说。
+最大的感触: 即使穷凶极恶杀人如麻的特务，开始也是抱着一片报国之心，也有很多为国捐躯的，后来变成作威作福、鱼肉百姓，可能是因为人所处位置和拥有的特权所致。就跟文革里面的小将一样，或者现代的城管，有了特权便忘了出身。
+国民党的将领，最早走上革命道路，其实很多也是为了报效祖国，不是天生的反动派，很多中下层的军人的行为是被大的洪流所裹挟。</div><div class="post-footer">
+        <a href="/2023_09_01_%E6%B2%88%E9%86%89%E5%9B%9E%E5%BF%86%E5%BD%95/">Read More</a><div class="post-tags">
+                <i class="fas fa-tags fa-fw" aria-hidden="true"></i>&nbsp;<a href="/tags/%E5%8E%86%E5%8F%B2/">历史</a></div></div>
+</article><article class="single summary" itemscope itemtype="http://schema.org/Article"><h1 class="single-title" itemprop="name headline">
+        <a href="/2023_06_15_mosh_startup_message/">mosh: Did not find mosh server startup message</a>
+    </h1><div class="post-meta"><span class="post-author"><a href="/" title="Author" rel="author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>entropydecrease</a></span>&nbsp;<span class="post-publish">published on <time datetime="2023-06-15">2023-06-15</time></span>&nbsp;<span class="post-category">included in <a href="/categories/tools/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>tools</a></span></div><div class="content">Mac使用mosh登录新的服务器，发现如下错误：
+bash: warning: setlocale: LC_ALL: cannot change locale (en_US.UTF-8) The locale requested by LC_ALL=en_US.UTF-8 isn&rsquo;t available here. Running `locale-gen en_US.UTF-8&rsquo; may be necessary.
+The locale requested by LC_ALL=en_US.UTF-8 isn&rsquo;t available here. Running `locale-gen en_US.UTF-8&rsquo; may be necessary.
+mosh-server needs a UTF-8 native locale to run.
+Unfortunately, the local environment (LC_ALL=en_US.UTF-8) specifies the character set &ldquo;US-ASCII&rdquo;,
+The client-supplied environment (LC_ALL=en_US.UTF-8) specifies the character set &ldquo;US-ASCII&rdquo;.
+locale: Cannot set LC_CTYPE to default locale: No such file or directory locale: Cannot set LC_MESSAGES to default locale: No such file or directory locale: Cannot set LC_ALL to default locale: No such file or directory LANG=en_US.</div><div class="post-footer">
+        <a href="/2023_06_15_mosh_startup_message/">Read More</a><div class="post-tags">
+                <i class="fas fa-tags fa-fw" aria-hidden="true"></i>&nbsp;<a href="/tags/tools/">tools</a></div></div>
+</article><article class="single summary" itemscope itemtype="http://schema.org/Article"><h1 class="single-title" itemprop="name headline">
+        <a href="/2023_05_03_civicdb/">Civic数据库介绍</a>
+    </h1><div class="post-meta"><span class="post-author"><a href="/" title="Author" rel="author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>entropydecrease</a></span>&nbsp;<span class="post-publish">published on <time datetime="2023-05-03">2023-05-03</time></span>&nbsp;<span class="post-category">included in <a href="/categories/bioinf/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>bioinf</a></span></div><div class="content">Nucleic Acids Research上有civicdb最新的介绍。
+Krysiak, K. et al. CIViCdb 2022: evolution of an open-access cancer variant interpretation knowledgebase. Nucleic Acids Research 51, D1230–D1241 (2023).</div><div class="post-footer">
+        <a href="/2023_05_03_civicdb/">Read More</a><div class="post-tags">
+                <i class="fas fa-tags fa-fw" aria-hidden="true"></i>&nbsp;<a href="/tags/bioinf/">bioinf</a></div></div>
+</article><article class="single summary" itemscope itemtype="http://schema.org/Article"><h1 class="single-title" itemprop="name headline">
+        <a href="/2023_05_02_methylation_cancer/">甲基化与膀胱癌检测</a>
+    </h1><div class="post-meta"><span class="post-author"><a href="/" title="Author" rel="author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>entropydecrease</a></span>&nbsp;<span class="post-publish">published on <time datetime="2023-05-02">2023-05-02</time></span></div><div class="content">1. 甲基化肿瘤检测产品综述 1.1 截至2018年的国外商业化甲基化肿瘤检测 Koch, A. et al. Analysis of DNA methylation in cancer: location revisited. Nat Rev Clin Oncol 15, 459–466 (2018).
+The Cancer Genome Atlas (TCGA) data for all biomarkers with commercially available assays were analysed for differential methylation between tumour and nonmalignant samples and to determine whether or not methylation status at the location of the area covered by the assay is correlated with expression. We also investigated whether or not the biomarkers are located in the promoter region of their corresponding genes and whether or not they are located in a CpG island.</div><div class="post-footer">
+        <a href="/2023_05_02_methylation_cancer/">Read More</a><div class="post-tags">
+                <i class="fas fa-tags fa-fw" aria-hidden="true"></i>&nbsp;<a href="/tags/%E6%97%A9%E8%AF%8A/">早诊</a>,&nbsp;<a href="/tags/%E7%94%B2%E5%9F%BA%E5%8C%96/">甲基化</a></div></div>
+</article><article class="single summary" itemscope itemtype="http://schema.org/Article"><h1 class="single-title" itemprop="name headline">
+        <a href="/2023_04_28_datamash/">datamash tips</a>
+    </h1><div class="post-meta"><span class="post-author"><a href="/" title="Author" rel="author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>entropydecrease</a></span>&nbsp;<span class="post-publish">published on <time datetime="2023-04-28">2023-04-28</time></span>&nbsp;<span class="post-category">included in <a href="/categories/bioinf/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>bioinf</a></span></div><div class="content">1 2 3 4 5 6 7 8 9 10 &gt; (cat &lt;&lt;-EOF a 1 a 2 b 3 c 4 EOF ) | datamash groupby 1 collapse 2 a	1,2 b	3 c	4 collapse 操作可以将对应的列（本例中为第二列）进行合并，在本例子，根据第一例的值进行分组，将第二例的值合并。
+另外，为了在一个命令中完成，本例中使用了here document。</div><div class="post-footer">
+        <a href="/2023_04_28_datamash/">Read More</a><div class="post-tags">
+                <i class="fas fa-tags fa-fw" aria-hidden="true"></i>&nbsp;<a href="/tags/datamash/">datamash</a></div></div>
+</article><article class="single summary" itemscope itemtype="http://schema.org/Article"><h1 class="single-title" itemprop="name headline">
+        <a href="/2023_04_28_cancer_early_diagnostics/">肿瘤早诊的思路</a>
+    </h1><div class="post-meta"><span class="post-author"><a href="/" title="Author" rel="author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>entropydecrease</a></span>&nbsp;<span class="post-publish">published on <time datetime="2023-04-28">2023-04-28</time></span>&nbsp;<span class="post-category">included in <a href="/categories/clinical/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>clinical</a></span></div><div class="content">全国临床分子诊断技术及其规范化应用高峰论坛，听了邵建永的讲座，有一些启发，总结一下：
+肿瘤早诊的思路 1）做早诊，而不是早筛
+2）开始用粪便做结直肠癌，用尿液做膀胱癌，取材是跟肿瘤有直接接触 ，而且比血更无创
+3）甲基化不但做膀胱癌早诊，还做膀胱癌的复发检测
+4）就一个基因Twist1，用qPCR，比较简单
+5）他们就围绕自然腔道来做早诊，其它肿瘤在进行中
+达健Twist1甲基化试剂盒的审评报告： 人Twist1基因甲基化检测试剂盒（荧光PCR法）（CSZ2000297）</div><div class="post-footer">
+        <a href="/2023_04_28_cancer_early_diagnostics/">Read More</a><div class="post-tags">
+                <i class="fas fa-tags fa-fw" aria-hidden="true"></i>&nbsp;<a href="/tags/%E6%97%A9%E8%AF%8A/">早诊</a></div></div>
+</article><ul class="pagination"><li class="page-item active">
+                    <span class="page-link">
+                        <a href="/">1</a>
+                    </span>
+                </li><li class="page-item ">
+                    <span class="page-link">
+                        <a href="/page/2/">2</a>
+                    </span>
+                </li><li class="page-item ">
+                    <span class="page-link">
+                        <a href="/page/3/">3</a>
+                    </span>
+                </li><li class="page-item ">
+                    <span class="page-link" aria-hidden="true">&hellip;</span>
+                </li><li class="page-item ">
+                    <span class="page-link">
+                        <a href="/page/6/">6</a>
+                    </span>
+                </li></ul></div></div>
+            </main><footer class="footer">
+        <div class="footer-container"><div class="footer-line">Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.113.0">Hugo</a> | Theme - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.2.11"><i class="far fa-kiss-wink-heart fa-fw" aria-hidden="true"></i> LoveIt</a>
+                </div><div class="footer-line" itemscope itemtype="http://schema.org/CreativeWork"><i class="far fa-copyright fa-fw" aria-hidden="true"></i><span itemprop="copyrightYear">2015 - 2023</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/" target="_blank">entropydecrease</a></span></div>
+        </div>
+    </footer></div>
 
-
-
-<script type="text/javascript" src="/js/main.min.4ae89da218555efa0e7093a20b92017d2e1202b66fff9fc2edf4cb8d44b44c6e.js"></script>
-  <script type="text/javascript">
-    window.MathJax = {
-      tex: {
-        inlineMath: [['$','$'], ['\\(','\\)']],
-        }
-    };
-  </script>
-  <script async src="https://cdn.jsdelivr.net/npm/mathjax@3.0.5/es5/tex-mml-chtml.js" integrity="sha256-HGLuEfFcsUJGhvB8cQ8nr0gai9EucOOaIxFw7qxmd+w=" crossorigin="anonymous"></script>
-
-
-
-
-
-
-
-
-</body>
+        <div id="fixed-buttons"><a href="#" id="back-to-top" class="fixed-button" title="Back to Top">
+                <i class="fas fa-arrow-up fa-fw" aria-hidden="true"></i>
+            </a><a href="#" id="view-comments" class="fixed-button" title="View Comments">
+                <i class="fas fa-comment fa-fw" aria-hidden="true"></i>
+            </a>
+        </div><link rel="stylesheet" href="/lib/katex/katex.min.css"><script type="text/javascript" src="/lib/autocomplete/autocomplete.min.js"></script><script type="text/javascript" src="/lib/lunr/lunr.min.js"></script><script type="text/javascript" src="/lib/lazysizes/lazysizes.min.js"></script><script type="text/javascript" src="/lib/clipboard/clipboard.min.js"></script><script type="text/javascript" src="/lib/sharer/sharer.min.js"></script><script type="text/javascript" src="/lib/katex/katex.min.js"></script><script type="text/javascript" src="/lib/katex/contrib/auto-render.min.js"></script><script type="text/javascript" src="/lib/katex/contrib/copy-tex.min.js"></script><script type="text/javascript" src="/lib/katex/contrib/mhchem.min.js"></script><script type="text/javascript">window.config={"code":{"copyTitle":"Copy to clipboard","maxShownLines":50},"math":{"delimiters":[{"display":true,"left":"$$","right":"$$"},{"display":true,"left":"\\[","right":"\\]"},{"display":true,"left":"\\begin{equation}","right":"\\end{equation}"},{"display":true,"left":"\\begin{equation*}","right":"\\end{equation*}"},{"display":true,"left":"\\begin{align}","right":"\\end{align}"},{"display":true,"left":"\\begin{align*}","right":"\\end{align*}"},{"display":true,"left":"\\begin{alignat}","right":"\\end{alignat}"},{"display":true,"left":"\\begin{alignat*}","right":"\\end{alignat*}"},{"display":true,"left":"\\begin{gather}","right":"\\end{gather}"},{"display":true,"left":"\\begin{CD}","right":"\\end{CD}"},{"display":false,"left":"$","right":"$"},{"display":false,"left":"\\(","right":"\\)"}],"strict":false},"search":{"highlightTag":"em","lunrIndexURL":"/index.json","maxResultLength":10,"noResultsFound":"No results found","snippetLength":30,"type":"lunr"}};</script><script type="text/javascript" src="/js/theme.min.js"></script></body>
 </html>

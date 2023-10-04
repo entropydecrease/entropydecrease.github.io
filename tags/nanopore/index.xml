@@ -1,29 +1,51 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>nanopore on Entropy Decrease</title>
-    <link>https://entropydecrease.github.io/tags/nanopore/</link>
-    <description>Recent content in nanopore on Entropy Decrease</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en</language>
-    <lastBuildDate>Sat, 08 Apr 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://entropydecrease.github.io/tags/nanopore/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>图解三代测序（Nanopore） (转载作为备份)</title>
-      <link>https://entropydecrease.github.io/post/ont_basics/</link>
-      <pubDate>Sat, 08 Apr 2023 00:00:00 +0000</pubDate>
-      
-      <guid>https://entropydecrease.github.io/post/ont_basics/</guid>
-      <description>转载自 baimoc - 博客园 一、测序原理 先介绍 Nanopore 测序中的几位主角： Reader ：在自然界中，有一种可以嵌入到细胞膜中作为离子或分子通道的跨膜蛋白，具有天然的蛋白纳</description>
-    </item>
-    
-    <item>
-      <title>ONT相关的一些笔记</title>
-      <link>https://entropydecrease.github.io/post/ont_notes/</link>
-      <pubDate>Sat, 01 Apr 2023 00:00:00 +0000</pubDate>
-      
-      <guid>https://entropydecrease.github.io/post/ont_notes/</guid>
-      <description>准确度 Kit V14 + R10.4.1 simplex: 99.6%, Q24 duplex: 99.92%, Q31 duplex 一个双链文库分子，两端都有motor protein（马达蛋白）。一端的马达蛋白牵引双链文库靠近纳米孔，并解开双链</description>
-    </item>
-    
-  </channel>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>nanopore - Tag - Entropy Decrease</title>
+        <link>https://entropydecrease.github.io/tags/nanopore/</link>
+        <description>nanopore - Tag - Entropy Decrease</description>
+        <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Sat, 08 Apr 2023 00:00:00 &#43;0000</lastBuildDate><atom:link href="https://entropydecrease.github.io/tags/nanopore/" rel="self" type="application/rss+xml" /><item>
+    <title>图解三代测序（Nanopore） (转载作为备份)</title>
+    <link>https://entropydecrease.github.io/2023_04_08_ont_basics/</link>
+    <pubDate>Sat, 08 Apr 2023 00:00:00 &#43;0000</pubDate>
+    <author>entropydecrease</author>
+    <guid>https://entropydecrease.github.io/2023_04_08_ont_basics/</guid>
+    <description><![CDATA[转载自 baimoc - 博客园
+一、测序原理 先介绍 Nanopore 测序中的几位主角：
+Reader ：在自然界中，有一种可以嵌入到细胞膜中作为离子或分子通道的跨膜蛋白，具有天然的蛋白纳米孔。经过人为基因工程修饰后，得到的就是 Nanopore 测序所需的 Reader 蛋白。
+Membrane：Reader 蛋白会被嵌入到高电阻率的 Membrane （人工合成的多聚物膜），膜两侧是离子溶液，在两侧加不同的电位，离子就会在孔中流动，形成电流。
+Motor：在 Nanopore 文库构建时，需要在接头上连接一种动力蛋白，用于将DNA或RNA分子推入纳米孔中。以DNA解螺旋酶作为 Motor（动力蛋白）为例，它可以除了可以解开双螺旋，使之变为单链，还可以提供推动力。
+Tether：该蛋白用于锚定DNA或RNA链，防止在溶液中飘动，并使其进入纳米孔中。
+这时，解开的其中一条链会穿过蛋白质孔，它在通过蛋白孔时，会对膜两边离子的稳定流动产生扰动。不同的碱基，对离子流的影响不同，也就会产生不同的电流大小，进而形成下面的电流信号图。
+利用这些电流信号，使用计算机软件识别后，推断出碱基类型，完成测序。
+二、测序仪介绍 虽然 Nanopore 测序仪种类很多，但都是基于Nanopore芯片来搭建的平台，大到由多个芯片阵列组成的PromehION，GridION系列测序仪，小到可以连接手机的Type C，电脑USB的MnION系列便携式测序仪。
+这里边，最著名的就是MnION系列，2016年8月，美国宇航员凯特·鲁宾斯在国际空间站完成微重力条件的DNA测序。
+它在测序时，一般像下图这样连接就行，显而易见的便携性。比如，可以直接用它在深入疫区采集样本后进行实时分析，为防疫工作争取大量宝贵的时间和资源。
+测序时，将制备好的文库或样本溶液，滴在芯片小孔中，开始测序。
+一张芯片中有 2048 个 membrane wells，也就是芯片上的一个孔，每个孔包含一个nanopore Reader。
+每四个 wells 共享一个 Amplifier（信号放大器），一张芯片中有 512 个信号放大器，也就是 512 组 wells。
+在启动测序仪后，机器自检，会将每组 wells 中依据效率高低排序。测序开始，仪器先用每组 wells 中效率最高的 wells，运行 8 小时后，更换效率第二的，以此类推。
+但是，在实际使用过程中，只有 1200 个 wells可以正常工作。
+造成 wells 失效的原因：
+wells 中没有 Reader 蛋白，或纳米孔不通，这时无电信号 膜破损，这时有强电信号，不能正常测序 在单个 well 中有两个及以上的 Reader 蛋白，电信号互相干扰 三、建库方法 1、1D 文库 1D文库是将DNA双链，解链为正义链与反义链，分别测序，大约有 85% 的碱基判读准确率。]]></description>
+</item>
+<item>
+    <title>ONT相关的一些笔记</title>
+    <link>https://entropydecrease.github.io/2023_04_01_ont_training_notes/</link>
+    <pubDate>Sat, 01 Apr 2023 00:00:00 &#43;0000</pubDate>
+    <author>entropydecrease</author>
+    <guid>https://entropydecrease.github.io/2023_04_01_ont_training_notes/</guid>
+    <description><![CDATA[准确度 Kit V14 + R10.4.1
+simplex: 99.6%, Q24 duplex: 99.92%, Q31 duplex 一个双链文库分子，两端都有motor protein（马达蛋白）。一端的马达蛋白牵引双链文库靠近纳米孔，并解开双链让其中一条单链进入纳米孔，在其完全进入纳米孔之后，文库另外一端的马达蛋白有可能会牵引文库另外一头直接以单链的形式（无需解链）进入纳米孔（此时也有可能是其他的片段进入纳米孔测序）。这样测得的序列是一条原始分子的正负链都被测到了，所以叫duplex，可以提高测序精度。
+duplex不是通过新的试剂，只是protocol，让互补链紧跟着正义链过同一个孔而已，有一些reads是duplex，也有很多是simplex。 据说最新的试剂，可以将duplex reads的比例提高到70%。
+duplex的精度与长度相互独立
+测indel要60x才比较准。
+misc 低覆盖度，1x也可以测CNV 泛基因组 泛基因组用ONT组装，只看SV或NSR的话，20x覆盖度够用。但是要看单碱基分辨率的SNV/indel，学校研究人员认为需要用NGS数据做polish.
+学校研究人员提到长的sv假阳性非常高，他们把5M 以上inv和2M 以上indel都过滤掉了，我也是有点无语，做临床检测的话，这些才是更容易致病的。。。。
+ONT公司认为泛基因组的组装，SV所需数据量较小，SNV用40x够了，homopolymer处的indel，可以用60x的duplex测序来解决。但是他们一般推荐40x，因为一个芯片标准的测序量是120G，刚好是40x的覆盖度。
+植物多倍体 组装多倍体比较难，ONT单独无法完成，一般是结合PacBio HiFi，Hi-C和OGM也常用。 适应性采样 NGS短板：读长短，修饰信息丢失 大量宿主DNA给mNGS带来挑战，唾液中加入PMA，可显著减少人源DNA 三代测序因序列较长，更容易将耐药基因归属至菌种。 NGS的扩增可能产生偏向性（bias），三代测序无扩增，可避免此类偏向性。 适应性采样，提供人类基因组的bed文件，碰到可以匹配到ren基因组的序列，就弹出。 适应性采样，可提高病原序列比例，且显著提高病原体达到30x覆盖度的速度（4h vs 常规12h）。 文件格式 Fast5 ONT现在的默认格式，未来会被POD替代。
+采样频率4k Hz == 4000次/秒，碱基的过孔速度 ~400bp/s，相当于每个碱基过孔的时间内有10次的采样。
+数据量与文件大小
+数据量 Fast5文件大小 Pod5文件大小 1G bp 6G Byte 0.5G Byte 10G bp 60 GB 5 GB 30G bp 180 GB 15 GB 90G bp 540 GB 45 GB Pod5格式 替代Fast5，后续会作为默认文件格式 MinKnow机器集成 bascalling 将Fast5/Pod5文件转换为Fastq/uBam格式的过程]]></description>
+</item>
+</channel>
 </rss>

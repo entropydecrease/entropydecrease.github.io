@@ -1,20 +1,25 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>bioinf on Entropy Decrease</title>
-    <link>https://entropydecrease.github.io/tags/bioinf/</link>
-    <description>Recent content in bioinf on Entropy Decrease</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en</language>
-    <lastBuildDate>Sat, 14 Mar 2015 00:00:00 +0000</lastBuildDate><atom:link href="https://entropydecrease.github.io/tags/bioinf/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>bioinf常见的一些错误</title>
-      <link>https://entropydecrease.github.io/post/common_bioinf_mistakes/</link>
-      <pubDate>Sat, 14 Mar 2015 00:00:00 +0000</pubDate>
-      
-      <guid>https://entropydecrease.github.io/post/common_bioinf_mistakes/</guid>
-      <description>biostar上的这篇文章总结了在生物信息学日常工作中容易犯的一些共性的错误： * forget to check both strands * generate random genomic sites without avoiding masked (NNN) gaps * confuse genome freezes and even species * try to see which headers it contained</description>
-    </item>
-    
-  </channel>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>bioinf - Tag - Entropy Decrease</title>
+        <link>https://entropydecrease.github.io/tags/bioinf/</link>
+        <description>bioinf - Tag - Entropy Decrease</description>
+        <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Wed, 03 May 2023 00:00:00 &#43;0000</lastBuildDate><atom:link href="https://entropydecrease.github.io/tags/bioinf/" rel="self" type="application/rss+xml" /><item>
+    <title>Civic数据库介绍</title>
+    <link>https://entropydecrease.github.io/2023_05_03_civicdb/</link>
+    <pubDate>Wed, 03 May 2023 00:00:00 &#43;0000</pubDate>
+    <author>entropydecrease</author>
+    <guid>https://entropydecrease.github.io/2023_05_03_civicdb/</guid>
+    <description><![CDATA[Nucleic Acids Research上有civicdb最新的介绍。
+Krysiak, K. et al. CIViCdb 2022: evolution of an open-access cancer variant interpretation knowledgebase. Nucleic Acids Research 51, D1230–D1241 (2023).]]></description>
+</item>
+<item>
+    <title>bioinf常见的一些错误</title>
+    <link>https://entropydecrease.github.io/2015_03_14_common_bioinf_mistakes/</link>
+    <pubDate>Sat, 14 Mar 2015 00:00:00 &#43;0000</pubDate>
+    <author>entropydecrease</author>
+    <guid>https://entropydecrease.github.io/2015_03_14_common_bioinf_mistakes/</guid>
+    <description><![CDATA[biostar上的这篇文章总结了在生物信息学日常工作中容易犯的一些共性的错误：
+* forget to check both strands * generate random genomic sites without avoiding masked (NNN) gaps * confuse genome freezes and even species * try to see which headers it contained by 'grep &gt; some.fasta' will destory the .fasta file * a lot of off-by-one errors due to switching between formats: Bed is 0 based; GFF/GTF are 1-based * Trusting that a downloaded file is actually fully downloaded * Trusting that an aligner will accept a list of query files instead of just taking the first and ignoring the rest (quiz: which ones am i talking about?]]></description>
+</item>
+</channel>
 </rss>

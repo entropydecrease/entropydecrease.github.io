@@ -1,20 +1,15 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>elementbio on Entropy Decrease</title>
-    <link>https://entropydecrease.github.io/tags/elementbio/</link>
-    <description>Recent content in elementbio on Entropy Decrease</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en</language>
-    <lastBuildDate>Sat, 19 Nov 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://entropydecrease.github.io/tags/elementbio/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>ElementBio 在2022年NGS开发者大会上的介绍</title>
-      <link>https://entropydecrease.github.io/post/elementbio_intro/</link>
-      <pubDate>Sat, 19 Nov 2022 00:00:00 +0000</pubDate>
-      
-      <guid>https://entropydecrease.github.io/post/elementbio_intro/</guid>
-      <description>Element Bio 是一家新兴的测序仪公司，其产品具有精度高、成本低、通量高的优势，下面是创始人何敏在2022年NGS开发者大会上的介绍，讲的比较清楚。</description>
-    </item>
-    
-  </channel>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>elementbio - Tag - Entropy Decrease</title>
+        <link>https://entropydecrease.github.io/tags/elementbio/</link>
+        <description>elementbio - Tag - Entropy Decrease</description>
+        <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Sat, 19 Nov 2022 00:00:00 &#43;0000</lastBuildDate><atom:link href="https://entropydecrease.github.io/tags/elementbio/" rel="self" type="application/rss+xml" /><item>
+    <title>ElementBio 在2022年NGS开发者大会上的介绍</title>
+    <link>https://entropydecrease.github.io/2022_11_19-elementbio_intro/</link>
+    <pubDate>Sat, 19 Nov 2022 00:00:00 &#43;0000</pubDate>
+    <author>entropydecrease</author>
+    <guid>https://entropydecrease.github.io/2022_11_19-elementbio_intro/</guid>
+    <description><![CDATA[Element Bio 是一家新兴的测序仪公司，其产品具有精度高、成本低、通量高的优势，下面是创始人何敏在2022年NGS开发者大会上的介绍，讲的比较清楚。]]></description>
+</item>
+</channel>
 </rss>

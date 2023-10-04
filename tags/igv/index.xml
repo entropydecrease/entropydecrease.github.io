@@ -1,20 +1,20 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>igv on Entropy Decrease</title>
-    <link>https://entropydecrease.github.io/tags/igv/</link>
-    <description>Recent content in igv on Entropy Decrease</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en</language>
-    <lastBuildDate>Sun, 23 Feb 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://entropydecrease.github.io/tags/igv/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>igv 生成本地的.genome文件</title>
-      <link>https://entropydecrease.github.io/post/igv_local_genome/</link>
-      <pubDate>Sun, 23 Feb 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://entropydecrease.github.io/post/igv_local_genome/</guid>
-      <description>igv假如每次都要从远程加载genome信息的话，网络不好的情况下会很慢，这时候最好做一个本地版的.genome文件。 igv的.genome</description>
-    </item>
-    
-  </channel>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>igv - Tag - Entropy Decrease</title>
+        <link>https://entropydecrease.github.io/tags/igv/</link>
+        <description>igv - Tag - Entropy Decrease</description>
+        <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Sun, 23 Feb 2020 00:00:00 &#43;0000</lastBuildDate><atom:link href="https://entropydecrease.github.io/tags/igv/" rel="self" type="application/rss+xml" /><item>
+    <title>igv 生成本地的.genome文件</title>
+    <link>https://entropydecrease.github.io/2020_02_23_igv_local_genome/</link>
+    <pubDate>Sun, 23 Feb 2020 00:00:00 &#43;0000</pubDate>
+    <author>entropydecrease</author>
+    <guid>https://entropydecrease.github.io/2020_02_23_igv_local_genome/</guid>
+    <description><![CDATA[igv假如每次都要从远程加载genome信息的话，网络不好的情况下会很慢，这时候最好做一个本地版的.genome文件。
+igv的.genome文件其实是一个zip文件。
+先看一下hg19.genome的内容：
+1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 &gt; cp ~/igv/genomes/hg19.genome . &gt; unzip hg19.genome Archive: hg19.genome inflating: cytoBand.txt inflating: hg19_alias.tab inflating: property.txt inflating: refGene.txt &gt; cat property.txt id=hg19 name=Human hg19 cytobandFile=cytoBand.txt ordered=true geneFile=refGene.txt geneTrackName=RefSeq Genes chrAliasFile=hg19_alias.tab fasta=True sequenceLocation=http://s3.amazonaws.com/igv.broadinstitute.org/genomes/seq/hg19/hg19.fasta url=http://www.ncbi.nlm.nih.gov/gene?term=$$ 可以看到，里面的cytoband文件，gene文件都是本地的，但是序列文件是在AWS上面的。而最近AWS的访问有问题，非常不稳定，所以igv也不能打开hg19.genome了。
+让igv都使用本地的文件，只需要修改property.txt即可，修改property.txt如下：
+1 2 3 4 5 6 7 8 9 10 id=hg19-local name=Human hg19 local cytobandFile=cytoBand.txt ordered=true geneFile=refGene.]]></description>
+</item>
+</channel>
 </rss>

@@ -1,110 +1,121 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>工具 on Entropy Decrease</title>
-    <link>https://entropydecrease.github.io/categories/%E5%B7%A5%E5%85%B7/</link>
-    <description>Recent content in 工具 on Entropy Decrease</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en</language>
-    <lastBuildDate>Mon, 13 Mar 2023 22:25:19 +0800</lastBuildDate><atom:link href="https://entropydecrease.github.io/categories/%E5%B7%A5%E5%85%B7/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>Hugo 关于 google_news的错误</title>
-      <link>https://entropydecrease.github.io/post/google_news_error/</link>
-      <pubDate>Mon, 13 Mar 2023 22:25:19 +0800</pubDate>
-      
-      <guid>https://entropydecrease.github.io/post/google_news_error/</guid>
-      <description>hugo 前段时间会报错 &amp;quot;_internal/google_news.html&amp;quot;: google_news internal template should be deprecated 这次就完全不能运行，warning变成error了。 解决办法是： 打开 themes/even/layouts/partials/head.html 删掉 {{- template &amp;quot;_internal/google_news.html&amp;quot; . -}} 这一行</description>
-    </item>
-    
-    <item>
-      <title>homebrew 使用镜像的方式</title>
-      <link>https://entropydecrease.github.io/post/homebrew_mirror/</link>
-      <pubDate>Mon, 13 Mar 2023 22:01:49 +0800</pubDate>
-      
-      <guid>https://entropydecrease.github.io/post/homebrew_mirror/</guid>
-      <description>Homebrew也在不停进化，现在使用清华镜像已经很方便了 日常使用 可设置如下环境变量使用本站提供的 Homebrew 镜像： 1 2 3 4 5 export HOMEBREW_INSTALL_FROM_API=1 export HOMEBREW_API_DOMAIN=&amp;#34;https://mirrors.tuna.tsinghua.edu.cn/homebrew-bottles/api&amp;#34; export HOMEBREW_BOTTLE_DOMAIN=&amp;#34;https://mirrors.tuna.tsinghua.edu.cn/homebrew-bottles&amp;#34; export HOMEBREW_BREW_GIT_REMOTE=&amp;#34;https://mirrors.tuna.tsinghua.edu.cn/git/homebrew/brew.git&amp;#34; export HOMEBREW_CORE_GIT_REMOTE=&amp;#34;https://mirrors.tuna.tsinghua.edu.cn/git/homebrew/homebrew-core.git&amp;#34; 首次</description>
-    </item>
-    
-    <item>
-      <title>破解typora</title>
-      <link>https://entropydecrease.github.io/post/crack_typora/</link>
-      <pubDate>Thu, 23 Feb 2023 00:00:00 +0000</pubDate>
-      
-      <guid>https://entropydecrease.github.io/post/crack_typora/</guid>
-      <description>基于electron的app有一个问题，没有很好的隐藏源码的机制，所以typora收费之后，破解版层出不穷。 网上搜了一下，针对Mac： 官方网</description>
-    </item>
-    
-    <item>
-      <title>下载m3u8格式的视频文件并合并为mp4</title>
-      <link>https://entropydecrease.github.io/post/download_m3u8/</link>
-      <pubDate>Tue, 07 Feb 2023 18:25:57 +0800</pubDate>
-      
-      <guid>https://entropydecrease.github.io/post/download_m3u8/</guid>
-      <description>尝试了一下下载网络的视频，以illumina的一个视频为例： https://www.illumina.vh.sauos.com/watch/205 得到m3u8文件 在firefox中，安装「Video DownloadHelpe</description>
-    </item>
-    
-    <item>
-      <title>github镜像</title>
-      <link>https://entropydecrease.github.io/post/github_mirror/</link>
-      <pubDate>Mon, 23 Jan 2023 00:00:00 +0000</pubDate>
-      
-      <guid>https://entropydecrease.github.io/post/github_mirror/</guid>
-      <description>githhub有时候访问很慢，甚至不能访问，有人做了一个镜像。 https://kgithub.com 可以当作github一样使用，假定此时需要 git clone bwa-mem2 ，原始命令是 git clone https://github.com/bwa-mem2/bwa-mem2.git 现在的命令</description>
-    </item>
-    
-    <item>
-      <title>a few Unix and Shell tips</title>
-      <link>https://entropydecrease.github.io/post/ssh_tmux/</link>
-      <pubDate>Tue, 03 Nov 2015 00:00:00 +0000</pubDate>
-      
-      <guid>https://entropydecrease.github.io/post/ssh_tmux/</guid>
-      <description>automatically attach to a tmux session via SSH 1 2 3 4 5 6 7 alias alias_name=&amp;#39;ssh username@servername -t &amp;#34;tmux attach || tmux&amp;#34; &amp;#39; -t Force pseudo-tty allocation. This can be used to execute arbitrary screen-based programs on a remote machine, which can be very useful, e.g., when implementing menu services. &amp;#34;tmux attach&amp;#34; tries to attach a tmux session. and if it fails, &amp;#34;tmux&amp;#34; will create a new session. to</description>
-    </item>
-    
-    <item>
-      <title>case insensitivity on MAC OS X</title>
-      <link>https://entropydecrease.github.io/post/mac_case_insensitivity/</link>
-      <pubDate>Thu, 07 May 2015 00:00:00 +0000</pubDate>
-      
-      <guid>https://entropydecrease.github.io/post/mac_case_insensitivity/</guid>
-      <description>Note: 新版本的Mac操作系统可能会有不同 http://apple.stackexchange.com/questions/22297/is-bash-in-osx-case-insensitive HFS+ (the Mac filesystem) is usually configured to be case insensitive but case preserving. This means that the file system will consider foo and FoO to be the same, but when you create a new file it will remember which letters where capitalized and which were not. When you format a</description>
-    </item>
-    
-    <item>
-      <title>设置hostname，避免DHCP修改hostname</title>
-      <link>https://entropydecrease.github.io/post/set_hostname/</link>
-      <pubDate>Mon, 13 Apr 2015 00:00:00 +0000</pubDate>
-      
-      <guid>https://entropydecrease.github.io/post/set_hostname/</guid>
-      <description>It can be annoying to see my hostname being modifed each time I connect to a different WIFI. It is because the hostname was never set. &amp;gt; scutil --get HostName HostName: not set So we just need to set the hostname: &amp;gt; sudo scutil --set HostName &amp;quot;new_hostname&amp;quot; Password: &amp;gt; scutil --get HostName new_hostname</description>
-    </item>
-    
-    <item>
-      <title>re-attach a lftp process</title>
-      <link>https://entropydecrease.github.io/post/reattach_lftp/</link>
-      <pubDate>Sun, 05 Apr 2015 00:00:00 +0000</pubDate>
-      
-      <guid>https://entropydecrease.github.io/post/reattach_lftp/</guid>
-      <description>lftp很好的一个功能是退出之后，正在运行的任务会自动提交到后台继续运行。 但是有时候终端窗口退出之后还想重新连接这些任务，该如何连接呢？lf</description>
-    </item>
-    
-    <item>
-      <title>git tips</title>
-      <link>https://entropydecrease.github.io/post/git_tips/</link>
-      <pubDate>Wed, 25 Mar 2015 00:00:00 +0000</pubDate>
-      
-      <guid>https://entropydecrease.github.io/post/git_tips/</guid>
-      <description>从现有仓库克隆 $ git clone git://github.com/schacon/grit.git $ git clone git://github.com/schacon/grit.git mygrit .gitignore $ cat ~/.gitignore *~ 撤消操作 * 修改最后一次提交 $ git commit --amend 如果刚才提交时忘了暂存某些修改，可以先补上暂存操作，然后再运行 --amend</description>
-    </item>
-    
-    <item>
-      <title>export mail in .ost file to mail.app on Mac</title>
-      <link>https://entropydecrease.github.io/post/import_ost/</link>
-      <pubDate>Tue, 24 Mar 2015 00:00:00 +0000</pubDate>
-      
-      <guid>https://entropydecrease.github.io/post/import_ost/</guid>
-      <description>export mail in .ost file to mbox file (the file may not end with .mbox). &amp;gt; readpst -j 3 outlook.ost mail.app &amp;ndash;&amp;gt; File &amp;ndash;&amp;gt; import mailboxes, and select the folder generated in step 1. That&amp;rsquo;s all. Your emails in the ost file will be imported into a directory under &amp;ldquo;on my Mac&amp;rdquo;.</description>
-    </item>
-    
-  </channel>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>工具 - Category - Entropy Decrease</title>
+        <link>https://entropydecrease.github.io/categories/%E5%B7%A5%E5%85%B7/</link>
+        <description>工具 - Category - Entropy Decrease</description>
+        <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Mon, 13 Mar 2023 22:25:19 &#43;0800</lastBuildDate><atom:link href="https://entropydecrease.github.io/categories/%E5%B7%A5%E5%85%B7/" rel="self" type="application/rss+xml" /><item>
+    <title>Hugo 关于 google_news的错误</title>
+    <link>https://entropydecrease.github.io/2023_03_13_even_googlenews_error/</link>
+    <pubDate>Mon, 13 Mar 2023 22:25:19 &#43;0800</pubDate>
+    <author>entropydecrease</author>
+    <guid>https://entropydecrease.github.io/2023_03_13_even_googlenews_error/</guid>
+    <description><![CDATA[hugo 前段时间会报错 &quot;_internal/google_news.html&quot;:
+google_news internal template should be deprecated 这次就完全不能运行，warning变成error了。
+解决办法是：
+打开 themes/even/layouts/partials/head.html
+删掉 {{- template &quot;_internal/google_news.html&quot; . -}} 这一行]]></description>
+</item>
+<item>
+    <title>homebrew 使用镜像的方式</title>
+    <link>https://entropydecrease.github.io/2023_03_13_homebrew_new_way_to_use_mirror/</link>
+    <pubDate>Mon, 13 Mar 2023 22:01:49 &#43;0800</pubDate>
+    <author>entropydecrease</author>
+    <guid>https://entropydecrease.github.io/2023_03_13_homebrew_new_way_to_use_mirror/</guid>
+    <description><![CDATA[Homebrew也在不停进化，现在使用清华镜像已经很方便了
+日常使用 可设置如下环境变量使用本站提供的 Homebrew 镜像：
+1 2 3 4 5 export HOMEBREW_INSTALL_FROM_API=1 export HOMEBREW_API_DOMAIN=&#34;https://mirrors.tuna.tsinghua.edu.cn/homebrew-bottles/api&#34; export HOMEBREW_BOTTLE_DOMAIN=&#34;https://mirrors.tuna.tsinghua.edu.cn/homebrew-bottles&#34; export HOMEBREW_BREW_GIT_REMOTE=&#34;https://mirrors.tuna.tsinghua.edu.cn/git/homebrew/brew.git&#34; export HOMEBREW_CORE_GIT_REMOTE=&#34;https://mirrors.tuna.tsinghua.edu.cn/git/homebrew/homebrew-core.git&#34; 首次安装 Homebrew / Linuxbrew 首先，需要确保系统中安装了 bash、git 和 curl，对于 macOS 用户需额外要求安装 Command Line Tools (CLT) for Xcode。
+对于 macOS 用户，系统自带 bash、git 和 curl，在命令行输入 xcode-select &ndash;install 安装 CLT for Xcode 即可。 对于 Linux 用户，系统自带 bash，仅需额外安装 git 和 curl。
+接着，在终端输入以下几行命令设置环境变量：
+1 2 3 4 5 export HOMEBREW_INSTALL_FROM_API=1 export HOMEBREW_API_DOMAIN=&#34;https://mirrors.tuna.tsinghua.edu.cn/homebrew-bottles/api&#34; export HOMEBREW_BOTTLE_DOMAIN=&#34;https://mirrors.tuna.tsinghua.edu.cn/homebrew-bottles&#34; export HOMEBREW_BREW_GIT_REMOTE=&#34;https://mirrors.tuna.tsinghua.edu.cn/git/homebrew/brew.git&#34; export HOMEBREW_CORE_GIT_REMOTE=&#34;https://mirrors.]]></description>
+</item>
+<item>
+    <title>破解typora</title>
+    <link>https://entropydecrease.github.io/2023_02_23_crack_typora/</link>
+    <pubDate>Thu, 23 Feb 2023 00:00:00 &#43;0000</pubDate>
+    <author>entropydecrease</author>
+    <guid>https://entropydecrease.github.io/2023_02_23_crack_typora/</guid>
+    <description><![CDATA[基于electron的app有一个问题，没有很好的隐藏源码的机制，所以typora收费之后，破解版层出不穷。
+网上搜了一下，针对Mac：
+官方网站下载typora并安装 打开typora，确定能正常运行，完全退出 修改文件 1 2 3 4 $ cd /Applications/Typora.app/Contents/Resources/TypeMark/page-dist/static/js $ mv LicenseIndex.180dd4c7.c7ff4102.chunk.js LicenseIndex.180dd4c7.c7ff4102.chunk.js.bak $ vim LicenseIndex.180dd4c7.c7ff4102.chunk.js # replace `e.hasActivated=&#34;true&#34;==e.hasActivated` with `e.hasActivated=&#34;true&#34;==&#34;true&#34;` 再打开typora，有可能会有错误信息说文件被修改，但是我打开又关闭几次，不知道怎么弄的，就不再出现此错误信息了。虽然编辑页面右下角显示“unregistered”，但是点击后会显示已经激活。 typora确实好用。假如以后这次破解不能用了，我就买正版了。 ]]></description>
+</item>
+<item>
+    <title>下载m3u8格式的视频文件并合并为mp4</title>
+    <link>https://entropydecrease.github.io/2023_02_07-download_m3u8/</link>
+    <pubDate>Tue, 07 Feb 2023 18:25:57 &#43;0800</pubDate>
+    <author>entropydecrease</author>
+    <guid>https://entropydecrease.github.io/2023_02_07-download_m3u8/</guid>
+    <description><![CDATA[尝试了一下下载网络的视频，以illumina的一个视频为例：
+https://www.illumina.vh.sauos.com/watch/205
+得到m3u8文件 在firefox中，安装「Video DownloadHelper]及配套的app，然后在firefox中打开该链接，点击「Video DownloadHelper]，可以看到两个视频，长的那个就是目标视频，选择“copy URL”，得到如下链接：
+https://tehlsvodhls02.vhallyun.com/vhallyun/vhallrecord/lss_27f054bb/20220724124221_a018e830/record.m3u8?token=2A75182F_MjE3MTIwOTg2XzYzRUI1N0Q2X1lUQXhPR1U0TXpBX2FtOXBibDgzTWpBeE9UUXdORElfdm9k
+下载该文件：
+1 aria2c -c &#39;https://tehlsvodhls02.vhallyun.com/vhallyun/vhallrecord/lss_27f054bb/20220724124221_a018e830/record.m3u8?token=2A75182F_MjE3MTIwOTg2XzYzRUI1N0Q2X1lUQXhPR1U0TXpBX2FtOXBibDgzTWpBeE9UUXdORElfdm9k&#39; 打开这个文件，可以看到里面是如下的格式：
+1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 #EXTM3U #EXT-X-VERSION:3 #EXT-X-TARGETDURATION:20 #EXT-X-MEDIA-SEQUENCE:0 #EXTINF:4.520000, /vhallyun/vhallhls/ls/s_/27/lss_27f054bb/lss_27f054bb/20220724084900103860/livestream000007.ts #EXTINF:4.200000, /vhallyun/vhallhls/ls/s_/27/lss_27f054bb/lss_27f054bb/20220724084900103860/livestream000008.ts #EXTINF:4.200000, /vhallyun/vhallhls/ls/s_/27/lss_27f054bb/lss_27f054bb/20220724084900103860/livestream000009.ts #EXTINF:4.240000, /vhallyun/vhallhls/ls/s_/27/lss_27f054bb/lss_27f054bb/20220724084900103860/livestream000010.ts #EXTINF:5.080000, /vhallyun/vhallhls/ls/s_/27/lss_27f054bb/lss_27f054bb/20220724084900103860/livestream000011.ts #EXTINF:5.880000, /vhallyun/vhallhls/ls/s_/27/lss_27f054bb/lss_27f054bb/20220724084900103860/livestream000012.ts 表头信息可以忽略，我猜测#EXTINF:4.520000是每一个视频文件的长度，紧接的下一行是视频的路径，但是没有hostname。
+下载ts文件 观察一下m3u8文件的地址，前面一段是https://tehlsvodhls02.vhallyun.com/vhallyun/，所以我猜测hostname就是https://tehlsvodhls02.vhallyun.com，后面下载了一个ts文件，发现是正确的。
+下载的ts文件，转换成mp4文件:
+1 ffmpeg -i livestream002243.ts -acodec copy -vcodec copy -absf aac_adtstoasc livestream002243.mp4 从m3u8文件中得到ts文件名，并构造完整的url：
+1 2 3 4 [ -s url_list.txt ] || \ grep -v &#39;^#EXTM3U&#39; record.]]></description>
+</item>
+<item>
+    <title>github镜像</title>
+    <link>https://entropydecrease.github.io/2023_01_23-github_mirror/</link>
+    <pubDate>Mon, 23 Jan 2023 00:00:00 &#43;0000</pubDate>
+    <author>entropydecrease</author>
+    <guid>https://entropydecrease.github.io/2023_01_23-github_mirror/</guid>
+    <description><![CDATA[githhub有时候访问很慢，甚至不能访问，有人做了一个镜像。
+https://kgithub.com
+可以当作github一样使用，假定此时需要 git clone bwa-mem2 ，原始命令是
+git clone https://github.com/bwa-mem2/bwa-mem2.git
+现在的命令是：
+git clone https://kgithub.com/bwa-mem2/bwa-mem2.git
+仅当原始网站不可用的时候再用这个，因为速度不一定有原版快。。。。。。]]></description>
+</item>
+<item>
+    <title>a few Unix and Shell tips</title>
+    <link>https://entropydecrease.github.io/2015_11_03_a-few-unix-and-shell-tips/</link>
+    <pubDate>Tue, 03 Nov 2015 00:00:00 &#43;0000</pubDate>
+    <author>entropydecrease</author>
+    <guid>https://entropydecrease.github.io/2015_11_03_a-few-unix-and-shell-tips/</guid>
+    <description><![CDATA[automatically attach to a tmux session via SSH 1 2 3 4 5 6 7 alias alias_name=&#39;ssh username@servername -t &#34;tmux attach || tmux&#34; &#39; -t Force pseudo-tty allocation. This can be used to execute arbitrary screen-based programs on a remote machine, which can be very useful, e.g., when implementing menu services. &#34;tmux attach&#34; tries to attach a tmux session. and if it fails, &#34;tmux&#34; will create a new session. to be continued.]]></description>
+</item>
+<item>
+    <title>case insensitivity on MAC OS X</title>
+    <link>https://entropydecrease.github.io/2015_05_07_case-insenstivity-on-mac-os-x/</link>
+    <pubDate>Thu, 07 May 2015 00:00:00 &#43;0000</pubDate>
+    <author>entropydecrease</author>
+    <guid>https://entropydecrease.github.io/2015_05_07_case-insenstivity-on-mac-os-x/</guid>
+    <description><![CDATA[Note: 新版本的Mac操作系统可能会有不同
+http://apple.stackexchange.com/questions/22297/is-bash-in-osx-case-insensitive
+HFS+ (the Mac filesystem) is usually configured to be case insensitive but case preserving. This means that the file system will consider foo and FoO to be the same, but when you create a new file it will remember which letters where capitalized and which were not. When you format a disk with HFS+ you can chose whether the file system should case sensitive or not. If you chose to format with UFS (Unix FileSystem) it is always case sensitive, AFAIK.]]></description>
+</item>
+<item>
+    <title>设置hostname，避免DHCP修改hostname</title>
+    <link>https://entropydecrease.github.io/2015_04_13_set-hostname-not-modifed-by-dhcp/</link>
+    <pubDate>Mon, 13 Apr 2015 00:00:00 &#43;0000</pubDate>
+    <author>entropydecrease</author>
+    <guid>https://entropydecrease.github.io/2015_04_13_set-hostname-not-modifed-by-dhcp/</guid>
+    <description><![CDATA[It can be annoying to see my hostname being modifed each time I connect to a different WIFI. It is because the hostname was never set.
+&gt; scutil --get HostName HostName: not set So we just need to set the hostname:
+&gt; sudo scutil --set HostName &quot;new_hostname&quot; Password: &gt; scutil --get HostName new_hostname ]]></description>
+</item>
+<item>
+    <title>re-attach a lftp process</title>
+    <link>https://entropydecrease.github.io/2015_04_05_reattach_lftp/</link>
+    <pubDate>Sun, 05 Apr 2015 00:00:00 &#43;0000</pubDate>
+    <author>entropydecrease</author>
+    <guid>https://entropydecrease.github.io/2015_04_05_reattach_lftp/</guid>
+    <description><![CDATA[lftp很好的一个功能是退出之后，正在运行的任务会自动提交到后台继续运行。
+但是有时候终端窗口退出之后还想重新连接这些任务，该如何连接呢？lftp提供了一个很好的命令attach。
+首先用ps查到要连接的任务的pid;
+然后打开lftp，在lftp内运行attach pid。]]></description>
+</item>
+<item>
+    <title>git tips</title>
+    <link>https://entropydecrease.github.io/2015_03_25_git_tips/</link>
+    <pubDate>Wed, 25 Mar 2015 00:00:00 &#43;0000</pubDate>
+    <author>entropydecrease</author>
+    <guid>https://entropydecrease.github.io/2015_03_25_git_tips/</guid>
+    <description><![CDATA[从现有仓库克隆 $ git clone git://github.com/schacon/grit.git $ git clone git://github.com/schacon/grit.git mygrit .gitignore $ cat ~/.gitignore *~ 撤消操作 * 修改最后一次提交 $ git commit --amend 如果刚才提交时忘了暂存某些修改，可以先补上暂存操作，然后再运行 --amend 提交： $ git commit -m 'initial commit' $ git add forgotten_file $ git commit --amend * 取消已经暂存的文件 - 其实，git status 的命令输出已经告诉了我们该怎么做 $ git add . $ git status On branch master Changes to be committed: (use &quot;git reset HEAD &lt;file&gt;...&quot; to unstage) modified: README.txt modified: benchmarks.rb $ git reset HEAD benchmarks.]]></description>
+</item>
+</channel>
 </rss>

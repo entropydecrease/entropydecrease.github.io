@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="robots" content="noodp" />
+        <title>计算bam文件中的覆盖度 - Entropy Decrease</title><meta name="Description" content="阅读、思考、写作，都是熵减的过程"><meta property="og:title" content="计算bam文件中的覆盖度" />
+<meta property="og:description" content="Things to consider to exclude some reads, like samtools depth/bedcov and mosdepth do.
+&lsquo;UNMAP,SECONDARY,QCFAIL,DUP or 0x704 or 1796&rsquo;
+to only summarize target regions or whole genome
+Tools to use mosdepth 1 2 3 4 5 6 7 8 9 10 11 12 13 14 for Bam in *.mkdup.bam do # skip if index file doesn&#39;t exist [ -s ${Bam}.bai ] || continue Base=$(basename ${Bam%.mkdup.bam}) # run mosdepth [ -s ${Base}.mosdepth.summary.txt ] &amp;&amp; continue echo $Bam mosdepth --by target_hg38." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://entropydecrease.github.io/2022_05_01_bam_coverage/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2022-05-01T00:00:00+00:00" />
+<meta property="article:modified_time" content="2022-05-01T00:00:00+00:00" /><meta property="og:site_name" content="Entropy Decrease" />
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="计算bam文件中的覆盖度"/>
+<meta name="twitter:description" content="Things to consider to exclude some reads, like samtools depth/bedcov and mosdepth do.
+&lsquo;UNMAP,SECONDARY,QCFAIL,DUP or 0x704 or 1796&rsquo;
+to only summarize target regions or whole genome
+Tools to use mosdepth 1 2 3 4 5 6 7 8 9 10 11 12 13 14 for Bam in *.mkdup.bam do # skip if index file doesn&#39;t exist [ -s ${Bam}.bai ] || continue Base=$(basename ${Bam%.mkdup.bam}) # run mosdepth [ -s ${Base}.mosdepth.summary.txt ] &amp;&amp; continue echo $Bam mosdepth --by target_hg38."/>
+<meta name="application-name" content="Entropy Decrease">
+<meta name="apple-mobile-web-app-title" content="Entropy Decrease"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="https://entropydecrease.github.io/2022_05_01_bam_coverage/" /><link rel="prev" href="https://entropydecrease.github.io/2021_10_01_bcftools_notes/" /><link rel="next" href="https://entropydecrease.github.io/2022_05_01_af_only_gnomad/" /><link rel="stylesheet" href="/css/style.min.css"><link rel="preload" href="/lib/fontawesome-free/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"></noscript><link rel="preload" href="/lib/animate/animate.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript><link rel="stylesheet" href="/lib/animate/animate.min.css"></noscript><script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "headline": "计算bam文件中的覆盖度",
+        "inLanguage": "en",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https:\/\/entropydecrease.github.io\/2022_05_01_bam_coverage\/"
+        },"genre": "posts","keywords": "bam","wordcount":  245 ,
+        "url": "https:\/\/entropydecrease.github.io\/2022_05_01_bam_coverage\/","datePublished": "2022-05-01T00:00:00+00:00","dateModified": "2022-05-01T00:00:00+00:00","publisher": {
+            "@type": "Organization",
+            "name": ""},"author": {
+                "@type": "Person",
+                "name": "entropydecrease"
+            },"description": ""
+    }
+    </script></head>
+    <body data-header-desktop="fixed" data-header-mobile="auto"><script type="text/javascript">(window.localStorage && localStorage.getItem('theme') ? localStorage.getItem('theme') === 'dark' : ('auto' === 'auto' ? window.matchMedia('(prefers-color-scheme: dark)').matches : 'auto' === 'dark')) && document.body.setAttribute('theme', 'dark');</script>
+
+        <div id="mask"></div><div class="wrapper"><header class="desktop" id="header-desktop">
+    <div class="header-wrapper">
+        <div class="header-title">
+            <a href="/" title="Entropy Decrease">Entropy Decrease</a>
+        </div>
+        <div class="menu">
+            <div class="menu-inner"><a class="menu-item" href="/"> Home </a><a class="menu-item" href="/posts/"> Posts </a><a class="menu-item" href="/tags/"> Tags </a><a class="menu-item" href="/categories/"> Categories </a><a class="menu-item" href="/about"> About </a><span class="menu-item delimiter"></span><span class="menu-item search" id="search-desktop">
+                        <input type="text" placeholder="Search titles or contents..." id="search-input-desktop">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-desktop" title="Search">
+                            <i class="fas fa-search fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-desktop" title="Clear">
+                            <i class="fas fa-times-circle fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-desktop">
+                            <i class="fas fa-spinner fa-fw fa-spin" aria-hidden="true"></i>
+                        </span>
+                    </span><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
+                    <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
+                </a></div>
+        </div>
+    </div>
+</header><header class="mobile" id="header-mobile">
+    <div class="header-container">
+        <div class="header-wrapper">
+            <div class="header-title">
+                <a href="/" title="Entropy Decrease">Entropy Decrease</a>
+            </div>
+            <div class="menu-toggle" id="menu-toggle-mobile">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+        <div class="menu" id="menu-mobile"><div class="search-wrapper">
+                    <div class="search mobile" id="search-mobile">
+                        <input type="text" placeholder="Search titles or contents..." id="search-input-mobile">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-mobile" title="Search">
+                            <i class="fas fa-search fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-mobile" title="Clear">
+                            <i class="fas fa-times-circle fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-mobile">
+                            <i class="fas fa-spinner fa-fw fa-spin" aria-hidden="true"></i>
+                        </span>
+                    </div>
+                    <a href="javascript:void(0);" class="search-cancel" id="search-cancel-mobile">
+                        Cancel
+                    </a>
+                </div><a class="menu-item" href="/" title="">Home</a><a class="menu-item" href="/posts/" title="">Posts</a><a class="menu-item" href="/tags/" title="">Tags</a><a class="menu-item" href="/categories/" title="">Categories</a><a class="menu-item" href="/about" title="">About</a><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
+                <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
+            </a></div>
+    </div>
+</header><div class="search-dropdown desktop">
+        <div id="search-dropdown-desktop"></div>
+    </div>
+    <div class="search-dropdown mobile">
+        <div id="search-dropdown-mobile"></div>
+    </div><main class="main">
+                <div class="container"><div class="toc" id="toc-auto">
+            <h2 class="toc-title">Contents</h2>
+            <div class="toc-content" id="toc-content-auto"></div>
+        </div><article class="page single"><h1 class="single-title animate__animated animate__flipInX">计算bam文件中的覆盖度</h1><div class="post-meta">
+            <div class="post-meta-line"><span class="post-author"><a href="/" title="Author" rel="author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>entropydecrease</a></span>&nbsp;<span class="post-category">included in <a href="/categories/bioinf/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>bioinf</a></span></div>
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw" aria-hidden="true"></i>&nbsp;<time datetime="2022-05-01">2022-05-01</time>&nbsp;<i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>&nbsp;245 words&nbsp;
+                <i class="far fa-clock fa-fw" aria-hidden="true"></i>&nbsp;2 minutes&nbsp;</div>
+        </div><div class="details toc" id="toc-static"  data-kept="">
+                <div class="details-summary toc-title">
+                    <span>Contents</span>
+                    <span><i class="details-icon fas fa-angle-right" aria-hidden="true"></i></span>
+                </div>
+                <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
+  <ul>
+    <li><a href="#things-to-consider">Things to consider</a></li>
+    <li><a href="#tools-to-use">Tools to use</a>
+      <ul>
+        <li><a href="#mosdepth">mosdepth</a></li>
+        <li><a href="#samtools-depth"><code>samtools depth</code></a></li>
+        <li><a href="#samtools-bedcov"><code>samtools bedcov</code></a></li>
+        <li><a href="#bedtools-coverage"><code>bedtools coverage</code></a></li>
+      </ul>
+    </li>
+  </ul>
+</nav></div>
+            </div><div class="content" id="content"><h2 id="things-to-consider">Things to consider</h2>
+<ol>
+<li>
+<p>to exclude some reads, like <code>samtools depth/bedcov</code> and mosdepth do.</p>
+<blockquote>
+<p>&lsquo;UNMAP,SECONDARY,QCFAIL,DUP or 0x704 or 1796&rsquo;</p>
+</blockquote>
+</li>
+<li>
+<p>to only summarize target regions or whole genome</p>
+</li>
+</ol>
+<h2 id="tools-to-use">Tools to use</h2>
+<h3 id="mosdepth">mosdepth</h3>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl"><span class="k">for</span> Bam in *.mkdup.bam
+</span></span><span class="line"><span class="cl"><span class="k">do</span>
+</span></span><span class="line"><span class="cl">        <span class="c1"># skip if index file doesn&#39;t exist</span>
+</span></span><span class="line"><span class="cl">        <span class="o">[</span> -s <span class="si">${</span><span class="nv">Bam</span><span class="si">}</span>.bai <span class="o">]</span> <span class="o">||</span> <span class="k">continue</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        <span class="nv">Base</span><span class="o">=</span><span class="k">$(</span>basename <span class="si">${</span><span class="nv">Bam</span><span class="p">%.mkdup.bam</span><span class="si">}</span><span class="k">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        <span class="c1"># run mosdepth</span>
+</span></span><span class="line"><span class="cl">        <span class="o">[</span> -s <span class="si">${</span><span class="nv">Base</span><span class="si">}</span>.mosdepth.summary.txt <span class="o">]</span> <span class="o">&amp;&amp;</span> <span class="k">continue</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        <span class="nb">echo</span> <span class="nv">$Bam</span>
+</span></span><span class="line"><span class="cl">        mosdepth --by target_hg38.bed <span class="se">\
+</span></span></span><span class="line"><span class="cl"><span class="se"></span>            --threads <span class="m">8</span> --no-per-base --fast-mode <span class="si">${</span><span class="nv">Base</span><span class="si">}</span> <span class="nv">$Bam</span> <span class="p">&amp;</span>
+</span></span><span class="line"><span class="cl"><span class="k">done</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>Problems with mosdepth is <code>mosdepth --by target.bed your.bam</code> could make some region zero coverage when it is not, and don&rsquo;t know the reason now. So use <code>samtools depth/bedcov</code> instead.</p>
+<h3 id="samtools-depth"><code>samtools depth</code></h3>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">samtools depth -aa -d <span class="m">0</span> -b tst.bed *.mkdup.bam
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">samtools depth -aa -d <span class="m">0</span> -r chr14:19743610-19743730 *.mkdup.bam
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>Note: must use <code>-aa -d 0</code> to include all locations and all coverages.</p>
+<p>The problem with <code>samtools depth</code> is <code>-r chrom:start-stop</code> is fast, but <code>-b your.bed</code> is much slower.</p>
+<h3 id="samtools-bedcov"><code>samtools bedcov</code></h3>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl"><span class="c1"># Note: &#39;samtools bedcov&#39; already exclude &#39;UNMAP,SECONDARY,QCFAIL,DUP or 0x704 or 1796&#39;</span>
+</span></span><span class="line"><span class="cl"><span class="nv">Bam_files</span><span class="o">=</span><span class="k">$(</span>ls *.mkdup.bam <span class="p">|</span> paste -s <span class="k">)</span>
+</span></span><span class="line"><span class="cl"><span class="nb">echo</span> <span class="s2">&#34;Chrom     Start0  Stop    </span><span class="si">${</span><span class="nv">Bam_files</span><span class="si">}</span><span class="s2">&#34;</span> &gt; samtools.bedcov.txt
+</span></span><span class="line"><span class="cl">samtools bedcov target_hg38.bed <span class="nv">$Bam_files</span> &gt;&gt; samtools.bedcov.txt <span class="p">&amp;</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="bedtools-coverage"><code>bedtools coverage</code></h3>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">bedtools coverage -a tst.bed -b smp_20M.mkdup.bam
+</span></span><span class="line"><span class="cl">chr14   <span class="m">18601115</span>        <span class="m">18602097</span>        chr14_1 <span class="m">625</span>     <span class="m">982</span>     <span class="m">982</span>     1.0000000
+</span></span><span class="line"><span class="cl">chr14   <span class="m">19743610</span>        <span class="m">19743730</span>        chr14_2 <span class="m">108</span>     <span class="m">120</span>     <span class="m">120</span>     1.0000000
+</span></span><span class="line"><span class="cl">chr7    <span class="m">55156467</span>        <span class="m">55156652</span>        EGFR    <span class="m">108</span>     <span class="m">185</span>     <span class="m">185</span>     1.0000000
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p><code>samtools bedcov</code> 会忽略标记为duplicates, QC fail等的reads，但<code>bedtools coverage</code>不会.</p>
+</div><div class="post-footer" id="post-footer">
+    <div class="post-info">
+        <div class="post-info-line">
+            <div class="post-info-mod">
+                <span>Updated on 2022-05-01</span>
+            </div></div>
+        <div class="post-info-line">
+            <div class="post-info-md"></div>
+            <div class="post-info-share">
+                <span><a href="javascript:void(0);" title="Share on Twitter" data-sharer="twitter" data-url="https://entropydecrease.github.io/2022_05_01_bam_coverage/" data-title="计算bam文件中的覆盖度" data-hashtags="bam"><i class="fab fa-twitter fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Facebook" data-sharer="facebook" data-url="https://entropydecrease.github.io/2022_05_01_bam_coverage/" data-hashtag="bam"><i class="fab fa-facebook-square fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Hacker News" data-sharer="hackernews" data-url="https://entropydecrease.github.io/2022_05_01_bam_coverage/" data-title="计算bam文件中的覆盖度"><i class="fab fa-hacker-news fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Line" data-sharer="line" data-url="https://entropydecrease.github.io/2022_05_01_bam_coverage/" data-title="计算bam文件中的覆盖度"><i data-svg-src="/lib/simple-icons/icons/line.min.svg" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Pocket" data-sharer="pocket" data-url="https://entropydecrease.github.io/2022_05_01_bam_coverage/"><i class="fab fa-get-pocket fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on 微博" data-sharer="weibo" data-url="https://entropydecrease.github.io/2022_05_01_bam_coverage/" data-title="计算bam文件中的覆盖度"><i class="fab fa-weibo fa-fw" aria-hidden="true"></i></a></span>
+            </div>
+        </div>
+    </div>
+
+    <div class="post-info-more">
+        <section class="post-tags"><i class="fas fa-tags fa-fw" aria-hidden="true"></i>&nbsp;<a href="/tags/bam/">bam</a></section>
+        <section>
+            <span><a href="javascript:void(0);" onclick="window.history.back();">Back</a></span>&nbsp;|&nbsp;<span><a href="/">Home</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav"><a href="/2021_10_01_bcftools_notes/" class="prev" rel="prev" title="bcftools notes (转载)"><i class="fas fa-angle-left fa-fw" aria-hidden="true"></i>bcftools notes (转载)</a>
+            <a href="/2022_05_01_af_only_gnomad/" class="next" rel="next" title="生成af only的gnomad vcf文件">生成af only的gnomad vcf文件<i class="fas fa-angle-right fa-fw" aria-hidden="true"></i></a></div>
+</div>
+</article></div>
+            </main><footer class="footer">
+        <div class="footer-container"><div class="footer-line">Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.113.0">Hugo</a> | Theme - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.2.11"><i class="far fa-kiss-wink-heart fa-fw" aria-hidden="true"></i> LoveIt</a>
+                </div><div class="footer-line" itemscope itemtype="http://schema.org/CreativeWork"><i class="far fa-copyright fa-fw" aria-hidden="true"></i><span itemprop="copyrightYear">2015 - 2023</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/" target="_blank">entropydecrease</a></span></div>
+        </div>
+    </footer></div>
+
+        <div id="fixed-buttons"><a href="#" id="back-to-top" class="fixed-button" title="Back to Top">
+                <i class="fas fa-arrow-up fa-fw" aria-hidden="true"></i>
+            </a><a href="#" id="view-comments" class="fixed-button" title="View Comments">
+                <i class="fas fa-comment fa-fw" aria-hidden="true"></i>
+            </a>
+        </div><link rel="stylesheet" href="/lib/katex/katex.min.css"><script type="text/javascript" src="/lib/autocomplete/autocomplete.min.js"></script><script type="text/javascript" src="/lib/lunr/lunr.min.js"></script><script type="text/javascript" src="/lib/lazysizes/lazysizes.min.js"></script><script type="text/javascript" src="/lib/clipboard/clipboard.min.js"></script><script type="text/javascript" src="/lib/sharer/sharer.min.js"></script><script type="text/javascript" src="/lib/katex/katex.min.js"></script><script type="text/javascript" src="/lib/katex/contrib/auto-render.min.js"></script><script type="text/javascript" src="/lib/katex/contrib/copy-tex.min.js"></script><script type="text/javascript" src="/lib/katex/contrib/mhchem.min.js"></script><script type="text/javascript">window.config={"code":{"copyTitle":"Copy to clipboard","maxShownLines":50},"comment":{},"math":{"delimiters":[{"display":true,"left":"$$","right":"$$"},{"display":true,"left":"\\[","right":"\\]"},{"display":true,"left":"\\begin{equation}","right":"\\end{equation}"},{"display":true,"left":"\\begin{equation*}","right":"\\end{equation*}"},{"display":true,"left":"\\begin{align}","right":"\\end{align}"},{"display":true,"left":"\\begin{align*}","right":"\\end{align*}"},{"display":true,"left":"\\begin{alignat}","right":"\\end{alignat}"},{"display":true,"left":"\\begin{alignat*}","right":"\\end{alignat*}"},{"display":true,"left":"\\begin{gather}","right":"\\end{gather}"},{"display":true,"left":"\\begin{CD}","right":"\\end{CD}"},{"display":false,"left":"$","right":"$"},{"display":false,"left":"\\(","right":"\\)"}],"strict":false},"search":{"highlightTag":"em","lunrIndexURL":"/index.json","maxResultLength":10,"noResultsFound":"No results found","snippetLength":30,"type":"lunr"}};</script><script type="text/javascript" src="/js/theme.min.js"></script></body>
+</html>
