@@ -90,6 +90,35 @@
     </div><main class="main">
                 <div class="container"><div class="page home" data-home="posts"><div class="home-profile"><div class="home-subtitle">阅读、思考、写作，都是熵减的过程</div><div class="links"><a href="https://github.com/entropydecrease" title="GitHub" target="_blank" rel="noopener noreffer me"><i class="fab fa-github fa-fw" aria-hidden="true"></i></a><a href="mailto:mailto:en&#43;tr-op*ydecr_ea%5ese@outlook.com%5eremove_unnecessary_chars%5e" title="Email" rel="me"><i class="far fa-envelope fa-fw" aria-hidden="true"></i></a><a href="/index.xml" title="RSS" target="_blank" rel="noopener noreffer me"><i class="fas fa-rss fa-fw" aria-hidden="true"></i></a></div></div>
 <article class="single summary" itemscope itemtype="http://schema.org/Article"><h1 class="single-title" itemprop="name headline">
+        <a href="/2023_10_04_theme_loveit/">使用LoveIt作为hugo的主题</a>
+    </h1><div class="post-meta"><span class="post-author"><a href="/" title="Author" rel="author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>entropydecrease</a></span>&nbsp;<span class="post-publish">published on <time datetime="2023-10-04">2023-10-04</time></span>&nbsp;<span class="post-category">included in <a href="/categories/%E5%B7%A5%E5%85%B7/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>工具</a></span></div><div class="content">之前用的even没有维护，已经无法使用，所以找了一下采用loveit。以下是更新方法的简单记录:
+安装 简单起见，重新生成hugo site，之后把原来的post都copy过来。
+1 2 3 4 hugo new site entropydecrease cd entropydecrease git clone https://github.com/dillonzq/LoveIt.git themes/LoveIt cp -r ../entropydecrease.bak/content/* ./content/ 配置 修改hugo.toml即可
+因为LoveIt默认文章都是在&rsquo;content/posts/&lsquo;下面的，与even默认&rsquo;content/post/&lsquo;不同，所以要改一下：
+mv content/post content/posts
+将hugo输出的静态文件所在的文件夹public/变成一个git 版本库
+1 &gt; git clone git@github.com:entropydecrease/entropydecrease.github.io.git public 使用 写文章
+更新到github
+将下面的命令放在deploy.sh中作为可执行脚本中即可。
+1 2 3 4 5 hugo &amp;&amp; \ cd public &amp;&amp; \ git pull &amp;&amp; git add . &amp;&amp; \ git commit -m &#34;update on [`date`]&#34; git push origin main </div><div class="post-footer">
+        <a href="/2023_10_04_theme_loveit/">Read More</a></div>
+</article><article class="single summary" itemscope itemtype="http://schema.org/Article"><h1 class="single-title" itemprop="name headline">
+        <a href="/2023_09_22_rclone_to_replace_sshfs/">Use rclone to replace sshfs on Mac</a>
+    </h1><div class="post-meta"><span class="post-author"><a href="/" title="Author" rel="author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>entropydecrease</a></span>&nbsp;<span class="post-publish">published on <time datetime="2023-09-22">2023-09-22</time></span></div><div class="content">将远程服务器上的文件夹很便捷地通过ssh来挂载到本地，用起来非常方便。但是sshfs已经停止更新，在mac上用brew无法安装。
+其实可以用rclone来完成同样的功能。
+install rclone
+mac版需要从其官网下载和安装。
+rclone config
+1 2 3 4 5 6 7 8 9 10 11 &gt; rclone config Current remotes: e) Edit existing remote n) New remote d) Delete remote r) Rename remote c) Copy remote s) Set configuration password q) Quit config e/n/d/r/c/s/q&gt; 选择n或e，按照提示操作即可
+mount
+rclone mount host:/path/to/src/dir/ /path/to/local/dir/
+这种方法mount之后，命令行并不返回，需要在其他窗口读写远程文件，使用完毕后关闭rclone窗口即可。
+还有一种方法是mount的时候使用--daemon参数
+rclone mount --daemon host:/path/to/src/dir/ /path/to/local/dir/
+使用完毕后需手动umount：
+umount /path/to/local/dir/</div><div class="post-footer">
+        <a href="/2023_09_22_rclone_to_replace_sshfs/">Read More</a></div>
+</article><article class="single summary" itemscope itemtype="http://schema.org/Article"><h1 class="single-title" itemprop="name headline">
         <a href="/2023_09_01_%E6%B2%88%E9%86%89%E5%9B%9E%E5%BF%86%E5%BD%95/">沈醉回忆录读书笔记</a>
     </h1><div class="post-meta"><span class="post-author"><a href="/" title="Author" rel="author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>entropydecrease</a></span>&nbsp;<span class="post-publish">published on <time datetime="2023-09-01">2023-09-01</time></span>&nbsp;<span class="post-category">included in <a href="/categories/%E6%96%87%E6%91%98/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>文摘</a></span></div><div class="content">笔记几则 沈醉1914年生，18岁投奔余乐醒(也是一个重要的特务)开始当特务，28岁成为军统局总务处少将处长，1947年成为云南站站长，1949年被迫参加龙云的云南起义，才35岁。后接受改造至1960年释放，之后作为政协文史资料委员会文史委员，文革期间曾入狱。1980年身份由战犯改为起义将领。
 沈醉曾打电话恐吓宋庆龄，并计划开车撞车宋庆龄以警告，后未实行。
@@ -136,23 +165,6 @@ Krysiak, K. et al. CIViCdb 2022: evolution of an open-access cancer variant inte
 The Cancer Genome Atlas (TCGA) data for all biomarkers with commercially available assays were analysed for differential methylation between tumour and nonmalignant samples and to determine whether or not methylation status at the location of the area covered by the assay is correlated with expression. We also investigated whether or not the biomarkers are located in the promoter region of their corresponding genes and whether or not they are located in a CpG island.</div><div class="post-footer">
         <a href="/2023_05_02_methylation_cancer/">Read More</a><div class="post-tags">
                 <i class="fas fa-tags fa-fw" aria-hidden="true"></i>&nbsp;<a href="/tags/%E6%97%A9%E8%AF%8A/">早诊</a>,&nbsp;<a href="/tags/%E7%94%B2%E5%9F%BA%E5%8C%96/">甲基化</a></div></div>
-</article><article class="single summary" itemscope itemtype="http://schema.org/Article"><h1 class="single-title" itemprop="name headline">
-        <a href="/2023_04_28_datamash/">datamash tips</a>
-    </h1><div class="post-meta"><span class="post-author"><a href="/" title="Author" rel="author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>entropydecrease</a></span>&nbsp;<span class="post-publish">published on <time datetime="2023-04-28">2023-04-28</time></span>&nbsp;<span class="post-category">included in <a href="/categories/bioinf/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>bioinf</a></span></div><div class="content">1 2 3 4 5 6 7 8 9 10 &gt; (cat &lt;&lt;-EOF a 1 a 2 b 3 c 4 EOF ) | datamash groupby 1 collapse 2 a	1,2 b	3 c	4 collapse 操作可以将对应的列（本例中为第二列）进行合并，在本例子，根据第一例的值进行分组，将第二例的值合并。
-另外，为了在一个命令中完成，本例中使用了here document。</div><div class="post-footer">
-        <a href="/2023_04_28_datamash/">Read More</a><div class="post-tags">
-                <i class="fas fa-tags fa-fw" aria-hidden="true"></i>&nbsp;<a href="/tags/datamash/">datamash</a></div></div>
-</article><article class="single summary" itemscope itemtype="http://schema.org/Article"><h1 class="single-title" itemprop="name headline">
-        <a href="/2023_04_28_cancer_early_diagnostics/">肿瘤早诊的思路</a>
-    </h1><div class="post-meta"><span class="post-author"><a href="/" title="Author" rel="author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>entropydecrease</a></span>&nbsp;<span class="post-publish">published on <time datetime="2023-04-28">2023-04-28</time></span>&nbsp;<span class="post-category">included in <a href="/categories/clinical/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>clinical</a></span></div><div class="content">全国临床分子诊断技术及其规范化应用高峰论坛，听了邵建永的讲座，有一些启发，总结一下：
-肿瘤早诊的思路 1）做早诊，而不是早筛
-2）开始用粪便做结直肠癌，用尿液做膀胱癌，取材是跟肿瘤有直接接触 ，而且比血更无创
-3）甲基化不但做膀胱癌早诊，还做膀胱癌的复发检测
-4）就一个基因Twist1，用qPCR，比较简单
-5）他们就围绕自然腔道来做早诊，其它肿瘤在进行中
-达健Twist1甲基化试剂盒的审评报告： 人Twist1基因甲基化检测试剂盒（荧光PCR法）（CSZ2000297）</div><div class="post-footer">
-        <a href="/2023_04_28_cancer_early_diagnostics/">Read More</a><div class="post-tags">
-                <i class="fas fa-tags fa-fw" aria-hidden="true"></i>&nbsp;<a href="/tags/%E6%97%A9%E8%AF%8A/">早诊</a></div></div>
 </article><ul class="pagination"><li class="page-item active">
                     <span class="page-link">
                         <a href="/">1</a>

@@ -3,7 +3,24 @@
         <title>工具 - Category - Entropy Decrease</title>
         <link>https://entropydecrease.github.io/categories/%E5%B7%A5%E5%85%B7/</link>
         <description>工具 - Category - Entropy Decrease</description>
-        <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Mon, 13 Mar 2023 22:25:19 &#43;0800</lastBuildDate><atom:link href="https://entropydecrease.github.io/categories/%E5%B7%A5%E5%85%B7/" rel="self" type="application/rss+xml" /><item>
+        <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Wed, 04 Oct 2023 13:39:45 &#43;0800</lastBuildDate><atom:link href="https://entropydecrease.github.io/categories/%E5%B7%A5%E5%85%B7/" rel="self" type="application/rss+xml" /><item>
+    <title>使用LoveIt作为hugo的主题</title>
+    <link>https://entropydecrease.github.io/2023_10_04_theme_loveit/</link>
+    <pubDate>Wed, 04 Oct 2023 13:39:45 &#43;0800</pubDate>
+    <author>entropydecrease</author>
+    <guid>https://entropydecrease.github.io/2023_10_04_theme_loveit/</guid>
+    <description><![CDATA[之前用的even没有维护，已经无法使用，所以找了一下采用loveit。以下是更新方法的简单记录:
+安装 简单起见，重新生成hugo site，之后把原来的post都copy过来。
+1 2 3 4 hugo new site entropydecrease cd entropydecrease git clone https://github.com/dillonzq/LoveIt.git themes/LoveIt cp -r ../entropydecrease.bak/content/* ./content/ 配置 修改hugo.toml即可
+因为LoveIt默认文章都是在&rsquo;content/posts/&lsquo;下面的，与even默认&rsquo;content/post/&lsquo;不同，所以要改一下：
+mv content/post content/posts
+将hugo输出的静态文件所在的文件夹public/变成一个git 版本库
+1 &gt; git clone git@github.com:entropydecrease/entropydecrease.github.io.git public 使用 写文章
+更新到github
+将下面的命令放在deploy.sh中作为可执行脚本中即可。
+1 2 3 4 5 hugo &amp;&amp; \ cd public &amp;&amp; \ git pull &amp;&amp; git add . &amp;&amp; \ git commit -m &#34;update on [`date`]&#34; git push origin main ]]></description>
+</item>
+<item>
     <title>Hugo 关于 google_news的错误</title>
     <link>https://entropydecrease.github.io/2023_03_13_even_googlenews_error/</link>
     <pubDate>Mon, 13 Mar 2023 22:25:19 &#43;0800</pubDate>
@@ -108,14 +125,6 @@ HFS+ (the Mac filesystem) is usually configured to be case insensitive but case 
 但是有时候终端窗口退出之后还想重新连接这些任务，该如何连接呢？lftp提供了一个很好的命令attach。
 首先用ps查到要连接的任务的pid;
 然后打开lftp，在lftp内运行attach pid。]]></description>
-</item>
-<item>
-    <title>git tips</title>
-    <link>https://entropydecrease.github.io/2015_03_25_git_tips/</link>
-    <pubDate>Wed, 25 Mar 2015 00:00:00 &#43;0000</pubDate>
-    <author>entropydecrease</author>
-    <guid>https://entropydecrease.github.io/2015_03_25_git_tips/</guid>
-    <description><![CDATA[从现有仓库克隆 $ git clone git://github.com/schacon/grit.git $ git clone git://github.com/schacon/grit.git mygrit .gitignore $ cat ~/.gitignore *~ 撤消操作 * 修改最后一次提交 $ git commit --amend 如果刚才提交时忘了暂存某些修改，可以先补上暂存操作，然后再运行 --amend 提交： $ git commit -m 'initial commit' $ git add forgotten_file $ git commit --amend * 取消已经暂存的文件 - 其实，git status 的命令输出已经告诉了我们该怎么做 $ git add . $ git status On branch master Changes to be committed: (use &quot;git reset HEAD &lt;file&gt;...&quot; to unstage) modified: README.txt modified: benchmarks.rb $ git reset HEAD benchmarks.]]></description>
 </item>
 </channel>
 </rss>

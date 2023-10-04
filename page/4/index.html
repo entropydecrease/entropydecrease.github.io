@@ -90,6 +90,20 @@
     </div><main class="main">
                 <div class="container"><div class="page home" data-home="posts"><div class="home-profile"><div class="home-subtitle">阅读、思考、写作，都是熵减的过程</div><div class="links"><a href="https://github.com/entropydecrease" title="GitHub" target="_blank" rel="noopener noreffer me"><i class="fab fa-github fa-fw" aria-hidden="true"></i></a><a href="mailto:mailto:en&#43;tr-op*ydecr_ea%5ese@outlook.com%5eremove_unnecessary_chars%5e" title="Email" rel="me"><i class="far fa-envelope fa-fw" aria-hidden="true"></i></a><a href="/index.xml" title="RSS" target="_blank" rel="noopener noreffer me"><i class="fas fa-rss fa-fw" aria-hidden="true"></i></a></div></div>
 <article class="single summary" itemscope itemtype="http://schema.org/Article"><h1 class="single-title" itemprop="name headline">
+        <a href="/2022_05_01_fastq_format/">fastq文件格式</a>
+    </h1><div class="post-meta"><span class="post-author"><a href="/" title="Author" rel="author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>entropydecrease</a></span>&nbsp;<span class="post-publish">published on <time datetime="2022-05-01">2022-05-01</time></span>&nbsp;<span class="post-category">included in <a href="/categories/bioinf/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>bioinf</a></span></div><div class="content">https://help.basespace.illumina.com/articles/descriptive/fastq-files/
+fastq文件的命名 示例：Data\Intensities\BaseCalls\samplename_S1_L001_R1_001.fastq.gz
+* samplename - The sample name provided in the sample sheet. If a sample name is not provided, the file name includes the sample ID, which is a required field in the sample sheet and must be unique. * S1 — The sample number based on the order that samples are listed in the sample sheet starting with 1. In this example, S1 indicates that this sample is the first sample listed in the sample sheet.</div><div class="post-footer">
+        <a href="/2022_05_01_fastq_format/">Read More</a></div>
+</article><article class="single summary" itemscope itemtype="http://schema.org/Article"><h1 class="single-title" itemprop="name headline">
+        <a href="/2022_05_01_af_only_gnomad/">生成af only的gnomad vcf文件</a>
+    </h1><div class="post-meta"><span class="post-author"><a href="/" title="Author" rel="author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>entropydecrease</a></span>&nbsp;<span class="post-publish">published on <time datetime="2022-05-01">2022-05-01</time></span>&nbsp;<span class="post-category">included in <a href="/categories/bioinf/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>bioinf</a></span></div><div class="content">gnomAD VCF 文件(af-only-gnomad.hg38.vcf.gz)太大了，超过200G，对于GATK来说，只需要用里面的‘AF’信息就够了，所以将多余信息删掉可以极大节省空间和时间。
+gatk 用来生成用于Mutect2的 af-only-gnomad.hg38.vcf.gz 的程序：
+https://github.com/broadinstitute/gatk/blob/master/scripts/mutect2_wdl/mutect_resources.wdl 相关部分code：
+# clear ID and QUAL fields and delete all INFO fields other than AF # note that input must be a plain-text vcf, not a vcf.gz. # this task re-indexes and compresses the output vcf task MakeAlleleFrequencyOnlyVcf { # ------------------------------------------------ # Input args: File input_vcf String output_name File? gatk_override # Runtime Options: String gatk_docker Int? mem Int? preemptible_attempts Int? disk_space Int? cpu # ------------------------------------------------ # Get machine settings: Boolean use_ssd = false # You may have to change the following two parameter values depending on the task requirements Int default_ram_mb = 3 * 1024 # WARNING: In the workflow, you should calculate the disk space as an input to this task (disk_space_gb).</div><div class="post-footer">
+        <a href="/2022_05_01_af_only_gnomad/">Read More</a><div class="post-tags">
+                <i class="fas fa-tags fa-fw" aria-hidden="true"></i>&nbsp;<a href="/tags/database/">database</a></div></div>
+</article><article class="single summary" itemscope itemtype="http://schema.org/Article"><h1 class="single-title" itemprop="name headline">
         <a href="/2022_05_01_bam_coverage/">计算bam文件中的覆盖度</a>
     </h1><div class="post-meta"><span class="post-author"><a href="/" title="Author" rel="author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>entropydecrease</a></span>&nbsp;<span class="post-publish">published on <time datetime="2022-05-01">2022-05-01</time></span>&nbsp;<span class="post-category">included in <a href="/categories/bioinf/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>bioinf</a></span></div><div class="content">Things to consider to exclude some reads, like samtools depth/bedcov and mosdepth do.
 &lsquo;UNMAP,SECONDARY,QCFAIL,DUP or 0x704 or 1796&rsquo;
@@ -127,86 +141,6 @@ igv的.genome文件其实是一个zip文件。
         <a href="/2020_02_23_bcl2fastq_install/">安装bcl2fastq</a>
     </h1><div class="post-meta"><span class="post-author"><a href="/" title="Author" rel="author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>entropydecrease</a></span>&nbsp;<span class="post-publish">published on <time datetime="2020-02-23">2020-02-23</time></span>&nbsp;<span class="post-category">included in <a href="/categories/bioinf/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>bioinf</a></span></div><div class="content">安装 1 2 3 4 5 6 7 8 9 10 11 wget ftp://webdata2:webdata2@ussd-ftp.illumina.com/downloads/software/bcl2fastq/bcl2fastq2-v2.17.1.14.tar.zip tar -zxvf bcl2fastq2-v2.17.1.14.tar.zip cd bcl2fastq2 mkdir build; cd build ../src/configure --prefix=$HOME &gt; build.txt.log 2&gt;&amp;1 tail -f build.txt.log 可能出现的问题 CMake complains Required header sys/stat.h not found 1 &gt; sudo apt-get install libc6-dev-amd64 no support for gzip compression 1 &gt; sudo apt-get install zlib1g-dev bcl2fastq also complains no libxml2 and libxslt, but it could build by itself. And the version installed with ubuntu is too new :( 1 &gt; sudo apt-get install gfortran doxygen graphviz </div><div class="post-footer">
         <a href="/2020_02_23_bcl2fastq_install/">Read More</a></div>
-</article><article class="single summary" itemscope itemtype="http://schema.org/Article"><h1 class="single-title" itemprop="name headline">
-        <a href="/2020_02_23_ref_genome/">应该使用哪个genome</a>
-    </h1><div class="post-meta"><span class="post-author"><a href="/" title="Author" rel="author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>entropydecrease</a></span>&nbsp;<span class="post-publish">published on <time datetime="2020-02-23">2020-02-23</time></span>&nbsp;<span class="post-category">included in <a href="/categories/bioinf/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>bioinf</a></span></div><div class="content">GRCh37 还是 GRCh38 GRCh37 == hg19，GRCh38 ＝＝ hg38
-理论上来讲，GRCh38是新的人类基因组的参考组装，相对GRCh37(hg19)来说，更接近人类真正的基因组。但是由于历史原因，之前很多的数据库对老版本的GRCh37支持的比较好。 dbSNP和ClinVar已经同时支持 GRCh37和38，但是1k genomes还是对GRCh37支持更好一些.
-我看到有公司还在使用GRCh37，并且声称效果更好。但是，我的看法是，T2T才是未来，现在应该尽早转到GRCh38。
-1k genomes 使用的hs37d5 是什么 1k genomes项目组在做alignment的时候，使用的是hs37d5
-主要是因为在align的时候，有一些reads不能比对到参考基因组上，然后做align的软件就要非费尽心思来给这些reads找次优的位置，而这是非常费时的一步。经过研究发现，这些reads主要是来自于疱疹病毒和一些简单的重复片段，把这些序列加进参考基因组，可以省不少时间，因为一下子就可以找到reads的最优位置，不用费心去找次优位置。
-下面是1k genomes的官方说明
-hs37d5.fa.gz
-Integrated reference sequence from the GRCh37 primary assembly (chromosomal plus unlocalized and unplaced contigs), the rCRS mitochondrial sequence (AC:NC_012920), Human herpesvirus 4 type 1 (AC:NC_007605) and the concatenated decoy sequences (hs37d5cs.fa.gz). This file is compressed by razip from the samtools package for random access. Gzip may complain &ldquo;decompression OK, trailing garbage ignored&rdquo;, but this does not affect the correctness of the decompressed file.</div><div class="post-footer">
-        <a href="/2020_02_23_ref_genome/">Read More</a><div class="post-tags">
-                <i class="fas fa-tags fa-fw" aria-hidden="true"></i>&nbsp;<a href="/tags/genome/">genome</a></div></div>
-</article><article class="single summary" itemscope itemtype="http://schema.org/Article"><h1 class="single-title" itemprop="name headline">
-        <a href="/2015_12_06-hometown_history/">说说我的家乡，没什么文笔，自娱自乐</a>
-    </h1><div class="post-meta"><span class="post-author"><a href="/" title="Author" rel="author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>entropydecrease</a></span>&nbsp;<span class="post-publish">published on <time datetime="0001-01-01">0001-01-01</time></span>&nbsp;<span class="post-category">included in <a href="/categories/%E9%9A%8F%E7%AC%94/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>随笔</a></span></div><div class="content">我的家乡新郑，洛阳与开封之间、黄河以南四十公里的一个小县，归郑州管辖。
-这个小县，在今天的年代里默默无闻，但是就像河南很多地方一样，过去的千百年里，也有不少历史的风云变幻星河璀璨。“轩辕故里”，或者“黄帝故里”，“郑韩故城”，都是说的新郑。
-新郑有一座山，叫具茨山，是中岳嵩山的余脉，绵延新郑、新密、禹州等几个县，在本县俗称“西南山”，因为山在县城西南，据说是“炎黄子孙”的“黄”的那个轩辕黄帝出生、活动、建都之地。山上有一座轩辕庙，据说还有一些岩画（整个具茨山地区有大规模岩画）。有人曾问为什么山上什么当时的古迹都没有，只有后人留下的，乍一想，也觉得好像少了点什么，不似其它名胜古迹那般丰富，不过再想想，那个时代不可能留下寺庙、道观、园林、字画、雕像，毕竟那时候才传说开始造文字。
-小时候看过一本“轩辕故里的传说”，里面搜集了很多关于的传说，比如黄帝战蚩尤、制鼓、编制历法、造指南车，皇帝的妻子嫘祖养蚕，仓颉造字等。
-黄帝生在新郑，那是怎么死的呢？在传说里，这样神一样的人物，肯定不能像一般人一样死去。于是，在传说里，黄帝在今天河南灵宝的荆山下铸鼎，铸成之后，天上下来神龙把黄帝接走了，人们舍不得皇帝走，赶紧去拉，拉下来了靴子和黄帝的弓，埋在铸鼎的地方作为衣冠冢，就是荆山黄帝陵。史记里有一句“黄帝崩，葬桥山”，陕西的桥山（黄陵县）就也有一个黄帝陵，另外还有河北和甘肃说自己是黄帝陵正宗，不知道真正葬在哪里。
-黄帝以姬为姓，其后代一部分姓姬，还有很多是其他姓的始祖，“黄帝二十五子，其得姓者十四人”，五帝和之后的夏、商、周都是黄帝的后代，周朝也是用姬姓，周武王建立周朝之后分封诸侯的时候，跟周天子同姓的诸侯国有几十个，包括郑国、晋国、鲁国、蔡国等，秦国姓嬴，据说是黄帝的某个儿子的后代。一些国名，后来也演化为姓，比如郑国亡国之后，很多人改姓郑。
-抄一段网上的：
-《姬姓史话》一书中介绍，人口数量排名前300的姓氏中，直接源于姬姓的有120多个。不过，这些姓氏的演化方式不同，大体分为五类。
-第一类是直接发源于黄帝的姓。黄帝直接演化而来的12个姓分别是姬、酉、祁、己、滕、箴、任、荀、僖、姞、儇（xuān）、衣。
-第二类是周王朝分封的53个姬姓诸侯国。当时曹、吴、韩、杨、郑、蔡、晋、魏、沈等都是姬姓国，其国名后来都演化成为姓氏。
-第三类是发源于姬姓的衍生姓氏。直接源于黄帝的12个姓，后来也逐渐分化为其他姓氏。比如，其中的祁姓被尧帝的祖先继承，后来衍生出刘、唐、杜、范、司空等姓；己姓被少昊继承，衍生出张、安、金、苏、温、顾等姓。
-第四类是姬姓族人以祖先或自己的官职、职业、称号、名字、居住地为姓。比如，林姓的一支主要来源是姬姓，其祖先是周平王的庶子姬开。姬开的字是“林”，子孙以其字为氏，称“林氏”，后来演化成为林姓。
-第五类是秦汉之后的改姓。姬传东介绍，姬姓先后经历过四次改姓，其中规模最大的两次，分别发生在东周灭亡时和唐朝中期，“秦灭东周，大多姬姓人改姓为周；唐朝时为避讳李隆基的名字，又有大部分姬姓人改姓为周。”
-之前很多故事都是传说下来的，找不到什么史料。诗经大概算比较早的文字资料了。
-诗经 郑风 溱洧
-溱与洧、方涣涣兮。
-士与女、方秉兰兮。
-女曰观乎。
-士曰既且。
-且往观乎。
-洧之外、洵吁且乐。
-维士与女、伊其相谑、赠之以勺药。
-溱与洧、浏其清矣。
-士与女、殷其盈兮。
-女曰观乎。
-士曰既且。
-且往观乎。
-洧之外、洵吁且乐。
-维士与女、伊其将谑、赠之以勺药。
-大意是说，春天的时候，溱水和洧水汇流的地方，碧波荡漾，年轻男女拿着兰草在河边玩，一个女孩子说，去看吗？男孩子说，已经看过了，女孩子说，再去看看吧。后来玩得很开心，并以芍药相赠订情。
-多么浪漫的故事，里面提到的溱水和洧水，古时候应该是很美丽的河吧。洧水是现在新郑的双洎河（不知道有多少人有和我一样的冲动念“双咱河”的）；溱水，有的说是新郑的黄水河，也有说是隔壁新密县的溱水。
-说到新密，顺便说说郑州的几个县。
-新密和新郑挨着，新密也是最早黄帝活动的区域，也是后来的郑国、韩国的地方；
-巩县（现在叫巩义市），杜甫及其祖父杜审言生在这里，北宋皇陵所在，北宋除了徽钦二帝被掳走，剩下的都在这了，包拯墓也在这；
-登封，有中岳嵩山、少林寺，除此之外，曾经也是夏朝都城，还有郭守敬的观星台；
-中牟，处在郑汴之间，是兵家必争之地，比如官渡之战，沿着黄河往东打开封，一般都在中牟开打，后来岳飞在这打过，李自成在这打过，民国也在这里打过，列子是这里的，“貌若潘安”的“潘安”的祖籍；
-荥阳，鸿沟就是从荥阳引黄河水，经中牟、开封，入颍河而通淮河，陈胜吴广起义后吴广攻荥阳不克死在这，楚汉争霸在这里相持很久，后来以鸿沟为界，三国演义里刘关张三英战吕布的虎牢关就是荥阳的泗水镇。
-另一首诗经里的诗：
-诗经 郑风 野有蔓草
-野有蔓草、零露漙兮。
-有美一人、清扬婉兮。
-邂逅相遇、适我愿兮。
-野有蔓草、零露瀼瀼。
-有美一人、婉如清扬。
-邂逅相遇、与子偕臧。
-天龙八部木婉清的“婉清”二字，估计就是从这里出的。
-还有另外一首我很喜欢的：
-诗经 郑风 子衿
-青青子衿、悠悠我心。
-纵我不往、子宁不嗣音。
-青青子佩、悠悠我思。
-纵我不往、子宁不来。
-挑兮达兮、在城阙兮。
-一日不见、如三月兮。
-左传里面，也有关于新郑的很多故事。
-中学课本有一篇“郑伯克段于鄢”就是出自左传第一篇“隐公元年”，“多行不义必自毙”、“其乐融融”、“黄泉（不及黄泉，无相见也）”就是从这里出的。
-郑国作为和周天子同姓（都姓姬）的诸侯国，刚开始还是比较猛的，隐公三年：“四月，郑祭足帅师取温之麦。秋，又取成周之禾。周、郑交恶。”后来周天子又联合几个诸侯国攻打郑国，被郑国击溃，将士要乘胜追击，郑庄公阻止了，然后派人慰问了周天子及其左右。
-中原小国众多，而且四面都是对手，很难发展起来，不像外围的国家，至少一面或者两面是没有后顾之忧的，专心向中心打就好。战国七雄，都是从外围发展起来的。郑国慢慢衰落了，被秦、晋这些大国欺负。
-抄一段百度：
-在公元前632年（僖公二十八年）发生的城濮（在今河南陈留县）之战中，晋文公战胜楚国，建立了霸业。公元前631年（僖公二十九年），晋、周、鲁、宋、齐、陈、蔡、秦在翟泉（今河南洛阳）会盟，晋国在会上“谋伐郑”。公元前630年（僖公三十年），晋国和秦国合兵围郑。
-郑国被围，烛之武晚上用绳子出城见秦穆公说，你帮晋国把郑国打下来的地方肯定是归晋国（晋国和郑国挨着，秦国和郑国之间比较远，还隔着周天子的洛阳），晋国的实力更强了，秦国相对就弱了，这样对你们没啥好处。假如放郑国一马，我们就是你东边道路上热情好客的主人，以后你的人来往路过，我们管吃管住，这样对你绝对没有坏处啊。文言是：若舍郑以为东道主，行李之往来，共其乏困，君亦无所害。
-所以各位亲爱的朋友们，我们新郑才是世上最早的(被逼出来的)“东道主”。
-然后秦穆公同意了，撤兵，还留下三个将军帮郑国守北门（晋国在郑国的北面）。晋国的将士还想打，晋文公说，我是靠秦穆公才上位的，打他不好，撤了。
-这还没完，后面还有一堆事。</div><div class="post-footer">
-        <a href="/2015_12_06-hometown_history/">Read More</a><div class="post-tags">
-                <i class="fas fa-tags fa-fw" aria-hidden="true"></i>&nbsp;<a href="/tags/%E5%AE%B6%E4%B9%A1/">家乡</a>,&nbsp;<a href="/tags/%E5%8E%86%E5%8F%B2/">历史</a></div></div>
 </article><ul class="pagination"><li class="page-item ">
                     <span class="page-link">
                         <a href="/">1</a>
