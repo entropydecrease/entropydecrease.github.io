@@ -90,6 +90,12 @@
     </div><main class="main">
                 <div class="container"><div class="page home" data-home="posts"><div class="home-profile"><div class="home-subtitle">阅读、思考、写作，都是熵减的过程</div><div class="links"><a href="https://github.com/entropydecrease" title="GitHub" target="_blank" rel="noopener noreffer me"><i class="fab fa-github fa-fw" aria-hidden="true"></i></a><a href="mailto:mailto:en&#43;tr-op*ydecr_ea%5ese@outlook.com%5eremove_unnecessary_chars%5e" title="Email" rel="me"><i class="far fa-envelope fa-fw" aria-hidden="true"></i></a><a href="/index.xml" title="RSS" target="_blank" rel="noopener noreffer me"><i class="fas fa-rss fa-fw" aria-hidden="true"></i></a></div></div>
 <article class="single summary" itemscope itemtype="http://schema.org/Article"><h1 class="single-title" itemprop="name headline">
+        <a href="/2023_05_02_methylation_cancer/">甲基化与膀胱癌检测</a>
+    </h1><div class="post-meta"><span class="post-author"><a href="/" title="Author" rel="author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>entropydecrease</a></span>&nbsp;<span class="post-publish">published on <time datetime="2023-05-02">2023-05-02</time></span></div><div class="content">1. 甲基化肿瘤检测产品综述 1.1 截至2018年的国外商业化甲基化肿瘤检测 Koch, A. et al. Analysis of DNA methylation in cancer: location revisited. Nat Rev Clin Oncol 15, 459–466 (2018).
+The Cancer Genome Atlas (TCGA) data for all biomarkers with commercially available assays were analysed for differential methylation between tumour and nonmalignant samples and to determine whether or not methylation status at the location of the area covered by the assay is correlated with expression. We also investigated whether or not the biomarkers are located in the promoter region of their corresponding genes and whether or not they are located in a CpG island.</div><div class="post-footer">
+        <a href="/2023_05_02_methylation_cancer/">Read More</a><div class="post-tags">
+                <i class="fas fa-tags fa-fw" aria-hidden="true"></i>&nbsp;<a href="/tags/%E6%97%A9%E8%AF%8A/">早诊</a>,&nbsp;<a href="/tags/%E7%94%B2%E5%9F%BA%E5%8C%96/">甲基化</a></div></div>
+</article><article class="single summary" itemscope itemtype="http://schema.org/Article"><h1 class="single-title" itemprop="name headline">
         <a href="/2023_04_28_datamash/">datamash tips</a>
     </h1><div class="post-meta"><span class="post-author"><a href="/" title="Author" rel="author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>entropydecrease</a></span>&nbsp;<span class="post-publish">published on <time datetime="2023-04-28">2023-04-28</time></span>&nbsp;<span class="post-category">included in <a href="/categories/bioinf/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>bioinf</a></span></div><div class="content">1 2 3 4 5 6 7 8 9 10 &gt; (cat &lt;&lt;-EOF a 1 a 2 b 3 c 4 EOF ) | datamash groupby 1 collapse 2 a	1,2 b	3 c	4 collapse 操作可以将对应的列（本例中为第二列）进行合并，在本例子，根据第一例的值进行分组，将第二例的值合并。
 另外，为了在一个命令中完成，本例中使用了here document。</div><div class="post-footer">
@@ -153,14 +159,6 @@ ONT公司认为泛基因组的组装，SV所需数据量较小，SNV用40x够了
 数据量 Fast5文件大小 Pod5文件大小 1G bp 6G Byte 0.5G Byte 10G bp 60 GB 5 GB 30G bp 180 GB 15 GB 90G bp 540 GB 45 GB Pod5格式 替代Fast5，后续会作为默认文件格式 MinKnow机器集成 bascalling 将Fast5/Pod5文件转换为Fastq/uBam格式的过程</div><div class="post-footer">
         <a href="/2023_04_01_ont_training_notes/">Read More</a><div class="post-tags">
                 <i class="fas fa-tags fa-fw" aria-hidden="true"></i>&nbsp;<a href="/tags/nanopore/">nanopore</a></div></div>
-</article><article class="single summary" itemscope itemtype="http://schema.org/Article"><h1 class="single-title" itemprop="name headline">
-        <a href="/2023_03_13_even_googlenews_error/">Hugo 关于 google_news的错误</a>
-    </h1><div class="post-meta"><span class="post-author"><a href="/" title="Author" rel="author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>entropydecrease</a></span>&nbsp;<span class="post-publish">published on <time datetime="2023-03-13">2023-03-13</time></span>&nbsp;<span class="post-category">included in <a href="/categories/%E5%B7%A5%E5%85%B7/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>工具</a></span></div><div class="content">hugo 前段时间会报错 &quot;_internal/google_news.html&quot;:
-google_news internal template should be deprecated 这次就完全不能运行，warning变成error了。
-解决办法是：
-打开 themes/even/layouts/partials/head.html
-删掉 {{- template &quot;_internal/google_news.html&quot; . -}} 这一行</div><div class="post-footer">
-        <a href="/2023_03_13_even_googlenews_error/">Read More</a></div>
 </article><ul class="pagination"><li class="page-item ">
                     <span class="page-link">
                         <a href="/">1</a>

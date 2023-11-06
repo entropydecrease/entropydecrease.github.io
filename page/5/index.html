@@ -90,6 +90,10 @@
     </div><main class="main">
                 <div class="container"><div class="page home" data-home="posts"><div class="home-profile"><div class="home-subtitle">阅读、思考、写作，都是熵减的过程</div><div class="links"><a href="https://github.com/entropydecrease" title="GitHub" target="_blank" rel="noopener noreffer me"><i class="fab fa-github fa-fw" aria-hidden="true"></i></a><a href="mailto:mailto:en&#43;tr-op*ydecr_ea%5ese@outlook.com%5eremove_unnecessary_chars%5e" title="Email" rel="me"><i class="far fa-envelope fa-fw" aria-hidden="true"></i></a><a href="/index.xml" title="RSS" target="_blank" rel="noopener noreffer me"><i class="fas fa-rss fa-fw" aria-hidden="true"></i></a></div></div>
 <article class="single summary" itemscope itemtype="http://schema.org/Article"><h1 class="single-title" itemprop="name headline">
+        <a href="/2020_02_23_bcl2fastq_install/">安装bcl2fastq</a>
+    </h1><div class="post-meta"><span class="post-author"><a href="/" title="Author" rel="author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>entropydecrease</a></span>&nbsp;<span class="post-publish">published on <time datetime="2020-02-23">2020-02-23</time></span>&nbsp;<span class="post-category">included in <a href="/categories/bioinf/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>bioinf</a></span></div><div class="content">安装 1 2 3 4 5 6 7 8 9 10 11 wget ftp://webdata2:webdata2@ussd-ftp.illumina.com/downloads/software/bcl2fastq/bcl2fastq2-v2.17.1.14.tar.zip tar -zxvf bcl2fastq2-v2.17.1.14.tar.zip cd bcl2fastq2 mkdir build; cd build ../src/configure --prefix=$HOME &gt; build.txt.log 2&gt;&amp;1 tail -f build.txt.log 可能出现的问题 CMake complains Required header sys/stat.h not found 1 &gt; sudo apt-get install libc6-dev-amd64 no support for gzip compression 1 &gt; sudo apt-get install zlib1g-dev bcl2fastq also complains no libxml2 and libxslt, but it could build by itself. And the version installed with ubuntu is too new :( 1 &gt; sudo apt-get install gfortran doxygen graphviz </div><div class="post-footer">
+        <a href="/2020_02_23_bcl2fastq_install/">Read More</a></div>
+</article><article class="single summary" itemscope itemtype="http://schema.org/Article"><h1 class="single-title" itemprop="name headline">
         <a href="/2020_02_23_ref_genome/">应该使用哪个genome</a>
     </h1><div class="post-meta"><span class="post-author"><a href="/" title="Author" rel="author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>entropydecrease</a></span>&nbsp;<span class="post-publish">published on <time datetime="2020-02-23">2020-02-23</time></span>&nbsp;<span class="post-category">included in <a href="/categories/bioinf/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>bioinf</a></span></div><div class="content">GRCh37 还是 GRCh38 GRCh37 == hg19，GRCh38 ＝＝ hg38
 理论上来讲，GRCh38是新的人类基因组的参考组装，相对GRCh37(hg19)来说，更接近人类真正的基因组。但是由于历史原因，之前很多的数据库对老版本的GRCh37支持的比较好。 dbSNP和ClinVar已经同时支持 GRCh37和38，但是1k genomes还是对GRCh37支持更好一些.
@@ -187,13 +191,6 @@ HFS+ (the Mac filesystem) is usually configured to be case insensitive but case 
 &gt; sudo scutil --set HostName &quot;new_hostname&quot; Password: &gt; scutil --get HostName new_hostname </div><div class="post-footer">
         <a href="/2015_04_13_set-hostname-not-modifed-by-dhcp/">Read More</a><div class="post-tags">
                 <i class="fas fa-tags fa-fw" aria-hidden="true"></i>&nbsp;<a href="/tags/mac/">Mac</a></div></div>
-</article><article class="single summary" itemscope itemtype="http://schema.org/Article"><h1 class="single-title" itemprop="name headline">
-        <a href="/2015_04_11_disable-local-backup-of-timemachine/">disable local backup of timemachine</a>
-    </h1><div class="post-meta"><span class="post-author"><a href="/" title="Author" rel="author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>entropydecrease</a></span>&nbsp;<span class="post-publish">published on <time datetime="0001-01-01">0001-01-01</time></span></div><div class="content">timemachine 默认会在本地生成local backup，这个比较占空间，如何取消local backup:
-Finder -&gt; goto &ldquo;/Volumes&rdquo; will see a backup disk
-&lsquo;sudo tmutil disablelocal&rsquo; will disable local cache of time machine
-&lsquo;sudo tmutil enablelocal&rsquo; will enable it again</div><div class="post-footer">
-        <a href="/2015_04_11_disable-local-backup-of-timemachine/">Read More</a></div>
 </article><ul class="pagination"><li class="page-item ">
                     <span class="page-link">
                         <a href="/">1</a>

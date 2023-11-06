@@ -90,6 +90,13 @@
     </div><main class="main">
                 <div class="container"><div class="page home" data-home="posts"><div class="home-profile"><div class="home-subtitle">阅读、思考、写作，都是熵减的过程</div><div class="links"><a href="https://github.com/entropydecrease" title="GitHub" target="_blank" rel="noopener noreffer me"><i class="fab fa-github fa-fw" aria-hidden="true"></i></a><a href="mailto:mailto:en&#43;tr-op*ydecr_ea%5ese@outlook.com%5eremove_unnecessary_chars%5e" title="Email" rel="me"><i class="far fa-envelope fa-fw" aria-hidden="true"></i></a><a href="/index.xml" title="RSS" target="_blank" rel="noopener noreffer me"><i class="fas fa-rss fa-fw" aria-hidden="true"></i></a></div></div>
 <article class="single summary" itemscope itemtype="http://schema.org/Article"><h1 class="single-title" itemprop="name headline">
+        <a href="/2015_04_11_disable-local-backup-of-timemachine/">disable local backup of timemachine</a>
+    </h1><div class="post-meta"><span class="post-author"><a href="/" title="Author" rel="author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>entropydecrease</a></span>&nbsp;<span class="post-publish">published on <time datetime="0001-01-01">0001-01-01</time></span></div><div class="content">timemachine 默认会在本地生成local backup，这个比较占空间，如何取消local backup:
+Finder -&gt; goto &ldquo;/Volumes&rdquo; will see a backup disk
+&lsquo;sudo tmutil disablelocal&rsquo; will disable local cache of time machine
+&lsquo;sudo tmutil enablelocal&rsquo; will enable it again</div><div class="post-footer">
+        <a href="/2015_04_11_disable-local-backup-of-timemachine/">Read More</a></div>
+</article><article class="single summary" itemscope itemtype="http://schema.org/Article"><h1 class="single-title" itemprop="name headline">
         <a href="/2015_04_05_reattach_lftp/">re-attach a lftp process</a>
     </h1><div class="post-meta"><span class="post-author"><a href="/" title="Author" rel="author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>entropydecrease</a></span>&nbsp;<span class="post-publish">published on <time datetime="0001-01-01">0001-01-01</time></span>&nbsp;<span class="post-category">included in <a href="/categories/%E5%B7%A5%E5%85%B7/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>工具</a></span></div><div class="content">lftp很好的一个功能是退出之后，正在运行的任务会自动提交到后台继续运行。
 但是有时候终端窗口退出之后还想重新连接这些任务，该如何连接呢？lftp提供了一个很好的命令attach。
