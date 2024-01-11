@@ -90,6 +90,16 @@
     </div><main class="main">
                 <div class="container"><div class="page home" data-home="posts"><div class="home-profile"><div class="home-subtitle">阅读、思考、写作，都是熵减的过程</div><div class="links"><a href="https://github.com/entropydecrease" title="GitHub" target="_blank" rel="noopener noreffer me"><i class="fab fa-github fa-fw" aria-hidden="true"></i></a><a href="mailto:mailto:en&#43;tr-op*ydecr_ea%5ese@outlook.com%5eremove_unnecessary_chars%5e" title="Email" rel="me"><i class="far fa-envelope fa-fw" aria-hidden="true"></i></a><a href="/index.xml" title="RSS" target="_blank" rel="noopener noreffer me"><i class="fas fa-rss fa-fw" aria-hidden="true"></i></a></div></div>
 <article class="single summary" itemscope itemtype="http://schema.org/Article"><h1 class="single-title" itemprop="name headline">
+        <a href="/2020_02_23_igv_local_genome/">igv 生成本地的.genome文件</a>
+    </h1><div class="post-meta"><span class="post-author"><a href="/" title="Author" rel="author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>entropydecrease</a></span>&nbsp;<span class="post-publish">published on <time datetime="2020-02-23">2020-02-23</time></span>&nbsp;<span class="post-category">included in <a href="/categories/bioinf/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>bioinf</a></span></div><div class="content">igv假如每次都要从远程加载genome信息的话，网络不好的情况下会很慢，这时候最好做一个本地版的.genome文件。
+igv的.genome文件其实是一个zip文件。
+先看一下hg19.genome的内容：
+1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 &gt; cp ~/igv/genomes/hg19.genome . &gt; unzip hg19.genome Archive: hg19.genome inflating: cytoBand.txt inflating: hg19_alias.tab inflating: property.txt inflating: refGene.txt &gt; cat property.txt id=hg19 name=Human hg19 cytobandFile=cytoBand.txt ordered=true geneFile=refGene.txt geneTrackName=RefSeq Genes chrAliasFile=hg19_alias.tab fasta=True sequenceLocation=http://s3.amazonaws.com/igv.broadinstitute.org/genomes/seq/hg19/hg19.fasta url=http://www.ncbi.nlm.nih.gov/gene?term=$$ 可以看到，里面的cytoband文件，gene文件都是本地的，但是序列文件是在AWS上面的。而最近AWS的访问有问题，非常不稳定，所以igv也不能打开hg19.genome了。
+让igv都使用本地的文件，只需要修改property.txt即可，修改property.txt如下：
+1 2 3 4 5 6 7 8 9 10 id=hg19-local name=Human hg19 local cytobandFile=cytoBand.txt ordered=true geneFile=refGene.</div><div class="post-footer">
+        <a href="/2020_02_23_igv_local_genome/">Read More</a><div class="post-tags">
+                <i class="fas fa-tags fa-fw" aria-hidden="true"></i>&nbsp;<a href="/tags/igv/">igv</a>,&nbsp;<a href="/tags/genome/">genome</a></div></div>
+</article><article class="single summary" itemscope itemtype="http://schema.org/Article"><h1 class="single-title" itemprop="name headline">
         <a href="/2020_02_23_bcl2fastq_install/">安装bcl2fastq</a>
     </h1><div class="post-meta"><span class="post-author"><a href="/" title="Author" rel="author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>entropydecrease</a></span>&nbsp;<span class="post-publish">published on <time datetime="2020-02-23">2020-02-23</time></span>&nbsp;<span class="post-category">included in <a href="/categories/bioinf/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>bioinf</a></span></div><div class="content">安装 1 2 3 4 5 6 7 8 9 10 11 wget ftp://webdata2:webdata2@ussd-ftp.illumina.com/downloads/software/bcl2fastq/bcl2fastq2-v2.17.1.14.tar.zip tar -zxvf bcl2fastq2-v2.17.1.14.tar.zip cd bcl2fastq2 mkdir build; cd build ../src/configure --prefix=$HOME &gt; build.txt.log 2&gt;&amp;1 tail -f build.txt.log 可能出现的问题 CMake complains Required header sys/stat.h not found 1 &gt; sudo apt-get install libc6-dev-amd64 no support for gzip compression 1 &gt; sudo apt-get install zlib1g-dev bcl2fastq also complains no libxml2 and libxslt, but it could build by itself. And the version installed with ubuntu is too new :( 1 &gt; sudo apt-get install gfortran doxygen graphviz </div><div class="post-footer">
         <a href="/2020_02_23_bcl2fastq_install/">Read More</a></div>
@@ -184,13 +194,6 @@ Integrated reference sequence from the GRCh37 primary assembly (chromosomal plus
 http://apple.stackexchange.com/questions/22297/is-bash-in-osx-case-insensitive
 HFS+ (the Mac filesystem) is usually configured to be case insensitive but case preserving. This means that the file system will consider foo and FoO to be the same, but when you create a new file it will remember which letters where capitalized and which were not. When you format a disk with HFS+ you can chose whether the file system should case sensitive or not. If you chose to format with UFS (Unix FileSystem) it is always case sensitive, AFAIK.</div><div class="post-footer">
         <a href="/2015_05_07_case-insenstivity-on-mac-os-x/">Read More</a></div>
-</article><article class="single summary" itemscope itemtype="http://schema.org/Article"><h1 class="single-title" itemprop="name headline">
-        <a href="/2015_04_13_set-hostname-not-modifed-by-dhcp/">设置hostname，避免DHCP修改hostname</a>
-    </h1><div class="post-meta"><span class="post-author"><a href="/" title="Author" rel="author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>entropydecrease</a></span>&nbsp;<span class="post-publish">published on <time datetime="0001-01-01">0001-01-01</time></span>&nbsp;<span class="post-category">included in <a href="/categories/%E5%B7%A5%E5%85%B7/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>工具</a></span></div><div class="content">It can be annoying to see my hostname being modifed each time I connect to a different WIFI. It is because the hostname was never set.
-&gt; scutil --get HostName HostName: not set So we just need to set the hostname:
-&gt; sudo scutil --set HostName &quot;new_hostname&quot; Password: &gt; scutil --get HostName new_hostname </div><div class="post-footer">
-        <a href="/2015_04_13_set-hostname-not-modifed-by-dhcp/">Read More</a><div class="post-tags">
-                <i class="fas fa-tags fa-fw" aria-hidden="true"></i>&nbsp;<a href="/tags/mac/">Mac</a></div></div>
 </article><ul class="pagination"><li class="page-item ">
                     <span class="page-link">
                         <a href="/">1</a>
@@ -213,10 +216,14 @@ HFS+ (the Mac filesystem) is usually configured to be case insensitive but case 
                     <span class="page-link">
                         <a href="/page/6/">6</a>
                     </span>
+                </li><li class="page-item ">
+                    <span class="page-link">
+                        <a href="/page/7/">7</a>
+                    </span>
                 </li></ul></div></div>
             </main><footer class="footer">
         <div class="footer-container"><div class="footer-line">Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.113.0">Hugo</a> | Theme - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.2.11"><i class="far fa-kiss-wink-heart fa-fw" aria-hidden="true"></i> LoveIt</a>
-                </div><div class="footer-line" itemscope itemtype="http://schema.org/CreativeWork"><i class="far fa-copyright fa-fw" aria-hidden="true"></i><span itemprop="copyrightYear">2015 - 2023</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/" target="_blank">entropydecrease</a></span></div>
+                </div><div class="footer-line" itemscope itemtype="http://schema.org/CreativeWork"><i class="far fa-copyright fa-fw" aria-hidden="true"></i><span itemprop="copyrightYear">2015 - 2024</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/" target="_blank">entropydecrease</a></span></div>
         </div>
     </footer></div>
 

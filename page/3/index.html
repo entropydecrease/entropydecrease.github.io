@@ -90,6 +90,22 @@
     </div><main class="main">
                 <div class="container"><div class="page home" data-home="posts"><div class="home-profile"><div class="home-subtitle">阅读、思考、写作，都是熵减的过程</div><div class="links"><a href="https://github.com/entropydecrease" title="GitHub" target="_blank" rel="noopener noreffer me"><i class="fab fa-github fa-fw" aria-hidden="true"></i></a><a href="mailto:mailto:en&#43;tr-op*ydecr_ea%5ese@outlook.com%5eremove_unnecessary_chars%5e" title="Email" rel="me"><i class="far fa-envelope fa-fw" aria-hidden="true"></i></a><a href="/index.xml" title="RSS" target="_blank" rel="noopener noreffer me"><i class="fas fa-rss fa-fw" aria-hidden="true"></i></a></div></div>
 <article class="single summary" itemscope itemtype="http://schema.org/Article"><h1 class="single-title" itemprop="name headline">
+        <a href="/2023_04_01_ont_training_notes/">ONT相关的一些笔记</a>
+    </h1><div class="post-meta"><span class="post-author"><a href="/" title="Author" rel="author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>entropydecrease</a></span>&nbsp;<span class="post-publish">published on <time datetime="2023-04-01">2023-04-01</time></span>&nbsp;<span class="post-category">included in <a href="/categories/tech/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>tech</a></span></div><div class="content">准确度 Kit V14 + R10.4.1
+simplex: 99.6%, Q24 duplex: 99.92%, Q31 duplex 一个双链文库分子，两端都有motor protein（马达蛋白）。一端的马达蛋白牵引双链文库靠近纳米孔，并解开双链让其中一条单链进入纳米孔，在其完全进入纳米孔之后，文库另外一端的马达蛋白有可能会牵引文库另外一头直接以单链的形式（无需解链）进入纳米孔（此时也有可能是其他的片段进入纳米孔测序）。这样测得的序列是一条原始分子的正负链都被测到了，所以叫duplex，可以提高测序精度。
+duplex不是通过新的试剂，只是protocol，让互补链紧跟着正义链过同一个孔而已，有一些reads是duplex，也有很多是simplex。 据说最新的试剂，可以将duplex reads的比例提高到70%。
+duplex的精度与长度相互独立
+测indel要60x才比较准。
+misc 低覆盖度，1x也可以测CNV 泛基因组 泛基因组用ONT组装，只看SV或NSR的话，20x覆盖度够用。但是要看单碱基分辨率的SNV/indel，学校研究人员认为需要用NGS数据做polish.
+学校研究人员提到长的sv假阳性非常高，他们把5M 以上inv和2M 以上indel都过滤掉了，我也是有点无语，做临床检测的话，这些才是更容易致病的。。。。
+ONT公司认为泛基因组的组装，SV所需数据量较小，SNV用40x够了，homopolymer处的indel，可以用60x的duplex测序来解决。但是他们一般推荐40x，因为一个芯片标准的测序量是120G，刚好是40x的覆盖度。
+植物多倍体 组装多倍体比较难，ONT单独无法完成，一般是结合PacBio HiFi，Hi-C和OGM也常用。 适应性采样 NGS短板：读长短，修饰信息丢失 大量宿主DNA给mNGS带来挑战，唾液中加入PMA，可显著减少人源DNA 三代测序因序列较长，更容易将耐药基因归属至菌种。 NGS的扩增可能产生偏向性（bias），三代测序无扩增，可避免此类偏向性。 适应性采样，提供人类基因组的bed文件，碰到可以匹配到ren基因组的序列，就弹出。 适应性采样，可提高病原序列比例，且显著提高病原体达到30x覆盖度的速度（4h vs 常规12h）。 文件格式 Fast5 ONT现在的默认格式，未来会被POD替代。
+采样频率4k Hz == 4000次/秒，碱基的过孔速度 ~400bp/s，相当于每个碱基过孔的时间内有10次的采样。
+数据量与文件大小
+数据量 Fast5文件大小 Pod5文件大小 1G bp 6G Byte 0.5G Byte 10G bp 60 GB 5 GB 30G bp 180 GB 15 GB 90G bp 540 GB 45 GB Pod5格式 替代Fast5，后续会作为默认文件格式 MinKnow机器集成 bascalling 将Fast5/Pod5文件转换为Fastq/uBam格式的过程</div><div class="post-footer">
+        <a href="/2023_04_01_ont_training_notes/">Read More</a><div class="post-tags">
+                <i class="fas fa-tags fa-fw" aria-hidden="true"></i>&nbsp;<a href="/tags/nanopore/">nanopore</a></div></div>
+</article><article class="single summary" itemscope itemtype="http://schema.org/Article"><h1 class="single-title" itemprop="name headline">
         <a href="/2023_03_13_even_googlenews_error/">Hugo 关于 google_news的错误</a>
     </h1><div class="post-meta"><span class="post-author"><a href="/" title="Author" rel="author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>entropydecrease</a></span>&nbsp;<span class="post-publish">published on <time datetime="2023-03-13">2023-03-13</time></span>&nbsp;<span class="post-category">included in <a href="/categories/%E5%B7%A5%E5%85%B7/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>工具</a></span></div><div class="content">hugo 前段时间会报错 &quot;_internal/google_news.html&quot;:
 google_news internal template should be deprecated 这次就完全不能运行，warning变成error了。
@@ -132,16 +148,6 @@ https://tehlsvodhls02.vhallyun.com/vhallyun/vhallrecord/lss_27f054bb/20220724124
 1 2 3 4 [ -s url_list.txt ] || \ grep -v &#39;^#EXTM3U&#39; record.</div><div class="post-footer">
         <a href="/2023_02_07-download_m3u8/">Read More</a><div class="post-tags">
                 <i class="fas fa-tags fa-fw" aria-hidden="true"></i>&nbsp;<a href="/tags/download/">download</a></div></div>
-</article><article class="single summary" itemscope itemtype="http://schema.org/Article"><h1 class="single-title" itemprop="name headline">
-        <a href="/2023_01_23-github_mirror/">github镜像</a>
-    </h1><div class="post-meta"><span class="post-author"><a href="/" title="Author" rel="author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>entropydecrease</a></span>&nbsp;<span class="post-publish">published on <time datetime="2023-01-23">2023-01-23</time></span>&nbsp;<span class="post-category">included in <a href="/categories/%E5%B7%A5%E5%85%B7/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>工具</a></span></div><div class="content">githhub有时候访问很慢，甚至不能访问，有人做了一个镜像。
-https://kgithub.com
-可以当作github一样使用，假定此时需要 git clone bwa-mem2 ，原始命令是
-git clone https://github.com/bwa-mem2/bwa-mem2.git
-现在的命令是：
-git clone https://kgithub.com/bwa-mem2/bwa-mem2.git
-仅当原始网站不可用的时候再用这个，因为速度不一定有原版快。。。。。。</div><div class="post-footer">
-        <a href="/2023_01_23-github_mirror/">Read More</a></div>
 </article><ul class="pagination"><li class="page-item ">
                     <span class="page-link">
                         <a href="/">1</a>
@@ -163,13 +169,15 @@ git clone https://kgithub.com/bwa-mem2/bwa-mem2.git
                         <a href="/page/5/">5</a>
                     </span>
                 </li><li class="page-item ">
+                    <span class="page-link" aria-hidden="true">&hellip;</span>
+                </li><li class="page-item ">
                     <span class="page-link">
-                        <a href="/page/6/">6</a>
+                        <a href="/page/7/">7</a>
                     </span>
                 </li></ul></div></div>
             </main><footer class="footer">
         <div class="footer-container"><div class="footer-line">Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.113.0">Hugo</a> | Theme - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.2.11"><i class="far fa-kiss-wink-heart fa-fw" aria-hidden="true"></i> LoveIt</a>
-                </div><div class="footer-line" itemscope itemtype="http://schema.org/CreativeWork"><i class="far fa-copyright fa-fw" aria-hidden="true"></i><span itemprop="copyrightYear">2015 - 2023</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/" target="_blank">entropydecrease</a></span></div>
+                </div><div class="footer-line" itemscope itemtype="http://schema.org/CreativeWork"><i class="far fa-copyright fa-fw" aria-hidden="true"></i><span itemprop="copyrightYear">2015 - 2024</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/" target="_blank">entropydecrease</a></span></div>
         </div>
     </footer></div>
 

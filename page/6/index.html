@@ -90,6 +90,13 @@
     </div><main class="main">
                 <div class="container"><div class="page home" data-home="posts"><div class="home-profile"><div class="home-subtitle">阅读、思考、写作，都是熵减的过程</div><div class="links"><a href="https://github.com/entropydecrease" title="GitHub" target="_blank" rel="noopener noreffer me"><i class="fab fa-github fa-fw" aria-hidden="true"></i></a><a href="mailto:mailto:en&#43;tr-op*ydecr_ea%5ese@outlook.com%5eremove_unnecessary_chars%5e" title="Email" rel="me"><i class="far fa-envelope fa-fw" aria-hidden="true"></i></a><a href="/index.xml" title="RSS" target="_blank" rel="noopener noreffer me"><i class="fas fa-rss fa-fw" aria-hidden="true"></i></a></div></div>
 <article class="single summary" itemscope itemtype="http://schema.org/Article"><h1 class="single-title" itemprop="name headline">
+        <a href="/2015_04_13_set-hostname-not-modifed-by-dhcp/">设置hostname，避免DHCP修改hostname</a>
+    </h1><div class="post-meta"><span class="post-author"><a href="/" title="Author" rel="author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>entropydecrease</a></span>&nbsp;<span class="post-publish">published on <time datetime="0001-01-01">0001-01-01</time></span>&nbsp;<span class="post-category">included in <a href="/categories/%E5%B7%A5%E5%85%B7/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>工具</a></span></div><div class="content">It can be annoying to see my hostname being modifed each time I connect to a different WIFI. It is because the hostname was never set.
+&gt; scutil --get HostName HostName: not set So we just need to set the hostname:
+&gt; sudo scutil --set HostName &quot;new_hostname&quot; Password: &gt; scutil --get HostName new_hostname </div><div class="post-footer">
+        <a href="/2015_04_13_set-hostname-not-modifed-by-dhcp/">Read More</a><div class="post-tags">
+                <i class="fas fa-tags fa-fw" aria-hidden="true"></i>&nbsp;<a href="/tags/mac/">Mac</a></div></div>
+</article><article class="single summary" itemscope itemtype="http://schema.org/Article"><h1 class="single-title" itemprop="name headline">
         <a href="/2015_04_11_disable-local-backup-of-timemachine/">disable local backup of timemachine</a>
     </h1><div class="post-meta"><span class="post-author"><a href="/" title="Author" rel="author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>entropydecrease</a></span>&nbsp;<span class="post-publish">published on <time datetime="0001-01-01">0001-01-01</time></span></div><div class="content">timemachine 默认会在本地生成local backup，这个比较占空间，如何取消local backup:
 Finder -&gt; goto &ldquo;/Volumes&rdquo; will see a backup disk
@@ -123,12 +130,6 @@ launchctl load -w /System/Library/LaunchDaemons/com.apple.atrun.plist
 mail.app &ndash;&gt; File &ndash;&gt; import mailboxes, and select the folder generated in step 1.
 That&rsquo;s all. Your emails in the ost file will be imported into a directory under &ldquo;on my Mac&rdquo;.</div><div class="post-footer">
         <a href="/2015_03_24_export_email_in_ost/">Read More</a></div>
-</article><article class="single summary" itemscope itemtype="http://schema.org/Article"><h1 class="single-title" itemprop="name headline">
-        <a href="/2015_03_14_common_bioinf_mistakes/">bioinf常见的一些错误</a>
-    </h1><div class="post-meta"><span class="post-author"><a href="/" title="Author" rel="author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>entropydecrease</a></span>&nbsp;<span class="post-publish">published on <time datetime="2015-03-14">2015-03-14</time></span>&nbsp;<span class="post-category">included in <a href="/categories/bioinf/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>bioinf</a></span></div><div class="content">biostar上的这篇文章总结了在生物信息学日常工作中容易犯的一些共性的错误：
-* forget to check both strands * generate random genomic sites without avoiding masked (NNN) gaps * confuse genome freezes and even species * try to see which headers it contained by 'grep &gt; some.fasta' will destory the .fasta file * a lot of off-by-one errors due to switching between formats: Bed is 0 based; GFF/GTF are 1-based * Trusting that a downloaded file is actually fully downloaded * Trusting that an aligner will accept a list of query files instead of just taking the first and ignoring the rest (quiz: which ones am i talking about?</div><div class="post-footer">
-        <a href="/2015_03_14_common_bioinf_mistakes/">Read More</a><div class="post-tags">
-                <i class="fas fa-tags fa-fw" aria-hidden="true"></i>&nbsp;<a href="/tags/bioinf/">bioinf</a></div></div>
 </article><ul class="pagination"><li class="page-item ">
                     <span class="page-link">
                         <a href="/">1</a>
@@ -147,10 +148,14 @@ That&rsquo;s all. Your emails in the ost file will be imported into a directory 
                     <span class="page-link">
                         <a href="/page/6/">6</a>
                     </span>
+                </li><li class="page-item ">
+                    <span class="page-link">
+                        <a href="/page/7/">7</a>
+                    </span>
                 </li></ul></div></div>
             </main><footer class="footer">
         <div class="footer-container"><div class="footer-line">Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.113.0">Hugo</a> | Theme - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.2.11"><i class="far fa-kiss-wink-heart fa-fw" aria-hidden="true"></i> LoveIt</a>
-                </div><div class="footer-line" itemscope itemtype="http://schema.org/CreativeWork"><i class="far fa-copyright fa-fw" aria-hidden="true"></i><span itemprop="copyrightYear">2015 - 2023</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/" target="_blank">entropydecrease</a></span></div>
+                </div><div class="footer-line" itemscope itemtype="http://schema.org/CreativeWork"><i class="far fa-copyright fa-fw" aria-hidden="true"></i><span itemprop="copyrightYear">2015 - 2024</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/" target="_blank">entropydecrease</a></span></div>
         </div>
     </footer></div>
 
