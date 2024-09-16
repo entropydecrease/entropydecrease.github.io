@@ -1,15 +1,36 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
     <channel>
-        <title>shell - Tag - Entropy Decrease</title>
+        <title>Shell - Tag - Entropy Decrease</title>
         <link>https://entropydecrease.github.io/tags/shell/</link>
-        <description>shell - Tag - Entropy Decrease</description>
+        <description>Shell - Tag - Entropy Decrease</description>
         <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Tue, 03 Nov 2015 00:00:00 &#43;0000</lastBuildDate><atom:link href="https://entropydecrease.github.io/tags/shell/" rel="self" type="application/rss+xml" /><item>
     <title>a few Unix and Shell tips</title>
-    <link>https://entropydecrease.github.io/2015_11_03_a-few-unix-and-shell-tips/</link>
+    <link>https://entropydecrease.github.io/2015_11_03-a-few-unix-and-shell-tips/</link>
     <pubDate>Tue, 03 Nov 2015 00:00:00 &#43;0000</pubDate>
     <author>entropydecrease</author>
-    <guid>https://entropydecrease.github.io/2015_11_03_a-few-unix-and-shell-tips/</guid>
-    <description><![CDATA[automatically attach to a tmux session via SSH 1 2 3 4 5 6 7 alias alias_name=&#39;ssh username@servername -t &#34;tmux attach || tmux&#34; &#39; -t Force pseudo-tty allocation. This can be used to execute arbitrary screen-based programs on a remote machine, which can be very useful, e.g., when implementing menu services. &#34;tmux attach&#34; tries to attach a tmux session. and if it fails, &#34;tmux&#34; will create a new session. to be continued.]]></description>
+    <guid>https://entropydecrease.github.io/2015_11_03-a-few-unix-and-shell-tips/</guid>
+    <description><![CDATA[<h2 id="automatically-attach-to-a-tmux-session-via-ssh">automatically attach to a tmux session via SSH</h2>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">alias alias_name=&#39;ssh username@servername -t &#34;tmux attach || tmux&#34; &#39;
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">-t Force pseudo-tty allocation. This can be used to execute arbitrary
+</span></span><span class="line"><span class="cl">   screen-based programs on a remote machine, which can be very useful, e.g., when
+</span></span><span class="line"><span class="cl">   implementing menu services.
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">&#34;tmux attach&#34; tries to attach a tmux session. and if it fails, &#34;tmux&#34; will create a new session.
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h2 id="to-be-continued">to be continued.</h2>]]></description>
 </item>
 </channel>
 </rss>

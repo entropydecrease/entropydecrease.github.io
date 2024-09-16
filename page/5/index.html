@@ -1,17 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-	<meta name="generator" content="Hugo 0.113.0">
+	<meta name="generator" content="Hugo 0.134.2">
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="robots" content="noodp" />
-        <title>Entropy Decrease</title><meta name="Description" content="阅读、思考、写作，都是熵减的过程"><meta property="og:title" content="Entropy Decrease" />
-<meta property="og:description" content="阅读、思考、写作，都是熵减的过程" />
-<meta property="og:type" content="website" />
-<meta property="og:url" content="https://entropydecrease.github.io/" /><meta property="og:site_name" content="Entropy Decrease" />
-<meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Entropy Decrease"/>
-<meta name="twitter:description" content="阅读、思考、写作，都是熵减的过程"/>
+        <title>Entropy Decrease</title><meta name="Description" content="阅读、思考、写作，都是熵减的过程"><meta property="og:url" content="https://entropydecrease.github.io/">
+  <meta property="og:site_name" content="Entropy Decrease">
+  <meta property="og:title" content="Entropy Decrease">
+  <meta property="og:description" content="阅读、思考、写作，都是熵减的过程">
+  <meta property="og:locale" content="en">
+  <meta property="og:type" content="website">
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Entropy Decrease">
+  <meta name="twitter:description" content="阅读、思考、写作，都是熵减的过程">
 <meta name="application-name" content="Entropy Decrease">
 <meta name="apple-mobile-web-app-title" content="Entropy Decrease"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
         <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
@@ -90,110 +93,399 @@
     </div><main class="main">
                 <div class="container"><div class="page home" data-home="posts"><div class="home-profile"><div class="home-subtitle">阅读、思考、写作，都是熵减的过程</div><div class="links"><a href="https://github.com/entropydecrease" title="GitHub" target="_blank" rel="noopener noreffer me"><i class="fab fa-github fa-fw" aria-hidden="true"></i></a><a href="mailto:mailto:en&#43;tr-op*ydecr_ea%5ese@outlook.com%5eremove_unnecessary_chars%5e" title="Email" rel="me"><i class="far fa-envelope fa-fw" aria-hidden="true"></i></a><a href="/index.xml" title="RSS" target="_blank" rel="noopener noreffer me"><i class="fas fa-rss fa-fw" aria-hidden="true"></i></a></div></div>
 <article class="single summary" itemscope itemtype="http://schema.org/Article"><h1 class="single-title" itemprop="name headline">
-        <a href="/2020_02_23_igv_local_genome/">igv 生成本地的.genome文件</a>
-    </h1><div class="post-meta"><span class="post-author"><a href="/" title="Author" rel="author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>entropydecrease</a></span>&nbsp;<span class="post-publish">published on <time datetime="2020-02-23">2020-02-23</time></span>&nbsp;<span class="post-category">included in <a href="/categories/bioinf/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>bioinf</a></span></div><div class="content">igv假如每次都要从远程加载genome信息的话，网络不好的情况下会很慢，这时候最好做一个本地版的.genome文件。
-igv的.genome文件其实是一个zip文件。
-先看一下hg19.genome的内容：
-1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 &gt; cp ~/igv/genomes/hg19.genome . &gt; unzip hg19.genome Archive: hg19.genome inflating: cytoBand.txt inflating: hg19_alias.tab inflating: property.txt inflating: refGene.txt &gt; cat property.txt id=hg19 name=Human hg19 cytobandFile=cytoBand.txt ordered=true geneFile=refGene.txt geneTrackName=RefSeq Genes chrAliasFile=hg19_alias.tab fasta=True sequenceLocation=http://s3.amazonaws.com/igv.broadinstitute.org/genomes/seq/hg19/hg19.fasta url=http://www.ncbi.nlm.nih.gov/gene?term=$$ 可以看到，里面的cytoband文件，gene文件都是本地的，但是序列文件是在AWS上面的。而最近AWS的访问有问题，非常不稳定，所以igv也不能打开hg19.genome了。
-让igv都使用本地的文件，只需要修改property.txt即可，修改property.txt如下：
-1 2 3 4 5 6 7 8 9 10 id=hg19-local name=Human hg19 local cytobandFile=cytoBand.txt ordered=true geneFile=refGene.</div><div class="post-footer">
-        <a href="/2020_02_23_igv_local_genome/">Read More</a><div class="post-tags">
-                <i class="fas fa-tags fa-fw" aria-hidden="true"></i>&nbsp;<a href="/tags/igv/">igv</a>,&nbsp;<a href="/tags/genome/">genome</a></div></div>
+        <a href="/2023_11_06-%E5%BC%A0%E5%8F%91%E5%A5%8E%E5%8F%A3%E8%BF%B0%E5%8E%86%E5%8F%B2/">张发奎口述历史</a>
+    </h1><div class="post-meta"><span class="post-author"><a href="/" title="Author" rel="author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>entropydecrease</a></span>&nbsp;<span class="post-publish">published on <time datetime="2023-11-06">2023-11-06</time></span>&nbsp;<span class="post-category">included in <a href="/categories/%E8%AF%BB%E4%B9%A6/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>读书</a></span></div><div class="content"><h2 id="文摘">文摘</h2>
+<h3 id="收黑钱">收黑钱</h3>
+<p>我禁止营长们收受黑钱，理由很简单：。。。。。。我要集中一切资源，麾下营长们才会听命于我。</p>
+<h3 id="叶挺的婚事">叶挺的婚事</h3>
+<p>我告诉你，叶挺是怎样当上卅四团团长的。这里包含着一段姻缘的秘密。叶挺与我是好朋友，我俩是校友兼同事。当我俩都当营长时，他在广州认识一个美丽的女孩，在她姐姐出阁前，父母不让妹妹嫁给叶挺。姐姐是个麻脸。叶挺追求她经年，一直不成功。在失望中，他剃光了头发。
+我胜任师长时，叶挺在第四军军部担任参谋，他要求我帮助他当上团长以成全他的婚事。他说，即使婚后立即免职也可以。你看，那时候他女友的姐姐已经出嫁了，但其父母又开出新的条款，叶挺必须当上团长，所以我推荐他当卅四团团长。</p>
+<h3 id="四大禁令">四大禁令</h3>
+<p>禁止逃亡、禁赌、禁嫖、禁（鸦片）烟
+。。。四大禁令，它维护了军纪，也保障了战斗力。我们的口号是“遵纪人人平等，杀敌绝对自由”，我善待官兵们，与他们同甘共苦。那就是为什么上帝独厚于我，以及我从未受伤的原因。</p>
+<h3 id="敌人能攻占任何他们想要的目标">敌人能攻占任何他们想要的目标</h3>
+<p>我的观点是基于一个简单的理由，我感觉敌人能攻任何他们想要的目标。倘若他们没有占领某地，那是因为他们不想要。在这个抗战期间问一贯的思路都是这样。一切都是时间问题。</p>
+<h3 id="抗战我参加的最重要的战役">抗战我参加的最重要的战役</h3>
+<p>我参加了三个重要的战役；淞沪会战、武汉会战、桂柳会战。可以说在战略上这三次会战都是成功的，我们以空间换取了时间，但在战术上，我们失败了。讲句真话，我从未取得一次胜利，可是我延宕了敌人的前进，还多次重创敌军。</p>
+<p>在整个抗战中，我们一直采取守势。在战争快结束时，我首次负责发动生大规模的攻势，可惜攻势刚开始，战争就结束了。</p>
+<p>大多数海内外同胞认为，我们以劣质装备与粗浅训练出钱，英勇地与武器精良训练一流的敌军鏖战了八年，最终取得了胜利。然而从一个军人观点，我认为谈不上英雄史诗，我们所做的一切，只不过是以空间换取时间。</p>
+<h3 id="怎样评价蒋先生抗战">怎样评价蒋先生抗战</h3>
+<p>我钦佩他的抗战决心，而非战略。例如，死守这种战略上一种严重的错误。</p>
+<h3 id="海南">海南</h3>
+<p>我把台湾与海南视为龙的双眼。</p>
+<h3 id="自我评价">自我评价</h3>
+<p>我不敢说广州全体市民对我都印象很好，我仅能说，我虽无显赫功劳，却未曾玩忽职守，绝无作奸犯科。</p>
+<h3 id="李宗仁代总统期间">李宗仁代总统期间</h3>
+<p>如果李宗仁愿意出头，我当然愿意帮助他，为什么，因为他作风民主，许多人都有这一看法。</p>
+<p>薛岳、白崇禧与我，组成一个核心，我们讨论所有的大事。</p>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="./resources/IMG_2506.png"
+        data-srcset="./resources/IMG_2506.png, ./resources/IMG_2506.png 1.5x, ./resources/IMG_2506.png 2x"
+        data-sizes="auto"
+        alt="./resources/IMG_2506.png"
+        title="./resources/IMG_2506.png" />
+<img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="./resources/IMG_2508.png"
+        data-srcset="./resources/IMG_2508.png, ./resources/IMG_2508.png 1.5x, ./resources/IMG_2508.png 2x"
+        data-sizes="auto"
+        alt="./resources/IMG_2508.png"
+        title="./resources/IMG_2508.png" /></p>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="./resources/IMG_2509.png"
+        data-srcset="./resources/IMG_2509.png, ./resources/IMG_2509.png 1.5x, ./resources/IMG_2509.png 2x"
+        data-sizes="auto"
+        alt="./resources/IMG_2509.png"
+        title="./resources/IMG_2509.png" />
+<img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="./resources/IMG_2524.png"
+        data-srcset="./resources/IMG_2524.png, ./resources/IMG_2524.png 1.5x, ./resources/IMG_2524.png 2x"
+        data-sizes="auto"
+        alt="./resources/IMG_2524.png"
+        title="./resources/IMG_2524.png" />
+<img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="./resources/IMG_2511.png"
+        data-srcset="./resources/IMG_2511.png, ./resources/IMG_2511.png 1.5x, ./resources/IMG_2511.png 2x"
+        data-sizes="auto"
+        alt="./resources/IMG_2511.png"
+        title="./resources/IMG_2511.png" />
+<img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="./resources/IMG_2512.png"
+        data-srcset="./resources/IMG_2512.png, ./resources/IMG_2512.png 1.5x, ./resources/IMG_2512.png 2x"
+        data-sizes="auto"
+        alt="./resources/IMG_2512.png"
+        title="./resources/IMG_2512.png" />
+<img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="./resources/IMG_2513.png"
+        data-srcset="./resources/IMG_2513.png, ./resources/IMG_2513.png 1.5x, ./resources/IMG_2513.png 2x"
+        data-sizes="auto"
+        alt="./resources/IMG_2513.png"
+        title="./resources/IMG_2513.png" />
+<img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="./resources/IMG_2514.png"
+        data-srcset="./resources/IMG_2514.png, ./resources/IMG_2514.png 1.5x, ./resources/IMG_2514.png 2x"
+        data-sizes="auto"
+        alt="./resources/IMG_2514.png"
+        title="./resources/IMG_2514.png" />
+<img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="./resources/IMG_2515.png"
+        data-srcset="./resources/IMG_2515.png, ./resources/IMG_2515.png 1.5x, ./resources/IMG_2515.png 2x"
+        data-sizes="auto"
+        alt="./resources/IMG_2515.png"
+        title="./resources/IMG_2515.png" />
+<img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="./resources/IMG_2525.png"
+        data-srcset="./resources/IMG_2525.png, ./resources/IMG_2525.png 1.5x, ./resources/IMG_2525.png 2x"
+        data-sizes="auto"
+        alt="./resources/IMG_2525.png"
+        title="./resources/IMG_2525.png" />
+<img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="./resources/IMG_2526.png"
+        data-srcset="./resources/IMG_2526.png, ./resources/IMG_2526.png 1.5x, ./resources/IMG_2526.png 2x"
+        data-sizes="auto"
+        alt="./resources/IMG_2526.png"
+        title="./resources/IMG_2526.png" />
+<img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="./resources/IMG_2517.png"
+        data-srcset="./resources/IMG_2517.png, ./resources/IMG_2517.png 1.5x, ./resources/IMG_2517.png 2x"
+        data-sizes="auto"
+        alt="./resources/IMG_2517.png"
+        title="./resources/IMG_2517.png" />
+<img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="./resources/IMG_2518.png"
+        data-srcset="./resources/IMG_2518.png, ./resources/IMG_2518.png 1.5x, ./resources/IMG_2518.png 2x"
+        data-sizes="auto"
+        alt="./resources/IMG_2518.png"
+        title="./resources/IMG_2518.png" />
+<img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="./resources/IMG_2519.png"
+        data-srcset="./resources/IMG_2519.png, ./resources/IMG_2519.png 1.5x, ./resources/IMG_2519.png 2x"
+        data-sizes="auto"
+        alt="./resources/IMG_2519.png"
+        title="./resources/IMG_2519.png" />
+<img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="./resources/IMG_2520.png"
+        data-srcset="./resources/IMG_2520.png, ./resources/IMG_2520.png 1.5x, ./resources/IMG_2520.png 2x"
+        data-sizes="auto"
+        alt="./resources/IMG_2520.png"
+        title="./resources/IMG_2520.png" />
+<img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="./resources/IMG_2521.png"
+        data-srcset="./resources/IMG_2521.png, ./resources/IMG_2521.png 1.5x, ./resources/IMG_2521.png 2x"
+        data-sizes="auto"
+        alt="./resources/IMG_2521.png"
+        title="./resources/IMG_2521.png" />
+<img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="./resources/IMG_2522.png"
+        data-srcset="./resources/IMG_2522.png, ./resources/IMG_2522.png 1.5x, ./resources/IMG_2522.png 2x"
+        data-sizes="auto"
+        alt="./resources/IMG_2522.png"
+        title="./resources/IMG_2522.png" />
+<img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="./resources/IMG_2523.png"
+        data-srcset="./resources/IMG_2523.png, ./resources/IMG_2523.png 1.5x, ./resources/IMG_2523.png 2x"
+        data-sizes="auto"
+        alt="./resources/IMG_2523.png"
+        title="./resources/IMG_2523.png" /></p></div><div class="post-footer">
+        <a href="/2023_11_06-%E5%BC%A0%E5%8F%91%E5%A5%8E%E5%8F%A3%E8%BF%B0%E5%8E%86%E5%8F%B2/">Read More</a><div class="post-tags">
+                <i class="fas fa-tags fa-fw" aria-hidden="true"></i>&nbsp;<a href="/tags/%E5%8E%86%E5%8F%B2/">历史</a></div></div>
 </article><article class="single summary" itemscope itemtype="http://schema.org/Article"><h1 class="single-title" itemprop="name headline">
-        <a href="/2020_02_23_bcl2fastq_install/">安装bcl2fastq</a>
-    </h1><div class="post-meta"><span class="post-author"><a href="/" title="Author" rel="author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>entropydecrease</a></span>&nbsp;<span class="post-publish">published on <time datetime="2020-02-23">2020-02-23</time></span>&nbsp;<span class="post-category">included in <a href="/categories/bioinf/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>bioinf</a></span></div><div class="content">安装 1 2 3 4 5 6 7 8 9 10 11 wget ftp://webdata2:webdata2@ussd-ftp.illumina.com/downloads/software/bcl2fastq/bcl2fastq2-v2.17.1.14.tar.zip tar -zxvf bcl2fastq2-v2.17.1.14.tar.zip cd bcl2fastq2 mkdir build; cd build ../src/configure --prefix=$HOME &gt; build.txt.log 2&gt;&amp;1 tail -f build.txt.log 可能出现的问题 CMake complains Required header sys/stat.h not found 1 &gt; sudo apt-get install libc6-dev-amd64 no support for gzip compression 1 &gt; sudo apt-get install zlib1g-dev bcl2fastq also complains no libxml2 and libxslt, but it could build by itself. And the version installed with ubuntu is too new :( 1 &gt; sudo apt-get install gfortran doxygen graphviz </div><div class="post-footer">
-        <a href="/2020_02_23_bcl2fastq_install/">Read More</a></div>
+        <a href="/2023_10_30-huangxuchu/">黄旭初回忆录</a>
+    </h1><div class="post-meta"><span class="post-author"><a href="/" title="Author" rel="author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>entropydecrease</a></span>&nbsp;<span class="post-publish">published on <time datetime="2023-10-30">2023-10-30</time></span>&nbsp;<span class="post-category">included in <a href="/categories/%E8%AF%BB%E4%B9%A6/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>读书</a></span></div><div class="content"><h2 id="北伐完成后的第一幕悲剧">北伐完成后的第一幕悲剧</h2>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="./resources/20231030125000.png"
+        data-srcset="./resources/20231030125000.png, ./resources/20231030125000.png 1.5x, ./resources/20231030125000.png 2x"
+        data-sizes="auto"
+        alt="./resources/20231030125000.png"
+        title="./resources/20231030125000.png" /></p></div><div class="post-footer">
+        <a href="/2023_10_30-huangxuchu/">Read More</a></div>
 </article><article class="single summary" itemscope itemtype="http://schema.org/Article"><h1 class="single-title" itemprop="name headline">
-        <a href="/2020_02_23_ref_genome/">应该使用哪个genome</a>
-    </h1><div class="post-meta"><span class="post-author"><a href="/" title="Author" rel="author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>entropydecrease</a></span>&nbsp;<span class="post-publish">published on <time datetime="2020-02-23">2020-02-23</time></span>&nbsp;<span class="post-category">included in <a href="/categories/bioinf/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>bioinf</a></span></div><div class="content">GRCh37 还是 GRCh38 GRCh37 == hg19，GRCh38 ＝＝ hg38
-理论上来讲，GRCh38是新的人类基因组的参考组装，相对GRCh37(hg19)来说，更接近人类真正的基因组。但是由于历史原因，之前很多的数据库对老版本的GRCh37支持的比较好。 dbSNP和ClinVar已经同时支持 GRCh37和38，但是1k genomes还是对GRCh37支持更好一些.
-我看到有公司还在使用GRCh37，并且声称效果更好。但是，我的看法是，T2T才是未来，现在应该尽早转到GRCh38。
-1k genomes 使用的hs37d5 是什么 1k genomes项目组在做alignment的时候，使用的是hs37d5
-主要是因为在align的时候，有一些reads不能比对到参考基因组上，然后做align的软件就要非费尽心思来给这些reads找次优的位置，而这是非常费时的一步。经过研究发现，这些reads主要是来自于疱疹病毒和一些简单的重复片段，把这些序列加进参考基因组，可以省不少时间，因为一下子就可以找到reads的最优位置，不用费心去找次优位置。
-下面是1k genomes的官方说明
-hs37d5.fa.gz
-Integrated reference sequence from the GRCh37 primary assembly (chromosomal plus unlocalized and unplaced contigs), the rCRS mitochondrial sequence (AC:NC_012920), Human herpesvirus 4 type 1 (AC:NC_007605) and the concatenated decoy sequences (hs37d5cs.fa.gz). This file is compressed by razip from the samtools package for random access. Gzip may complain &ldquo;decompression OK, trailing garbage ignored&rdquo;, but this does not affect the correctness of the decompressed file.</div><div class="post-footer">
-        <a href="/2020_02_23_ref_genome/">Read More</a><div class="post-tags">
-                <i class="fas fa-tags fa-fw" aria-hidden="true"></i>&nbsp;<a href="/tags/genome/">genome</a></div></div>
+        <a href="/2023_10_29-phoneix_project/">凤凰项目-一个IT运维的传奇故事</a>
+    </h1><div class="post-meta"><span class="post-author"><a href="/" title="Author" rel="author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>entropydecrease</a></span>&nbsp;<span class="post-publish">published on <time datetime="2023-10-29">2023-10-29</time></span>&nbsp;<span class="post-category">included in <a href="/categories/%E8%AF%BB%E4%B9%A6/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>读书</a></span></div><div class="content"><ul>
+<li>
+<p>IT不只是一个部门，相反，他就像电力一样无处不在。 IT是一种技能，就像能读会算一样。在xxx公司，我们没有一个集中的阅读或计算部门，我们希望每一个雇员都多少掌握这些技能，理解技术能做什么、不能做什么，已经成为这家公司里每一个部门必须具备的一种核心竞争力。</p>
+</li>
+<li>
+<p>现在我希望看到你成长、学习，并掌握新的技能，对公司提供最好的帮助。</p>
+</li>
+</ul>
+<h2 id="三步工作法流动反馈持续学习与实验">三步工作法：流动、反馈、持续学习与实验</h2>
+<ol>
+<li>
+<p>第一步，实现开发到运维的工作快速地从左向右流动。</p>
+</li>
+<li>
+<p>第二步，在从右向左的每个阶段中，应用持续、快速的工作反馈机制。</p>
+</li>
+<li>
+<p>第三步，建立具有创意和高可信度的企业文化，支持动态的、严格的、科学的实验。通过主动的承担风险，不但能从成功中学习，也能从失败中学习。通过持续的缩短和放大反馈环，不仅能创造更安全的工作系统，也能承担更多的风险，并进行实验帮助自己比竞争对手改进的更快，从而在市场竞争中战胜他们。作为第三步的一部分，我们能够让工作系统事半功倍，将局部优化转化为全局优化。另外不管是谁参与了工作，所有经验都可以持续的累积，组织里的人都可以相互借鉴彼此的经验和智慧。</p>
+</li>
+</ol></div><div class="post-footer">
+        <a href="/2023_10_29-phoneix_project/">Read More</a></div>
 </article><article class="single summary" itemscope itemtype="http://schema.org/Article"><h1 class="single-title" itemprop="name headline">
-        <a href="/2015_12_06-hometown_history/">说说我的家乡，没什么文笔，自娱自乐</a>
-    </h1><div class="post-meta"><span class="post-author"><a href="/" title="Author" rel="author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>entropydecrease</a></span>&nbsp;<span class="post-publish">published on <time datetime="0001-01-01">0001-01-01</time></span>&nbsp;<span class="post-category">included in <a href="/categories/%E9%9A%8F%E7%AC%94/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>随笔</a></span></div><div class="content">我的家乡新郑，洛阳与开封之间、黄河以南四十公里的一个小县，归郑州管辖。
-这个小县，在今天的年代里默默无闻，但是就像河南很多地方一样，过去的千百年里，也有不少历史的风云变幻星河璀璨。“轩辕故里”，或者“黄帝故里”，“郑韩故城”，都是说的新郑。
-新郑有一座山，叫具茨山，是中岳嵩山的余脉，绵延新郑、新密、禹州等几个县，在本县俗称“西南山”，因为山在县城西南，据说是“炎黄子孙”的“黄”的那个轩辕黄帝出生、活动、建都之地。山上有一座轩辕庙，据说还有一些岩画（整个具茨山地区有大规模岩画）。有人曾问为什么山上什么当时的古迹都没有，只有后人留下的，乍一想，也觉得好像少了点什么，不似其它名胜古迹那般丰富，不过再想想，那个时代不可能留下寺庙、道观、园林、字画、雕像，毕竟那时候才传说开始造文字。
-小时候看过一本“轩辕故里的传说”，里面搜集了很多关于的传说，比如黄帝战蚩尤、制鼓、编制历法、造指南车，皇帝的妻子嫘祖养蚕，仓颉造字等。
-黄帝生在新郑，那是怎么死的呢？在传说里，这样神一样的人物，肯定不能像一般人一样死去。于是，在传说里，黄帝在今天河南灵宝的荆山下铸鼎，铸成之后，天上下来神龙把黄帝接走了，人们舍不得皇帝走，赶紧去拉，拉下来了靴子和黄帝的弓，埋在铸鼎的地方作为衣冠冢，就是荆山黄帝陵。史记里有一句“黄帝崩，葬桥山”，陕西的桥山（黄陵县）就也有一个黄帝陵，另外还有河北和甘肃说自己是黄帝陵正宗，不知道真正葬在哪里。
-黄帝以姬为姓，其后代一部分姓姬，还有很多是其他姓的始祖，“黄帝二十五子，其得姓者十四人”，五帝和之后的夏、商、周都是黄帝的后代，周朝也是用姬姓，周武王建立周朝之后分封诸侯的时候，跟周天子同姓的诸侯国有几十个，包括郑国、晋国、鲁国、蔡国等，秦国姓嬴，据说是黄帝的某个儿子的后代。一些国名，后来也演化为姓，比如郑国亡国之后，很多人改姓郑。
-抄一段网上的：
-《姬姓史话》一书中介绍，人口数量排名前300的姓氏中，直接源于姬姓的有120多个。不过，这些姓氏的演化方式不同，大体分为五类。
-第一类是直接发源于黄帝的姓。黄帝直接演化而来的12个姓分别是姬、酉、祁、己、滕、箴、任、荀、僖、姞、儇（xuān）、衣。
-第二类是周王朝分封的53个姬姓诸侯国。当时曹、吴、韩、杨、郑、蔡、晋、魏、沈等都是姬姓国，其国名后来都演化成为姓氏。
-第三类是发源于姬姓的衍生姓氏。直接源于黄帝的12个姓，后来也逐渐分化为其他姓氏。比如，其中的祁姓被尧帝的祖先继承，后来衍生出刘、唐、杜、范、司空等姓；己姓被少昊继承，衍生出张、安、金、苏、温、顾等姓。
-第四类是姬姓族人以祖先或自己的官职、职业、称号、名字、居住地为姓。比如，林姓的一支主要来源是姬姓，其祖先是周平王的庶子姬开。姬开的字是“林”，子孙以其字为氏，称“林氏”，后来演化成为林姓。
-第五类是秦汉之后的改姓。姬传东介绍，姬姓先后经历过四次改姓，其中规模最大的两次，分别发生在东周灭亡时和唐朝中期，“秦灭东周，大多姬姓人改姓为周；唐朝时为避讳李隆基的名字，又有大部分姬姓人改姓为周。”
-之前很多故事都是传说下来的，找不到什么史料。诗经大概算比较早的文字资料了。
-诗经 郑风 溱洧
-溱与洧、方涣涣兮。
-士与女、方秉兰兮。
-女曰观乎。
-士曰既且。
-且往观乎。
-洧之外、洵吁且乐。
-维士与女、伊其相谑、赠之以勺药。
-溱与洧、浏其清矣。
-士与女、殷其盈兮。
-女曰观乎。
-士曰既且。
-且往观乎。
-洧之外、洵吁且乐。
-维士与女、伊其将谑、赠之以勺药。
-大意是说，春天的时候，溱水和洧水汇流的地方，碧波荡漾，年轻男女拿着兰草在河边玩，一个女孩子说，去看吗？男孩子说，已经看过了，女孩子说，再去看看吧。后来玩得很开心，并以芍药相赠订情。
-多么浪漫的故事，里面提到的溱水和洧水，古时候应该是很美丽的河吧。洧水是现在新郑的双洎河（不知道有多少人有和我一样的冲动念“双咱河”的）；溱水，有的说是新郑的黄水河，也有说是隔壁新密县的溱水。
-说到新密，顺便说说郑州的几个县。
-新密和新郑挨着，新密也是最早黄帝活动的区域，也是后来的郑国、韩国的地方；
-巩县（现在叫巩义市），杜甫及其祖父杜审言生在这里，北宋皇陵所在，北宋除了徽钦二帝被掳走，剩下的都在这了，包拯墓也在这；
-登封，有中岳嵩山、少林寺，除此之外，曾经也是夏朝都城，还有郭守敬的观星台；
-中牟，处在郑汴之间，是兵家必争之地，比如官渡之战，沿着黄河往东打开封，一般都在中牟开打，后来岳飞在这打过，李自成在这打过，民国也在这里打过，列子是这里的，“貌若潘安”的“潘安”的祖籍；
-荥阳，鸿沟就是从荥阳引黄河水，经中牟、开封，入颍河而通淮河，陈胜吴广起义后吴广攻荥阳不克死在这，楚汉争霸在这里相持很久，后来以鸿沟为界，三国演义里刘关张三英战吕布的虎牢关就是荥阳的泗水镇。
-另一首诗经里的诗：
-诗经 郑风 野有蔓草
-野有蔓草、零露漙兮。
-有美一人、清扬婉兮。
-邂逅相遇、适我愿兮。
-野有蔓草、零露瀼瀼。
-有美一人、婉如清扬。
-邂逅相遇、与子偕臧。
-天龙八部木婉清的“婉清”二字，估计就是从这里出的。
-还有另外一首我很喜欢的：
-诗经 郑风 子衿
-青青子衿、悠悠我心。
-纵我不往、子宁不嗣音。
-青青子佩、悠悠我思。
-纵我不往、子宁不来。
-挑兮达兮、在城阙兮。
-一日不见、如三月兮。
-左传里面，也有关于新郑的很多故事。
-中学课本有一篇“郑伯克段于鄢”就是出自左传第一篇“隐公元年”，“多行不义必自毙”、“其乐融融”、“黄泉（不及黄泉，无相见也）”就是从这里出的。
-郑国作为和周天子同姓（都姓姬）的诸侯国，刚开始还是比较猛的，隐公三年：“四月，郑祭足帅师取温之麦。秋，又取成周之禾。周、郑交恶。”后来周天子又联合几个诸侯国攻打郑国，被郑国击溃，将士要乘胜追击，郑庄公阻止了，然后派人慰问了周天子及其左右。
-中原小国众多，而且四面都是对手，很难发展起来，不像外围的国家，至少一面或者两面是没有后顾之忧的，专心向中心打就好。战国七雄，都是从外围发展起来的。郑国慢慢衰落了，被秦、晋这些大国欺负。
-抄一段百度：
-在公元前632年（僖公二十八年）发生的城濮（在今河南陈留县）之战中，晋文公战胜楚国，建立了霸业。公元前631年（僖公二十九年），晋、周、鲁、宋、齐、陈、蔡、秦在翟泉（今河南洛阳）会盟，晋国在会上“谋伐郑”。公元前630年（僖公三十年），晋国和秦国合兵围郑。
-郑国被围，烛之武晚上用绳子出城见秦穆公说，你帮晋国把郑国打下来的地方肯定是归晋国（晋国和郑国挨着，秦国和郑国之间比较远，还隔着周天子的洛阳），晋国的实力更强了，秦国相对就弱了，这样对你们没啥好处。假如放郑国一马，我们就是你东边道路上热情好客的主人，以后你的人来往路过，我们管吃管住，这样对你绝对没有坏处啊。文言是：若舍郑以为东道主，行李之往来，共其乏困，君亦无所害。
-所以各位亲爱的朋友们，我们新郑才是世上最早的(被逼出来的)“东道主”。
-然后秦穆公同意了，撤兵，还留下三个将军帮郑国守北门（晋国在郑国的北面）。晋国的将士还想打，晋文公说，我是靠秦穆公才上位的，打他不好，撤了。
-这还没完，后面还有一堆事。</div><div class="post-footer">
-        <a href="/2015_12_06-hometown_history/">Read More</a><div class="post-tags">
-                <i class="fas fa-tags fa-fw" aria-hidden="true"></i>&nbsp;<a href="/tags/%E5%AE%B6%E4%B9%A1/">家乡</a>,&nbsp;<a href="/tags/%E5%8E%86%E5%8F%B2/">历史</a></div></div>
+        <a href="/2023_10_04-theme_loveit/">使用LoveIt作为hugo的主题</a>
+    </h1><div class="post-meta"><span class="post-author"><a href="/" title="Author" rel="author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>entropydecrease</a></span>&nbsp;<span class="post-publish">published on <time datetime="2023-10-04">2023-10-04</time></span>&nbsp;<span class="post-category">included in <a href="/categories/%E5%B7%A5%E5%85%B7/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>工具</a></span></div><div class="content"><p>之前用的even没有维护，已经无法使用，所以找了一下采用loveit。以下是更新方法的简单记录:</p>
+<h2 id="安装">安装</h2>
+<p>简单起见，重新生成hugo site，之后把原来的post都copy过来。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">hugo new site entropydecrease
+</span></span><span class="line"><span class="cl"><span class="nb">cd</span> entropydecrease
+</span></span><span class="line"><span class="cl">git clone https://github.com/dillonzq/LoveIt.git themes/LoveIt
+</span></span><span class="line"><span class="cl">cp -r ../entropydecrease.bak/content/* ./content/
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h2 id="配置">配置</h2>
+<ol>
+<li>
+<p>修改hugo.toml即可</p>
+</li>
+<li>
+<p>因为LoveIt默认文章都是在&rsquo;content/posts/&lsquo;下面的，与even默认&rsquo;content/post/&lsquo;不同，所以要改一下：</p>
+<blockquote>
+<p>mv content/post content/posts</p>
+</blockquote>
+</li>
+<li>
+<p>将hugo输出的静态文件所在的文件夹public/变成一个git 版本库</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">&gt; git clone git@github.com:entropydecrease/entropydecrease.github.io.git public
+</span></span></code></pre></td></tr></table>
+</div>
+</div></li>
+</ol>
+<h2 id="使用">使用</h2>
+<ol>
+<li>
+<p>写文章</p>
+</li>
+<li>
+<p>更新到github</p>
+<p>将下面的命令放在deploy.sh中作为可执行脚本中即可。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">hugo <span class="o">&amp;&amp;</span> <span class="se">\
+</span></span></span><span class="line"><span class="cl"><span class="se"></span><span class="nb">cd</span> public <span class="o">&amp;&amp;</span> <span class="se">\
+</span></span></span><span class="line"><span class="cl"><span class="se"></span>git pull <span class="o">&amp;&amp;</span> git add . <span class="o">&amp;&amp;</span> <span class="se">\
+</span></span></span><span class="line"><span class="cl"><span class="se"></span>git commit -m <span class="s2">&#34;update on [`date`]&#34;</span> 
+</span></span><span class="line"><span class="cl">git push origin main
+</span></span></code></pre></td></tr></table>
+</div>
+</div></li>
+</ol></div><div class="post-footer">
+        <a href="/2023_10_04-theme_loveit/">Read More</a></div>
 </article><article class="single summary" itemscope itemtype="http://schema.org/Article"><h1 class="single-title" itemprop="name headline">
-        <a href="/2015_11_03_a-few-unix-and-shell-tips/">a few Unix and Shell tips</a>
-    </h1><div class="post-meta"><span class="post-author"><a href="/" title="Author" rel="author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>entropydecrease</a></span>&nbsp;<span class="post-publish">published on <time datetime="0001-01-01">0001-01-01</time></span>&nbsp;<span class="post-category">included in <a href="/categories/%E5%B7%A5%E5%85%B7/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>工具</a></span></div><div class="content">automatically attach to a tmux session via SSH 1 2 3 4 5 6 7 alias alias_name=&#39;ssh username@servername -t &#34;tmux attach || tmux&#34; &#39; -t Force pseudo-tty allocation. This can be used to execute arbitrary screen-based programs on a remote machine, which can be very useful, e.g., when implementing menu services. &#34;tmux attach&#34; tries to attach a tmux session. and if it fails, &#34;tmux&#34; will create a new session. to be continued.</div><div class="post-footer">
-        <a href="/2015_11_03_a-few-unix-and-shell-tips/">Read More</a><div class="post-tags">
-                <i class="fas fa-tags fa-fw" aria-hidden="true"></i>&nbsp;<a href="/tags/shell/">shell</a></div></div>
+        <a href="/2023_09_22-rclone_to_replace_sshfs/">Use rclone to replace sshfs on Mac</a>
+    </h1><div class="post-meta"><span class="post-author"><a href="/" title="Author" rel="author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>entropydecrease</a></span>&nbsp;<span class="post-publish">published on <time datetime="2023-09-22">2023-09-22</time></span></div><div class="content"><p>将远程服务器上的文件夹很便捷地通过ssh来挂载到本地，用起来非常方便。但是sshfs已经停止更新，在mac上用brew无法安装。</p>
+<p>其实可以用rclone来完成同样的功能。</p>
+<ol>
+<li>
+<p>install rclone</p>
+<p>mac版需要从其官网下载和安装。</p>
+</li>
+<li>
+<p>rclone config</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">&gt; rclone config
+</span></span><span class="line"><span class="cl">Current remotes:
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">e) Edit existing remote
+</span></span><span class="line"><span class="cl">n) New remote
+</span></span><span class="line"><span class="cl">d) Delete remote
+</span></span><span class="line"><span class="cl">r) Rename remote
+</span></span><span class="line"><span class="cl">c) Copy remote
+</span></span><span class="line"><span class="cl">s) Set configuration password
+</span></span><span class="line"><span class="cl">q) Quit config
+</span></span><span class="line"><span class="cl">e/n/d/r/c/s/q&gt;
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>选择<code>n</code>或<code>e</code>，按照提示操作即可</p>
+</li>
+<li>
+<p>mount</p>
+<p><code>rclone mount host:/path/to/src/dir/ /path/to/local/dir/</code></p>
+<p>这种方法mount之后，命令行并不返回，需要在其他窗口读写远程文件，使用完毕后关闭rclone窗口即可。</p>
+<p>还有一种方法是mount的时候使用<code>--daemon</code>参数</p>
+<p><code>rclone mount --daemon host:/path/to/src/dir/ /path/to/local/dir/</code></p></div><div class="post-footer">
+        <a href="/2023_09_22-rclone_to_replace_sshfs/">Read More</a></div>
 </article><article class="single summary" itemscope itemtype="http://schema.org/Article"><h1 class="single-title" itemprop="name headline">
-        <a href="/2015_05_07_case-insenstivity-on-mac-os-x/">case insensitivity on MAC OS X</a>
-    </h1><div class="post-meta"><span class="post-author"><a href="/" title="Author" rel="author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>entropydecrease</a></span>&nbsp;<span class="post-publish">published on <time datetime="0001-01-01">0001-01-01</time></span>&nbsp;<span class="post-category">included in <a href="/categories/%E5%B7%A5%E5%85%B7/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>工具</a></span></div><div class="content">Note: 新版本的Mac操作系统可能会有不同
-http://apple.stackexchange.com/questions/22297/is-bash-in-osx-case-insensitive
-HFS+ (the Mac filesystem) is usually configured to be case insensitive but case preserving. This means that the file system will consider foo and FoO to be the same, but when you create a new file it will remember which letters where capitalized and which were not. When you format a disk with HFS+ you can chose whether the file system should case sensitive or not. If you chose to format with UFS (Unix FileSystem) it is always case sensitive, AFAIK.</div><div class="post-footer">
-        <a href="/2015_05_07_case-insenstivity-on-mac-os-x/">Read More</a></div>
+        <a href="/2023_09_01-%E6%B2%88%E9%86%89%E5%9B%9E%E5%BF%86%E5%BD%95/">沈醉回忆录读书笔记</a>
+    </h1><div class="post-meta"><span class="post-author"><a href="/" title="Author" rel="author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>entropydecrease</a></span>&nbsp;<span class="post-publish">published on <time datetime="2023-09-01">2023-09-01</time></span>&nbsp;<span class="post-category">included in <a href="/categories/%E8%AF%BB%E4%B9%A6/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>读书</a></span></div><div class="content"><h2 id="笔记几则">笔记几则</h2>
+<ul>
+<li>
+<p>沈醉1914年生，18岁投奔余乐醒(也是一个重要的特务)开始当特务，28岁成为军统局总务处少将处长，1947年成为云南站站长，1949年被迫参加龙云的云南起义，才35岁。后接受改造至1960年释放，之后作为政协文史资料委员会文史委员，文革期间曾入狱。1980年身份由战犯改为起义将领。</p>
+</li>
+<li>
+<p>沈醉曾打电话恐吓宋庆龄，并计划开车撞车宋庆龄以警告，后未实行。</p>
+</li>
+<li>
+<p>沈醉曾受命计划刺杀李宗仁，后未实行。李宗仁回国后曾找沈醉当面了解此事。</p>
+</li>
+<li>
+<p>余乐醒也是一个资深特务，汪精卫初逃至越南时，余赴越南主持刺杀行动。确实汪精卫运气好，躲过多次暗杀，最后一次暗杀也是运气好睡在了隔壁房间。进屋刺杀的特务后来被越南当局囚禁至抗日战争胜利，余在附近指挥故及时逃脱。汪精卫之后也担惊受怕，日本人把汪运走的过程中也担心军统再次袭击，但是可惜军统后来没有再次刺杀。</p>
+</li>
+<li>
+<p>军统当时权力太大，民航的机票、全国水陆交通检查站都是军统的，而且有一个有2000辆汽车的运输队。</p>
+</li>
+<li>
+<p>渣滓洞这个地方原来是一个煤矿，是沈醉选中作为监狱的，煤矿老板被逼死。</p>
+</li>
+<li>
+<p>王耀武杀了方志敏，宋希濂杀了瞿秋白。</p>
+</li>
+<li>
+<p>杜聿明等战犯，被俘后，除了文革期间，没有被刑讯，没有被洗脑，通过自己学习、参观、轻微劳动进行改造。党在这方面，称得上有耐心，有气量。</p>
+</li>
+<li>
+<p>杜聿明出狱后，其在台湾的妻子即经美国辗转回大陆。还有一个例子是末代皇帝溥仪的兄弟溥杰在特赦之后，其在日本的妻子也回到大陆与其团聚。但是还有将领在被俘之后妻子跟副官卷款跑路的。</p>
+</li>
+<li>
+<p>政协文史专员一行人跟溥仪一起去游故宫，需要买票，溥仪说，“到这里来，我还得买门票！？”</p>
+</li>
+<li>
+<p>溥仪，这位被中国共产党改造过来的中国末代皇帝，在文革中死去。</p>
+</li>
+<li>
+<p>徐远举，白公馆和渣滓洞的刽子手，也曾一心悔改，文革中死去。</p>
+</li>
+<li>
+<p>张国焘回忆录中欠缺的一段经历，在军统担任特种政治问题研究室少将主任，丢脸。</p>
+</li>
+<li>
+<p>郑萍如，可能是色戒里汤唯那个角色的原型，只是军统的一个“运用人员”，不是正式人员，后来被沈醉要求补上作为军统在抗战时在沦陷区殉职的烈士，“据认识她的特务告诉我，说她完全是出于爱国和好奇，才去干这一冒生命危险的工作的。”</p>
+</li>
+<li>
+<p>七七事变之后，军统要在日战区设立潜伏组，沈醉任组长，确实潜伏进去了，虽然没有做长。</p>
+</li>
+<li>
+<p>唐生明受蒋介石之命投靠汪精卫，此后在汪伪政权里竟然成为日本人、重庆和南京方面三方优待的对象，甚至可以直接找日本人释放被捕的重庆方面的人，闻所未闻。也反映了蒋介石一直跟日本有联络，投降或者合作，曾经是一种可能。</p>
+</li>
+<li>
+<p>汪伪政权的几个大特务，最后都没有好下场。</p>
+</li>
+<li>
+<p>抗日战争胜利后，唐生明回到重庆，被排挤，由到湖南，然后在解放前夕参加了湖南起义。自云，在汪伪政权任职时，在家里藏了重庆方面的电台，在湖南的时候家里藏了共产党的电台。这个人的故事，后面值得细说。</p>
+</li>
+</ul>
+<h2 id="最大的感触">最大的感触:</h2>
+<ol>
+<li>
+<p>即使穷凶极恶杀人如麻的特务，开始也是抱着一片报国之心，也有很多为国捐躯的，后来变成作威作福、鱼肉百姓，可能是因为人所处位置和拥有的特权所致。就跟文革里面的小将一样，或者现代的城管，有了特权便忘了出身。</p>
+</li>
+<li>
+<p>国民党的将领，最早走上革命道路，其实很多也是为了报效祖国，不是天生的反动派，很多中下层的军人的行为是被大的洪流所裹挟。</p>
+</li>
+</ol></div><div class="post-footer">
+        <a href="/2023_09_01-%E6%B2%88%E9%86%89%E5%9B%9E%E5%BF%86%E5%BD%95/">Read More</a><div class="post-tags">
+                <i class="fas fa-tags fa-fw" aria-hidden="true"></i>&nbsp;<a href="/tags/%E5%8E%86%E5%8F%B2/">历史</a></div></div>
 </article><ul class="pagination"><li class="page-item ">
                     <span class="page-link">
                         <a href="/">1</a>
@@ -220,9 +512,15 @@ HFS+ (the Mac filesystem) is usually configured to be case insensitive but case 
                     <span class="page-link">
                         <a href="/page/7/">7</a>
                     </span>
+                </li><li class="page-item ">
+                    <span class="page-link" aria-hidden="true">&hellip;</span>
+                </li><li class="page-item ">
+                    <span class="page-link">
+                        <a href="/page/11/">11</a>
+                    </span>
                 </li></ul></div></div>
             </main><footer class="footer">
-        <div class="footer-container"><div class="footer-line">Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.113.0">Hugo</a> | Theme - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.2.11"><i class="far fa-kiss-wink-heart fa-fw" aria-hidden="true"></i> LoveIt</a>
+        <div class="footer-container"><div class="footer-line">Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.134.2">Hugo</a> | Theme - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.2.11"><i class="far fa-kiss-wink-heart fa-fw" aria-hidden="true"></i> LoveIt</a>
                 </div><div class="footer-line" itemscope itemtype="http://schema.org/CreativeWork"><i class="far fa-copyright fa-fw" aria-hidden="true"></i><span itemprop="copyrightYear">2015 - 2024</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/" target="_blank">entropydecrease</a></span></div>
         </div>
     </footer></div>

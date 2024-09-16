@@ -1,26 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
+    <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="robots" content="noodp" />
-        <title>破解typora - Entropy Decrease</title><meta name="Description" content="阅读、思考、写作，都是熵减的过程"><meta property="og:title" content="破解typora" />
-<meta property="og:description" content="基于electron的app有一个问题，没有很好的隐藏源码的机制，所以typora收费之后，破解版层出不穷。
+        <title>破解typora - Entropy Decrease</title><meta name="Description" content="阅读、思考、写作，都是熵减的过程"><meta property="og:url" content="http://localhost:1313/2023_02_23_crack_typora/">
+  <meta property="og:site_name" content="Entropy Decrease">
+  <meta property="og:title" content="破解typora">
+  <meta property="og:description" content="基于electron的app有一个问题，没有很好的隐藏源码的机制，所以typora收费之后，破解版层出不穷。
 网上搜了一下，针对Mac：
-官方网站下载typora并安装 打开typora，确定能正常运行，完全退出 修改文件 1 2 3 4 $ cd /Applications/Typora.app/Contents/Resources/TypeMark/page-dist/static/js $ mv LicenseIndex.180dd4c7.c7ff4102.chunk.js LicenseIndex.180dd4c7.c7ff4102.chunk.js.bak $ vim LicenseIndex.180dd4c7.c7ff4102.chunk.js # replace `e.hasActivated=&#34;true&#34;==e.hasActivated` with `e.hasActivated=&#34;true&#34;==&#34;true&#34;` 再打开typora，有可能会有错误信息说文件被修改，但是我打开又关闭几次，不知道怎么弄的，就不再出现此错误信息了。虽然编辑页面右下角显示“unregistered”，但是点击后会显示已经激活。 typora确实好用。假如以后这次破解不能用了，我就买正版了。 " />
-<meta property="og:type" content="article" />
-<meta property="og:url" content="https://entropydecrease.github.io/2023_02_23_crack_typora/" /><meta property="article:section" content="posts" />
-<meta property="article:published_time" content="2023-02-23T00:00:00+00:00" />
-<meta property="article:modified_time" content="2023-02-23T00:00:00+00:00" /><meta property="og:site_name" content="Entropy Decrease" />
-<meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="破解typora"/>
-<meta name="twitter:description" content="基于electron的app有一个问题，没有很好的隐藏源码的机制，所以typora收费之后，破解版层出不穷。
+官方网站下载typora并安装 打开typora，确定能正常运行，完全退出 修改文件 1 2 3 4 $ cd /Applications/Typora.app/Contents/Resources/TypeMark/page-dist/static/js $ mv LicenseIndex.180dd4c7.c7ff4102.chunk.js LicenseIndex.180dd4c7.c7ff4102.chunk.js.bak $ vim LicenseIndex.180dd4c7.c7ff4102.chunk.js # replace `e.hasActivated=&#34;true&#34;==e.hasActivated` with `e.hasActivated=&#34;true&#34;==&#34;true&#34;` 再打开typora，有可能会有错误信息说文件被修改，但是我打开又关闭几次，不知道怎么弄的，就不再出现此错误信息了。虽然编辑页面右下角显示“unregistered”，但是点击后会显示已经激活。 typora确实好用。假如以后这次破解不能用了，我就买正版了。 ">
+  <meta property="og:locale" content="en">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2023-02-23T00:00:00+00:00">
+    <meta property="article:modified_time" content="2023-02-23T00:00:00+00:00">
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="破解typora">
+  <meta name="twitter:description" content="基于electron的app有一个问题，没有很好的隐藏源码的机制，所以typora收费之后，破解版层出不穷。
 网上搜了一下，针对Mac：
-官方网站下载typora并安装 打开typora，确定能正常运行，完全退出 修改文件 1 2 3 4 $ cd /Applications/Typora.app/Contents/Resources/TypeMark/page-dist/static/js $ mv LicenseIndex.180dd4c7.c7ff4102.chunk.js LicenseIndex.180dd4c7.c7ff4102.chunk.js.bak $ vim LicenseIndex.180dd4c7.c7ff4102.chunk.js # replace `e.hasActivated=&#34;true&#34;==e.hasActivated` with `e.hasActivated=&#34;true&#34;==&#34;true&#34;` 再打开typora，有可能会有错误信息说文件被修改，但是我打开又关闭几次，不知道怎么弄的，就不再出现此错误信息了。虽然编辑页面右下角显示“unregistered”，但是点击后会显示已经激活。 typora确实好用。假如以后这次破解不能用了，我就买正版了。 "/>
+官方网站下载typora并安装 打开typora，确定能正常运行，完全退出 修改文件 1 2 3 4 $ cd /Applications/Typora.app/Contents/Resources/TypeMark/page-dist/static/js $ mv LicenseIndex.180dd4c7.c7ff4102.chunk.js LicenseIndex.180dd4c7.c7ff4102.chunk.js.bak $ vim LicenseIndex.180dd4c7.c7ff4102.chunk.js # replace `e.hasActivated=&#34;true&#34;==e.hasActivated` with `e.hasActivated=&#34;true&#34;==&#34;true&#34;` 再打开typora，有可能会有错误信息说文件被修改，但是我打开又关闭几次，不知道怎么弄的，就不再出现此错误信息了。虽然编辑页面右下角显示“unregistered”，但是点击后会显示已经激活。 typora确实好用。假如以后这次破解不能用了，我就买正版了。 ">
 <meta name="application-name" content="Entropy Decrease">
 <meta name="apple-mobile-web-app-title" content="Entropy Decrease"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
         <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="https://entropydecrease.github.io/2023_02_23_crack_typora/" /><link rel="prev" href="https://entropydecrease.github.io/2023_02_16-no_one_cares/" /><link rel="next" href="https://entropydecrease.github.io/2023_03_13_homebrew_new_way_to_use_mirror/" /><link rel="stylesheet" href="/css/style.min.css"><link rel="preload" href="/lib/fontawesome-free/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="http://localhost:1313/2023_02_23_crack_typora/" /><link rel="prev" href="http://localhost:1313/2023_02_16-no_one_cares/" /><link rel="next" href="http://localhost:1313/2023_03_13_homebrew_new_way_to_use_mirror/" /><link rel="stylesheet" href="/css/style.min.css"><link rel="preload" href="/lib/fontawesome-free/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
         <noscript><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"></noscript><link rel="preload" href="/lib/animate/animate.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
         <noscript><link rel="stylesheet" href="/lib/animate/animate.min.css"></noscript><script type="application/ld+json">
     {
@@ -30,9 +34,9 @@
         "inLanguage": "en",
         "mainEntityOfPage": {
             "@type": "WebPage",
-            "@id": "https:\/\/entropydecrease.github.io\/2023_02_23_crack_typora\/"
+            "@id": "http:\/\/localhost:1313\/2023_02_23_crack_typora\/"
         },"genre": "posts","wordcount":  26 ,
-        "url": "https:\/\/entropydecrease.github.io\/2023_02_23_crack_typora\/","datePublished": "2023-02-23T00:00:00+00:00","dateModified": "2023-02-23T00:00:00+00:00","publisher": {
+        "url": "http:\/\/localhost:1313\/2023_02_23_crack_typora\/","datePublished": "2023-02-23T00:00:00+00:00","dateModified": "2023-02-23T00:00:00+00:00","publisher": {
             "@type": "Organization",
             "name": ""},"author": {
                 "@type": "Person",
@@ -147,7 +151,7 @@
         <div class="post-info-line">
             <div class="post-info-md"></div>
             <div class="post-info-share">
-                <span><a href="javascript:void(0);" title="Share on Twitter" data-sharer="twitter" data-url="https://entropydecrease.github.io/2023_02_23_crack_typora/" data-title="破解typora"><i class="fab fa-twitter fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Facebook" data-sharer="facebook" data-url="https://entropydecrease.github.io/2023_02_23_crack_typora/"><i class="fab fa-facebook-square fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Hacker News" data-sharer="hackernews" data-url="https://entropydecrease.github.io/2023_02_23_crack_typora/" data-title="破解typora"><i class="fab fa-hacker-news fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Line" data-sharer="line" data-url="https://entropydecrease.github.io/2023_02_23_crack_typora/" data-title="破解typora"><i data-svg-src="/lib/simple-icons/icons/line.min.svg" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Pocket" data-sharer="pocket" data-url="https://entropydecrease.github.io/2023_02_23_crack_typora/"><i class="fab fa-get-pocket fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on 微博" data-sharer="weibo" data-url="https://entropydecrease.github.io/2023_02_23_crack_typora/" data-title="破解typora"><i class="fab fa-weibo fa-fw" aria-hidden="true"></i></a></span>
+                <span><a href="javascript:void(0);" title="Share on Twitter" data-sharer="twitter" data-url="http://localhost:1313/2023_02_23_crack_typora/" data-title="破解typora"><i class="fab fa-twitter fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Facebook" data-sharer="facebook" data-url="http://localhost:1313/2023_02_23_crack_typora/"><i class="fab fa-facebook-square fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Hacker News" data-sharer="hackernews" data-url="http://localhost:1313/2023_02_23_crack_typora/" data-title="破解typora"><i class="fab fa-hacker-news fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Line" data-sharer="line" data-url="http://localhost:1313/2023_02_23_crack_typora/" data-title="破解typora"><i data-svg-src="/lib/simple-icons/icons/line.min.svg" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Pocket" data-sharer="pocket" data-url="http://localhost:1313/2023_02_23_crack_typora/"><i class="fab fa-get-pocket fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on 微博" data-sharer="weibo" data-url="http://localhost:1313/2023_02_23_crack_typora/" data-title="破解typora"><i class="fab fa-weibo fa-fw" aria-hidden="true"></i></a></span>
             </div>
         </div>
     </div>
@@ -164,7 +168,7 @@
 </div>
 </article></div>
             </main><footer class="footer">
-        <div class="footer-container"><div class="footer-line">Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.113.0">Hugo</a> | Theme - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.2.11"><i class="far fa-kiss-wink-heart fa-fw" aria-hidden="true"></i> LoveIt</a>
+        <div class="footer-container"><div class="footer-line">Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.134.2">Hugo</a> | Theme - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.2.11"><i class="far fa-kiss-wink-heart fa-fw" aria-hidden="true"></i> LoveIt</a>
                 </div><div class="footer-line" itemscope itemtype="http://schema.org/CreativeWork"><i class="far fa-copyright fa-fw" aria-hidden="true"></i><span itemprop="copyrightYear">2015 - 2024</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/" target="_blank">entropydecrease</a></span></div>
         </div>
     </footer></div>

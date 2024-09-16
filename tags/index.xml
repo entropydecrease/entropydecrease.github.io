@@ -3,7 +3,15 @@
         <title>Tags - Tag - Entropy Decrease</title>
         <link>https://entropydecrease.github.io/tags/</link>
         <description>Tags - Tag - Entropy Decrease</description>
-        <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Mon, 06 Nov 2023 00:00:00 &#43;0000</lastBuildDate><atom:link href="https://entropydecrease.github.io/tags/" rel="self" type="application/rss+xml" /><item>
+        <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Mon, 04 Dec 2023 16:46:43 &#43;0000</lastBuildDate><atom:link href="https://entropydecrease.github.io/tags/" rel="self" type="application/rss+xml" /><item>
+    <title>Bioinf</title>
+    <link>https://entropydecrease.github.io/tags/bioinf/</link>
+    <pubDate>Mon, 04 Dec 2023 16:46:43 &#43;0000</pubDate>
+    <author>entropydecrease</author>
+    <guid>https://entropydecrease.github.io/tags/bioinf/</guid>
+    <description><![CDATA[]]></description>
+</item>
+<item>
     <title>历史</title>
     <link>https://entropydecrease.github.io/tags/%E5%8E%86%E5%8F%B2/</link>
     <pubDate>Mon, 06 Nov 2023 00:00:00 &#43;0000</pubDate>
@@ -12,19 +20,11 @@
     <description><![CDATA[]]></description>
 </item>
 <item>
-    <title>tools</title>
+    <title>Tools</title>
     <link>https://entropydecrease.github.io/tags/tools/</link>
     <pubDate>Thu, 15 Jun 2023 00:00:00 &#43;0000</pubDate>
     <author>entropydecrease</author>
     <guid>https://entropydecrease.github.io/tags/tools/</guid>
-    <description><![CDATA[]]></description>
-</item>
-<item>
-    <title>bioinf</title>
-    <link>https://entropydecrease.github.io/tags/bioinf/</link>
-    <pubDate>Wed, 03 May 2023 00:00:00 &#43;0000</pubDate>
-    <author>entropydecrease</author>
-    <guid>https://entropydecrease.github.io/tags/bioinf/</guid>
     <description><![CDATA[]]></description>
 </item>
 <item>
@@ -44,7 +44,7 @@
     <description><![CDATA[]]></description>
 </item>
 <item>
-    <title>datamash</title>
+    <title>Datamash</title>
     <link>https://entropydecrease.github.io/tags/datamash/</link>
     <pubDate>Fri, 28 Apr 2023 00:00:00 &#43;0000</pubDate>
     <author>entropydecrease</author>
@@ -60,7 +60,7 @@
     <description><![CDATA[]]></description>
 </item>
 <item>
-    <title>nanopore</title>
+    <title>Nanopore</title>
     <link>https://entropydecrease.github.io/tags/nanopore/</link>
     <pubDate>Sat, 08 Apr 2023 00:00:00 &#43;0000</pubDate>
     <author>entropydecrease</author>
@@ -68,7 +68,7 @@
     <description><![CDATA[]]></description>
 </item>
 <item>
-    <title>download</title>
+    <title>Download</title>
     <link>https://entropydecrease.github.io/tags/download/</link>
     <pubDate>Tue, 07 Feb 2023 18:25:57 &#43;0800</pubDate>
     <author>entropydecrease</author>
@@ -76,7 +76,7 @@
     <description><![CDATA[]]></description>
 </item>
 <item>
-    <title>elementbio</title>
+    <title>Elementbio</title>
     <link>https://entropydecrease.github.io/tags/elementbio/</link>
     <pubDate>Sat, 19 Nov 2022 00:00:00 &#43;0000</pubDate>
     <author>entropydecrease</author>

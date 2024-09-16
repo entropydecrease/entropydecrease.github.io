@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="robots" content="noodp" />
+        <title>Use rclone to replace sshfs on Mac - Entropy Decrease</title><meta name="Description" content="阅读、思考、写作，都是熵减的过程"><meta property="og:url" content="https://entropydecrease.github.io/2023_09_22-rclone_to_replace_sshfs/">
+  <meta property="og:site_name" content="Entropy Decrease">
+  <meta property="og:title" content="Use rclone to replace sshfs on Mac">
+  <meta property="og:description" content="将远程服务器上的文件夹很便捷地通过ssh来挂载到本地，用起来非常方便。但是sshfs已经停止更新，在mac上用brew无法安装。
+其实可以用rclone来完成同样的功能。
+install rclone
+mac版需要从其官网下载和安装。
+rclone config
+1 2 3 4 5 6 7 8 9 10 11 &gt; rclone config Current remotes: e) Edit existing remote n) New remote d) Delete remote r) Rename remote c) Copy remote s) Set configuration password q) Quit config e/n/d/r/c/s/q&gt; 选择n或e，按照提示操作即可
+mount
+rclone mount host:/path/to/src/dir/ /path/to/local/dir/
+这种方法mount之后，命令行并不返回，需要在其他窗口读写远程文件，使用完毕后关闭rclone窗口即可。
+还有一种方法是mount的时候使用--daemon参数
+rclone mount --daemon host:/path/to/src/dir/ /path/to/local/dir/">
+  <meta property="og:locale" content="en">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2023-09-22T18:05:35+08:00">
+    <meta property="article:modified_time" content="2023-09-22T18:05:35+08:00">
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Use rclone to replace sshfs on Mac">
+  <meta name="twitter:description" content="将远程服务器上的文件夹很便捷地通过ssh来挂载到本地，用起来非常方便。但是sshfs已经停止更新，在mac上用brew无法安装。
+其实可以用rclone来完成同样的功能。
+install rclone
+mac版需要从其官网下载和安装。
+rclone config
+1 2 3 4 5 6 7 8 9 10 11 &gt; rclone config Current remotes: e) Edit existing remote n) New remote d) Delete remote r) Rename remote c) Copy remote s) Set configuration password q) Quit config e/n/d/r/c/s/q&gt; 选择n或e，按照提示操作即可
+mount
+rclone mount host:/path/to/src/dir/ /path/to/local/dir/
+这种方法mount之后，命令行并不返回，需要在其他窗口读写远程文件，使用完毕后关闭rclone窗口即可。
+还有一种方法是mount的时候使用--daemon参数
+rclone mount --daemon host:/path/to/src/dir/ /path/to/local/dir/">
+<meta name="application-name" content="Entropy Decrease">
+<meta name="apple-mobile-web-app-title" content="Entropy Decrease"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="https://entropydecrease.github.io/2023_09_22-rclone_to_replace_sshfs/" /><link rel="prev" href="https://entropydecrease.github.io/2023_09_01-%E6%B2%88%E9%86%89%E5%9B%9E%E5%BF%86%E5%BD%95/" /><link rel="next" href="https://entropydecrease.github.io/2023_10_04-theme_loveit/" /><link rel="stylesheet" href="/css/style.min.css"><link rel="preload" href="/lib/fontawesome-free/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"></noscript><link rel="preload" href="/lib/animate/animate.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript><link rel="stylesheet" href="/lib/animate/animate.min.css"></noscript><script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "headline": "Use rclone to replace sshfs on Mac",
+        "inLanguage": "en",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https:\/\/entropydecrease.github.io\/2023_09_22-rclone_to_replace_sshfs\/"
+        },"genre": "posts","wordcount":  63 ,
+        "url": "https:\/\/entropydecrease.github.io\/2023_09_22-rclone_to_replace_sshfs\/","datePublished": "2023-09-22T18:05:35+08:00","dateModified": "2023-09-22T18:05:35+08:00","publisher": {
+            "@type": "Organization",
+            "name": ""},"author": {
+                "@type": "Person",
+                "name": "entropydecrease"
+            },"description": ""
+    }
+    </script></head>
+    <body data-header-desktop="fixed" data-header-mobile="auto"><script type="text/javascript">(window.localStorage && localStorage.getItem('theme') ? localStorage.getItem('theme') === 'dark' : ('auto' === 'auto' ? window.matchMedia('(prefers-color-scheme: dark)').matches : 'auto' === 'dark')) && document.body.setAttribute('theme', 'dark');</script>
+
+        <div id="mask"></div><div class="wrapper"><header class="desktop" id="header-desktop">
+    <div class="header-wrapper">
+        <div class="header-title">
+            <a href="/" title="Entropy Decrease">Entropy Decrease</a>
+        </div>
+        <div class="menu">
+            <div class="menu-inner"><a class="menu-item" href="/"> Home </a><a class="menu-item" href="/posts/"> Posts </a><a class="menu-item" href="/tags/"> Tags </a><a class="menu-item" href="/categories/"> Categories </a><a class="menu-item" href="/about"> About </a><span class="menu-item delimiter"></span><span class="menu-item search" id="search-desktop">
+                        <input type="text" placeholder="Search titles or contents..." id="search-input-desktop">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-desktop" title="Search">
+                            <i class="fas fa-search fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-desktop" title="Clear">
+                            <i class="fas fa-times-circle fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-desktop">
+                            <i class="fas fa-spinner fa-fw fa-spin" aria-hidden="true"></i>
+                        </span>
+                    </span><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
+                    <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
+                </a></div>
+        </div>
+    </div>
+</header><header class="mobile" id="header-mobile">
+    <div class="header-container">
+        <div class="header-wrapper">
+            <div class="header-title">
+                <a href="/" title="Entropy Decrease">Entropy Decrease</a>
+            </div>
+            <div class="menu-toggle" id="menu-toggle-mobile">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+        <div class="menu" id="menu-mobile"><div class="search-wrapper">
+                    <div class="search mobile" id="search-mobile">
+                        <input type="text" placeholder="Search titles or contents..." id="search-input-mobile">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-mobile" title="Search">
+                            <i class="fas fa-search fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-mobile" title="Clear">
+                            <i class="fas fa-times-circle fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-mobile">
+                            <i class="fas fa-spinner fa-fw fa-spin" aria-hidden="true"></i>
+                        </span>
+                    </div>
+                    <a href="javascript:void(0);" class="search-cancel" id="search-cancel-mobile">
+                        Cancel
+                    </a>
+                </div><a class="menu-item" href="/" title="">Home</a><a class="menu-item" href="/posts/" title="">Posts</a><a class="menu-item" href="/tags/" title="">Tags</a><a class="menu-item" href="/categories/" title="">Categories</a><a class="menu-item" href="/about" title="">About</a><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
+                <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
+            </a></div>
+    </div>
+</header><div class="search-dropdown desktop">
+        <div id="search-dropdown-desktop"></div>
+    </div>
+    <div class="search-dropdown mobile">
+        <div id="search-dropdown-mobile"></div>
+    </div><main class="main">
+                <div class="container"><div class="toc" id="toc-auto">
+            <h2 class="toc-title">Contents</h2>
+            <div class="toc-content" id="toc-content-auto"></div>
+        </div><article class="page single"><h1 class="single-title animate__animated animate__flipInX">Use rclone to replace sshfs on Mac</h1><div class="post-meta">
+            <div class="post-meta-line"><span class="post-author"><a href="/" title="Author" rel="author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>entropydecrease</a></span></div>
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw" aria-hidden="true"></i>&nbsp;<time datetime="2023-09-22">2023-09-22</time>&nbsp;<i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>&nbsp;63 words&nbsp;
+                <i class="far fa-clock fa-fw" aria-hidden="true"></i>&nbsp;One minute&nbsp;</div>
+        </div><div class="details toc" id="toc-static"  data-kept="">
+                <div class="details-summary toc-title">
+                    <span>Contents</span>
+                    <span><i class="details-icon fas fa-angle-right" aria-hidden="true"></i></span>
+                </div>
+                <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents"></nav></div>
+            </div><div class="content" id="content"><p>将远程服务器上的文件夹很便捷地通过ssh来挂载到本地，用起来非常方便。但是sshfs已经停止更新，在mac上用brew无法安装。</p>
+<p>其实可以用rclone来完成同样的功能。</p>
+<ol>
+<li>
+<p>install rclone</p>
+<p>mac版需要从其官网下载和安装。</p>
+</li>
+<li>
+<p>rclone config</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">&gt; rclone config
+</span></span><span class="line"><span class="cl">Current remotes:
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">e) Edit existing remote
+</span></span><span class="line"><span class="cl">n) New remote
+</span></span><span class="line"><span class="cl">d) Delete remote
+</span></span><span class="line"><span class="cl">r) Rename remote
+</span></span><span class="line"><span class="cl">c) Copy remote
+</span></span><span class="line"><span class="cl">s) Set configuration password
+</span></span><span class="line"><span class="cl">q) Quit config
+</span></span><span class="line"><span class="cl">e/n/d/r/c/s/q&gt;
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>选择<code>n</code>或<code>e</code>，按照提示操作即可</p>
+</li>
+<li>
+<p>mount</p>
+<p><code>rclone mount host:/path/to/src/dir/ /path/to/local/dir/</code></p>
+<p>这种方法mount之后，命令行并不返回，需要在其他窗口读写远程文件，使用完毕后关闭rclone窗口即可。</p>
+<p>还有一种方法是mount的时候使用<code>--daemon</code>参数</p>
+<p><code>rclone mount --daemon host:/path/to/src/dir/ /path/to/local/dir/</code></p>
+<p>使用完毕后需手动umount：</p>
+<p><code>umount /path/to/local/dir/</code></p>
+</li>
+</ol>
+</div><div class="post-footer" id="post-footer">
+    <div class="post-info">
+        <div class="post-info-line">
+            <div class="post-info-mod">
+                <span>Updated on 2023-09-22</span>
+            </div></div>
+        <div class="post-info-line">
+            <div class="post-info-md"></div>
+            <div class="post-info-share">
+                <span><a href="javascript:void(0);" title="Share on Twitter" data-sharer="twitter" data-url="https://entropydecrease.github.io/2023_09_22-rclone_to_replace_sshfs/" data-title="Use rclone to replace sshfs on Mac"><i class="fab fa-twitter fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Facebook" data-sharer="facebook" data-url="https://entropydecrease.github.io/2023_09_22-rclone_to_replace_sshfs/"><i class="fab fa-facebook-square fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Hacker News" data-sharer="hackernews" data-url="https://entropydecrease.github.io/2023_09_22-rclone_to_replace_sshfs/" data-title="Use rclone to replace sshfs on Mac"><i class="fab fa-hacker-news fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Line" data-sharer="line" data-url="https://entropydecrease.github.io/2023_09_22-rclone_to_replace_sshfs/" data-title="Use rclone to replace sshfs on Mac"><i data-svg-src="/lib/simple-icons/icons/line.min.svg" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Pocket" data-sharer="pocket" data-url="https://entropydecrease.github.io/2023_09_22-rclone_to_replace_sshfs/"><i class="fab fa-get-pocket fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on 微博" data-sharer="weibo" data-url="https://entropydecrease.github.io/2023_09_22-rclone_to_replace_sshfs/" data-title="Use rclone to replace sshfs on Mac"><i class="fab fa-weibo fa-fw" aria-hidden="true"></i></a></span>
+            </div>
+        </div>
+    </div>
+
+    <div class="post-info-more">
+        <section class="post-tags"></section>
+        <section>
+            <span><a href="javascript:void(0);" onclick="window.history.back();">Back</a></span>&nbsp;|&nbsp;<span><a href="/">Home</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav"><a href="/2023_09_01-%E6%B2%88%E9%86%89%E5%9B%9E%E5%BF%86%E5%BD%95/" class="prev" rel="prev" title="沈醉回忆录读书笔记"><i class="fas fa-angle-left fa-fw" aria-hidden="true"></i>沈醉回忆录读书笔记</a>
+            <a href="/2023_10_04-theme_loveit/" class="next" rel="next" title="使用LoveIt作为hugo的主题">使用LoveIt作为hugo的主题<i class="fas fa-angle-right fa-fw" aria-hidden="true"></i></a></div>
+</div>
+</article></div>
+            </main><footer class="footer">
+        <div class="footer-container"><div class="footer-line">Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.134.2">Hugo</a> | Theme - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.2.11"><i class="far fa-kiss-wink-heart fa-fw" aria-hidden="true"></i> LoveIt</a>
+                </div><div class="footer-line" itemscope itemtype="http://schema.org/CreativeWork"><i class="far fa-copyright fa-fw" aria-hidden="true"></i><span itemprop="copyrightYear">2015 - 2024</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/" target="_blank">entropydecrease</a></span></div>
+        </div>
+    </footer></div>
+
+        <div id="fixed-buttons"><a href="#" id="back-to-top" class="fixed-button" title="Back to Top">
+                <i class="fas fa-arrow-up fa-fw" aria-hidden="true"></i>
+            </a><a href="#" id="view-comments" class="fixed-button" title="View Comments">
+                <i class="fas fa-comment fa-fw" aria-hidden="true"></i>
+            </a>
+        </div><link rel="stylesheet" href="/lib/katex/katex.min.css"><script type="text/javascript" src="/lib/autocomplete/autocomplete.min.js"></script><script type="text/javascript" src="/lib/lunr/lunr.min.js"></script><script type="text/javascript" src="/lib/lazysizes/lazysizes.min.js"></script><script type="text/javascript" src="/lib/clipboard/clipboard.min.js"></script><script type="text/javascript" src="/lib/sharer/sharer.min.js"></script><script type="text/javascript" src="/lib/katex/katex.min.js"></script><script type="text/javascript" src="/lib/katex/contrib/auto-render.min.js"></script><script type="text/javascript" src="/lib/katex/contrib/copy-tex.min.js"></script><script type="text/javascript" src="/lib/katex/contrib/mhchem.min.js"></script><script type="text/javascript">window.config={"code":{"copyTitle":"Copy to clipboard","maxShownLines":50},"comment":{},"math":{"delimiters":[{"display":true,"left":"$$","right":"$$"},{"display":true,"left":"\\[","right":"\\]"},{"display":true,"left":"\\begin{equation}","right":"\\end{equation}"},{"display":true,"left":"\\begin{equation*}","right":"\\end{equation*}"},{"display":true,"left":"\\begin{align}","right":"\\end{align}"},{"display":true,"left":"\\begin{align*}","right":"\\end{align*}"},{"display":true,"left":"\\begin{alignat}","right":"\\end{alignat}"},{"display":true,"left":"\\begin{alignat*}","right":"\\end{alignat*}"},{"display":true,"left":"\\begin{gather}","right":"\\end{gather}"},{"display":true,"left":"\\begin{CD}","right":"\\end{CD}"},{"display":false,"left":"$","right":"$"},{"display":false,"left":"\\(","right":"\\)"}],"strict":false},"search":{"highlightTag":"em","lunrIndexURL":"/index.json","maxResultLength":10,"noResultsFound":"No results found","snippetLength":30,"type":"lunr"}};</script><script type="text/javascript" src="/js/theme.min.js"></script></body>
+</html>

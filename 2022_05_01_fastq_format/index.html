@@ -1,26 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
+    <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="robots" content="noodp" />
-        <title>fastq文件格式 - Entropy Decrease</title><meta name="Description" content="阅读、思考、写作，都是熵减的过程"><meta property="og:title" content="fastq文件格式" />
-<meta property="og:description" content="https://help.basespace.illumina.com/articles/descriptive/fastq-files/
+        <title>fastq文件格式 - Entropy Decrease</title><meta name="Description" content="阅读、思考、写作，都是熵减的过程"><meta property="og:url" content="http://localhost:1313/2022_05_01_fastq_format/">
+  <meta property="og:site_name" content="Entropy Decrease">
+  <meta property="og:title" content="fastq文件格式">
+  <meta property="og:description" content="https://help.basespace.illumina.com/articles/descriptive/fastq-files/
 fastq文件的命名 示例：Data\Intensities\BaseCalls\samplename_S1_L001_R1_001.fastq.gz
-* samplename - The sample name provided in the sample sheet. If a sample name is not provided, the file name includes the sample ID, which is a required field in the sample sheet and must be unique. * S1 — The sample number based on the order that samples are listed in the sample sheet starting with 1. In this example, S1 indicates that this sample is the first sample listed in the sample sheet." />
-<meta property="og:type" content="article" />
-<meta property="og:url" content="https://entropydecrease.github.io/2022_05_01_fastq_format/" /><meta property="article:section" content="posts" />
-<meta property="article:published_time" content="2022-05-01T00:00:00+00:00" />
-<meta property="article:modified_time" content="2022-05-01T00:00:00+00:00" /><meta property="og:site_name" content="Entropy Decrease" />
-<meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="fastq文件格式"/>
-<meta name="twitter:description" content="https://help.basespace.illumina.com/articles/descriptive/fastq-files/
+* samplename - The sample name provided in the sample sheet. If a sample name is not provided, the file name includes the sample ID, which is a required field in the sample sheet and must be unique. * S1 — The sample number based on the order that samples are listed in the sample sheet starting with 1. In this example, S1 indicates that this sample is the first sample listed in the sample sheet. [^1] Reads that cannot be assigned to any sample are written to a FASTQ file for sample number 0, and excluded from downstream analysis. * L001—The lane number. * R1—The read. In this example, R1 means Read 1. For a paired-end run, there is at least one file with R2 in the file name for Read 2. * 001—The last segment is always 001. 一个例子 注意read number之前的空格">
+  <meta property="og:locale" content="en">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2022-05-01T00:00:00+00:00">
+    <meta property="article:modified_time" content="2022-05-01T00:00:00+00:00">
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="fastq文件格式">
+  <meta name="twitter:description" content="https://help.basespace.illumina.com/articles/descriptive/fastq-files/
 fastq文件的命名 示例：Data\Intensities\BaseCalls\samplename_S1_L001_R1_001.fastq.gz
-* samplename - The sample name provided in the sample sheet. If a sample name is not provided, the file name includes the sample ID, which is a required field in the sample sheet and must be unique. * S1 — The sample number based on the order that samples are listed in the sample sheet starting with 1. In this example, S1 indicates that this sample is the first sample listed in the sample sheet."/>
+* samplename - The sample name provided in the sample sheet. If a sample name is not provided, the file name includes the sample ID, which is a required field in the sample sheet and must be unique. * S1 — The sample number based on the order that samples are listed in the sample sheet starting with 1. In this example, S1 indicates that this sample is the first sample listed in the sample sheet. [^1] Reads that cannot be assigned to any sample are written to a FASTQ file for sample number 0, and excluded from downstream analysis. * L001—The lane number. * R1—The read. In this example, R1 means Read 1. For a paired-end run, there is at least one file with R2 in the file name for Read 2. * 001—The last segment is always 001. 一个例子 注意read number之前的空格">
 <meta name="application-name" content="Entropy Decrease">
 <meta name="apple-mobile-web-app-title" content="Entropy Decrease"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
         <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="https://entropydecrease.github.io/2022_05_01_fastq_format/" /><link rel="prev" href="https://entropydecrease.github.io/2022_05_01_af_only_gnomad/" /><link rel="next" href="https://entropydecrease.github.io/2022_11_19-elementbio_intro/" /><link rel="stylesheet" href="/css/style.min.css"><link rel="preload" href="/lib/fontawesome-free/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="http://localhost:1313/2022_05_01_fastq_format/" /><link rel="prev" href="http://localhost:1313/2022_05_01_af_only_gnomad/" /><link rel="next" href="http://localhost:1313/2022_11_19-elementbio_intro/" /><link rel="stylesheet" href="/css/style.min.css"><link rel="preload" href="/lib/fontawesome-free/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
         <noscript><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"></noscript><link rel="preload" href="/lib/animate/animate.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
         <noscript><link rel="stylesheet" href="/lib/animate/animate.min.css"></noscript><script type="application/ld+json">
     {
@@ -30,9 +34,9 @@ fastq文件的命名 示例：Data\Intensities\BaseCalls\samplename_S1_L001_R1_0
         "inLanguage": "en",
         "mainEntityOfPage": {
             "@type": "WebPage",
-            "@id": "https:\/\/entropydecrease.github.io\/2022_05_01_fastq_format\/"
+            "@id": "http:\/\/localhost:1313\/2022_05_01_fastq_format\/"
         },"genre": "posts","wordcount":  385 ,
-        "url": "https:\/\/entropydecrease.github.io\/2022_05_01_fastq_format\/","datePublished": "2022-05-01T00:00:00+00:00","dateModified": "2022-05-01T00:00:00+00:00","publisher": {
+        "url": "http:\/\/localhost:1313\/2022_05_01_fastq_format\/","datePublished": "2022-05-01T00:00:00+00:00","dateModified": "2022-05-01T00:00:00+00:00","publisher": {
             "@type": "Organization",
             "name": ""},"author": {
                 "@type": "Person",
@@ -104,7 +108,7 @@ fastq文件的命名 示例：Data\Intensities\BaseCalls\samplename_S1_L001_R1_0
             <h2 class="toc-title">Contents</h2>
             <div class="toc-content" id="toc-content-auto"></div>
         </div><article class="page single"><h1 class="single-title animate__animated animate__flipInX">fastq文件格式</h1><div class="post-meta">
-            <div class="post-meta-line"><span class="post-author"><a href="/" title="Author" rel="author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>entropydecrease</a></span>&nbsp;<span class="post-category">included in <a href="/categories/bioinf/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>bioinf</a></span></div>
+            <div class="post-meta-line"><span class="post-author"><a href="/" title="Author" rel="author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>entropydecrease</a></span>&nbsp;<span class="post-category">included in <a href="/categories/bioinf/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>Bioinf</a></span></div>
             <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw" aria-hidden="true"></i>&nbsp;<time datetime="2022-05-01">2022-05-01</time>&nbsp;<i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>&nbsp;385 words&nbsp;
                 <i class="far fa-clock fa-fw" aria-hidden="true"></i>&nbsp;2 minutes&nbsp;</div>
         </div><div class="details toc" id="toc-static"  data-kept="">
@@ -168,75 +172,75 @@ TCGCACTCAACGCCCTGCATATGACAAGACAGAATC
 </blockquote>
 <p>各字段定义：</p>
 <table>
-<thead>
-<tr>
-<th>Element</th>
-<th>Requirements</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>@</td>
-<td>@</td>
-<td>Each sequence identifier line starts with @</td>
-</tr>
-<tr>
-<td><code>&lt;instrument&gt;</code></td>
-<td>Characters allowed: a–z, A–Z, 0–9 and underscore</td>
-<td>Instrument ID</td>
-</tr>
-<tr>
-<td><code>&lt;run number&gt;</code></td>
-<td>Numerical</td>
-<td>Run number on instrument</td>
-</tr>
-<tr>
-<td><code>&lt;flowcell ID&gt;</code></td>
-<td>Characters allowed: a–z, A–Z, 0–9</td>
-<td></td>
-</tr>
-<tr>
-<td><code>&lt;lane&gt;</code></td>
-<td>Numerical</td>
-<td>Lane number</td>
-</tr>
-<tr>
-<td><code>&lt;tile&gt;</code></td>
-<td>Numerical</td>
-<td>Tile number</td>
-</tr>
-<tr>
-<td><code>&lt;x_pos&gt;</code></td>
-<td>Numerical</td>
-<td>Run number on instrument</td>
-</tr>
-<tr>
-<td><code>&lt;y_pos&gt;</code></td>
-<td>Numerical</td>
-<td>X coordinate of cluster</td>
-</tr>
-<tr>
-<td><code>&lt;read&gt;</code></td>
-<td>Numerical</td>
-<td>Read number. 1 can be single read or Read 2 of paired-end</td>
-</tr>
-<tr>
-<td><code>&lt;is filtered&gt;</code></td>
-<td>Y or N</td>
-<td>Y if the read is filtered (did not pass), N otherwise</td>
-</tr>
-<tr>
-<td><code>&lt;control number&gt;</code></td>
-<td>Numerical</td>
-<td>0 when none of the control bits are on, otherwise it is an even number. On HiSeq X systems, control specification is not performed and this number is always 0.</td>
-</tr>
-<tr>
-<td><code>&lt;sample number&gt;</code></td>
-<td>Numerical</td>
-<td>Sample number from sample sheet</td>
-</tr>
-</tbody>
+  <thead>
+      <tr>
+          <th style="text-align: left">Element</th>
+          <th style="text-align: left">Requirements</th>
+          <th style="text-align: left">Description</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td style="text-align: left">@</td>
+          <td style="text-align: left">@</td>
+          <td style="text-align: left">Each sequence identifier line starts with @</td>
+      </tr>
+      <tr>
+          <td style="text-align: left"><code>&lt;instrument&gt;</code></td>
+          <td style="text-align: left">Characters allowed: a–z, A–Z, 0–9 and underscore</td>
+          <td style="text-align: left">Instrument ID</td>
+      </tr>
+      <tr>
+          <td style="text-align: left"><code>&lt;run number&gt;</code></td>
+          <td style="text-align: left">Numerical</td>
+          <td style="text-align: left">Run number on instrument</td>
+      </tr>
+      <tr>
+          <td style="text-align: left"><code>&lt;flowcell ID&gt;</code></td>
+          <td style="text-align: left">Characters allowed: a–z, A–Z, 0–9</td>
+          <td style="text-align: left"></td>
+      </tr>
+      <tr>
+          <td style="text-align: left"><code>&lt;lane&gt;</code></td>
+          <td style="text-align: left">Numerical</td>
+          <td style="text-align: left">Lane number</td>
+      </tr>
+      <tr>
+          <td style="text-align: left"><code>&lt;tile&gt;</code></td>
+          <td style="text-align: left">Numerical</td>
+          <td style="text-align: left">Tile number</td>
+      </tr>
+      <tr>
+          <td style="text-align: left"><code>&lt;x_pos&gt;</code></td>
+          <td style="text-align: left">Numerical</td>
+          <td style="text-align: left">Run number on instrument</td>
+      </tr>
+      <tr>
+          <td style="text-align: left"><code>&lt;y_pos&gt;</code></td>
+          <td style="text-align: left">Numerical</td>
+          <td style="text-align: left">X coordinate of cluster</td>
+      </tr>
+      <tr>
+          <td style="text-align: left"><code>&lt;read&gt;</code></td>
+          <td style="text-align: left">Numerical</td>
+          <td style="text-align: left">Read number. 1 can be single read or Read 2 of paired-end</td>
+      </tr>
+      <tr>
+          <td style="text-align: left"><code>&lt;is filtered&gt;</code></td>
+          <td style="text-align: left">Y or N</td>
+          <td style="text-align: left">Y if the read is filtered (did not pass), N otherwise</td>
+      </tr>
+      <tr>
+          <td style="text-align: left"><code>&lt;control number&gt;</code></td>
+          <td style="text-align: left">Numerical</td>
+          <td style="text-align: left">0 when none of the control bits are on, otherwise it is an even number. On HiSeq X systems, control specification is not performed and this number is always 0.</td>
+      </tr>
+      <tr>
+          <td style="text-align: left"><code>&lt;sample number&gt;</code></td>
+          <td style="text-align: left">Numerical</td>
+          <td style="text-align: left">Sample number from sample sheet</td>
+      </tr>
+  </tbody>
 </table>
 <h3 id="control-values">Control values</h3>
 <p>If the read is not identified as a control, then the 10th column (<control number>) is zero. If the read is identified as a control, the number is greater than zero, and the value specifies what type of control it is. The value is the decimal representation of a bit-wise encoding scheme. In that scheme bit 0 has a decimal value of 1, bit 1 a value of 2, bit 2 a value of 4, and so on.</p>
@@ -249,7 +253,7 @@ TCGCACTCAACGCCCTGCATATGACAAGACAGAATC
         <div class="post-info-line">
             <div class="post-info-md"></div>
             <div class="post-info-share">
-                <span><a href="javascript:void(0);" title="Share on Twitter" data-sharer="twitter" data-url="https://entropydecrease.github.io/2022_05_01_fastq_format/" data-title="fastq文件格式"><i class="fab fa-twitter fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Facebook" data-sharer="facebook" data-url="https://entropydecrease.github.io/2022_05_01_fastq_format/"><i class="fab fa-facebook-square fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Hacker News" data-sharer="hackernews" data-url="https://entropydecrease.github.io/2022_05_01_fastq_format/" data-title="fastq文件格式"><i class="fab fa-hacker-news fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Line" data-sharer="line" data-url="https://entropydecrease.github.io/2022_05_01_fastq_format/" data-title="fastq文件格式"><i data-svg-src="/lib/simple-icons/icons/line.min.svg" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Pocket" data-sharer="pocket" data-url="https://entropydecrease.github.io/2022_05_01_fastq_format/"><i class="fab fa-get-pocket fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on 微博" data-sharer="weibo" data-url="https://entropydecrease.github.io/2022_05_01_fastq_format/" data-title="fastq文件格式"><i class="fab fa-weibo fa-fw" aria-hidden="true"></i></a></span>
+                <span><a href="javascript:void(0);" title="Share on Twitter" data-sharer="twitter" data-url="http://localhost:1313/2022_05_01_fastq_format/" data-title="fastq文件格式"><i class="fab fa-twitter fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Facebook" data-sharer="facebook" data-url="http://localhost:1313/2022_05_01_fastq_format/"><i class="fab fa-facebook-square fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Hacker News" data-sharer="hackernews" data-url="http://localhost:1313/2022_05_01_fastq_format/" data-title="fastq文件格式"><i class="fab fa-hacker-news fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Line" data-sharer="line" data-url="http://localhost:1313/2022_05_01_fastq_format/" data-title="fastq文件格式"><i data-svg-src="/lib/simple-icons/icons/line.min.svg" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Pocket" data-sharer="pocket" data-url="http://localhost:1313/2022_05_01_fastq_format/"><i class="fab fa-get-pocket fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on 微博" data-sharer="weibo" data-url="http://localhost:1313/2022_05_01_fastq_format/" data-title="fastq文件格式"><i class="fab fa-weibo fa-fw" aria-hidden="true"></i></a></span>
             </div>
         </div>
     </div>
@@ -266,7 +270,7 @@ TCGCACTCAACGCCCTGCATATGACAAGACAGAATC
 </div>
 </article></div>
             </main><footer class="footer">
-        <div class="footer-container"><div class="footer-line">Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.113.0">Hugo</a> | Theme - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.2.11"><i class="far fa-kiss-wink-heart fa-fw" aria-hidden="true"></i> LoveIt</a>
+        <div class="footer-container"><div class="footer-line">Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.134.2">Hugo</a> | Theme - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.2.11"><i class="far fa-kiss-wink-heart fa-fw" aria-hidden="true"></i> LoveIt</a>
                 </div><div class="footer-line" itemscope itemtype="http://schema.org/CreativeWork"><i class="far fa-copyright fa-fw" aria-hidden="true"></i><span itemprop="copyrightYear">2015 - 2024</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/" target="_blank">entropydecrease</a></span></div>
         </div>
     </footer></div>

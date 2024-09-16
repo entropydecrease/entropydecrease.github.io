@@ -1,32 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
+    <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="robots" content="noodp" />
-        <title>homebrew 使用镜像的方式 - Entropy Decrease</title><meta name="Description" content="阅读、思考、写作，都是熵减的过程"><meta property="og:title" content="homebrew 使用镜像的方式" />
-<meta property="og:description" content="Homebrew也在不停进化，现在使用清华镜像已经很方便了
+        <title>homebrew 使用镜像的方式 - Entropy Decrease</title><meta name="Description" content="阅读、思考、写作，都是熵减的过程"><meta property="og:url" content="http://localhost:1313/2023_03_13_homebrew_new_way_to_use_mirror/">
+  <meta property="og:site_name" content="Entropy Decrease">
+  <meta property="og:title" content="homebrew 使用镜像的方式">
+  <meta property="og:description" content="Homebrew也在不停进化，现在使用清华镜像已经很方便了
 日常使用 可设置如下环境变量使用本站提供的 Homebrew 镜像：
 1 2 3 4 5 export HOMEBREW_INSTALL_FROM_API=1 export HOMEBREW_API_DOMAIN=&#34;https://mirrors.tuna.tsinghua.edu.cn/homebrew-bottles/api&#34; export HOMEBREW_BOTTLE_DOMAIN=&#34;https://mirrors.tuna.tsinghua.edu.cn/homebrew-bottles&#34; export HOMEBREW_BREW_GIT_REMOTE=&#34;https://mirrors.tuna.tsinghua.edu.cn/git/homebrew/brew.git&#34; export HOMEBREW_CORE_GIT_REMOTE=&#34;https://mirrors.tuna.tsinghua.edu.cn/git/homebrew/homebrew-core.git&#34; 首次安装 Homebrew / Linuxbrew 首先，需要确保系统中安装了 bash、git 和 curl，对于 macOS 用户需额外要求安装 Command Line Tools (CLT) for Xcode。
-对于 macOS 用户，系统自带 bash、git 和 curl，在命令行输入 xcode-select &ndash;install 安装 CLT for Xcode 即可。 对于 Linux 用户，系统自带 bash，仅需额外安装 git 和 curl。
+对于 macOS 用户，系统自带 bash、git 和 curl，在命令行输入 xcode-select –install 安装 CLT for Xcode 即可。 对于 Linux 用户，系统自带 bash，仅需额外安装 git 和 curl。
 接着，在终端输入以下几行命令设置环境变量：
-1 2 3 4 5 export HOMEBREW_INSTALL_FROM_API=1 export HOMEBREW_API_DOMAIN=&#34;https://mirrors.tuna.tsinghua.edu.cn/homebrew-bottles/api&#34; export HOMEBREW_BOTTLE_DOMAIN=&#34;https://mirrors.tuna.tsinghua.edu.cn/homebrew-bottles&#34; export HOMEBREW_BREW_GIT_REMOTE=&#34;https://mirrors.tuna.tsinghua.edu.cn/git/homebrew/brew.git&#34; export HOMEBREW_CORE_GIT_REMOTE=&#34;https://mirrors." />
-<meta property="og:type" content="article" />
-<meta property="og:url" content="https://entropydecrease.github.io/2023_03_13_homebrew_new_way_to_use_mirror/" /><meta property="article:section" content="posts" />
-<meta property="article:published_time" content="2023-03-13T22:01:49+08:00" />
-<meta property="article:modified_time" content="2023-03-13T22:01:49+08:00" /><meta property="og:site_name" content="Entropy Decrease" />
-<meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="homebrew 使用镜像的方式"/>
-<meta name="twitter:description" content="Homebrew也在不停进化，现在使用清华镜像已经很方便了
+1 2 3 4 5 export HOMEBREW_INSTALL_FROM_API=1 export HOMEBREW_API_DOMAIN=&#34;https://mirrors.tuna.tsinghua.edu.cn/homebrew-bottles/api&#34; export HOMEBREW_BOTTLE_DOMAIN=&#34;https://mirrors.tuna.tsinghua.edu.cn/homebrew-bottles&#34; export HOMEBREW_BREW_GIT_REMOTE=&#34;https://mirrors.tuna.tsinghua.edu.cn/git/homebrew/brew.git&#34; export HOMEBREW_CORE_GIT_REMOTE=&#34;https://mirrors.tuna.tsinghua.edu.cn/git/homebrew/homebrew-core.git&#34; 注：自 brew 4.0 起，HOMEBREW_INSTALL_FROM_API 会成为默认行为，无需设置；大部分用户无需再克隆 homebrew/core 仓库，故无需设置 HOMEBREW_CORE_GIT_REMOTE 环境变量。但若需要运行 brew 的开发命令或者 brew 安装在非官方支持的默认 prefix 位置，则仍需设置 HOMEBREW_CORE_GIT_REMOTE 环境变量；如果不想通过 API 安装，可以设置 HOMEBREW_NO_INSTALL_FROM_API=1。">
+  <meta property="og:locale" content="en">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2023-03-13T22:01:49+08:00">
+    <meta property="article:modified_time" content="2023-03-13T22:01:49+08:00">
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="homebrew 使用镜像的方式">
+  <meta name="twitter:description" content="Homebrew也在不停进化，现在使用清华镜像已经很方便了
 日常使用 可设置如下环境变量使用本站提供的 Homebrew 镜像：
 1 2 3 4 5 export HOMEBREW_INSTALL_FROM_API=1 export HOMEBREW_API_DOMAIN=&#34;https://mirrors.tuna.tsinghua.edu.cn/homebrew-bottles/api&#34; export HOMEBREW_BOTTLE_DOMAIN=&#34;https://mirrors.tuna.tsinghua.edu.cn/homebrew-bottles&#34; export HOMEBREW_BREW_GIT_REMOTE=&#34;https://mirrors.tuna.tsinghua.edu.cn/git/homebrew/brew.git&#34; export HOMEBREW_CORE_GIT_REMOTE=&#34;https://mirrors.tuna.tsinghua.edu.cn/git/homebrew/homebrew-core.git&#34; 首次安装 Homebrew / Linuxbrew 首先，需要确保系统中安装了 bash、git 和 curl，对于 macOS 用户需额外要求安装 Command Line Tools (CLT) for Xcode。
-对于 macOS 用户，系统自带 bash、git 和 curl，在命令行输入 xcode-select &ndash;install 安装 CLT for Xcode 即可。 对于 Linux 用户，系统自带 bash，仅需额外安装 git 和 curl。
+对于 macOS 用户，系统自带 bash、git 和 curl，在命令行输入 xcode-select –install 安装 CLT for Xcode 即可。 对于 Linux 用户，系统自带 bash，仅需额外安装 git 和 curl。
 接着，在终端输入以下几行命令设置环境变量：
-1 2 3 4 5 export HOMEBREW_INSTALL_FROM_API=1 export HOMEBREW_API_DOMAIN=&#34;https://mirrors.tuna.tsinghua.edu.cn/homebrew-bottles/api&#34; export HOMEBREW_BOTTLE_DOMAIN=&#34;https://mirrors.tuna.tsinghua.edu.cn/homebrew-bottles&#34; export HOMEBREW_BREW_GIT_REMOTE=&#34;https://mirrors.tuna.tsinghua.edu.cn/git/homebrew/brew.git&#34; export HOMEBREW_CORE_GIT_REMOTE=&#34;https://mirrors."/>
+1 2 3 4 5 export HOMEBREW_INSTALL_FROM_API=1 export HOMEBREW_API_DOMAIN=&#34;https://mirrors.tuna.tsinghua.edu.cn/homebrew-bottles/api&#34; export HOMEBREW_BOTTLE_DOMAIN=&#34;https://mirrors.tuna.tsinghua.edu.cn/homebrew-bottles&#34; export HOMEBREW_BREW_GIT_REMOTE=&#34;https://mirrors.tuna.tsinghua.edu.cn/git/homebrew/brew.git&#34; export HOMEBREW_CORE_GIT_REMOTE=&#34;https://mirrors.tuna.tsinghua.edu.cn/git/homebrew/homebrew-core.git&#34; 注：自 brew 4.0 起，HOMEBREW_INSTALL_FROM_API 会成为默认行为，无需设置；大部分用户无需再克隆 homebrew/core 仓库，故无需设置 HOMEBREW_CORE_GIT_REMOTE 环境变量。但若需要运行 brew 的开发命令或者 brew 安装在非官方支持的默认 prefix 位置，则仍需设置 HOMEBREW_CORE_GIT_REMOTE 环境变量；如果不想通过 API 安装，可以设置 HOMEBREW_NO_INSTALL_FROM_API=1。">
 <meta name="application-name" content="Entropy Decrease">
 <meta name="apple-mobile-web-app-title" content="Entropy Decrease"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
         <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="https://entropydecrease.github.io/2023_03_13_homebrew_new_way_to_use_mirror/" /><link rel="prev" href="https://entropydecrease.github.io/2023_02_23_crack_typora/" /><link rel="next" href="https://entropydecrease.github.io/2023_03_13_even_googlenews_error/" /><link rel="stylesheet" href="/css/style.min.css"><link rel="preload" href="/lib/fontawesome-free/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="http://localhost:1313/2023_03_13_homebrew_new_way_to_use_mirror/" /><link rel="prev" href="http://localhost:1313/2023_02_23_crack_typora/" /><link rel="next" href="http://localhost:1313/2023_03_13_even_googlenews_error/" /><link rel="stylesheet" href="/css/style.min.css"><link rel="preload" href="/lib/fontawesome-free/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
         <noscript><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"></noscript><link rel="preload" href="/lib/animate/animate.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
         <noscript><link rel="stylesheet" href="/lib/animate/animate.min.css"></noscript><script type="application/ld+json">
     {
@@ -36,9 +40,9 @@
         "inLanguage": "en",
         "mainEntityOfPage": {
             "@type": "WebPage",
-            "@id": "https:\/\/entropydecrease.github.io\/2023_03_13_homebrew_new_way_to_use_mirror\/"
+            "@id": "http:\/\/localhost:1313\/2023_03_13_homebrew_new_way_to_use_mirror\/"
         },"genre": "posts","wordcount":  106 ,
-        "url": "https:\/\/entropydecrease.github.io\/2023_03_13_homebrew_new_way_to_use_mirror\/","datePublished": "2023-03-13T22:01:49+08:00","dateModified": "2023-03-13T22:01:49+08:00","publisher": {
+        "url": "http:\/\/localhost:1313\/2023_03_13_homebrew_new_way_to_use_mirror\/","datePublished": "2023-03-13T22:01:49+08:00","dateModified": "2023-03-13T22:01:49+08:00","publisher": {
             "@type": "Organization",
             "name": ""},"author": {
                 "@type": "Person",
@@ -190,7 +194,7 @@ rm -rf brew-install</p>
         <div class="post-info-line">
             <div class="post-info-md"></div>
             <div class="post-info-share">
-                <span><a href="javascript:void(0);" title="Share on Twitter" data-sharer="twitter" data-url="https://entropydecrease.github.io/2023_03_13_homebrew_new_way_to_use_mirror/" data-title="homebrew 使用镜像的方式"><i class="fab fa-twitter fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Facebook" data-sharer="facebook" data-url="https://entropydecrease.github.io/2023_03_13_homebrew_new_way_to_use_mirror/"><i class="fab fa-facebook-square fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Hacker News" data-sharer="hackernews" data-url="https://entropydecrease.github.io/2023_03_13_homebrew_new_way_to_use_mirror/" data-title="homebrew 使用镜像的方式"><i class="fab fa-hacker-news fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Line" data-sharer="line" data-url="https://entropydecrease.github.io/2023_03_13_homebrew_new_way_to_use_mirror/" data-title="homebrew 使用镜像的方式"><i data-svg-src="/lib/simple-icons/icons/line.min.svg" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Pocket" data-sharer="pocket" data-url="https://entropydecrease.github.io/2023_03_13_homebrew_new_way_to_use_mirror/"><i class="fab fa-get-pocket fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on 微博" data-sharer="weibo" data-url="https://entropydecrease.github.io/2023_03_13_homebrew_new_way_to_use_mirror/" data-title="homebrew 使用镜像的方式"><i class="fab fa-weibo fa-fw" aria-hidden="true"></i></a></span>
+                <span><a href="javascript:void(0);" title="Share on Twitter" data-sharer="twitter" data-url="http://localhost:1313/2023_03_13_homebrew_new_way_to_use_mirror/" data-title="homebrew 使用镜像的方式"><i class="fab fa-twitter fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Facebook" data-sharer="facebook" data-url="http://localhost:1313/2023_03_13_homebrew_new_way_to_use_mirror/"><i class="fab fa-facebook-square fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Hacker News" data-sharer="hackernews" data-url="http://localhost:1313/2023_03_13_homebrew_new_way_to_use_mirror/" data-title="homebrew 使用镜像的方式"><i class="fab fa-hacker-news fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Line" data-sharer="line" data-url="http://localhost:1313/2023_03_13_homebrew_new_way_to_use_mirror/" data-title="homebrew 使用镜像的方式"><i data-svg-src="/lib/simple-icons/icons/line.min.svg" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Pocket" data-sharer="pocket" data-url="http://localhost:1313/2023_03_13_homebrew_new_way_to_use_mirror/"><i class="fab fa-get-pocket fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on 微博" data-sharer="weibo" data-url="http://localhost:1313/2023_03_13_homebrew_new_way_to_use_mirror/" data-title="homebrew 使用镜像的方式"><i class="fab fa-weibo fa-fw" aria-hidden="true"></i></a></span>
             </div>
         </div>
     </div>
@@ -207,7 +211,7 @@ rm -rf brew-install</p>
 </div>
 </article></div>
             </main><footer class="footer">
-        <div class="footer-container"><div class="footer-line">Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.113.0">Hugo</a> | Theme - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.2.11"><i class="far fa-kiss-wink-heart fa-fw" aria-hidden="true"></i> LoveIt</a>
+        <div class="footer-container"><div class="footer-line">Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.134.2">Hugo</a> | Theme - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.2.11"><i class="far fa-kiss-wink-heart fa-fw" aria-hidden="true"></i> LoveIt</a>
                 </div><div class="footer-line" itemscope itemtype="http://schema.org/CreativeWork"><i class="far fa-copyright fa-fw" aria-hidden="true"></i><span itemprop="copyrightYear">2015 - 2024</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/" target="_blank">entropydecrease</a></span></div>
         </div>
     </footer></div>

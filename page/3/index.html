@@ -1,17 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-	<meta name="generator" content="Hugo 0.113.0">
+	<meta name="generator" content="Hugo 0.134.2">
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="robots" content="noodp" />
-        <title>Entropy Decrease</title><meta name="Description" content="阅读、思考、写作，都是熵减的过程"><meta property="og:title" content="Entropy Decrease" />
-<meta property="og:description" content="阅读、思考、写作，都是熵减的过程" />
-<meta property="og:type" content="website" />
-<meta property="og:url" content="https://entropydecrease.github.io/" /><meta property="og:site_name" content="Entropy Decrease" />
-<meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Entropy Decrease"/>
-<meta name="twitter:description" content="阅读、思考、写作，都是熵减的过程"/>
+        <title>Entropy Decrease</title><meta name="Description" content="阅读、思考、写作，都是熵减的过程"><meta property="og:url" content="https://entropydecrease.github.io/">
+  <meta property="og:site_name" content="Entropy Decrease">
+  <meta property="og:title" content="Entropy Decrease">
+  <meta property="og:description" content="阅读、思考、写作，都是熵减的过程">
+  <meta property="og:locale" content="en">
+  <meta property="og:type" content="website">
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Entropy Decrease">
+  <meta name="twitter:description" content="阅读、思考、写作，都是熵减的过程">
 <meta name="application-name" content="Entropy Decrease">
 <meta name="apple-mobile-web-app-title" content="Entropy Decrease"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
         <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
@@ -90,64 +93,494 @@
     </div><main class="main">
                 <div class="container"><div class="page home" data-home="posts"><div class="home-profile"><div class="home-subtitle">阅读、思考、写作，都是熵减的过程</div><div class="links"><a href="https://github.com/entropydecrease" title="GitHub" target="_blank" rel="noopener noreffer me"><i class="fab fa-github fa-fw" aria-hidden="true"></i></a><a href="mailto:mailto:en&#43;tr-op*ydecr_ea%5ese@outlook.com%5eremove_unnecessary_chars%5e" title="Email" rel="me"><i class="far fa-envelope fa-fw" aria-hidden="true"></i></a><a href="/index.xml" title="RSS" target="_blank" rel="noopener noreffer me"><i class="fas fa-rss fa-fw" aria-hidden="true"></i></a></div></div>
 <article class="single summary" itemscope itemtype="http://schema.org/Article"><h1 class="single-title" itemprop="name headline">
-        <a href="/2023_04_01_ont_training_notes/">ONT相关的一些笔记</a>
-    </h1><div class="post-meta"><span class="post-author"><a href="/" title="Author" rel="author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>entropydecrease</a></span>&nbsp;<span class="post-publish">published on <time datetime="2023-04-01">2023-04-01</time></span>&nbsp;<span class="post-category">included in <a href="/categories/tech/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>tech</a></span></div><div class="content">准确度 Kit V14 + R10.4.1
-simplex: 99.6%, Q24 duplex: 99.92%, Q31 duplex 一个双链文库分子，两端都有motor protein（马达蛋白）。一端的马达蛋白牵引双链文库靠近纳米孔，并解开双链让其中一条单链进入纳米孔，在其完全进入纳米孔之后，文库另外一端的马达蛋白有可能会牵引文库另外一头直接以单链的形式（无需解链）进入纳米孔（此时也有可能是其他的片段进入纳米孔测序）。这样测得的序列是一条原始分子的正负链都被测到了，所以叫duplex，可以提高测序精度。
-duplex不是通过新的试剂，只是protocol，让互补链紧跟着正义链过同一个孔而已，有一些reads是duplex，也有很多是simplex。 据说最新的试剂，可以将duplex reads的比例提高到70%。
-duplex的精度与长度相互独立
-测indel要60x才比较准。
-misc 低覆盖度，1x也可以测CNV 泛基因组 泛基因组用ONT组装，只看SV或NSR的话，20x覆盖度够用。但是要看单碱基分辨率的SNV/indel，学校研究人员认为需要用NGS数据做polish.
-学校研究人员提到长的sv假阳性非常高，他们把5M 以上inv和2M 以上indel都过滤掉了，我也是有点无语，做临床检测的话，这些才是更容易致病的。。。。
-ONT公司认为泛基因组的组装，SV所需数据量较小，SNV用40x够了，homopolymer处的indel，可以用60x的duplex测序来解决。但是他们一般推荐40x，因为一个芯片标准的测序量是120G，刚好是40x的覆盖度。
-植物多倍体 组装多倍体比较难，ONT单独无法完成，一般是结合PacBio HiFi，Hi-C和OGM也常用。 适应性采样 NGS短板：读长短，修饰信息丢失 大量宿主DNA给mNGS带来挑战，唾液中加入PMA，可显著减少人源DNA 三代测序因序列较长，更容易将耐药基因归属至菌种。 NGS的扩增可能产生偏向性（bias），三代测序无扩增，可避免此类偏向性。 适应性采样，提供人类基因组的bed文件，碰到可以匹配到ren基因组的序列，就弹出。 适应性采样，可提高病原序列比例，且显著提高病原体达到30x覆盖度的速度（4h vs 常规12h）。 文件格式 Fast5 ONT现在的默认格式，未来会被POD替代。
-采样频率4k Hz == 4000次/秒，碱基的过孔速度 ~400bp/s，相当于每个碱基过孔的时间内有10次的采样。
-数据量与文件大小
-数据量 Fast5文件大小 Pod5文件大小 1G bp 6G Byte 0.5G Byte 10G bp 60 GB 5 GB 30G bp 180 GB 15 GB 90G bp 540 GB 45 GB Pod5格式 替代Fast5，后续会作为默认文件格式 MinKnow机器集成 bascalling 将Fast5/Pod5文件转换为Fastq/uBam格式的过程</div><div class="post-footer">
-        <a href="/2023_04_01_ont_training_notes/">Read More</a><div class="post-tags">
-                <i class="fas fa-tags fa-fw" aria-hidden="true"></i>&nbsp;<a href="/tags/nanopore/">nanopore</a></div></div>
+        <a href="/2024_05_10-6chapters_of_life/">浮生六记</a>
+    </h1><div class="post-meta"><span class="post-author"><a href="/" title="Author" rel="author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>entropydecrease</a></span>&nbsp;<span class="post-publish">published on <time datetime="2024-05-10">2024-05-10</time></span>&nbsp;<span class="post-category">included in <a href="/categories/%E8%AF%BB%E4%B9%A6/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>读书</a></span></div><div class="content"><ul>
+<li>“诗仙”李白在《春夜宴从弟桃李园序》中写道：“夫天地者，万物之逆旅也。光阴者，百代之过客也。而浮生若梦，为欢几何？”这篇千古流传的小序，抒发了诗人对生命的痛切沉思，以及“浮生若梦、为欢几何”的感伤。清代的沈复就以此为名写了《浮生六记》。</li>
+<li>中国的古代文学，描写情爱的诗文很多，但大多写宫廷艳史，写权势礼法之下的爱情悲剧，或写风尘知己及少男少女间的缠绵，很少涉及夫妻之情。别具慧眼的陈寅恪指出：“吾国文学，自来以礼法顾忌之故，不敢多言男女间关系，而于正式男女关系如夫妇者，尤少涉及。盖闺房燕呢之情意，家庭水盐之琐屑，大抵不列于篇章，唯以笼统之词，概括言之而已。”</li>
+</ul>
+<blockquote>
+<p>。。。，天之厚我，可谓至矣。东坡云：“事如春梦了无痕。”苟不记之笔墨，未免有辜彼苍之厚。因思《关雎》冠三百篇之首，故列夫妇于首卷，余以次递及焉。</p>
+</blockquote>
+<blockquote>
+<p>是年冬，值其堂姊出阁。。。时但见满室鲜衣，芸独通体素淡，仅新其鞋而已。见其绣制精巧，询为已作，始知其慧心不仅在笔墨也。其形削肩长项，瘦不露骨，眉弯目秀，顾盼神飞，唯两齿微露，似非佳相。一种缠绵之态，令人之意也消。</p>
+<p>索观诗稿，有仅一联，或三四句，多未成篇者，询其故，笑曰：“无师之作，愿得知己堪师者敲成之耳。”<em>余戏题其签日“锦囊佳句”，不知天寿之机此已伏矣。</em></p>
+</blockquote>
+<blockquote>
+<p>伴妪在旁促卧，令其闭门先去。遂与比肩调笑，恍同密友重逢。戏探其怀，亦怦怦作跳，因俯其耳曰：“姊何心舂乃尔耶？”芸回眸微笑，便觉一缕情丝摇人魂魄。拥之入帐，不知东方之既白。【<em>优雅、含蓄、情深而自然</em>】</p>
+</blockquote>
+<blockquote>
+<p>虽恋其卧而德其正，因亦随之早起。自此耳鬓相磨，亲同形影，爱恋之情，有不可以言语形容者。</p>
+<p>而欢娱易过，转睫弥月。时吾父稼夫公在会稽幕府，专役相迓，受业于武林赵省斋先生门下。先生循循善诱，余今日之尚能握管，先生力也。归来完姻时，原订随侍到馆。闻信之余，心甚怅然，恐芸之对人堕泪。而芸反强颜劝勉，代整行装，是晚，但觉神色稍异而已。临行，向余小语曰：“无人调护，自去经心。”</p>
+<p>及登舟解缆，正当桃李争妍之候，而余则恍同林鸟失群，天地异色。到馆后，吾父即渡江东去。</p>
+<p>居三月，如十年之隔。芸虽时有书来，必两问一答，中多勉励词，余皆浮套语，心殊怏怏。<em>每当风生竹院，月上蕉窗，对景怀人，梦魂颠倒</em>。先生知其情，即致书吾父，出十题而遺余暂归。喜同戍人得赦。</p>
+<p>登舟后，反觉一刻如年。及抵家，吾母处间安毕，入房，芸起相迎，握手未通片语，而两人魂魄恍恍然化烟成雾，觉耳中惺然一响，不知更有此身矣。</p>
+</blockquote>
+<blockquote>
+<p>余与芸联句，以遣闷怀，而两韵之后，逾联逾纵，想入非夷，随口乱道。芸已漱涎涕泪，笑倒余怀，不能成声矣。觉其鬓边茉莉浓香扑鼻，因拍其背，以他词解之曰：“想古人以茉莉形色如珠，故供助妆压鬓，不知此花必沾油头粉面之气，其香更可爱，所供佛手，当退三舍矣。”芸乃止笑曰：“佛手乃香中君子，只在有意无意间；茉莉是香中小人，故须借人之势，其香也如胁肩谄笑。”余曰：“卿何远君子而近小人？”芸曰：“我笑君子爱小人耳。”</p>
+</blockquote>
+<blockquote>
+<p>少焉，一轮明月已上林梢，渐觉风生袖底，月到波心，俗虑尘怀，爽然顿释。芸曰：“今日之游乐矣！若驾一叶扁舟，往来亭下，不更快哉！”</p>
+</blockquote>
+<blockquote>
+<p>其癖好与余同，且能察眼意，懂眉语，一举动，示之以色，无不头头是道。余尝曰：“惜卿雌而伏，苟能化女为男，相与访名山，搜胜迹，遨游天下，不亦快哉！”芸曰：“此何难，俟妾鬓斑之后，虽不能远游五岳，而近地之虎阜、灵岩，南至西湖，北至平山，尽可偕游。”余曰：“恐卿鬓斑之日，步履已艰。”芸曰：“今世不能，期以来世。”余曰：“来世卿当作男，我为女子相从。”芸曰：“必得不昧今生，方觉有情趣。”余笑曰：“幼时一粥，犹谈不了，若来世不昧今生，合卺之夕，细谈隔世，更无合眼时矣。”芸日：“世传月下老人专司人间婚姻事，今生夫妇已承牵合，来世姻缘，亦须仰藉神力，盍绘一像祀之？”时有苕溪戚柳堤名遵，善写人物。倩绘一像：一手挽红丝，一手携杖，悬姻缘簿，童颜鹤发，奔驰于非烟非雾中。此戚君得意笔也。友人石琢堂为题赞语于首，悬之内室。每逢朔望，余夫妇必焚香拜祷。后因家庭多故，此画竟失所在，不知落在谁家矣。“他生未卜此生休”，两人痴情，果邀神鉴耶？</p>
+</blockquote></div><div class="post-footer">
+        <a href="/2024_05_10-6chapters_of_life/">Read More</a></div>
 </article><article class="single summary" itemscope itemtype="http://schema.org/Article"><h1 class="single-title" itemprop="name headline">
-        <a href="/2023_03_13_even_googlenews_error/">Hugo 关于 google_news的错误</a>
-    </h1><div class="post-meta"><span class="post-author"><a href="/" title="Author" rel="author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>entropydecrease</a></span>&nbsp;<span class="post-publish">published on <time datetime="2023-03-13">2023-03-13</time></span>&nbsp;<span class="post-category">included in <a href="/categories/%E5%B7%A5%E5%85%B7/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>工具</a></span></div><div class="content">hugo 前段时间会报错 &quot;_internal/google_news.html&quot;:
-google_news internal template should be deprecated 这次就完全不能运行，warning变成error了。
-解决办法是：
-打开 themes/even/layouts/partials/head.html
-删掉 {{- template &quot;_internal/google_news.html&quot; . -}} 这一行</div><div class="post-footer">
-        <a href="/2023_03_13_even_googlenews_error/">Read More</a></div>
+        <a href="/2024_04_29-franklin/">富兰克林自传</a>
+    </h1><div class="post-meta"><span class="post-author"><a href="/" title="Author" rel="author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>entropydecrease</a></span>&nbsp;<span class="post-publish">published on <time datetime="2024-04-29">2024-04-29</time></span>&nbsp;<span class="post-category">included in <a href="/categories/%E8%AF%BB%E4%B9%A6/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>读书</a></span></div><div class="content"><ul>
+<li>富兰克林自传其实是写给儿子的一系列回忆性质的信件</li>
+<li>富兰克林从小就在印刷所做学徒，与一个小伙伴柯林斯辩论的邮寄被父亲看到，“他说，我在拼写和标点方面比对方略胜一筹（这应该归功于印刷所），但是在文字和条理方面远远不如对方，他还就此列举几处实例以便令我新妇女。从这些实例来看，他的评价并非不公正，从此以后我非常注意写作的文体，学习提高自己的写作能力。”</li>
+<li>“……在逻辑学的结尾部分，我看到了苏格拉底辩论术的范例。不久之后，我又很幸运得到了色诺芬的《苏格拉底回忆录》，这本书有很多类似上述苏格拉辩论术的实例。我对这种方法非常着迷，所以很认真的学习并加以运用。在辩论中，我不再采用生硬的反驳和完全肯定的理论，而是代之以谦虚和怀疑式的探求方法。…… 我发现这些方法非常实用，能够令那些跟我争辩的对手完全处于劣势地位。”</li>
+<li>富兰克林18岁去伦敦购买印刷器材并逗留两年，1726年回美国。</li>
+<li>富兰克林去英国前，在美国有海誓山盟的女朋友，在美国时间太久，女友结婚，短暂婚姻后离婚。</li>
+<li>富兰克林回到美国后，有人撮合他和一个女孩子。此时富兰克林想开印刷所，缺少本钱，希望女方带来一笔陪嫁让他还债（不超过100英镑，当时应该是巨款），女方说没有这么多钱，富兰克林说对方可以抵押房子贷款，后来双方就淡了，继而断了。此后，思想有所转变，不再指望娶到嫁妆丰厚的妻子。</li>
+<li>“此间，一个年轻人难以压抑的激情令我常常无法控制地与碰到的下贱女人私通出了破费和极不方便外，还让我非常担心自己会染上什么疾病。我很庆幸自己终究没有。”</li>
+<li>之后，富兰克林与女友再续前缘。</li>
+<li>富兰克林还是很敢于剖析自己的，提到了自己的一些错误：
+<ul>
+<li>“渐渐地，我发现自己喜欢和她（一个在美国有妻子的朋友在英国的同居女友，该朋友由于工作而去外地，该女友常找富兰克林接济）来往，那时的我已经没有宗教戒律的约束，倚仗她对我的依赖试图对她亲昵（这是我人生中又一错误），可她生气地拒绝了，并将这件事告诉了劳尔夫。”</li>
+<li>“此间（回美国后，由于对嫁妆要求太高而与某女孩子散伙），一个年轻人难以压抑的激情令我常常无法控制地与碰到的下贱女人私通出了破费和极不方便外，还让我非常担心自己会染上什么疾病。我很庆幸自己终究没有。”</li>
+</ul>
+</li>
+<li>富兰克林的十三条道德明目及其戒律：
+<ol>
+<li>节制：食不过饱，饮不过量；</li>
+<li>节言：说话必须对别人或对自己有益，避免琐碎的闲聊，</li>
+<li>秩序：物件有所归，办事有定时；</li>
+<li>决心：该做的事情一定要做，决心要做的事情一定要做好；</li>
+<li>节俭：花钱必须于人于已有利，决不浪费；</li>
+<li>勤劳：珍惜时间，时间要花在做有用的事情上，切忌无意义的举动；</li>
+<li>诚实：切忌虚伪欺诈，心存良知与公正，说话也要如此；</li>
+<li>正直：不做有损他人的事情，要做对人们有益的事情，这是你的义务；</li>
+<li>中庸：避免极端，别人对你的冒犯，若是正当，就要懂得容忍；</li>
+<li>整洁：身体、衣物以及住所，要保持清洁；</li>
+<li>宁静：对待琐事、平常事或者不可避免之事，不可自扰。</li>
+<li>贞节：不要纵欲过度，有伤身体，切忌报害自己或者他人的安宁和名誉；</li>
+<li>谦虚：仿效耶稣与苏格拉底。</li>
+</ol>
+<ul>
+<li>这些美德，“节制”第一，“节言”第二，……。</li>
+</ul>
+</li>
+<li>一句古老的格言：“一个人帮助你一次，就会比受过你恩惠的人更愿意再次帮助你。”</li>
+<li>“赚到第一个100英镑以后，赚第二个100英镑就容易多了。”我才真正悟出这句谚语的道理：钱本身是能够大量繁殖的。</li>
+</ul></div><div class="post-footer">
+        <a href="/2024_04_29-franklin/">Read More</a></div>
 </article><article class="single summary" itemscope itemtype="http://schema.org/Article"><h1 class="single-title" itemprop="name headline">
-        <a href="/2023_03_13_homebrew_new_way_to_use_mirror/">homebrew 使用镜像的方式</a>
-    </h1><div class="post-meta"><span class="post-author"><a href="/" title="Author" rel="author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>entropydecrease</a></span>&nbsp;<span class="post-publish">published on <time datetime="2023-03-13">2023-03-13</time></span>&nbsp;<span class="post-category">included in <a href="/categories/%E5%B7%A5%E5%85%B7/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>工具</a></span></div><div class="content">Homebrew也在不停进化，现在使用清华镜像已经很方便了
-日常使用 可设置如下环境变量使用本站提供的 Homebrew 镜像：
-1 2 3 4 5 export HOMEBREW_INSTALL_FROM_API=1 export HOMEBREW_API_DOMAIN=&#34;https://mirrors.tuna.tsinghua.edu.cn/homebrew-bottles/api&#34; export HOMEBREW_BOTTLE_DOMAIN=&#34;https://mirrors.tuna.tsinghua.edu.cn/homebrew-bottles&#34; export HOMEBREW_BREW_GIT_REMOTE=&#34;https://mirrors.tuna.tsinghua.edu.cn/git/homebrew/brew.git&#34; export HOMEBREW_CORE_GIT_REMOTE=&#34;https://mirrors.tuna.tsinghua.edu.cn/git/homebrew/homebrew-core.git&#34; 首次安装 Homebrew / Linuxbrew 首先，需要确保系统中安装了 bash、git 和 curl，对于 macOS 用户需额外要求安装 Command Line Tools (CLT) for Xcode。
-对于 macOS 用户，系统自带 bash、git 和 curl，在命令行输入 xcode-select &ndash;install 安装 CLT for Xcode 即可。 对于 Linux 用户，系统自带 bash，仅需额外安装 git 和 curl。
-接着，在终端输入以下几行命令设置环境变量：
-1 2 3 4 5 export HOMEBREW_INSTALL_FROM_API=1 export HOMEBREW_API_DOMAIN=&#34;https://mirrors.tuna.tsinghua.edu.cn/homebrew-bottles/api&#34; export HOMEBREW_BOTTLE_DOMAIN=&#34;https://mirrors.tuna.tsinghua.edu.cn/homebrew-bottles&#34; export HOMEBREW_BREW_GIT_REMOTE=&#34;https://mirrors.tuna.tsinghua.edu.cn/git/homebrew/brew.git&#34; export HOMEBREW_CORE_GIT_REMOTE=&#34;https://mirrors.</div><div class="post-footer">
-        <a href="/2023_03_13_homebrew_new_way_to_use_mirror/">Read More</a></div>
+        <a href="/2024_01_28-manager_path/">The Manager’s Path 技术为径</a>
+    </h1><div class="post-meta"><span class="post-author"><a href="/" title="Author" rel="author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>entropydecrease</a></span>&nbsp;<span class="post-publish">published on <time datetime="2024-01-28">2024-01-28</time></span>&nbsp;<span class="post-category">included in <a href="/categories/%E8%AF%BB%E4%B9%A6/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>读书</a></span></div><div class="content"><h2 id="直属经理的义务">直属经理的义务</h2>
+<p>下属有权利要求自己的直属经理做到以下几点：
+1、一对一会议
+主要解决两个问题：
+第一，帮助你与直属经理建立起良好的人际关系。
+第二，讨论任何你想讨论的话题。
+2、工作反馈与指导
+给自己的工作提供及时的反馈意见。
+理想情况下，一个管理者应该公开的给予正面的反馈，而私下里和你讨论负面反馈。
+直属经理应该是你在日常工作中的头号同盟。
+技术管理者持续找到一些有新意的前沿项目，让团队来技术帮助团队成长、学习新技能是很重要的工作。
+3、职业培训与职业规划</p>
+<h2 id="如何做好非管理岗位的工作">如何做好非管理岗位的工作</h2>
+<p>1、思考自己的需求是什么
+无论是初入职场还是已经有了二十几年的工作经验，搞清楚自己想要做什么，想要学什么，如何从工作中获得快乐，最终都是你自己的责任。
+2、自己要对自己负责
+无法保证你主动提出要求就一定能成功，但是如果你给自己设定了一个目标，就必须自己想尽一切办法来实现这个目标，不能只是等待
+3、体谅你的上级
+4、精心选择自己的上级领导</p>
+<h2 id="自我评估">自我评估</h2>
+<ul>
+<li>你可以和自己的直属经理分享自己生活的重要进展吗？你的直属经理是否和你有良好的私人关系？</li>
+<li>你的直属经理有没有向你提供工作方面的反馈这些反馈有效吗？还是他从来没有向你提供过什么反馈？</li>
+<li>你的直属经理师傅帮你设定了今年的工作目标。</li>
+</ul>
+<h2 id="项目管理">项目管理</h2>
+<p>所以，项目管理就是将一个复杂的最终<em>目标分拆</em>成一些小目标，同时将这些目标以最高效的方式进行排序，<em>识别出其中可以并行开展的工作，以及这些工作前后的依赖关系</em>。同时还应该试图<em>找出那些可能导致项目延期或者彻底失败的高风险环节</em>。项目管理的过程，就是试图将不确定的部分更确定，将不可知的问题变成可知问题的过程。同时，我们也应该认识到<em>在这个过程中犯错误和漏掉一些未知风险是不可避免的</em>，可以参考一下几点：</p>
+<ul>
+<li>1、将工作进行拆分</li>
+<li>2、持续关注细节与未知部分</li>
+<li>3、真正落实项目计划并时刻调整</li>
+<li>4、利用计划过程中获得的知识来管理需求变更。</li>
+<li>5、随着项目推进不断完善细节信息。</li>
+</ul>
+<h2 id="识别员工潜力">识别员工潜力</h2>
+<p>个人的真正潜力不会隐藏太久，通过工作努力超额完成任务，面对问题时能提出极具洞察力的建议，又或者在团队之前忽视的地方提供帮助。总之个人的潜力是不会被埋没的，具备真正潜力的人，哪怕他们的工作进度比较缓慢，也是能够在团队中脱颖而出的。</p>
+<h2 id="有挑战性的场景辞退表现不佳者">有挑战性的场景：辞退表现不佳者</h2>
+<ul>
+<li>你需要对员工理应交付的工作成果，有明确的认知，如果其没有交付这些工作成果，你就应该尽早、尽量明确地让员工明白，他没有达到你的预期。</li>
+<li>应该尽可能早、尽可能频繁的向员工提供反馈，同时将你提供给他的反馈信息通通记录下来。反馈信息不管是正面的还是负面的，都应该和员工详细讨论，而不是简单的一句话。如果你不停地回避负面反馈，知道事情无法挽回那时再提客观理由什么的，又有什么用呢？</li>
+</ul>
+<h2 id="研发经理的职责">研发经理的职责</h2>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="./resources/IMG_2797.jpeg"
+        data-srcset="./resources/IMG_2797.jpeg, ./resources/IMG_2797.jpeg 1.5x, ./resources/IMG_2797.jpeg 2x"
+        data-sizes="auto"
+        alt="./resources/IMG_2797.jpeg"
+        title="./resources/IMG_2797.jpeg" />
+<img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="./resources/IMG_2796%201.jpeg"
+        data-srcset="./resources/IMG_2796%201.jpeg, ./resources/IMG_2796%201.jpeg 1.5x, ./resources/IMG_2796%201.jpeg 2x"
+        data-sizes="auto"
+        alt="./resources/IMG_2796%201.jpeg"
+        title="./resources/IMG_2796%201.jpeg" /></p>
+<ul>
+<li>在这个新角色中，我发现自己管理的一些团队成员在技术资历上远胜于我，这是我第一次不能再依赖于自己的技术知识来领导团队了。。。每个人都有各自的工作，而我的工作则主要是尽力帮助他们（我的下属）取得更大的工作成绩。</li>
+<li>事实证明，好的管理者并不意味着一定需要具备最完备的技术知识，管理工作成功的要点，主要在于如何支持下属取得工作成绩。</li>
+</ul>
+<h2 id="保持对技术的关注">保持对技术的关注</h2>
+<ul>
+<li>虽然团队中有具备设计系统能力的架构师，以及关注实现细节问题的其他资深技术成员，但是作为团队经理，你的职责是监督他们对技术决策负责，确保这些技术决策符合基本的技术要求，以及评估决策与当下团队的情况，与业务整体需求的符合情况。多年以来的技术工作所形成的基础直觉对你做好引导工作会有很大帮助。</li>
+<li>另外，如果你真的想要赢得技术团队的尊敬的话，必须让他们认可你的技术能力。技术能力不过关的话，你面临的困难会较多，即使你能在一个公司中进入管理层，你未来的职业发展选项也会很窄。在你努力向技术管理方向转变的同时，千万不要忽视自身技术能力的培养。</li>
+<li>当然了，取舍是难免的，在你技术管理转型的过程中如何保持自己的技术能力，是一件难事一名管理者随之而来的各种职责&ndash;参加更多的会议，规划项目进度，应符琐事，等等&ndash;都会抢占你写代码的时间。在应对各种各样的问题的同时，如何能够静下心来写代码，不是一件简单的事情。</li>
+<li>然而，如果在目前这个阶段你就脱离了具体的编码工作，很有可能会导致自己的技术能力过早的退化。向管理类工作逐渐转型，并不意味着你可以完全脱离具体的技术工作。事实上，我在自己公司技术管理类工作的职责说明中特别的强调，初级技术管理者必须承担小型功能或者小型bug 的修复工作。</li>
+<li>如果你在职业生涯中过早地脱离了技术工作，那么很有可能你的技术能力会成为你超越中层管理工作的重要障碍。</li>
+</ul>
+<h2 id="找出不和谐团队的问题">找出不和谐团队的问题</h2>
+<h3 id="无法交付">无法交付</h3>
+<ul>
+<li>平衡什么时候该对团队施加压力与什么时候该释放团队的压力。</li>
+<li>团队所使用的工具与其所涉及的流程陈旧过时，阻碍了工作的进行。</li>
+</ul>
+<h3 id="人际关系">人际关系</h3>
+<ul>
+<li>工作能力强，产出高，但缺乏团队精神，让周围每个人都很不开心的人，称为“聪明的混蛋”。还有一些滋生事端、心怀不满、沉迷于风言风语并拉帮结派的人。（这两种人要对其谈话，或转出至其他组）</li>
+<li>不要将那些大声表示对你不满的人留在团队里太久，不管你的管理经验有多丰富，都会被这样的人拖累。有时候最好的防御方式就是主动出击，快刀斩乱麻。</li>
+</ul>
+<h3 id="超负荷工作带来的不满">超负荷工作带来的不满</h3>
+<ul>
+<li>一般来说，员工因超负荷工作所产生的不满情绪，都源自一种你可以直接解决的根源问题。</li>
+<li>在加班的过程中，尽量增加一些工作的趣味性，有的时候一次紧张的工作，反而是团队增进感情的好机会，团队会记住你是和他们患难与共，还是躲在一边做自己的事情。</li>
+<li>压力有的时候是难免的，但是不能无缘无故的、经常的、持续性的加班。</li>
+</ul>
+<h3 id="合作困难">合作困难</h3>
+<ul>
+<li>你仅仅表示出愿意改善合作问题的态度，就能起到很大作用。</li>
+<li>要注意的是，为了避免状况变得更糟，不管你是否同意团队成员的意见，都应该在公开场合支持他们的立场。</li>
+<li>如果团队内部有合作不顺畅的情况，那么你应该尝试给团队成员寻找并创造一些工作之外的相处机会，比如说，和团队成员一起外出吃午餐，周五下午大家一起离开公司去参加一些有趣的活动，在组内聊天时鼓励大家多一些幽默以及和团队成员多唠一些家常，等等，都是有效培养团队凝聚力的好办法。我理解你可能对这种类型的情感培养方式有点发怵，但是哪怕是最内向的人，也渴望和自己的团队成员产生认同感。</li>
+</ul>
+<h2 id="如何管理前同事">如何管理前同事</h2>
+<ul>
+<li>诚实和透明的心态去沟通</li>
+<li>记住你的工作职责会有较大幅度的改变。作为他的经理，你虽然有否决他的决策的权利，但是一定不要轻易使用这种权利，用你的管理权来否决他的技术决策通常是没有好结果的，一定要克制住自己为管理的冲动，尤其是面对你的前同事时。</li>
+<li>管理线上的每次上升都意味着你要承担一些新的职责，同时放弃一些原有的职责。你可以趁此机会将自己之前掌控的一些技术工作公开地交给前同事们，赋予他们一定的新决策。同时，这也给团队内初级成员提供了一个学习和提升的好机会。虽然很多技术公司的一线经理会持续提交一些代码，但是这些代码应该是小的功能实现，以及小的 bug 修复和改进，而不应该是设计和实现大型系统。</li>
+<li>伴随着这些方面的改变，你的目标应该是，向团队展示自己的职责是为了帮助他们成功。以向管理层新角色的转变，并不是团队中抢走了一些职责，而是将你的一份工作交接给团队成员，从而承担起了一些事前被忽视，或者属于团队外其他人的职责。</li>
+<li>如果你和前同事们意见相左，或者有一些可以被视为权力争夺的行为，他们的确会有一段高度敏感期，甚至会想办法阻碍你的工作开展，所以你一定要谨慎对待前同事们。从长远来看，以成熟的态度处理这种情况往往会取得更好的结果。</li>
+</ul>
+<h2 id="成为团队的保护伞">成为团队的保护伞</h2>
+<h2 id="项目管理的秘诀">项目管理的秘诀</h2>
+<ul>
+<li>对大部分团队来讲，长期的、抽象的目标，以及短期的、具体的、面向长期抽象目标的工作计划是并存的。。。。作为管理者，你需要对更大范围的项目目标——那些需要数月而不是数个星期才能完成的事情负起责任来。</li>
+<li>每个季度的有效研发时间只有10周</li>
+<li>预留20%的工程时间来处理研发可持续性工作。研发可持续性工作指的是添加测试用例、调试问题、重构老旧代码、更换编程语言和升级语言版本，以及其他类似的工程杂事等。每个季度做一点就够，随时清理陈旧系统可以降低其维护难度，从而给团队留出更多的时间来进行新功能的开发。</li>
+<li>临近交付时间时，管理者有说“不”的<em>义务</em></li>
+<li>利用“翻倍定律”来快速测算完成任务所需的时间，同时对研发周期长的任务申请更多的计划时间。
+当需要测算软件开发时间时，永远将你预期的时间翻一倍。
+在技术团队全力以赴开发一个复杂需求之前，你应该多花一点时间理解需求，进行完善的项目计划</li>
+<li>不要每个需求都让技术团队来预估实现时间
+工程师对每个需求都交付一个预估时间，不仅浪费时间，而且徒增其压力。管理层承担不确定性是责无旁贷的，管理者不应该将不确定性统统甩给团队成员来承担。</li>
+</ul>
+<h2 id="同时管理多个团队">同时管理多个团队</h2>
+<h3 id="技术总监职责的定义">技术总监职责的定义</h3>
+<ul>
+<li>
+<p>技术总监的职责是，承担某一个重要技术领域中所有团队的管理工作。技术总监一般需要同时管理数个跨业务部门、承担不同技术职责的技术团队。技术总监的直接下属，同时包括技术小组长和独立工程师</p></div><div class="post-footer">
+        <a href="/2024_01_28-manager_path/">Read More</a></div>
 </article><article class="single summary" itemscope itemtype="http://schema.org/Article"><h1 class="single-title" itemprop="name headline">
-        <a href="/2023_02_23_crack_typora/">破解typora</a>
-    </h1><div class="post-meta"><span class="post-author"><a href="/" title="Author" rel="author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>entropydecrease</a></span>&nbsp;<span class="post-publish">published on <time datetime="2023-02-23">2023-02-23</time></span>&nbsp;<span class="post-category">included in <a href="/categories/%E5%B7%A5%E5%85%B7/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>工具</a></span></div><div class="content">基于electron的app有一个问题，没有很好的隐藏源码的机制，所以typora收费之后，破解版层出不穷。
-网上搜了一下，针对Mac：
-官方网站下载typora并安装 打开typora，确定能正常运行，完全退出 修改文件 1 2 3 4 $ cd /Applications/Typora.app/Contents/Resources/TypeMark/page-dist/static/js $ mv LicenseIndex.180dd4c7.c7ff4102.chunk.js LicenseIndex.180dd4c7.c7ff4102.chunk.js.bak $ vim LicenseIndex.180dd4c7.c7ff4102.chunk.js # replace `e.hasActivated=&#34;true&#34;==e.hasActivated` with `e.hasActivated=&#34;true&#34;==&#34;true&#34;` 再打开typora，有可能会有错误信息说文件被修改，但是我打开又关闭几次，不知道怎么弄的，就不再出现此错误信息了。虽然编辑页面右下角显示“unregistered”，但是点击后会显示已经激活。 typora确实好用。假如以后这次破解不能用了，我就买正版了。 </div><div class="post-footer">
-        <a href="/2023_02_23_crack_typora/">Read More</a></div>
+        <a href="/2024_01_23-code_complete/">代码大全2 （Code Complete 2）</a>
+    </h1><div class="post-meta"><span class="post-author"><a href="/" title="Author" rel="author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>entropydecrease</a></span>&nbsp;<span class="post-publish">published on <time datetime="2024-01-23">2024-01-23</time></span>&nbsp;<span class="post-category">included in <a href="/categories/%E8%AF%BB%E4%B9%A6/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>读书</a></span></div><div class="content"><p>【一本很好的书，内容很多，一遍学不完，值得经常看看】</p>
+<h2 id="谋定而后动前期准备">谋定而后动：前期准备</h2>
+<ul>
+<li>第一次就把事情做好谁最划算的，越到开发阶段后期，返工的工作量越大。</li>
+<li>发现错误的时间要尽可能接近于引入该错误的时间，缺陷在软件中停留的时间越长，造成的破坏越多。所以，早期引入的缺陷代价更高。</li>
+</ul>
+<h2 id="防御式编程">防御式编程</h2>
+<ul>
+<li>对于生产软件来说，“垃圾进，垃圾出”，是不够的。不管进来的是什么，好的程序都不应该产生垃圾，应该做到“垃圾进，什么都不出”，“垃圾进，错误提示出”，或者“不许垃圾进来”。</li>
+<li>用错误处理代码来处理预期会发生的情况，用 assert 来处理永远不应该发生的情况。将 assert 视为可执行的文档（executable document），不能依赖其来使代码正常运行，但其可比注释更能主动说明各种假设。</li>
+<li>对健壮性要求很高的代码，应先使用assert， 再处理错误。</li>
+</ul></div><div class="post-footer">
+        <a href="/2024_01_23-code_complete/">Read More</a></div>
 </article><article class="single summary" itemscope itemtype="http://schema.org/Article"><h1 class="single-title" itemprop="name headline">
-        <a href="/2023_02_16-no_one_cares/">文摘两则，可以对照着看</a>
-    </h1><div class="post-meta"><span class="post-author"><a href="/" title="Author" rel="author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>entropydecrease</a></span>&nbsp;<span class="post-publish">published on <time datetime="2023-02-16">2023-02-16</time></span>&nbsp;<span class="post-category">included in <a href="/categories/%E8%AF%BB%E4%B9%A6/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>读书</a></span></div><div class="content">在阮一峰的blog看到两则文摘，挺有意思，可以对照着看。
-从少年到成年的过渡是痛苦的 No One Cares The transition from childhood to adult life is hard. Our parents give us attention all our adolescent years. But as soon as we cross an age limit and step into the outside world, a brick of reality hits our heads. It's written on the brick in big-bold letters, &quot;NO ONE CARES.&quot; No one cares who you are, what you know, and what you have created. People are busy in their own lives.</div><div class="post-footer">
-        <a href="/2023_02_16-no_one_cares/">Read More</a></div>
+        <a href="/2024_01_20-man_month/">人月神话</a>
+    </h1><div class="post-meta"><span class="post-author"><a href="/" title="Author" rel="author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>entropydecrease</a></span>&nbsp;<span class="post-publish">published on <time datetime="2024-01-20">2024-01-20</time></span>&nbsp;<span class="post-category">included in <a href="/categories/%E8%AF%BB%E4%B9%A6/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>读书</a></span></div><div class="content"><h2 id="个人总结">个人总结：</h2>
+<p>太过抽象，可能是经验有限，没有理解太多。总之，实用性不强。</p>
+<h2 id="职业的苦恼">职业的苦恼</h2>
+<p>然而这个过程并不总是充满乐趣的，我们只有事先了解一些编程固有的苦恼，这样，当他们真的出现时，才能更加坦然的面对。</p>
+<ul>
+<li>首先，苦恼来自对完美的要求。</li>
+<li>其次，苦恼来自自由他人设定的目标、供给资源和提供信息。编程人员很少能控制工作环境和工作目标。… 对于系统编程人员而言，对其他人的依赖是一件非常痛苦的事情。</li>
+<li>下一个苦恼—设计宏大概念是有趣的，但寻找琐碎的bug却是一项重复性的活动。创造性活动往往与枯燥、沉闷和艰苦的劳动相伴，程序编写工作也不例外。</li>
+<li>最后一个苦恼，有时候也是压垮骆驼的最后一根稻草，投入了大量辛苦的劳动，产品在即将完成或者终于完成的时候，却已显得陈旧过时。</li>
+<li>这就是编程，一个让许多人痛苦挣扎的焦油坑，以及一项乐趣和苦恼共存的创造性活动。</li>
+</ul>
+<h2 id="人月">人月</h2>
+<p>第二个存在谬误的思考方式是在时间估算和进度安排中使用的工作量单位：人月。成本的确随着人数和月数的乘积而变化，进度却不是如此。因此我认为，用人月衡量一项工作规模的大小是一个危险和带有欺骗性的神话。它暗示着人员数量和时间是可以相互替换的。</p>
+<p>人员数量和时间的互换仅仅适用于以下情况：某个任务可以分解完全给参与人员，并且他们之间不需要相互的交流。这在收割小麦或者采摘棉花的工作中是可行的，而在系统编程中近乎不可能。
+当任务由于次序上的约束而不能分解时，人手的添加对行动没有帮助。</p>
+<ul>
+<li>沟通所增加的成本，有两个部分组成：培训成本和沟通成本。</li>
+</ul>
+<h2 id="系统测试">系统测试</h2>
+<p>测试进度的安排常常是编程中最不合理的部分。</p>
+<p>对于软件开发任务的进度安排，以下是我成功使用了很多年的经验法则：</p>
+<ul>
+<li>三分之一用于计划</li>
+<li>六分之一用于编码</li>
+<li>四分之一用于构建测试和早期系统测试</li>
+<li>四分之一用于系统测试，此时所有的构建已就绪</li>
+</ul>
+<h2 id="重复产生的进度灾难">重复产生的进度灾难</h2>
+<p>brooks定律</p>
+<blockquote>
+<p>向进度落后的软件项目增加人手，会使进度更加落后 。（Adding manpower to a late software project makes it later.）</p>
+<p>这就除去了神话色彩的人月。项目的月数依赖于次序上的约束，人员的最大数量依赖于独立子任务的数量。</p>
+<p>在众多软件项目中缺乏合理的进度安排是造成项目滞后的最主要原因，他比其他所有原因加起来的影响还要大。</p>
+</blockquote>
+<h2 id="效率的差别">效率的差别</h2>
+<p>效率高和效率低的实施者之间的个体差异非常大，经常能够达到数量级的水平。</p>
+<h2 id="mills的建议">Mills的建议</h2>
+<p>Mills的建议提供了一个崭新的创造性的解决方案，Mark建议大型项目的每一部分有一个团队解决，但是该团队以类似外科手术团队的方式组建，而不是杀猪团队，也就是说不是每个成员都拿到乱砍，而是只有一个人操刀，其他人给予他各种支持，以提高效率和生产力。
+稍加思考就可以发现，如果上述概念能够实施，它可以满足迫切性的需要，只有少数几个头脑参与设计和构造，然而却能聚集很多人。他是否可行呢？谁是编程团队中的麻醉医生和护士，工作如何划分？让我们继续使用医生的比喻，如果考虑所有可能想到的支持工作，这样的团队应该如何运作？</p>
+<ul>
+<li>外科医生。mills称他为首席程序员，他亲自定义功能和性能规约、设计程序、编制源代码、测试，以及编写文档。</li>
+<li>副手。他是外科医生的后备，他能做任何一部分工作，但是拥有的经验相对较少。他的主要作用是作为思考者、讨论者和评估者参与到设计中。外科医生会与他沟通想法，但是不受他的建议的限制。</li>
+<li>行政（原文是“管理员”，根据上下文意思，似乎应为<em>admin</em>，行政人员）。外科医生是老板，必须在人员、薪酬、空间等方面具有决定权，但是他绝对不能在这些事务上浪费时间，因而他需要一个管理金钱、人员、空间和机器的专业人员，该管理员充当与组织中其他行政机构的接口。仅在项目具有实质性的法律合同报表和财务方面的需求时，管理员才全职为团队工作，否则一个管理员可以为两个团队服务。</li>
+<li>编辑。外科医生负责文档的生成——为了尽可能不含糊，他必须亲自编写，无论是对内部描述还是对外部描述。而编辑根据外科医生的草稿或者口述，进行分析和重新组织，提供各种参考信息和书目，对多个版本进行维护，并监督文档生成的机制。</li>
+<li>两个文秘。管理员和编辑每个人需要一个文秘。管理员的文秘负责非产品文件和使项目协作一致。</li>
+<li>程序文员。他负责维护编程产品库中团队的所有技术记录。该职员接受文秘性质的培训，承担机器可读以及人类可读文件的相关管理责任。</li>
+<li>对Mills的概念来讲，至关重要的是编程“从私人艺术到公共实践”的转换。他向所有团队成员展现了所有计算机的运行产物，并将所有的程序和数据看作团队财产，而非私人产财产。</li>
+<li>工具维护人员</li>
+<li>测试人员</li>
+<li>语言律师（专家？）。外科医生主要是系统设计者以及考虑系统的整体表现，而语言律师（专家？）则寻找一种简洁有效的语言使用方法来解决困难、晦涩或者棘手的问题。他通常需要对技术进行一些研究(两到三天）。一个语言律师可以为二到三个外科医生服务。</li>
+</ul>
+<h2 id="获得概念的完整性">获得概念的完整性</h2>
+<p>宜用性需要设计的一致性和概念的完整性。</p>
+<h2 id="胸有成竹">胸有成竹</h2>
+<p>经验是昂贵的老师，但愚人只能从经验学习。</p></div><div class="post-footer">
+        <a href="/2024_01_20-man_month/">Read More</a></div>
 </article><article class="single summary" itemscope itemtype="http://schema.org/Article"><h1 class="single-title" itemprop="name headline">
-        <a href="/2023_02_07-download_m3u8/">下载m3u8格式的视频文件并合并为mp4</a>
-    </h1><div class="post-meta"><span class="post-author"><a href="/" title="Author" rel="author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>entropydecrease</a></span>&nbsp;<span class="post-publish">published on <time datetime="2023-02-07">2023-02-07</time></span>&nbsp;<span class="post-category">included in <a href="/categories/%E5%B7%A5%E5%85%B7/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>工具</a></span></div><div class="content">尝试了一下下载网络的视频，以illumina的一个视频为例：
-https://www.illumina.vh.sauos.com/watch/205
-得到m3u8文件 在firefox中，安装「Video DownloadHelper]及配套的app，然后在firefox中打开该链接，点击「Video DownloadHelper]，可以看到两个视频，长的那个就是目标视频，选择“copy URL”，得到如下链接：
-https://tehlsvodhls02.vhallyun.com/vhallyun/vhallrecord/lss_27f054bb/20220724124221_a018e830/record.m3u8?token=2A75182F_MjE3MTIwOTg2XzYzRUI1N0Q2X1lUQXhPR1U0TXpBX2FtOXBibDgzTWpBeE9UUXdORElfdm9k
-下载该文件：
-1 aria2c -c &#39;https://tehlsvodhls02.vhallyun.com/vhallyun/vhallrecord/lss_27f054bb/20220724124221_a018e830/record.m3u8?token=2A75182F_MjE3MTIwOTg2XzYzRUI1N0Q2X1lUQXhPR1U0TXpBX2FtOXBibDgzTWpBeE9UUXdORElfdm9k&#39; 打开这个文件，可以看到里面是如下的格式：
-1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 #EXTM3U #EXT-X-VERSION:3 #EXT-X-TARGETDURATION:20 #EXT-X-MEDIA-SEQUENCE:0 #EXTINF:4.520000, /vhallyun/vhallhls/ls/s_/27/lss_27f054bb/lss_27f054bb/20220724084900103860/livestream000007.ts #EXTINF:4.200000, /vhallyun/vhallhls/ls/s_/27/lss_27f054bb/lss_27f054bb/20220724084900103860/livestream000008.ts #EXTINF:4.200000, /vhallyun/vhallhls/ls/s_/27/lss_27f054bb/lss_27f054bb/20220724084900103860/livestream000009.ts #EXTINF:4.240000, /vhallyun/vhallhls/ls/s_/27/lss_27f054bb/lss_27f054bb/20220724084900103860/livestream000010.ts #EXTINF:5.080000, /vhallyun/vhallhls/ls/s_/27/lss_27f054bb/lss_27f054bb/20220724084900103860/livestream000011.ts #EXTINF:5.880000, /vhallyun/vhallhls/ls/s_/27/lss_27f054bb/lss_27f054bb/20220724084900103860/livestream000012.ts 表头信息可以忽略，我猜测#EXTINF:4.520000是每一个视频文件的长度，紧接的下一行是视频的路径，但是没有hostname。
-下载ts文件 观察一下m3u8文件的地址，前面一段是https://tehlsvodhls02.vhallyun.com/vhallyun/，所以我猜测hostname就是https://tehlsvodhls02.vhallyun.com，后面下载了一个ts文件，发现是正确的。
-下载的ts文件，转换成mp4文件:
-1 ffmpeg -i livestream002243.ts -acodec copy -vcodec copy -absf aac_adtstoasc livestream002243.mp4 从m3u8文件中得到ts文件名，并构造完整的url：
-1 2 3 4 [ -s url_list.txt ] || \ grep -v &#39;^#EXTM3U&#39; record.</div><div class="post-footer">
-        <a href="/2023_02_07-download_m3u8/">Read More</a><div class="post-tags">
-                <i class="fas fa-tags fa-fw" aria-hidden="true"></i>&nbsp;<a href="/tags/download/">download</a></div></div>
+        <a href="/2024_01_11-jpm2024/">J.P. Morgan Healthcare Conference 2024</a>
+    </h1><div class="post-meta"><span class="post-author"><a href="/" title="Author" rel="author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>entropydecrease</a></span>&nbsp;<span class="post-publish">published on <time datetime="2024-01-11">2024-01-11</time></span></div><div class="content"><h1 id="jpm2024-幻灯片集锦">JPM2024 幻灯片集锦</h1>
+<table>
+  <thead>
+      <tr>
+          <th style="text-align: left"></th>
+          <th style="text-align: left"></th>
+          <th style="text-align: left"></th>
+          <th style="text-align: left"></th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td style="text-align: left"><a href="https://s28.q4cdn.com/592666581/files/doc_presentations/2024/01/2024-TXG-JPM-Healthcare-Presentation-vF.pdf" target="_blank" rel="noopener noreffer ">10X(TXG)-JPM2024</a></td>
+          <td style="text-align: left"><a href="https://s24.q4cdn.com/575174480/files/doc_presentations/2024/Jan/04/adct-janaury-2024-business-update-presentation-final.pdf" target="_blank" rel="noopener noreffer ">ADC_Therapeutics(corp)</a></td>
+          <td style="text-align: left"><a href="https://ir.acrivon.com/static-files/774f9407-d89d-4e77-83bd-3a7d59c3e8c3" target="_blank" rel="noopener noreffer ">Acrivon(corp)</a></td>
+          <td style="text-align: left"><a href="https://s24.q4cdn.com/305549747/files/doc_downloads/2024/2024-jp-morgan-presentation_final.pdf" target="_blank" rel="noopener noreffer ">Agilent-JPM2024</a></td>
+      </tr>
+      <tr>
+          <td style="text-align: left"><a href="https://investor.agios.com/static-files/e04ad9b2-9708-4ec5-beab-50db78fb3cba" target="_blank" rel="noopener noreffer ">Agios-JPM2024</a></td>
+          <td style="text-align: left"><a href="https://ir.akerotx.com/static-files/c76e5581-39ab-4d46-a6c7-b5893f7a2210" target="_blank" rel="noopener noreffer ">Akero(corp)</a></td>
+          <td style="text-align: left"><a href="https://investors.akoyabio.com/static-files/3da66a92-e7e7-4396-8c5c-9ac81b3d5455" target="_blank" rel="noopener noreffer ">Akoya-JPM2024</a></td>
+          <td style="text-align: left"><a href="https://s1.q4cdn.com/963204942/files/doc_presentations/2024/Jan/10/alcon-2024-jp-morgan-healthcare-conference-presentation.pdf" target="_blank" rel="noopener noreffer ">Alcon-JPM2024</a></td>
+      </tr>
+      <tr>
+          <td style="text-align: left"><a href="https://investor.alkermes.com/static-files/cc0c7c2e-d901-4598-9643-1b3d300debdb" target="_blank" rel="noopener noreffer ">Alkermes-JPM2024</a></td>
+          <td style="text-align: left"><a href="http://alnylampharmaceuticalsinc.gcs-web.com/static-files/72b5f786-0525-442b-98e2-4bedd3fc47ec" target="_blank" rel="noopener noreffer ">Alnylam-JPM2024</a></td>
+          <td style="text-align: left"><a href="https://investors.amgen.com/static-files/ccffb8c8-c992-4e9f-a725-6739c5c9def5" target="_blank" rel="noopener noreffer ">Amgen-JPM2024</a></td>
+          <td style="text-align: left"><a href="https://ir.amicusrx.com/static-files/53112e56-2e20-4991-baec-67c7eba077c4" target="_blank" rel="noopener noreffer ">Amicus-JPM2024</a></td>
+      </tr>
+      <tr>
+          <td style="text-align: left"><a href="https://investors.apellis.com/static-files/c188e0d2-fd07-4164-b038-52ab47a30278" target="_blank" rel="noopener noreffer ">Apellis-JPM2024</a></td>
+          <td style="text-align: left"><a href="https://ir.arcturusrx.com/static-files/198c6d28-bb6b-4162-a7a6-5854a0fd2d6c" target="_blank" rel="noopener noreffer ">Arcturus-JPM2024</a></td>
+          <td style="text-align: left"><a href="https://www.argenx.com/sites/default/files/event-attachment/ARGX_2024_JPM_Corporate_Presentation.pdf" target="_blank" rel="noopener noreffer ">Argenx-JPM2024</a></td>
+          <td style="text-align: left"><a href="https://www.astrazeneca.com/content/dam/az/Investor_Relations/events/AZ-JPM-2024-presentation.pdf" target="_blank" rel="noopener noreffer ">AstraZeneca-JPM2024</a></td>
+      </tr>
+      <tr>
+          <td style="text-align: left"><a href="https://www.bms.com/assets/bms/us/en-us/pdf/investor-info/doc_presentations/2024/BMS-JPM-2024-presentation.pdf" target="_blank" rel="noopener noreffer ">BMS-JPM2024</a></td>
+          <td style="text-align: left"><a href="https://s22.q4cdn.com/911189824/files/doc_downloads/2024/bax-presentation-jp-morgan-2024-final.pdf" target="_blank" rel="noopener noreffer ">Baxter-JPM2024</a></td>
+          <td style="text-align: left"><a href="https://www.bayer.com/sites/default/files/2024-01/bayer-jpmorgan-healthcare-conference-2024-final.pdf" target="_blank" rel="noopener noreffer ">Bayer-JPM2024</a></td>
+          <td style="text-align: left"><a href="https://investors.beamtx.com/static-files/a2f39903-04a5-4d95-8270-6ca6d5c47630" target="_blank" rel="noopener noreffer ">Beam(corp)</a></td>
+      </tr>
+      <tr>
+          <td style="text-align: left"><a href="https://ir-api.eqs.com/redirect/66fbd995-c924-4da7-9d71-c2c4c4017aab" target="_blank" rel="noopener noreffer ">BeiGene-JPM2024</a></td>
+          <td style="text-align: left"><a href="https://investors.biomarin.com/image/BMRN_JPM&#43;2024&#43;_FINAL_LOCKED&#43;WON.pdf" target="_blank" rel="noopener noreffer ">BioMarin-JPM2024</a></td>
+          <td style="text-align: left"><a href="https://investors.biontech.de/node/15791/pdf" target="_blank" rel="noopener noreffer ">BioNTech-JPM2024</a></td>
+          <td style="text-align: left"><a href="https://ir.biocryst.com/static-files/1b141f59-395b-445e-a12d-8d38e608c9f5" target="_blank" rel="noopener noreffer ">Biocryst-JPM2024</a></td>
+      </tr>
+      <tr>
+          <td style="text-align: left"><a href="https://ir.biohaven.com/static-files/2dfd9a38-a99c-460e-a27b-6b6ca537f4e1" target="_blank" rel="noopener noreffer ">Biohaven-JPM2024</a></td>
+          <td style="text-align: left"><a href="https://www.blueprintmedicines.com/wp-content/uploads/2024/01/Blueprint-Medicines-Corporate-Presentation-January-2024.pdf" target="_blank" rel="noopener noreffer ">BluePrint-JPM2024</a></td>
+          <td style="text-align: left"><a href="https://s22.q4cdn.com/617463959/files/doc_events/2024/Jan/08/brkr-jpm-hcc-1-8-24.pdf" target="_blank" rel="noopener noreffer ">Bruker-JPM2024</a></td>
+          <td style="text-align: left"><a href="https://s2.q4cdn.com/447711729/files/doc_presentations/2024/cvs-health-2024-jpm-hc-conference-presentation.pdf" target="_blank" rel="noopener noreffer ">CVS-JPM2024</a></td>
+      </tr>
+      <tr>
+          <td style="text-align: left"><a href="https://s201.q4cdn.com/566741227/files/doc_presentations/2024/01/CAH-JPM-Presentation-1-9-24.pdf" target="_blank" rel="noopener noreffer ">CardinalHealth-JPM2024</a></td>
+          <td style="text-align: left"><a href="https://ir.carismatx.com/static-files/0bfa882c-557d-44ec-8e89-b454127ba97e" target="_blank" rel="noopener noreffer ">Carismatx(corp)</a></td>
+          <td style="text-align: left"><a href="https://s201.q4cdn.com/269710127/files/doc_presentations/2024/Jan/08/jp-morgan-ctlt-january-2024-v-final.pdf" target="_blank" rel="noopener noreffer ">Catelent-JPM2024</a></td>
+          <td style="text-align: left"><a href="https://s27.q4cdn.com/189772748/files/doc_presentations/2024/01/COR-JPM-2024-Final.pdf" target="_blank" rel="noopener noreffer ">Cencora-JPM2024</a></td>
+      </tr>
+      <tr>
+          <td style="text-align: left"><a href="https://investors.cerevel.com/static-files/8b6f50b8-ef85-4089-aec1-d0b638ba4d89" target="_blank" rel="noopener noreffer ">Cerevel(corp)</a></td>
+          <td style="text-align: left"><a href="https://investors.coherus.com/static-files/c447b92d-2ac6-4874-a5dd-a98466e56acc" target="_blank" rel="noopener noreffer ">Coherus-JPM2024</a></td>
+          <td style="text-align: left"><a href="https://www.daiichisankyo.co.jp/files/investors/library/materials/2023/JP%20Morgan%20Healthcare%20Conference%202024.pdf" target="_blank" rel="noopener noreffer ">DaiichiSankyo-JPM2024</a></td>
+          <td style="text-align: left"><a href="https://investors.danaher.com/image/2024&#43;Danaher&#43;at&#43;JPM&#43;Healthcare.pdf" target="_blank" rel="noopener noreffer ">Danaher-JPM2024</a></td>
+      </tr>
+      <tr>
+          <td style="text-align: left"><a href="https://investors.denalitherapeutics.com/static-files/4d54c317-9610-4828-84b4-d8080d84dd1a" target="_blank" rel="noopener noreffer ">Denali-JPM2024</a></td>
+          <td style="text-align: left"><a href="https://ir.editasmedicine.com/static-files/03350a40-33d7-413c-b2d6-c46f94ab273f" target="_blank" rel="noopener noreffer ">Editas(corp)</a></td>
+          <td style="text-align: left"><a href="https://s1.q4cdn.com/466533431/files/doc_presentations/2024/1/ELAN_JPM-January-2024.pdf" target="_blank" rel="noopener noreffer ">Elanco-JPM2024</a></td>
+          <td style="text-align: left"><a href="https://ir.enanta.com/events/event-details/42nd-annual-jp-morgan-healthcare-conference" target="_blank" rel="noopener noreffer ">Enanta-JPM2024</a></td>
+      </tr>
+      <tr>
+          <td style="text-align: left"><a href="https://s2.q4cdn.com/939383573/files/doc_presentations/2024/01/JPM-2024-Final-1-9-24.pdf" target="_blank" rel="noopener noreffer ">Evolent-JPM2024</a></td>
+          <td style="text-align: left"><a href="https://s22.q4cdn.com/877809405/files/doc_presentations/2023/12/exas-latest-2023-corporate-presentation.pdf" target="_blank" rel="noopener noreffer ">ExactScience(corp)</a></td>
+          <td style="text-align: left"><a href="https://s22.q4cdn.com/877809405/files/doc_events/2024/Jan/08/jpm-presenter-version-website-version.pdf" target="_blank" rel="noopener noreffer ">ExactScience-JPM2024</a></td>
+          <td style="text-align: left"><a href="https://ir.exelixis.com/static-files/0eee9c5a-5ea1-457e-b556-1593fac14f57" target="_blank" rel="noopener noreffer ">Exelixis-JPM2024</a></td>
+      </tr>
+      <tr>
+          <td style="text-align: left"><a href="http://investor.g1therapeutics.com/static-files/bfa5b29c-6b18-4399-a828-48be072eacfd" target="_blank" rel="noopener noreffer ">G1_therapeutics-JPM2024</a></td>
+          <td style="text-align: left"><a href="https://www.gsk.com/media/10764/2024-jp-morgan-healthcare-conference-presentation.pdf" target="_blank" rel="noopener noreffer ">GSK-JPM2024</a></td>
+          <td style="text-align: left"><a href="https://ir.genedx.com/static-files/f41e1df1-e4b0-46f0-b69a-4aa94c2f98a4" target="_blank" rel="noopener noreffer ">GeneDx-JPM2024</a></td>
+          <td style="text-align: left"><a href="https://s29.q4cdn.com/585078350/files/doc_presentations/2024/Jan/08/gild-jpm-2024-presentation-8-january-2024.pdf" target="_blank" rel="noopener noreffer ">Gilead-JPM2024</a></td>
+      </tr>
+      <tr>
+          <td style="text-align: left"><a href="https://s26.q4cdn.com/594050615/files/doc_presentations/2024/01/08/GH-2024-JP-Morgan-Conference-Presentation-Final.pdf" target="_blank" rel="noopener noreffer ">GuardantHealth-JPM2024</a></td>
+          <td style="text-align: left"><a href="https://haemonetics.gcs-web.com/static-files/f40519d3-ee59-4a17-b6aa-6f73ea1b68b7" target="_blank" rel="noopener noreffer ">Haemonetics-JPM2024</a></td>
+          <td style="text-align: left"><a href="https://s28.q4cdn.com/284259014/files/doc_presentation/2023/09/HALO_Investor_Deck_September-2023-FINAL.pdf" target="_blank" rel="noopener noreffer ">Halozyme(corp)</a></td>
+          <td style="text-align: left"><a href="https://ir.hillevax.com/static-files/9600adae-29ac-48bb-85df-76c99a634cb2" target="_blank" rel="noopener noreffer ">Hillevax(corp)</a></td>
+      </tr>
+      <tr>
+          <td style="text-align: left"><a href="https://s29.q4cdn.com/816090369/files/doc_financials/2023/q4/231207-Hologic-Corporate-PresentationFINAL.pdf" target="_blank" rel="noopener noreffer ">Hologic(corp)</a></td>
+          <td style="text-align: left"><a href="https://s29.q4cdn.com/816090369/files/doc_events/2024/Hologic_JPM-Presentation_Jan9_130pm_CaliforniaEast.pdf" target="_blank" rel="noopener noreffer ">Hologic-JPM2024</a></td>
+          <td style="text-align: left"><a href="https://investor.illumina.com/files/doc_presentations/2024/Jan/illumina-jpm-conference-2024.pdf" target="_blank" rel="noopener noreffer ">Illumina-JPM2024</a></td>
+          <td style="text-align: left"><a href="https://investor.immunogen.com/static-files/590a2ec5-4d6f-44fc-98fc-64d1512e8112" target="_blank" rel="noopener noreffer ">Immunogen(corp)</a></td>
+      </tr>
+      <tr>
+          <td style="text-align: left"><a href="https://www.imugene.com/s/Final-website-NDRS-Nov-2023-Slides.pdf" target="_blank" rel="noopener noreffer ">Imugene(corp)</a></td>
+          <td style="text-align: left"><a href="https://investor.incyte.com/static-files/d737cf90-9930-42b8-a3d2-c80d634e159f" target="_blank" rel="noopener noreffer ">Incyte-JPM2024</a></td>
+          <td style="text-align: left"><a href="https://s21.q4cdn.com/716728766/files/doc_presentations/2023/11/3Q23-earnings-deck-11-7-23.pdf" target="_blank" rel="noopener noreffer ">Invitae(corp)</a></td>
+          <td style="text-align: left"><a href="https://investors.invivyd.com/static-files/bc8c2766-2e0b-4d6a-95f0-82d9af640e7f" target="_blank" rel="noopener noreffer ">Invivyd(corp)</a></td>
+      </tr>
+      <tr>
+          <td style="text-align: left"><a href="https://ir.ionispharma.com/static-files/803c65ea-e16a-4c91-a79d-7602e2ad0e53" target="_blank" rel="noopener noreffer ">Ionis-JPM2024</a></td>
+          <td style="text-align: left"><a href="https://investor.jnj.com/files/doc_events/2024/Jan/08/jnj-usq_transcript_2024-01-08-final.pdf" target="_blank" rel="noopener noreffer ">JNJ_transcript-JPM2024</a></td>
+          <td style="text-align: left"><a href="https://investor.jazzpharma.com/static-files/06e3a3b0-e16f-48f9-9e95-b5f6a8af1a54" target="_blank" rel="noopener noreffer ">JazzPharm-JPM2024</a></td>
+          <td style="text-align: left"><a href="https://investors.karunatx.com/static-files/be98dfec-1817-47b8-8de6-02f0f93f6056" target="_blank" rel="noopener noreffer ">Karuna(corp)</a></td>
+      </tr>
+      <tr>
+          <td style="text-align: left"><a href="https://investors.karyopharm.com/download/KPTI%20JPM%202024%20Slide%20Deck_Final.pdf" target="_blank" rel="noopener noreffer ">Karyopharm-JPM2024</a></td>
+          <td style="text-align: left"><a href="https://investors.kymeratx.com/static-files/340812cb-ff5f-41b2-9f59-bf867868129d" target="_blank" rel="noopener noreffer ">Kymera(corp)</a></td>
+          <td style="text-align: left"><a href="https://investors.kymeratx.com/static-files/14265265-2ae6-4d80-b3a2-4a85d51e8f8d" target="_blank" rel="noopener noreffer ">Kymera(corp)_RD</a></td>
+          <td style="text-align: left"><a href="https://ir.lavatherapeutics.com/static-files/6aa38edc-ee3e-40bc-8d49-c55a6008e980" target="_blank" rel="noopener noreffer ">Lava(corp)</a></td>
+      </tr>
+      <tr>
+          <td style="text-align: left"><a href="https://investors.legendbiotech.com/static-files/064bac6e-6785-48de-87b9-b61c57087957" target="_blank" rel="noopener noreffer ">Legend(corp)</a></td>
+          <td style="text-align: left"><a href="https://investors.legendbiotech.com/static-files/44f17e84-f2d1-4eee-af7c-1ea8ae9f09bd" target="_blank" rel="noopener noreffer ">Legend-JPM2024</a></td>
+          <td style="text-align: left"><a href="https://www.lundbeck.com/content/dam/lundbeck-com/masters/global-site/global-site/investors/financial-events/agm2023/AGM%202023%20presentation.pdf" target="_blank" rel="noopener noreffer ">Lundbeck(corp)</a></td>
+          <td style="text-align: left"><a href="https://investor.mckesson.com/files/doc_presentations/2024/01/2024-MCK-JPM-HC-CONF_FINAL.pdf" target="_blank" rel="noopener noreffer ">Mckesson-JPM2024</a></td>
+      </tr>
+      <tr>
+          <td style="text-align: left"><a href="https://filecache.investorroom.com/mr5ir_medtronic/671/download/Conference-Presentation.pdf" target="_blank" rel="noopener noreffer ">Medtronic-JPM2024</a></td>
+          <td style="text-align: left"><a href="https://s21.q4cdn.com/488056881/files/doc_events/2024/Jan/09/mrk-jp-morgan-healthcare-conference-2024-for-website.pdf" target="_blank" rel="noopener noreffer ">Merck-JPM2024</a></td>
+          <td style="text-align: left"><a href="https://www.merckgroup.com/content/dam/web/corporate/non-images/investors/events-and-presentations/conferences-and-roadshows/2024/en/2024_JPM_Presentation_CEO%20-%20FINAL%20EN.pdf" target="_blank" rel="noopener noreffer ">Merck_KGaA-JPM2024</a></td>
+          <td style="text-align: left"><a href="https://www.merckgroup.com/content/dam/web/corporate/non-images/investors/events-and-presentations/conferences-and-roadshows/2024/en/2023-Q3-Roadshow-Presentation-EN-JPM.pdf" target="_blank" rel="noopener noreffer ">Merck_KGaA_2023Q3(corp)</a></td>
+      </tr>
+      <tr>
+          <td style="text-align: left"><a href="https://s202.q4cdn.com/258391627/files/doc_events/2024/January/MTD-JP-Morgan-Healthcare-Conference-2024.pdf" target="_blank" rel="noopener noreffer ">MettlerToledo-JPM2024</a></td>
+          <td style="text-align: left"><a href="https://s27.q4cdn.com/140416303/files/doc_presentation/2023/08/Mirati-Corporate-Deck_Aug-2023_v3.pdf" target="_blank" rel="noopener noreffer ">Mirati(corp)</a></td>
+          <td style="text-align: left"><a href="https://s29.q4cdn.com/435878511/files/doc_events/2024/Jan/08/moderna-2024-jpm-presentation_final-website.pdf" target="_blank" rel="noopener noreffer ">Moderna-JPM2024</a></td>
+          <td style="text-align: left"><a href="https://investors.molecularpartners.com/static-files/fd5ea892-98bc-4492-ae09-f54f318047d4" target="_blank" rel="noopener noreffer ">Molecular_partners(corp)</a></td>
+      </tr>
+      <tr>
+          <td style="text-align: left"><a href="https://investor.morphictx.com/static-files/afb4fcff-9676-4496-97d8-54c73ecfe163" target="_blank" rel="noopener noreffer ">Morphictx(corp)</a></td>
+          <td style="text-align: left"><a href="https://s201.q4cdn.com/354493536/files/doc_presentation/2024/Natera-JPM-Final-Slides.pdf" target="_blank" rel="noopener noreffer ">Natera-JPM2024</a></td>
+          <td style="text-align: left"><a href="https://www.neurocrine.com//assets/2024/01/Neurocrine-Biosciences_01.09.24.pdf" target="_blank" rel="noopener noreffer ">Neurocrine-JPM2024</a></td>
+          <td style="text-align: left"><a href="https://www.novartis.com/sites/novartis_com/files/2024-jpm-novartis-strategy-growth-update.pdf" target="_blank" rel="noopener noreffer ">Novartis-JPM2024</a></td>
+      </tr>
+      <tr>
+          <td style="text-align: left"><a href="https://novavax.widen.net/s/djgjq5pllw/nvax-2024-jpm-presentation" target="_blank" rel="noopener noreffer ">Novavax-JPM2024</a></td>
+          <td style="text-align: left"><a href="https://ir.nurixtx.com/static-files/ee8cb2f8-e482-486e-a861-ececbd15f703" target="_blank" rel="noopener noreffer ">Nurix(corp)</a></td>
+          <td style="text-align: left"><a href="https://ir.nurixtx.com/static-files/ee8cb2f8-e482-486e-a861-ececbd15f703" target="_blank" rel="noopener noreffer ">Nurixtx-JPM2024</a></td>
+          <td style="text-align: left"><a href="https://investors.nuvalent.com/42nd-Annual-J-P-Morgan-Healthcare-Conference" target="_blank" rel="noopener noreffer ">Nuvalent-JPM2024</a></td>
+      </tr>
+      <tr>
+          <td style="text-align: left"><a href="https://s201.q4cdn.com/141608511/files/doc_presentations/2024/Jan/08/NVIDIA-Accelerating-Healthcare-Innovation-with-AI.pdf" target="_blank" rel="noopener noreffer ">Nvidia-JPM2024</a></td>
+          <td style="text-align: left"><a href="https://ir.ptcbio.com/static-files/41f6e028-8b4e-4df7-b69e-9c1af9df2a1b" target="_blank" rel="noopener noreffer ">PTC_Therapeutics-JPM2024</a></td>
+          <td style="text-align: left"><a href="https://www.penumbrainc.com/pdf/jp-morgan-42-presentation/" target="_blank" rel="noopener noreffer ">Penumbra-JPM2024</a></td>
+          <td style="text-align: left"><a href="https://investors.pfizer.com/files/doc_events/2024/Jan/08/JPM-2024-Fireside-Chat-Presentation-FINAL.pdf" target="_blank" rel="noopener noreffer ">Pfizer-JPM2024</a></td>
+      </tr>
+      <tr>
+          <td style="text-align: left"><a href="https://s24.q4cdn.com/837435241/files/doc_financials/2024/q3/PHR-Q3-FY24-IR-Presentation.pdf" target="_blank" rel="noopener noreffer ">Phreesia(corp)</a></td>
+          <td style="text-align: left"><a href="https://ir.pliantrx.com/static-files/49e762aa-9e9d-4cf9-8be5-6b5b4704b35e" target="_blank" rel="noopener noreffer ">Pliant(corp)</a></td>
+          <td style="text-align: left"><a href="https://ir.pliantrx.com/static-files/f12229c1-1472-4f37-add0-9d841389f3e7" target="_blank" rel="noopener noreffer ">Pliant-JPM2024</a></td>
+          <td style="text-align: left"><a href="https://s21.q4cdn.com/577521493/files/doc_events/2024/Jan/09/pinc-jp-morgan-conference-presentation-final-1-5-24.pdf" target="_blank" rel="noopener noreffer ">Premier-JPM2024</a></td>
+      </tr>
+      <tr>
+          <td style="text-align: left"><a href="https://investors.primemedicine.com/static-files/415870f7-b7dc-475f-895f-fb243be27629" target="_blank" rel="noopener noreffer ">PrimeMedicine(corp)</a></td>
+          <td style="text-align: left"><a href="https://investors.primemedicine.com/static-files/8838dfe2-74a9-4e39-aac9-fbb743589692" target="_blank" rel="noopener noreffer ">PrimeMedicine-JPM2024</a></td>
+          <td style="text-align: left"><a href="https://s28.q4cdn.com/125951340/files/doc_presentations/2024/01/QIAGEN-JPM-Presentation-2024-FINAL-20240108.pdf" target="_blank" rel="noopener noreffer ">Qiagen-JPM2024</a></td>
+          <td style="text-align: left"><a href="https://ir.quanterix.com/static-files/03b123ac-b846-4f0e-8a75-4e45af5c0ac6" target="_blank" rel="noopener noreffer ">Quanterix-JPM2024</a></td>
+      </tr>
+      <tr>
+          <td style="text-align: left"><a href="https://s2.q4cdn.com/390454341/files/doc_presentations/2023/03/updated/DGX_InvestorDay_23_JimDavis_FINAL-1.pdf" target="_blank" rel="noopener noreffer ">Quest(corp)</a></td>
+          <td style="text-align: left"><a href="https://investor.regeneron.com/static-files/7dfdabe2-05d1-4145-b5c5-342cec0ce9c4" target="_blank" rel="noopener noreffer ">Regeneron-JPM2024</a></td>
+          <td style="text-align: left"><a href="https://ir.relaytx.com/static-files/c8691bbf-5c3c-4be3-8002-124796d10450" target="_blank" rel="noopener noreffer ">RelayTx-JPM2024</a></td>
+          <td style="text-align: left"><a href="https://s202.q4cdn.com/560601150/files/doc_presentation/2024/01/2024JPM_Healthcareconference.pdf" target="_blank" rel="noopener noreffer ">Revvity-JPM2024</a></td>
+      </tr>
+      <tr>
+          <td style="text-align: left"><a href="https://assets.roche.com/f/176343/x/14e09b039c/roche_jpm_final_wo.pdf" target="_blank" rel="noopener noreffer ">Roche-JPM2024</a></td>
+          <td style="text-align: left"><a href="https://investor.roivant.com/static-files/22492b87-d81a-4191-833f-28e99c42b2d7" target="_blank" rel="noopener noreffer ">Roivant(corp)</a></td>
+          <td style="text-align: left"><a href="https://investor.roivant.com/static-files/ba09fb93-dad1-44d6-be01-33a10391fc0c" target="_blank" rel="noopener noreffer ">Roivant-JPM2024</a></td>
+          <td style="text-align: left"><a href="https://investor.sagerx.com/static-files/0e848125-a6a6-4d69-9089-0576b865c7c7" target="_blank" rel="noopener noreffer ">Sage-JPM2024</a></td>
+      </tr>
+      <tr>
+          <td style="text-align: left"><a href="https://www.sanofi.com/assets/dotcom/content-app/events/broker-conference/2024/42nd-annual-j-p-morgan-healthcare-conference/Sanofi-JPMorgan-Presentation-09.01.2024.pdf" target="_blank" rel="noopener noreffer ">Sanofi-JPM2024</a></td>
+          <td style="text-align: left"><a href="https://investorrelations.sarepta.com/static-files/f6ca5679-8d91-453d-9a51-c0af88ab3d48" target="_blank" rel="noopener noreffer ">Sarepta-JPM2024</a></td>
+          <td style="text-align: left"><a href="https://investor.seer.bio/static-files/398dbcbc-d39f-4e40-95df-f59f3c5c044b" target="_blank" rel="noopener noreffer ">Seer(corp)</a></td>
+          <td style="text-align: left"><a href="https://investor.seer.bio/static-files/fe784ea0-3356-4ec0-979e-41409092ba4c" target="_blank" rel="noopener noreffer ">Seer-JPM2024</a></td>
+      </tr>
+      <tr>
+          <td style="text-align: left"><a href="https://ir.serestherapeutics.com/static-files/397408ef-91e1-44e0-910a-12858cb1a96b" target="_blank" rel="noopener noreffer ">Seres(corp)</a></td>
+          <td style="text-align: left"><a href="https://ir.serestherapeutics.com/static-files/397408ef-91e1-44e0-910a-12858cb1a96b" target="_blank" rel="noopener noreffer ">SeresTx(corp)</a></td>
+          <td style="text-align: left"><a href="https://soseiheptares.com/uploads/Presentation%20and%20Webcast/2023/Corporate%20Presentation_Dec_EN.pdf" target="_blank" rel="noopener noreffer ">SoseiHeptares(corp)</a></td>
+          <td style="text-align: left"><a href="https://investor.stoketherapeutics.com/static-files/b1f4652c-40bf-4868-b155-dd631b78b10d" target="_blank" rel="noopener noreffer ">Stoke_Therapeutics-JPM2024</a></td>
+      </tr>
+      <tr>
+          <td style="text-align: left"><a href="https://ir.syndax.com/static-files/fdd2e06d-0aa7-4770-9c83-a3acd724f790" target="_blank" rel="noopener noreffer ">Syndax(corp)</a></td>
+          <td style="text-align: left"><a href="https://ir.syndax.com/static-files/94c48111-645a-4659-bd75-17f79bce12eb" target="_blank" rel="noopener noreffer ">Syndax-JPM2024</a></td>
+          <td style="text-align: left"><a href="https://s27.q4cdn.com/154990478/files/doc_presentations/2024/Jan/09/2024-jp-morgan-hc-conference-deck-teleflex.pdf" target="_blank" rel="noopener noreffer ">Teleflex-JPM2024</a></td>
+          <td style="text-align: left"><a href="https://telixpharma.com/wp-content/uploads/2024/01/TLX_JP_Morgan_Healthcare_Conference_Presentation.pdf" target="_blank" rel="noopener noreffer ">Telix-JPM2024</a></td>
+      </tr>
+      <tr>
+          <td style="text-align: left"><a href="https://s24.q4cdn.com/720828402/files/doc_presentations/2024/01/JPM-Conference-Teva-Presentation.pdf" target="_blank" rel="noopener noreffer ">Tevav-JPM2024</a></td>
+          <td style="text-align: left"><a href="https://s27.q4cdn.com/797047529/files/doc_presentations/2024/Jan/09/01-09-24-jp-morgan-presentation-final.pdf" target="_blank" rel="noopener noreffer ">ThermoFisher-JPM2024</a></td>
+          <td style="text-align: left"><a href="https://static.seekingalpha.com/uploads/sa_presentations/331/97331/original.pdf" target="_blank" rel="noopener noreffer ">UltraGeneYX(corp)</a></td>
+          <td style="text-align: left"><a href="https://ir.ultragenyx.com/static-files/ebde99f9-1891-4798-b0b2-f088bdb72131" target="_blank" rel="noopener noreffer ">UltraGeneYX-JPM2024</a></td>
+      </tr>
+      <tr>
+          <td style="text-align: left"><a href="https://investor.veradigm.com/static-files/d18bcdd7-02f5-4b8d-a763-dafaccf2c5e5" target="_blank" rel="noopener noreffer ">Veradigm-JPM2024</a></td>
+          <td style="text-align: left"><a href="https://investors.vrtx.com/static-files/48e3be20-a2a1-4cd1-b39e-665e24e17bdf" target="_blank" rel="noopener noreffer ">Vertex-JPM2024</a></td>
+          <td style="text-align: left"><a href="https://ir.vervetx.com/static-files/f6ab65c0-556a-42a8-b310-89393551b1b2" target="_blank" rel="noopener noreffer ">Verve(corp)</a></td>
+          <td style="text-align: left"><a href="https://investors.vir.bio/files/doc_presentation/2024/01/09/JPM-2024_Vir-Presentation_9Jan24.pdf" target="_blank" rel="noopener noreffer ">VirBio-JPM2024</a></td>
+      </tr>
+      <tr>
+          <td style="text-align: left"><a href="https://static.wuxiapptec.com/91/20240111/2024%20JPM%20Presentation%20-%20WXAT.pdf" target="_blank" rel="noopener noreffer ">WuXiAppTec-JPM2024</a></td>
+          <td style="text-align: left"><a href="https://investors.xencor.com/static-files/47a6e12e-2fd7-42d8-a98e-943674c8d8ca" target="_blank" rel="noopener noreffer ">Xenor(corp)</a></td>
+          <td style="text-align: left"><a href="https://ir.zailaboratory.com/static-files/a2903174-8be9-4f35-a799-5a741fcade53" target="_blank" rel="noopener noreffer ">ZaiLab-JPM2024</a></td>
+          <td style="text-align: left"><a href="https://s1.q4cdn.com/446597350/files/doc_events/2024/Jan/08/zoetis-jp-morgan-healthcare-conference-2024-presentation.pdf" target="_blank" rel="noopener noreffer ">Zoetis-JPM2024</a></td>
+      </tr>
+      <tr>
+          <td style="text-align: left"><a href="https://s201.q4cdn.com/653785554/files/doc_events/2024/Jan/08/irtc_investor-presentation-jpm-conference_january-2024_vf.pdf" target="_blank" rel="noopener noreffer ">iRhythm-JPM2024</a></td>
+          <td style="text-align: left"><a href="http://www.newhorizonbio.com/investpdf/8b7f8a3b-7bfe-46a8-b152-3c477608473c.pdf" target="_blank" rel="noopener noreffer ">诺辉健康-JPM2024</a></td>
+          <td style="text-align: left"></td>
+          <td style="text-align: left"></td>
+      </tr>
+  </tbody>
+</table></div><div class="post-footer">
+        <a href="/2024_01_11-jpm2024/">Read More</a></div>
 </article><ul class="pagination"><li class="page-item ">
                     <span class="page-link">
                         <a href="/">1</a>
@@ -172,11 +605,11 @@ https://tehlsvodhls02.vhallyun.com/vhallyun/vhallrecord/lss_27f054bb/20220724124
                     <span class="page-link" aria-hidden="true">&hellip;</span>
                 </li><li class="page-item ">
                     <span class="page-link">
-                        <a href="/page/7/">7</a>
+                        <a href="/page/11/">11</a>
                     </span>
                 </li></ul></div></div>
             </main><footer class="footer">
-        <div class="footer-container"><div class="footer-line">Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.113.0">Hugo</a> | Theme - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.2.11"><i class="far fa-kiss-wink-heart fa-fw" aria-hidden="true"></i> LoveIt</a>
+        <div class="footer-container"><div class="footer-line">Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.134.2">Hugo</a> | Theme - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.2.11"><i class="far fa-kiss-wink-heart fa-fw" aria-hidden="true"></i> LoveIt</a>
                 </div><div class="footer-line" itemscope itemtype="http://schema.org/CreativeWork"><i class="far fa-copyright fa-fw" aria-hidden="true"></i><span itemprop="copyrightYear">2015 - 2024</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/" target="_blank">entropydecrease</a></span></div>
         </div>
     </footer></div>

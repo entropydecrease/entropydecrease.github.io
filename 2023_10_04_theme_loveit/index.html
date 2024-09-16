@@ -1,40 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
+    <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="robots" content="noodp" />
-        <title>使用LoveIt作为hugo的主题 - Entropy Decrease</title><meta name="Description" content="阅读、思考、写作，都是熵减的过程"><meta property="og:title" content="使用LoveIt作为hugo的主题" />
-<meta property="og:description" content="之前用的even没有维护，已经无法使用，所以找了一下采用loveit。以下是更新方法的简单记录:
+        <title>使用LoveIt作为hugo的主题 - Entropy Decrease</title><meta name="Description" content="阅读、思考、写作，都是熵减的过程"><meta property="og:url" content="http://localhost:1313/2023_10_04_theme_loveit/">
+  <meta property="og:site_name" content="Entropy Decrease">
+  <meta property="og:title" content="使用LoveIt作为hugo的主题">
+  <meta property="og:description" content="之前用的even没有维护，已经无法使用，所以找了一下采用loveit。以下是更新方法的简单记录:
 安装 简单起见，重新生成hugo site，之后把原来的post都copy过来。
 1 2 3 4 hugo new site entropydecrease cd entropydecrease git clone https://github.com/dillonzq/LoveIt.git themes/LoveIt cp -r ../entropydecrease.bak/content/* ./content/ 配置 修改hugo.toml即可
-因为LoveIt默认文章都是在&rsquo;content/posts/&lsquo;下面的，与even默认&rsquo;content/post/&lsquo;不同，所以要改一下：
+因为LoveIt默认文章都是在’content/posts/‘下面的，与even默认’content/post/‘不同，所以要改一下：
 mv content/post content/posts
 将hugo输出的静态文件所在的文件夹public/变成一个git 版本库
 1 &gt; git clone git@github.com:entropydecrease/entropydecrease.github.io.git public 使用 写文章
 更新到github
 将下面的命令放在deploy.sh中作为可执行脚本中即可。
-1 2 3 4 5 hugo &amp;&amp; \ cd public &amp;&amp; \ git pull &amp;&amp; git add . &amp;&amp; \ git commit -m &#34;update on [`date`]&#34; git push origin main " />
-<meta property="og:type" content="article" />
-<meta property="og:url" content="https://entropydecrease.github.io/2023_10_04_theme_loveit/" /><meta property="article:section" content="posts" />
-<meta property="article:published_time" content="2023-10-04T13:39:45+08:00" />
-<meta property="article:modified_time" content="2023-10-04T13:39:45+08:00" /><meta property="og:site_name" content="Entropy Decrease" />
-<meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="使用LoveIt作为hugo的主题"/>
-<meta name="twitter:description" content="之前用的even没有维护，已经无法使用，所以找了一下采用loveit。以下是更新方法的简单记录:
+1 2 3 4 5 hugo &amp;&amp; \ cd public &amp;&amp; \ git pull &amp;&amp; git add . &amp;&amp; \ git commit -m &#34;update on [`date`]&#34; git push origin main ">
+  <meta property="og:locale" content="en">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2023-10-04T13:39:45+08:00">
+    <meta property="article:modified_time" content="2023-10-04T13:39:45+08:00">
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="使用LoveIt作为hugo的主题">
+  <meta name="twitter:description" content="之前用的even没有维护，已经无法使用，所以找了一下采用loveit。以下是更新方法的简单记录:
 安装 简单起见，重新生成hugo site，之后把原来的post都copy过来。
 1 2 3 4 hugo new site entropydecrease cd entropydecrease git clone https://github.com/dillonzq/LoveIt.git themes/LoveIt cp -r ../entropydecrease.bak/content/* ./content/ 配置 修改hugo.toml即可
-因为LoveIt默认文章都是在&rsquo;content/posts/&lsquo;下面的，与even默认&rsquo;content/post/&lsquo;不同，所以要改一下：
+因为LoveIt默认文章都是在’content/posts/‘下面的，与even默认’content/post/‘不同，所以要改一下：
 mv content/post content/posts
 将hugo输出的静态文件所在的文件夹public/变成一个git 版本库
 1 &gt; git clone git@github.com:entropydecrease/entropydecrease.github.io.git public 使用 写文章
 更新到github
 将下面的命令放在deploy.sh中作为可执行脚本中即可。
-1 2 3 4 5 hugo &amp;&amp; \ cd public &amp;&amp; \ git pull &amp;&amp; git add . &amp;&amp; \ git commit -m &#34;update on [`date`]&#34; git push origin main "/>
+1 2 3 4 5 hugo &amp;&amp; \ cd public &amp;&amp; \ git pull &amp;&amp; git add . &amp;&amp; \ git commit -m &#34;update on [`date`]&#34; git push origin main ">
 <meta name="application-name" content="Entropy Decrease">
 <meta name="apple-mobile-web-app-title" content="Entropy Decrease"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
         <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="https://entropydecrease.github.io/2023_10_04_theme_loveit/" /><link rel="prev" href="https://entropydecrease.github.io/2023_09_22_rclone_to_replace_sshfs/" /><link rel="next" href="https://entropydecrease.github.io/2023_11_06_%E5%BC%A0%E5%8F%91%E5%A5%8E%E5%8F%A3%E8%BF%B0%E5%8E%86%E5%8F%B2/" /><link rel="stylesheet" href="/css/style.min.css"><link rel="preload" href="/lib/fontawesome-free/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="http://localhost:1313/2023_10_04_theme_loveit/" /><link rel="prev" href="http://localhost:1313/2023_09_22_rclone_to_replace_sshfs/" /><link rel="next" href="http://localhost:1313/2023_11_06_%E5%BC%A0%E5%8F%91%E5%A5%8E%E5%8F%A3%E8%BF%B0%E5%8E%86%E5%8F%B2/" /><link rel="stylesheet" href="/css/style.min.css"><link rel="preload" href="/lib/fontawesome-free/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
         <noscript><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"></noscript><link rel="preload" href="/lib/animate/animate.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
         <noscript><link rel="stylesheet" href="/lib/animate/animate.min.css"></noscript><script type="application/ld+json">
     {
@@ -44,9 +48,9 @@ mv content/post content/posts
         "inLanguage": "en",
         "mainEntityOfPage": {
             "@type": "WebPage",
-            "@id": "https:\/\/entropydecrease.github.io\/2023_10_04_theme_loveit\/"
+            "@id": "http:\/\/localhost:1313\/2023_10_04_theme_loveit\/"
         },"genre": "posts","wordcount":  70 ,
-        "url": "https:\/\/entropydecrease.github.io\/2023_10_04_theme_loveit\/","datePublished": "2023-10-04T13:39:45+08:00","dateModified": "2023-10-04T13:39:45+08:00","publisher": {
+        "url": "http:\/\/localhost:1313\/2023_10_04_theme_loveit\/","datePublished": "2023-10-04T13:39:45+08:00","dateModified": "2023-10-04T13:39:45+08:00","publisher": {
             "@type": "Organization",
             "name": ""},"author": {
                 "@type": "Person",
@@ -208,7 +212,7 @@ mv content/post content/posts
         <div class="post-info-line">
             <div class="post-info-md"></div>
             <div class="post-info-share">
-                <span><a href="javascript:void(0);" title="Share on Twitter" data-sharer="twitter" data-url="https://entropydecrease.github.io/2023_10_04_theme_loveit/" data-title="使用LoveIt作为hugo的主题"><i class="fab fa-twitter fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Facebook" data-sharer="facebook" data-url="https://entropydecrease.github.io/2023_10_04_theme_loveit/"><i class="fab fa-facebook-square fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Hacker News" data-sharer="hackernews" data-url="https://entropydecrease.github.io/2023_10_04_theme_loveit/" data-title="使用LoveIt作为hugo的主题"><i class="fab fa-hacker-news fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Line" data-sharer="line" data-url="https://entropydecrease.github.io/2023_10_04_theme_loveit/" data-title="使用LoveIt作为hugo的主题"><i data-svg-src="/lib/simple-icons/icons/line.min.svg" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Pocket" data-sharer="pocket" data-url="https://entropydecrease.github.io/2023_10_04_theme_loveit/"><i class="fab fa-get-pocket fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on 微博" data-sharer="weibo" data-url="https://entropydecrease.github.io/2023_10_04_theme_loveit/" data-title="使用LoveIt作为hugo的主题"><i class="fab fa-weibo fa-fw" aria-hidden="true"></i></a></span>
+                <span><a href="javascript:void(0);" title="Share on Twitter" data-sharer="twitter" data-url="http://localhost:1313/2023_10_04_theme_loveit/" data-title="使用LoveIt作为hugo的主题"><i class="fab fa-twitter fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Facebook" data-sharer="facebook" data-url="http://localhost:1313/2023_10_04_theme_loveit/"><i class="fab fa-facebook-square fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Hacker News" data-sharer="hackernews" data-url="http://localhost:1313/2023_10_04_theme_loveit/" data-title="使用LoveIt作为hugo的主题"><i class="fab fa-hacker-news fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Line" data-sharer="line" data-url="http://localhost:1313/2023_10_04_theme_loveit/" data-title="使用LoveIt作为hugo的主题"><i data-svg-src="/lib/simple-icons/icons/line.min.svg" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Pocket" data-sharer="pocket" data-url="http://localhost:1313/2023_10_04_theme_loveit/"><i class="fab fa-get-pocket fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on 微博" data-sharer="weibo" data-url="http://localhost:1313/2023_10_04_theme_loveit/" data-title="使用LoveIt作为hugo的主题"><i class="fab fa-weibo fa-fw" aria-hidden="true"></i></a></span>
             </div>
         </div>
     </div>
@@ -225,7 +229,7 @@ mv content/post content/posts
 </div>
 </article></div>
             </main><footer class="footer">
-        <div class="footer-container"><div class="footer-line">Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.113.0">Hugo</a> | Theme - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.2.11"><i class="far fa-kiss-wink-heart fa-fw" aria-hidden="true"></i> LoveIt</a>
+        <div class="footer-container"><div class="footer-line">Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.134.2">Hugo</a> | Theme - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.2.11"><i class="far fa-kiss-wink-heart fa-fw" aria-hidden="true"></i> LoveIt</a>
                 </div><div class="footer-line" itemscope itemtype="http://schema.org/CreativeWork"><i class="far fa-copyright fa-fw" aria-hidden="true"></i><span itemprop="copyrightYear">2015 - 2024</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/" target="_blank">entropydecrease</a></span></div>
         </div>
     </footer></div>

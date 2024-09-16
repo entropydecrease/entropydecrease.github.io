@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="robots" content="noodp" />
+        <title>图解三代测序（Nanopore） (转载作为备份) - Entropy Decrease</title><meta name="Description" content="阅读、思考、写作，都是熵减的过程"><meta property="og:url" content="https://entropydecrease.github.io/2023_04_08-ont_basics/">
+  <meta property="og:site_name" content="Entropy Decrease">
+  <meta property="og:title" content="图解三代测序（Nanopore） (转载作为备份)">
+  <meta property="og:description" content="转载自 baimoc - 博客园
+一、测序原理 先介绍 Nanopore 测序中的几位主角：
+Reader ：在自然界中，有一种可以嵌入到细胞膜中作为离子或分子通道的跨膜蛋白，具有天然的蛋白纳米孔。经过人为基因工程修饰后，得到的就是 Nanopore 测序所需的 Reader 蛋白。
+Membrane：Reader 蛋白会被嵌入到高电阻率的 Membrane （人工合成的多聚物膜），膜两侧是离子溶液，在两侧加不同的电位，离子就会在孔中流动，形成电流。
+Motor：在 Nanopore 文库构建时，需要在接头上连接一种动力蛋白，用于将DNA或RNA分子推入纳米孔中。以DNA解螺旋酶作为 Motor（动力蛋白）为例，它可以除了可以解开双螺旋，使之变为单链，还可以提供推动力。
+Tether：该蛋白用于锚定DNA或RNA链，防止在溶液中飘动，并使其进入纳米孔中。
+这时，解开的其中一条链会穿过蛋白质孔，它在通过蛋白孔时，会对膜两边离子的稳定流动产生扰动。不同的碱基，对离子流的影响不同，也就会产生不同的电流大小，进而形成下面的电流信号图。">
+  <meta property="og:locale" content="en">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2023-04-08T00:00:00+00:00">
+    <meta property="article:modified_time" content="2023-04-08T00:00:00+00:00">
+    <meta property="article:tag" content="Nanopore">
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="图解三代测序（Nanopore） (转载作为备份)">
+  <meta name="twitter:description" content="转载自 baimoc - 博客园
+一、测序原理 先介绍 Nanopore 测序中的几位主角：
+Reader ：在自然界中，有一种可以嵌入到细胞膜中作为离子或分子通道的跨膜蛋白，具有天然的蛋白纳米孔。经过人为基因工程修饰后，得到的就是 Nanopore 测序所需的 Reader 蛋白。
+Membrane：Reader 蛋白会被嵌入到高电阻率的 Membrane （人工合成的多聚物膜），膜两侧是离子溶液，在两侧加不同的电位，离子就会在孔中流动，形成电流。
+Motor：在 Nanopore 文库构建时，需要在接头上连接一种动力蛋白，用于将DNA或RNA分子推入纳米孔中。以DNA解螺旋酶作为 Motor（动力蛋白）为例，它可以除了可以解开双螺旋，使之变为单链，还可以提供推动力。
+Tether：该蛋白用于锚定DNA或RNA链，防止在溶液中飘动，并使其进入纳米孔中。
+这时，解开的其中一条链会穿过蛋白质孔，它在通过蛋白孔时，会对膜两边离子的稳定流动产生扰动。不同的碱基，对离子流的影响不同，也就会产生不同的电流大小，进而形成下面的电流信号图。">
+<meta name="application-name" content="Entropy Decrease">
+<meta name="apple-mobile-web-app-title" content="Entropy Decrease"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="https://entropydecrease.github.io/2023_04_08-ont_basics/" /><link rel="prev" href="https://entropydecrease.github.io/2023_04_01-ont_training_notes/" /><link rel="next" href="https://entropydecrease.github.io/2023_04_27-geneseeq_mrd/" /><link rel="stylesheet" href="/css/style.min.css"><link rel="preload" href="/lib/fontawesome-free/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"></noscript><link rel="preload" href="/lib/animate/animate.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript><link rel="stylesheet" href="/lib/animate/animate.min.css"></noscript><script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "headline": "图解三代测序（Nanopore） (转载作为备份)",
+        "inLanguage": "en",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https:\/\/entropydecrease.github.io\/2023_04_08-ont_basics\/"
+        },"genre": "posts","keywords": "nanopore","wordcount":  197 ,
+        "url": "https:\/\/entropydecrease.github.io\/2023_04_08-ont_basics\/","datePublished": "2023-04-08T00:00:00+00:00","dateModified": "2023-04-08T00:00:00+00:00","publisher": {
+            "@type": "Organization",
+            "name": ""},"author": {
+                "@type": "Person",
+                "name": "entropydecrease"
+            },"description": ""
+    }
+    </script></head>
+    <body data-header-desktop="fixed" data-header-mobile="auto"><script type="text/javascript">(window.localStorage && localStorage.getItem('theme') ? localStorage.getItem('theme') === 'dark' : ('auto' === 'auto' ? window.matchMedia('(prefers-color-scheme: dark)').matches : 'auto' === 'dark')) && document.body.setAttribute('theme', 'dark');</script>
+
+        <div id="mask"></div><div class="wrapper"><header class="desktop" id="header-desktop">
+    <div class="header-wrapper">
+        <div class="header-title">
+            <a href="/" title="Entropy Decrease">Entropy Decrease</a>
+        </div>
+        <div class="menu">
+            <div class="menu-inner"><a class="menu-item" href="/"> Home </a><a class="menu-item" href="/posts/"> Posts </a><a class="menu-item" href="/tags/"> Tags </a><a class="menu-item" href="/categories/"> Categories </a><a class="menu-item" href="/about"> About </a><span class="menu-item delimiter"></span><span class="menu-item search" id="search-desktop">
+                        <input type="text" placeholder="Search titles or contents..." id="search-input-desktop">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-desktop" title="Search">
+                            <i class="fas fa-search fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-desktop" title="Clear">
+                            <i class="fas fa-times-circle fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-desktop">
+                            <i class="fas fa-spinner fa-fw fa-spin" aria-hidden="true"></i>
+                        </span>
+                    </span><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
+                    <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
+                </a></div>
+        </div>
+    </div>
+</header><header class="mobile" id="header-mobile">
+    <div class="header-container">
+        <div class="header-wrapper">
+            <div class="header-title">
+                <a href="/" title="Entropy Decrease">Entropy Decrease</a>
+            </div>
+            <div class="menu-toggle" id="menu-toggle-mobile">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+        <div class="menu" id="menu-mobile"><div class="search-wrapper">
+                    <div class="search mobile" id="search-mobile">
+                        <input type="text" placeholder="Search titles or contents..." id="search-input-mobile">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-mobile" title="Search">
+                            <i class="fas fa-search fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-mobile" title="Clear">
+                            <i class="fas fa-times-circle fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-mobile">
+                            <i class="fas fa-spinner fa-fw fa-spin" aria-hidden="true"></i>
+                        </span>
+                    </div>
+                    <a href="javascript:void(0);" class="search-cancel" id="search-cancel-mobile">
+                        Cancel
+                    </a>
+                </div><a class="menu-item" href="/" title="">Home</a><a class="menu-item" href="/posts/" title="">Posts</a><a class="menu-item" href="/tags/" title="">Tags</a><a class="menu-item" href="/categories/" title="">Categories</a><a class="menu-item" href="/about" title="">About</a><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
+                <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
+            </a></div>
+    </div>
+</header><div class="search-dropdown desktop">
+        <div id="search-dropdown-desktop"></div>
+    </div>
+    <div class="search-dropdown mobile">
+        <div id="search-dropdown-mobile"></div>
+    </div><main class="main">
+                <div class="container"><div class="toc" id="toc-auto">
+            <h2 class="toc-title">Contents</h2>
+            <div class="toc-content" id="toc-content-auto"></div>
+        </div><article class="page single"><h1 class="single-title animate__animated animate__flipInX">图解三代测序（Nanopore） (转载作为备份)</h1><div class="post-meta">
+            <div class="post-meta-line"><span class="post-author"><a href="/" title="Author" rel="author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>entropydecrease</a></span>&nbsp;<span class="post-category">included in <a href="/categories/tech/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>Tech</a></span></div>
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw" aria-hidden="true"></i>&nbsp;<time datetime="2023-04-08">2023-04-08</time>&nbsp;<i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>&nbsp;197 words&nbsp;
+                <i class="far fa-clock fa-fw" aria-hidden="true"></i>&nbsp;One minute&nbsp;</div>
+        </div><div class="details toc" id="toc-static"  data-kept="">
+                <div class="details-summary toc-title">
+                    <span>Contents</span>
+                    <span><i class="details-icon fas fa-angle-right" aria-hidden="true"></i></span>
+                </div>
+                <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
+  <ul>
+    <li><a href="#一测序原理">一、测序原理</a></li>
+    <li><a href="#二测序仪介绍">二、测序仪介绍</a></li>
+    <li><a href="#三建库方法">三、建库方法</a>
+      <ul>
+        <li>
+          <ul>
+            <li><a href="#11d-文库">1、1D 文库</a>
+              <ul>
+                <li><a href="#标准建库">标准建库</a></li>
+                <li><a href="#转座酶建库">转座酶建库</a></li>
+              </ul>
+            </li>
+            <li><a href="#21d2-文库">2、$1D^2$ 文库</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+    <li><a href="#四碱基判读">四、碱基判读</a></li>
+    <li><a href="#五测序影响因素">五、测序影响因素</a>
+      <ul>
+        <li>
+          <ul>
+            <li><a href="#电压">电压</a></li>
+            <li><a href="#速度与产量">速度与产量</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+    <li><a href="#六芯片版本号">六、芯片版本号</a>
+      <ul>
+        <li><a href="#总结">总结</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav></div>
+            </div><div class="content" id="content"><p>转载自 <a href="https://www.cnblogs.com/baimoc/p/14700618.html" target="_blank" rel="noopener noreffer ">baimoc - 博客园</a></p>
+<hr>
+<h2 id="一测序原理">一、测序原理</h2>
+<p>先介绍 Nanopore 测序中的几位主角：</p>
+<p><code>Reader</code> ：在自然界中，有一种可以嵌入到细胞膜中作为离子或分子通道的跨膜蛋白，具有天然的蛋白纳米孔。经过人为基因工程修饰后，得到的就是 Nanopore 测序所需的 Reader 蛋白。<br>
+<a href="https://img-blog.csdnimg.cn/img_convert/13bd67376e79c80ad0cd229ccd2cd7f2.png" target="_blank" rel="noopener noreffer "><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="/2023_04_08-ont_basics/resources/13bd67376e79c80ad0cd229ccd2cd7f2.png"
+        data-srcset="/2023_04_08-ont_basics/resources/13bd67376e79c80ad0cd229ccd2cd7f2.png, /2023_04_08-ont_basics/resources/13bd67376e79c80ad0cd229ccd2cd7f2.png 1.5x, /2023_04_08-ont_basics/resources/13bd67376e79c80ad0cd229ccd2cd7f2.png 2x"
+        data-sizes="auto"
+        alt="/2023_04_08-ont_basics/resources/13bd67376e79c80ad0cd229ccd2cd7f2.png"
+        title="mark" width="517" height="274" /></a></p>
+<p><code>Membrane</code>：Reader 蛋白会被嵌入到高电阻率的 Membrane （人工合成的多聚物膜），膜两侧是离子溶液，在两侧加不同的电位，离子就会在孔中流动，形成电流。<br>
+<a href="https://img-blog.csdnimg.cn/img_convert/3c152908c2aa9337541c5bfd71ad4634.png" target="_blank" rel="noopener noreffer "><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="/2023_04_08-ont_basics/resources/3c152908c2aa9337541c5bfd71ad4634.png"
+        data-srcset="/2023_04_08-ont_basics/resources/3c152908c2aa9337541c5bfd71ad4634.png, /2023_04_08-ont_basics/resources/3c152908c2aa9337541c5bfd71ad4634.png 1.5x, /2023_04_08-ont_basics/resources/3c152908c2aa9337541c5bfd71ad4634.png 2x"
+        data-sizes="auto"
+        alt="/2023_04_08-ont_basics/resources/3c152908c2aa9337541c5bfd71ad4634.png"
+        title="mark" width="952" height="342" /></a></p>
+<p><code>Motor</code>：在 Nanopore 文库构建时，需要在接头上连接一种动力蛋白，用于将DNA或RNA分子推入纳米孔中。以DNA解螺旋酶作为 Motor（动力蛋白）为例，它可以除了可以解开双螺旋，使之变为单链，还可以提供推动力。<br>
+<a href="https://img-blog.csdnimg.cn/img_convert/1c83b72bf3b63bf684bd33ea315e9b63.png" target="_blank" rel="noopener noreffer "><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="/2023_04_08-ont_basics/resources/1c83b72bf3b63bf684bd33ea315e9b63.png"
+        data-srcset="/2023_04_08-ont_basics/resources/1c83b72bf3b63bf684bd33ea315e9b63.png, /2023_04_08-ont_basics/resources/1c83b72bf3b63bf684bd33ea315e9b63.png 1.5x, /2023_04_08-ont_basics/resources/1c83b72bf3b63bf684bd33ea315e9b63.png 2x"
+        data-sizes="auto"
+        alt="/2023_04_08-ont_basics/resources/1c83b72bf3b63bf684bd33ea315e9b63.png"
+        title="mark" width="804" height="422" /></a></p>
+<p><code>Tether</code>：该蛋白用于锚定DNA或RNA链，防止在溶液中飘动，并使其进入纳米孔中。<a href="https://img-blog.csdnimg.cn/img_convert/93972d0bac466454e840b0bfb9d4bd62.gif" target="_blank" rel="noopener noreffer "><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="/2023_04_08-ont_basics/resources/93972d0bac466454e840b0bfb9d4bd62.gif"
+        data-srcset="/2023_04_08-ont_basics/resources/93972d0bac466454e840b0bfb9d4bd62.gif, /2023_04_08-ont_basics/resources/93972d0bac466454e840b0bfb9d4bd62.gif 1.5x, /2023_04_08-ont_basics/resources/93972d0bac466454e840b0bfb9d4bd62.gif 2x"
+        data-sizes="auto"
+        alt="/2023_04_08-ont_basics/resources/93972d0bac466454e840b0bfb9d4bd62.gif"
+        title="mark" width="476" height="329" /></a></p>
+<p>这时，解开的其中一条链会穿过蛋白质孔，它在通过蛋白孔时，会对膜两边离子的稳定流动产生扰动。不同的碱基，对离子流的影响不同，也就会产生不同的电流大小，进而形成下面的电流信号图。<br>
+<a href="https://img-blog.csdnimg.cn/img_convert/64a99d9eb756528ef0029112e086b2e3.png" target="_blank" rel="noopener noreffer "><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="/2023_04_08-ont_basics/resources/64a99d9eb756528ef0029112e086b2e3.png"
+        data-srcset="/2023_04_08-ont_basics/resources/64a99d9eb756528ef0029112e086b2e3.png, /2023_04_08-ont_basics/resources/64a99d9eb756528ef0029112e086b2e3.png 1.5x, /2023_04_08-ont_basics/resources/64a99d9eb756528ef0029112e086b2e3.png 2x"
+        data-sizes="auto"
+        alt="/2023_04_08-ont_basics/resources/64a99d9eb756528ef0029112e086b2e3.png"
+        title="mark" width="508" height="185" /></a></p>
+<p>利用这些电流信号，使用计算机软件识别后，推断出碱基类型，完成测序。</p>
+<h2 id="二测序仪介绍">二、测序仪介绍</h2>
+<p>虽然 Nanopore 测序仪种类很多，但都是基于Nanopore芯片来搭建的平台，大到由多个芯片阵列组成的PromehION，GridION系列测序仪，小到可以连接手机的Type C，电脑USB的MnION系列便携式测序仪。<br>
+<a href="https://img-blog.csdnimg.cn/img_convert/0eb06842f1ff24be0b11f4dacc1a1d1c.png" target="_blank" rel="noopener noreffer "><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="/2023_04_08-ont_basics/resources/0eb06842f1ff24be0b11f4dacc1a1d1c.png"
+        data-srcset="/2023_04_08-ont_basics/resources/0eb06842f1ff24be0b11f4dacc1a1d1c.png, /2023_04_08-ont_basics/resources/0eb06842f1ff24be0b11f4dacc1a1d1c.png 1.5x, /2023_04_08-ont_basics/resources/0eb06842f1ff24be0b11f4dacc1a1d1c.png 2x"
+        data-sizes="auto"
+        alt="/2023_04_08-ont_basics/resources/0eb06842f1ff24be0b11f4dacc1a1d1c.png"
+        title="mark" width="1504" height="354" /></a></p>
+<p>这里边，最著名的就是MnION系列，2016年8月，美国宇航员凯特·鲁宾斯在国际空间站完成微重力条件的DNA测序。</p>
+<p>它在测序时，一般像下图这样连接就行，显而易见的便携性。比如，可以直接用它在深入疫区采集样本后进行实时分析，为防疫工作争取大量宝贵的时间和资源。<br>
+<a href="https://img-blog.csdnimg.cn/img_convert/5de01c91560c9ecc6f3e5199a9478c37.png" target="_blank" rel="noopener noreffer "><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="/2023_04_08-ont_basics/resources/5de01c91560c9ecc6f3e5199a9478c37.png"
+        data-srcset="/2023_04_08-ont_basics/resources/5de01c91560c9ecc6f3e5199a9478c37.png, /2023_04_08-ont_basics/resources/5de01c91560c9ecc6f3e5199a9478c37.png 1.5x, /2023_04_08-ont_basics/resources/5de01c91560c9ecc6f3e5199a9478c37.png 2x"
+        data-sizes="auto"
+        alt="/2023_04_08-ont_basics/resources/5de01c91560c9ecc6f3e5199a9478c37.png"
+        title="mark" width="875" height="473" /></a></p>
+<p>测序时，将制备好的文库或样本溶液，滴在芯片小孔中，开始测序。<br>
+<a href="https://img-blog.csdnimg.cn/img_convert/81c46d5fb50f960a7fa671cb74760736.png" target="_blank" rel="noopener noreffer "><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="/2023_04_08-ont_basics/resources/81c46d5fb50f960a7fa671cb74760736.png"
+        data-srcset="/2023_04_08-ont_basics/resources/81c46d5fb50f960a7fa671cb74760736.png, /2023_04_08-ont_basics/resources/81c46d5fb50f960a7fa671cb74760736.png 1.5x, /2023_04_08-ont_basics/resources/81c46d5fb50f960a7fa671cb74760736.png 2x"
+        data-sizes="auto"
+        alt="/2023_04_08-ont_basics/resources/81c46d5fb50f960a7fa671cb74760736.png"
+        title="mark" width="1080" height="608" /></a></p>
+<p>一张芯片中有 2048 个 membrane wells，也就是芯片上的一个孔，每个孔包含一个nanopore Reader。<br>
+<a href="https://img-blog.csdnimg.cn/img_convert/a1ea845ba325d4bccf113f53179fdcb4.png" target="_blank" rel="noopener noreffer "><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="/2023_04_08-ont_basics/resources/a1ea845ba325d4bccf113f53179fdcb4.png"
+        data-srcset="/2023_04_08-ont_basics/resources/a1ea845ba325d4bccf113f53179fdcb4.png, /2023_04_08-ont_basics/resources/a1ea845ba325d4bccf113f53179fdcb4.png 1.5x, /2023_04_08-ont_basics/resources/a1ea845ba325d4bccf113f53179fdcb4.png 2x"
+        data-sizes="auto"
+        alt="/2023_04_08-ont_basics/resources/a1ea845ba325d4bccf113f53179fdcb4.png"
+        title="mark" width="1080" height="608" /></a></p>
+<p>每四个 wells 共享一个 Amplifier（信号放大器），一张芯片中有 512 个信号放大器，也就是 512 组 wells。<br>
+<a href="https://img-blog.csdnimg.cn/img_convert/676ad237805e85956a821422ea95ae55.png" target="_blank" rel="noopener noreffer "><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="/2023_04_08-ont_basics/resources/676ad237805e85956a821422ea95ae55.png"
+        data-srcset="/2023_04_08-ont_basics/resources/676ad237805e85956a821422ea95ae55.png, /2023_04_08-ont_basics/resources/676ad237805e85956a821422ea95ae55.png 1.5x, /2023_04_08-ont_basics/resources/676ad237805e85956a821422ea95ae55.png 2x"
+        data-sizes="auto"
+        alt="/2023_04_08-ont_basics/resources/676ad237805e85956a821422ea95ae55.png"
+        title="mark" width="1003" height="430" /></a></p>
+<p>在启动测序仪后，机器自检，会将每组 wells 中依据效率高低排序。测序开始，仪器先用每组 wells 中效率最高的 wells，运行 8 小时后，更换效率第二的，以此类推。</p>
+<p>但是，在实际使用过程中，只有 1200 个 wells可以正常工作。</p>
+<p>造成 wells 失效的原因：</p>
+<ul>
+<li>wells 中没有 Reader 蛋白，或纳米孔不通，这时无电信号</li>
+<li>膜破损，这时有强电信号，不能正常测序</li>
+<li>在单个 well 中有两个及以上的 Reader 蛋白，电信号互相干扰</li>
+</ul>
+<h2 id="三建库方法">三、建库方法</h2>
+<h4 id="11d-文库">1、1D 文库</h4>
+<p>1D文库是将DNA双链，解链为正义链与反义链，分别测序，大约有 85% 的碱基判读准确率。</p>
+<p>目前<code>1D文库</code>有两种建库方案：</p>
+<h5 id="标准建库">标准建库</h5>
+<ul>
+<li>
+<p>将 DNA 打断<br>
+<a href="https://img-blog.csdnimg.cn/img_convert/189a077d952293a59a076dd8b570668f.png" target="_blank" rel="noopener noreffer "><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="/2023_04_08-ont_basics/resources/189a077d952293a59a076dd8b570668f.png"
+        data-srcset="/2023_04_08-ont_basics/resources/189a077d952293a59a076dd8b570668f.png, /2023_04_08-ont_basics/resources/189a077d952293a59a076dd8b570668f.png 1.5x, /2023_04_08-ont_basics/resources/189a077d952293a59a076dd8b570668f.png 2x"
+        data-sizes="auto"
+        alt="/2023_04_08-ont_basics/resources/189a077d952293a59a076dd8b570668f.png"
+        title="mark" width="500" height="143" /></a></p>
+</li>
+<li>
+<p>补齐DNA末端，末端加 A 碱基<br>
+<a href="https://img-blog.csdnimg.cn/img_convert/7061e05c2a5cae70e0ed5355d3c2c200.png" target="_blank" rel="noopener noreffer "><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="/2023_04_08-ont_basics/resources/7061e05c2a5cae70e0ed5355d3c2c200.png"
+        data-srcset="/2023_04_08-ont_basics/resources/7061e05c2a5cae70e0ed5355d3c2c200.png, /2023_04_08-ont_basics/resources/7061e05c2a5cae70e0ed5355d3c2c200.png 1.5x, /2023_04_08-ont_basics/resources/7061e05c2a5cae70e0ed5355d3c2c200.png 2x"
+        data-sizes="auto"
+        alt="/2023_04_08-ont_basics/resources/7061e05c2a5cae70e0ed5355d3c2c200.png"
+        title="mark" width="498" height="137" /></a></p>
+</li>
+<li>
+<p>连接 Adapter（ 接头序列），接头上连有 Motor 蛋白<br>
+<a href="https://img-blog.csdnimg.cn/img_convert/95dc2ed05b612fae48608e4a41fb6084.png" target="_blank" rel="noopener noreffer "><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="/2023_04_08-ont_basics/resources/95dc2ed05b612fae48608e4a41fb6084.png"
+        data-srcset="/2023_04_08-ont_basics/resources/95dc2ed05b612fae48608e4a41fb6084.png, /2023_04_08-ont_basics/resources/95dc2ed05b612fae48608e4a41fb6084.png 1.5x, /2023_04_08-ont_basics/resources/95dc2ed05b612fae48608e4a41fb6084.png 2x"
+        data-sizes="auto"
+        alt="/2023_04_08-ont_basics/resources/95dc2ed05b612fae48608e4a41fb6084.png"
+        title="mark" width="598" height="152" /></a></p>
+</li>
+<li>
+<p>接头中有一段序列可以与 Tether 蛋白结合，作用是为了将 DNA 链吸附在膜上，将 DNA 锚定，不易被溶液洗走<br>
+<a href="https://img-blog.csdnimg.cn/img_convert/6831486923e9b1c6d930eefb5d7d04a0.png" target="_blank" rel="noopener noreffer "><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="/2023_04_08-ont_basics/resources/6831486923e9b1c6d930eefb5d7d04a0.png"
+        data-srcset="/2023_04_08-ont_basics/resources/6831486923e9b1c6d930eefb5d7d04a0.png, /2023_04_08-ont_basics/resources/6831486923e9b1c6d930eefb5d7d04a0.png 1.5x, /2023_04_08-ont_basics/resources/6831486923e9b1c6d930eefb5d7d04a0.png 2x"
+        data-sizes="auto"
+        alt="/2023_04_08-ont_basics/resources/6831486923e9b1c6d930eefb5d7d04a0.png"
+        title="mark" width="574" height="141" /></a></p>
+<p>下图是 Tether 与接头序列识别及锚定过程<br>
+<a href="https://img-blog.csdnimg.cn/img_convert/93972d0bac466454e840b0bfb9d4bd62.gif" target="_blank" rel="noopener noreffer "><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="/2023_04_08-ont_basics/resources/93972d0bac466454e840b0bfb9d4bd62-20230408222040649.gif"
+        data-srcset="/2023_04_08-ont_basics/resources/93972d0bac466454e840b0bfb9d4bd62-20230408222040649.gif, /2023_04_08-ont_basics/resources/93972d0bac466454e840b0bfb9d4bd62-20230408222040649.gif 1.5x, /2023_04_08-ont_basics/resources/93972d0bac466454e840b0bfb9d4bd62-20230408222040649.gif 2x"
+        data-sizes="auto"
+        alt="/2023_04_08-ont_basics/resources/93972d0bac466454e840b0bfb9d4bd62-20230408222040649.gif"
+        title="mark" width="476" height="329" /></a></p>
+</li>
+</ul>
+<h5 id="转座酶建库">转座酶建库</h5>
+<ul>
+<li>
+<p>建库时使用连有测序接头的转座酶，该酶可以将长链 DNA 链切断<br>
+<a href="https://img-blog.csdnimg.cn/img_convert/aba7d84c3340c9b4295230e75ca4d78f.png" target="_blank" rel="noopener noreffer "><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="/2023_04_08-ont_basics/resources/aba7d84c3340c9b4295230e75ca4d78f.png"
+        data-srcset="/2023_04_08-ont_basics/resources/aba7d84c3340c9b4295230e75ca4d78f.png, /2023_04_08-ont_basics/resources/aba7d84c3340c9b4295230e75ca4d78f.png 1.5x, /2023_04_08-ont_basics/resources/aba7d84c3340c9b4295230e75ca4d78f.png 2x"
+        data-sizes="auto"
+        alt="/2023_04_08-ont_basics/resources/aba7d84c3340c9b4295230e75ca4d78f.png"
+        title="mark" width="455" height="128" /></a></p>
+</li>
+<li>
+<p>由于该酶的特性，会在DNA的断点两端加接头序列<br>
+<a href="https://img-blog.csdnimg.cn/img_convert/52bec0ac764fb2d1e34a979dd154c6f8.png" target="_blank" rel="noopener noreffer "><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="/2023_04_08-ont_basics/resources/52bec0ac764fb2d1e34a979dd154c6f8.png"
+        data-srcset="/2023_04_08-ont_basics/resources/52bec0ac764fb2d1e34a979dd154c6f8.png, /2023_04_08-ont_basics/resources/52bec0ac764fb2d1e34a979dd154c6f8.png 1.5x, /2023_04_08-ont_basics/resources/52bec0ac764fb2d1e34a979dd154c6f8.png 2x"
+        data-sizes="auto"
+        alt="/2023_04_08-ont_basics/resources/52bec0ac764fb2d1e34a979dd154c6f8.png"
+        title="mark" width="414" height="49" /></a></p>
+</li>
+<li>
+<p>随后在测序接头加入 Motor 蛋白<br>
+<a href="https://img-blog.csdnimg.cn/img_convert/44bc79a15820f5d636b3bc888f932cfb.png" target="_blank" rel="noopener noreffer "><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="/2023_04_08-ont_basics/resources/44bc79a15820f5d636b3bc888f932cfb.png"
+        data-srcset="/2023_04_08-ont_basics/resources/44bc79a15820f5d636b3bc888f932cfb.png, /2023_04_08-ont_basics/resources/44bc79a15820f5d636b3bc888f932cfb.png 1.5x, /2023_04_08-ont_basics/resources/44bc79a15820f5d636b3bc888f932cfb.png 2x"
+        data-sizes="auto"
+        alt="/2023_04_08-ont_basics/resources/44bc79a15820f5d636b3bc888f932cfb.png"
+        title="mark" width="533" height="129" /></a></p>
+</li>
+</ul>
+<h4 id="21d2-文库">2、$1D^2$ 文库</h4>
+<p>在 DNA 两侧接 $1D^2$ 接头，其他步骤和 1D 文库类似。</p>
+<p>这种文库中的$1D^2$ 接头，可以让第二链紧跟第一链来一起测序。</p>
+<p>由于可以测到两条链，可以相互矫正，进而提高判读准确率，能达到 90%以上的碱基判读准确率。<br>
+<a href="https://img-blog.csdnimg.cn/img_convert/d1d673aa83104688716f225cdfc4fd70.png" target="_blank" rel="noopener noreffer "><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="/2023_04_08-ont_basics/resources/d1d673aa83104688716f225cdfc4fd70.png"
+        data-srcset="/2023_04_08-ont_basics/resources/d1d673aa83104688716f225cdfc4fd70.png, /2023_04_08-ont_basics/resources/d1d673aa83104688716f225cdfc4fd70.png 1.5x, /2023_04_08-ont_basics/resources/d1d673aa83104688716f225cdfc4fd70.png 2x"
+        data-sizes="auto"
+        alt="/2023_04_08-ont_basics/resources/d1d673aa83104688716f225cdfc4fd70.png"
+        title="mark" width="1430" height="569" /></a></p>
+<p>但是，由于文库质量，蛋白活性等因素，导致并不是所有的第一链后都会测到第二链。</p>
+<h2 id="四碱基判读">四、碱基判读</h2>
+<p>在测序过程中，得到的信号并不是每次测得一个碱基信号。而是根据 Reader 蛋白孔的纵向长度，R9 大约为 5 个碱基长，也就是说，同时会测得 5 个碱基的电信号，这并不是一项简单的判断过程。</p>
+<p>目前，Nanopore 公司采用一种机器学习方法，递归神经网络（RNN），对碱基进行判读。</p>
+<p>该过程简单来说，是将已知碱基序列的电信号波形图做训练集和测试集，通过修正参数，拿到模型。最后，将新测到的未知序列的波形图与之比对，从而提高判读准确率。</p>
+<p>但是，还是有误读情况：</p>
+<ul>
+<li>由于空间结构相似性，嘌呤间误读，嘧啶间误读更容易发生。</li>
+<li>碱基复杂度低的序列（如，polyA序列），更容易误读</li>
+</ul>
+<h2 id="五测序影响因素">五、测序影响因素</h2>
+<h4 id="电压">电压</h4>
+<p>以R9芯片为例，测序过程，先用 180 mV 电压，每 10 min，短时间翻转电压方向，作用是激活被堵住或卡住的 Reader 蛋白孔。但是，这个过程也会使正常测序的 DAN链倒吐回去。</p>
+<p>随着电极使用时间的增加，电极的电压会发生漂移，因此每过两小时，要增加 5mV 电压抵消影响。</p>
+<h4 id="速度与产量">速度与产量</h4>
+<p>R9 芯片，测序速度是 250 碱基/s，一张芯片可以得到约 5 ~ 10 G的碱基序列。</p>
+<h2 id="六芯片版本号">六、芯片版本号</h2>
+<p>Nanopore 公司每一种新芯片就会有新 Reader蛋白，Motor，Membrane 版本号，一般命名规则如下：</p>
+<ul>
+<li>
+<p>Reader：R8，R9，R10，等</p>
+</li>
+<li>
+<p>Motor：E6，E7，E8，等</p>
+</li>
+<li>
+<p>Membrane：M9，M10，等</p>
+</li>
+</ul>
+<p>比如，R9 指的是大肠杆菌的 CsgG 蛋白质改造的 Reader 蛋白。<br>
+<a href="https://img-blog.csdnimg.cn/img_convert/dee450e02d1f1ce4ff1fc80f23189549.png" target="_blank" rel="noopener noreffer "><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="/2023_04_08-ont_basics/resources/dee450e02d1f1ce4ff1fc80f23189549.png"
+        data-srcset="/2023_04_08-ont_basics/resources/dee450e02d1f1ce4ff1fc80f23189549.png, /2023_04_08-ont_basics/resources/dee450e02d1f1ce4ff1fc80f23189549.png 1.5x, /2023_04_08-ont_basics/resources/dee450e02d1f1ce4ff1fc80f23189549.png 2x"
+        data-sizes="auto"
+        alt="/2023_04_08-ont_basics/resources/dee450e02d1f1ce4ff1fc80f23189549.png"
+        title="mark" width="481" height="410" /></a></p>
+<h3 id="总结">总结</h3>
+<ul>
+<li>Nanopore 测序是基于电学的检测，区别与 Illumina 和 PacBio 的光学</li>
+<li>测序仪器便携，可用于远离实验室的地区，如疫区，农场等</li>
+<li>读长较长，大约 300,000 ~ 400,000 个碱基，可用于从头组装基因组，可变剪切等</li>
+<li>可以对DNA ，RNA，甚至蛋白质序列进行测序</li>
+<li>碱基判读准确率较高，R10纳米孔数据质量值超过Q40（错误率0.01%），一致性（Identity）质量值达Q50。</li>
+</ul>
+<p>参考：</p>
+<p><a href="https://www.youtube.com/watch?v=RcP85JHLmnI" target="_blank" rel="noopener noreffer ">https://www.youtube.com/watch?v=RcP85JHLmnI</a></p>
+<p><a href="https://www.youtube.com/watch?v=E9-Rm5AoZGw&amp;t=13s" target="_blank" rel="noopener noreffer ">https://www.youtube.com/watch?v=E9-Rm5AoZGw&amp;t=13s</a></p>
+<p><a href="https://www.youtube.com/watch?v=sv9fFeSd3kE" target="_blank" rel="noopener noreffer ">https://www.youtube.com/watch?v=sv9fFeSd3kE</a></p>
+<p><a href="https://nanoporetech.com/" target="_blank" rel="noopener noreffer ">https://nanoporetech.com/</a></p>
+</div><div class="post-footer" id="post-footer">
+    <div class="post-info">
+        <div class="post-info-line">
+            <div class="post-info-mod">
+                <span>Updated on 2023-04-08</span>
+            </div></div>
+        <div class="post-info-line">
+            <div class="post-info-md"></div>
+            <div class="post-info-share">
+                <span><a href="javascript:void(0);" title="Share on Twitter" data-sharer="twitter" data-url="https://entropydecrease.github.io/2023_04_08-ont_basics/" data-title="图解三代测序（Nanopore） (转载作为备份)" data-hashtags="nanopore"><i class="fab fa-twitter fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Facebook" data-sharer="facebook" data-url="https://entropydecrease.github.io/2023_04_08-ont_basics/" data-hashtag="nanopore"><i class="fab fa-facebook-square fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Hacker News" data-sharer="hackernews" data-url="https://entropydecrease.github.io/2023_04_08-ont_basics/" data-title="图解三代测序（Nanopore） (转载作为备份)"><i class="fab fa-hacker-news fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Line" data-sharer="line" data-url="https://entropydecrease.github.io/2023_04_08-ont_basics/" data-title="图解三代测序（Nanopore） (转载作为备份)"><i data-svg-src="/lib/simple-icons/icons/line.min.svg" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Pocket" data-sharer="pocket" data-url="https://entropydecrease.github.io/2023_04_08-ont_basics/"><i class="fab fa-get-pocket fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on 微博" data-sharer="weibo" data-url="https://entropydecrease.github.io/2023_04_08-ont_basics/" data-title="图解三代测序（Nanopore） (转载作为备份)"><i class="fab fa-weibo fa-fw" aria-hidden="true"></i></a></span>
+            </div>
+        </div>
+    </div>
+
+    <div class="post-info-more">
+        <section class="post-tags"><i class="fas fa-tags fa-fw" aria-hidden="true"></i>&nbsp;<a href="/tags/nanopore/">Nanopore</a></section>
+        <section>
+            <span><a href="javascript:void(0);" onclick="window.history.back();">Back</a></span>&nbsp;|&nbsp;<span><a href="/">Home</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav"><a href="/2023_04_01-ont_training_notes/" class="prev" rel="prev" title="ONT相关的一些笔记"><i class="fas fa-angle-left fa-fw" aria-hidden="true"></i>ONT相关的一些笔记</a>
+            <a href="/2023_04_27-geneseeq_mrd/" class="next" rel="next" title="邵阳对世和MRD的介绍 - MRD的技术创新与应用案例分享">邵阳对世和MRD的介绍 - MRD的技术创新与应用案例分享<i class="fas fa-angle-right fa-fw" aria-hidden="true"></i></a></div>
+</div>
+</article></div>
+            </main><footer class="footer">
+        <div class="footer-container"><div class="footer-line">Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.134.2">Hugo</a> | Theme - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.2.11"><i class="far fa-kiss-wink-heart fa-fw" aria-hidden="true"></i> LoveIt</a>
+                </div><div class="footer-line" itemscope itemtype="http://schema.org/CreativeWork"><i class="far fa-copyright fa-fw" aria-hidden="true"></i><span itemprop="copyrightYear">2015 - 2024</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/" target="_blank">entropydecrease</a></span></div>
+        </div>
+    </footer></div>
+
+        <div id="fixed-buttons"><a href="#" id="back-to-top" class="fixed-button" title="Back to Top">
+                <i class="fas fa-arrow-up fa-fw" aria-hidden="true"></i>
+            </a><a href="#" id="view-comments" class="fixed-button" title="View Comments">
+                <i class="fas fa-comment fa-fw" aria-hidden="true"></i>
+            </a>
+        </div><link rel="stylesheet" href="/lib/katex/katex.min.css"><script type="text/javascript" src="/lib/autocomplete/autocomplete.min.js"></script><script type="text/javascript" src="/lib/lunr/lunr.min.js"></script><script type="text/javascript" src="/lib/lazysizes/lazysizes.min.js"></script><script type="text/javascript" src="/lib/clipboard/clipboard.min.js"></script><script type="text/javascript" src="/lib/sharer/sharer.min.js"></script><script type="text/javascript" src="/lib/katex/katex.min.js"></script><script type="text/javascript" src="/lib/katex/contrib/auto-render.min.js"></script><script type="text/javascript" src="/lib/katex/contrib/copy-tex.min.js"></script><script type="text/javascript" src="/lib/katex/contrib/mhchem.min.js"></script><script type="text/javascript">window.config={"code":{"copyTitle":"Copy to clipboard","maxShownLines":50},"comment":{},"math":{"delimiters":[{"display":true,"left":"$$","right":"$$"},{"display":true,"left":"\\[","right":"\\]"},{"display":true,"left":"\\begin{equation}","right":"\\end{equation}"},{"display":true,"left":"\\begin{equation*}","right":"\\end{equation*}"},{"display":true,"left":"\\begin{align}","right":"\\end{align}"},{"display":true,"left":"\\begin{align*}","right":"\\end{align*}"},{"display":true,"left":"\\begin{alignat}","right":"\\end{alignat}"},{"display":true,"left":"\\begin{alignat*}","right":"\\end{alignat*}"},{"display":true,"left":"\\begin{gather}","right":"\\end{gather}"},{"display":true,"left":"\\begin{CD}","right":"\\end{CD}"},{"display":false,"left":"$","right":"$"},{"display":false,"left":"\\(","right":"\\)"}],"strict":false},"search":{"highlightTag":"em","lunrIndexURL":"/index.json","maxResultLength":10,"noResultsFound":"No results found","snippetLength":30,"type":"lunr"}};</script><script type="text/javascript" src="/js/theme.min.js"></script></body>
+</html>

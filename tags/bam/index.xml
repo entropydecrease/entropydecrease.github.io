@@ -1,18 +1,63 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
     <channel>
-        <title>bam - Tag - Entropy Decrease</title>
+        <title>Bam - Tag - Entropy Decrease</title>
         <link>https://entropydecrease.github.io/tags/bam/</link>
-        <description>bam - Tag - Entropy Decrease</description>
+        <description>Bam - Tag - Entropy Decrease</description>
         <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Sun, 01 May 2022 00:00:00 &#43;0000</lastBuildDate><atom:link href="https://entropydecrease.github.io/tags/bam/" rel="self" type="application/rss+xml" /><item>
     <title>计算bam文件中的覆盖度</title>
-    <link>https://entropydecrease.github.io/2022_05_01_bam_coverage/</link>
+    <link>https://entropydecrease.github.io/2022_05_01-bam-coverage/</link>
     <pubDate>Sun, 01 May 2022 00:00:00 &#43;0000</pubDate>
     <author>entropydecrease</author>
-    <guid>https://entropydecrease.github.io/2022_05_01_bam_coverage/</guid>
-    <description><![CDATA[Things to consider to exclude some reads, like samtools depth/bedcov and mosdepth do.
-&lsquo;UNMAP,SECONDARY,QCFAIL,DUP or 0x704 or 1796&rsquo;
-to only summarize target regions or whole genome
-Tools to use mosdepth 1 2 3 4 5 6 7 8 9 10 11 12 13 14 for Bam in *.mkdup.bam do # skip if index file doesn&#39;t exist [ -s ${Bam}.bai ] || continue Base=$(basename ${Bam%.mkdup.bam}) # run mosdepth [ -s ${Base}.mosdepth.summary.txt ] &amp;&amp; continue echo $Bam mosdepth --by target_hg38.]]></description>
+    <guid>https://entropydecrease.github.io/2022_05_01-bam-coverage/</guid>
+    <description><![CDATA[<h2 id="things-to-consider">Things to consider</h2>
+<ol>
+<li>
+<p>to exclude some reads, like <code>samtools depth/bedcov</code> and mosdepth do.</p>
+<blockquote>
+<p>&lsquo;UNMAP,SECONDARY,QCFAIL,DUP or 0x704 or 1796&rsquo;</p>
+</blockquote>
+</li>
+<li>
+<p>to only summarize target regions or whole genome</p>
+</li>
+</ol>
+<h2 id="tools-to-use">Tools to use</h2>
+<h3 id="mosdepth">mosdepth</h3>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl"><span class="k">for</span> Bam in *.mkdup.bam
+</span></span><span class="line"><span class="cl"><span class="k">do</span>
+</span></span><span class="line"><span class="cl">        <span class="c1"># skip if index file doesn&#39;t exist</span>
+</span></span><span class="line"><span class="cl">        <span class="o">[</span> -s <span class="si">${</span><span class="nv">Bam</span><span class="si">}</span>.bai <span class="o">]</span> <span class="o">||</span> <span class="k">continue</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        <span class="nv">Base</span><span class="o">=</span><span class="k">$(</span>basename <span class="si">${</span><span class="nv">Bam</span><span class="p">%.mkdup.bam</span><span class="si">}</span><span class="k">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        <span class="c1"># run mosdepth</span>
+</span></span><span class="line"><span class="cl">        <span class="o">[</span> -s <span class="si">${</span><span class="nv">Base</span><span class="si">}</span>.mosdepth.summary.txt <span class="o">]</span> <span class="o">&amp;&amp;</span> <span class="k">continue</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        <span class="nb">echo</span> <span class="nv">$Bam</span>
+</span></span><span class="line"><span class="cl">        mosdepth --by target_hg38.bed <span class="se">\
+</span></span></span><span class="line"><span class="cl"><span class="se"></span>            --threads <span class="m">8</span> --no-per-base --fast-mode <span class="si">${</span><span class="nv">Base</span><span class="si">}</span> <span class="nv">$Bam</span> <span class="p">&amp;</span>
+</span></span><span class="line"><span class="cl"><span class="k">done</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>Problems with mosdepth is <code>mosdepth --by target.bed your.bam</code> could make some region zero coverage when it is not, and don&rsquo;t know the reason now. So use <code>samtools depth/bedcov</code> instead.</p>]]></description>
 </item>
 </channel>
 </rss>

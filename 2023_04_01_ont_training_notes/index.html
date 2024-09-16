@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
+    <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="robots" content="noodp" />
-        <title>ONT相关的一些笔记 - Entropy Decrease</title><meta name="Description" content="阅读、思考、写作，都是熵减的过程"><meta property="og:title" content="ONT相关的一些笔记" />
-<meta property="og:description" content="准确度 Kit V14 &#43; R10.4.1
+        <title>ONT相关的一些笔记 - Entropy Decrease</title><meta name="Description" content="阅读、思考、写作，都是熵减的过程"><meta property="og:url" content="http://localhost:1313/2023_04_01_ont_training_notes/">
+  <meta property="og:site_name" content="Entropy Decrease">
+  <meta property="og:title" content="ONT相关的一些笔记">
+  <meta property="og:description" content="准确度 Kit V14 &#43; R10.4.1
 simplex: 99.6%, Q24 duplex: 99.92%, Q31 duplex 一个双链文库分子，两端都有motor protein（马达蛋白）。一端的马达蛋白牵引双链文库靠近纳米孔，并解开双链让其中一条单链进入纳米孔，在其完全进入纳米孔之后，文库另外一端的马达蛋白有可能会牵引文库另外一头直接以单链的形式（无需解链）进入纳米孔（此时也有可能是其他的片段进入纳米孔测序）。这样测得的序列是一条原始分子的正负链都被测到了，所以叫duplex，可以提高测序精度。
 duplex不是通过新的试剂，只是protocol，让互补链紧跟着正义链过同一个孔而已，有一些reads是duplex，也有很多是simplex。 据说最新的试剂，可以将duplex reads的比例提高到70%。
 duplex的精度与长度相互独立
@@ -16,14 +18,17 @@ ONT公司认为泛基因组的组装，SV所需数据量较小，SNV用40x够了
 植物多倍体 组装多倍体比较难，ONT单独无法完成，一般是结合PacBio HiFi，Hi-C和OGM也常用。 适应性采样 NGS短板：读长短，修饰信息丢失 大量宿主DNA给mNGS带来挑战，唾液中加入PMA，可显著减少人源DNA 三代测序因序列较长，更容易将耐药基因归属至菌种。 NGS的扩增可能产生偏向性（bias），三代测序无扩增，可避免此类偏向性。 适应性采样，提供人类基因组的bed文件，碰到可以匹配到ren基因组的序列，就弹出。 适应性采样，可提高病原序列比例，且显著提高病原体达到30x覆盖度的速度（4h vs 常规12h）。 文件格式 Fast5 ONT现在的默认格式，未来会被POD替代。
 采样频率4k Hz == 4000次/秒，碱基的过孔速度 ~400bp/s，相当于每个碱基过孔的时间内有10次的采样。
 数据量与文件大小
-数据量 Fast5文件大小 Pod5文件大小 1G bp 6G Byte 0.5G Byte 10G bp 60 GB 5 GB 30G bp 180 GB 15 GB 90G bp 540 GB 45 GB Pod5格式 替代Fast5，后续会作为默认文件格式 MinKnow机器集成 bascalling 将Fast5/Pod5文件转换为Fastq/uBam格式的过程" />
-<meta property="og:type" content="article" />
-<meta property="og:url" content="https://entropydecrease.github.io/2023_04_01_ont_training_notes/" /><meta property="article:section" content="posts" />
-<meta property="article:published_time" content="2023-04-01T00:00:00+00:00" />
-<meta property="article:modified_time" content="2023-04-01T00:00:00+00:00" /><meta property="og:site_name" content="Entropy Decrease" />
-<meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="ONT相关的一些笔记"/>
-<meta name="twitter:description" content="准确度 Kit V14 &#43; R10.4.1
+数据量 Fast5文件大小 Pod5文件大小 1G bp 6G Byte 0.5G Byte 10G bp 60 GB 5 GB 30G bp 180 GB 15 GB 90G bp 540 GB 45 GB Pod5格式 替代Fast5，后续会作为默认文件格式 MinKnow机器集成 bascalling 将Fast5/Pod5文件转换为Fastq/uBam格式的过程">
+  <meta property="og:locale" content="en">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2023-04-01T00:00:00+00:00">
+    <meta property="article:modified_time" content="2023-04-01T00:00:00+00:00">
+    <meta property="article:tag" content="Nanopore">
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="ONT相关的一些笔记">
+  <meta name="twitter:description" content="准确度 Kit V14 &#43; R10.4.1
 simplex: 99.6%, Q24 duplex: 99.92%, Q31 duplex 一个双链文库分子，两端都有motor protein（马达蛋白）。一端的马达蛋白牵引双链文库靠近纳米孔，并解开双链让其中一条单链进入纳米孔，在其完全进入纳米孔之后，文库另外一端的马达蛋白有可能会牵引文库另外一头直接以单链的形式（无需解链）进入纳米孔（此时也有可能是其他的片段进入纳米孔测序）。这样测得的序列是一条原始分子的正负链都被测到了，所以叫duplex，可以提高测序精度。
 duplex不是通过新的试剂，只是protocol，让互补链紧跟着正义链过同一个孔而已，有一些reads是duplex，也有很多是simplex。 据说最新的试剂，可以将duplex reads的比例提高到70%。
 duplex的精度与长度相互独立
@@ -34,11 +39,11 @@ ONT公司认为泛基因组的组装，SV所需数据量较小，SNV用40x够了
 植物多倍体 组装多倍体比较难，ONT单独无法完成，一般是结合PacBio HiFi，Hi-C和OGM也常用。 适应性采样 NGS短板：读长短，修饰信息丢失 大量宿主DNA给mNGS带来挑战，唾液中加入PMA，可显著减少人源DNA 三代测序因序列较长，更容易将耐药基因归属至菌种。 NGS的扩增可能产生偏向性（bias），三代测序无扩增，可避免此类偏向性。 适应性采样，提供人类基因组的bed文件，碰到可以匹配到ren基因组的序列，就弹出。 适应性采样，可提高病原序列比例，且显著提高病原体达到30x覆盖度的速度（4h vs 常规12h）。 文件格式 Fast5 ONT现在的默认格式，未来会被POD替代。
 采样频率4k Hz == 4000次/秒，碱基的过孔速度 ~400bp/s，相当于每个碱基过孔的时间内有10次的采样。
 数据量与文件大小
-数据量 Fast5文件大小 Pod5文件大小 1G bp 6G Byte 0.5G Byte 10G bp 60 GB 5 GB 30G bp 180 GB 15 GB 90G bp 540 GB 45 GB Pod5格式 替代Fast5，后续会作为默认文件格式 MinKnow机器集成 bascalling 将Fast5/Pod5文件转换为Fastq/uBam格式的过程"/>
+数据量 Fast5文件大小 Pod5文件大小 1G bp 6G Byte 0.5G Byte 10G bp 60 GB 5 GB 30G bp 180 GB 15 GB 90G bp 540 GB 45 GB Pod5格式 替代Fast5，后续会作为默认文件格式 MinKnow机器集成 bascalling 将Fast5/Pod5文件转换为Fastq/uBam格式的过程">
 <meta name="application-name" content="Entropy Decrease">
 <meta name="apple-mobile-web-app-title" content="Entropy Decrease"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
         <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="https://entropydecrease.github.io/2023_04_01_ont_training_notes/" /><link rel="prev" href="https://entropydecrease.github.io/2023_03_13_even_googlenews_error/" /><link rel="next" href="https://entropydecrease.github.io/2023_04_08_ont_basics/" /><link rel="stylesheet" href="/css/style.min.css"><link rel="preload" href="/lib/fontawesome-free/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="http://localhost:1313/2023_04_01_ont_training_notes/" /><link rel="prev" href="http://localhost:1313/2023_03_13_even_googlenews_error/" /><link rel="next" href="http://localhost:1313/2023_04_08_ont_basics/" /><link rel="stylesheet" href="/css/style.min.css"><link rel="preload" href="/lib/fontawesome-free/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
         <noscript><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"></noscript><link rel="preload" href="/lib/animate/animate.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
         <noscript><link rel="stylesheet" href="/lib/animate/animate.min.css"></noscript><script type="application/ld+json">
     {
@@ -48,9 +53,9 @@ ONT公司认为泛基因组的组装，SV所需数据量较小，SNV用40x够了
         "inLanguage": "en",
         "mainEntityOfPage": {
             "@type": "WebPage",
-            "@id": "https:\/\/entropydecrease.github.io\/2023_04_01_ont_training_notes\/"
+            "@id": "http:\/\/localhost:1313\/2023_04_01_ont_training_notes\/"
         },"genre": "posts","keywords": "nanopore","wordcount":  192 ,
-        "url": "https:\/\/entropydecrease.github.io\/2023_04_01_ont_training_notes\/","datePublished": "2023-04-01T00:00:00+00:00","dateModified": "2023-04-01T00:00:00+00:00","publisher": {
+        "url": "http:\/\/localhost:1313\/2023_04_01_ont_training_notes\/","datePublished": "2023-04-01T00:00:00+00:00","dateModified": "2023-04-01T00:00:00+00:00","publisher": {
             "@type": "Organization",
             "name": ""},"author": {
                 "@type": "Person",
@@ -122,7 +127,7 @@ ONT公司认为泛基因组的组装，SV所需数据量较小，SNV用40x够了
             <h2 class="toc-title">Contents</h2>
             <div class="toc-content" id="toc-content-auto"></div>
         </div><article class="page single"><h1 class="single-title animate__animated animate__flipInX">ONT相关的一些笔记</h1><div class="post-meta">
-            <div class="post-meta-line"><span class="post-author"><a href="/" title="Author" rel="author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>entropydecrease</a></span>&nbsp;<span class="post-category">included in <a href="/categories/tech/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>tech</a></span></div>
+            <div class="post-meta-line"><span class="post-author"><a href="/" title="Author" rel="author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>entropydecrease</a></span>&nbsp;<span class="post-category">included in <a href="/categories/tech/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>Tech</a></span></div>
             <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw" aria-hidden="true"></i>&nbsp;<time datetime="2023-04-01">2023-04-01</time>&nbsp;<i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>&nbsp;192 words&nbsp;
                 <i class="far fa-clock fa-fw" aria-hidden="true"></i>&nbsp;One minute&nbsp;</div>
         </div><div class="details toc" id="toc-static"  data-kept="">
@@ -215,35 +220,35 @@ ONT公司认为泛基因组的组装，SV所需数据量较小，SNV用40x够了
 <li>
 <p>数据量与文件大小</p>
 <table>
-<thead>
-<tr>
-<th>数据量</th>
-<th>Fast5文件大小</th>
-<th>Pod5文件大小</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>1G bp</td>
-<td>6G Byte</td>
-<td>0.5G Byte</td>
-</tr>
-<tr>
-<td>10G bp</td>
-<td>60 GB</td>
-<td>5 GB</td>
-</tr>
-<tr>
-<td>30G bp</td>
-<td>180 GB</td>
-<td>15 GB</td>
-</tr>
-<tr>
-<td>90G bp</td>
-<td>540 GB</td>
-<td>45 GB</td>
-</tr>
-</tbody>
+  <thead>
+      <tr>
+          <th style="text-align: left">数据量</th>
+          <th style="text-align: left">Fast5文件大小</th>
+          <th style="text-align: left">Pod5文件大小</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td style="text-align: left">1G bp</td>
+          <td style="text-align: left">6G Byte</td>
+          <td style="text-align: left">0.5G Byte</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">10G bp</td>
+          <td style="text-align: left">60 GB</td>
+          <td style="text-align: left">5 GB</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">30G bp</td>
+          <td style="text-align: left">180 GB</td>
+          <td style="text-align: left">15 GB</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">90G bp</td>
+          <td style="text-align: left">540 GB</td>
+          <td style="text-align: left">45 GB</td>
+      </tr>
+  </tbody>
 </table>
 </li>
 </ul>
@@ -266,35 +271,35 @@ ONT公司认为泛基因组的组装，SV所需数据量较小，SNV用40x够了
 <li>
 <p>Guppy vs Dorado</p>
 <table>
-<thead>
-<tr>
-<th>方面</th>
-<th>Guppy</th>
-<th>Dorado</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>深度学习</td>
-<td>TensorFlow</td>
-<td>PyTorch</td>
-</tr>
-<tr>
-<td>速度</td>
-<td>CPU, GPU</td>
-<td>CPU, GUP (速度更快)</td>
-</tr>
-<tr>
-<td>支持硬件</td>
-<td>Nvidia</td>
-<td>Nvidia， Apple Silicon GPU</td>
-</tr>
-<tr>
-<td>碱基修饰的支持</td>
-<td>5mC</td>
-<td>5mC、5hmC</td>
-</tr>
-</tbody>
+  <thead>
+      <tr>
+          <th style="text-align: left">方面</th>
+          <th style="text-align: left">Guppy</th>
+          <th style="text-align: left">Dorado</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td style="text-align: left">深度学习</td>
+          <td style="text-align: left">TensorFlow</td>
+          <td style="text-align: left">PyTorch</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">速度</td>
+          <td style="text-align: left">CPU, GPU</td>
+          <td style="text-align: left">CPU, GUP (速度更快)</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">支持硬件</td>
+          <td style="text-align: left">Nvidia</td>
+          <td style="text-align: left">Nvidia， Apple Silicon GPU</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">碱基修饰的支持</td>
+          <td style="text-align: left">5mC</td>
+          <td style="text-align: left">5mC、5hmC</td>
+      </tr>
+  </tbody>
 </table>
 </li>
 <li>
@@ -388,13 +393,13 @@ ONT公司认为泛基因组的组装，SV所需数据量较小，SNV用40x够了
         <div class="post-info-line">
             <div class="post-info-md"></div>
             <div class="post-info-share">
-                <span><a href="javascript:void(0);" title="Share on Twitter" data-sharer="twitter" data-url="https://entropydecrease.github.io/2023_04_01_ont_training_notes/" data-title="ONT相关的一些笔记" data-hashtags="nanopore"><i class="fab fa-twitter fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Facebook" data-sharer="facebook" data-url="https://entropydecrease.github.io/2023_04_01_ont_training_notes/" data-hashtag="nanopore"><i class="fab fa-facebook-square fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Hacker News" data-sharer="hackernews" data-url="https://entropydecrease.github.io/2023_04_01_ont_training_notes/" data-title="ONT相关的一些笔记"><i class="fab fa-hacker-news fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Line" data-sharer="line" data-url="https://entropydecrease.github.io/2023_04_01_ont_training_notes/" data-title="ONT相关的一些笔记"><i data-svg-src="/lib/simple-icons/icons/line.min.svg" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Pocket" data-sharer="pocket" data-url="https://entropydecrease.github.io/2023_04_01_ont_training_notes/"><i class="fab fa-get-pocket fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on 微博" data-sharer="weibo" data-url="https://entropydecrease.github.io/2023_04_01_ont_training_notes/" data-title="ONT相关的一些笔记"><i class="fab fa-weibo fa-fw" aria-hidden="true"></i></a></span>
+                <span><a href="javascript:void(0);" title="Share on Twitter" data-sharer="twitter" data-url="http://localhost:1313/2023_04_01_ont_training_notes/" data-title="ONT相关的一些笔记" data-hashtags="nanopore"><i class="fab fa-twitter fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Facebook" data-sharer="facebook" data-url="http://localhost:1313/2023_04_01_ont_training_notes/" data-hashtag="nanopore"><i class="fab fa-facebook-square fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Hacker News" data-sharer="hackernews" data-url="http://localhost:1313/2023_04_01_ont_training_notes/" data-title="ONT相关的一些笔记"><i class="fab fa-hacker-news fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Line" data-sharer="line" data-url="http://localhost:1313/2023_04_01_ont_training_notes/" data-title="ONT相关的一些笔记"><i data-svg-src="/lib/simple-icons/icons/line.min.svg" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Pocket" data-sharer="pocket" data-url="http://localhost:1313/2023_04_01_ont_training_notes/"><i class="fab fa-get-pocket fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on 微博" data-sharer="weibo" data-url="http://localhost:1313/2023_04_01_ont_training_notes/" data-title="ONT相关的一些笔记"><i class="fab fa-weibo fa-fw" aria-hidden="true"></i></a></span>
             </div>
         </div>
     </div>
 
     <div class="post-info-more">
-        <section class="post-tags"><i class="fas fa-tags fa-fw" aria-hidden="true"></i>&nbsp;<a href="/tags/nanopore/">nanopore</a></section>
+        <section class="post-tags"><i class="fas fa-tags fa-fw" aria-hidden="true"></i>&nbsp;<a href="/tags/nanopore/">Nanopore</a></section>
         <section>
             <span><a href="javascript:void(0);" onclick="window.history.back();">Back</a></span>&nbsp;|&nbsp;<span><a href="/">Home</a></span>
         </section>
@@ -405,7 +410,7 @@ ONT公司认为泛基因组的组装，SV所需数据量较小，SNV用40x够了
 </div>
 </article></div>
             </main><footer class="footer">
-        <div class="footer-container"><div class="footer-line">Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.113.0">Hugo</a> | Theme - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.2.11"><i class="far fa-kiss-wink-heart fa-fw" aria-hidden="true"></i> LoveIt</a>
+        <div class="footer-container"><div class="footer-line">Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.134.2">Hugo</a> | Theme - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.2.11"><i class="far fa-kiss-wink-heart fa-fw" aria-hidden="true"></i> LoveIt</a>
                 </div><div class="footer-line" itemscope itemtype="http://schema.org/CreativeWork"><i class="far fa-copyright fa-fw" aria-hidden="true"></i><span itemprop="copyrightYear">2015 - 2024</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/" target="_blank">entropydecrease</a></span></div>
         </div>
     </footer></div>

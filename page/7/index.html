@@ -1,17 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-	<meta name="generator" content="Hugo 0.113.0">
+	<meta name="generator" content="Hugo 0.134.2">
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="robots" content="noodp" />
-        <title>Entropy Decrease</title><meta name="Description" content="阅读、思考、写作，都是熵减的过程"><meta property="og:title" content="Entropy Decrease" />
-<meta property="og:description" content="阅读、思考、写作，都是熵减的过程" />
-<meta property="og:type" content="website" />
-<meta property="og:url" content="https://entropydecrease.github.io/" /><meta property="og:site_name" content="Entropy Decrease" />
-<meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Entropy Decrease"/>
-<meta name="twitter:description" content="阅读、思考、写作，都是熵减的过程"/>
+        <title>Entropy Decrease</title><meta name="Description" content="阅读、思考、写作，都是熵减的过程"><meta property="og:url" content="https://entropydecrease.github.io/">
+  <meta property="og:site_name" content="Entropy Decrease">
+  <meta property="og:title" content="Entropy Decrease">
+  <meta property="og:description" content="阅读、思考、写作，都是熵减的过程">
+  <meta property="og:locale" content="en">
+  <meta property="og:type" content="website">
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Entropy Decrease">
+  <meta name="twitter:description" content="阅读、思考、写作，都是熵减的过程">
 <meta name="application-name" content="Entropy Decrease">
 <meta name="apple-mobile-web-app-title" content="Entropy Decrease"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
         <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
@@ -90,11 +93,287 @@
     </div><main class="main">
                 <div class="container"><div class="page home" data-home="posts"><div class="home-profile"><div class="home-subtitle">阅读、思考、写作，都是熵减的过程</div><div class="links"><a href="https://github.com/entropydecrease" title="GitHub" target="_blank" rel="noopener noreffer me"><i class="fab fa-github fa-fw" aria-hidden="true"></i></a><a href="mailto:mailto:en&#43;tr-op*ydecr_ea%5ese@outlook.com%5eremove_unnecessary_chars%5e" title="Email" rel="me"><i class="far fa-envelope fa-fw" aria-hidden="true"></i></a><a href="/index.xml" title="RSS" target="_blank" rel="noopener noreffer me"><i class="fas fa-rss fa-fw" aria-hidden="true"></i></a></div></div>
 <article class="single summary" itemscope itemtype="http://schema.org/Article"><h1 class="single-title" itemprop="name headline">
-        <a href="/2015_03_14_common_bioinf_mistakes/">bioinf常见的一些错误</a>
-    </h1><div class="post-meta"><span class="post-author"><a href="/" title="Author" rel="author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>entropydecrease</a></span>&nbsp;<span class="post-publish">published on <time datetime="2015-03-14">2015-03-14</time></span>&nbsp;<span class="post-category">included in <a href="/categories/bioinf/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>bioinf</a></span></div><div class="content">biostar上的这篇文章总结了在生物信息学日常工作中容易犯的一些共性的错误：
-* forget to check both strands * generate random genomic sites without avoiding masked (NNN) gaps * confuse genome freezes and even species * try to see which headers it contained by 'grep &gt; some.fasta' will destory the .fasta file * a lot of off-by-one errors due to switching between formats: Bed is 0 based; GFF/GTF are 1-based * Trusting that a downloaded file is actually fully downloaded * Trusting that an aligner will accept a list of query files instead of just taking the first and ignoring the rest (quiz: which ones am i talking about?</div><div class="post-footer">
-        <a href="/2015_03_14_common_bioinf_mistakes/">Read More</a><div class="post-tags">
-                <i class="fas fa-tags fa-fw" aria-hidden="true"></i>&nbsp;<a href="/tags/bioinf/">bioinf</a></div></div>
+        <a href="/2023_04_08-ont_basics/">图解三代测序（Nanopore） (转载作为备份)</a>
+    </h1><div class="post-meta"><span class="post-author"><a href="/" title="Author" rel="author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>entropydecrease</a></span>&nbsp;<span class="post-publish">published on <time datetime="2023-04-08">2023-04-08</time></span>&nbsp;<span class="post-category">included in <a href="/categories/tech/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>Tech</a></span></div><div class="content"><p>转载自 <a href="https://www.cnblogs.com/baimoc/p/14700618.html" target="_blank" rel="noopener noreffer ">baimoc - 博客园</a></p>
+<hr>
+<h2 id="一测序原理">一、测序原理</h2>
+<p>先介绍 Nanopore 测序中的几位主角：</p>
+<p><code>Reader</code> ：在自然界中，有一种可以嵌入到细胞膜中作为离子或分子通道的跨膜蛋白，具有天然的蛋白纳米孔。经过人为基因工程修饰后，得到的就是 Nanopore 测序所需的 Reader 蛋白。<br>
+<a href="https://img-blog.csdnimg.cn/img_convert/13bd67376e79c80ad0cd229ccd2cd7f2.png" target="_blank" rel="noopener noreffer "><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="/2023_04_08-ont_basics/resources/13bd67376e79c80ad0cd229ccd2cd7f2.png"
+        data-srcset="/2023_04_08-ont_basics/resources/13bd67376e79c80ad0cd229ccd2cd7f2.png, /2023_04_08-ont_basics/resources/13bd67376e79c80ad0cd229ccd2cd7f2.png 1.5x, /2023_04_08-ont_basics/resources/13bd67376e79c80ad0cd229ccd2cd7f2.png 2x"
+        data-sizes="auto"
+        alt="/2023_04_08-ont_basics/resources/13bd67376e79c80ad0cd229ccd2cd7f2.png"
+        title="mark" width="517" height="274" /></a></p>
+<p><code>Membrane</code>：Reader 蛋白会被嵌入到高电阻率的 Membrane （人工合成的多聚物膜），膜两侧是离子溶液，在两侧加不同的电位，离子就会在孔中流动，形成电流。<br>
+<a href="https://img-blog.csdnimg.cn/img_convert/3c152908c2aa9337541c5bfd71ad4634.png" target="_blank" rel="noopener noreffer "><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="/2023_04_08-ont_basics/resources/3c152908c2aa9337541c5bfd71ad4634.png"
+        data-srcset="/2023_04_08-ont_basics/resources/3c152908c2aa9337541c5bfd71ad4634.png, /2023_04_08-ont_basics/resources/3c152908c2aa9337541c5bfd71ad4634.png 1.5x, /2023_04_08-ont_basics/resources/3c152908c2aa9337541c5bfd71ad4634.png 2x"
+        data-sizes="auto"
+        alt="/2023_04_08-ont_basics/resources/3c152908c2aa9337541c5bfd71ad4634.png"
+        title="mark" width="952" height="342" /></a></p>
+<p><code>Motor</code>：在 Nanopore 文库构建时，需要在接头上连接一种动力蛋白，用于将DNA或RNA分子推入纳米孔中。以DNA解螺旋酶作为 Motor（动力蛋白）为例，它可以除了可以解开双螺旋，使之变为单链，还可以提供推动力。<br>
+<a href="https://img-blog.csdnimg.cn/img_convert/1c83b72bf3b63bf684bd33ea315e9b63.png" target="_blank" rel="noopener noreffer "><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="/2023_04_08-ont_basics/resources/1c83b72bf3b63bf684bd33ea315e9b63.png"
+        data-srcset="/2023_04_08-ont_basics/resources/1c83b72bf3b63bf684bd33ea315e9b63.png, /2023_04_08-ont_basics/resources/1c83b72bf3b63bf684bd33ea315e9b63.png 1.5x, /2023_04_08-ont_basics/resources/1c83b72bf3b63bf684bd33ea315e9b63.png 2x"
+        data-sizes="auto"
+        alt="/2023_04_08-ont_basics/resources/1c83b72bf3b63bf684bd33ea315e9b63.png"
+        title="mark" width="804" height="422" /></a></p>
+<p><code>Tether</code>：该蛋白用于锚定DNA或RNA链，防止在溶液中飘动，并使其进入纳米孔中。<a href="https://img-blog.csdnimg.cn/img_convert/93972d0bac466454e840b0bfb9d4bd62.gif" target="_blank" rel="noopener noreffer "><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="/2023_04_08-ont_basics/resources/93972d0bac466454e840b0bfb9d4bd62.gif"
+        data-srcset="/2023_04_08-ont_basics/resources/93972d0bac466454e840b0bfb9d4bd62.gif, /2023_04_08-ont_basics/resources/93972d0bac466454e840b0bfb9d4bd62.gif 1.5x, /2023_04_08-ont_basics/resources/93972d0bac466454e840b0bfb9d4bd62.gif 2x"
+        data-sizes="auto"
+        alt="/2023_04_08-ont_basics/resources/93972d0bac466454e840b0bfb9d4bd62.gif"
+        title="mark" width="476" height="329" /></a></p>
+<p>这时，解开的其中一条链会穿过蛋白质孔，它在通过蛋白孔时，会对膜两边离子的稳定流动产生扰动。不同的碱基，对离子流的影响不同，也就会产生不同的电流大小，进而形成下面的电流信号图。<br>
+<a href="https://img-blog.csdnimg.cn/img_convert/64a99d9eb756528ef0029112e086b2e3.png" target="_blank" rel="noopener noreffer "><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="/2023_04_08-ont_basics/resources/64a99d9eb756528ef0029112e086b2e3.png"
+        data-srcset="/2023_04_08-ont_basics/resources/64a99d9eb756528ef0029112e086b2e3.png, /2023_04_08-ont_basics/resources/64a99d9eb756528ef0029112e086b2e3.png 1.5x, /2023_04_08-ont_basics/resources/64a99d9eb756528ef0029112e086b2e3.png 2x"
+        data-sizes="auto"
+        alt="/2023_04_08-ont_basics/resources/64a99d9eb756528ef0029112e086b2e3.png"
+        title="mark" width="508" height="185" /></a></p></div><div class="post-footer">
+        <a href="/2023_04_08-ont_basics/">Read More</a><div class="post-tags">
+                <i class="fas fa-tags fa-fw" aria-hidden="true"></i>&nbsp;<a href="/tags/nanopore/">Nanopore</a></div></div>
+</article><article class="single summary" itemscope itemtype="http://schema.org/Article"><h1 class="single-title" itemprop="name headline">
+        <a href="/2023_04_01-ont_training_notes/">ONT相关的一些笔记</a>
+    </h1><div class="post-meta"><span class="post-author"><a href="/" title="Author" rel="author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>entropydecrease</a></span>&nbsp;<span class="post-publish">published on <time datetime="2023-04-01">2023-04-01</time></span>&nbsp;<span class="post-category">included in <a href="/categories/tech/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>Tech</a></span></div><div class="content"><h2 id="准确度">准确度</h2>
+<p>Kit V14 + R10.4.1</p>
+<ul>
+<li>simplex: 99.6%, Q24</li>
+<li>duplex: 99.92%, Q31</li>
+</ul>
+<h2 id="duplex">duplex</h2>
+<ul>
+<li>
+<p>一个双链文库分子，两端都有motor protein（马达蛋白）。一端的马达蛋白牵引双链文库靠近纳米孔，并解开双链让其中一条单链进入纳米孔，在其完全进入纳米孔之后，文库另外一端的马达蛋白有可能会牵引文库另外一头直接以单链的形式（无需解链）进入纳米孔（此时也有可能是其他的片段进入纳米孔测序）。这样测得的序列是一条原始分子的正负链都被测到了，所以叫duplex，可以提高测序精度。</p>
+</li>
+<li>
+<p>duplex不是通过新的试剂，只是protocol，让互补链紧跟着正义链过同一个孔而已，有一些reads是duplex，也有很多是simplex。
+据说最新的试剂，可以将duplex reads的比例提高到70%。</p>
+</li>
+<li>
+<p>duplex的精度与长度相互独立</p>
+</li>
+<li>
+<p>测indel要60x才比较准。</p>
+</li>
+</ul>
+<h2 id="misc">misc</h2>
+<ul>
+<li>低覆盖度，1x也可以测CNV</li>
+</ul>
+<h2 id="泛基因组">泛基因组</h2>
+<ul>
+<li>
+<p>泛基因组用ONT组装，只看SV或NSR的话，20x覆盖度够用。但是要看单碱基分辨率的SNV/indel，学校研究人员认为需要用NGS数据做polish.</p>
+</li>
+<li>
+<p>学校研究人员提到长的sv假阳性非常高，他们把5M 以上inv和2M 以上indel都过滤掉了，我也是有点无语，做临床检测的话，这些才是更容易致病的。。。。</p>
+</li>
+<li>
+<p>ONT公司认为泛基因组的组装，SV所需数据量较小，SNV用40x够了，homopolymer处的indel，可以用60x的duplex测序来解决。但是他们一般推荐40x，因为一个芯片标准的测序量是120G，刚好是40x的覆盖度。</p>
+</li>
+</ul>
+<h2 id="植物多倍体">植物多倍体</h2>
+<ul>
+<li>组装多倍体比较难，ONT单独无法完成，一般是结合PacBio HiFi，Hi-C和OGM也常用。</li>
+</ul>
+<h2 id="适应性采样">适应性采样</h2>
+<ul>
+<li>NGS短板：读长短，修饰信息丢失</li>
+<li>大量宿主DNA给mNGS带来挑战，唾液中加入PMA，可显著减少人源DNA</li>
+<li>三代测序因序列较长，更容易将耐药基因归属至菌种。</li>
+<li>NGS的扩增可能产生偏向性（bias），三代测序无扩增，可避免此类偏向性。</li>
+<li>适应性采样，提供人类基因组的bed文件，碰到可以匹配到ren基因组的序列，就弹出。</li>
+<li>适应性采样，可提高病原序列比例，且显著提高病原体达到30x覆盖度的速度（4h vs 常规12h）。</li>
+</ul>
+<h2 id="文件格式">文件格式</h2>
+<h3 id="fast5">Fast5</h3>
+<ul>
+<li>
+<p>ONT现在的默认格式，未来会被POD替代。</p>
+</li>
+<li>
+<p>采样频率4k Hz == 4000次/秒，碱基的过孔速度 ~400bp/s，相当于每个碱基过孔的时间内有10次的采样。</p>
+</li>
+<li>
+<p>数据量与文件大小</p>
+<table>
+  <thead>
+      <tr>
+          <th style="text-align: left">数据量</th>
+          <th style="text-align: left">Fast5文件大小</th>
+          <th style="text-align: left">Pod5文件大小</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td style="text-align: left">1G bp</td>
+          <td style="text-align: left">6G Byte</td>
+          <td style="text-align: left">0.5G Byte</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">10G bp</td>
+          <td style="text-align: left">60 GB</td>
+          <td style="text-align: left">5 GB</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">30G bp</td>
+          <td style="text-align: left">180 GB</td>
+          <td style="text-align: left">15 GB</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">90G bp</td>
+          <td style="text-align: left">540 GB</td>
+          <td style="text-align: left">45 GB</td>
+      </tr>
+  </tbody>
+</table>
+</li>
+</ul>
+<h3 id="pod5格式">Pod5格式</h3>
+<ul>
+<li>替代Fast5，后续会作为默认文件格式</li>
+<li>MinKnow机器集成</li>
+</ul>
+<h2 id="bascalling">bascalling</h2>
+<ul>
+<li>
+<p>将Fast5/Pod5文件转换为Fastq/uBam格式的过程</p></div><div class="post-footer">
+        <a href="/2023_04_01-ont_training_notes/">Read More</a><div class="post-tags">
+                <i class="fas fa-tags fa-fw" aria-hidden="true"></i>&nbsp;<a href="/tags/nanopore/">Nanopore</a></div></div>
+</article><article class="single summary" itemscope itemtype="http://schema.org/Article"><h1 class="single-title" itemprop="name headline">
+        <a href="/2023_03_13-even_googlenews_error/">Hugo 关于 google_news的错误</a>
+    </h1><div class="post-meta"><span class="post-author"><a href="/" title="Author" rel="author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>entropydecrease</a></span>&nbsp;<span class="post-publish">published on <time datetime="2023-03-13">2023-03-13</time></span>&nbsp;<span class="post-category">included in <a href="/categories/%E5%B7%A5%E5%85%B7/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>工具</a></span></div><div class="content"><p>hugo 前段时间会报错 <code>&quot;_internal/google_news.html&quot;</code>:</p>
+<pre><code>google_news internal template should be deprecated
+</code></pre>
+<p>这次就完全不能运行，warning变成error了。</p>
+<p>解决办法是：</p>
+<ol>
+<li>
+<p>打开 <code>themes/even/layouts/partials/head.html</code></p>
+</li>
+<li>
+<p>删掉 <code>{{- template &quot;_internal/google_news.html&quot; . -}}</code> 这一行</p>
+</li>
+</ol></div><div class="post-footer">
+        <a href="/2023_03_13-even_googlenews_error/">Read More</a></div>
+</article><article class="single summary" itemscope itemtype="http://schema.org/Article"><h1 class="single-title" itemprop="name headline">
+        <a href="/2023_03_13-homebrew_new_way_to_use_mirror/">homebrew 使用镜像的方式</a>
+    </h1><div class="post-meta"><span class="post-author"><a href="/" title="Author" rel="author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>entropydecrease</a></span>&nbsp;<span class="post-publish">published on <time datetime="2023-03-13">2023-03-13</time></span>&nbsp;<span class="post-category">included in <a href="/categories/%E5%B7%A5%E5%85%B7/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>工具</a></span></div><div class="content"><p>Homebrew也在不停进化，现在使用<a href="https://mirrors.tuna.tsinghua.edu.cn/help/homebrew/" target="_blank" rel="noopener noreffer ">清华镜像</a>已经很方便了</p>
+<h2 id="日常使用">日常使用</h2>
+<ul>
+<li>
+<p>可设置如下环境变量使用本站提供的 Homebrew 镜像：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl"><span class="nb">export</span> <span class="nv">HOMEBREW_INSTALL_FROM_API</span><span class="o">=</span><span class="m">1</span>
+</span></span><span class="line"><span class="cl"><span class="nb">export</span> <span class="nv">HOMEBREW_API_DOMAIN</span><span class="o">=</span><span class="s2">&#34;https://mirrors.tuna.tsinghua.edu.cn/homebrew-bottles/api&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="nb">export</span> <span class="nv">HOMEBREW_BOTTLE_DOMAIN</span><span class="o">=</span><span class="s2">&#34;https://mirrors.tuna.tsinghua.edu.cn/homebrew-bottles&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="nb">export</span> <span class="nv">HOMEBREW_BREW_GIT_REMOTE</span><span class="o">=</span><span class="s2">&#34;https://mirrors.tuna.tsinghua.edu.cn/git/homebrew/brew.git&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="nb">export</span> <span class="nv">HOMEBREW_CORE_GIT_REMOTE</span><span class="o">=</span><span class="s2">&#34;https://mirrors.tuna.tsinghua.edu.cn/git/homebrew/homebrew-core.git&#34;</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div></li>
+</ul>
+<h2 id="首次安装-homebrew--linuxbrew">首次安装 Homebrew / Linuxbrew</h2>
+<ul>
+<li>
+<p>首先，需要确保系统中安装了 bash、git 和 curl，对于 macOS 用户需额外要求安装 Command Line Tools (CLT) for Xcode。</p>
+<p>对于 macOS 用户，系统自带 bash、git 和 curl，在命令行输入 xcode-select &ndash;install 安装 CLT for Xcode 即可。
+对于 Linux 用户，系统自带 bash，仅需额外安装 git 和 curl。</p>
+</li>
+<li>
+<p>接着，在终端输入以下几行命令设置环境变量：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl"><span class="nb">export</span> <span class="nv">HOMEBREW_INSTALL_FROM_API</span><span class="o">=</span><span class="m">1</span>
+</span></span><span class="line"><span class="cl"><span class="nb">export</span> <span class="nv">HOMEBREW_API_DOMAIN</span><span class="o">=</span><span class="s2">&#34;https://mirrors.tuna.tsinghua.edu.cn/homebrew-bottles/api&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="nb">export</span> <span class="nv">HOMEBREW_BOTTLE_DOMAIN</span><span class="o">=</span><span class="s2">&#34;https://mirrors.tuna.tsinghua.edu.cn/homebrew-bottles&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="nb">export</span> <span class="nv">HOMEBREW_BREW_GIT_REMOTE</span><span class="o">=</span><span class="s2">&#34;https://mirrors.tuna.tsinghua.edu.cn/git/homebrew/brew.git&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="nb">export</span> <span class="nv">HOMEBREW_CORE_GIT_REMOTE</span><span class="o">=</span><span class="s2">&#34;https://mirrors.tuna.tsinghua.edu.cn/git/homebrew/homebrew-core.git&#34;</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>注：自 brew 4.0 起，HOMEBREW_INSTALL_FROM_API 会成为默认行为，无需设置；大部分用户无需再克隆 homebrew/core 仓库，故无需设置 HOMEBREW_CORE_GIT_REMOTE 环境变量。但若需要运行 brew 的开发命令或者 brew 安装在非官方支持的默认 prefix 位置，则仍需设置 HOMEBREW_CORE_GIT_REMOTE 环境变量；如果不想通过 API 安装，可以设置 HOMEBREW_NO_INSTALL_FROM_API=1。</p></div><div class="post-footer">
+        <a href="/2023_03_13-homebrew_new_way_to_use_mirror/">Read More</a></div>
+</article><article class="single summary" itemscope itemtype="http://schema.org/Article"><h1 class="single-title" itemprop="name headline">
+        <a href="/2023_02_23-crack_typora/">破解typora</a>
+    </h1><div class="post-meta"><span class="post-author"><a href="/" title="Author" rel="author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>entropydecrease</a></span>&nbsp;<span class="post-publish">published on <time datetime="2023-02-23">2023-02-23</time></span>&nbsp;<span class="post-category">included in <a href="/categories/%E5%B7%A5%E5%85%B7/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>工具</a></span></div><div class="content"><p>基于electron的app有一个问题，没有很好的隐藏源码的机制，所以typora收费之后，破解版层出不穷。</p>
+<p>网上搜了一下，针对Mac：</p>
+<ol>
+<li>官方网站下载typora并安装</li>
+<li>打开typora，确定能正常运行，完全退出</li>
+<li>修改文件</li>
+</ol>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">$ <span class="nb">cd</span> /Applications/Typora.app/Contents/Resources/TypeMark/page-dist/static/js
+</span></span><span class="line"><span class="cl">$ mv LicenseIndex.180dd4c7.c7ff4102.chunk.js LicenseIndex.180dd4c7.c7ff4102.chunk.js.bak
+</span></span><span class="line"><span class="cl">$ vim LicenseIndex.180dd4c7.c7ff4102.chunk.js
+</span></span><span class="line"><span class="cl"><span class="c1"># replace `e.hasActivated=&#34;true&#34;==e.hasActivated` with `e.hasActivated=&#34;true&#34;==&#34;true&#34;`</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><ol start="4">
+<li>再打开typora，有可能会有错误信息说文件被修改，但是我打开又关闭几次，不知道怎么弄的，就不再出现此错误信息了。虽然编辑页面右下角显示“unregistered”，但是点击后会显示已经激活。</li>
+<li>typora确实好用。假如以后这次破解不能用了，我就买正版了。</li>
+</ol></div><div class="post-footer">
+        <a href="/2023_02_23-crack_typora/">Read More</a></div>
+</article><article class="single summary" itemscope itemtype="http://schema.org/Article"><h1 class="single-title" itemprop="name headline">
+        <a href="/2023_02_16-no_one_cares/">文摘两则，可以对照着看</a>
+    </h1><div class="post-meta"><span class="post-author"><a href="/" title="Author" rel="author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>entropydecrease</a></span>&nbsp;<span class="post-publish">published on <time datetime="2023-02-16">2023-02-16</time></span>&nbsp;<span class="post-category">included in <a href="/categories/%E8%AF%BB%E4%B9%A6/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>读书</a></span></div><div class="content"><p>在<a href="http://www.ruanyifeng.com/blog/2023/02/weekly-issue-241.html" target="_blank" rel="noopener noreffer ">阮一峰的blog</a>看到两则文摘，挺有意思，可以对照着看。</p>
+<h2 id="从少年到成年的过渡是痛苦的httpsrohitblogcare"><a href="https://rohit.blog/care/" target="_blank" rel="noopener noreffer ">从少年到成年的过渡是痛苦的</a></h2>
+<pre><code>No One Cares
+
+The transition from childhood to adult life is hard.
+
+Our parents give us attention all our adolescent years.  But as soon as we cross an age limit and step into the outside world, a brick of reality hits our heads.
+
+It's written on the brick in big-bold letters, &quot;NO ONE CARES.&quot;
+
+No one cares who you are, what you know, and what you have created.  People are busy in their own lives.  They are lost in their own world.
+
+You've released the world's dopest music album?  No one cares.
+
+You've spent two years writing a novel?  No one cares.
+
+You've made a fantastic app that solves a big problem?  No one...
+
+That's exactly where marketing comes in.
+
+Marketing is the humble act of accepting that people out there are not your mother or father.  They won't give you attention.  It is your duty to market your product.  It is your duty to make people care.
+</code></pre>
+<p>直接用有道翻译了一下（还过得去）：</p></div><div class="post-footer">
+        <a href="/2023_02_16-no_one_cares/">Read More</a></div>
 </article><ul class="pagination"><li class="page-item ">
                     <span class="page-link">
                         <a href="/">1</a>
@@ -113,9 +392,23 @@
                     <span class="page-link">
                         <a href="/page/7/">7</a>
                     </span>
+                </li><li class="page-item ">
+                    <span class="page-link">
+                        <a href="/page/8/">8</a>
+                    </span>
+                </li><li class="page-item ">
+                    <span class="page-link">
+                        <a href="/page/9/">9</a>
+                    </span>
+                </li><li class="page-item ">
+                    <span class="page-link" aria-hidden="true">&hellip;</span>
+                </li><li class="page-item ">
+                    <span class="page-link">
+                        <a href="/page/11/">11</a>
+                    </span>
                 </li></ul></div></div>
             </main><footer class="footer">
-        <div class="footer-container"><div class="footer-line">Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.113.0">Hugo</a> | Theme - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.2.11"><i class="far fa-kiss-wink-heart fa-fw" aria-hidden="true"></i> LoveIt</a>
+        <div class="footer-container"><div class="footer-line">Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.134.2">Hugo</a> | Theme - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.2.11"><i class="far fa-kiss-wink-heart fa-fw" aria-hidden="true"></i> LoveIt</a>
                 </div><div class="footer-line" itemscope itemtype="http://schema.org/CreativeWork"><i class="far fa-copyright fa-fw" aria-hidden="true"></i><span itemprop="copyrightYear">2015 - 2024</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/" target="_blank">entropydecrease</a></span></div>
         </div>
     </footer></div>

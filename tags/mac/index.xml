@@ -5,13 +5,20 @@
         <description>Mac - Tag - Entropy Decrease</description>
         <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Mon, 13 Apr 2015 00:00:00 &#43;0000</lastBuildDate><atom:link href="https://entropydecrease.github.io/tags/mac/" rel="self" type="application/rss+xml" /><item>
     <title>设置hostname，避免DHCP修改hostname</title>
-    <link>https://entropydecrease.github.io/2015_04_13_set-hostname-not-modifed-by-dhcp/</link>
+    <link>https://entropydecrease.github.io/2015_04_13-set-hostname-not-modifed-by-dhcp/</link>
     <pubDate>Mon, 13 Apr 2015 00:00:00 &#43;0000</pubDate>
     <author>entropydecrease</author>
-    <guid>https://entropydecrease.github.io/2015_04_13_set-hostname-not-modifed-by-dhcp/</guid>
-    <description><![CDATA[It can be annoying to see my hostname being modifed each time I connect to a different WIFI. It is because the hostname was never set.
-&gt; scutil --get HostName HostName: not set So we just need to set the hostname:
-&gt; sudo scutil --set HostName &quot;new_hostname&quot; Password: &gt; scutil --get HostName new_hostname ]]></description>
+    <guid>https://entropydecrease.github.io/2015_04_13-set-hostname-not-modifed-by-dhcp/</guid>
+    <description><![CDATA[<p>It can be annoying to see my hostname being modifed each time I connect to a different WIFI. It is because the hostname was never set.</p>
+<pre><code>&gt; scutil --get HostName 
+HostName: not set 
+</code></pre>
+<p>So we just need to set the hostname:</p>
+<pre><code>&gt; sudo scutil --set HostName &quot;new_hostname&quot;  
+Password:  
+&gt; scutil --get HostName              
+new_hostname  
+</code></pre>]]></description>
 </item>
 </channel>
 </rss>

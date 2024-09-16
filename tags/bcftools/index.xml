@@ -1,26 +1,38 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
     <channel>
-        <title>bcftools - Tag - Entropy Decrease</title>
+        <title>Bcftools - Tag - Entropy Decrease</title>
         <link>https://entropydecrease.github.io/tags/bcftools/</link>
-        <description>bcftools - Tag - Entropy Decrease</description>
+        <description>Bcftools - Tag - Entropy Decrease</description>
         <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Fri, 01 Oct 2021 00:00:00 &#43;0000</lastBuildDate><atom:link href="https://entropydecrease.github.io/tags/bcftools/" rel="self" type="application/rss+xml" /><item>
     <title>bcftools notes (转载)</title>
-    <link>https://entropydecrease.github.io/2021_10_01_bcftools_notes/</link>
+    <link>https://entropydecrease.github.io/2021_10_01-bcftools_notes/</link>
     <pubDate>Fri, 01 Oct 2021 00:00:00 &#43;0000</pubDate>
     <author>entropydecrease</author>
-    <guid>https://entropydecrease.github.io/2021_10_01_bcftools_notes/</guid>
-    <description><![CDATA[copied from https://gist.github.com/elowy01/93922762e131d7abd3c7e8e166a74a0b
-Filter variants per region (in this example, print out only variants mapped to chr1 and chr2)
-bcftools filter -r1,2 ALL.chip.omni_broad_sanger_combined.20140818.snps.genotypes.hg38.vcf.gz
-printing out info for only 2 samples:
-bcftools view -s NA20818,NA20819 filename.vcf.gz
-printing stats only for variants passing the filter:
-bcftools view -f PASS filename.vcf.gz
-printing variants withoud header:
-bcftools view -H
-printing variants on a particular region:
-bcftools view -r chr20:1-200000 -s NA20818,NA20819 filename.vcf.gz
-print all variants except for the ones falling within region:]]></description>
+    <guid>https://entropydecrease.github.io/2021_10_01-bcftools_notes/</guid>
+    <description><![CDATA[<p>copied from <code>https://gist.github.com/elowy01/93922762e131d7abd3c7e8e166a74a0b</code></p>
+<ul>
+<li>
+<p>Filter variants per region (in this example, print out only variants mapped to chr1 and chr2)</p>
+<p><code>bcftools filter -r1,2 ALL.chip.omni_broad_sanger_combined.20140818.snps.genotypes.hg38.vcf.gz</code></p>
+</li>
+<li>
+<p>printing out info for only 2 samples:</p>
+<p><code>bcftools view -s NA20818,NA20819 filename.vcf.gz</code></p>
+</li>
+<li>
+<p>printing stats only for variants passing the filter:</p>
+<p><code>bcftools view -f PASS filename.vcf.gz</code></p>
+</li>
+<li>
+<p>printing variants withoud header:</p>
+<p><code>bcftools view -H</code></p>
+</li>
+<li>
+<p>printing variants on a particular region:</p>
+<p><code>bcftools view -r chr20:1-200000 -s NA20818,NA20819 filename.vcf.gz</code></p>
+</li>
+<li>
+<p>print all variants except for the ones falling within region:</p>]]></description>
 </item>
 </channel>
 </rss>

@@ -1,20 +1,88 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
     <channel>
-        <title>igv - Tag - Entropy Decrease</title>
+        <title>Igv - Tag - Entropy Decrease</title>
         <link>https://entropydecrease.github.io/tags/igv/</link>
-        <description>igv - Tag - Entropy Decrease</description>
+        <description>Igv - Tag - Entropy Decrease</description>
         <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Sun, 23 Feb 2020 00:00:00 &#43;0000</lastBuildDate><atom:link href="https://entropydecrease.github.io/tags/igv/" rel="self" type="application/rss+xml" /><item>
     <title>igv 生成本地的.genome文件</title>
-    <link>https://entropydecrease.github.io/2020_02_23_igv_local_genome/</link>
+    <link>https://entropydecrease.github.io/2020_02_23-igv_local_genome/</link>
     <pubDate>Sun, 23 Feb 2020 00:00:00 &#43;0000</pubDate>
     <author>entropydecrease</author>
-    <guid>https://entropydecrease.github.io/2020_02_23_igv_local_genome/</guid>
-    <description><![CDATA[igv假如每次都要从远程加载genome信息的话，网络不好的情况下会很慢，这时候最好做一个本地版的.genome文件。
-igv的.genome文件其实是一个zip文件。
-先看一下hg19.genome的内容：
-1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 &gt; cp ~/igv/genomes/hg19.genome . &gt; unzip hg19.genome Archive: hg19.genome inflating: cytoBand.txt inflating: hg19_alias.tab inflating: property.txt inflating: refGene.txt &gt; cat property.txt id=hg19 name=Human hg19 cytobandFile=cytoBand.txt ordered=true geneFile=refGene.txt geneTrackName=RefSeq Genes chrAliasFile=hg19_alias.tab fasta=True sequenceLocation=http://s3.amazonaws.com/igv.broadinstitute.org/genomes/seq/hg19/hg19.fasta url=http://www.ncbi.nlm.nih.gov/gene?term=$$ 可以看到，里面的cytoband文件，gene文件都是本地的，但是序列文件是在AWS上面的。而最近AWS的访问有问题，非常不稳定，所以igv也不能打开hg19.genome了。
-让igv都使用本地的文件，只需要修改property.txt即可，修改property.txt如下：
-1 2 3 4 5 6 7 8 9 10 id=hg19-local name=Human hg19 local cytobandFile=cytoBand.txt ordered=true geneFile=refGene.]]></description>
+    <guid>https://entropydecrease.github.io/2020_02_23-igv_local_genome/</guid>
+    <description><![CDATA[<p>igv假如每次都要从远程加载genome信息的话，网络不好的情况下会很慢，这时候最好做一个本地版的.genome文件。</p>
+<p>igv的.genome文件其实是一个zip文件。</p>
+<p>先看一下hg19.genome的内容：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">&gt; cp ~/igv/genomes/hg19.genome .
+</span></span><span class="line"><span class="cl">&gt; unzip hg19.genome
+</span></span><span class="line"><span class="cl">Archive:  hg19.genome
+</span></span><span class="line"><span class="cl">inflating: cytoBand.txt
+</span></span><span class="line"><span class="cl">inflating: hg19_alias.tab
+</span></span><span class="line"><span class="cl">inflating: property.txt
+</span></span><span class="line"><span class="cl">inflating: refGene.txt
+</span></span><span class="line"><span class="cl">&gt; cat property.txt
+</span></span><span class="line"><span class="cl"><span class="nv">id</span><span class="o">=</span>hg19
+</span></span><span class="line"><span class="cl"><span class="nv">name</span><span class="o">=</span>Human hg19
+</span></span><span class="line"><span class="cl"><span class="nv">cytobandFile</span><span class="o">=</span>cytoBand.txt
+</span></span><span class="line"><span class="cl"><span class="nv">ordered</span><span class="o">=</span><span class="nb">true</span>
+</span></span><span class="line"><span class="cl"><span class="nv">geneFile</span><span class="o">=</span>refGene.txt
+</span></span><span class="line"><span class="cl"><span class="nv">geneTrackName</span><span class="o">=</span>RefSeq Genes
+</span></span><span class="line"><span class="cl"><span class="nv">chrAliasFile</span><span class="o">=</span>hg19_alias.tab
+</span></span><span class="line"><span class="cl"><span class="nv">fasta</span><span class="o">=</span>True
+</span></span><span class="line"><span class="cl"><span class="nv">sequenceLocation</span><span class="o">=</span>http://s3.amazonaws.com/igv.broadinstitute.org/genomes/seq/hg19/hg19.fasta
+</span></span><span class="line"><span class="cl"><span class="nv">url</span><span class="o">=</span>http://www.ncbi.nlm.nih.gov/gene?term<span class="o">=</span><span class="nv">$$</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>可以看到，里面的cytoband文件，gene文件都是本地的，但是序列文件是在AWS上面的。而最近AWS的访问有问题，非常不稳定，所以igv也不能打开hg19.genome了。</p>
+<p>让igv都使用本地的文件，只需要修改property.txt即可，修改property.txt如下：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">id=hg19-local
+</span></span><span class="line"><span class="cl">name=Human hg19 local
+</span></span><span class="line"><span class="cl">cytobandFile=cytoBand.txt
+</span></span><span class="line"><span class="cl">ordered=true
+</span></span><span class="line"><span class="cl">geneFile=refGene.txt
+</span></span><span class="line"><span class="cl">geneTrackName=RefSeq Genes
+</span></span><span class="line"><span class="cl">chrAliasFile=hg19_alias.tab
+</span></span><span class="line"><span class="cl">fasta=True
+</span></span><span class="line"><span class="cl">sequenceLocation=/Users/xiaojf/data/genomes/hs37d5/hs37d5.fa
+</span></span><span class="line"><span class="cl">url=http://www.ncbi.nlm.nih.gov/gene?term=$$
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>其中sequenceLocation改成本地的基因组fasta文件。</p>]]></description>
 </item>
 </channel>
 </rss>

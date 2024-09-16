@@ -1,24 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
+    <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="robots" content="noodp" />
-        <title>datamash tips - Entropy Decrease</title><meta name="Description" content="阅读、思考、写作，都是熵减的过程"><meta property="og:title" content="datamash tips" />
-<meta property="og:description" content="1 2 3 4 5 6 7 8 9 10 &gt; (cat &lt;&lt;-EOF a 1 a 2 b 3 c 4 EOF ) | datamash groupby 1 collapse 2 a	1,2 b	3 c	4 collapse 操作可以将对应的列（本例中为第二列）进行合并，在本例子，根据第一例的值进行分组，将第二例的值合并。
-另外，为了在一个命令中完成，本例中使用了here document。" />
-<meta property="og:type" content="article" />
-<meta property="og:url" content="https://entropydecrease.github.io/2023_04_28_datamash/" /><meta property="article:section" content="posts" />
-<meta property="article:published_time" content="2023-04-28T00:00:00+00:00" />
-<meta property="article:modified_time" content="2023-04-28T00:00:00+00:00" /><meta property="og:site_name" content="Entropy Decrease" />
-<meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="datamash tips"/>
-<meta name="twitter:description" content="1 2 3 4 5 6 7 8 9 10 &gt; (cat &lt;&lt;-EOF a 1 a 2 b 3 c 4 EOF ) | datamash groupby 1 collapse 2 a	1,2 b	3 c	4 collapse 操作可以将对应的列（本例中为第二列）进行合并，在本例子，根据第一例的值进行分组，将第二例的值合并。
-另外，为了在一个命令中完成，本例中使用了here document。"/>
+        <title>datamash tips - Entropy Decrease</title><meta name="Description" content="阅读、思考、写作，都是熵减的过程"><meta property="og:url" content="http://localhost:1313/2023_04_28_datamash/">
+  <meta property="og:site_name" content="Entropy Decrease">
+  <meta property="og:title" content="datamash tips">
+  <meta property="og:description" content=" 1 2 3 4 5 6 7 8 9 10 &gt; (cat &lt;&lt;-EOF a 1 a 2 b 3 c 4 EOF ) | datamash groupby 1 collapse 2 a	1,2 b	3 c	4 collapse 操作可以将对应的列（本例中为第二列）进行合并，在本例子，根据第一例的值进行分组，将第二例的值合并。
+另外，为了在一个命令中完成，本例中使用了here document。">
+  <meta property="og:locale" content="en">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2023-04-28T00:00:00+00:00">
+    <meta property="article:modified_time" content="2023-04-28T00:00:00+00:00">
+    <meta property="article:tag" content="Datamash">
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="datamash tips">
+  <meta name="twitter:description" content=" 1 2 3 4 5 6 7 8 9 10 &gt; (cat &lt;&lt;-EOF a 1 a 2 b 3 c 4 EOF ) | datamash groupby 1 collapse 2 a	1,2 b	3 c	4 collapse 操作可以将对应的列（本例中为第二列）进行合并，在本例子，根据第一例的值进行分组，将第二例的值合并。
+另外，为了在一个命令中完成，本例中使用了here document。">
 <meta name="application-name" content="Entropy Decrease">
 <meta name="apple-mobile-web-app-title" content="Entropy Decrease"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
         <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="https://entropydecrease.github.io/2023_04_28_datamash/" /><link rel="prev" href="https://entropydecrease.github.io/2023_04_28_cancer_early_diagnostics/" /><link rel="next" href="https://entropydecrease.github.io/2023_05_02_methylation_cancer/" /><link rel="stylesheet" href="/css/style.min.css"><link rel="preload" href="/lib/fontawesome-free/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="http://localhost:1313/2023_04_28_datamash/" /><link rel="prev" href="http://localhost:1313/2023_04_28_cancer_early_diagnostics/" /><link rel="next" href="http://localhost:1313/2023_05_03-civicdb/" /><link rel="stylesheet" href="/css/style.min.css"><link rel="preload" href="/lib/fontawesome-free/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
         <noscript><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"></noscript><link rel="preload" href="/lib/animate/animate.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
         <noscript><link rel="stylesheet" href="/lib/animate/animate.min.css"></noscript><script type="application/ld+json">
     {
@@ -28,9 +33,9 @@
         "inLanguage": "en",
         "mainEntityOfPage": {
             "@type": "WebPage",
-            "@id": "https:\/\/entropydecrease.github.io\/2023_04_28_datamash\/"
+            "@id": "http:\/\/localhost:1313\/2023_04_28_datamash\/"
         },"genre": "posts","keywords": "datamash","wordcount":  39 ,
-        "url": "https:\/\/entropydecrease.github.io\/2023_04_28_datamash\/","datePublished": "2023-04-28T00:00:00+00:00","dateModified": "2023-04-28T00:00:00+00:00","publisher": {
+        "url": "http:\/\/localhost:1313\/2023_04_28_datamash\/","datePublished": "2023-04-28T00:00:00+00:00","dateModified": "2023-04-28T00:00:00+00:00","publisher": {
             "@type": "Organization",
             "name": ""},"author": {
                 "@type": "Person",
@@ -102,7 +107,7 @@
             <h2 class="toc-title">Contents</h2>
             <div class="toc-content" id="toc-content-auto"></div>
         </div><article class="page single"><h1 class="single-title animate__animated animate__flipInX">datamash tips</h1><div class="post-meta">
-            <div class="post-meta-line"><span class="post-author"><a href="/" title="Author" rel="author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>entropydecrease</a></span>&nbsp;<span class="post-category">included in <a href="/categories/bioinf/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>bioinf</a></span></div>
+            <div class="post-meta-line"><span class="post-author"><a href="/" title="Author" rel="author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>entropydecrease</a></span>&nbsp;<span class="post-category">included in <a href="/categories/bioinf/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>Bioinf</a></span></div>
             <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw" aria-hidden="true"></i>&nbsp;<time datetime="2023-04-28">2023-04-28</time>&nbsp;<i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>&nbsp;39 words&nbsp;
                 <i class="far fa-clock fa-fw" aria-hidden="true"></i>&nbsp;One minute&nbsp;</div>
         </div><div class="details toc" id="toc-static"  data-kept="">
@@ -148,24 +153,24 @@
         <div class="post-info-line">
             <div class="post-info-md"></div>
             <div class="post-info-share">
-                <span><a href="javascript:void(0);" title="Share on Twitter" data-sharer="twitter" data-url="https://entropydecrease.github.io/2023_04_28_datamash/" data-title="datamash tips" data-hashtags="datamash"><i class="fab fa-twitter fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Facebook" data-sharer="facebook" data-url="https://entropydecrease.github.io/2023_04_28_datamash/" data-hashtag="datamash"><i class="fab fa-facebook-square fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Hacker News" data-sharer="hackernews" data-url="https://entropydecrease.github.io/2023_04_28_datamash/" data-title="datamash tips"><i class="fab fa-hacker-news fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Line" data-sharer="line" data-url="https://entropydecrease.github.io/2023_04_28_datamash/" data-title="datamash tips"><i data-svg-src="/lib/simple-icons/icons/line.min.svg" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Pocket" data-sharer="pocket" data-url="https://entropydecrease.github.io/2023_04_28_datamash/"><i class="fab fa-get-pocket fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on 微博" data-sharer="weibo" data-url="https://entropydecrease.github.io/2023_04_28_datamash/" data-title="datamash tips"><i class="fab fa-weibo fa-fw" aria-hidden="true"></i></a></span>
+                <span><a href="javascript:void(0);" title="Share on Twitter" data-sharer="twitter" data-url="http://localhost:1313/2023_04_28_datamash/" data-title="datamash tips" data-hashtags="datamash"><i class="fab fa-twitter fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Facebook" data-sharer="facebook" data-url="http://localhost:1313/2023_04_28_datamash/" data-hashtag="datamash"><i class="fab fa-facebook-square fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Hacker News" data-sharer="hackernews" data-url="http://localhost:1313/2023_04_28_datamash/" data-title="datamash tips"><i class="fab fa-hacker-news fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Line" data-sharer="line" data-url="http://localhost:1313/2023_04_28_datamash/" data-title="datamash tips"><i data-svg-src="/lib/simple-icons/icons/line.min.svg" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Pocket" data-sharer="pocket" data-url="http://localhost:1313/2023_04_28_datamash/"><i class="fab fa-get-pocket fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on 微博" data-sharer="weibo" data-url="http://localhost:1313/2023_04_28_datamash/" data-title="datamash tips"><i class="fab fa-weibo fa-fw" aria-hidden="true"></i></a></span>
             </div>
         </div>
     </div>
 
     <div class="post-info-more">
-        <section class="post-tags"><i class="fas fa-tags fa-fw" aria-hidden="true"></i>&nbsp;<a href="/tags/datamash/">datamash</a></section>
+        <section class="post-tags"><i class="fas fa-tags fa-fw" aria-hidden="true"></i>&nbsp;<a href="/tags/datamash/">Datamash</a></section>
         <section>
             <span><a href="javascript:void(0);" onclick="window.history.back();">Back</a></span>&nbsp;|&nbsp;<span><a href="/">Home</a></span>
         </section>
     </div>
 
     <div class="post-nav"><a href="/2023_04_28_cancer_early_diagnostics/" class="prev" rel="prev" title="肿瘤早诊的思路"><i class="fas fa-angle-left fa-fw" aria-hidden="true"></i>肿瘤早诊的思路</a>
-            <a href="/2023_05_02_methylation_cancer/" class="next" rel="next" title="甲基化与膀胱癌检测">甲基化与膀胱癌检测<i class="fas fa-angle-right fa-fw" aria-hidden="true"></i></a></div>
+            <a href="/2023_05_03-civicdb/" class="next" rel="next" title="Civic数据库介绍">Civic数据库介绍<i class="fas fa-angle-right fa-fw" aria-hidden="true"></i></a></div>
 </div>
 </article></div>
             </main><footer class="footer">
-        <div class="footer-container"><div class="footer-line">Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.113.0">Hugo</a> | Theme - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.2.11"><i class="far fa-kiss-wink-heart fa-fw" aria-hidden="true"></i> LoveIt</a>
+        <div class="footer-container"><div class="footer-line">Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.134.2">Hugo</a> | Theme - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.2.11"><i class="far fa-kiss-wink-heart fa-fw" aria-hidden="true"></i> LoveIt</a>
                 </div><div class="footer-line" itemscope itemtype="http://schema.org/CreativeWork"><i class="far fa-copyright fa-fw" aria-hidden="true"></i><span itemprop="copyrightYear">2015 - 2024</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/" target="_blank">entropydecrease</a></span></div>
         </div>
     </footer></div>

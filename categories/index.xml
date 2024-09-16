@@ -3,12 +3,28 @@
         <title>Categories - Category - Entropy Decrease</title>
         <link>https://entropydecrease.github.io/categories/</link>
         <description>Categories - Category - Entropy Decrease</description>
-        <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Mon, 06 Nov 2023 00:00:00 &#43;0000</lastBuildDate><atom:link href="https://entropydecrease.github.io/categories/" rel="self" type="application/rss+xml" /><item>
+        <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Mon, 16 Sep 2024 00:00:00 &#43;0000</lastBuildDate><atom:link href="https://entropydecrease.github.io/categories/" rel="self" type="application/rss+xml" /><item>
     <title>读书</title>
     <link>https://entropydecrease.github.io/categories/%E8%AF%BB%E4%B9%A6/</link>
-    <pubDate>Mon, 06 Nov 2023 00:00:00 &#43;0000</pubDate>
+    <pubDate>Mon, 16 Sep 2024 00:00:00 &#43;0000</pubDate>
     <author>entropydecrease</author>
     <guid>https://entropydecrease.github.io/categories/%E8%AF%BB%E4%B9%A6/</guid>
+    <description><![CDATA[]]></description>
+</item>
+<item>
+    <title>随笔</title>
+    <link>https://entropydecrease.github.io/categories/%E9%9A%8F%E7%AC%94/</link>
+    <pubDate>Sun, 04 Aug 2024 00:00:00 &#43;0000</pubDate>
+    <author>entropydecrease</author>
+    <guid>https://entropydecrease.github.io/categories/%E9%9A%8F%E7%AC%94/</guid>
+    <description><![CDATA[]]></description>
+</item>
+<item>
+    <title>Bioinf</title>
+    <link>https://entropydecrease.github.io/categories/bioinf/</link>
+    <pubDate>Mon, 04 Dec 2023 16:46:43 &#43;0000</pubDate>
+    <author>entropydecrease</author>
+    <guid>https://entropydecrease.github.io/categories/bioinf/</guid>
     <description><![CDATA[]]></description>
 </item>
 <item>
@@ -20,7 +36,7 @@
     <description><![CDATA[]]></description>
 </item>
 <item>
-    <title>tools</title>
+    <title>Tools</title>
     <link>https://entropydecrease.github.io/categories/tools/</link>
     <pubDate>Thu, 15 Jun 2023 00:00:00 &#43;0000</pubDate>
     <author>entropydecrease</author>
@@ -28,15 +44,7 @@
     <description><![CDATA[]]></description>
 </item>
 <item>
-    <title>bioinf</title>
-    <link>https://entropydecrease.github.io/categories/bioinf/</link>
-    <pubDate>Wed, 03 May 2023 00:00:00 &#43;0000</pubDate>
-    <author>entropydecrease</author>
-    <guid>https://entropydecrease.github.io/categories/bioinf/</guid>
-    <description><![CDATA[]]></description>
-</item>
-<item>
-    <title>clinical</title>
+    <title>Clinical</title>
     <link>https://entropydecrease.github.io/categories/clinical/</link>
     <pubDate>Fri, 28 Apr 2023 00:00:00 &#43;0000</pubDate>
     <author>entropydecrease</author>
@@ -44,19 +52,11 @@
     <description><![CDATA[]]></description>
 </item>
 <item>
-    <title>tech</title>
+    <title>Tech</title>
     <link>https://entropydecrease.github.io/categories/tech/</link>
     <pubDate>Sat, 08 Apr 2023 00:00:00 &#43;0000</pubDate>
     <author>entropydecrease</author>
     <guid>https://entropydecrease.github.io/categories/tech/</guid>
-    <description><![CDATA[]]></description>
-</item>
-<item>
-    <title>随笔</title>
-    <link>https://entropydecrease.github.io/categories/%E9%9A%8F%E7%AC%94/</link>
-    <pubDate>Sun, 06 Dec 2015 00:00:00 &#43;0000</pubDate>
-    <author>entropydecrease</author>
-    <guid>https://entropydecrease.github.io/categories/%E9%9A%8F%E7%AC%94/</guid>
     <description><![CDATA[]]></description>
 </item>
 </channel>

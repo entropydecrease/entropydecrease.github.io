@@ -1,25 +1,84 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
     <channel>
-        <title>download - Tag - Entropy Decrease</title>
+        <title>Download - Tag - Entropy Decrease</title>
         <link>https://entropydecrease.github.io/tags/download/</link>
-        <description>download - Tag - Entropy Decrease</description>
+        <description>Download - Tag - Entropy Decrease</description>
         <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Tue, 07 Feb 2023 18:25:57 &#43;0800</lastBuildDate><atom:link href="https://entropydecrease.github.io/tags/download/" rel="self" type="application/rss+xml" /><item>
     <title>下载m3u8格式的视频文件并合并为mp4</title>
     <link>https://entropydecrease.github.io/2023_02_07-download_m3u8/</link>
     <pubDate>Tue, 07 Feb 2023 18:25:57 &#43;0800</pubDate>
     <author>entropydecrease</author>
     <guid>https://entropydecrease.github.io/2023_02_07-download_m3u8/</guid>
-    <description><![CDATA[尝试了一下下载网络的视频，以illumina的一个视频为例：
-https://www.illumina.vh.sauos.com/watch/205
-得到m3u8文件 在firefox中，安装「Video DownloadHelper]及配套的app，然后在firefox中打开该链接，点击「Video DownloadHelper]，可以看到两个视频，长的那个就是目标视频，选择“copy URL”，得到如下链接：
-https://tehlsvodhls02.vhallyun.com/vhallyun/vhallrecord/lss_27f054bb/20220724124221_a018e830/record.m3u8?token=2A75182F_MjE3MTIwOTg2XzYzRUI1N0Q2X1lUQXhPR1U0TXpBX2FtOXBibDgzTWpBeE9UUXdORElfdm9k
-下载该文件：
-1 aria2c -c &#39;https://tehlsvodhls02.vhallyun.com/vhallyun/vhallrecord/lss_27f054bb/20220724124221_a018e830/record.m3u8?token=2A75182F_MjE3MTIwOTg2XzYzRUI1N0Q2X1lUQXhPR1U0TXpBX2FtOXBibDgzTWpBeE9UUXdORElfdm9k&#39; 打开这个文件，可以看到里面是如下的格式：
-1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 #EXTM3U #EXT-X-VERSION:3 #EXT-X-TARGETDURATION:20 #EXT-X-MEDIA-SEQUENCE:0 #EXTINF:4.520000, /vhallyun/vhallhls/ls/s_/27/lss_27f054bb/lss_27f054bb/20220724084900103860/livestream000007.ts #EXTINF:4.200000, /vhallyun/vhallhls/ls/s_/27/lss_27f054bb/lss_27f054bb/20220724084900103860/livestream000008.ts #EXTINF:4.200000, /vhallyun/vhallhls/ls/s_/27/lss_27f054bb/lss_27f054bb/20220724084900103860/livestream000009.ts #EXTINF:4.240000, /vhallyun/vhallhls/ls/s_/27/lss_27f054bb/lss_27f054bb/20220724084900103860/livestream000010.ts #EXTINF:5.080000, /vhallyun/vhallhls/ls/s_/27/lss_27f054bb/lss_27f054bb/20220724084900103860/livestream000011.ts #EXTINF:5.880000, /vhallyun/vhallhls/ls/s_/27/lss_27f054bb/lss_27f054bb/20220724084900103860/livestream000012.ts 表头信息可以忽略，我猜测#EXTINF:4.520000是每一个视频文件的长度，紧接的下一行是视频的路径，但是没有hostname。
-下载ts文件 观察一下m3u8文件的地址，前面一段是https://tehlsvodhls02.vhallyun.com/vhallyun/，所以我猜测hostname就是https://tehlsvodhls02.vhallyun.com，后面下载了一个ts文件，发现是正确的。
-下载的ts文件，转换成mp4文件:
-1 ffmpeg -i livestream002243.ts -acodec copy -vcodec copy -absf aac_adtstoasc livestream002243.mp4 从m3u8文件中得到ts文件名，并构造完整的url：
-1 2 3 4 [ -s url_list.txt ] || \ grep -v &#39;^#EXTM3U&#39; record.]]></description>
+    <description><![CDATA[<p>尝试了一下下载网络的视频，以illumina的一个视频为例：</p>
+<blockquote>
+<p><a href="https://www.illumina.vh.sauos.com/watch/205" target="_blank" rel="noopener noreffer ">https://www.illumina.vh.sauos.com/watch/205</a></p>
+</blockquote>
+<h2 id="得到m3u8文件">得到m3u8文件</h2>
+<p>在firefox中，安装「Video DownloadHelper]及配套的app，然后在firefox中打开该链接，点击「Video DownloadHelper]，可以看到两个视频，长的那个就是目标视频，选择“copy URL”，得到如下链接：</p>
+<blockquote>
+<p><a href="https://tehlsvodhls02.vhallyun.com/vhallyun/vhallrecord/lss_27f054bb/20220724124221_a018e830/record.m3u8?token=2A75182F_MjE3MTIwOTg2XzYzRUI1N0Q2X1lUQXhPR1U0TXpBX2FtOXBibDgzTWpBeE9UUXdORElfdm9k" target="_blank" rel="noopener noreffer ">https://tehlsvodhls02.vhallyun.com/vhallyun/vhallrecord/lss_27f054bb/20220724124221_a018e830/record.m3u8?token=2A75182F_MjE3MTIwOTg2XzYzRUI1N0Q2X1lUQXhPR1U0TXpBX2FtOXBibDgzTWpBeE9UUXdORElfdm9k</a></p>
+</blockquote>
+<p>下载该文件：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">aria2c -c <span class="s1">&#39;https://tehlsvodhls02.vhallyun.com/vhallyun/vhallrecord/lss_27f054bb/20220724124221_a018e830/record.m3u8?token=2A75182F_MjE3MTIwOTg2XzYzRUI1N0Q2X1lUQXhPR1U0TXpBX2FtOXBibDgzTWpBeE9UUXdORElfdm9k&#39;</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>打开这个文件，可以看到里面是如下的格式：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-txt" data-lang="txt"><span class="line"><span class="cl">#EXTM3U
+</span></span><span class="line"><span class="cl">#EXT-X-VERSION:3
+</span></span><span class="line"><span class="cl">#EXT-X-TARGETDURATION:20
+</span></span><span class="line"><span class="cl">#EXT-X-MEDIA-SEQUENCE:0
+</span></span><span class="line"><span class="cl">#EXTINF:4.520000,
+</span></span><span class="line"><span class="cl">/vhallyun/vhallhls/ls/s_/27/lss_27f054bb/lss_27f054bb/20220724084900103860/livestream000007.ts
+</span></span><span class="line"><span class="cl">#EXTINF:4.200000,
+</span></span><span class="line"><span class="cl">/vhallyun/vhallhls/ls/s_/27/lss_27f054bb/lss_27f054bb/20220724084900103860/livestream000008.ts
+</span></span><span class="line"><span class="cl">#EXTINF:4.200000,
+</span></span><span class="line"><span class="cl">/vhallyun/vhallhls/ls/s_/27/lss_27f054bb/lss_27f054bb/20220724084900103860/livestream000009.ts
+</span></span><span class="line"><span class="cl">#EXTINF:4.240000,
+</span></span><span class="line"><span class="cl">/vhallyun/vhallhls/ls/s_/27/lss_27f054bb/lss_27f054bb/20220724084900103860/livestream000010.ts
+</span></span><span class="line"><span class="cl">#EXTINF:5.080000,
+</span></span><span class="line"><span class="cl">/vhallyun/vhallhls/ls/s_/27/lss_27f054bb/lss_27f054bb/20220724084900103860/livestream000011.ts
+</span></span><span class="line"><span class="cl">#EXTINF:5.880000,
+</span></span><span class="line"><span class="cl">/vhallyun/vhallhls/ls/s_/27/lss_27f054bb/lss_27f054bb/20220724084900103860/livestream000012.ts
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>表头信息可以忽略，我猜测<code>#EXTINF:4.520000</code>是每一个视频文件的长度，紧接的下一行是视频的路径，但是没有hostname。</p>
+<h2 id="下载ts文件">下载ts文件</h2>
+<p>观察一下m3u8文件的地址，前面一段是<code>https://tehlsvodhls02.vhallyun.com/vhallyun/</code>，所以我猜测hostname就是<code>https://tehlsvodhls02.vhallyun.com</code>，后面下载了一个ts文件，发现是正确的。</p>
+<p>下载的ts文件，转换成mp4文件:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">ffmpeg -i livestream002243.ts -acodec copy -vcodec copy -absf aac_adtstoasc livestream002243.mp4
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>从m3u8文件中得到ts文件名，并构造完整的url：</p>]]></description>
 </item>
 </channel>
 </rss>

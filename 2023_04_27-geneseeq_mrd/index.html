@@ -1,0 +1,756 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="robots" content="noodp" />
+        <title>邵阳对世和MRD的介绍 - MRD的技术创新与应用案例分享 - Entropy Decrease</title><meta name="Description" content="阅读、思考、写作，都是熵减的过程"><meta property="og:url" content="https://entropydecrease.github.io/2023_04_27-geneseeq_mrd/">
+  <meta property="og:site_name" content="Entropy Decrease">
+  <meta property="og:title" content="邵阳对世和MRD的介绍 - MRD的技术创新与应用案例分享">
+  <meta property="og:description" content="个人总结 对个体化panel与固定panel的优劣，做了全面而深入的分析 采用固定化的大panel来做MRD，克服了定制panel的一些问题，想的很细致，做得很坚定，效果也不错 复发病人阳性率似乎还是没有定制panel高 在复发风险预测方面，片段组学看起来效果比ctDNA突变要好 MRD检测的本质：在于判断患者是否治愈 MRD检测主要有两大技术策略 Tumor-informed assay -&gt; 个体化panel Tumor naive/agnostic assay -&gt; 固定化panel 如何评估MRD检测技术路线的优劣势对比 技术指标 核心点 个体化panel 固定化panel 1. 单一突变检测灵敏度：固定化 = 个体化 降噪技术、超高测序深度、克隆性造血、采血量 超高测序深度结合UMI技术提高单点检测灵敏度，无克隆性造血影响 超高深度测序结合多重技术提高单点检测灵敏度，存在一定的克隆性造血干扰 2. 监测突变数量：个体化&gt;固定化 监测的突变数量越多，灵敏度也会越高，多少数量足够？ 由方法学设定，常见的个体化panel监测MRD选择16个或更多的突变 固定panel：如世和泛实体瘤MRD panel，panel的设置至关重要 3. 检测突变质量：固定化 &gt; 个体化 监测的突变是否与肿瘤相关？是否是主克隆突变？能否在最短的时间内筛选出需检测的基因？ 先进行WES，再针对性设计基因检测的个体化panel，短时间内无法进行很好的筛选 预先选择与癌种相关的基因或可特异选择尽量多的主克隆基因变异病设计为固定panel 4. 检测过程质控：固定化&gt;个体化 NGS检测流程复杂，任何环节质控出现问题都会影响结果的可靠性、稳定性、准确(？)性 短周期内完成个体化探针的设计和临床检测，对追踪位点检测的质量控制带来了巨大挑战 固定化panel在临床推广前经过长周期严格的探针设计、流程优化和反复验证等工作，panel的性能相对稳定、可靠 5. 克服肿瘤时空异质性 肿瘤存在时空异质性，新发变异可能也与预后(?)相关 针对基线组织单次检测结果，无法克服时空异质性。 固定化panel检测范围更广，看一定程度上克服肿瘤时空异质性 ">
+  <meta property="og:locale" content="en">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2023-04-27T00:00:00+00:00">
+    <meta property="article:modified_time" content="2023-04-27T00:00:00+00:00">
+    <meta property="article:tag" content="MRD">
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="邵阳对世和MRD的介绍 - MRD的技术创新与应用案例分享">
+  <meta name="twitter:description" content="个人总结 对个体化panel与固定panel的优劣，做了全面而深入的分析 采用固定化的大panel来做MRD，克服了定制panel的一些问题，想的很细致，做得很坚定，效果也不错 复发病人阳性率似乎还是没有定制panel高 在复发风险预测方面，片段组学看起来效果比ctDNA突变要好 MRD检测的本质：在于判断患者是否治愈 MRD检测主要有两大技术策略 Tumor-informed assay -&gt; 个体化panel Tumor naive/agnostic assay -&gt; 固定化panel 如何评估MRD检测技术路线的优劣势对比 技术指标 核心点 个体化panel 固定化panel 1. 单一突变检测灵敏度：固定化 = 个体化 降噪技术、超高测序深度、克隆性造血、采血量 超高测序深度结合UMI技术提高单点检测灵敏度，无克隆性造血影响 超高深度测序结合多重技术提高单点检测灵敏度，存在一定的克隆性造血干扰 2. 监测突变数量：个体化&gt;固定化 监测的突变数量越多，灵敏度也会越高，多少数量足够？ 由方法学设定，常见的个体化panel监测MRD选择16个或更多的突变 固定panel：如世和泛实体瘤MRD panel，panel的设置至关重要 3. 检测突变质量：固定化 &gt; 个体化 监测的突变是否与肿瘤相关？是否是主克隆突变？能否在最短的时间内筛选出需检测的基因？ 先进行WES，再针对性设计基因检测的个体化panel，短时间内无法进行很好的筛选 预先选择与癌种相关的基因或可特异选择尽量多的主克隆基因变异病设计为固定panel 4. 检测过程质控：固定化&gt;个体化 NGS检测流程复杂，任何环节质控出现问题都会影响结果的可靠性、稳定性、准确(？)性 短周期内完成个体化探针的设计和临床检测，对追踪位点检测的质量控制带来了巨大挑战 固定化panel在临床推广前经过长周期严格的探针设计、流程优化和反复验证等工作，panel的性能相对稳定、可靠 5. 克服肿瘤时空异质性 肿瘤存在时空异质性，新发变异可能也与预后(?)相关 针对基线组织单次检测结果，无法克服时空异质性。 固定化panel检测范围更广，看一定程度上克服肿瘤时空异质性 ">
+<meta name="application-name" content="Entropy Decrease">
+<meta name="apple-mobile-web-app-title" content="Entropy Decrease"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="https://entropydecrease.github.io/2023_04_27-geneseeq_mrd/" /><link rel="prev" href="https://entropydecrease.github.io/2023_04_08-ont_basics/" /><link rel="next" href="https://entropydecrease.github.io/2023_04_28-cancer_early_diagnostics/" /><link rel="stylesheet" href="/css/style.min.css"><link rel="preload" href="/lib/fontawesome-free/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"></noscript><link rel="preload" href="/lib/animate/animate.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript><link rel="stylesheet" href="/lib/animate/animate.min.css"></noscript><script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "headline": "邵阳对世和MRD的介绍 - MRD的技术创新与应用案例分享",
+        "inLanguage": "en",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https:\/\/entropydecrease.github.io\/2023_04_27-geneseeq_mrd\/"
+        },"genre": "posts","keywords": "MRD","wordcount":  217 ,
+        "url": "https:\/\/entropydecrease.github.io\/2023_04_27-geneseeq_mrd\/","datePublished": "2023-04-27T00:00:00+00:00","dateModified": "2023-04-27T00:00:00+00:00","publisher": {
+            "@type": "Organization",
+            "name": ""},"author": {
+                "@type": "Person",
+                "name": "entropydecrease"
+            },"description": ""
+    }
+    </script></head>
+    <body data-header-desktop="fixed" data-header-mobile="auto"><script type="text/javascript">(window.localStorage && localStorage.getItem('theme') ? localStorage.getItem('theme') === 'dark' : ('auto' === 'auto' ? window.matchMedia('(prefers-color-scheme: dark)').matches : 'auto' === 'dark')) && document.body.setAttribute('theme', 'dark');</script>
+
+        <div id="mask"></div><div class="wrapper"><header class="desktop" id="header-desktop">
+    <div class="header-wrapper">
+        <div class="header-title">
+            <a href="/" title="Entropy Decrease">Entropy Decrease</a>
+        </div>
+        <div class="menu">
+            <div class="menu-inner"><a class="menu-item" href="/"> Home </a><a class="menu-item" href="/posts/"> Posts </a><a class="menu-item" href="/tags/"> Tags </a><a class="menu-item" href="/categories/"> Categories </a><a class="menu-item" href="/about"> About </a><span class="menu-item delimiter"></span><span class="menu-item search" id="search-desktop">
+                        <input type="text" placeholder="Search titles or contents..." id="search-input-desktop">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-desktop" title="Search">
+                            <i class="fas fa-search fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-desktop" title="Clear">
+                            <i class="fas fa-times-circle fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-desktop">
+                            <i class="fas fa-spinner fa-fw fa-spin" aria-hidden="true"></i>
+                        </span>
+                    </span><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
+                    <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
+                </a></div>
+        </div>
+    </div>
+</header><header class="mobile" id="header-mobile">
+    <div class="header-container">
+        <div class="header-wrapper">
+            <div class="header-title">
+                <a href="/" title="Entropy Decrease">Entropy Decrease</a>
+            </div>
+            <div class="menu-toggle" id="menu-toggle-mobile">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+        <div class="menu" id="menu-mobile"><div class="search-wrapper">
+                    <div class="search mobile" id="search-mobile">
+                        <input type="text" placeholder="Search titles or contents..." id="search-input-mobile">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-mobile" title="Search">
+                            <i class="fas fa-search fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-mobile" title="Clear">
+                            <i class="fas fa-times-circle fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-mobile">
+                            <i class="fas fa-spinner fa-fw fa-spin" aria-hidden="true"></i>
+                        </span>
+                    </div>
+                    <a href="javascript:void(0);" class="search-cancel" id="search-cancel-mobile">
+                        Cancel
+                    </a>
+                </div><a class="menu-item" href="/" title="">Home</a><a class="menu-item" href="/posts/" title="">Posts</a><a class="menu-item" href="/tags/" title="">Tags</a><a class="menu-item" href="/categories/" title="">Categories</a><a class="menu-item" href="/about" title="">About</a><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
+                <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
+            </a></div>
+    </div>
+</header><div class="search-dropdown desktop">
+        <div id="search-dropdown-desktop"></div>
+    </div>
+    <div class="search-dropdown mobile">
+        <div id="search-dropdown-mobile"></div>
+    </div><main class="main">
+                <div class="container"><div class="toc" id="toc-auto">
+            <h2 class="toc-title">Contents</h2>
+            <div class="toc-content" id="toc-content-auto"></div>
+        </div><article class="page single"><h1 class="single-title animate__animated animate__flipInX">邵阳对世和MRD的介绍 - MRD的技术创新与应用案例分享</h1><div class="post-meta">
+            <div class="post-meta-line"><span class="post-author"><a href="/" title="Author" rel="author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>entropydecrease</a></span>&nbsp;<span class="post-category">included in <a href="/categories/clinical/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>Clinical</a></span></div>
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw" aria-hidden="true"></i>&nbsp;<time datetime="2023-04-27">2023-04-27</time>&nbsp;<i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>&nbsp;217 words&nbsp;
+                <i class="far fa-clock fa-fw" aria-hidden="true"></i>&nbsp;2 minutes&nbsp;</div>
+        </div><div class="details toc" id="toc-static"  data-kept="">
+                <div class="details-summary toc-title">
+                    <span>Contents</span>
+                    <span><i class="details-icon fas fa-angle-right" aria-hidden="true"></i></span>
+                </div>
+                <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#个人总结">个人总结</a></li>
+        <li><a href="#mrd检测的本质在于判断患者是否治愈">MRD检测的本质：在于判断患者是否治愈</a></li>
+        <li><a href="#mrd检测主要有两大技术策略">MRD检测主要有两大技术策略</a></li>
+        <li><a href="#如何评估mrd检测技术路线的优劣势对比">如何评估MRD检测技术路线的优劣势对比</a></li>
+        <li><a href="#单一突变灵敏度取决于采血量和样本起始多样性">单一突变灵敏度：取决于采血量和样本起始多样性</a></li>
+        <li><a href="#监测突变数量个体化panel优于固定化panel">监测突变数量：个体化panel优于固定化panel</a></li>
+        <li><a href="#突变数量突变数量增多检测灵敏度提高但有平台期">突变数量：突变数量增多，检测灵敏度提高，但有平台期。</a></li>
+        <li><a href="#突变质量少数重要突变也具有mrd监测效果">突变质量：少数重要突变也具有MRD监测效果</a></li>
+        <li><a href="#突变质量-natera转战组织panel测序个性化mrd">突变质量： Natera转战组织panel测序个性化MRD</a></li>
+        <li><a href="#检测质控全流程质控与结果可信度密切相关">检测质控：全流程质控与结果可信度密切相关</a></li>
+        <li><a href="#质控关键一基因位点覆盖的均一性">质控关键一：基因/位点覆盖的均一性</a></li>
+        <li><a href="#质控关键二有效控制pcr随机错误的比例">质控关键二：有效控制PCR随机错误的比例</a></li>
+        <li><a href="#时空异质性克服固定化panel优于个体化panel">时空异质性克服：固定化panel优于个体化panel</a></li>
+        <li><a href="#个体化panel-vs-癌种固定化panel">个体化panel vs 癌种固定化panel</a></li>
+        <li><a href="#不同技术如何选择临床验证是检测技术验证的金标准">不同技术如何选择？临床验证是检测技术验证的金标准</a></li>
+        <li><a href="#世和mrd策略癌种定制化--atg-seq高灵敏技术">世和MRD策略：癌种定制化 + ATG-Seq高灵敏技术</a></li>
+        <li><a href="#检测性能提升多重机制降低克隆性造血突变等干扰">检测性能提升：多重机制降低克隆性造血突变等干扰</a></li>
+        <li><a href="#世和mrd-panel基于大样本中国人群数据库富集高频位点">世和MRD panel：基于大样本中国人群数据库富集高频位点</a></li>
+        <li><a href="#世和mrd-panel全面覆盖基因组2365基因1m">世和MRD panel：全面覆盖基因组2365基因(&gt;1M)</a></li>
+        <li><a href="#真实临床样本验证">真实临床样本验证</a></li>
+        <li><a href="#灵敏度验证95的样本lod可达002">灵敏度验证：95%的样本LoD可达0.02%</a></li>
+        <li><a href="#临床验证世和mrd多项大型临床研究获国际权威杂志认可">临床验证：世和MRD多项大型临床研究获国际权威杂志认可</a></li>
+        <li><a href="#世和mrd肠癌临床验证多中心肠癌术后动态检测项目">世和MRD肠癌临床验证：多中心肠癌术后动态检测项目</a></li>
+        <li><a href="#研究设计">研究设计</a></li>
+        <li><a href="#术后辅助治疗后或动态检测ctdna阳性患者复发风险高">术后、辅助治疗后或动态检测ctDNA阳性患者复发风险高</a></li>
+        <li><a href="#83复发的患者ctdna阳性平均提前影像学153天提升复发">83%复发的患者ctDNA阳性，平均提前影像学153天提升复发</a></li>
+        <li><a href="#世和mrd肺癌临床验证新成果揭示更优术后复发监测方案">世和MRD肺癌临床验证新成果：揭示更优术后复发监测方案</a></li>
+        <li><a href="#主克隆性突变对于复发风险可能更有预测价值">主克隆性突变对于复发风险可能更有预测价值</a></li>
+        <li><a href="#mrd检测媒介多种特征可以用于mrd监测">MRD检测媒介：多种特征可以用于MRD监测</a></li>
+        <li><a href="#mercury多组学技术用于肺癌术后复发风险预测">MERCURY多组学技术用于肺癌术后复发风险预测</a></li>
+        <li><a href="#片段组学可有效预测术后复发风险">片段组学可有效预测术后复发风险</a></li>
+        <li><a href="#片段组学模型预测复发风险性能优于ctdna突变">片段组学模型预测复发风险性能优于ctDNA突变</a></li>
+        <li><a href="#mrd前瞻性干预研究的设计思路">MRD前瞻性干预研究的设计思路</a></li>
+        <li><a href="#深度布局肿瘤全周期让精准与可及的肿瘤检测造福全球">深度布局肿瘤全周期，让精准与可及的肿瘤检测造福全球</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav></div>
+            </div><div class="content" id="content"><h3 id="个人总结">个人总结</h3>
+<ul>
+<li>对个体化panel与固定panel的优劣，做了全面而深入的分析</li>
+<li>采用固定化的大panel来做MRD，克服了定制panel的一些问题，想的很细致，做得很坚定，效果也不错</li>
+<li>复发病人阳性率似乎还是没有定制panel高</li>
+<li>在复发风险预测方面，片段组学看起来效果比ctDNA突变要好</li>
+</ul>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="/2023_04_27-geneseeq_mrd/resources/581682683182_.pic_hd.jpg"
+        data-srcset="/2023_04_27-geneseeq_mrd/resources/581682683182_.pic_hd.jpg, /2023_04_27-geneseeq_mrd/resources/581682683182_.pic_hd.jpg 1.5x, /2023_04_27-geneseeq_mrd/resources/581682683182_.pic_hd.jpg 2x"
+        data-sizes="auto"
+        alt="/2023_04_27-geneseeq_mrd/resources/581682683182_.pic_hd.jpg"
+        title="581682683182_.pic_hd" width="4096" height="3072" /></p>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="/2023_04_27-geneseeq_mrd/resources/591682683281_.pic_hd.jpg"
+        data-srcset="/2023_04_27-geneseeq_mrd/resources/591682683281_.pic_hd.jpg, /2023_04_27-geneseeq_mrd/resources/591682683281_.pic_hd.jpg 1.5x, /2023_04_27-geneseeq_mrd/resources/591682683281_.pic_hd.jpg 2x"
+        data-sizes="auto"
+        alt="/2023_04_27-geneseeq_mrd/resources/591682683281_.pic_hd.jpg"
+        title="591682683281_.pic_hd" width="4096" height="3072" /></p>
+<h3 id="mrd检测的本质在于判断患者是否治愈">MRD检测的本质：在于判断患者是否治愈</h3>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="/2023_04_27-geneseeq_mrd/resources/601682683316_.pic_hd.jpg"
+        data-srcset="/2023_04_27-geneseeq_mrd/resources/601682683316_.pic_hd.jpg, /2023_04_27-geneseeq_mrd/resources/601682683316_.pic_hd.jpg 1.5x, /2023_04_27-geneseeq_mrd/resources/601682683316_.pic_hd.jpg 2x"
+        data-sizes="auto"
+        alt="/2023_04_27-geneseeq_mrd/resources/601682683316_.pic_hd.jpg"
+        title="601682683316_.pic_hd" width="4096" height="3072" /></p>
+<h3 id="mrd检测主要有两大技术策略">MRD检测主要有两大技术策略</h3>
+<ul>
+<li>Tumor-informed assay -&gt; 个体化panel</li>
+<li>Tumor naive/agnostic assay -&gt; 固定化panel</li>
+</ul>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="/2023_04_27-geneseeq_mrd/resources/611682683356_.pic_hd.jpg"
+        data-srcset="/2023_04_27-geneseeq_mrd/resources/611682683356_.pic_hd.jpg, /2023_04_27-geneseeq_mrd/resources/611682683356_.pic_hd.jpg 1.5x, /2023_04_27-geneseeq_mrd/resources/611682683356_.pic_hd.jpg 2x"
+        data-sizes="auto"
+        alt="/2023_04_27-geneseeq_mrd/resources/611682683356_.pic_hd.jpg"
+        title="611682683356_.pic_hd" width="4096" height="3072" /></p>
+<h3 id="如何评估mrd检测技术路线的优劣势对比">如何评估MRD检测技术路线的优劣势对比</h3>
+<table>
+  <thead>
+      <tr>
+          <th style="text-align: left">技术指标</th>
+          <th style="text-align: left">核心点</th>
+          <th style="text-align: left">个体化panel</th>
+          <th style="text-align: left">固定化panel</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td style="text-align: left">1. 单一突变检测灵敏度：固定化 = 个体化</td>
+          <td style="text-align: left">降噪技术、超高测序深度、克隆性造血、采血量</td>
+          <td style="text-align: left">超高测序深度结合UMI技术提高单点检测灵敏度，无克隆性造血影响</td>
+          <td style="text-align: left">超高深度测序结合多重技术提高单点检测灵敏度，存在一定的克隆性造血干扰</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">2. 监测突变数量：个体化&gt;固定化</td>
+          <td style="text-align: left">监测的突变数量越多，灵敏度也会越高，多少数量足够？</td>
+          <td style="text-align: left">由方法学设定，常见的个体化panel监测MRD选择16个或更多的突变</td>
+          <td style="text-align: left">固定panel：如世和泛实体瘤MRD panel，panel的设置至关重要</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">3. 检测突变质量：固定化 &gt; 个体化</td>
+          <td style="text-align: left">监测的突变是否与肿瘤相关？是否是主克隆突变？能否在最短的时间内筛选出需检测的基因？</td>
+          <td style="text-align: left">先进行WES，再针对性设计基因检测的个体化panel，短时间内无法进行很好的筛选</td>
+          <td style="text-align: left">预先选择与癌种相关的基因或可特异选择尽量多的主克隆基因变异病设计为固定panel</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">4. 检测过程质控：固定化&gt;个体化</td>
+          <td style="text-align: left">NGS检测流程复杂，任何环节质控出现问题都会影响结果的可靠性、稳定性、准确(？)性</td>
+          <td style="text-align: left">短周期内完成个体化探针的设计和临床检测，对追踪位点检测的质量控制带来了巨大挑战</td>
+          <td style="text-align: left">固定化panel在临床推广前经过长周期严格的探针设计、流程优化和反复验证等工作，panel的性能相对稳定、可靠</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">5. 克服肿瘤时空异质性</td>
+          <td style="text-align: left">肿瘤存在时空异质性，新发变异可能也与预后(?)相关</td>
+          <td style="text-align: left">针对基线组织单次检测结果，无法克服时空异质性。</td>
+          <td style="text-align: left">固定化panel检测范围更广，看一定程度上克服肿瘤时空异质性</td>
+      </tr>
+  </tbody>
+</table>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="/2023_04_27-geneseeq_mrd/resources/621682683398_.pic_hd.jpg"
+        data-srcset="/2023_04_27-geneseeq_mrd/resources/621682683398_.pic_hd.jpg, /2023_04_27-geneseeq_mrd/resources/621682683398_.pic_hd.jpg 1.5x, /2023_04_27-geneseeq_mrd/resources/621682683398_.pic_hd.jpg 2x"
+        data-sizes="auto"
+        alt="/2023_04_27-geneseeq_mrd/resources/621682683398_.pic_hd.jpg"
+        title="621682683398_.pic_hd" width="4096" height="3072" /></p>
+<h3 id="单一突变灵敏度取决于采血量和样本起始多样性">单一突变灵敏度：取决于采血量和样本起始多样性</h3>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="/2023_04_27-geneseeq_mrd/resources/631682683485_.pic_hd.jpg"
+        data-srcset="/2023_04_27-geneseeq_mrd/resources/631682683485_.pic_hd.jpg, /2023_04_27-geneseeq_mrd/resources/631682683485_.pic_hd.jpg 1.5x, /2023_04_27-geneseeq_mrd/resources/631682683485_.pic_hd.jpg 2x"
+        data-sizes="auto"
+        alt="/2023_04_27-geneseeq_mrd/resources/631682683485_.pic_hd.jpg"
+        title="631682683485_.pic_hd" width="4096" height="3072" /></p>
+<h3 id="监测突变数量个体化panel优于固定化panel">监测突变数量：个体化panel优于固定化panel</h3>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="/2023_04_27-geneseeq_mrd/resources/641682683598_.pic_hd.jpg"
+        data-srcset="/2023_04_27-geneseeq_mrd/resources/641682683598_.pic_hd.jpg, /2023_04_27-geneseeq_mrd/resources/641682683598_.pic_hd.jpg 1.5x, /2023_04_27-geneseeq_mrd/resources/641682683598_.pic_hd.jpg 2x"
+        data-sizes="auto"
+        alt="/2023_04_27-geneseeq_mrd/resources/641682683598_.pic_hd.jpg"
+        title="641682683598_.pic_hd" width="4096" height="3072" /></p>
+<h3 id="突变数量突变数量增多检测灵敏度提高但有平台期">突变数量：突变数量增多，检测灵敏度提高，但有平台期。</h3>
+<p>理论LoD计算规则：</p>
+<ul>
+<li>假设每个位点的有效测序深度为10000x</li>
+<li>按照3条去dup后突变reads判断为阳性</li>
+<li>根据二项分布去计算单个位点突变的LoD</li>
+<li>进一步根据单位点突变LoD计算多位点LoD</li>
+</ul>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="/2023_04_27-geneseeq_mrd/resources/651682683616_.pic_hd.jpg"
+        data-srcset="/2023_04_27-geneseeq_mrd/resources/651682683616_.pic_hd.jpg, /2023_04_27-geneseeq_mrd/resources/651682683616_.pic_hd.jpg 1.5x, /2023_04_27-geneseeq_mrd/resources/651682683616_.pic_hd.jpg 2x"
+        data-sizes="auto"
+        alt="/2023_04_27-geneseeq_mrd/resources/651682683616_.pic_hd.jpg"
+        title="651682683616_.pic_hd" width="4096" height="3072" /></p>
+<p>监测突变数量达到10个左右，灵敏度进入平台期。进一步增加突变数量，灵敏度提升效果微乎其微。</p>
+<p>(按：此处与Natera的研究不一致，Natera认为16个突变是必须的，突变数目超过16个之后，对性能提升有限)</p>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="/2023_04_27-geneseeq_mrd/resources/661682683644_.pic_hd.jpg"
+        data-srcset="/2023_04_27-geneseeq_mrd/resources/661682683644_.pic_hd.jpg, /2023_04_27-geneseeq_mrd/resources/661682683644_.pic_hd.jpg 1.5x, /2023_04_27-geneseeq_mrd/resources/661682683644_.pic_hd.jpg 2x"
+        data-sizes="auto"
+        alt="/2023_04_27-geneseeq_mrd/resources/661682683644_.pic_hd.jpg"
+        title="661682683644_.pic_hd" width="4096" height="3072" /></p>
+<h3 id="突变质量少数重要突变也具有mrd监测效果">突变质量：少数重要突变也具有MRD监测效果</h3>
+<p>某研究只关注15个重要的驱动基因</p>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="/2023_04_27-geneseeq_mrd/resources/671682683664_.pic_hd.jpg"
+        data-srcset="/2023_04_27-geneseeq_mrd/resources/671682683664_.pic_hd.jpg, /2023_04_27-geneseeq_mrd/resources/671682683664_.pic_hd.jpg 1.5x, /2023_04_27-geneseeq_mrd/resources/671682683664_.pic_hd.jpg 2x"
+        data-sizes="auto"
+        alt="/2023_04_27-geneseeq_mrd/resources/671682683664_.pic_hd.jpg"
+        title="671682683664_.pic_hd" width="4096" height="3072" /></p>
+<h3 id="突变质量-natera转战组织panel测序个性化mrd">突变质量： Natera转战组织panel测序个性化MRD</h3>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="/2023_04_27-geneseeq_mrd/resources/681682683789_.pic_hd.jpg"
+        data-srcset="/2023_04_27-geneseeq_mrd/resources/681682683789_.pic_hd.jpg, /2023_04_27-geneseeq_mrd/resources/681682683789_.pic_hd.jpg 1.5x, /2023_04_27-geneseeq_mrd/resources/681682683789_.pic_hd.jpg 2x"
+        data-sizes="auto"
+        alt="/2023_04_27-geneseeq_mrd/resources/681682683789_.pic_hd.jpg"
+        title="681682683789_.pic_hd" width="4096" height="3072" /></p>
+<h3 id="检测质控全流程质控与结果可信度密切相关">检测质控：全流程质控与结果可信度密切相关</h3>
+<ul>
+<li>固定化panel，18-36周的研发周期，保证检测质量
+<ul>
+<li>探针合成：2周</li>
+<li>探针用量及最适条件确认：4-8周</li>
+<li>性能确认（精密度、LoD、准确性）：12-24周 （按：这里24周似乎太长）</li>
+<li>临床应用：1周</li>
+</ul>
+</li>
+<li>个体化panel：研发检测周期短，无法保证检测质量</li>
+</ul>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="/2023_04_27-geneseeq_mrd/resources/691682683857_.pic_hd.jpg"
+        data-srcset="/2023_04_27-geneseeq_mrd/resources/691682683857_.pic_hd.jpg, /2023_04_27-geneseeq_mrd/resources/691682683857_.pic_hd.jpg 1.5x, /2023_04_27-geneseeq_mrd/resources/691682683857_.pic_hd.jpg 2x"
+        data-sizes="auto"
+        alt="/2023_04_27-geneseeq_mrd/resources/691682683857_.pic_hd.jpg"
+        title="691682683857_.pic_hd" width="4096" height="3072" /></p>
+<h3 id="质控关键一基因位点覆盖的均一性">质控关键一：基因/位点覆盖的均一性</h3>
+<ul>
+<li>固定化panel探针均一度可控
+<ul>
+<li>每个区域多探针密集覆盖</li>
+<li>每条探针单独合成及质控</li>
+<li>探针库反复优化，不同区域探针比例反复优化 （按：似乎有点夸张，不同区域探针比例很难**<u>反复</u>**优化）</li>
+<li>性能验证（精密度、LoD、准确性）</li>
+</ul>
+</li>
+<li>个性化panel引物均一度不可控
+<ul>
+<li>引物设计影响因素繁杂：引物长度、GC含量、自由能、特异性等等</li>
+<li>个性化panel位点明确，引物设计空间有限，引物最终效能无法保证</li>
+<li>不同因为扩增效率存在差异，引物间配比缺乏优化，缺乏性能验证评估</li>
+</ul>
+</li>
+</ul>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="/2023_04_27-geneseeq_mrd/resources/701682683889_.pic_hd.jpg"
+        data-srcset="/2023_04_27-geneseeq_mrd/resources/701682683889_.pic_hd.jpg, /2023_04_27-geneseeq_mrd/resources/701682683889_.pic_hd.jpg 1.5x, /2023_04_27-geneseeq_mrd/resources/701682683889_.pic_hd.jpg 2x"
+        data-sizes="auto"
+        alt="/2023_04_27-geneseeq_mrd/resources/701682683889_.pic_hd.jpg"
+        title="701682683889_.pic_hd" width="4096" height="3072" /></p>
+<h3 id="质控关键二有效控制pcr随机错误的比例">质控关键二：有效控制PCR随机错误的比例</h3>
+<ul>
+<li>固定化panel流程及QC
+<ul>
+<li>样本接收</li>
+<li>核酸提取</li>
+<li>文库构建（~8 cycles PCR）</li>
+<li>文库富集（~4 cycles PCR）</li>
+<li>上机测序（约30000x（？），有效深度6000-8000x）</li>
+</ul>
+</li>
+<li>个性化panel流程及QC
+<ul>
+<li>样本接收</li>
+<li>核酸提取</li>
+<li>文库构建（~11 cycles PCR）</li>
+<li>巢式富集（双链各19 cycles PCR）</li>
+<li>上机测序（~100000x，有效约6000-8000x（？））</li>
+</ul>
+</li>
+</ul>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="/2023_04_27-geneseeq_mrd/resources/711682683915_.pic_hd.jpg"
+        data-srcset="/2023_04_27-geneseeq_mrd/resources/711682683915_.pic_hd.jpg, /2023_04_27-geneseeq_mrd/resources/711682683915_.pic_hd.jpg 1.5x, /2023_04_27-geneseeq_mrd/resources/711682683915_.pic_hd.jpg 2x"
+        data-sizes="auto"
+        alt="/2023_04_27-geneseeq_mrd/resources/711682683915_.pic_hd.jpg"
+        title="711682683915_.pic_hd" width="4096" height="3072" /></p>
+<h3 id="时空异质性克服固定化panel优于个体化panel">时空异质性克服：固定化panel优于个体化panel</h3>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="/2023_04_27-geneseeq_mrd/resources/731682684048_.pic_hd.jpg"
+        data-srcset="/2023_04_27-geneseeq_mrd/resources/731682684048_.pic_hd.jpg, /2023_04_27-geneseeq_mrd/resources/731682684048_.pic_hd.jpg 1.5x, /2023_04_27-geneseeq_mrd/resources/731682684048_.pic_hd.jpg 2x"
+        data-sizes="auto"
+        alt="/2023_04_27-geneseeq_mrd/resources/731682684048_.pic_hd.jpg"
+        title="731682684048_.pic_hd" width="4096" height="3072" /></p>
+<h3 id="个体化panel-vs-癌种固定化panel">个体化panel vs 癌种固定化panel</h3>
+<table>
+  <thead>
+      <tr>
+          <th style="text-align: left">技术指标</th>
+          <th style="text-align: center">个体化panel技术</th>
+          <th style="text-align: center">癌种固定化panel技术</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td style="text-align: left">灵敏度</td>
+          <td style="text-align: center">$\Delta \Delta \Delta$</td>
+          <td style="text-align: center">$\Delta \Delta \Delta$</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">特异性</td>
+          <td style="text-align: center">$\Delta \Delta \Delta$</td>
+          <td style="text-align: center">$\Delta \Delta$</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">稳定性/质量控制</td>
+          <td style="text-align: center">$\Delta$</td>
+          <td style="text-align: center">$\Delta \Delta \Delta$</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">检测周期</td>
+          <td style="text-align: center">$\Delta$</td>
+          <td style="text-align: center">$\Delta \Delta \Delta$</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">空间异质性</td>
+          <td style="text-align: center">$\times$</td>
+          <td style="text-align: center">$\surd$</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">时间异质性</td>
+          <td style="text-align: center">$\times$</td>
+          <td style="text-align: center">$\surd$</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">用药指导/科研意义</td>
+          <td style="text-align: center">$\times$</td>
+          <td style="text-align: center">$\surd$</td>
+      </tr>
+  </tbody>
+</table>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="/2023_04_27-geneseeq_mrd/resources/741682684299_.pic_hd.jpg"
+        data-srcset="/2023_04_27-geneseeq_mrd/resources/741682684299_.pic_hd.jpg, /2023_04_27-geneseeq_mrd/resources/741682684299_.pic_hd.jpg 1.5x, /2023_04_27-geneseeq_mrd/resources/741682684299_.pic_hd.jpg 2x"
+        data-sizes="auto"
+        alt="/2023_04_27-geneseeq_mrd/resources/741682684299_.pic_hd.jpg"
+        title="741682684299_.pic_hd" width="4096" height="3072" /></p>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="/2023_04_27-geneseeq_mrd/resources/751682684330_.pic_hd.jpg"
+        data-srcset="/2023_04_27-geneseeq_mrd/resources/751682684330_.pic_hd.jpg, /2023_04_27-geneseeq_mrd/resources/751682684330_.pic_hd.jpg 1.5x, /2023_04_27-geneseeq_mrd/resources/751682684330_.pic_hd.jpg 2x"
+        data-sizes="auto"
+        alt="/2023_04_27-geneseeq_mrd/resources/751682684330_.pic_hd.jpg"
+        title="751682684330_.pic_hd" width="4096" height="3072" /></p>
+<h3 id="不同技术如何选择临床验证是检测技术验证的金标准">不同技术如何选择？临床验证是检测技术验证的金标准</h3>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="/2023_04_27-geneseeq_mrd/resources/image-20230428234901411.png"
+        data-srcset="/2023_04_27-geneseeq_mrd/resources/image-20230428234901411.png, /2023_04_27-geneseeq_mrd/resources/image-20230428234901411.png 1.5x, /2023_04_27-geneseeq_mrd/resources/image-20230428234901411.png 2x"
+        data-sizes="auto"
+        alt="/2023_04_27-geneseeq_mrd/resources/image-20230428234901411.png"
+        title="image-20230428234901411" width="1706" height="1280" /></p>
+<h3 id="世和mrd策略癌种定制化--atg-seq高灵敏技术">世和MRD策略：癌种定制化 + ATG-Seq高灵敏技术</h3>
+<ul>
+<li>
+<p>定制化</p>
+<ul>
+<li>
+<p>ctDNA定制化热点突变追踪panel</p>
+<ul>
+<li>针对不同癌种中国人群数据定制热点追踪</li>
+</ul>
+</li>
+<li>
+<p>超高灵敏度： ATG-Seq超高灵敏度检测技术（ATG-Seq三重降噪技术，结合30000x测序深度）</p>
+<ul>
+<li>
+<p>ATG-Seq技术(Automated Triple Groom Sequencing) 降低背景噪音</p>
+<ul>
+<li>BISC技术噪音抛光</li>
+<li>BBAM标签去除PCR随机错误</li>
+<li>DDAM标签还原双链，去除单链损伤错误</li>
+</ul>
+</li>
+<li>
+<p>30000x超高深度</p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="/2023_04_27-geneseeq_mrd/resources/image-20230428235035750.png"
+        data-srcset="/2023_04_27-geneseeq_mrd/resources/image-20230428235035750.png, /2023_04_27-geneseeq_mrd/resources/image-20230428235035750.png 1.5x, /2023_04_27-geneseeq_mrd/resources/image-20230428235035750.png 2x"
+        data-sizes="auto"
+        alt="/2023_04_27-geneseeq_mrd/resources/image-20230428235035750.png"
+        title="image-20230428235035750" width="1706" height="1280" /></p>
+<h3 id="检测性能提升多重机制降低克隆性造血突变等干扰">检测性能提升：多重机制降低克隆性造血突变等干扰</h3>
+<p>去除克隆性造血影响的方法：</p>
+<ul>
+<li>WBC对照</li>
+<li>基线组织数据</li>
+<li>世和基因自建中国人群CH突变库</li>
+<li>多次检测，综合评估</li>
+<li>患者年龄辅助判断</li>
+</ul>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="/2023_04_27-geneseeq_mrd/resources/image-20230428235416883.png"
+        data-srcset="/2023_04_27-geneseeq_mrd/resources/image-20230428235416883.png, /2023_04_27-geneseeq_mrd/resources/image-20230428235416883.png 1.5x, /2023_04_27-geneseeq_mrd/resources/image-20230428235416883.png 2x"
+        data-sizes="auto"
+        alt="/2023_04_27-geneseeq_mrd/resources/image-20230428235416883.png"
+        title="image-20230428235416883" width="1706" height="1280" /></p>
+<h3 id="世和mrd-panel基于大样本中国人群数据库富集高频位点">世和MRD panel：基于大样本中国人群数据库富集高频位点</h3>
+<ul>
+<li>超万例WES数据库建设
+<ul>
+<li>世和临床WES数据</li>
+<li>世和科研WES数据</li>
+<li>公告数据库</li>
+</ul>
+</li>
+<li>主克隆突变筛选
+<ol>
+<li>生信利用FACETS分析WES测序突变结果</li>
+<li>获得CCF（Cancer Cell Fraction），根据CCF&gt;0.8选择主克隆突变</li>
+<li>主克隆突变频率从搞到地排序，选择最高频突变位点纳入</li>
+</ol>
+</li>
+</ul>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="/2023_04_27-geneseeq_mrd/resources/791682684677_.pic_hd.jpg"
+        data-srcset="/2023_04_27-geneseeq_mrd/resources/791682684677_.pic_hd.jpg, /2023_04_27-geneseeq_mrd/resources/791682684677_.pic_hd.jpg 1.5x, /2023_04_27-geneseeq_mrd/resources/791682684677_.pic_hd.jpg 2x"
+        data-sizes="auto"
+        alt="/2023_04_27-geneseeq_mrd/resources/791682684677_.pic_hd.jpg"
+        title="791682684677_.pic_hd" width="4096" height="3072" /></p>
+<h3 id="世和mrd-panel全面覆盖基因组2365基因1m">世和MRD panel：全面覆盖基因组2365基因(&gt;1M)</h3>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="/2023_04_27-geneseeq_mrd/resources/image-20230429000352085.png"
+        data-srcset="/2023_04_27-geneseeq_mrd/resources/image-20230429000352085.png, /2023_04_27-geneseeq_mrd/resources/image-20230429000352085.png 1.5x, /2023_04_27-geneseeq_mrd/resources/image-20230429000352085.png 2x"
+        data-sizes="auto"
+        alt="/2023_04_27-geneseeq_mrd/resources/image-20230429000352085.png"
+        title="image-20230429000352085" width="1706" height="1280" /></p>
+<h3 id="真实临床样本验证">真实临床样本验证</h3>
+<ul>
+<li>中位17突变/患者</li>
+<li>95%人群覆盖&gt;=5个突变</li>
+<li>77%患者覆盖&gt;=10个突变</li>
+</ul>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="/2023_04_27-geneseeq_mrd/resources/image-20230429000509892.png"
+        data-srcset="/2023_04_27-geneseeq_mrd/resources/image-20230429000509892.png, /2023_04_27-geneseeq_mrd/resources/image-20230429000509892.png 1.5x, /2023_04_27-geneseeq_mrd/resources/image-20230429000509892.png 2x"
+        data-sizes="auto"
+        alt="/2023_04_27-geneseeq_mrd/resources/image-20230429000509892.png"
+        title="image-20230429000509892" width="1706" height="1280" /></p>
+<h3 id="灵敏度验证95的样本lod可达002">灵敏度验证：95%的样本LoD可达0.02%</h3>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="/2023_04_27-geneseeq_mrd/resources/image-20230429000703198.png"
+        data-srcset="/2023_04_27-geneseeq_mrd/resources/image-20230429000703198.png, /2023_04_27-geneseeq_mrd/resources/image-20230429000703198.png 1.5x, /2023_04_27-geneseeq_mrd/resources/image-20230429000703198.png 2x"
+        data-sizes="auto"
+        alt="/2023_04_27-geneseeq_mrd/resources/image-20230429000703198.png"
+        title="image-20230429000703198" width="1706" height="1280" /></p>
+<h3 id="临床验证世和mrd多项大型临床研究获国际权威杂志认可">临床验证：世和MRD多项大型临床研究获国际权威杂志认可</h3>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="/2023_04_27-geneseeq_mrd/resources/image-20230429000748007.png"
+        data-srcset="/2023_04_27-geneseeq_mrd/resources/image-20230429000748007.png, /2023_04_27-geneseeq_mrd/resources/image-20230429000748007.png 1.5x, /2023_04_27-geneseeq_mrd/resources/image-20230429000748007.png 2x"
+        data-sizes="auto"
+        alt="/2023_04_27-geneseeq_mrd/resources/image-20230429000748007.png"
+        title="image-20230429000748007" width="1706" height="1280" /></p>
+<h3 id="世和mrd肠癌临床验证多中心肠癌术后动态检测项目">世和MRD肠癌临床验证：多中心肠癌术后动态检测项目</h3>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="/2023_04_27-geneseeq_mrd/resources/image-20230429000823376.png"
+        data-srcset="/2023_04_27-geneseeq_mrd/resources/image-20230429000823376.png, /2023_04_27-geneseeq_mrd/resources/image-20230429000823376.png 1.5x, /2023_04_27-geneseeq_mrd/resources/image-20230429000823376.png 2x"
+        data-sizes="auto"
+        alt="/2023_04_27-geneseeq_mrd/resources/image-20230429000823376.png"
+        title="image-20230429000823376" width="1706" height="1280" /></p>
+<h3 id="研究设计">研究设计</h3>
+<p>时间点</p>
+<ul>
+<li>术前，外周血</li>
+<li>术后3-7天</li>
+<li>术后6个月</li>
+<li>术后9、12、15、18、21、24个月</li>
+</ul>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="/2023_04_27-geneseeq_mrd/resources/image-20230429000902077.png"
+        data-srcset="/2023_04_27-geneseeq_mrd/resources/image-20230429000902077.png, /2023_04_27-geneseeq_mrd/resources/image-20230429000902077.png 1.5x, /2023_04_27-geneseeq_mrd/resources/image-20230429000902077.png 2x"
+        data-sizes="auto"
+        alt="/2023_04_27-geneseeq_mrd/resources/image-20230429000902077.png"
+        title="image-20230429000902077" width="1706" height="1280" /></p>
+<h3 id="术后辅助治疗后或动态检测ctdna阳性患者复发风险高">术后、辅助治疗后或动态检测ctDNA阳性患者复发风险高</h3>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="/2023_04_27-geneseeq_mrd/resources/image-20230429001113449.png"
+        data-srcset="/2023_04_27-geneseeq_mrd/resources/image-20230429001113449.png, /2023_04_27-geneseeq_mrd/resources/image-20230429001113449.png 1.5x, /2023_04_27-geneseeq_mrd/resources/image-20230429001113449.png 2x"
+        data-sizes="auto"
+        alt="/2023_04_27-geneseeq_mrd/resources/image-20230429001113449.png"
+        title="image-20230429001113449" width="1706" height="1280" /></p>
+<h3 id="83复发的患者ctdna阳性平均提前影像学153天提升复发">83%复发的患者ctDNA阳性，平均提前影像学153天提升复发</h3>
+<p>（按：复发的患者，只有83%的患者ctDNA阳性，还有17%的假阴性，够好吗？）</p>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="/2023_04_27-geneseeq_mrd/resources/image-20230429001340144.png"
+        data-srcset="/2023_04_27-geneseeq_mrd/resources/image-20230429001340144.png, /2023_04_27-geneseeq_mrd/resources/image-20230429001340144.png 1.5x, /2023_04_27-geneseeq_mrd/resources/image-20230429001340144.png 2x"
+        data-sizes="auto"
+        alt="/2023_04_27-geneseeq_mrd/resources/image-20230429001340144.png"
+        title="image-20230429001340144" width="1706" height="1280" /></p>
+<h3 id="世和mrd肺癌临床验证新成果揭示更优术后复发监测方案">世和MRD肺癌临床验证新成果：揭示更优术后复发监测方案</h3>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="/2023_04_27-geneseeq_mrd/resources/image-20230429001445754.png"
+        data-srcset="/2023_04_27-geneseeq_mrd/resources/image-20230429001445754.png, /2023_04_27-geneseeq_mrd/resources/image-20230429001445754.png 1.5x, /2023_04_27-geneseeq_mrd/resources/image-20230429001445754.png 2x"
+        data-sizes="auto"
+        alt="/2023_04_27-geneseeq_mrd/resources/image-20230429001445754.png"
+        title="image-20230429001445754" width="1706" height="1280" /></p>
+<h3 id="主克隆性突变对于复发风险可能更有预测价值">主克隆性突变对于复发风险可能更有预测价值</h3>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="/2023_04_27-geneseeq_mrd/resources/image-20230429001845804.png"
+        data-srcset="/2023_04_27-geneseeq_mrd/resources/image-20230429001845804.png, /2023_04_27-geneseeq_mrd/resources/image-20230429001845804.png 1.5x, /2023_04_27-geneseeq_mrd/resources/image-20230429001845804.png 2x"
+        data-sizes="auto"
+        alt="/2023_04_27-geneseeq_mrd/resources/image-20230429001845804.png"
+        title="image-20230429001845804" width="1706" height="1280" /></p>
+<h3 id="mrd检测媒介多种特征可以用于mrd监测">MRD检测媒介：多种特征可以用于MRD监测</h3>
+<ul>
+<li>ctDNA突变检测</li>
+<li>甲基化检测</li>
+<li>CNV检测</li>
+<li>cfDNA片段大小检测：<strong>片段组学可为MRD提供更为丰富的xx特征</strong></li>
+<li>Motif检测</li>
+</ul>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="/2023_04_27-geneseeq_mrd/resources/901682684722_.pic_hd.jpg"
+        data-srcset="/2023_04_27-geneseeq_mrd/resources/901682684722_.pic_hd.jpg, /2023_04_27-geneseeq_mrd/resources/901682684722_.pic_hd.jpg 1.5x, /2023_04_27-geneseeq_mrd/resources/901682684722_.pic_hd.jpg 2x"
+        data-sizes="auto"
+        alt="/2023_04_27-geneseeq_mrd/resources/901682684722_.pic_hd.jpg"
+        title="901682684722_.pic_hd" width="4096" height="3072" /></p>
+<h3 id="mercury多组学技术用于肺癌术后复发风险预测">MERCURY多组学技术用于肺癌术后复发风险预测</h3>
+<p><strong>相比传统突变方法，片段组学预测复发风险具有更高的敏感性</strong></p>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="/2023_04_27-geneseeq_mrd/resources/911682684726_.pic_hd.jpg"
+        data-srcset="/2023_04_27-geneseeq_mrd/resources/911682684726_.pic_hd.jpg, /2023_04_27-geneseeq_mrd/resources/911682684726_.pic_hd.jpg 1.5x, /2023_04_27-geneseeq_mrd/resources/911682684726_.pic_hd.jpg 2x"
+        data-sizes="auto"
+        alt="/2023_04_27-geneseeq_mrd/resources/911682684726_.pic_hd.jpg"
+        title="911682684726_.pic_hd" width="4096" height="3072" /></p>
+<h3 id="片段组学可有效预测术后复发风险">片段组学可有效预测术后复发风险</h3>
+<p>使用术后7天和术后6个月的<strong>cfDNA片段大小比值(Fragment Size Ratio, FSR)</strong></p>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="/2023_04_27-geneseeq_mrd/resources/image-20230429002229174.png"
+        data-srcset="/2023_04_27-geneseeq_mrd/resources/image-20230429002229174.png, /2023_04_27-geneseeq_mrd/resources/image-20230429002229174.png 1.5x, /2023_04_27-geneseeq_mrd/resources/image-20230429002229174.png 2x"
+        data-sizes="auto"
+        alt="/2023_04_27-geneseeq_mrd/resources/image-20230429002229174.png"
+        title="image-20230429002229174" width="1706" height="1280" /></p>
+<h3 id="片段组学模型预测复发风险性能优于ctdna突变">片段组学模型预测复发风险性能优于ctDNA突变</h3>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="/2023_04_27-geneseeq_mrd/resources/image-20230429002403244.png"
+        data-srcset="/2023_04_27-geneseeq_mrd/resources/image-20230429002403244.png, /2023_04_27-geneseeq_mrd/resources/image-20230429002403244.png 1.5x, /2023_04_27-geneseeq_mrd/resources/image-20230429002403244.png 2x"
+        data-sizes="auto"
+        alt="/2023_04_27-geneseeq_mrd/resources/image-20230429002403244.png"
+        title="image-20230429002403244" width="1706" height="1280" /></p>
+<h3 id="mrd前瞻性干预研究的设计思路">MRD前瞻性干预研究的设计思路</h3>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="/2023_04_27-geneseeq_mrd/resources/image-20230429002521439.png"
+        data-srcset="/2023_04_27-geneseeq_mrd/resources/image-20230429002521439.png, /2023_04_27-geneseeq_mrd/resources/image-20230429002521439.png 1.5x, /2023_04_27-geneseeq_mrd/resources/image-20230429002521439.png 2x"
+        data-sizes="auto"
+        alt="/2023_04_27-geneseeq_mrd/resources/image-20230429002521439.png"
+        title="image-20230429002521439" width="1706" height="1280" /></p>
+<h3 id="深度布局肿瘤全周期让精准与可及的肿瘤检测造福全球">深度布局肿瘤全周期，让精准与可及的肿瘤检测造福全球</h3>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="/2023_04_27-geneseeq_mrd/resources/image-20230429002650580.png"
+        data-srcset="/2023_04_27-geneseeq_mrd/resources/image-20230429002650580.png, /2023_04_27-geneseeq_mrd/resources/image-20230429002650580.png 1.5x, /2023_04_27-geneseeq_mrd/resources/image-20230429002650580.png 2x"
+        data-sizes="auto"
+        alt="/2023_04_27-geneseeq_mrd/resources/image-20230429002650580.png"
+        title="image-20230429002650580" width="1706" height="1280" /></p>
+</div><div class="post-footer" id="post-footer">
+    <div class="post-info">
+        <div class="post-info-line">
+            <div class="post-info-mod">
+                <span>Updated on 2023-04-27</span>
+            </div></div>
+        <div class="post-info-line">
+            <div class="post-info-md"></div>
+            <div class="post-info-share">
+                <span><a href="javascript:void(0);" title="Share on Twitter" data-sharer="twitter" data-url="https://entropydecrease.github.io/2023_04_27-geneseeq_mrd/" data-title="邵阳对世和MRD的介绍 - MRD的技术创新与应用案例分享" data-hashtags="MRD"><i class="fab fa-twitter fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Facebook" data-sharer="facebook" data-url="https://entropydecrease.github.io/2023_04_27-geneseeq_mrd/" data-hashtag="MRD"><i class="fab fa-facebook-square fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Hacker News" data-sharer="hackernews" data-url="https://entropydecrease.github.io/2023_04_27-geneseeq_mrd/" data-title="邵阳对世和MRD的介绍 - MRD的技术创新与应用案例分享"><i class="fab fa-hacker-news fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Line" data-sharer="line" data-url="https://entropydecrease.github.io/2023_04_27-geneseeq_mrd/" data-title="邵阳对世和MRD的介绍 - MRD的技术创新与应用案例分享"><i data-svg-src="/lib/simple-icons/icons/line.min.svg" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Pocket" data-sharer="pocket" data-url="https://entropydecrease.github.io/2023_04_27-geneseeq_mrd/"><i class="fab fa-get-pocket fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on 微博" data-sharer="weibo" data-url="https://entropydecrease.github.io/2023_04_27-geneseeq_mrd/" data-title="邵阳对世和MRD的介绍 - MRD的技术创新与应用案例分享"><i class="fab fa-weibo fa-fw" aria-hidden="true"></i></a></span>
+            </div>
+        </div>
+    </div>
+
+    <div class="post-info-more">
+        <section class="post-tags"><i class="fas fa-tags fa-fw" aria-hidden="true"></i>&nbsp;<a href="/tags/mrd/">MRD</a></section>
+        <section>
+            <span><a href="javascript:void(0);" onclick="window.history.back();">Back</a></span>&nbsp;|&nbsp;<span><a href="/">Home</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav"><a href="/2023_04_08-ont_basics/" class="prev" rel="prev" title="图解三代测序（Nanopore） (转载作为备份)"><i class="fas fa-angle-left fa-fw" aria-hidden="true"></i>图解三代测序（Nanopore） (转载作为备份)</a>
+            <a href="/2023_04_28-cancer_early_diagnostics/" class="next" rel="next" title="肿瘤早诊的思路">肿瘤早诊的思路<i class="fas fa-angle-right fa-fw" aria-hidden="true"></i></a></div>
+</div>
+</article></div>
+            </main><footer class="footer">
+        <div class="footer-container"><div class="footer-line">Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.134.2">Hugo</a> | Theme - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.2.11"><i class="far fa-kiss-wink-heart fa-fw" aria-hidden="true"></i> LoveIt</a>
+                </div><div class="footer-line" itemscope itemtype="http://schema.org/CreativeWork"><i class="far fa-copyright fa-fw" aria-hidden="true"></i><span itemprop="copyrightYear">2015 - 2024</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/" target="_blank">entropydecrease</a></span></div>
+        </div>
+    </footer></div>
+
+        <div id="fixed-buttons"><a href="#" id="back-to-top" class="fixed-button" title="Back to Top">
+                <i class="fas fa-arrow-up fa-fw" aria-hidden="true"></i>
+            </a><a href="#" id="view-comments" class="fixed-button" title="View Comments">
+                <i class="fas fa-comment fa-fw" aria-hidden="true"></i>
+            </a>
+        </div><link rel="stylesheet" href="/lib/katex/katex.min.css"><script type="text/javascript" src="/lib/autocomplete/autocomplete.min.js"></script><script type="text/javascript" src="/lib/lunr/lunr.min.js"></script><script type="text/javascript" src="/lib/lazysizes/lazysizes.min.js"></script><script type="text/javascript" src="/lib/clipboard/clipboard.min.js"></script><script type="text/javascript" src="/lib/sharer/sharer.min.js"></script><script type="text/javascript" src="/lib/katex/katex.min.js"></script><script type="text/javascript" src="/lib/katex/contrib/auto-render.min.js"></script><script type="text/javascript" src="/lib/katex/contrib/copy-tex.min.js"></script><script type="text/javascript" src="/lib/katex/contrib/mhchem.min.js"></script><script type="text/javascript">window.config={"code":{"copyTitle":"Copy to clipboard","maxShownLines":50},"comment":{},"math":{"delimiters":[{"display":true,"left":"$$","right":"$$"},{"display":true,"left":"\\[","right":"\\]"},{"display":true,"left":"\\begin{equation}","right":"\\end{equation}"},{"display":true,"left":"\\begin{equation*}","right":"\\end{equation*}"},{"display":true,"left":"\\begin{align}","right":"\\end{align}"},{"display":true,"left":"\\begin{align*}","right":"\\end{align*}"},{"display":true,"left":"\\begin{alignat}","right":"\\end{alignat}"},{"display":true,"left":"\\begin{alignat*}","right":"\\end{alignat*}"},{"display":true,"left":"\\begin{gather}","right":"\\end{gather}"},{"display":true,"left":"\\begin{CD}","right":"\\end{CD}"},{"display":false,"left":"$","right":"$"},{"display":false,"left":"\\(","right":"\\)"}],"strict":false},"search":{"highlightTag":"em","lunrIndexURL":"/index.json","maxResultLength":10,"noResultsFound":"No results found","snippetLength":30,"type":"lunr"}};</script><script type="text/javascript" src="/js/theme.min.js"></script></body>
+</html>

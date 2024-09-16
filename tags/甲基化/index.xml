@@ -5,12 +5,15 @@
         <description>甲基化 - Tag - Entropy Decrease</description>
         <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Tue, 02 May 2023 00:00:00 &#43;0000</lastBuildDate><atom:link href="https://entropydecrease.github.io/tags/%E7%94%B2%E5%9F%BA%E5%8C%96/" rel="self" type="application/rss+xml" /><item>
     <title>甲基化与膀胱癌检测</title>
-    <link>https://entropydecrease.github.io/2023_05_02_methylation_cancer/</link>
+    <link>https://entropydecrease.github.io/2023_05_02-methylation_cancer/</link>
     <pubDate>Tue, 02 May 2023 00:00:00 &#43;0000</pubDate>
     <author>entropydecrease</author>
-    <guid>https://entropydecrease.github.io/2023_05_02_methylation_cancer/</guid>
-    <description><![CDATA[1. 甲基化肿瘤检测产品综述 1.1 截至2018年的国外商业化甲基化肿瘤检测 Koch, A. et al. Analysis of DNA methylation in cancer: location revisited. Nat Rev Clin Oncol 15, 459–466 (2018).
-The Cancer Genome Atlas (TCGA) data for all biomarkers with commercially available assays were analysed for differential methylation between tumour and nonmalignant samples and to determine whether or not methylation status at the location of the area covered by the assay is correlated with expression. We also investigated whether or not the biomarkers are located in the promoter region of their corresponding genes and whether or not they are located in a CpG island.]]></description>
+    <guid>https://entropydecrease.github.io/2023_05_02-methylation_cancer/</guid>
+    <description><![CDATA[<h2 id="1-甲基化肿瘤检测产品综述">1. 甲基化肿瘤检测产品综述</h2>
+<h3 id="11-截至2018年的国外商业化甲基化肿瘤检测">1.1 截至2018年的国外商业化甲基化肿瘤检测</h3>
+<p>Koch, A. <em>et al.</em> Analysis of DNA methylation in cancer: location revisited. <em>Nat Rev Clin Oncol</em> <strong>15</strong>, 459–466 (2018).</p>
+<p></p>
+<p>The Cancer Genome Atlas (TCGA) data for all biomarkers with commercially available assays were analysed for differential methylation between tumour and nonmalignant samples and to determine whether or not methylation status at the location of the area covered by the assay is correlated with expression. We also investigated whether or not the biomarkers are located in the promoter region of their corresponding genes and whether or not they are located in a CpG island. Data on the clinical performance of these biomarkers, as reported in the literature, are listed in Supplementary Table 2. CRC, colorectal cancer; NA, not available. ^a^Two different <em>SEPT9</em> biomarkers are available, which both target the same genomic region but at slightly different locations. In some publications, the <em>SEPT9</em> biomarker is variably referred to as the ColoVantage test by Quest Diagnostics, as a test provided by ARUP Laboratories, or as the Epi proColon test provided by Epigenomics. Both biomarkers have been patented by Epigenomics^83,85^, which has licensed one of them to Quest Diagnostics and ARUP Laboratories. ^b^A positive, instead of a negative, correlation exists between DNA methylation and gene expression of <em>SHOX2</em>, <em>OTX1</em>, and <em>ONECUT2.</em> ^c^<em>MGMT</em> is a predictive marker, rendering the comparison between tumour and nonmalignant samples less relevant. Furthermore, no nonmalignant samples of brain tissue are available in TCGA for comparisons with glioblastoma specimens.</p>]]></description>
 </item>
 </channel>
 </rss>

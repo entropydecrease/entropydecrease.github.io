@@ -1,35 +1,106 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
     <channel>
-        <title>genome - Tag - Entropy Decrease</title>
+        <title>Genome - Tag - Entropy Decrease</title>
         <link>https://entropydecrease.github.io/tags/genome/</link>
-        <description>genome - Tag - Entropy Decrease</description>
+        <description>Genome - Tag - Entropy Decrease</description>
         <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Sun, 23 Feb 2020 00:00:00 &#43;0000</lastBuildDate><atom:link href="https://entropydecrease.github.io/tags/genome/" rel="self" type="application/rss+xml" /><item>
     <title>igv 生成本地的.genome文件</title>
-    <link>https://entropydecrease.github.io/2020_02_23_igv_local_genome/</link>
+    <link>https://entropydecrease.github.io/2020_02_23-igv_local_genome/</link>
     <pubDate>Sun, 23 Feb 2020 00:00:00 &#43;0000</pubDate>
     <author>entropydecrease</author>
-    <guid>https://entropydecrease.github.io/2020_02_23_igv_local_genome/</guid>
-    <description><![CDATA[igv假如每次都要从远程加载genome信息的话，网络不好的情况下会很慢，这时候最好做一个本地版的.genome文件。
-igv的.genome文件其实是一个zip文件。
-先看一下hg19.genome的内容：
-1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 &gt; cp ~/igv/genomes/hg19.genome . &gt; unzip hg19.genome Archive: hg19.genome inflating: cytoBand.txt inflating: hg19_alias.tab inflating: property.txt inflating: refGene.txt &gt; cat property.txt id=hg19 name=Human hg19 cytobandFile=cytoBand.txt ordered=true geneFile=refGene.txt geneTrackName=RefSeq Genes chrAliasFile=hg19_alias.tab fasta=True sequenceLocation=http://s3.amazonaws.com/igv.broadinstitute.org/genomes/seq/hg19/hg19.fasta url=http://www.ncbi.nlm.nih.gov/gene?term=$$ 可以看到，里面的cytoband文件，gene文件都是本地的，但是序列文件是在AWS上面的。而最近AWS的访问有问题，非常不稳定，所以igv也不能打开hg19.genome了。
-让igv都使用本地的文件，只需要修改property.txt即可，修改property.txt如下：
-1 2 3 4 5 6 7 8 9 10 id=hg19-local name=Human hg19 local cytobandFile=cytoBand.txt ordered=true geneFile=refGene.]]></description>
+    <guid>https://entropydecrease.github.io/2020_02_23-igv_local_genome/</guid>
+    <description><![CDATA[<p>igv假如每次都要从远程加载genome信息的话，网络不好的情况下会很慢，这时候最好做一个本地版的.genome文件。</p>
+<p>igv的.genome文件其实是一个zip文件。</p>
+<p>先看一下hg19.genome的内容：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">&gt; cp ~/igv/genomes/hg19.genome .
+</span></span><span class="line"><span class="cl">&gt; unzip hg19.genome
+</span></span><span class="line"><span class="cl">Archive:  hg19.genome
+</span></span><span class="line"><span class="cl">inflating: cytoBand.txt
+</span></span><span class="line"><span class="cl">inflating: hg19_alias.tab
+</span></span><span class="line"><span class="cl">inflating: property.txt
+</span></span><span class="line"><span class="cl">inflating: refGene.txt
+</span></span><span class="line"><span class="cl">&gt; cat property.txt
+</span></span><span class="line"><span class="cl"><span class="nv">id</span><span class="o">=</span>hg19
+</span></span><span class="line"><span class="cl"><span class="nv">name</span><span class="o">=</span>Human hg19
+</span></span><span class="line"><span class="cl"><span class="nv">cytobandFile</span><span class="o">=</span>cytoBand.txt
+</span></span><span class="line"><span class="cl"><span class="nv">ordered</span><span class="o">=</span><span class="nb">true</span>
+</span></span><span class="line"><span class="cl"><span class="nv">geneFile</span><span class="o">=</span>refGene.txt
+</span></span><span class="line"><span class="cl"><span class="nv">geneTrackName</span><span class="o">=</span>RefSeq Genes
+</span></span><span class="line"><span class="cl"><span class="nv">chrAliasFile</span><span class="o">=</span>hg19_alias.tab
+</span></span><span class="line"><span class="cl"><span class="nv">fasta</span><span class="o">=</span>True
+</span></span><span class="line"><span class="cl"><span class="nv">sequenceLocation</span><span class="o">=</span>http://s3.amazonaws.com/igv.broadinstitute.org/genomes/seq/hg19/hg19.fasta
+</span></span><span class="line"><span class="cl"><span class="nv">url</span><span class="o">=</span>http://www.ncbi.nlm.nih.gov/gene?term<span class="o">=</span><span class="nv">$$</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>可以看到，里面的cytoband文件，gene文件都是本地的，但是序列文件是在AWS上面的。而最近AWS的访问有问题，非常不稳定，所以igv也不能打开hg19.genome了。</p>
+<p>让igv都使用本地的文件，只需要修改property.txt即可，修改property.txt如下：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">id=hg19-local
+</span></span><span class="line"><span class="cl">name=Human hg19 local
+</span></span><span class="line"><span class="cl">cytobandFile=cytoBand.txt
+</span></span><span class="line"><span class="cl">ordered=true
+</span></span><span class="line"><span class="cl">geneFile=refGene.txt
+</span></span><span class="line"><span class="cl">geneTrackName=RefSeq Genes
+</span></span><span class="line"><span class="cl">chrAliasFile=hg19_alias.tab
+</span></span><span class="line"><span class="cl">fasta=True
+</span></span><span class="line"><span class="cl">sequenceLocation=/Users/xiaojf/data/genomes/hs37d5/hs37d5.fa
+</span></span><span class="line"><span class="cl">url=http://www.ncbi.nlm.nih.gov/gene?term=$$
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>其中sequenceLocation改成本地的基因组fasta文件。</p>]]></description>
 </item>
 <item>
     <title>应该使用哪个genome</title>
-    <link>https://entropydecrease.github.io/2020_02_23_ref_genome/</link>
+    <link>https://entropydecrease.github.io/2020_02_23-ref_genome/</link>
     <pubDate>Sun, 23 Feb 2020 00:00:00 &#43;0000</pubDate>
     <author>entropydecrease</author>
-    <guid>https://entropydecrease.github.io/2020_02_23_ref_genome/</guid>
-    <description><![CDATA[GRCh37 还是 GRCh38 GRCh37 == hg19，GRCh38 ＝＝ hg38
-理论上来讲，GRCh38是新的人类基因组的参考组装，相对GRCh37(hg19)来说，更接近人类真正的基因组。但是由于历史原因，之前很多的数据库对老版本的GRCh37支持的比较好。 dbSNP和ClinVar已经同时支持 GRCh37和38，但是1k genomes还是对GRCh37支持更好一些.
-我看到有公司还在使用GRCh37，并且声称效果更好。但是，我的看法是，T2T才是未来，现在应该尽早转到GRCh38。
-1k genomes 使用的hs37d5 是什么 1k genomes项目组在做alignment的时候，使用的是hs37d5
-主要是因为在align的时候，有一些reads不能比对到参考基因组上，然后做align的软件就要非费尽心思来给这些reads找次优的位置，而这是非常费时的一步。经过研究发现，这些reads主要是来自于疱疹病毒和一些简单的重复片段，把这些序列加进参考基因组，可以省不少时间，因为一下子就可以找到reads的最优位置，不用费心去找次优位置。
-下面是1k genomes的官方说明
-hs37d5.fa.gz
-Integrated reference sequence from the GRCh37 primary assembly (chromosomal plus unlocalized and unplaced contigs), the rCRS mitochondrial sequence (AC:NC_012920), Human herpesvirus 4 type 1 (AC:NC_007605) and the concatenated decoy sequences (hs37d5cs.fa.gz). This file is compressed by razip from the samtools package for random access. Gzip may complain &ldquo;decompression OK, trailing garbage ignored&rdquo;, but this does not affect the correctness of the decompressed file.]]></description>
+    <guid>https://entropydecrease.github.io/2020_02_23-ref_genome/</guid>
+    <description><![CDATA[<h2 id="grch37-还是-grch38">GRCh37 还是 GRCh38</h2>
+<p>GRCh37 == hg19，GRCh38 ＝＝ hg38</p>
+<p>理论上来讲，GRCh38是新的人类基因组的参考组装，相对GRCh37(hg19)来说，更接近人类真正的基因组。但是由于历史原因，之前很多的数据库对老版本的GRCh37支持的比较好。 dbSNP和ClinVar已经同时支持 GRCh37和38，但是1k genomes还是对GRCh37支持更好一些.</p>
+<p>我看到有公司还在使用GRCh37，并且声称效果更好。但是，我的看法是，T2T才是未来，现在应该尽早转到GRCh38。</p>
+<h2 id="1k-genomes-使用的hs37d5-是什么">1k genomes 使用的hs37d5 是什么</h2>
+<p>1k genomes项目组在做alignment的时候，使用的是<a href="ftp://ftp.1000genomes.ebi.ac.uk/vol1/ftp/technical/reference/phase2_reference_assembly_sequence" target="_blank" rel="noopener noreffer ">hs37d5</a></p>
+<p>主要是因为在align的时候，有一些reads不能比对到参考基因组上，然后做align的软件就要非费尽心思来给这些reads找次优的位置，而这是非常费时的一步。经过研究发现，这些reads主要是来自于疱疹病毒和一些简单的重复片段，把这些序列加进参考基因组，可以省不少时间，因为一下子就可以找到reads的最优位置，不用费心去找次优位置。</p>
+<p>下面是1k genomes的<a href="ftp://ftp.1000genomes.ebi.ac.uk:/vol1/ftp/technical/reference/phase2_reference_assembly_sequence/README_human_reference_20110707" target="_blank" rel="noopener noreffer ">官方说明</a></p>
+<blockquote>
+<p>hs37d5.fa.gz</p>
+<p>Integrated reference sequence from the GRCh37 primary assembly (chromosomal plus unlocalized and unplaced contigs), the rCRS mitochondrial sequence (AC:NC_012920), Human herpesvirus 4 type 1 (AC:NC_007605) and the concatenated decoy sequences (hs37d5cs.fa.gz). This file is compressed by razip from the samtools package for random access.  Gzip may complain &ldquo;decompression OK, trailing garbage ignored&rdquo;, but this does not affect the correctness of the decompressed file.</p>]]></description>
 </item>
 </channel>
 </rss>

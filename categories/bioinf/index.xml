@@ -1,121 +1,446 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
     <channel>
-        <title>bioinf - Category - Entropy Decrease</title>
+        <title>Bioinf - Category - Entropy Decrease</title>
         <link>https://entropydecrease.github.io/categories/bioinf/</link>
-        <description>bioinf - Category - Entropy Decrease</description>
-        <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Wed, 03 May 2023 00:00:00 &#43;0000</lastBuildDate><atom:link href="https://entropydecrease.github.io/categories/bioinf/" rel="self" type="application/rss+xml" /><item>
+        <description>Bioinf - Category - Entropy Decrease</description>
+        <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Mon, 04 Dec 2023 16:46:43 &#43;0000</lastBuildDate><atom:link href="https://entropydecrease.github.io/categories/bioinf/" rel="self" type="application/rss+xml" /><item>
+    <title>2030 年人类基因组学的大胆预测</title>
+    <link>https://entropydecrease.github.io/2023_12_04-genomics_in_2030/</link>
+    <pubDate>Mon, 04 Dec 2023 16:46:43 &#43;0000</pubDate>
+    <author>entropydecrease</author>
+    <guid>https://entropydecrease.github.io/2023_12_04-genomics_in_2030/</guid>
+    <description><![CDATA[<p><a href="https://doi.org/10.1016/j.ajhg.2023.09.010" target="_blank" rel="noopener noreffer ">https://doi.org/10.1016/j.ajhg.2023.09.010</a>
+<a href="https://www.genome.gov/event-calendar/Bold-Predictions-for-Human-Genomics-by-2030" target="_blank" rel="noopener noreffer ">https://www.genome.gov/event-calendar/Bold-Predictions-for-Human-Genomics-by-2030</a></p>
+<p><strong>Bold predictions for human genomics by 2030</strong></p>
+<ul>
+<li>
+<p>(1)  Generating and analyzing a complete human genome sequence will be routine for any research laboratory, becoming as straightforward as carrying out a DNA purification.</p>
+</li>
+<li>
+<p>(2) The biological function(s) of every human gene will be known; for non-coding elements in the human genome, such knowledge will be the rule rather than the exception.</p>
+</li>
+<li>
+<p>(3) The general features of the epigenetic landscape and transcriptional output will be routinely incorporated into predictive models of the impact of genotype on phenotype.</p>]]></description>
+</item>
+<item>
     <title>Civic数据库介绍</title>
-    <link>https://entropydecrease.github.io/2023_05_03_civicdb/</link>
+    <link>https://entropydecrease.github.io/2023_05_03-civicdb/</link>
     <pubDate>Wed, 03 May 2023 00:00:00 &#43;0000</pubDate>
     <author>entropydecrease</author>
-    <guid>https://entropydecrease.github.io/2023_05_03_civicdb/</guid>
-    <description><![CDATA[Nucleic Acids Research上有civicdb最新的介绍。
-Krysiak, K. et al. CIViCdb 2022: evolution of an open-access cancer variant interpretation knowledgebase. Nucleic Acids Research 51, D1230–D1241 (2023).]]></description>
+    <guid>https://entropydecrease.github.io/2023_05_03-civicdb/</guid>
+    <description><![CDATA[<p>Nucleic Acids Research上有civicdb最新的介绍。</p>
+<p>Krysiak, K. <em>et al.</em> CIViCdb 2022: evolution of an open-access cancer variant interpretation knowledgebase. <em>Nucleic Acids Research</em> <strong>51</strong>, D1230–D1241 (2023).</p>]]></description>
 </item>
 <item>
     <title>datamash tips</title>
-    <link>https://entropydecrease.github.io/2023_04_28_datamash/</link>
+    <link>https://entropydecrease.github.io/2023_04_28-datamash/</link>
     <pubDate>Fri, 28 Apr 2023 00:00:00 &#43;0000</pubDate>
     <author>entropydecrease</author>
-    <guid>https://entropydecrease.github.io/2023_04_28_datamash/</guid>
-    <description><![CDATA[1 2 3 4 5 6 7 8 9 10 &gt; (cat &lt;&lt;-EOF a 1 a 2 b 3 c 4 EOF ) | datamash groupby 1 collapse 2 a	1,2 b	3 c	4 collapse 操作可以将对应的列（本例中为第二列）进行合并，在本例子，根据第一例的值进行分组，将第二例的值合并。
-另外，为了在一个命令中完成，本例中使用了here document。]]></description>
+    <guid>https://entropydecrease.github.io/2023_04_28-datamash/</guid>
+    <description><![CDATA[<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">&gt; <span class="o">(</span>cat <span class="s">&lt;&lt;-EOF
+</span></span></span><span class="line"><span class="cl"><span class="s">a       1
+</span></span></span><span class="line"><span class="cl"><span class="s">a       2
+</span></span></span><span class="line"><span class="cl"><span class="s">b       3
+</span></span></span><span class="line"><span class="cl"><span class="s">c       4
+</span></span></span><span class="line"><span class="cl"><span class="s">EOF</span>
+</span></span><span class="line"><span class="cl"><span class="o">)</span> <span class="p">|</span> datamash groupby <span class="m">1</span> collapse <span class="m">2</span>
+</span></span><span class="line"><span class="cl">a	1,2
+</span></span><span class="line"><span class="cl">b	<span class="m">3</span>
+</span></span><span class="line"><span class="cl">c	<span class="m">4</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p><code>collapse</code> 操作可以将对应的列（本例中为第二列）进行合并，在本例子，根据第一例的值进行分组，将第二例的值合并。</p>
+<p>另外，为了在一个命令中完成，本例中使用了here document。</p>]]></description>
 </item>
 <item>
     <title>fastq文件格式</title>
-    <link>https://entropydecrease.github.io/2022_05_01_fastq_format/</link>
+    <link>https://entropydecrease.github.io/2022_05_01-fastq_format/</link>
     <pubDate>Sun, 01 May 2022 00:00:00 &#43;0000</pubDate>
     <author>entropydecrease</author>
-    <guid>https://entropydecrease.github.io/2022_05_01_fastq_format/</guid>
-    <description><![CDATA[https://help.basespace.illumina.com/articles/descriptive/fastq-files/
-fastq文件的命名 示例：Data\Intensities\BaseCalls\samplename_S1_L001_R1_001.fastq.gz
-* samplename - The sample name provided in the sample sheet. If a sample name is not provided, the file name includes the sample ID, which is a required field in the sample sheet and must be unique. * S1 — The sample number based on the order that samples are listed in the sample sheet starting with 1. In this example, S1 indicates that this sample is the first sample listed in the sample sheet.]]></description>
+    <guid>https://entropydecrease.github.io/2022_05_01-fastq_format/</guid>
+    <description><![CDATA[<p><a href="https://help.basespace.illumina.com/articles/descriptive/fastq-files/" target="_blank" rel="noopener noreffer ">https://help.basespace.illumina.com/articles/descriptive/fastq-files/</a></p>
+<h2 id="fastq文件的命名">fastq文件的命名</h2>
+<p>示例：<code>Data\Intensities\BaseCalls\samplename_S1_L001_R1_001.fastq.gz</code></p>
+<pre><code>* samplename - The sample name provided in the sample sheet. If a sample name is not provided, the file name includes the sample ID, which is a required field in the sample sheet and must be unique.
+* S1 — The sample number based on the order that samples are listed in the sample sheet starting with 1. In this example, S1 indicates that this sample is the first sample listed in the sample sheet. [^1]
+</code></pre>
+<blockquote>
+<ul>
+<li>Reads that cannot be assigned to any sample are written to a FASTQ file for sample number 0, and excluded from downstream analysis.</li>
+</ul>
+</blockquote>
+<pre><code>* L001—The lane number.
+* R1—The read. In this example, R1 means Read 1. For a paired-end run, there is at least one file with R2 in the file name for Read 2.
+* 001—The last segment is always 001.
+</code></pre>
+<h2 id="一个例子">一个例子</h2>
+<p>注意<code>read number</code>之前的空格</p>]]></description>
 </item>
 <item>
     <title>生成af only的gnomad vcf文件</title>
-    <link>https://entropydecrease.github.io/2022_05_01_af_only_gnomad/</link>
+    <link>https://entropydecrease.github.io/2022_05_01-af_only_gnomad/</link>
     <pubDate>Sun, 01 May 2022 00:00:00 &#43;0000</pubDate>
     <author>entropydecrease</author>
-    <guid>https://entropydecrease.github.io/2022_05_01_af_only_gnomad/</guid>
-    <description><![CDATA[gnomAD VCF 文件(af-only-gnomad.hg38.vcf.gz)太大了，超过200G，对于GATK来说，只需要用里面的‘AF’信息就够了，所以将多余信息删掉可以极大节省空间和时间。
-gatk 用来生成用于Mutect2的 af-only-gnomad.hg38.vcf.gz 的程序：
-https://github.com/broadinstitute/gatk/blob/master/scripts/mutect2_wdl/mutect_resources.wdl 相关部分code：
-# clear ID and QUAL fields and delete all INFO fields other than AF # note that input must be a plain-text vcf, not a vcf.gz. # this task re-indexes and compresses the output vcf task MakeAlleleFrequencyOnlyVcf { # ------------------------------------------------ # Input args: File input_vcf String output_name File? gatk_override # Runtime Options: String gatk_docker Int? mem Int? preemptible_attempts Int? disk_space Int? cpu # ------------------------------------------------ # Get machine settings: Boolean use_ssd = false # You may have to change the following two parameter values depending on the task requirements Int default_ram_mb = 3 * 1024 # WARNING: In the workflow, you should calculate the disk space as an input to this task (disk_space_gb).]]></description>
+    <guid>https://entropydecrease.github.io/2022_05_01-af_only_gnomad/</guid>
+    <description><![CDATA[<p>gnomAD VCF 文件(af-only-gnomad.hg38.vcf.gz)太大了，超过200G，对于GATK来说，只需要用里面的‘AF’信息就够了，所以将多余信息删掉可以极大节省空间和时间。</p>
+<p>gatk 用来生成用于Mutect2的 <code>af-only-gnomad.hg38.vcf.gz</code> 的程序：</p>
+<pre><code>https://github.com/broadinstitute/gatk/blob/master/scripts/mutect2_wdl/mutect_resources.wdl
+</code></pre>
+<p>相关部分code：</p>
+<pre><code># clear ID and QUAL fields and delete all INFO fields other than AF
+# note that input must be a plain-text vcf, not a vcf.gz.
+# this task re-indexes and compresses the output vcf
+task MakeAlleleFrequencyOnlyVcf {
+
+    # ------------------------------------------------
+    # Input args:
+    File input_vcf
+    String output_name
+
+    File? gatk_override
+
+    # Runtime Options:
+    String gatk_docker
+    Int? mem
+    Int? preemptible_attempts
+    Int? disk_space
+    Int? cpu
+
+    # ------------------------------------------------
+    # Get machine settings:
+    Boolean use_ssd = false
+
+    # You may have to change the following two parameter values depending on the task requirements
+    Int default_ram_mb = 3 * 1024
+    # WARNING: In the workflow, you should calculate the disk space as an input to this task (disk_space_gb).  Please see [TODO: Link from Jose] for examples.
+    Int default_disk_space_gb = 100
+
+    Int default_boot_disk_size_gb = 15
+
+    # Mem is in units of GB but our command and memory runtime values are in MB
+    Int machine_mem = if defined(mem) then mem * 1024 else default_ram_mb
+    Int command_mem = machine_mem - 1024
+
+    # ------------------------------------------------
+    # Run our command:
+    command {
+        set -e
+        export GATK_LOCAL_JAR=${default=&quot;/root/gatk.jar&quot; gatk_override}
+
+        # Save off the header for later:
+        grep '^#' ${input_vcf} &gt; header &amp;
+
+        # Get all lines in the file except the header:
+        # Preserve all fields before INFO, Grab only the AF annotation from the INFO Field
+        # replace ID (3rd) and QUAL (6th) columns with '.' (empty):
+        grep -v &quot;^#&quot; ${input_vcf} | sed -e 's#\(.*\)\t\(.*\)\t\(.*\)\t\(.*\)\t\(.*\)\t\(.*\)\t\(.*\)\t.*;AF=\([0-9]*\.[e0-9+-]*\).*#\1\t\2\t.\t\4\t\5\t.\t\7\tAF=\8#g' &gt; simplified_body &amp;
+
+        # Wait for background processes to finish:
+        wait
+
+        # Consolidate files:
+        cat header simplified_body &gt; simplified.vcf
+
+        # Zip the VCF:
+        bgzip simplified.vcf -O ${output_name}.vcf.gz
+
+        # Index output file:
+        gatk --java-options &quot;-Xmx${command_mem}g&quot; IndexFeatureFile -F ${output_name}.vcf.gz
+
+        # Cleanup:
+        rm -f header body simplified_info simplified_body simplified.vcf simplified.vcf.idx
+    }
+
+    # ------------------------------------------------
+    # Runtime settings:
+    runtime {
+        docker: gatk_docker
+        memory: machine_mem + &quot; GB&quot;
+        disks: &quot;local-disk &quot; + select_first([disk_space, 100]) + if use_ssd then &quot; SSD&quot; else &quot; HDD&quot;
+        preemptible: select_first([preemptible_attempts, 3])
+        cpu: select_first([cpu, 1])
+    }
+
+    # ------------------------------------------------
+    # Outputs:
+    output {
+        File output_vcf = &quot;${output_name}.vcf.gz&quot;
+        File output_vcf_idx = &quot;${output_name}.vcf.gz.tbi&quot;
+    }
+}
+</code></pre>
+<p>但是GATK的方法太慢了，所以我写了如下的脚本：</p>]]></description>
 </item>
 <item>
     <title>计算bam文件中的覆盖度</title>
-    <link>https://entropydecrease.github.io/2022_05_01_bam_coverage/</link>
+    <link>https://entropydecrease.github.io/2022_05_01-bam-coverage/</link>
     <pubDate>Sun, 01 May 2022 00:00:00 &#43;0000</pubDate>
     <author>entropydecrease</author>
-    <guid>https://entropydecrease.github.io/2022_05_01_bam_coverage/</guid>
-    <description><![CDATA[Things to consider to exclude some reads, like samtools depth/bedcov and mosdepth do.
-&lsquo;UNMAP,SECONDARY,QCFAIL,DUP or 0x704 or 1796&rsquo;
-to only summarize target regions or whole genome
-Tools to use mosdepth 1 2 3 4 5 6 7 8 9 10 11 12 13 14 for Bam in *.mkdup.bam do # skip if index file doesn&#39;t exist [ -s ${Bam}.bai ] || continue Base=$(basename ${Bam%.mkdup.bam}) # run mosdepth [ -s ${Base}.mosdepth.summary.txt ] &amp;&amp; continue echo $Bam mosdepth --by target_hg38.]]></description>
+    <guid>https://entropydecrease.github.io/2022_05_01-bam-coverage/</guid>
+    <description><![CDATA[<h2 id="things-to-consider">Things to consider</h2>
+<ol>
+<li>
+<p>to exclude some reads, like <code>samtools depth/bedcov</code> and mosdepth do.</p>
+<blockquote>
+<p>&lsquo;UNMAP,SECONDARY,QCFAIL,DUP or 0x704 or 1796&rsquo;</p>
+</blockquote>
+</li>
+<li>
+<p>to only summarize target regions or whole genome</p>
+</li>
+</ol>
+<h2 id="tools-to-use">Tools to use</h2>
+<h3 id="mosdepth">mosdepth</h3>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl"><span class="k">for</span> Bam in *.mkdup.bam
+</span></span><span class="line"><span class="cl"><span class="k">do</span>
+</span></span><span class="line"><span class="cl">        <span class="c1"># skip if index file doesn&#39;t exist</span>
+</span></span><span class="line"><span class="cl">        <span class="o">[</span> -s <span class="si">${</span><span class="nv">Bam</span><span class="si">}</span>.bai <span class="o">]</span> <span class="o">||</span> <span class="k">continue</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        <span class="nv">Base</span><span class="o">=</span><span class="k">$(</span>basename <span class="si">${</span><span class="nv">Bam</span><span class="p">%.mkdup.bam</span><span class="si">}</span><span class="k">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        <span class="c1"># run mosdepth</span>
+</span></span><span class="line"><span class="cl">        <span class="o">[</span> -s <span class="si">${</span><span class="nv">Base</span><span class="si">}</span>.mosdepth.summary.txt <span class="o">]</span> <span class="o">&amp;&amp;</span> <span class="k">continue</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        <span class="nb">echo</span> <span class="nv">$Bam</span>
+</span></span><span class="line"><span class="cl">        mosdepth --by target_hg38.bed <span class="se">\
+</span></span></span><span class="line"><span class="cl"><span class="se"></span>            --threads <span class="m">8</span> --no-per-base --fast-mode <span class="si">${</span><span class="nv">Base</span><span class="si">}</span> <span class="nv">$Bam</span> <span class="p">&amp;</span>
+</span></span><span class="line"><span class="cl"><span class="k">done</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>Problems with mosdepth is <code>mosdepth --by target.bed your.bam</code> could make some region zero coverage when it is not, and don&rsquo;t know the reason now. So use <code>samtools depth/bedcov</code> instead.</p>]]></description>
 </item>
 <item>
     <title>bcftools notes (转载)</title>
-    <link>https://entropydecrease.github.io/2021_10_01_bcftools_notes/</link>
+    <link>https://entropydecrease.github.io/2021_10_01-bcftools_notes/</link>
     <pubDate>Fri, 01 Oct 2021 00:00:00 &#43;0000</pubDate>
     <author>entropydecrease</author>
-    <guid>https://entropydecrease.github.io/2021_10_01_bcftools_notes/</guid>
-    <description><![CDATA[copied from https://gist.github.com/elowy01/93922762e131d7abd3c7e8e166a74a0b
-Filter variants per region (in this example, print out only variants mapped to chr1 and chr2)
-bcftools filter -r1,2 ALL.chip.omni_broad_sanger_combined.20140818.snps.genotypes.hg38.vcf.gz
-printing out info for only 2 samples:
-bcftools view -s NA20818,NA20819 filename.vcf.gz
-printing stats only for variants passing the filter:
-bcftools view -f PASS filename.vcf.gz
-printing variants withoud header:
-bcftools view -H
-printing variants on a particular region:
-bcftools view -r chr20:1-200000 -s NA20818,NA20819 filename.vcf.gz
-print all variants except for the ones falling within region:]]></description>
+    <guid>https://entropydecrease.github.io/2021_10_01-bcftools_notes/</guid>
+    <description><![CDATA[<p>copied from <code>https://gist.github.com/elowy01/93922762e131d7abd3c7e8e166a74a0b</code></p>
+<ul>
+<li>
+<p>Filter variants per region (in this example, print out only variants mapped to chr1 and chr2)</p>
+<p><code>bcftools filter -r1,2 ALL.chip.omni_broad_sanger_combined.20140818.snps.genotypes.hg38.vcf.gz</code></p>
+</li>
+<li>
+<p>printing out info for only 2 samples:</p>
+<p><code>bcftools view -s NA20818,NA20819 filename.vcf.gz</code></p>
+</li>
+<li>
+<p>printing stats only for variants passing the filter:</p>
+<p><code>bcftools view -f PASS filename.vcf.gz</code></p>
+</li>
+<li>
+<p>printing variants withoud header:</p>
+<p><code>bcftools view -H</code></p>
+</li>
+<li>
+<p>printing variants on a particular region:</p>
+<p><code>bcftools view -r chr20:1-200000 -s NA20818,NA20819 filename.vcf.gz</code></p>
+</li>
+<li>
+<p>print all variants except for the ones falling within region:</p>]]></description>
 </item>
 <item>
     <title>igv 生成本地的.genome文件</title>
-    <link>https://entropydecrease.github.io/2020_02_23_igv_local_genome/</link>
+    <link>https://entropydecrease.github.io/2020_02_23-igv_local_genome/</link>
     <pubDate>Sun, 23 Feb 2020 00:00:00 &#43;0000</pubDate>
     <author>entropydecrease</author>
-    <guid>https://entropydecrease.github.io/2020_02_23_igv_local_genome/</guid>
-    <description><![CDATA[igv假如每次都要从远程加载genome信息的话，网络不好的情况下会很慢，这时候最好做一个本地版的.genome文件。
-igv的.genome文件其实是一个zip文件。
-先看一下hg19.genome的内容：
-1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 &gt; cp ~/igv/genomes/hg19.genome . &gt; unzip hg19.genome Archive: hg19.genome inflating: cytoBand.txt inflating: hg19_alias.tab inflating: property.txt inflating: refGene.txt &gt; cat property.txt id=hg19 name=Human hg19 cytobandFile=cytoBand.txt ordered=true geneFile=refGene.txt geneTrackName=RefSeq Genes chrAliasFile=hg19_alias.tab fasta=True sequenceLocation=http://s3.amazonaws.com/igv.broadinstitute.org/genomes/seq/hg19/hg19.fasta url=http://www.ncbi.nlm.nih.gov/gene?term=$$ 可以看到，里面的cytoband文件，gene文件都是本地的，但是序列文件是在AWS上面的。而最近AWS的访问有问题，非常不稳定，所以igv也不能打开hg19.genome了。
-让igv都使用本地的文件，只需要修改property.txt即可，修改property.txt如下：
-1 2 3 4 5 6 7 8 9 10 id=hg19-local name=Human hg19 local cytobandFile=cytoBand.txt ordered=true geneFile=refGene.]]></description>
+    <guid>https://entropydecrease.github.io/2020_02_23-igv_local_genome/</guid>
+    <description><![CDATA[<p>igv假如每次都要从远程加载genome信息的话，网络不好的情况下会很慢，这时候最好做一个本地版的.genome文件。</p>
+<p>igv的.genome文件其实是一个zip文件。</p>
+<p>先看一下hg19.genome的内容：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">&gt; cp ~/igv/genomes/hg19.genome .
+</span></span><span class="line"><span class="cl">&gt; unzip hg19.genome
+</span></span><span class="line"><span class="cl">Archive:  hg19.genome
+</span></span><span class="line"><span class="cl">inflating: cytoBand.txt
+</span></span><span class="line"><span class="cl">inflating: hg19_alias.tab
+</span></span><span class="line"><span class="cl">inflating: property.txt
+</span></span><span class="line"><span class="cl">inflating: refGene.txt
+</span></span><span class="line"><span class="cl">&gt; cat property.txt
+</span></span><span class="line"><span class="cl"><span class="nv">id</span><span class="o">=</span>hg19
+</span></span><span class="line"><span class="cl"><span class="nv">name</span><span class="o">=</span>Human hg19
+</span></span><span class="line"><span class="cl"><span class="nv">cytobandFile</span><span class="o">=</span>cytoBand.txt
+</span></span><span class="line"><span class="cl"><span class="nv">ordered</span><span class="o">=</span><span class="nb">true</span>
+</span></span><span class="line"><span class="cl"><span class="nv">geneFile</span><span class="o">=</span>refGene.txt
+</span></span><span class="line"><span class="cl"><span class="nv">geneTrackName</span><span class="o">=</span>RefSeq Genes
+</span></span><span class="line"><span class="cl"><span class="nv">chrAliasFile</span><span class="o">=</span>hg19_alias.tab
+</span></span><span class="line"><span class="cl"><span class="nv">fasta</span><span class="o">=</span>True
+</span></span><span class="line"><span class="cl"><span class="nv">sequenceLocation</span><span class="o">=</span>http://s3.amazonaws.com/igv.broadinstitute.org/genomes/seq/hg19/hg19.fasta
+</span></span><span class="line"><span class="cl"><span class="nv">url</span><span class="o">=</span>http://www.ncbi.nlm.nih.gov/gene?term<span class="o">=</span><span class="nv">$$</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>可以看到，里面的cytoband文件，gene文件都是本地的，但是序列文件是在AWS上面的。而最近AWS的访问有问题，非常不稳定，所以igv也不能打开hg19.genome了。</p>
+<p>让igv都使用本地的文件，只需要修改property.txt即可，修改property.txt如下：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">id=hg19-local
+</span></span><span class="line"><span class="cl">name=Human hg19 local
+</span></span><span class="line"><span class="cl">cytobandFile=cytoBand.txt
+</span></span><span class="line"><span class="cl">ordered=true
+</span></span><span class="line"><span class="cl">geneFile=refGene.txt
+</span></span><span class="line"><span class="cl">geneTrackName=RefSeq Genes
+</span></span><span class="line"><span class="cl">chrAliasFile=hg19_alias.tab
+</span></span><span class="line"><span class="cl">fasta=True
+</span></span><span class="line"><span class="cl">sequenceLocation=/Users/xiaojf/data/genomes/hs37d5/hs37d5.fa
+</span></span><span class="line"><span class="cl">url=http://www.ncbi.nlm.nih.gov/gene?term=$$
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>其中sequenceLocation改成本地的基因组fasta文件。</p>]]></description>
 </item>
 <item>
     <title>安装bcl2fastq</title>
-    <link>https://entropydecrease.github.io/2020_02_23_bcl2fastq_install/</link>
+    <link>https://entropydecrease.github.io/2020_02_23-bcl2fastq_install/</link>
     <pubDate>Sun, 23 Feb 2020 00:00:00 &#43;0000</pubDate>
     <author>entropydecrease</author>
-    <guid>https://entropydecrease.github.io/2020_02_23_bcl2fastq_install/</guid>
-    <description><![CDATA[安装 1 2 3 4 5 6 7 8 9 10 11 wget ftp://webdata2:webdata2@ussd-ftp.illumina.com/downloads/software/bcl2fastq/bcl2fastq2-v2.17.1.14.tar.zip tar -zxvf bcl2fastq2-v2.17.1.14.tar.zip cd bcl2fastq2 mkdir build; cd build ../src/configure --prefix=$HOME &gt; build.txt.log 2&gt;&amp;1 tail -f build.txt.log 可能出现的问题 CMake complains Required header sys/stat.h not found 1 &gt; sudo apt-get install libc6-dev-amd64 no support for gzip compression 1 &gt; sudo apt-get install zlib1g-dev bcl2fastq also complains no libxml2 and libxslt, but it could build by itself. And the version installed with ubuntu is too new :( 1 &gt; sudo apt-get install gfortran doxygen graphviz ]]></description>
+    <guid>https://entropydecrease.github.io/2020_02_23-bcl2fastq_install/</guid>
+    <description><![CDATA[<h2 id="安装">安装</h2>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">wget ftp://webdata2:webdata2@ussd-ftp.illumina.com/downloads/software/bcl2fastq/bcl2fastq2-v2.17.1.14.tar.zip
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">tar -zxvf bcl2fastq2-v2.17.1.14.tar.zip
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nb">cd</span> bcl2fastq2
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">mkdir build<span class="p">;</span> <span class="nb">cd</span> build
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">../src/configure --prefix<span class="o">=</span><span class="nv">$HOME</span> &gt; build.txt.log 2&gt;<span class="p">&amp;</span><span class="m">1</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">tail -f build.txt.log
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h2 id="可能出现的问题">可能出现的问题</h2>
+<ul>
+<li>CMake complains Required header sys/stat.h not found</li>
+</ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">&gt; sudo apt-get install libc6-dev-amd64
+</span></span></code></pre></td></tr></table>
+</div>
+</div><ul>
+<li>no support for gzip compression</li>
+</ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">&gt; sudo apt-get install zlib1g-dev
+</span></span></code></pre></td></tr></table>
+</div>
+</div><ul>
+<li>bcl2fastq also complains no libxml2 and libxslt, but it could build by itself. And the version installed with ubuntu is too new :(</li>
+</ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">&gt; sudo apt-get install gfortran doxygen graphviz
+</span></span></code></pre></td></tr></table>
+</div>
+</div>]]></description>
 </item>
 <item>
     <title>应该使用哪个genome</title>
-    <link>https://entropydecrease.github.io/2020_02_23_ref_genome/</link>
+    <link>https://entropydecrease.github.io/2020_02_23-ref_genome/</link>
     <pubDate>Sun, 23 Feb 2020 00:00:00 &#43;0000</pubDate>
     <author>entropydecrease</author>
-    <guid>https://entropydecrease.github.io/2020_02_23_ref_genome/</guid>
-    <description><![CDATA[GRCh37 还是 GRCh38 GRCh37 == hg19，GRCh38 ＝＝ hg38
-理论上来讲，GRCh38是新的人类基因组的参考组装，相对GRCh37(hg19)来说，更接近人类真正的基因组。但是由于历史原因，之前很多的数据库对老版本的GRCh37支持的比较好。 dbSNP和ClinVar已经同时支持 GRCh37和38，但是1k genomes还是对GRCh37支持更好一些.
-我看到有公司还在使用GRCh37，并且声称效果更好。但是，我的看法是，T2T才是未来，现在应该尽早转到GRCh38。
-1k genomes 使用的hs37d5 是什么 1k genomes项目组在做alignment的时候，使用的是hs37d5
-主要是因为在align的时候，有一些reads不能比对到参考基因组上，然后做align的软件就要非费尽心思来给这些reads找次优的位置，而这是非常费时的一步。经过研究发现，这些reads主要是来自于疱疹病毒和一些简单的重复片段，把这些序列加进参考基因组，可以省不少时间，因为一下子就可以找到reads的最优位置，不用费心去找次优位置。
-下面是1k genomes的官方说明
-hs37d5.fa.gz
-Integrated reference sequence from the GRCh37 primary assembly (chromosomal plus unlocalized and unplaced contigs), the rCRS mitochondrial sequence (AC:NC_012920), Human herpesvirus 4 type 1 (AC:NC_007605) and the concatenated decoy sequences (hs37d5cs.fa.gz). This file is compressed by razip from the samtools package for random access. Gzip may complain &ldquo;decompression OK, trailing garbage ignored&rdquo;, but this does not affect the correctness of the decompressed file.]]></description>
-</item>
-<item>
-    <title>bioinf常见的一些错误</title>
-    <link>https://entropydecrease.github.io/2015_03_14_common_bioinf_mistakes/</link>
-    <pubDate>Sat, 14 Mar 2015 00:00:00 &#43;0000</pubDate>
-    <author>entropydecrease</author>
-    <guid>https://entropydecrease.github.io/2015_03_14_common_bioinf_mistakes/</guid>
-    <description><![CDATA[biostar上的这篇文章总结了在生物信息学日常工作中容易犯的一些共性的错误：
-* forget to check both strands * generate random genomic sites without avoiding masked (NNN) gaps * confuse genome freezes and even species * try to see which headers it contained by 'grep &gt; some.fasta' will destory the .fasta file * a lot of off-by-one errors due to switching between formats: Bed is 0 based; GFF/GTF are 1-based * Trusting that a downloaded file is actually fully downloaded * Trusting that an aligner will accept a list of query files instead of just taking the first and ignoring the rest (quiz: which ones am i talking about?]]></description>
+    <guid>https://entropydecrease.github.io/2020_02_23-ref_genome/</guid>
+    <description><![CDATA[<h2 id="grch37-还是-grch38">GRCh37 还是 GRCh38</h2>
+<p>GRCh37 == hg19，GRCh38 ＝＝ hg38</p>
+<p>理论上来讲，GRCh38是新的人类基因组的参考组装，相对GRCh37(hg19)来说，更接近人类真正的基因组。但是由于历史原因，之前很多的数据库对老版本的GRCh37支持的比较好。 dbSNP和ClinVar已经同时支持 GRCh37和38，但是1k genomes还是对GRCh37支持更好一些.</p>
+<p>我看到有公司还在使用GRCh37，并且声称效果更好。但是，我的看法是，T2T才是未来，现在应该尽早转到GRCh38。</p>
+<h2 id="1k-genomes-使用的hs37d5-是什么">1k genomes 使用的hs37d5 是什么</h2>
+<p>1k genomes项目组在做alignment的时候，使用的是<a href="ftp://ftp.1000genomes.ebi.ac.uk/vol1/ftp/technical/reference/phase2_reference_assembly_sequence" target="_blank" rel="noopener noreffer ">hs37d5</a></p>
+<p>主要是因为在align的时候，有一些reads不能比对到参考基因组上，然后做align的软件就要非费尽心思来给这些reads找次优的位置，而这是非常费时的一步。经过研究发现，这些reads主要是来自于疱疹病毒和一些简单的重复片段，把这些序列加进参考基因组，可以省不少时间，因为一下子就可以找到reads的最优位置，不用费心去找次优位置。</p>
+<p>下面是1k genomes的<a href="ftp://ftp.1000genomes.ebi.ac.uk:/vol1/ftp/technical/reference/phase2_reference_assembly_sequence/README_human_reference_20110707" target="_blank" rel="noopener noreffer ">官方说明</a></p>
+<blockquote>
+<p>hs37d5.fa.gz</p>
+<p>Integrated reference sequence from the GRCh37 primary assembly (chromosomal plus unlocalized and unplaced contigs), the rCRS mitochondrial sequence (AC:NC_012920), Human herpesvirus 4 type 1 (AC:NC_007605) and the concatenated decoy sequences (hs37d5cs.fa.gz). This file is compressed by razip from the samtools package for random access.  Gzip may complain &ldquo;decompression OK, trailing garbage ignored&rdquo;, but this does not affect the correctness of the decompressed file.</p>]]></description>
 </item>
 </channel>
 </rss>
