@@ -1,0 +1,544 @@
+<!DOCTYPE html>
+<html lang="en" dir="auto">
+
+<head><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="index, follow">
+<title>使用LoveIt作为hugo的主题 | Entropy Decrease</title>
+<meta name="keywords" content="">
+<meta name="description" content="之前用的even没有维护，已经无法使用，所以找了一下采用loveit。以下是更新方法的简单记录:
+安装
+简单起见，重新生成hugo site，之后把原来的post都copy过来。
+
+
+1
+2
+3
+4
+
+
+hugo new site entropydecrease
+cd entropydecrease
+git clone https://github.com/dillonzq/LoveIt.git themes/LoveIt
+cp -r ../entropydecrease.bak/content/* ./content/
+
+
+配置
+
+
+修改hugo.toml即可
+
+
+因为LoveIt默认文章都是在&rsquo;content/posts/&lsquo;下面的，与even默认&rsquo;content/post/&lsquo;不同，所以要改一下：
+
+mv content/post content/posts
+
+
+
+将hugo输出的静态文件所在的文件夹public/变成一个git 版本库
+
+
+1
+
+
+&gt; git clone git@github.com:entropydecrease/entropydecrease.github.io.git public
+
+
+
+
+使用
+
+
+写文章
+
+
+更新到github
+将下面的命令放在deploy.sh中作为可执行脚本中即可。
+
+
+1
+2
+3
+4
+5
+
+
+hugo &amp;&amp; \
+cd public &amp;&amp; \
+git pull &amp;&amp; git add . &amp;&amp; \
+git commit -m &#34;update on [`date`]&#34; 
+git push origin main
+
+
+
+">
+<meta name="author" content="">
+<link rel="canonical" href="https://entropydecrease.github.io/2023_10_04-theme_loveit/">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.fc220c15db4aef0318bbf30adc45d33d4d7c88deff3238b23eb255afdc472ca6.css" integrity="sha256-/CIMFdtK7wMYu/MK3EXTPU18iN7/MjiyPrJVr9xHLKY=" rel="preload stylesheet" as="style">
+<link rel="icon" href="https://entropydecrease.github.io/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="https://entropydecrease.github.io/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://entropydecrease.github.io/favicon-32x32.png">
+<link rel="apple-touch-icon" href="https://entropydecrease.github.io/apple-touch-icon.png">
+<link rel="mask-icon" href="https://entropydecrease.github.io/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<link rel="alternate" hreflang="en" href="https://entropydecrease.github.io/2023_10_04-theme_loveit/">
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+    <style>
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --theme: rgb(29, 30, 32);
+                --entry: rgb(46, 46, 51);
+                --primary: rgb(218, 218, 219);
+                --secondary: rgb(155, 156, 157);
+                --tertiary: rgb(65, 66, 68);
+                --content: rgb(196, 196, 197);
+                --code-block-bg: rgb(46, 46, 51);
+                --code-bg: rgb(55, 56, 62);
+                --border: rgb(51, 51, 51);
+            }
+
+            .list {
+                background: var(--theme);
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-track {
+                background: 0 0;
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-thumb {
+                border-color: var(--theme);
+            }
+        }
+
+    </style>
+</noscript><meta property="og:title" content="使用LoveIt作为hugo的主题" />
+<meta property="og:description" content="之前用的even没有维护，已经无法使用，所以找了一下采用loveit。以下是更新方法的简单记录:
+安装
+简单起见，重新生成hugo site，之后把原来的post都copy过来。
+
+
+1
+2
+3
+4
+
+
+hugo new site entropydecrease
+cd entropydecrease
+git clone https://github.com/dillonzq/LoveIt.git themes/LoveIt
+cp -r ../entropydecrease.bak/content/* ./content/
+
+
+配置
+
+
+修改hugo.toml即可
+
+
+因为LoveIt默认文章都是在&rsquo;content/posts/&lsquo;下面的，与even默认&rsquo;content/post/&lsquo;不同，所以要改一下：
+
+mv content/post content/posts
+
+
+
+将hugo输出的静态文件所在的文件夹public/变成一个git 版本库
+
+
+1
+
+
+&gt; git clone git@github.com:entropydecrease/entropydecrease.github.io.git public
+
+
+
+
+使用
+
+
+写文章
+
+
+更新到github
+将下面的命令放在deploy.sh中作为可执行脚本中即可。
+
+
+1
+2
+3
+4
+5
+
+
+hugo &amp;&amp; \
+cd public &amp;&amp; \
+git pull &amp;&amp; git add . &amp;&amp; \
+git commit -m &#34;update on [`date`]&#34; 
+git push origin main
+
+
+
+" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://entropydecrease.github.io/2023_10_04-theme_loveit/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2023-10-04T13:39:45+08:00" />
+<meta property="article:modified_time" content="2023-10-04T13:39:45+08:00" /><meta property="og:site_name" content="Entropy Decrease" />
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="使用LoveIt作为hugo的主题"/>
+<meta name="twitter:description" content="之前用的even没有维护，已经无法使用，所以找了一下采用loveit。以下是更新方法的简单记录:
+安装
+简单起见，重新生成hugo site，之后把原来的post都copy过来。
+
+
+1
+2
+3
+4
+
+
+hugo new site entropydecrease
+cd entropydecrease
+git clone https://github.com/dillonzq/LoveIt.git themes/LoveIt
+cp -r ../entropydecrease.bak/content/* ./content/
+
+
+配置
+
+
+修改hugo.toml即可
+
+
+因为LoveIt默认文章都是在&rsquo;content/posts/&lsquo;下面的，与even默认&rsquo;content/post/&lsquo;不同，所以要改一下：
+
+mv content/post content/posts
+
+
+
+将hugo输出的静态文件所在的文件夹public/变成一个git 版本库
+
+
+1
+
+
+&gt; git clone git@github.com:entropydecrease/entropydecrease.github.io.git public
+
+
+
+
+使用
+
+
+写文章
+
+
+更新到github
+将下面的命令放在deploy.sh中作为可执行脚本中即可。
+
+
+1
+2
+3
+4
+5
+
+
+hugo &amp;&amp; \
+cd public &amp;&amp; \
+git pull &amp;&amp; git add . &amp;&amp; \
+git commit -m &#34;update on [`date`]&#34; 
+git push origin main
+
+
+
+"/>
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position":  1 ,
+      "name": "Posts",
+      "item": "https://entropydecrease.github.io/posts/"
+    }, 
+    {
+      "@type": "ListItem",
+      "position":  2 ,
+      "name": "使用LoveIt作为hugo的主题",
+      "item": "https://entropydecrease.github.io/2023_10_04-theme_loveit/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "使用LoveIt作为hugo的主题",
+  "name": "使用LoveIt作为hugo的主题",
+  "description": "之前用的even没有维护，已经无法使用，所以找了一下采用loveit。以下是更新方法的简单记录:\n安装 简单起见，重新生成hugo site，之后把原来的post都copy过来。\n1 2 3 4 hugo new site entropydecrease cd entropydecrease git clone https://github.com/dillonzq/LoveIt.git themes/LoveIt cp -r ../entropydecrease.bak/content/* ./content/ 配置 修改hugo.toml即可\n因为LoveIt默认文章都是在\u0026rsquo;content/posts/\u0026lsquo;下面的，与even默认\u0026rsquo;content/post/\u0026lsquo;不同，所以要改一下：\nmv content/post content/posts\n将hugo输出的静态文件所在的文件夹public/变成一个git 版本库\n1 \u0026gt; git clone git@github.com:entropydecrease/entropydecrease.github.io.git public 使用 写文章\n更新到github\n将下面的命令放在deploy.sh中作为可执行脚本中即可。\n1 2 3 4 5 hugo \u0026amp;\u0026amp; \\ cd public \u0026amp;\u0026amp; \\ git pull \u0026amp;\u0026amp; git add . \u0026amp;\u0026amp; \\ git commit -m \u0026#34;update on [`date`]\u0026#34; git push origin main ",
+  "keywords": [
+    
+  ],
+  "articleBody": "之前用的even没有维护，已经无法使用，所以找了一下采用loveit。以下是更新方法的简单记录:\n安装 简单起见，重新生成hugo site，之后把原来的post都copy过来。\n1 2 3 4 hugo new site entropydecrease cd entropydecrease git clone https://github.com/dillonzq/LoveIt.git themes/LoveIt cp -r ../entropydecrease.bak/content/* ./content/ 配置 修改hugo.toml即可\n因为LoveIt默认文章都是在’content/posts/‘下面的，与even默认’content/post/‘不同，所以要改一下：\nmv content/post content/posts\n将hugo输出的静态文件所在的文件夹public/变成一个git 版本库\n1 \u003e git clone git@github.com:entropydecrease/entropydecrease.github.io.git public 使用 写文章\n更新到github\n将下面的命令放在deploy.sh中作为可执行脚本中即可。\n1 2 3 4 5 hugo \u0026\u0026 \\ cd public \u0026\u0026 \\ git pull \u0026\u0026 git add . \u0026\u0026 \\ git commit -m \"update on [`date`]\" git push origin main ",
+  "wordCount" : "70",
+  "inLanguage": "en",
+  "datePublished": "2023-10-04T13:39:45+08:00",
+  "dateModified": "2023-10-04T13:39:45+08:00",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://entropydecrease.github.io/2023_10_04-theme_loveit/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Entropy Decrease",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://entropydecrease.github.io/favicon.ico"
+    }
+  }
+}
+</script>
+</head>
+
+<body class="" id="top">
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.body.classList.add('dark');
+    } else if (localStorage.getItem("pref-theme") === "light") {
+        document.body.classList.remove('dark')
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.body.classList.add('dark');
+    }
+
+</script>
+
+<header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="https://entropydecrease.github.io/" accesskey="h" title="Entropy Decrease (Alt + H)">Entropy Decrease</a>
+            <div class="logo-switches">
+                <button id="theme-toggle" accesskey="t" title="(Alt + T)">
+                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <ul id="menu">
+            <li>
+                <a href="https://entropydecrease.github.io/" title="Home">
+                    <span>Home</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://entropydecrease.github.io/posts/" title="Posts">
+                    <span>Posts</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://entropydecrease.github.io/tags/" title="Tags">
+                    <span>Tags</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://entropydecrease.github.io/categories/" title="Categories">
+                    <span>Categories</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://entropydecrease.github.io/about" title="About">
+                    <span>About</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</header>
+<main class="main">
+
+<article class="post-single">
+  <header class="post-header">
+    
+    <h1 class="post-title entry-hint-parent">
+      使用LoveIt作为hugo的主题
+    </h1>
+    <div class="post-meta"><span title='2023-10-04 13:39:45 +0800 CST'>2023-10-04</span>
+
+</div>
+  </header> 
+  <div class="post-content"><p>之前用的even没有维护，已经无法使用，所以找了一下采用loveit。以下是更新方法的简单记录:</p>
+<h2 id="安装">安装<a hidden class="anchor" aria-hidden="true" href="#安装">#</a></h2>
+<p>简单起见，重新生成hugo site，之后把原来的post都copy过来。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">hugo new site entropydecrease
+</span></span><span class="line"><span class="cl"><span class="nb">cd</span> entropydecrease
+</span></span><span class="line"><span class="cl">git clone https://github.com/dillonzq/LoveIt.git themes/LoveIt
+</span></span><span class="line"><span class="cl">cp -r ../entropydecrease.bak/content/* ./content/
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h2 id="配置">配置<a hidden class="anchor" aria-hidden="true" href="#配置">#</a></h2>
+<ol>
+<li>
+<p>修改hugo.toml即可</p>
+</li>
+<li>
+<p>因为LoveIt默认文章都是在&rsquo;content/posts/&lsquo;下面的，与even默认&rsquo;content/post/&lsquo;不同，所以要改一下：</p>
+<blockquote>
+<p>mv content/post content/posts</p>
+</blockquote>
+</li>
+<li>
+<p>将hugo输出的静态文件所在的文件夹public/变成一个git 版本库</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">&gt; git clone git@github.com:entropydecrease/entropydecrease.github.io.git public
+</span></span></code></pre></td></tr></table>
+</div>
+</div></li>
+</ol>
+<h2 id="使用">使用<a hidden class="anchor" aria-hidden="true" href="#使用">#</a></h2>
+<ol>
+<li>
+<p>写文章</p>
+</li>
+<li>
+<p>更新到github</p>
+<p>将下面的命令放在deploy.sh中作为可执行脚本中即可。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">hugo <span class="o">&amp;&amp;</span> <span class="se">\
+</span></span></span><span class="line"><span class="cl"><span class="se"></span><span class="nb">cd</span> public <span class="o">&amp;&amp;</span> <span class="se">\
+</span></span></span><span class="line"><span class="cl"><span class="se"></span>git pull <span class="o">&amp;&amp;</span> git add . <span class="o">&amp;&amp;</span> <span class="se">\
+</span></span></span><span class="line"><span class="cl"><span class="se"></span>git commit -m <span class="s2">&#34;update on [`date`]&#34;</span> 
+</span></span><span class="line"><span class="cl">git push origin main
+</span></span></code></pre></td></tr></table>
+</div>
+</div></li>
+</ol>
+
+
+  </div>
+
+  <footer class="post-footer">
+    <ul class="post-tags">
+    </ul>
+  </footer>
+</article>
+    </main>
+    
+<footer class="footer">
+        <span>&copy; 2024 <a href="https://entropydecrease.github.io/">Entropy Decrease</a></span> · 
+
+    <span>
+        Powered by
+        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
+        <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>
+    </span>
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+        <path d="M12 6H0l6-6z" />
+    </svg>
+</a>
+
+<script>
+    let menu = document.getElementById('menu')
+    if (menu) {
+        menu.scrollLeft = localStorage.getItem("menu-scroll-position");
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
+</script>
+<script>
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        if (document.body.className.includes("dark")) {
+            document.body.classList.remove('dark');
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            document.body.classList.add('dark');
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+</script>
+</body>
+
+</html>

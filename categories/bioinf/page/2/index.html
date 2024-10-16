@@ -7,8 +7,8 @@
 <meta name="robots" content="index, follow">
 <title>Bioinf | Entropy Decrease</title>
 <meta name="keywords" content="">
-<meta name="description" content="Theme PaperMod - https://github.com/adityatelange/hugo-PaperMod">
-<meta name="author" content="Entropy Decrease">
+<meta name="description" content="阅读、思考、写作，都是熵减的过程">
+<meta name="author" content="">
 <link rel="canonical" href="https://entropydecrease.github.io/categories/bioinf/">
 <link crossorigin="anonymous" href="/assets/css/stylesheet.fc220c15db4aef0318bbf30adc45d33d4d7c88deff3238b23eb255afdc472ca6.css" integrity="sha256-/CIMFdtK7wMYu/MK3EXTPU18iN7/MjiyPrJVr9xHLKY=" rel="preload stylesheet" as="style">
 <link rel="icon" href="https://entropydecrease.github.io/favicon.ico">
@@ -57,16 +57,13 @@
 
     </style>
 </noscript><meta property="og:title" content="Bioinf" />
-<meta property="og:description" content="Theme PaperMod - https://github.com/adityatelange/hugo-PaperMod" />
+<meta property="og:description" content="阅读、思考、写作，都是熵减的过程" />
 <meta property="og:type" content="website" />
-<meta property="og:url" content="https://entropydecrease.github.io/categories/bioinf/" />
-<meta property="og:image" content="https://entropydecrease.github.io/images/papermod-cover.png" />
+<meta property="og:url" content="https://entropydecrease.github.io/categories/bioinf/" /><meta property="og:site_name" content="Entropy Decrease" />
 
-
-<meta name="twitter:card" content="summary_large_image" />
-<meta name="twitter:image" content="https://entropydecrease.github.io/images/papermod-cover.png" />
+<meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Bioinf"/>
-<meta name="twitter:description" content="Theme PaperMod - https://github.com/adityatelange/hugo-PaperMod"/>
+<meta name="twitter:description" content="阅读、思考、写作，都是熵减的过程"/>
 
 </head>
 
@@ -111,18 +108,23 @@
         </div>
         <ul id="menu">
             <li>
-                <a href="https://entropydecrease.github.io/posts" title="Posts">
-                    <span>Posts</span>
+                <a href="https://entropydecrease.github.io/" title="Home">
+                    <span>Home</span>
                 </a>
             </li>
             <li>
-                <a href="https://entropydecrease.github.io/categories" title="Categories">
-                    <span>Categories</span>
+                <a href="https://entropydecrease.github.io/posts/" title="Posts">
+                    <span>Posts</span>
                 </a>
             </li>
             <li>
                 <a href="https://entropydecrease.github.io/tags/" title="Tags">
                     <span>Tags</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://entropydecrease.github.io/categories/" title="Categories">
+                    <span>Categories</span>
                 </a>
             </li>
             <li>
@@ -134,17 +136,9 @@
     </nav>
 </header>
 <main class="main"> 
-<header class="page-header"><div class="breadcrumbs"><a href="https://entropydecrease.github.io/">Home</a>&nbsp;»&nbsp;<a href="https://entropydecrease.github.io/categories/">Categories</a></div>
+<header class="page-header">
   <h1>
     Bioinf
-    <a href="/categories/bioinf/index.xml" title="RSS" aria-label="RSS">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-        stroke-linecap="round" stroke-linejoin="round" height="23">
-        <path d="M4 11a9 9 0 0 1 9 9" />
-        <path d="M4 4a16 16 0 0 1 16 16" />
-        <circle cx="5" cy="19" r="1" />
-      </svg>
-    </a>
   </h1>
 </header>
 
@@ -158,20 +152,20 @@
 * forget to check both strands * generate random genomic sites without avoiding masked (NNN) gaps * confuse genome freezes and even species * try to see which headers it contained by &#39;grep &gt; some.fasta&#39; will destory the .fasta file * a lot of off-by-one errors due to switching between formats: Bed is 0 based; GFF/GTF are 1-based * Trusting that a downloaded file is actually fully downloaded * Trusting that an aligner will accept a list of query files instead of just taking the first and ignoring the rest (quiz: which ones am i talking about?) * Assuming that the quality scores in a FASTQ file are from a great Sanger-encoded run instead of a very poor Illumina-1.3 run * Assuming chr1 is followed by chr2 not chr10 * off-by-one errors * regex errors * parsing a complex alignment/file format incorrectly (e.g. BLAST or GenBank, probably the original rationale for developing BioPerl) * failing to account for strand * failing to revcomp sequences * failing to account for the last element in a file (because of a improper loop condition or no EOL character on last line) * failing to account for OS dependent line breaks * using the wrong assembly/annotation/release * using the wrong genome coordinate system * using the wrong file (multiple versions, version skew) * failing to account for nested/intercalated annotation features (e.g. genes) * assuming all jobs have completed on a cluster * deleting files * not randomizing your data properly * improper use of statistical tests * not documenting methods fully (to check and correct all of the above) * Run a batch BLAST job and forgetting to put the &#34;-o something.out&#34; option. Then switching off the monitor and coming the next day to see a bunch of characters in my terminal * &#34;tar -zxvf&#34; without checking the tar file before, I have decompressed thousands of files in my current directory assuming they came in their own folder. * Using grep to find sequence (or other) IDs without using the -w switch: grep &#39;seq12&#39; will also find seq121, seq122 and so on. * IMHO being off by one is the emperor of all bioinformatics mistakes - it rules them all - and probably causes tens of millions of dollars in wasted effort * having manual components to an analysis pipeline (editing data sets running scripts manually) * Not dealing with error conditions at all. This is one thing that I really noticed when I started with bioinformatics; code that would just merrily continue when it hit incorrect data and output gibberish or fail far away from the bad data. A debugging nightmare. * Not testing edge and corner cases for input data * Assuming that your input data is sane; I&#39;ve run into all sorts of inconsistency issues with public data sets (i.e. protein domains at positions off the end of the protein, etc). Usually fixed promptly if you complain but you&#39;ve got to find them first. * One mistake: not looking to see that the *0x4* bit in the bitflag column of a SAM (or BAM) file indicates the entry is mapped. RNAME, CIGAR, and POS may be set to something non-null (an actual string!) but these are not meaningful if the 0x4 flag says the read is unmapped. 另外一个需要特别注意的是：gene name might be hacked by MS Excel.
 ...</p>
   </div>
-  <footer class="entry-footer"><span title='2015-03-14 00:00:00 +0000 UTC'>March 14, 2015</span>&nbsp;·&nbsp;3 min&nbsp;·&nbsp;Entropy Decrease</footer>
-  <a class="entry-link" aria-label="post link to bioinf常见的一些错误" href="https://entropydecrease.github.io/posts/common_bioinf_mistakes/"></a>
+  <footer class="entry-footer"><span title='2015-03-14 00:00:00 +0000 UTC'>2015-03-14</span></footer>
+  <a class="entry-link" aria-label="post link to bioinf常见的一些错误" href="https://entropydecrease.github.io/2015_03_14-common_bioinf_mistakes/"></a>
 </article>
 <footer class="page-footer">
   <nav class="pagination">
     <a class="prev" href="https://entropydecrease.github.io/categories/bioinf/">
-      «&nbsp;Prev&nbsp;1/2
+      «&nbsp;Prev&nbsp;
     </a>
   </nav>
 </footer>
     </main>
     
 <footer class="footer">
-        <span>© [Entropy Decrease]</span> · 
+        <span>&copy; 2024 <a href="https://entropydecrease.github.io/">Entropy Decrease</a></span> · 
 
     <span>
         Powered by

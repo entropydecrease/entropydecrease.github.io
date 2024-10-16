@@ -4,21 +4,15 @@
     <title>Clinical on Entropy Decrease</title>
     <link>https://entropydecrease.github.io/categories/clinical/</link>
     <description>Recent content in Clinical on Entropy Decrease</description>
-    <image>
-      <title>Entropy Decrease</title>
-      <url>https://entropydecrease.github.io/images/papermod-cover.png</url>
-      <link>https://entropydecrease.github.io/images/papermod-cover.png</link>
-    </image>
     <generator>Hugo -- 0.135.0</generator>
     <language>en</language>
-    <copyright>[Entropy Decrease]</copyright>
     <lastBuildDate>Fri, 28 Apr 2023 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://entropydecrease.github.io/categories/clinical/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>肿瘤早诊的思路</title>
-      <link>https://entropydecrease.github.io/posts/cancer_early_diagnostics/</link>
+      <link>https://entropydecrease.github.io/2023_04_28-cancer_early_diagnostics/</link>
       <pubDate>Fri, 28 Apr 2023 00:00:00 +0000</pubDate>
-      <guid>https://entropydecrease.github.io/posts/cancer_early_diagnostics/</guid>
+      <guid>https://entropydecrease.github.io/2023_04_28-cancer_early_diagnostics/</guid>
       <description>&lt;p&gt;全国临床分子诊断技术及其规范化应用高峰论坛，听了邵建永的讲座，有一些启发，总结一下：&lt;/p&gt;
 &lt;h2 id=&#34;肿瘤早诊的思路&#34;&gt;肿瘤早诊的思路&lt;/h2&gt;
 &lt;p&gt;1）做早诊，而不是早筛&lt;/p&gt;
@@ -57,9 +51,9 @@
     </item>
     <item>
       <title>邵阳对世和MRD的介绍 - MRD的技术创新与应用案例分享</title>
-      <link>https://entropydecrease.github.io/posts/geneseeq_mrd/</link>
+      <link>https://entropydecrease.github.io/2023_04_27-geneseeq_mrd/</link>
       <pubDate>Thu, 27 Apr 2023 00:00:00 +0000</pubDate>
-      <guid>https://entropydecrease.github.io/posts/geneseeq_mrd/</guid>
+      <guid>https://entropydecrease.github.io/2023_04_27-geneseeq_mrd/</guid>
       <description>&lt;h3 id=&#34;个人总结&#34;&gt;个人总结&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;对个体化panel与固定panel的优劣，做了全面而深入的分析&lt;/li&gt;

@@ -4,21 +4,15 @@
     <title>Bcftools on Entropy Decrease</title>
     <link>https://entropydecrease.github.io/tags/bcftools/</link>
     <description>Recent content in Bcftools on Entropy Decrease</description>
-    <image>
-      <title>Entropy Decrease</title>
-      <url>https://entropydecrease.github.io/images/papermod-cover.png</url>
-      <link>https://entropydecrease.github.io/images/papermod-cover.png</link>
-    </image>
     <generator>Hugo -- 0.135.0</generator>
     <language>en</language>
-    <copyright>[Entropy Decrease]</copyright>
     <lastBuildDate>Fri, 01 Oct 2021 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://entropydecrease.github.io/tags/bcftools/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>bcftools notes (转载)</title>
-      <link>https://entropydecrease.github.io/posts/bcftools_notes/</link>
+      <link>https://entropydecrease.github.io/2021_10_01-bcftools_notes/</link>
       <pubDate>Fri, 01 Oct 2021 00:00:00 +0000</pubDate>
-      <guid>https://entropydecrease.github.io/posts/bcftools_notes/</guid>
+      <guid>https://entropydecrease.github.io/2021_10_01-bcftools_notes/</guid>
       <description>&lt;p&gt;copied from &lt;code&gt;https://gist.github.com/elowy01/93922762e131d7abd3c7e8e166a74a0b&lt;/code&gt;&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;

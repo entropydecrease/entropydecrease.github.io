@@ -4,21 +4,15 @@
     <title>Git on Entropy Decrease</title>
     <link>https://entropydecrease.github.io/tags/git/</link>
     <description>Recent content in Git on Entropy Decrease</description>
-    <image>
-      <title>Entropy Decrease</title>
-      <url>https://entropydecrease.github.io/images/papermod-cover.png</url>
-      <link>https://entropydecrease.github.io/images/papermod-cover.png</link>
-    </image>
     <generator>Hugo -- 0.135.0</generator>
     <language>en</language>
-    <copyright>[Entropy Decrease]</copyright>
     <lastBuildDate>Wed, 25 Mar 2015 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://entropydecrease.github.io/tags/git/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>git tips</title>
-      <link>https://entropydecrease.github.io/posts/git_tips/</link>
+      <link>https://entropydecrease.github.io/2015_03_25-git_tips/</link>
       <pubDate>Wed, 25 Mar 2015 00:00:00 +0000</pubDate>
-      <guid>https://entropydecrease.github.io/posts/git_tips/</guid>
+      <guid>https://entropydecrease.github.io/2015_03_25-git_tips/</guid>
       <description>&lt;h1 id=&#34;从现有仓库克隆&#34;&gt;从现有仓库克隆&lt;/h1&gt;
 &lt;pre&gt;&lt;code&gt;$ git clone git://github.com/schacon/grit.git
 

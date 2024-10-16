@@ -4,21 +4,15 @@
     <title>Tools on Entropy Decrease</title>
     <link>https://entropydecrease.github.io/categories/tools/</link>
     <description>Recent content in Tools on Entropy Decrease</description>
-    <image>
-      <title>Entropy Decrease</title>
-      <url>https://entropydecrease.github.io/images/papermod-cover.png</url>
-      <link>https://entropydecrease.github.io/images/papermod-cover.png</link>
-    </image>
     <generator>Hugo -- 0.135.0</generator>
     <language>en</language>
-    <copyright>[Entropy Decrease]</copyright>
     <lastBuildDate>Thu, 15 Jun 2023 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://entropydecrease.github.io/categories/tools/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>mosh: Did not find mosh server startup message</title>
-      <link>https://entropydecrease.github.io/posts/2023_06_15-mosh_startup_message/</link>
+      <link>https://entropydecrease.github.io/2023_06_15-mosh_startup_message/</link>
       <pubDate>Thu, 15 Jun 2023 00:00:00 +0000</pubDate>
-      <guid>https://entropydecrease.github.io/posts/2023_06_15-mosh_startup_message/</guid>
+      <guid>https://entropydecrease.github.io/2023_06_15-mosh_startup_message/</guid>
       <description>&lt;p&gt;Mac使用mosh登录新的服务器，发现如下错误：&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;bash: warning: setlocale: LC_ALL: cannot change locale (en_US.UTF-8)

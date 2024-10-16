@@ -4,21 +4,15 @@
     <title>Tech on Entropy Decrease</title>
     <link>https://entropydecrease.github.io/categories/tech/</link>
     <description>Recent content in Tech on Entropy Decrease</description>
-    <image>
-      <title>Entropy Decrease</title>
-      <url>https://entropydecrease.github.io/images/papermod-cover.png</url>
-      <link>https://entropydecrease.github.io/images/papermod-cover.png</link>
-    </image>
     <generator>Hugo -- 0.135.0</generator>
     <language>en</language>
-    <copyright>[Entropy Decrease]</copyright>
     <lastBuildDate>Sat, 08 Apr 2023 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://entropydecrease.github.io/categories/tech/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>图解三代测序（Nanopore） (转载作为备份)</title>
-      <link>https://entropydecrease.github.io/posts/ont_basics/</link>
+      <link>https://entropydecrease.github.io/2023_04_08-ont_basics/</link>
       <pubDate>Sat, 08 Apr 2023 00:00:00 +0000</pubDate>
-      <guid>https://entropydecrease.github.io/posts/ont_basics/</guid>
+      <guid>https://entropydecrease.github.io/2023_04_08-ont_basics/</guid>
       <description>&lt;p&gt;转载自 &lt;a href=&#34;https://www.cnblogs.com/baimoc/p/14700618.html&#34;&gt;baimoc - 博客园&lt;/a&gt;&lt;/p&gt;
 &lt;hr&gt;
 &lt;h2 id=&#34;一测序原理&#34;&gt;一、测序原理&lt;/h2&gt;
@@ -61,9 +55,9 @@
     </item>
     <item>
       <title>ONT相关的一些笔记</title>
-      <link>https://entropydecrease.github.io/posts/ont_notes/</link>
+      <link>https://entropydecrease.github.io/2023_04_01-ont_training_notes/</link>
       <pubDate>Sat, 01 Apr 2023 00:00:00 +0000</pubDate>
-      <guid>https://entropydecrease.github.io/posts/ont_notes/</guid>
+      <guid>https://entropydecrease.github.io/2023_04_01-ont_training_notes/</guid>
       <description>&lt;h2 id=&#34;准确度&#34;&gt;准确度&lt;/h2&gt;
 &lt;p&gt;Kit V14 + R10.4.1&lt;/p&gt;
 &lt;ul&gt;
@@ -171,9 +165,9 @@
     </item>
     <item>
       <title>ElementBio 在2022年NGS开发者大会上的介绍</title>
-      <link>https://entropydecrease.github.io/posts/elementbio_intro/</link>
+      <link>https://entropydecrease.github.io/2022_11_19-elementbio_intro/</link>
       <pubDate>Sat, 19 Nov 2022 00:00:00 +0000</pubDate>
-      <guid>https://entropydecrease.github.io/posts/elementbio_intro/</guid>
+      <guid>https://entropydecrease.github.io/2022_11_19-elementbio_intro/</guid>
       <description>&lt;p&gt;Element Bio 是一家新兴的测序仪公司，其产品具有精度高、成本低、通量高的优势，下面是创始人何敏在2022年NGS开发者大会上的介绍，讲的比较清楚。&lt;/p&gt;
 &lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;resources/a-0.jpg&#34; alt=&#34;a-0&#34;  /&gt;
 &lt;/p&gt;

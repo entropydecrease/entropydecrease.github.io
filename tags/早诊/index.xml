@@ -4,21 +4,15 @@
     <title>早诊 on Entropy Decrease</title>
     <link>https://entropydecrease.github.io/tags/%E6%97%A9%E8%AF%8A/</link>
     <description>Recent content in 早诊 on Entropy Decrease</description>
-    <image>
-      <title>Entropy Decrease</title>
-      <url>https://entropydecrease.github.io/images/papermod-cover.png</url>
-      <link>https://entropydecrease.github.io/images/papermod-cover.png</link>
-    </image>
     <generator>Hugo -- 0.135.0</generator>
     <language>en</language>
-    <copyright>[Entropy Decrease]</copyright>
     <lastBuildDate>Tue, 02 May 2023 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://entropydecrease.github.io/tags/%E6%97%A9%E8%AF%8A/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>甲基化与膀胱癌检测</title>
-      <link>https://entropydecrease.github.io/posts/methylation_and_cancer/</link>
+      <link>https://entropydecrease.github.io/2023_05_02-methylation_cancer/</link>
       <pubDate>Tue, 02 May 2023 00:00:00 +0000</pubDate>
-      <guid>https://entropydecrease.github.io/posts/methylation_and_cancer/</guid>
+      <guid>https://entropydecrease.github.io/2023_05_02-methylation_cancer/</guid>
       <description>&lt;h2 id=&#34;1-甲基化肿瘤检测产品综述&#34;&gt;1. 甲基化肿瘤检测产品综述&lt;/h2&gt;
 &lt;h3 id=&#34;11-截至2018年的国外商业化甲基化肿瘤检测&#34;&gt;1.1 截至2018年的国外商业化甲基化肿瘤检测&lt;/h3&gt;
 &lt;p&gt;Koch, A. &lt;em&gt;et al.&lt;/em&gt; Analysis of DNA methylation in cancer: location revisited. &lt;em&gt;Nat Rev Clin Oncol&lt;/em&gt; &lt;strong&gt;15&lt;/strong&gt;, 459–466 (2018).&lt;/p&gt;
@@ -28,9 +22,9 @@
     </item>
     <item>
       <title>肿瘤早诊的思路</title>
-      <link>https://entropydecrease.github.io/posts/cancer_early_diagnostics/</link>
+      <link>https://entropydecrease.github.io/2023_04_28-cancer_early_diagnostics/</link>
       <pubDate>Fri, 28 Apr 2023 00:00:00 +0000</pubDate>
-      <guid>https://entropydecrease.github.io/posts/cancer_early_diagnostics/</guid>
+      <guid>https://entropydecrease.github.io/2023_04_28-cancer_early_diagnostics/</guid>
       <description>&lt;p&gt;全国临床分子诊断技术及其规范化应用高峰论坛，听了邵建永的讲座，有一些启发，总结一下：&lt;/p&gt;
 &lt;h2 id=&#34;肿瘤早诊的思路&#34;&gt;肿瘤早诊的思路&lt;/h2&gt;
 &lt;p&gt;1）做早诊，而不是早筛&lt;/p&gt;

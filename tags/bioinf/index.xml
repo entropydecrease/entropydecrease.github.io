@@ -4,21 +4,15 @@
     <title>Bioinf on Entropy Decrease</title>
     <link>https://entropydecrease.github.io/tags/bioinf/</link>
     <description>Recent content in Bioinf on Entropy Decrease</description>
-    <image>
-      <title>Entropy Decrease</title>
-      <url>https://entropydecrease.github.io/images/papermod-cover.png</url>
-      <link>https://entropydecrease.github.io/images/papermod-cover.png</link>
-    </image>
     <generator>Hugo -- 0.135.0</generator>
     <language>en</language>
-    <copyright>[Entropy Decrease]</copyright>
     <lastBuildDate>Mon, 04 Dec 2023 16:46:43 +0000</lastBuildDate>
     <atom:link href="https://entropydecrease.github.io/tags/bioinf/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>2030 年人类基因组学的大胆预测</title>
-      <link>https://entropydecrease.github.io/posts/genomics-in-2030/</link>
+      <link>https://entropydecrease.github.io/2023_12_04-genomics_in_2030/</link>
       <pubDate>Mon, 04 Dec 2023 16:46:43 +0000</pubDate>
-      <guid>https://entropydecrease.github.io/posts/genomics-in-2030/</guid>
+      <guid>https://entropydecrease.github.io/2023_12_04-genomics_in_2030/</guid>
       <description>&lt;p&gt;&lt;a href=&#34;https://doi.org/10.1016/j.ajhg.2023.09.010&#34;&gt;https://doi.org/10.1016/j.ajhg.2023.09.010&lt;/a&gt;
 &lt;a href=&#34;https://www.genome.gov/event-calendar/Bold-Predictions-for-Human-Genomics-by-2030&#34;&gt;https://www.genome.gov/event-calendar/Bold-Predictions-for-Human-Genomics-by-2030&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Bold predictions for human genomics by 2030&lt;/strong&gt;&lt;/p&gt;
@@ -34,17 +28,17 @@
     </item>
     <item>
       <title>Civic数据库介绍</title>
-      <link>https://entropydecrease.github.io/posts/civicdb/</link>
+      <link>https://entropydecrease.github.io/2023_05_03-civicdb/</link>
       <pubDate>Wed, 03 May 2023 00:00:00 +0000</pubDate>
-      <guid>https://entropydecrease.github.io/posts/civicdb/</guid>
+      <guid>https://entropydecrease.github.io/2023_05_03-civicdb/</guid>
       <description>&lt;p&gt;Nucleic Acids Research上有civicdb最新的介绍。&lt;/p&gt;
 &lt;p&gt;Krysiak, K. &lt;em&gt;et al.&lt;/em&gt; CIViCdb 2022: evolution of an open-access cancer variant interpretation knowledgebase. &lt;em&gt;Nucleic Acids Research&lt;/em&gt; &lt;strong&gt;51&lt;/strong&gt;, D1230–D1241 (2023).&lt;/p&gt;</description>
     </item>
     <item>
       <title>bioinf常见的一些错误</title>
-      <link>https://entropydecrease.github.io/posts/common_bioinf_mistakes/</link>
+      <link>https://entropydecrease.github.io/2015_03_14-common_bioinf_mistakes/</link>
       <pubDate>Sat, 14 Mar 2015 00:00:00 +0000</pubDate>
-      <guid>https://entropydecrease.github.io/posts/common_bioinf_mistakes/</guid>
+      <guid>https://entropydecrease.github.io/2015_03_14-common_bioinf_mistakes/</guid>
       <description>&lt;p&gt;biostar上的&lt;a href=&#34;https://www.biostars.org/p/7126/&#34;&gt;这篇文章&lt;/a&gt;总结了在生物信息学日常工作中容易犯的一些共性的错误：&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;* forget to check both strands
 

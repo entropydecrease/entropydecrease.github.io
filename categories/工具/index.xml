@@ -4,29 +4,33 @@
     <title>工具 on Entropy Decrease</title>
     <link>https://entropydecrease.github.io/categories/%E5%B7%A5%E5%85%B7/</link>
     <description>Recent content in 工具 on Entropy Decrease</description>
-    <image>
-      <title>Entropy Decrease</title>
-      <url>https://entropydecrease.github.io/images/papermod-cover.png</url>
-      <link>https://entropydecrease.github.io/images/papermod-cover.png</link>
-    </image>
     <generator>Hugo -- 0.135.0</generator>
     <language>en</language>
-    <copyright>[Entropy Decrease]</copyright>
     <lastBuildDate>Wed, 04 Oct 2023 13:39:45 +0800</lastBuildDate>
     <atom:link href="https://entropydecrease.github.io/categories/%E5%B7%A5%E5%85%B7/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>使用LoveIt作为hugo的主题</title>
-      <link>https://entropydecrease.github.io/posts/2023_10_04-theme_loveit/</link>
+      <link>https://entropydecrease.github.io/2023_10_04-theme_loveit/</link>
       <pubDate>Wed, 04 Oct 2023 13:39:45 +0800</pubDate>
-      <guid>https://entropydecrease.github.io/posts/2023_10_04-theme_loveit/</guid>
+      <guid>https://entropydecrease.github.io/2023_10_04-theme_loveit/</guid>
       <description>&lt;p&gt;之前用的even没有维护，已经无法使用，所以找了一下采用loveit。以下是更新方法的简单记录:&lt;/p&gt;
 &lt;h2 id=&#34;安装&#34;&gt;安装&lt;/h2&gt;
 &lt;p&gt;简单起见，重新生成hugo site，之后把原来的post都copy过来。&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;hugo new site entropydecrease
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;hugo new site entropydecrease
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nb&#34;&gt;cd&lt;/span&gt; entropydecrease
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;git clone https://github.com/dillonzq/LoveIt.git themes/LoveIt
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;cp -r ../entropydecrease.bak/content/* ./content/
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;配置&#34;&gt;配置&lt;/h2&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h2 id=&#34;配置&#34;&gt;配置&lt;/h2&gt;
 &lt;ol&gt;
 &lt;li&gt;
 &lt;p&gt;修改hugo.toml即可&lt;/p&gt;
@@ -39,8 +43,15 @@
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;将hugo输出的静态文件所在的文件夹public/变成一个git 版本库&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&amp;gt; git clone git@github.com:entropydecrease/entropydecrease.github.io.git public
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/li&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&amp;gt; git clone git@github.com:entropydecrease/entropydecrease.github.io.git public
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;/li&gt;
 &lt;/ol&gt;
 &lt;h2 id=&#34;使用&#34;&gt;使用&lt;/h2&gt;
 &lt;ol&gt;
@@ -50,19 +61,30 @@
 &lt;li&gt;
 &lt;p&gt;更新到github&lt;/p&gt;
 &lt;p&gt;将下面的命令放在deploy.sh中作为可执行脚本中即可。&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;hugo &lt;span class=&#34;o&#34;&gt;&amp;amp;&amp;amp;&lt;/span&gt; &lt;span class=&#34;se&#34;&gt;\
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;5
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;hugo &lt;span class=&#34;o&#34;&gt;&amp;amp;&amp;amp;&lt;/span&gt; &lt;span class=&#34;se&#34;&gt;\
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;se&#34;&gt;&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;cd&lt;/span&gt; public &lt;span class=&#34;o&#34;&gt;&amp;amp;&amp;amp;&lt;/span&gt; &lt;span class=&#34;se&#34;&gt;\
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;se&#34;&gt;&lt;/span&gt;git pull &lt;span class=&#34;o&#34;&gt;&amp;amp;&amp;amp;&lt;/span&gt; git add . &lt;span class=&#34;o&#34;&gt;&amp;amp;&amp;amp;&lt;/span&gt; &lt;span class=&#34;se&#34;&gt;\
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;se&#34;&gt;&lt;/span&gt;git commit -m &lt;span class=&#34;s2&#34;&gt;&amp;#34;update on [`date`]&amp;#34;&lt;/span&gt; 
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;git push origin main
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/li&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;/li&gt;
 &lt;/ol&gt;</description>
     </item>
     <item>
       <title>Hugo 关于 google_news的错误</title>
-      <link>https://entropydecrease.github.io/posts/google_news_error/</link>
+      <link>https://entropydecrease.github.io/2023_03_13-even_googlenews_error/</link>
       <pubDate>Mon, 13 Mar 2023 22:25:19 +0800</pubDate>
-      <guid>https://entropydecrease.github.io/posts/google_news_error/</guid>
+      <guid>https://entropydecrease.github.io/2023_03_13-even_googlenews_error/</guid>
       <description>&lt;p&gt;hugo 前段时间会报错 &lt;code&gt;&amp;quot;_internal/google_news.html&amp;quot;&lt;/code&gt;:&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;google_news internal template should be deprecated
 &lt;/code&gt;&lt;/pre&gt;
@@ -79,20 +101,31 @@
     </item>
     <item>
       <title>homebrew 使用镜像的方式</title>
-      <link>https://entropydecrease.github.io/posts/homebrew_mirror/</link>
+      <link>https://entropydecrease.github.io/2023_03_13-homebrew_new_way_to_use_mirror/</link>
       <pubDate>Mon, 13 Mar 2023 22:01:49 +0800</pubDate>
-      <guid>https://entropydecrease.github.io/posts/homebrew_mirror/</guid>
+      <guid>https://entropydecrease.github.io/2023_03_13-homebrew_new_way_to_use_mirror/</guid>
       <description>&lt;p&gt;Homebrew也在不停进化，现在使用&lt;a href=&#34;https://mirrors.tuna.tsinghua.edu.cn/help/homebrew/&#34;&gt;清华镜像&lt;/a&gt;已经很方便了&lt;/p&gt;
 &lt;h2 id=&#34;日常使用&#34;&gt;日常使用&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;
 &lt;p&gt;可设置如下环境变量使用本站提供的 Homebrew 镜像：&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nb&#34;&gt;export&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;HOMEBREW_INSTALL_FROM_API&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;1&lt;/span&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;5
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nb&#34;&gt;export&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;HOMEBREW_INSTALL_FROM_API&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;1&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nb&#34;&gt;export&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;HOMEBREW_API_DOMAIN&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;https://mirrors.tuna.tsinghua.edu.cn/homebrew-bottles/api&amp;#34;&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nb&#34;&gt;export&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;HOMEBREW_BOTTLE_DOMAIN&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;https://mirrors.tuna.tsinghua.edu.cn/homebrew-bottles&amp;#34;&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nb&#34;&gt;export&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;HOMEBREW_BREW_GIT_REMOTE&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;https://mirrors.tuna.tsinghua.edu.cn/git/homebrew/brew.git&amp;#34;&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nb&#34;&gt;export&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;HOMEBREW_CORE_GIT_REMOTE&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;https://mirrors.tuna.tsinghua.edu.cn/git/homebrew/homebrew-core.git&amp;#34;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/li&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h2 id=&#34;首次安装-homebrew--linuxbrew&#34;&gt;首次安装 Homebrew / Linuxbrew&lt;/h2&gt;
 &lt;ul&gt;
@@ -103,18 +136,29 @@
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;接着，在终端输入以下几行命令设置环境变量：&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nb&#34;&gt;export&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;HOMEBREW_INSTALL_FROM_API&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;1&lt;/span&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;5
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nb&#34;&gt;export&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;HOMEBREW_INSTALL_FROM_API&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;1&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nb&#34;&gt;export&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;HOMEBREW_API_DOMAIN&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;https://mirrors.tuna.tsinghua.edu.cn/homebrew-bottles/api&amp;#34;&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nb&#34;&gt;export&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;HOMEBREW_BOTTLE_DOMAIN&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;https://mirrors.tuna.tsinghua.edu.cn/homebrew-bottles&amp;#34;&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nb&#34;&gt;export&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;HOMEBREW_BREW_GIT_REMOTE&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;https://mirrors.tuna.tsinghua.edu.cn/git/homebrew/brew.git&amp;#34;&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nb&#34;&gt;export&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;HOMEBREW_CORE_GIT_REMOTE&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;https://mirrors.tuna.tsinghua.edu.cn/git/homebrew/homebrew-core.git&amp;#34;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;注：自 brew 4.0 起，HOMEBREW_INSTALL_FROM_API 会成为默认行为，无需设置；大部分用户无需再克隆 homebrew/core 仓库，故无需设置 HOMEBREW_CORE_GIT_REMOTE 环境变量。但若需要运行 brew 的开发命令或者 brew 安装在非官方支持的默认 prefix 位置，则仍需设置 HOMEBREW_CORE_GIT_REMOTE 环境变量；如果不想通过 API 安装，可以设置 HOMEBREW_NO_INSTALL_FROM_API=1。&lt;/p&gt;</description>
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;注：自 brew 4.0 起，HOMEBREW_INSTALL_FROM_API 会成为默认行为，无需设置；大部分用户无需再克隆 homebrew/core 仓库，故无需设置 HOMEBREW_CORE_GIT_REMOTE 环境变量。但若需要运行 brew 的开发命令或者 brew 安装在非官方支持的默认 prefix 位置，则仍需设置 HOMEBREW_CORE_GIT_REMOTE 环境变量；如果不想通过 API 安装，可以设置 HOMEBREW_NO_INSTALL_FROM_API=1。&lt;/p&gt;</description>
     </item>
     <item>
       <title>破解typora</title>
-      <link>https://entropydecrease.github.io/posts/crack_typora/</link>
+      <link>https://entropydecrease.github.io/2023_02_23-crack_typora/</link>
       <pubDate>Thu, 23 Feb 2023 00:00:00 +0000</pubDate>
-      <guid>https://entropydecrease.github.io/posts/crack_typora/</guid>
+      <guid>https://entropydecrease.github.io/2023_02_23-crack_typora/</guid>
       <description>&lt;p&gt;基于electron的app有一个问题，没有很好的隐藏源码的机制，所以typora收费之后，破解版层出不穷。&lt;/p&gt;
 &lt;p&gt;网上搜了一下，针对Mac：&lt;/p&gt;
 &lt;ol&gt;
@@ -122,20 +166,30 @@
 &lt;li&gt;打开typora，确定能正常运行，完全退出&lt;/li&gt;
 &lt;li&gt;修改文件&lt;/li&gt;
 &lt;/ol&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;$ &lt;span class=&#34;nb&#34;&gt;cd&lt;/span&gt; /Applications/Typora.app/Contents/Resources/TypeMark/page-dist/static/js
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;$ &lt;span class=&#34;nb&#34;&gt;cd&lt;/span&gt; /Applications/Typora.app/Contents/Resources/TypeMark/page-dist/static/js
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;$ mv LicenseIndex.180dd4c7.c7ff4102.chunk.js LicenseIndex.180dd4c7.c7ff4102.chunk.js.bak
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;$ vim LicenseIndex.180dd4c7.c7ff4102.chunk.js
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# replace `e.hasActivated=&amp;#34;true&amp;#34;==e.hasActivated` with `e.hasActivated=&amp;#34;true&amp;#34;==&amp;#34;true&amp;#34;`&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ol start=&#34;4&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;ol start=&#34;4&#34;&gt;
 &lt;li&gt;再打开typora，有可能会有错误信息说文件被修改，但是我打开又关闭几次，不知道怎么弄的，就不再出现此错误信息了。虽然编辑页面右下角显示“unregistered”，但是点击后会显示已经激活。&lt;/li&gt;
 &lt;li&gt;typora确实好用。假如以后这次破解不能用了，我就买正版了。&lt;/li&gt;
 &lt;/ol&gt;</description>
     </item>
     <item>
       <title>下载m3u8格式的视频文件并合并为mp4</title>
-      <link>https://entropydecrease.github.io/posts/download_m3u8/</link>
+      <link>https://entropydecrease.github.io/2023_02_07-download_m3u8/</link>
       <pubDate>Tue, 07 Feb 2023 18:25:57 +0800</pubDate>
-      <guid>https://entropydecrease.github.io/posts/download_m3u8/</guid>
+      <guid>https://entropydecrease.github.io/2023_02_07-download_m3u8/</guid>
       <description>&lt;p&gt;尝试了一下下载网络的视频，以illumina的一个视频为例：&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;&lt;a href=&#34;https://www.illumina.vh.sauos.com/watch/205&#34;&gt;https://www.illumina.vh.sauos.com/watch/205&lt;/a&gt;&lt;/p&gt;
@@ -146,9 +200,36 @@
 &lt;p&gt;&lt;a href=&#34;https://tehlsvodhls02.vhallyun.com/vhallyun/vhallrecord/lss_27f054bb/20220724124221_a018e830/record.m3u8?token=2A75182F_MjE3MTIwOTg2XzYzRUI1N0Q2X1lUQXhPR1U0TXpBX2FtOXBibDgzTWpBeE9UUXdORElfdm9k&#34;&gt;https://tehlsvodhls02.vhallyun.com/vhallyun/vhallrecord/lss_27f054bb/20220724124221_a018e830/record.m3u8?token=2A75182F_MjE3MTIwOTg2XzYzRUI1N0Q2X1lUQXhPR1U0TXpBX2FtOXBibDgzTWpBeE9UUXdORElfdm9k&lt;/a&gt;&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;p&gt;下载该文件：&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;aria2c -c &lt;span class=&#34;s1&#34;&gt;&amp;#39;https://tehlsvodhls02.vhallyun.com/vhallyun/vhallrecord/lss_27f054bb/20220724124221_a018e830/record.m3u8?token=2A75182F_MjE3MTIwOTg2XzYzRUI1N0Q2X1lUQXhPR1U0TXpBX2FtOXBibDgzTWpBeE9UUXdORElfdm9k&amp;#39;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;打开这个文件，可以看到里面是如下的格式：&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-txt&#34; data-lang=&#34;txt&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;#EXTM3U
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;aria2c -c &lt;span class=&#34;s1&#34;&gt;&amp;#39;https://tehlsvodhls02.vhallyun.com/vhallyun/vhallrecord/lss_27f054bb/20220724124221_a018e830/record.m3u8?token=2A75182F_MjE3MTIwOTg2XzYzRUI1N0Q2X1lUQXhPR1U0TXpBX2FtOXBibDgzTWpBeE9UUXdORElfdm9k&amp;#39;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;打开这个文件，可以看到里面是如下的格式：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt; 1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 7
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 8
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 9
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;10
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;11
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;12
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;13
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;14
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;15
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;16
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-txt&#34; data-lang=&#34;txt&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;#EXTM3U
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;#EXT-X-VERSION:3
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;#EXT-X-TARGETDURATION:20
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;#EXT-X-MEDIA-SEQUENCE:0
@@ -164,23 +245,27 @@
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;/vhallyun/vhallhls/ls/s_/27/lss_27f054bb/lss_27f054bb/20220724084900103860/livestream000011.ts
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;#EXTINF:5.880000,
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;/vhallyun/vhallhls/ls/s_/27/lss_27f054bb/lss_27f054bb/20220724084900103860/livestream000012.ts
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;表头信息可以忽略，我猜测&lt;code&gt;#EXTINF:4.520000&lt;/code&gt;是每一个视频文件的长度，紧接的下一行是视频的路径，但是没有hostname。&lt;/p&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;表头信息可以忽略，我猜测&lt;code&gt;#EXTINF:4.520000&lt;/code&gt;是每一个视频文件的长度，紧接的下一行是视频的路径，但是没有hostname。&lt;/p&gt;
 &lt;h2 id=&#34;下载ts文件&#34;&gt;下载ts文件&lt;/h2&gt;
 &lt;p&gt;观察一下m3u8文件的地址，前面一段是&lt;code&gt;https://tehlsvodhls02.vhallyun.com/vhallyun/&lt;/code&gt;，所以我猜测hostname就是&lt;code&gt;https://tehlsvodhls02.vhallyun.com&lt;/code&gt;，后面下载了一个ts文件，发现是正确的。&lt;/p&gt;
 &lt;p&gt;下载的ts文件，转换成mp4文件:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;ffmpeg -i livestream002243.ts -acodec copy -vcodec copy -absf aac_adtstoasc livestream002243.mp4
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;从m3u8文件中得到ts文件名，并构造完整的url：&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt; -s url_list.txt &lt;span class=&#34;o&#34;&gt;]&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;||&lt;/span&gt; &lt;span class=&#34;se&#34;&gt;\
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;se&#34;&gt;&lt;/span&gt;	grep -v &lt;span class=&#34;s1&#34;&gt;&amp;#39;^#EXTM3U&amp;#39;&lt;/span&gt; record.m3u8 &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt; grep -v &lt;span class=&#34;s1&#34;&gt;&amp;#39;^#EXT-X&amp;#39;&lt;/span&gt; &lt;span class=&#34;se&#34;&gt;\
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;se&#34;&gt;&lt;/span&gt;	&lt;span class=&#34;p&#34;&gt;|&lt;/span&gt; tr -d &lt;span class=&#34;s1&#34;&gt;&amp;#39;\n&amp;#39;&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt; sed &lt;span class=&#34;s1&#34;&gt;&amp;#39;s/#EXTINF:/\n/g&amp;#39;&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt; grep -v &lt;span class=&#34;s1&#34;&gt;&amp;#39;^$&amp;#39;&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt; sed &lt;span class=&#34;s1&#34;&gt;&amp;#39;s/,/\t/&amp;#39;&lt;/span&gt; &lt;span class=&#34;se&#34;&gt;\
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;se&#34;&gt;&lt;/span&gt;	&lt;span class=&#34;p&#34;&gt;|&lt;/span&gt; awk &lt;span class=&#34;s1&#34;&gt;&amp;#39;{i+=$1; if (i &amp;gt;= 2000 &amp;amp;&amp;amp; i &amp;lt;= 2050) print $2}&amp;#39;&lt;/span&gt; &amp;gt; url_list.txt
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;需要说明的是，这个视频比较长，所以我只下载了2000至2050秒的视频，使用了awk来计算累计的时间。假如需要直接下载全部视频的话，可以把awk的那部分命令删掉。&lt;/p&gt;</description>
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;ffmpeg -i livestream002243.ts -acodec copy -vcodec copy -absf aac_adtstoasc livestream002243.mp4
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;从m3u8文件中得到ts文件名，并构造完整的url：&lt;/p&gt;</description>
     </item>
     <item>
       <title>github镜像</title>
-      <link>https://entropydecrease.github.io/posts/github_mirror/</link>
+      <link>https://entropydecrease.github.io/2023_01_23-github_mirror/</link>
       <pubDate>Mon, 23 Jan 2023 00:00:00 +0000</pubDate>
-      <guid>https://entropydecrease.github.io/posts/github_mirror/</guid>
+      <guid>https://entropydecrease.github.io/2023_01_23-github_mirror/</guid>
       <description>&lt;p&gt;githhub有时候访问很慢，甚至不能访问，有人做了一个镜像。&lt;/p&gt;
 &lt;p&gt;&lt;a href=&#34;https://kgithub.com&#34;&gt;https://kgithub.com&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;可以当作github一样使用，假定此时需要 git clone bwa-mem2 ，原始命令是&lt;/p&gt;
@@ -195,24 +280,37 @@
     </item>
     <item>
       <title>a few Unix and Shell tips</title>
-      <link>https://entropydecrease.github.io/posts/ssh_tmux/</link>
+      <link>https://entropydecrease.github.io/2015_11_03-a-few-unix-and-shell-tips/</link>
       <pubDate>Tue, 03 Nov 2015 00:00:00 +0000</pubDate>
-      <guid>https://entropydecrease.github.io/posts/ssh_tmux/</guid>
+      <guid>https://entropydecrease.github.io/2015_11_03-a-few-unix-and-shell-tips/</guid>
       <description>&lt;h2 id=&#34;automatically-attach-to-a-tmux-session-via-ssh&#34;&gt;automatically attach to a tmux session via SSH&lt;/h2&gt;
-&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;alias alias_name=&amp;#39;ssh username@servername -t &amp;#34;tmux attach || tmux&amp;#34; &amp;#39;
-
--t Force pseudo-tty allocation. This can be used to execute arbitrary
-   screen-based programs on a remote machine, which can be very useful, e.g., when
-   implementing menu services.
-
-&amp;#34;tmux attach&amp;#34; tries to attach a tmux session. and if it fails, &amp;#34;tmux&amp;#34; will create a new session.
-&lt;/code&gt;&lt;/pre&gt;&lt;h2 id=&#34;to-be-continued&#34;&gt;to be continued.&lt;/h2&gt;</description>
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;7
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;alias alias_name=&amp;#39;ssh username@servername -t &amp;#34;tmux attach || tmux&amp;#34; &amp;#39;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;-t Force pseudo-tty allocation. This can be used to execute arbitrary
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;   screen-based programs on a remote machine, which can be very useful, e.g., when
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;   implementing menu services.
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&amp;#34;tmux attach&amp;#34; tries to attach a tmux session. and if it fails, &amp;#34;tmux&amp;#34; will create a new session.
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h2 id=&#34;to-be-continued&#34;&gt;to be continued.&lt;/h2&gt;</description>
     </item>
     <item>
       <title>case insensitivity on MAC OS X</title>
-      <link>https://entropydecrease.github.io/posts/mac_case_insensitivity/</link>
+      <link>https://entropydecrease.github.io/2015_05_07-case-insenstivity-on-mac-os-x/</link>
       <pubDate>Thu, 07 May 2015 00:00:00 +0000</pubDate>
-      <guid>https://entropydecrease.github.io/posts/mac_case_insensitivity/</guid>
+      <guid>https://entropydecrease.github.io/2015_05_07-case-insenstivity-on-mac-os-x/</guid>
       <description>&lt;p&gt;&lt;em&gt;Note: 新版本的Mac操作系统可能会有不同&lt;/em&gt;&lt;/p&gt;
 &lt;p&gt;&lt;a href=&#34;http://apple.stackexchange.com/questions/22297/is-bash-in-osx-case-insensitive&#34;&gt;http://apple.stackexchange.com/questions/22297/is-bash-in-osx-case-insensitive&lt;/a&gt;&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;HFS+ (the Mac filesystem) is usually configured to be case insensitive but case preserving. This means that the file system will consider foo and FoO to be the same, but when you create a new file it will remember which letters where capitalized and which were not.
@@ -233,9 +331,9 @@ Look for the Name: line. If it reads something like Mac OS Extended (Case-sensit
     </item>
     <item>
       <title>设置hostname，避免DHCP修改hostname</title>
-      <link>https://entropydecrease.github.io/posts/set_hostname/</link>
+      <link>https://entropydecrease.github.io/2015_04_13-set-hostname-not-modifed-by-dhcp/</link>
       <pubDate>Mon, 13 Apr 2015 00:00:00 +0000</pubDate>
-      <guid>https://entropydecrease.github.io/posts/set_hostname/</guid>
+      <guid>https://entropydecrease.github.io/2015_04_13-set-hostname-not-modifed-by-dhcp/</guid>
       <description>&lt;p&gt;It can be annoying to see my hostname being modifed each time I connect to a different WIFI. It is because the hostname was never set.&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;&amp;gt; scutil --get HostName 
 HostName: not set 
@@ -249,9 +347,9 @@ new_hostname
     </item>
     <item>
       <title>re-attach a lftp process</title>
-      <link>https://entropydecrease.github.io/posts/reattach_lftp/</link>
+      <link>https://entropydecrease.github.io/2015_04_05-reattach_lftp/</link>
       <pubDate>Sun, 05 Apr 2015 00:00:00 +0000</pubDate>
-      <guid>https://entropydecrease.github.io/posts/reattach_lftp/</guid>
+      <guid>https://entropydecrease.github.io/2015_04_05-reattach_lftp/</guid>
       <description>&lt;p&gt;lftp很好的一个功能是退出之后，正在运行的任务会自动提交到后台继续运行。&lt;/p&gt;
 &lt;p&gt;但是有时候终端窗口退出之后还想重新连接这些任务，该如何连接呢？lftp提供了一个很好的命令&lt;code&gt;attach&lt;/code&gt;。&lt;/p&gt;
 &lt;ol&gt;
@@ -265,9 +363,9 @@ new_hostname
     </item>
     <item>
       <title>git tips</title>
-      <link>https://entropydecrease.github.io/posts/git_tips/</link>
+      <link>https://entropydecrease.github.io/2015_03_25-git_tips/</link>
       <pubDate>Wed, 25 Mar 2015 00:00:00 +0000</pubDate>
-      <guid>https://entropydecrease.github.io/posts/git_tips/</guid>
+      <guid>https://entropydecrease.github.io/2015_03_25-git_tips/</guid>
       <description>&lt;h1 id=&#34;从现有仓库克隆&#34;&gt;从现有仓库克隆&lt;/h1&gt;
 &lt;pre&gt;&lt;code&gt;$ git clone git://github.com/schacon/grit.git
 
@@ -393,9 +491,9 @@ $ git clone git://github.com/schacon/grit.git mygrit
     </item>
     <item>
       <title>export mail in .ost file to mail.app on Mac</title>
-      <link>https://entropydecrease.github.io/posts/import_ost/</link>
+      <link>https://entropydecrease.github.io/2015_03_24-export_email_in_ost/</link>
       <pubDate>Tue, 24 Mar 2015 00:00:00 +0000</pubDate>
-      <guid>https://entropydecrease.github.io/posts/import_ost/</guid>
+      <guid>https://entropydecrease.github.io/2015_03_24-export_email_in_ost/</guid>
       <description>&lt;ol&gt;
 &lt;li&gt;
 &lt;p&gt;export mail in .ost file to mbox file (the file may not end with .mbox).&lt;/p&gt;

@@ -7,8 +7,8 @@
 <meta name="robots" content="index, follow">
 <title>Database | Entropy Decrease</title>
 <meta name="keywords" content="">
-<meta name="description" content="Theme PaperMod - https://github.com/adityatelange/hugo-PaperMod">
-<meta name="author" content="Entropy Decrease">
+<meta name="description" content="阅读、思考、写作，都是熵减的过程">
+<meta name="author" content="">
 <link rel="canonical" href="https://entropydecrease.github.io/tags/database/">
 <link crossorigin="anonymous" href="/assets/css/stylesheet.fc220c15db4aef0318bbf30adc45d33d4d7c88deff3238b23eb255afdc472ca6.css" integrity="sha256-/CIMFdtK7wMYu/MK3EXTPU18iN7/MjiyPrJVr9xHLKY=" rel="preload stylesheet" as="style">
 <link rel="icon" href="https://entropydecrease.github.io/favicon.ico">
@@ -57,16 +57,13 @@
 
     </style>
 </noscript><meta property="og:title" content="Database" />
-<meta property="og:description" content="Theme PaperMod - https://github.com/adityatelange/hugo-PaperMod" />
+<meta property="og:description" content="阅读、思考、写作，都是熵减的过程" />
 <meta property="og:type" content="website" />
-<meta property="og:url" content="https://entropydecrease.github.io/tags/database/" />
-<meta property="og:image" content="https://entropydecrease.github.io/images/papermod-cover.png" />
+<meta property="og:url" content="https://entropydecrease.github.io/tags/database/" /><meta property="og:site_name" content="Entropy Decrease" />
 
-
-<meta name="twitter:card" content="summary_large_image" />
-<meta name="twitter:image" content="https://entropydecrease.github.io/images/papermod-cover.png" />
+<meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Database"/>
-<meta name="twitter:description" content="Theme PaperMod - https://github.com/adityatelange/hugo-PaperMod"/>
+<meta name="twitter:description" content="阅读、思考、写作，都是熵减的过程"/>
 
 </head>
 
@@ -111,18 +108,23 @@
         </div>
         <ul id="menu">
             <li>
-                <a href="https://entropydecrease.github.io/posts" title="Posts">
-                    <span>Posts</span>
+                <a href="https://entropydecrease.github.io/" title="Home">
+                    <span>Home</span>
                 </a>
             </li>
             <li>
-                <a href="https://entropydecrease.github.io/categories" title="Categories">
-                    <span>Categories</span>
+                <a href="https://entropydecrease.github.io/posts/" title="Posts">
+                    <span>Posts</span>
                 </a>
             </li>
             <li>
                 <a href="https://entropydecrease.github.io/tags/" title="Tags">
                     <span>Tags</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://entropydecrease.github.io/categories/" title="Categories">
+                    <span>Categories</span>
                 </a>
             </li>
             <li>
@@ -134,17 +136,9 @@
     </nav>
 </header>
 <main class="main"> 
-<header class="page-header"><div class="breadcrumbs"><a href="https://entropydecrease.github.io/">Home</a>&nbsp;»&nbsp;<a href="https://entropydecrease.github.io/tags/">Tags</a></div>
+<header class="page-header">
   <h1>
     Database
-    <a href="/tags/database/index.xml" title="RSS" aria-label="RSS">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-        stroke-linecap="round" stroke-linejoin="round" height="23">
-        <path d="M4 11a9 9 0 0 1 9 9" />
-        <path d="M4 4a16 16 0 0 1 16 16" />
-        <circle cx="5" cy="19" r="1" />
-      </svg>
-    </a>
   </h1>
 </header>
 
@@ -160,13 +154,13 @@ https://github.com/broadinstitute/gatk/blob/master/scripts/mutect2_wdl/mutect_re
 # clear ID and QUAL fields and delete all INFO fields other than AF # note that input must be a plain-text vcf, not a vcf.gz. # this task re-indexes and compresses the output vcf task MakeAlleleFrequencyOnlyVcf { # ------------------------------------------------ # Input args: File input_vcf String output_name File? gatk_override # Runtime Options: String gatk_docker Int? mem Int? preemptible_attempts Int? disk_space Int? cpu # ------------------------------------------------ # Get machine settings: Boolean use_ssd = false # You may have to change the following two parameter values depending on the task requirements Int default_ram_mb = 3 * 1024 # WARNING: In the workflow, you should calculate the disk space as an input to this task (disk_space_gb). Please see [TODO: Link from Jose] for examples. Int default_disk_space_gb = 100 Int default_boot_disk_size_gb = 15 # Mem is in units of GB but our command and memory runtime values are in MB Int machine_mem = if defined(mem) then mem * 1024 else default_ram_mb Int command_mem = machine_mem - 1024 # ------------------------------------------------ # Run our command: command { set -e export GATK_LOCAL_JAR=${default=&#34;/root/gatk.jar&#34; gatk_override} # Save off the header for later: grep &#39;^#&#39; ${input_vcf} &gt; header &amp; # Get all lines in the file except the header: # Preserve all fields before INFO, Grab only the AF annotation from the INFO Field # replace ID (3rd) and QUAL (6th) columns with &#39;.&#39; (empty): grep -v &#34;^#&#34; ${input_vcf} | sed -e &#39;s#\(.*\)\t\(.*\)\t\(.*\)\t\(.*\)\t\(.*\)\t\(.*\)\t\(.*\)\t.*;AF=\([0-9]*\.[e0-9&#43;-]*\).*#\1\t\2\t.\t\4\t\5\t.\t\7\tAF=\8#g&#39; &gt; simplified_body &amp; # Wait for background processes to finish: wait # Consolidate files: cat header simplified_body &gt; simplified.vcf # Zip the VCF: bgzip simplified.vcf -O ${output_name}.vcf.gz # Index output file: gatk --java-options &#34;-Xmx${command_mem}g&#34; IndexFeatureFile -F ${output_name}.vcf.gz # Cleanup: rm -f header body simplified_info simplified_body simplified.vcf simplified.vcf.idx } # ------------------------------------------------ # Runtime settings: runtime { docker: gatk_docker memory: machine_mem &#43; &#34; GB&#34; disks: &#34;local-disk &#34; &#43; select_first([disk_space, 100]) &#43; if use_ssd then &#34; SSD&#34; else &#34; HDD&#34; preemptible: select_first([preemptible_attempts, 3]) cpu: select_first([cpu, 1]) } # ------------------------------------------------ # Outputs: output { File output_vcf = &#34;${output_name}.vcf.gz&#34; File output_vcf_idx = &#34;${output_name}.vcf.gz.tbi&#34; } } 但是GATK的方法太慢了，所以我写了如下的脚本：
 ...</p>
   </div>
-  <footer class="entry-footer"><span title='2022-05-01 00:00:00 +0000 UTC'>May 1, 2022</span>&nbsp;·&nbsp;2 min&nbsp;·&nbsp;Entropy Decrease</footer>
-  <a class="entry-link" aria-label="post link to 生成af only的gnomad vcf文件" href="https://entropydecrease.github.io/posts/gnome_af_only/"></a>
+  <footer class="entry-footer"><span title='2022-05-01 00:00:00 +0000 UTC'>2022-05-01</span></footer>
+  <a class="entry-link" aria-label="post link to 生成af only的gnomad vcf文件" href="https://entropydecrease.github.io/2022_05_01-af_only_gnomad/"></a>
 </article>
     </main>
     
 <footer class="footer">
-        <span>© [Entropy Decrease]</span> · 
+        <span>&copy; 2024 <a href="https://entropydecrease.github.io/">Entropy Decrease</a></span> · 
 
     <span>
         Powered by

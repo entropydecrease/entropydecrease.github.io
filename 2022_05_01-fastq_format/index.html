@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="en" dir="auto">
+
+<head><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="index, follow">
+<title>fastq文件格式 | Entropy Decrease</title>
+<meta name="keywords" content="">
+<meta name="description" content="https://help.basespace.illumina.com/articles/descriptive/fastq-files/
+fastq文件的命名
+示例：Data\Intensities\BaseCalls\samplename_S1_L001_R1_001.fastq.gz
+* samplename - The sample name provided in the sample sheet. If a sample name is not provided, the file name includes the sample ID, which is a required field in the sample sheet and must be unique.
+* S1 — The sample number based on the order that samples are listed in the sample sheet starting with 1. In this example, S1 indicates that this sample is the first sample listed in the sample sheet. [^1]
+
+
+
+Reads that cannot be assigned to any sample are written to a FASTQ file for sample number 0, and excluded from downstream analysis.
+
+
+* L001—The lane number.
+* R1—The read. In this example, R1 means Read 1. For a paired-end run, there is at least one file with R2 in the file name for Read 2.
+* 001—The last segment is always 001.
+
+一个例子
+注意read number之前的空格">
+<meta name="author" content="">
+<link rel="canonical" href="https://entropydecrease.github.io/2022_05_01-fastq_format/">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.fc220c15db4aef0318bbf30adc45d33d4d7c88deff3238b23eb255afdc472ca6.css" integrity="sha256-/CIMFdtK7wMYu/MK3EXTPU18iN7/MjiyPrJVr9xHLKY=" rel="preload stylesheet" as="style">
+<link rel="icon" href="https://entropydecrease.github.io/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="https://entropydecrease.github.io/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://entropydecrease.github.io/favicon-32x32.png">
+<link rel="apple-touch-icon" href="https://entropydecrease.github.io/apple-touch-icon.png">
+<link rel="mask-icon" href="https://entropydecrease.github.io/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<link rel="alternate" hreflang="en" href="https://entropydecrease.github.io/2022_05_01-fastq_format/">
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+    <style>
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --theme: rgb(29, 30, 32);
+                --entry: rgb(46, 46, 51);
+                --primary: rgb(218, 218, 219);
+                --secondary: rgb(155, 156, 157);
+                --tertiary: rgb(65, 66, 68);
+                --content: rgb(196, 196, 197);
+                --code-block-bg: rgb(46, 46, 51);
+                --code-bg: rgb(55, 56, 62);
+                --border: rgb(51, 51, 51);
+            }
+
+            .list {
+                background: var(--theme);
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-track {
+                background: 0 0;
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-thumb {
+                border-color: var(--theme);
+            }
+        }
+
+    </style>
+</noscript><meta property="og:title" content="fastq文件格式" />
+<meta property="og:description" content="https://help.basespace.illumina.com/articles/descriptive/fastq-files/
+fastq文件的命名
+示例：Data\Intensities\BaseCalls\samplename_S1_L001_R1_001.fastq.gz
+* samplename - The sample name provided in the sample sheet. If a sample name is not provided, the file name includes the sample ID, which is a required field in the sample sheet and must be unique.
+* S1 — The sample number based on the order that samples are listed in the sample sheet starting with 1. In this example, S1 indicates that this sample is the first sample listed in the sample sheet. [^1]
+
+
+
+Reads that cannot be assigned to any sample are written to a FASTQ file for sample number 0, and excluded from downstream analysis.
+
+
+* L001—The lane number.
+* R1—The read. In this example, R1 means Read 1. For a paired-end run, there is at least one file with R2 in the file name for Read 2.
+* 001—The last segment is always 001.
+
+一个例子
+注意read number之前的空格" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://entropydecrease.github.io/2022_05_01-fastq_format/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2022-05-01T00:00:00+00:00" />
+<meta property="article:modified_time" content="2022-05-01T00:00:00+00:00" /><meta property="og:site_name" content="Entropy Decrease" />
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="fastq文件格式"/>
+<meta name="twitter:description" content="https://help.basespace.illumina.com/articles/descriptive/fastq-files/
+fastq文件的命名
+示例：Data\Intensities\BaseCalls\samplename_S1_L001_R1_001.fastq.gz
+* samplename - The sample name provided in the sample sheet. If a sample name is not provided, the file name includes the sample ID, which is a required field in the sample sheet and must be unique.
+* S1 — The sample number based on the order that samples are listed in the sample sheet starting with 1. In this example, S1 indicates that this sample is the first sample listed in the sample sheet. [^1]
+
+
+
+Reads that cannot be assigned to any sample are written to a FASTQ file for sample number 0, and excluded from downstream analysis.
+
+
+* L001—The lane number.
+* R1—The read. In this example, R1 means Read 1. For a paired-end run, there is at least one file with R2 in the file name for Read 2.
+* 001—The last segment is always 001.
+
+一个例子
+注意read number之前的空格"/>
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position":  1 ,
+      "name": "Posts",
+      "item": "https://entropydecrease.github.io/posts/"
+    }, 
+    {
+      "@type": "ListItem",
+      "position":  2 ,
+      "name": "fastq文件格式",
+      "item": "https://entropydecrease.github.io/2022_05_01-fastq_format/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "fastq文件格式",
+  "name": "fastq文件格式",
+  "description": "https://help.basespace.illumina.com/articles/descriptive/fastq-files/\nfastq文件的命名 示例：Data\\Intensities\\BaseCalls\\samplename_S1_L001_R1_001.fastq.gz\n* samplename - The sample name provided in the sample sheet. If a sample name is not provided, the file name includes the sample ID, which is a required field in the sample sheet and must be unique. * S1 — The sample number based on the order that samples are listed in the sample sheet starting with 1. In this example, S1 indicates that this sample is the first sample listed in the sample sheet. [^1] Reads that cannot be assigned to any sample are written to a FASTQ file for sample number 0, and excluded from downstream analysis. * L001—The lane number. * R1—The read. In this example, R1 means Read 1. For a paired-end run, there is at least one file with R2 in the file name for Read 2. * 001—The last segment is always 001. 一个例子 注意read number之前的空格\n",
+  "keywords": [
+    
+  ],
+  "articleBody": "https://help.basespace.illumina.com/articles/descriptive/fastq-files/\nfastq文件的命名 示例：Data\\Intensities\\BaseCalls\\samplename_S1_L001_R1_001.fastq.gz\n* samplename - The sample name provided in the sample sheet. If a sample name is not provided, the file name includes the sample ID, which is a required field in the sample sheet and must be unique. * S1 — The sample number based on the order that samples are listed in the sample sheet starting with 1. In this example, S1 indicates that this sample is the first sample listed in the sample sheet. [^1] Reads that cannot be assigned to any sample are written to a FASTQ file for sample number 0, and excluded from downstream analysis. * L001—The lane number. * R1—The read. In this example, R1 means Read 1. For a paired-end run, there is at least one file with R2 in the file name for Read 2. * 001—The last segment is always 001. 一个例子 注意read number之前的空格\n@SIM:1:FCX:1:15:6329:1045 1:N:0:2 TCGCACTCAACGCCCTGCATATGACAAGACAGAATC + \u003c\u003e;##=\u003e\u003c9=AAAAAAAAAA9#:\u003c#\u003c;\u003c\u003c\u003c????#= 格式 fastq中每条记录由4行组成：\n第一行：sequence identifier, 信息量比较大，有多个字段，详见下文 第二行：sequence, 测序所得序列，[AGTCN] 第三行：Quality score identifier line，只有+ 第四行：Quality score, 和第二行的序列一一对应，字母相应的ASCII数值加上offset对应测序质量的Q值。 第一行(header)格式 1 @:::::: ::: 对于 Undetermined FASTQ文件，index的序列会写入FASTQ的header中sample number的位置，该信息对于demultiplexing的troubleshooting比较有用。\n各字段定义：\nElement Requirements Description @ @ Each sequence identifier line starts with @ Characters allowed: a–z, A–Z, 0–9 and underscore Instrument ID Numerical Run number on instrument Characters allowed: a–z, A–Z, 0–9 Numerical Lane number Numerical Tile number Numerical Run number on instrument Numerical X coordinate of cluster Numerical Read number. 1 can be single read or Read 2 of paired-end Y or N Y if the read is filtered (did not pass), N otherwise Numerical 0 when none of the control bits are on, otherwise it is an even number. On HiSeq X systems, control specification is not performed and this number is always 0. Numerical Sample number from sample sheet Control values If the read is not identified as a control, then the 10th column () is zero. If the read is identified as a control, the number is greater than zero, and the value specifies what type of control it is. The value is the decimal representation of a bit-wise encoding scheme. In that scheme bit 0 has a decimal value of 1, bit 1 a value of 2, bit 2 a value of 4, and so on.\n",
+  "wordCount" : "385",
+  "inLanguage": "en",
+  "datePublished": "2022-05-01T00:00:00Z",
+  "dateModified": "2022-05-01T00:00:00Z",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://entropydecrease.github.io/2022_05_01-fastq_format/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Entropy Decrease",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://entropydecrease.github.io/favicon.ico"
+    }
+  }
+}
+</script>
+</head>
+
+<body class="" id="top">
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.body.classList.add('dark');
+    } else if (localStorage.getItem("pref-theme") === "light") {
+        document.body.classList.remove('dark')
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.body.classList.add('dark');
+    }
+
+</script>
+
+<header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="https://entropydecrease.github.io/" accesskey="h" title="Entropy Decrease (Alt + H)">Entropy Decrease</a>
+            <div class="logo-switches">
+                <button id="theme-toggle" accesskey="t" title="(Alt + T)">
+                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <ul id="menu">
+            <li>
+                <a href="https://entropydecrease.github.io/" title="Home">
+                    <span>Home</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://entropydecrease.github.io/posts/" title="Posts">
+                    <span>Posts</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://entropydecrease.github.io/tags/" title="Tags">
+                    <span>Tags</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://entropydecrease.github.io/categories/" title="Categories">
+                    <span>Categories</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://entropydecrease.github.io/about" title="About">
+                    <span>About</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</header>
+<main class="main">
+
+<article class="post-single">
+  <header class="post-header">
+    
+    <h1 class="post-title entry-hint-parent">
+      fastq文件格式
+    </h1>
+    <div class="post-meta"><span title='2022-05-01 00:00:00 +0000 UTC'>2022-05-01</span>
+
+</div>
+  </header> 
+  <div class="post-content"><p><a href="https://help.basespace.illumina.com/articles/descriptive/fastq-files/">https://help.basespace.illumina.com/articles/descriptive/fastq-files/</a></p>
+<h2 id="fastq文件的命名">fastq文件的命名<a hidden class="anchor" aria-hidden="true" href="#fastq文件的命名">#</a></h2>
+<p>示例：<code>Data\Intensities\BaseCalls\samplename_S1_L001_R1_001.fastq.gz</code></p>
+<pre><code>* samplename - The sample name provided in the sample sheet. If a sample name is not provided, the file name includes the sample ID, which is a required field in the sample sheet and must be unique.
+* S1 — The sample number based on the order that samples are listed in the sample sheet starting with 1. In this example, S1 indicates that this sample is the first sample listed in the sample sheet. [^1]
+</code></pre>
+<blockquote>
+<ul>
+<li>Reads that cannot be assigned to any sample are written to a FASTQ file for sample number 0, and excluded from downstream analysis.</li>
+</ul>
+</blockquote>
+<pre><code>* L001—The lane number.
+* R1—The read. In this example, R1 means Read 1. For a paired-end run, there is at least one file with R2 in the file name for Read 2.
+* 001—The last segment is always 001.
+</code></pre>
+<h2 id="一个例子">一个例子<a hidden class="anchor" aria-hidden="true" href="#一个例子">#</a></h2>
+<p>注意<code>read number</code>之前的空格</p>
+<pre><code>@SIM:1:FCX:1:15:6329:1045 1:N:0:2
+TCGCACTCAACGCCCTGCATATGACAAGACAGAATC
++
+&lt;&gt;;##=&gt;&lt;9=AAAAAAAAAA9#:&lt;#&lt;;&lt;&lt;&lt;????#=
+</code></pre>
+<h2 id="格式">格式<a hidden class="anchor" aria-hidden="true" href="#格式">#</a></h2>
+<p>fastq中每条记录由4行组成：</p>
+<ul>
+<li>第一行：sequence identifier, 信息量比较大，有多个字段，详见下文</li>
+<li>第二行：sequence, 测序所得序列，[AGTCN]</li>
+<li>第三行：Quality score identifier line，只有<code>+</code></li>
+<li>第四行：Quality score, 和第二行的序列一一对应，字母相应的ASCII数值加上offset对应测序质量的Q值。</li>
+</ul>
+<h2 id="第一行header格式">第一行(header)格式<a hidden class="anchor" aria-hidden="true" href="#第一行header格式">#</a></h2>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">@&lt;instrument&gt;:&lt;run number&gt;:&lt;flowcell ID&gt;:&lt;lane&gt;:&lt;tile&gt;:&lt;x-pos&gt;:&lt;y-pos&gt; &lt;read&gt;:&lt;is filtered&gt;:&lt;control number&gt;:&lt;sample number&gt;
+</span></span></code></pre></td></tr></table>
+</div>
+</div><blockquote>
+<p>对于 Undetermined FASTQ文件，index的序列会写入FASTQ的header中sample number的位置，该信息对于demultiplexing的troubleshooting比较有用。</p>
+</blockquote>
+<p>各字段定义：</p>
+<table>
+  <thead>
+      <tr>
+          <th style="text-align: left">Element</th>
+          <th style="text-align: left">Requirements</th>
+          <th style="text-align: left">Description</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td style="text-align: left">@</td>
+          <td style="text-align: left">@</td>
+          <td style="text-align: left">Each sequence identifier line starts with @</td>
+      </tr>
+      <tr>
+          <td style="text-align: left"><code>&lt;instrument&gt;</code></td>
+          <td style="text-align: left">Characters allowed: a–z, A–Z, 0–9 and underscore</td>
+          <td style="text-align: left">Instrument ID</td>
+      </tr>
+      <tr>
+          <td style="text-align: left"><code>&lt;run number&gt;</code></td>
+          <td style="text-align: left">Numerical</td>
+          <td style="text-align: left">Run number on instrument</td>
+      </tr>
+      <tr>
+          <td style="text-align: left"><code>&lt;flowcell ID&gt;</code></td>
+          <td style="text-align: left">Characters allowed: a–z, A–Z, 0–9</td>
+          <td style="text-align: left"></td>
+      </tr>
+      <tr>
+          <td style="text-align: left"><code>&lt;lane&gt;</code></td>
+          <td style="text-align: left">Numerical</td>
+          <td style="text-align: left">Lane number</td>
+      </tr>
+      <tr>
+          <td style="text-align: left"><code>&lt;tile&gt;</code></td>
+          <td style="text-align: left">Numerical</td>
+          <td style="text-align: left">Tile number</td>
+      </tr>
+      <tr>
+          <td style="text-align: left"><code>&lt;x_pos&gt;</code></td>
+          <td style="text-align: left">Numerical</td>
+          <td style="text-align: left">Run number on instrument</td>
+      </tr>
+      <tr>
+          <td style="text-align: left"><code>&lt;y_pos&gt;</code></td>
+          <td style="text-align: left">Numerical</td>
+          <td style="text-align: left">X coordinate of cluster</td>
+      </tr>
+      <tr>
+          <td style="text-align: left"><code>&lt;read&gt;</code></td>
+          <td style="text-align: left">Numerical</td>
+          <td style="text-align: left">Read number. 1 can be single read or Read 2 of paired-end</td>
+      </tr>
+      <tr>
+          <td style="text-align: left"><code>&lt;is filtered&gt;</code></td>
+          <td style="text-align: left">Y or N</td>
+          <td style="text-align: left">Y if the read is filtered (did not pass), N otherwise</td>
+      </tr>
+      <tr>
+          <td style="text-align: left"><code>&lt;control number&gt;</code></td>
+          <td style="text-align: left">Numerical</td>
+          <td style="text-align: left">0 when none of the control bits are on, otherwise it is an even number. On HiSeq X systems, control specification is not performed and this number is always 0.</td>
+      </tr>
+      <tr>
+          <td style="text-align: left"><code>&lt;sample number&gt;</code></td>
+          <td style="text-align: left">Numerical</td>
+          <td style="text-align: left">Sample number from sample sheet</td>
+      </tr>
+  </tbody>
+</table>
+<h3 id="control-values">Control values<a hidden class="anchor" aria-hidden="true" href="#control-values">#</a></h3>
+<p>If the read is not identified as a control, then the 10th column (<control number>) is zero. If the read is identified as a control, the number is greater than zero, and the value specifies what type of control it is. The value is the decimal representation of a bit-wise encoding scheme. In that scheme bit 0 has a decimal value of 1, bit 1 a value of 2, bit 2 a value of 4, and so on.</p>
+
+
+  </div>
+
+  <footer class="post-footer">
+    <ul class="post-tags">
+    </ul>
+  </footer>
+</article>
+    </main>
+    
+<footer class="footer">
+        <span>&copy; 2024 <a href="https://entropydecrease.github.io/">Entropy Decrease</a></span> · 
+
+    <span>
+        Powered by
+        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
+        <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>
+    </span>
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+        <path d="M12 6H0l6-6z" />
+    </svg>
+</a>
+
+<script>
+    let menu = document.getElementById('menu')
+    if (menu) {
+        menu.scrollLeft = localStorage.getItem("menu-scroll-position");
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
+</script>
+<script>
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        if (document.body.className.includes("dark")) {
+            document.body.classList.remove('dark');
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            document.body.classList.add('dark');
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+</script>
+</body>
+
+</html>

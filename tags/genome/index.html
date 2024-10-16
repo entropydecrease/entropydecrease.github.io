@@ -7,8 +7,8 @@
 <meta name="robots" content="index, follow">
 <title>Genome | Entropy Decrease</title>
 <meta name="keywords" content="">
-<meta name="description" content="Theme PaperMod - https://github.com/adityatelange/hugo-PaperMod">
-<meta name="author" content="Entropy Decrease">
+<meta name="description" content="阅读、思考、写作，都是熵减的过程">
+<meta name="author" content="">
 <link rel="canonical" href="https://entropydecrease.github.io/tags/genome/">
 <link crossorigin="anonymous" href="/assets/css/stylesheet.fc220c15db4aef0318bbf30adc45d33d4d7c88deff3238b23eb255afdc472ca6.css" integrity="sha256-/CIMFdtK7wMYu/MK3EXTPU18iN7/MjiyPrJVr9xHLKY=" rel="preload stylesheet" as="style">
 <link rel="icon" href="https://entropydecrease.github.io/favicon.ico">
@@ -57,16 +57,13 @@
 
     </style>
 </noscript><meta property="og:title" content="Genome" />
-<meta property="og:description" content="Theme PaperMod - https://github.com/adityatelange/hugo-PaperMod" />
+<meta property="og:description" content="阅读、思考、写作，都是熵减的过程" />
 <meta property="og:type" content="website" />
-<meta property="og:url" content="https://entropydecrease.github.io/tags/genome/" />
-<meta property="og:image" content="https://entropydecrease.github.io/images/papermod-cover.png" />
+<meta property="og:url" content="https://entropydecrease.github.io/tags/genome/" /><meta property="og:site_name" content="Entropy Decrease" />
 
-
-<meta name="twitter:card" content="summary_large_image" />
-<meta name="twitter:image" content="https://entropydecrease.github.io/images/papermod-cover.png" />
+<meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Genome"/>
-<meta name="twitter:description" content="Theme PaperMod - https://github.com/adityatelange/hugo-PaperMod"/>
+<meta name="twitter:description" content="阅读、思考、写作，都是熵减的过程"/>
 
 </head>
 
@@ -111,18 +108,23 @@
         </div>
         <ul id="menu">
             <li>
-                <a href="https://entropydecrease.github.io/posts" title="Posts">
-                    <span>Posts</span>
+                <a href="https://entropydecrease.github.io/" title="Home">
+                    <span>Home</span>
                 </a>
             </li>
             <li>
-                <a href="https://entropydecrease.github.io/categories" title="Categories">
-                    <span>Categories</span>
+                <a href="https://entropydecrease.github.io/posts/" title="Posts">
+                    <span>Posts</span>
                 </a>
             </li>
             <li>
                 <a href="https://entropydecrease.github.io/tags/" title="Tags">
                     <span>Tags</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://entropydecrease.github.io/categories/" title="Categories">
+                    <span>Categories</span>
                 </a>
             </li>
             <li>
@@ -134,17 +136,9 @@
     </nav>
 </header>
 <main class="main"> 
-<header class="page-header"><div class="breadcrumbs"><a href="https://entropydecrease.github.io/">Home</a>&nbsp;»&nbsp;<a href="https://entropydecrease.github.io/tags/">Tags</a></div>
+<header class="page-header">
   <h1>
     Genome
-    <a href="/tags/genome/index.xml" title="RSS" aria-label="RSS">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-        stroke-linecap="round" stroke-linejoin="round" height="23">
-        <path d="M4 11a9 9 0 0 1 9 9" />
-        <path d="M4 4a16 16 0 0 1 16 16" />
-        <circle cx="5" cy="19" r="1" />
-      </svg>
-    </a>
   </h1>
 </header>
 
@@ -157,16 +151,13 @@
     <p>igv假如每次都要从远程加载genome信息的话，网络不好的情况下会很慢，这时候最好做一个本地版的.genome文件。
 igv的.genome文件其实是一个zip文件。
 先看一下hg19.genome的内容：
-&gt; cp ~/igv/genomes/hg19.genome . &gt; unzip hg19.genome Archive: hg19.genome inflating: cytoBand.txt inflating: hg19_alias.tab inflating: property.txt inflating: refGene.txt &gt; cat property.txt id=hg19 name=Human hg19 cytobandFile=cytoBand.txt ordered=true geneFile=refGene.txt geneTrackName=RefSeq Genes chrAliasFile=hg19_alias.tab fasta=True sequenceLocation=http://s3.amazonaws.com/igv.broadinstitute.org/genomes/seq/hg19/hg19.fasta url=http://www.ncbi.nlm.nih.gov/gene?term=$$ 可以看到，里面的cytoband文件，gene文件都是本地的，但是序列文件是在AWS上面的。而最近AWS的访问有问题，非常不稳定，所以igv也不能打开hg19.genome了。
+1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 &gt; cp ~/igv/genomes/hg19.genome . &gt; unzip hg19.genome Archive: hg19.genome inflating: cytoBand.txt inflating: hg19_alias.tab inflating: property.txt inflating: refGene.txt &gt; cat property.txt id=hg19 name=Human hg19 cytobandFile=cytoBand.txt ordered=true geneFile=refGene.txt geneTrackName=RefSeq Genes chrAliasFile=hg19_alias.tab fasta=True sequenceLocation=http://s3.amazonaws.com/igv.broadinstitute.org/genomes/seq/hg19/hg19.fasta url=http://www.ncbi.nlm.nih.gov/gene?term=$$ 可以看到，里面的cytoband文件，gene文件都是本地的，但是序列文件是在AWS上面的。而最近AWS的访问有问题，非常不稳定，所以igv也不能打开hg19.genome了。
 让igv都使用本地的文件，只需要修改property.txt即可，修改property.txt如下：
-id=hg19-local name=Human hg19 local cytobandFile=cytoBand.txt ordered=true geneFile=refGene.txt geneTrackName=RefSeq Genes chrAliasFile=hg19_alias.tab fasta=True sequenceLocation=/Users/xiaojf/data/genomes/hs37d5/hs37d5.fa url=http://www.ncbi.nlm.nih.gov/gene?term=$$ 其中sequenceLocation改成本地的基因组fasta文件。
-然后重新打包成.genome文件即可:
-&gt; zip hg19_local.genome cytoBand.txt refGene.txt hg19_alias.tab property.txt &gt; mv hg19_local.genome ~/igv/genomes/ 最后，在igv中打开这个.genome文件。
-hg38本地版的.genome类似。
-</p>
+1 2 3 4 5 6 7 8 9 10 id=hg19-local name=Human hg19 local cytobandFile=cytoBand.txt ordered=true geneFile=refGene.txt geneTrackName=RefSeq Genes chrAliasFile=hg19_alias.tab fasta=True sequenceLocation=/Users/xiaojf/data/genomes/hs37d5/hs37d5.fa url=http://www.ncbi.nlm.nih.gov/gene?term=$$ 其中sequenceLocation改成本地的基因组fasta文件。
+...</p>
   </div>
-  <footer class="entry-footer"><span title='2020-02-23 00:00:00 +0000 UTC'>February 23, 2020</span>&nbsp;·&nbsp;1 min&nbsp;·&nbsp;Entropy Decrease</footer>
-  <a class="entry-link" aria-label="post link to igv 生成本地的.genome文件" href="https://entropydecrease.github.io/posts/igv_local_genome/"></a>
+  <footer class="entry-footer"><span title='2020-02-23 00:00:00 +0000 UTC'>2020-02-23</span></footer>
+  <a class="entry-link" aria-label="post link to igv 生成本地的.genome文件" href="https://entropydecrease.github.io/2020_02_23-igv_local_genome/"></a>
 </article>
 
 <article class="post-entry tag-entry"> 
@@ -185,13 +176,13 @@ hs37d5.fa.gz
 Integrated reference sequence from the GRCh37 primary assembly (chromosomal plus unlocalized and unplaced contigs), the rCRS mitochondrial sequence (AC:NC_012920), Human herpesvirus 4 type 1 (AC:NC_007605) and the concatenated decoy sequences (hs37d5cs.fa.gz). This file is compressed by razip from the samtools package for random access. Gzip may complain “decompression OK, trailing garbage ignored”, but this does not affect the correctness of the decompressed file.
 ...</p>
   </div>
-  <footer class="entry-footer"><span title='2020-02-23 00:00:00 +0000 UTC'>February 23, 2020</span>&nbsp;·&nbsp;1 min&nbsp;·&nbsp;Entropy Decrease</footer>
-  <a class="entry-link" aria-label="post link to 应该使用哪个genome" href="https://entropydecrease.github.io/posts/ref_genome/"></a>
+  <footer class="entry-footer"><span title='2020-02-23 00:00:00 +0000 UTC'>2020-02-23</span></footer>
+  <a class="entry-link" aria-label="post link to 应该使用哪个genome" href="https://entropydecrease.github.io/2020_02_23-ref_genome/"></a>
 </article>
     </main>
     
 <footer class="footer">
-        <span>© [Entropy Decrease]</span> · 
+        <span>&copy; 2024 <a href="https://entropydecrease.github.io/">Entropy Decrease</a></span> · 
 
     <span>
         Powered by

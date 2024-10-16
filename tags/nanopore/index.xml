@@ -4,21 +4,15 @@
     <title>Nanopore on Entropy Decrease</title>
     <link>https://entropydecrease.github.io/tags/nanopore/</link>
     <description>Recent content in Nanopore on Entropy Decrease</description>
-    <image>
-      <title>Entropy Decrease</title>
-      <url>https://entropydecrease.github.io/images/papermod-cover.png</url>
-      <link>https://entropydecrease.github.io/images/papermod-cover.png</link>
-    </image>
     <generator>Hugo -- 0.135.0</generator>
     <language>en</language>
-    <copyright>[Entropy Decrease]</copyright>
     <lastBuildDate>Sat, 08 Apr 2023 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://entropydecrease.github.io/tags/nanopore/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>图解三代测序（Nanopore） (转载作为备份)</title>
-      <link>https://entropydecrease.github.io/posts/ont_basics/</link>
+      <link>https://entropydecrease.github.io/2023_04_08-ont_basics/</link>
       <pubDate>Sat, 08 Apr 2023 00:00:00 +0000</pubDate>
-      <guid>https://entropydecrease.github.io/posts/ont_basics/</guid>
+      <guid>https://entropydecrease.github.io/2023_04_08-ont_basics/</guid>
       <description>&lt;p&gt;转载自 &lt;a href=&#34;https://www.cnblogs.com/baimoc/p/14700618.html&#34;&gt;baimoc - 博客园&lt;/a&gt;&lt;/p&gt;
 &lt;hr&gt;
 &lt;h2 id=&#34;一测序原理&#34;&gt;一、测序原理&lt;/h2&gt;
@@ -61,9 +55,9 @@
     </item>
     <item>
       <title>ONT相关的一些笔记</title>
-      <link>https://entropydecrease.github.io/posts/ont_notes/</link>
+      <link>https://entropydecrease.github.io/2023_04_01-ont_training_notes/</link>
       <pubDate>Sat, 01 Apr 2023 00:00:00 +0000</pubDate>
-      <guid>https://entropydecrease.github.io/posts/ont_notes/</guid>
+      <guid>https://entropydecrease.github.io/2023_04_01-ont_training_notes/</guid>
       <description>&lt;h2 id=&#34;准确度&#34;&gt;准确度&lt;/h2&gt;
 &lt;p&gt;Kit V14 + R10.4.1&lt;/p&gt;
 &lt;ul&gt;

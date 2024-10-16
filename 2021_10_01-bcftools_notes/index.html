@@ -1,0 +1,613 @@
+<!DOCTYPE html>
+<html lang="en" dir="auto">
+
+<head><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="index, follow">
+<title>bcftools notes (转载) | Entropy Decrease</title>
+<meta name="keywords" content="bcftools">
+<meta name="description" content="copied from https://gist.github.com/elowy01/93922762e131d7abd3c7e8e166a74a0b
+
+
+Filter variants per region (in this example, print out only variants mapped to chr1 and chr2)
+bcftools filter -r1,2 ALL.chip.omni_broad_sanger_combined.20140818.snps.genotypes.hg38.vcf.gz
+
+
+printing out info for only 2 samples:
+bcftools view -s NA20818,NA20819 filename.vcf.gz
+
+
+printing stats only for variants passing the filter:
+bcftools view -f PASS filename.vcf.gz
+
+
+printing variants withoud header:
+bcftools view -H
+
+
+printing variants on a particular region:
+bcftools view -r chr20:1-200000 -s NA20818,NA20819 filename.vcf.gz
+
+
+print all variants except for the ones falling within region:">
+<meta name="author" content="">
+<link rel="canonical" href="https://entropydecrease.github.io/2021_10_01-bcftools_notes/">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.fc220c15db4aef0318bbf30adc45d33d4d7c88deff3238b23eb255afdc472ca6.css" integrity="sha256-/CIMFdtK7wMYu/MK3EXTPU18iN7/MjiyPrJVr9xHLKY=" rel="preload stylesheet" as="style">
+<link rel="icon" href="https://entropydecrease.github.io/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="https://entropydecrease.github.io/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://entropydecrease.github.io/favicon-32x32.png">
+<link rel="apple-touch-icon" href="https://entropydecrease.github.io/apple-touch-icon.png">
+<link rel="mask-icon" href="https://entropydecrease.github.io/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<link rel="alternate" hreflang="en" href="https://entropydecrease.github.io/2021_10_01-bcftools_notes/">
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+    <style>
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --theme: rgb(29, 30, 32);
+                --entry: rgb(46, 46, 51);
+                --primary: rgb(218, 218, 219);
+                --secondary: rgb(155, 156, 157);
+                --tertiary: rgb(65, 66, 68);
+                --content: rgb(196, 196, 197);
+                --code-block-bg: rgb(46, 46, 51);
+                --code-bg: rgb(55, 56, 62);
+                --border: rgb(51, 51, 51);
+            }
+
+            .list {
+                background: var(--theme);
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-track {
+                background: 0 0;
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-thumb {
+                border-color: var(--theme);
+            }
+        }
+
+    </style>
+</noscript><meta property="og:title" content="bcftools notes (转载)" />
+<meta property="og:description" content="copied from https://gist.github.com/elowy01/93922762e131d7abd3c7e8e166a74a0b
+
+
+Filter variants per region (in this example, print out only variants mapped to chr1 and chr2)
+bcftools filter -r1,2 ALL.chip.omni_broad_sanger_combined.20140818.snps.genotypes.hg38.vcf.gz
+
+
+printing out info for only 2 samples:
+bcftools view -s NA20818,NA20819 filename.vcf.gz
+
+
+printing stats only for variants passing the filter:
+bcftools view -f PASS filename.vcf.gz
+
+
+printing variants withoud header:
+bcftools view -H
+
+
+printing variants on a particular region:
+bcftools view -r chr20:1-200000 -s NA20818,NA20819 filename.vcf.gz
+
+
+print all variants except for the ones falling within region:" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://entropydecrease.github.io/2021_10_01-bcftools_notes/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2021-10-01T00:00:00+00:00" />
+<meta property="article:modified_time" content="2021-10-01T00:00:00+00:00" /><meta property="og:site_name" content="Entropy Decrease" />
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="bcftools notes (转载)"/>
+<meta name="twitter:description" content="copied from https://gist.github.com/elowy01/93922762e131d7abd3c7e8e166a74a0b
+
+
+Filter variants per region (in this example, print out only variants mapped to chr1 and chr2)
+bcftools filter -r1,2 ALL.chip.omni_broad_sanger_combined.20140818.snps.genotypes.hg38.vcf.gz
+
+
+printing out info for only 2 samples:
+bcftools view -s NA20818,NA20819 filename.vcf.gz
+
+
+printing stats only for variants passing the filter:
+bcftools view -f PASS filename.vcf.gz
+
+
+printing variants withoud header:
+bcftools view -H
+
+
+printing variants on a particular region:
+bcftools view -r chr20:1-200000 -s NA20818,NA20819 filename.vcf.gz
+
+
+print all variants except for the ones falling within region:"/>
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position":  1 ,
+      "name": "Posts",
+      "item": "https://entropydecrease.github.io/posts/"
+    }, 
+    {
+      "@type": "ListItem",
+      "position":  2 ,
+      "name": "bcftools notes (转载)",
+      "item": "https://entropydecrease.github.io/2021_10_01-bcftools_notes/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "bcftools notes (转载)",
+  "name": "bcftools notes (转载)",
+  "description": "copied from https://gist.github.com/elowy01/93922762e131d7abd3c7e8e166a74a0b\nFilter variants per region (in this example, print out only variants mapped to chr1 and chr2)\nbcftools filter -r1,2 ALL.chip.omni_broad_sanger_combined.20140818.snps.genotypes.hg38.vcf.gz\nprinting out info for only 2 samples:\nbcftools view -s NA20818,NA20819 filename.vcf.gz\nprinting stats only for variants passing the filter:\nbcftools view -f PASS filename.vcf.gz\nprinting variants withoud header:\nbcftools view -H\nprinting variants on a particular region:\nbcftools view -r chr20:1-200000 -s NA20818,NA20819 filename.vcf.gz\nprint all variants except for the ones falling within region:\n",
+  "keywords": [
+    "bcftools"
+  ],
+  "articleBody": "copied from https://gist.github.com/elowy01/93922762e131d7abd3c7e8e166a74a0b\nFilter variants per region (in this example, print out only variants mapped to chr1 and chr2)\nbcftools filter -r1,2 ALL.chip.omni_broad_sanger_combined.20140818.snps.genotypes.hg38.vcf.gz\nprinting out info for only 2 samples:\nbcftools view -s NA20818,NA20819 filename.vcf.gz\nprinting stats only for variants passing the filter:\nbcftools view -f PASS filename.vcf.gz\nprinting variants withoud header:\nbcftools view -H\nprinting variants on a particular region:\nbcftools view -r chr20:1-200000 -s NA20818,NA20819 filename.vcf.gz\nprint all variants except for the ones falling within region:\nbcftools view -t ^chr20:1-30000000 ex_bams.samtools.20161231.vcf.gz \u003eout.vcf\nview the positions passed in a file (accepted files are .vcf and .bed):\nbcftools view -R 0002.vcf in.vcf.gz\nview the positions passed in a tsv file:\n1 2 3 4 bcftools view -R 0002.tsv in.vcf.gz The format of 0002.tsv: 20 79000 80000 20 90000 100000 printing out only the chr info:\nbcftools query -f '%CHROM\\n' filename.vcf\nnow, print out the chr\\tpos\nbcftools query -f '%CHROM\\t%POS\\n' filename.vcf\nnow, print out the AF INFO field\nbcftools query -f '%INFO/AF\\n'\ngetting a particular annotation from the VCF\nbcftools query -f '%QUAL\\n' 0002.vcf\nprinting chr pos and a particular annotation from a VCF:\nbcftools query -f '%CHROM\\t%POS\\t%INFO/DP\\n' in.vcf.gz\nprinting out the sets assigned by GATK CombineVariants\nbcftools query -f '%set\\n' out_combine.vcf.gz | sort | uniq\nprinting a list of samples from a VCF:\nbcftools query -l test.vcf\nalso, the FORMAT annotations can be obtained by:\nbcftools query -f '[%GT]\\n' ../0002.vcf |wc -l #the GT in this case\nselecting snps from file:\nbcftools view -v snps lc_bams.bcftools.20170319.NA12878.vcf.gz\nselecting the variants from a VCF (excluding 0|0 genotypes)\nbcftools view -c1 input.vcf\nselecting the non-variants from a VCF(AC=0)\nbcftools view -H -C0 concat.allchrs.sites.vcf.gz\nusing one of the INFO annotations (IDV)\nbcftools filter -sFilterName -e'IDV\u003c5' input.vcf\nOR logical operator:\nbcftools filter -sFilterName -e'DP\u003e50000 | IDV\u003c9' input.vcf\nfiltering on FORMAT annotation:\nbcftools filter -sFilterName -e'FORMAT/DP\u003c5' input.vcf\nfiltering on INFO annotation:\nbcftools filter -sFilterName -e'INFO/DP\u003c5' input.vcf\nprinting out variants that pass the filter:\nbcftools view -f.,PASS lc_bams.bcftools.20170411.exc.norm.SNP.filtered.vcf.gz\nbcftools stats and filtering:\nbcftools stats -f \"PASS,.\" file.vcf\nselect only biallelic (excluding multiallelic) snps\nbcftools view -m2 -M2 -v snps input.vcf.gz\nselect only the multiallelic snps\nbcftools view -m3 -v snps input.vcf.gz\nprinting the set info in the INFO field:\nbcftools view -i 'set=\"freebayes_lcex\"' combined.all.chr20.vcf.gz\nprinting all entries having a quality \u003c10\nbcftools view -i 'QUAL\u003c10' in.vcf.gz\nremoving FORMAT column from the VCF, it will remove all FORMAT annotations except the GT information\nbcftools annotate -x FORMAT ifile.vcf.gz\nremoving INFO field from VCF\nbcftools annotate --remove INFO in.vcf.gz\nannotating a vcf file using the annotations from a different VCF (in this case we only annotate the INFO/DP)\nbcftools annotate -c 'INFO/DP' -a annt.vcf.gz in.vcf.gz\nannotating a vcf file with a tabular file:\nsee page https://github.com/samtools/bcftools/wiki/HOWTOs#annotate-from-bed\ndrop individual genotype information\nbcftools view -G input.vcf.gz\ngetting stats on the number of REF/ALT swaps and other things:\nbcftools +fixref file.bcf -- -f ref.fa\ncorrecting the REF/ALT swaps:\nbcftools norm --check-ref ws -f ref.fa in.vcf.gz -o out.vcf.gz -Oz\nchanging the sample names in a VCF:\n1 2 3 # the samplenames.txt file has the following format: # oldsamplename newsamplename bcftools reheader -s samplenames.txt NA12878.giab.SNP.chr20.non_valid.vcf.gz -o NA12878.giab.SNP.chr20.non_valid.reheaded.vcf.gz changing the header:\n1 bcftools reheader -h newheader.txt ../combined.all.chr20.vcf.gz.snps.biallelic.vcf_chr20.vcf.gz.ensembl.vcf.gz.phased.ligated.NA12878.ucsc.vcf.gz -o combined.all.chr20.vcf.gz.snps.biallelic.vcf_chr20.vcf.gz.ensembl.vcf.gz.phased.ligated.NA12878.ucsc.reheaded.vcf.gz in order to use the plugins:\nexport BCFTOOLS_PLUGINS=~/bin/bcftools-1.6/plugins/\ntag2tag: convert PL to GL\nbcftools +tag2tag in.vcf -- -r --pl-to-gl\nnormalizing the multiallelic variants:\nwith -any I will split the multiallelic variants (SNPs+INDELs) into several records bcftools norm -m -any in.vcf.gz -o out.norm.vcf.gz -Oz\nFor example:\nchr20 60280 . TTTCCA TTTCCATTCCA,T 744 PASS . Will be converted to:\nchr20 60280 . TTTCCA TTTCCATTCCA 744 PASS . chr20 60280 . TTTCCA T 744 PASS . selecting the missing (uncalled) genotypes:\nbcftools view -u in.vcf.gz -o missing_genotypes.vcf.gz -Oz\nselect a particular genotype (0/1 or 1/1) from a vcf. In this case access sample accessed by index 8:\nbcftools view -H combined.snps_indels_chr1.filt.vcf.gz.onlyvariants.vcf.gz.ensembl.vcf.gz.85706.vcf.gz -i 'GT[8]=\"het\"'\nselect all lines having exactly AC=2\nbcftools view -i'AC=2' in.vcf.gz\nif we have a tab in a VCF defined in the header like:\n#INFO=",
+  "wordCount" : "758",
+  "inLanguage": "en",
+  "datePublished": "2021-10-01T00:00:00Z",
+  "dateModified": "2021-10-01T00:00:00Z",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://entropydecrease.github.io/2021_10_01-bcftools_notes/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Entropy Decrease",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://entropydecrease.github.io/favicon.ico"
+    }
+  }
+}
+</script>
+</head>
+
+<body class="" id="top">
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.body.classList.add('dark');
+    } else if (localStorage.getItem("pref-theme") === "light") {
+        document.body.classList.remove('dark')
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.body.classList.add('dark');
+    }
+
+</script>
+
+<header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="https://entropydecrease.github.io/" accesskey="h" title="Entropy Decrease (Alt + H)">Entropy Decrease</a>
+            <div class="logo-switches">
+                <button id="theme-toggle" accesskey="t" title="(Alt + T)">
+                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <ul id="menu">
+            <li>
+                <a href="https://entropydecrease.github.io/" title="Home">
+                    <span>Home</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://entropydecrease.github.io/posts/" title="Posts">
+                    <span>Posts</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://entropydecrease.github.io/tags/" title="Tags">
+                    <span>Tags</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://entropydecrease.github.io/categories/" title="Categories">
+                    <span>Categories</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://entropydecrease.github.io/about" title="About">
+                    <span>About</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</header>
+<main class="main">
+
+<article class="post-single">
+  <header class="post-header">
+    
+    <h1 class="post-title entry-hint-parent">
+      bcftools notes (转载)
+    </h1>
+    <div class="post-meta"><span title='2021-10-01 00:00:00 +0000 UTC'>2021-10-01</span>
+
+</div>
+  </header> 
+  <div class="post-content"><p>copied from <code>https://gist.github.com/elowy01/93922762e131d7abd3c7e8e166a74a0b</code></p>
+<ul>
+<li>
+<p>Filter variants per region (in this example, print out only variants mapped to chr1 and chr2)</p>
+<p><code>bcftools filter -r1,2 ALL.chip.omni_broad_sanger_combined.20140818.snps.genotypes.hg38.vcf.gz</code></p>
+</li>
+<li>
+<p>printing out info for only 2 samples:</p>
+<p><code>bcftools view -s NA20818,NA20819 filename.vcf.gz</code></p>
+</li>
+<li>
+<p>printing stats only for variants passing the filter:</p>
+<p><code>bcftools view -f PASS filename.vcf.gz</code></p>
+</li>
+<li>
+<p>printing variants withoud header:</p>
+<p><code>bcftools view -H</code></p>
+</li>
+<li>
+<p>printing variants on a particular region:</p>
+<p><code>bcftools view -r chr20:1-200000 -s NA20818,NA20819 filename.vcf.gz</code></p>
+</li>
+<li>
+<p>print all variants except for the ones falling within region:</p>
+<p><code>bcftools view -t ^chr20:1-30000000 ex_bams.samtools.20161231.vcf.gz &gt;out.vcf</code></p>
+</li>
+<li>
+<p>view the positions passed in a file (accepted files are .vcf and .bed):</p>
+<p><code>bcftools view -R 0002.vcf in.vcf.gz</code></p>
+</li>
+<li>
+<p>view the positions passed in a tsv file:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-gdscript3" data-lang="gdscript3"><span class="line"><span class="cl"><span class="n">bcftools</span> <span class="n">view</span> <span class="o">-</span><span class="n">R</span> <span class="mf">0002.</span><span class="n">tsv</span> <span class="ow">in</span><span class="o">.</span><span class="n">vcf</span><span class="o">.</span><span class="n">gz</span>
+</span></span><span class="line"><span class="cl"><span class="n">The</span> <span class="n">format</span> <span class="n">of</span> <span class="mf">0002.</span><span class="n">tsv</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl"><span class="mi">20</span>      <span class="mi">79000</span>   <span class="mi">80000</span>
+</span></span><span class="line"><span class="cl"><span class="mi">20</span>      <span class="mi">90000</span>   <span class="mi">100000</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div></li>
+<li>
+<p>printing out only the chr info:</p>
+<p><code>bcftools query -f '%CHROM\n' filename.vcf</code></p>
+</li>
+<li>
+<p>now, print out the <code>chr\tpos</code></p>
+<p><code>bcftools query -f '%CHROM\t%POS\n' filename.vcf</code></p>
+</li>
+<li>
+<p>now, print out the AF INFO field</p>
+<p><code>bcftools query -f '%INFO/AF\n'</code></p>
+</li>
+<li>
+<p>getting a particular annotation from the VCF</p>
+<p><code>bcftools query -f '%QUAL\n' 0002.vcf</code></p>
+</li>
+<li>
+<p>printing chr pos and a particular annotation from a VCF:</p>
+<p><code>bcftools query -f '%CHROM\t%POS\t%INFO/DP\n' in.vcf.gz</code></p>
+</li>
+<li>
+<p>printing out the sets assigned by GATK CombineVariants</p>
+<p><code>bcftools query -f '%set\n' out_combine.vcf.gz | sort | uniq</code></p>
+</li>
+<li>
+<p>printing a list of samples from a VCF:</p>
+<p><code>bcftools query -l test.vcf</code></p>
+</li>
+<li>
+<p>also, the FORMAT annotations can be obtained by:</p>
+<p><code>bcftools query -f '[%GT]\n' ../0002.vcf |wc -l #the GT in this case</code></p>
+</li>
+<li>
+<p>selecting snps from file:</p>
+<p><code>bcftools view -v snps lc_bams.bcftools.20170319.NA12878.vcf.gz</code></p>
+</li>
+<li>
+<p>selecting the variants from a VCF (excluding 0|0 genotypes)</p>
+<p><code>bcftools view -c1 input.vcf</code></p>
+</li>
+<li>
+<p>selecting the non-variants from a VCF(AC=0)</p>
+<p><code>bcftools view -H -C0 concat.allchrs.sites.vcf.gz</code></p>
+</li>
+<li>
+<p>using one of the INFO annotations (IDV)</p>
+<p><code>bcftools filter -sFilterName -e'IDV&lt;5' input.vcf</code></p>
+</li>
+<li>
+<p>OR logical operator:</p>
+<p><code>bcftools filter -sFilterName -e'DP&gt;50000 | IDV&lt;9' input.vcf</code></p>
+</li>
+<li>
+<p>filtering on FORMAT annotation:</p>
+<p><code>bcftools filter -sFilterName -e'FORMAT/DP&lt;5' input.vcf</code></p>
+</li>
+<li>
+<p>filtering on INFO annotation:</p>
+<p><code>bcftools filter -sFilterName -e'INFO/DP&lt;5' input.vcf</code></p>
+</li>
+<li>
+<p>printing out variants that pass the filter:</p>
+<p><code>bcftools view -f.,PASS lc_bams.bcftools.20170411.exc.norm.SNP.filtered.vcf.gz</code></p>
+</li>
+<li>
+<p>bcftools stats and filtering:</p>
+<p><code>bcftools stats -f &quot;PASS,.&quot; file.vcf</code></p>
+</li>
+<li>
+<p>select only biallelic (excluding multiallelic) snps</p>
+<p><code>bcftools view -m2 -M2 -v snps input.vcf.gz</code></p>
+</li>
+<li>
+<p>select only the multiallelic snps</p>
+<p><code>bcftools view -m3 -v snps input.vcf.gz</code></p>
+</li>
+<li>
+<p>printing the set info in the INFO field:</p>
+<p><code>bcftools view -i 'set=&quot;freebayes_lcex&quot;' combined.all.chr20.vcf.gz</code></p>
+</li>
+<li>
+<p>printing all entries having a quality &lt;10</p>
+<p><code>bcftools view -i 'QUAL&lt;10' in.vcf.gz</code></p>
+</li>
+<li>
+<p>removing FORMAT column from the VCF, it will remove all FORMAT annotations except the GT information</p>
+<p><code>bcftools annotate -x FORMAT ifile.vcf.gz</code></p>
+</li>
+<li>
+<p>removing INFO field from VCF</p>
+<p><code>bcftools annotate --remove INFO in.vcf.gz</code></p>
+</li>
+<li>
+<p>annotating a vcf file using the annotations from a different VCF (in this case we only annotate the INFO/DP)</p>
+<p><code>bcftools annotate -c 'INFO/DP' -a annt.vcf.gz in.vcf.gz</code></p>
+</li>
+<li>
+<p>annotating a vcf file with a tabular file:</p>
+<p>see page <code>https://github.com/samtools/bcftools/wiki/HOWTOs#annotate-from-bed</code></p>
+</li>
+<li>
+<p>drop individual genotype information</p>
+<p><code>bcftools view -G input.vcf.gz</code></p>
+</li>
+<li>
+<p>getting stats on the number of REF/ALT swaps and other things:</p>
+<p><code>bcftools +fixref file.bcf -- -f ref.fa</code></p>
+</li>
+<li>
+<p>correcting the REF/ALT swaps:</p>
+<p><code>bcftools norm --check-ref ws -f ref.fa in.vcf.gz -o out.vcf.gz -Oz</code></p>
+</li>
+<li>
+<p>changing the sample names in a VCF:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl"><span class="c1"># the samplenames.txt file has the following format:</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># oldsamplename newsamplename</span>
+</span></span><span class="line"><span class="cl">bcftools reheader -s samplenames.txt NA12878.giab.SNP.chr20.non_valid.vcf.gz -o NA12878.giab.SNP.chr20.non_valid.reheaded.vcf.gz
+</span></span></code></pre></td></tr></table>
+</div>
+</div></li>
+<li>
+<p>changing the header:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">bcftools reheader -h newheader.txt ../combined.all.chr20.vcf.gz.snps.biallelic.vcf_chr20.vcf.gz.ensembl.vcf.gz.phased.ligated.NA12878.ucsc.vcf.gz -o combined.all.chr20.vcf.gz.snps.biallelic.vcf_chr20.vcf.gz.ensembl.vcf.gz.phased.ligated.NA12878.ucsc.reheaded.vcf.gz
+</span></span></code></pre></td></tr></table>
+</div>
+</div></li>
+<li>
+<p>in order to use the plugins:</p>
+<p><code>export BCFTOOLS_PLUGINS=~/bin/bcftools-1.6/plugins/</code></p>
+</li>
+<li>
+<p>tag2tag:  convert PL to GL</p>
+<p><code>bcftools +tag2tag in.vcf -- -r --pl-to-gl</code></p>
+</li>
+<li>
+<p>normalizing the multiallelic variants:</p>
+<p>with -any I will split the multiallelic variants (SNPs+INDELs) into several records
+bcftools norm -m -any in.vcf.gz -o out.norm.vcf.gz -Oz</p>
+<p>For example:</p>
+<pre><code>  chr20   60280   .       TTTCCA  TTTCCATTCCA,T   744     PASS    .
+</code></pre>
+<p>Will be converted to:</p>
+<pre><code>  chr20   60280   .       TTTCCA  TTTCCATTCCA     744     PASS    .
+  chr20   60280   .       TTTCCA  T       744     PASS    .
+</code></pre>
+</li>
+<li>
+<p>selecting the missing (uncalled) genotypes:</p>
+<p>bcftools view -u in.vcf.gz -o missing_genotypes.vcf.gz -Oz</p>
+</li>
+<li>
+<p>select a particular genotype (0/1 or 1/1) from a vcf. In this case access sample accessed by index 8:</p>
+<p><code>bcftools view -H combined.snps_indels_chr1.filt.vcf.gz.onlyvariants.vcf.gz.ensembl.vcf.gz.85706.vcf.gz -i 'GT[8]=&quot;het&quot;'</code></p>
+</li>
+<li>
+<p>select all lines having exactly AC=2</p>
+<p><code>bcftools view -i'AC=2' in.vcf.gz</code></p>
+</li>
+<li>
+<p>if we have a tab in a VCF defined in the header like:</p>
+<blockquote>
+<p>#INFO=&lt;ID=GRCH37_38_REF_STRING_MATCH,Number=0,Type=Flag,Description=&ldquo;Indicates reference allele in origin GRCh37 vcf string-matches reference allele in dbsnp GRCh38 vcf&rdquo;&gt;</p>
+</blockquote>
+<p>we can check for the records having this tag by doing:</p>
+<p>bcftools view -H -i&rsquo;GRCH37_38_REF_STRING_MATCH=1&rsquo; ALL.chr7_GRCh38.genotypes.20170504.ensembl.vcf.NA12878.biallelic.nonvariants.nonvalid.snps.vcf.gz | less</p>
+</li>
+<li>
+<p>And the contrary by doing:</p>
+<p><code>bcftools view -H -i'GRCH37_38_REF_STRING_MATCH=0' ALL.chr7_GRCh38.genotypes.20170504.ensembl.vcf.NA12878.biallelic.nonvariants.nonvalid.snps.vcf.gz | less</code></p>
+</li>
+<li>
+<p>Filtering a VCF depending on a certain Allele frequency:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">bcftools view -i <span class="s1">&#39;INFO/AF &gt; 0.8&#39;</span> z.vcf.gz
+</span></span></code></pre></td></tr></table>
+</div>
+</div></li>
+<li>
+<p>Split VCF by sample:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl"><span class="k">for</span> file in *.vcf*<span class="p">;</span> <span class="k">do</span>
+</span></span><span class="line"><span class="cl">  <span class="k">for</span> sample in <span class="sb">`</span>bcftools view -h <span class="nv">$file</span> <span class="p">|</span> grep <span class="s2">&#34;^#CHROM&#34;</span> <span class="p">|</span> cut -f10-<span class="sb">`</span><span class="p">;</span> <span class="k">do</span>
+</span></span><span class="line"><span class="cl">    bcftools view -c1 -Oz -s <span class="nv">$sample</span> -o <span class="si">${</span><span class="nv">file</span><span class="p">/.vcf*/.</span><span class="nv">$sample</span><span class="p">.vcf.gz</span><span class="si">}</span> <span class="nv">$file</span>
+</span></span><span class="line"><span class="cl">  <span class="k">done</span>
+</span></span><span class="line"><span class="cl"><span class="k">done</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div></li>
+</ul>
+
+
+  </div>
+
+  <footer class="post-footer">
+    <ul class="post-tags">
+      <li><a href="https://entropydecrease.github.io/tags/bcftools/">Bcftools</a></li>
+    </ul>
+  </footer>
+</article>
+    </main>
+    
+<footer class="footer">
+        <span>&copy; 2024 <a href="https://entropydecrease.github.io/">Entropy Decrease</a></span> · 
+
+    <span>
+        Powered by
+        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
+        <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>
+    </span>
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+        <path d="M12 6H0l6-6z" />
+    </svg>
+</a>
+
+<script>
+    let menu = document.getElementById('menu')
+    if (menu) {
+        menu.scrollLeft = localStorage.getItem("menu-scroll-position");
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
+</script>
+<script>
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        if (document.body.className.includes("dark")) {
+            document.body.classList.remove('dark');
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            document.body.classList.add('dark');
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+</script>
+</body>
+
+</html>

@@ -8,7 +8,7 @@
 <title>Posts | Entropy Decrease</title>
 <meta name="keywords" content="">
 <meta name="description" content="Posts - Entropy Decrease">
-<meta name="author" content="Entropy Decrease">
+<meta name="author" content="">
 <link rel="canonical" href="https://entropydecrease.github.io/posts/">
 <link crossorigin="anonymous" href="/assets/css/stylesheet.fc220c15db4aef0318bbf30adc45d33d4d7c88deff3238b23eb255afdc472ca6.css" integrity="sha256-/CIMFdtK7wMYu/MK3EXTPU18iN7/MjiyPrJVr9xHLKY=" rel="preload stylesheet" as="style">
 <link rel="icon" href="https://entropydecrease.github.io/favicon.ico">
@@ -57,16 +57,13 @@
 
     </style>
 </noscript><meta property="og:title" content="Posts" />
-<meta property="og:description" content="Theme PaperMod - https://github.com/adityatelange/hugo-PaperMod" />
+<meta property="og:description" content="阅读、思考、写作，都是熵减的过程" />
 <meta property="og:type" content="website" />
-<meta property="og:url" content="https://entropydecrease.github.io/posts/" />
-<meta property="og:image" content="https://entropydecrease.github.io/images/papermod-cover.png" />
+<meta property="og:url" content="https://entropydecrease.github.io/posts/" /><meta property="og:site_name" content="Entropy Decrease" />
 
-
-<meta name="twitter:card" content="summary_large_image" />
-<meta name="twitter:image" content="https://entropydecrease.github.io/images/papermod-cover.png" />
+<meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Posts"/>
-<meta name="twitter:description" content="Theme PaperMod - https://github.com/adityatelange/hugo-PaperMod"/>
+<meta name="twitter:description" content="阅读、思考、写作，都是熵减的过程"/>
 
 
 <script type="application/ld+json">
@@ -126,18 +123,23 @@
         </div>
         <ul id="menu">
             <li>
-                <a href="https://entropydecrease.github.io/posts" title="Posts">
-                    <span class="active">Posts</span>
+                <a href="https://entropydecrease.github.io/" title="Home">
+                    <span>Home</span>
                 </a>
             </li>
             <li>
-                <a href="https://entropydecrease.github.io/categories" title="Categories">
-                    <span>Categories</span>
+                <a href="https://entropydecrease.github.io/posts/" title="Posts">
+                    <span class="active">Posts</span>
                 </a>
             </li>
             <li>
                 <a href="https://entropydecrease.github.io/tags/" title="Tags">
                     <span>Tags</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://entropydecrease.github.io/categories/" title="Categories">
+                    <span>Categories</span>
                 </a>
             </li>
             <li>
@@ -149,17 +151,9 @@
     </nav>
 </header>
 <main class="main"> 
-<header class="page-header"><div class="breadcrumbs"><a href="https://entropydecrease.github.io/">Home</a></div>
+<header class="page-header">
   <h1>
     Posts
-    <a href="/posts/index.xml" title="RSS" aria-label="RSS">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-        stroke-linecap="round" stroke-linejoin="round" height="23">
-        <path d="M4 11a9 9 0 0 1 9 9" />
-        <path d="M4 4a16 16 0 0 1 16 16" />
-        <circle cx="5" cy="19" r="1" />
-      </svg>
-    </a>
   </h1>
 </header>
 
@@ -172,16 +166,13 @@
     <p>igv假如每次都要从远程加载genome信息的话，网络不好的情况下会很慢，这时候最好做一个本地版的.genome文件。
 igv的.genome文件其实是一个zip文件。
 先看一下hg19.genome的内容：
-&gt; cp ~/igv/genomes/hg19.genome . &gt; unzip hg19.genome Archive: hg19.genome inflating: cytoBand.txt inflating: hg19_alias.tab inflating: property.txt inflating: refGene.txt &gt; cat property.txt id=hg19 name=Human hg19 cytobandFile=cytoBand.txt ordered=true geneFile=refGene.txt geneTrackName=RefSeq Genes chrAliasFile=hg19_alias.tab fasta=True sequenceLocation=http://s3.amazonaws.com/igv.broadinstitute.org/genomes/seq/hg19/hg19.fasta url=http://www.ncbi.nlm.nih.gov/gene?term=$$ 可以看到，里面的cytoband文件，gene文件都是本地的，但是序列文件是在AWS上面的。而最近AWS的访问有问题，非常不稳定，所以igv也不能打开hg19.genome了。
+1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 &gt; cp ~/igv/genomes/hg19.genome . &gt; unzip hg19.genome Archive: hg19.genome inflating: cytoBand.txt inflating: hg19_alias.tab inflating: property.txt inflating: refGene.txt &gt; cat property.txt id=hg19 name=Human hg19 cytobandFile=cytoBand.txt ordered=true geneFile=refGene.txt geneTrackName=RefSeq Genes chrAliasFile=hg19_alias.tab fasta=True sequenceLocation=http://s3.amazonaws.com/igv.broadinstitute.org/genomes/seq/hg19/hg19.fasta url=http://www.ncbi.nlm.nih.gov/gene?term=$$ 可以看到，里面的cytoband文件，gene文件都是本地的，但是序列文件是在AWS上面的。而最近AWS的访问有问题，非常不稳定，所以igv也不能打开hg19.genome了。
 让igv都使用本地的文件，只需要修改property.txt即可，修改property.txt如下：
-id=hg19-local name=Human hg19 local cytobandFile=cytoBand.txt ordered=true geneFile=refGene.txt geneTrackName=RefSeq Genes chrAliasFile=hg19_alias.tab fasta=True sequenceLocation=/Users/xiaojf/data/genomes/hs37d5/hs37d5.fa url=http://www.ncbi.nlm.nih.gov/gene?term=$$ 其中sequenceLocation改成本地的基因组fasta文件。
-然后重新打包成.genome文件即可:
-&gt; zip hg19_local.genome cytoBand.txt refGene.txt hg19_alias.tab property.txt &gt; mv hg19_local.genome ~/igv/genomes/ 最后，在igv中打开这个.genome文件。
-hg38本地版的.genome类似。
-</p>
+1 2 3 4 5 6 7 8 9 10 id=hg19-local name=Human hg19 local cytobandFile=cytoBand.txt ordered=true geneFile=refGene.txt geneTrackName=RefSeq Genes chrAliasFile=hg19_alias.tab fasta=True sequenceLocation=/Users/xiaojf/data/genomes/hs37d5/hs37d5.fa url=http://www.ncbi.nlm.nih.gov/gene?term=$$ 其中sequenceLocation改成本地的基因组fasta文件。
+...</p>
   </div>
-  <footer class="entry-footer"><span title='2020-02-23 00:00:00 +0000 UTC'>February 23, 2020</span>&nbsp;·&nbsp;1 min&nbsp;·&nbsp;Entropy Decrease</footer>
-  <a class="entry-link" aria-label="post link to igv 生成本地的.genome文件" href="https://entropydecrease.github.io/posts/igv_local_genome/"></a>
+  <footer class="entry-footer"><span title='2020-02-23 00:00:00 +0000 UTC'>2020-02-23</span></footer>
+  <a class="entry-link" aria-label="post link to igv 生成本地的.genome文件" href="https://entropydecrease.github.io/2020_02_23-igv_local_genome/"></a>
 </article>
 
 <article class="post-entry"> 
@@ -190,10 +181,10 @@ hg38本地版的.genome类似。
     </h2>
   </header>
   <div class="entry-content">
-    <p>安装 wget ftp://webdata2:webdata2@ussd-ftp.illumina.com/downloads/software/bcl2fastq/bcl2fastq2-v2.17.1.14.tar.zip tar -zxvf bcl2fastq2-v2.17.1.14.tar.zip cd bcl2fastq2 mkdir build; cd build ../src/configure --prefix=$HOME &gt; build.txt.log 2&gt;&amp;1 tail -f build.txt.log 可能出现的问题 CMake complains Required header sys/stat.h not found &gt; sudo apt-get install libc6-dev-amd64 no support for gzip compression &gt; sudo apt-get install zlib1g-dev bcl2fastq also complains no libxml2 and libxslt, but it could build by itself. And the version installed with ubuntu is too new :( &gt; sudo apt-get install gfortran doxygen graphviz </p>
+    <p>安装 1 2 3 4 5 6 7 8 9 10 11 wget ftp://webdata2:webdata2@ussd-ftp.illumina.com/downloads/software/bcl2fastq/bcl2fastq2-v2.17.1.14.tar.zip tar -zxvf bcl2fastq2-v2.17.1.14.tar.zip cd bcl2fastq2 mkdir build; cd build ../src/configure --prefix=$HOME &gt; build.txt.log 2&gt;&amp;1 tail -f build.txt.log 可能出现的问题 CMake complains Required header sys/stat.h not found 1 &gt; sudo apt-get install libc6-dev-amd64 no support for gzip compression 1 &gt; sudo apt-get install zlib1g-dev bcl2fastq also complains no libxml2 and libxslt, but it could build by itself. And the version installed with ubuntu is too new :( 1 &gt; sudo apt-get install gfortran doxygen graphviz </p>
   </div>
-  <footer class="entry-footer"><span title='2020-02-23 00:00:00 +0000 UTC'>February 23, 2020</span>&nbsp;·&nbsp;1 min&nbsp;·&nbsp;Entropy Decrease</footer>
-  <a class="entry-link" aria-label="post link to 安装bcl2fastq" href="https://entropydecrease.github.io/posts/bcl2fastq_install/"></a>
+  <footer class="entry-footer"><span title='2020-02-23 00:00:00 +0000 UTC'>2020-02-23</span></footer>
+  <a class="entry-link" aria-label="post link to 安装bcl2fastq" href="https://entropydecrease.github.io/2020_02_23-bcl2fastq_install/"></a>
 </article>
 
 <article class="post-entry"> 
@@ -212,8 +203,8 @@ hs37d5.fa.gz
 Integrated reference sequence from the GRCh37 primary assembly (chromosomal plus unlocalized and unplaced contigs), the rCRS mitochondrial sequence (AC:NC_012920), Human herpesvirus 4 type 1 (AC:NC_007605) and the concatenated decoy sequences (hs37d5cs.fa.gz). This file is compressed by razip from the samtools package for random access. Gzip may complain “decompression OK, trailing garbage ignored”, but this does not affect the correctness of the decompressed file.
 ...</p>
   </div>
-  <footer class="entry-footer"><span title='2020-02-23 00:00:00 +0000 UTC'>February 23, 2020</span>&nbsp;·&nbsp;1 min&nbsp;·&nbsp;Entropy Decrease</footer>
-  <a class="entry-link" aria-label="post link to 应该使用哪个genome" href="https://entropydecrease.github.io/posts/ref_genome/"></a>
+  <footer class="entry-footer"><span title='2020-02-23 00:00:00 +0000 UTC'>2020-02-23</span></footer>
+  <a class="entry-link" aria-label="post link to 应该使用哪个genome" href="https://entropydecrease.github.io/2020_02_23-ref_genome/"></a>
 </article>
 
 <article class="post-entry"> 
@@ -288,8 +279,8 @@ Integrated reference sequence from the GRCh37 primary assembly (chromosomal plus
 这还没完，后面还有一堆事。
 ...</p>
   </div>
-  <footer class="entry-footer"><span title='2015-12-06 00:00:00 +0000 UTC'>December 6, 2015</span>&nbsp;·&nbsp;1 min&nbsp;·&nbsp;Entropy Decrease</footer>
-  <a class="entry-link" aria-label="post link to 说说我的家乡，没什么文笔，自娱自乐" href="https://entropydecrease.github.io/posts/some_history_of_my_hometown/"></a>
+  <footer class="entry-footer"><span title='2015-12-06 00:00:00 +0000 UTC'>2015-12-06</span></footer>
+  <a class="entry-link" aria-label="post link to 说说我的家乡，没什么文笔，自娱自乐" href="https://entropydecrease.github.io/2015_12_06-hometown_history/"></a>
 </article>
 
 <article class="post-entry"> 
@@ -298,10 +289,10 @@ Integrated reference sequence from the GRCh37 primary assembly (chromosomal plus
     </h2>
   </header>
   <div class="entry-content">
-    <p>automatically attach to a tmux session via SSH alias alias_name=&#39;ssh username@servername -t &#34;tmux attach || tmux&#34; &#39; -t Force pseudo-tty allocation. This can be used to execute arbitrary screen-based programs on a remote machine, which can be very useful, e.g., when implementing menu services. &#34;tmux attach&#34; tries to attach a tmux session. and if it fails, &#34;tmux&#34; will create a new session. to be continued.</p>
+    <p>automatically attach to a tmux session via SSH 1 2 3 4 5 6 7 alias alias_name=&#39;ssh username@servername -t &#34;tmux attach || tmux&#34; &#39; -t Force pseudo-tty allocation. This can be used to execute arbitrary screen-based programs on a remote machine, which can be very useful, e.g., when implementing menu services. &#34;tmux attach&#34; tries to attach a tmux session. and if it fails, &#34;tmux&#34; will create a new session. to be continued.</p>
   </div>
-  <footer class="entry-footer"><span title='2015-11-03 00:00:00 +0000 UTC'>November 3, 2015</span>&nbsp;·&nbsp;1 min&nbsp;·&nbsp;Entropy Decrease</footer>
-  <a class="entry-link" aria-label="post link to a few Unix and Shell tips" href="https://entropydecrease.github.io/posts/ssh_tmux/"></a>
+  <footer class="entry-footer"><span title='2015-11-03 00:00:00 +0000 UTC'>2015-11-03</span></footer>
+  <a class="entry-link" aria-label="post link to a few Unix and Shell tips" href="https://entropydecrease.github.io/2015_11_03-a-few-unix-and-shell-tips/"></a>
 </article>
 
 <article class="post-entry"> 
@@ -315,8 +306,8 @@ http://apple.stackexchange.com/questions/22297/is-bash-in-osx-case-insensitive
 HFS&#43; (the Mac filesystem) is usually configured to be case insensitive but case preserving. This means that the file system will consider foo and FoO to be the same, but when you create a new file it will remember which letters where capitalized and which were not. When you format a disk with HFS&#43; you can chose whether the file system should case sensitive or not. If you chose to format with UFS (Unix FileSystem) it is always case sensitive, AFAIK. To check whether a disk is case sensitive, run: &gt; diskutil info &lt;device&gt; For example: &gt; diskutil info disk0s2 Look for the Name: line. If it reads something like Mac OS Extended (Case-sensitive, Journaled) it means that it is case-sensitive. If it just reads Mac OS Extended (without the Case-sensitive) then it is only case preserving but not case sensitive. On my computer:
 ...</p>
   </div>
-  <footer class="entry-footer"><span title='2015-05-07 00:00:00 +0000 UTC'>May 7, 2015</span>&nbsp;·&nbsp;1 min&nbsp;·&nbsp;Entropy Decrease</footer>
-  <a class="entry-link" aria-label="post link to case insensitivity on MAC OS X" href="https://entropydecrease.github.io/posts/mac_case_insensitivity/"></a>
+  <footer class="entry-footer"><span title='2015-05-07 00:00:00 +0000 UTC'>2015-05-07</span></footer>
+  <a class="entry-link" aria-label="post link to case insensitivity on MAC OS X" href="https://entropydecrease.github.io/2015_05_07-case-insenstivity-on-mac-os-x/"></a>
 </article>
 
 <article class="post-entry"> 
@@ -329,8 +320,8 @@ HFS&#43; (the Mac filesystem) is usually configured to be case insensitive but c
 &gt; scutil --get HostName HostName: not set So we just need to set the hostname:
 &gt; sudo scutil --set HostName &#34;new_hostname&#34; Password: &gt; scutil --get HostName new_hostname </p>
   </div>
-  <footer class="entry-footer"><span title='2015-04-13 00:00:00 +0000 UTC'>April 13, 2015</span>&nbsp;·&nbsp;1 min&nbsp;·&nbsp;Entropy Decrease</footer>
-  <a class="entry-link" aria-label="post link to 设置hostname，避免DHCP修改hostname" href="https://entropydecrease.github.io/posts/set_hostname/"></a>
+  <footer class="entry-footer"><span title='2015-04-13 00:00:00 +0000 UTC'>2015-04-13</span></footer>
+  <a class="entry-link" aria-label="post link to 设置hostname，避免DHCP修改hostname" href="https://entropydecrease.github.io/2015_04_13-set-hostname-not-modifed-by-dhcp/"></a>
 </article>
 
 <article class="post-entry"> 
@@ -345,8 +336,8 @@ Finder -&gt; goto “/Volumes” will see a backup disk
 ‘sudo tmutil enablelocal’ will enable it again
 </p>
   </div>
-  <footer class="entry-footer"><span title='2015-04-11 00:00:00 +0000 UTC'>April 11, 2015</span>&nbsp;·&nbsp;1 min&nbsp;·&nbsp;Entropy Decrease</footer>
-  <a class="entry-link" aria-label="post link to disable local backup of timemachine" href="https://entropydecrease.github.io/posts/disable_timemachine_local_backup/"></a>
+  <footer class="entry-footer"><span title='2015-04-11 00:00:00 +0000 UTC'>2015-04-11</span></footer>
+  <a class="entry-link" aria-label="post link to disable local backup of timemachine" href="https://entropydecrease.github.io/2015_04_11-disable-local-backup-of-timemachine/"></a>
 </article>
 
 <article class="post-entry"> 
@@ -361,8 +352,8 @@ Finder -&gt; goto “/Volumes” will see a backup disk
 然后打开lftp，在lftp内运行attach pid。
 </p>
   </div>
-  <footer class="entry-footer"><span title='2015-04-05 00:00:00 +0000 UTC'>April 5, 2015</span>&nbsp;·&nbsp;1 min&nbsp;·&nbsp;Entropy Decrease</footer>
-  <a class="entry-link" aria-label="post link to re-attach a lftp process" href="https://entropydecrease.github.io/posts/reattach_lftp/"></a>
+  <footer class="entry-footer"><span title='2015-04-05 00:00:00 +0000 UTC'>2015-04-05</span></footer>
+  <a class="entry-link" aria-label="post link to re-attach a lftp process" href="https://entropydecrease.github.io/2015_04_05-reattach_lftp/"></a>
 </article>
 
 <article class="post-entry"> 
@@ -378,22 +369,22 @@ launchctl load -w /System/Library/LaunchDaemons/com.apple.atrun.plist
 之后，就可以使用at命令来提交任务。
 </p>
   </div>
-  <footer class="entry-footer"><span title='2015-04-01 00:00:00 +0000 UTC'>April 1, 2015</span>&nbsp;·&nbsp;1 min&nbsp;·&nbsp;Entropy Decrease</footer>
-  <a class="entry-link" aria-label="post link to run job with at on Mac" href="https://entropydecrease.github.io/posts/atrun/"></a>
+  <footer class="entry-footer"><span title='2015-04-01 00:00:00 +0000 UTC'>2015-04-01</span></footer>
+  <a class="entry-link" aria-label="post link to run job with at on Mac" href="https://entropydecrease.github.io/2015_04_01-run_job_with_at_on_mac/"></a>
 </article>
 <footer class="page-footer">
   <nav class="pagination">
     <a class="prev" href="https://entropydecrease.github.io/posts/page/5/">
-      «&nbsp;Prev&nbsp;5/7
+      «&nbsp;Prev&nbsp;
     </a>
-    <a class="next" href="https://entropydecrease.github.io/posts/page/7/">Next&nbsp;7/7&nbsp;»
+    <a class="next" href="https://entropydecrease.github.io/posts/page/7/">Next&nbsp;&nbsp;»
     </a>
   </nav>
 </footer>
     </main>
     
 <footer class="footer">
-        <span>© [Entropy Decrease]</span> · 
+        <span>&copy; 2024 <a href="https://entropydecrease.github.io/">Entropy Decrease</a></span> · 
 
     <span>
         Powered by

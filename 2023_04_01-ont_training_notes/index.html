@@ -1,0 +1,820 @@
+<!DOCTYPE html>
+<html lang="en" dir="auto">
+
+<head><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="index, follow">
+<title>ONT相关的一些笔记 | Entropy Decrease</title>
+<meta name="keywords" content="nanopore">
+<meta name="description" content="准确度
+Kit V14 &#43; R10.4.1
+
+simplex: 99.6%, Q24
+duplex: 99.92%, Q31
+
+duplex
+
+
+一个双链文库分子，两端都有motor protein（马达蛋白）。一端的马达蛋白牵引双链文库靠近纳米孔，并解开双链让其中一条单链进入纳米孔，在其完全进入纳米孔之后，文库另外一端的马达蛋白有可能会牵引文库另外一头直接以单链的形式（无需解链）进入纳米孔（此时也有可能是其他的片段进入纳米孔测序）。这样测得的序列是一条原始分子的正负链都被测到了，所以叫duplex，可以提高测序精度。
+
+
+duplex不是通过新的试剂，只是protocol，让互补链紧跟着正义链过同一个孔而已，有一些reads是duplex，也有很多是simplex。
+据说最新的试剂，可以将duplex reads的比例提高到70%。
+
+
+duplex的精度与长度相互独立
+
+
+测indel要60x才比较准。
+
+
+misc
+
+低覆盖度，1x也可以测CNV
+
+泛基因组
+
+
+泛基因组用ONT组装，只看SV或NSR的话，20x覆盖度够用。但是要看单碱基分辨率的SNV/indel，学校研究人员认为需要用NGS数据做polish.
+
+
+学校研究人员提到长的sv假阳性非常高，他们把5M 以上inv和2M 以上indel都过滤掉了，我也是有点无语，做临床检测的话，这些才是更容易致病的。。。。
+
+
+ONT公司认为泛基因组的组装，SV所需数据量较小，SNV用40x够了，homopolymer处的indel，可以用60x的duplex测序来解决。但是他们一般推荐40x，因为一个芯片标准的测序量是120G，刚好是40x的覆盖度。
+
+
+植物多倍体
+
+组装多倍体比较难，ONT单独无法完成，一般是结合PacBio HiFi，Hi-C和OGM也常用。
+
+适应性采样
+
+NGS短板：读长短，修饰信息丢失
+大量宿主DNA给mNGS带来挑战，唾液中加入PMA，可显著减少人源DNA
+三代测序因序列较长，更容易将耐药基因归属至菌种。
+NGS的扩增可能产生偏向性（bias），三代测序无扩增，可避免此类偏向性。
+适应性采样，提供人类基因组的bed文件，碰到可以匹配到ren基因组的序列，就弹出。
+适应性采样，可提高病原序列比例，且显著提高病原体达到30x覆盖度的速度（4h vs 常规12h）。
+
+文件格式
+Fast5
+
+
+ONT现在的默认格式，未来会被POD替代。
+
+
+采样频率4k Hz == 4000次/秒，碱基的过孔速度 ~400bp/s，相当于每个碱基过孔的时间内有10次的采样。
+
+
+数据量与文件大小
+
+  
+      
+          数据量
+          Fast5文件大小
+          Pod5文件大小
+      
+  
+  
+      
+          1G bp
+          6G Byte
+          0.5G Byte
+      
+      
+          10G bp
+          60 GB
+          5 GB
+      
+      
+          30G bp
+          180 GB
+          15 GB
+      
+      
+          90G bp
+          540 GB
+          45 GB
+      
+  
+
+
+
+Pod5格式
+
+替代Fast5，后续会作为默认文件格式
+MinKnow机器集成
+
+bascalling
+
+
+将Fast5/Pod5文件转换为Fastq/uBam格式的过程">
+<meta name="author" content="">
+<link rel="canonical" href="https://entropydecrease.github.io/2023_04_01-ont_training_notes/">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.fc220c15db4aef0318bbf30adc45d33d4d7c88deff3238b23eb255afdc472ca6.css" integrity="sha256-/CIMFdtK7wMYu/MK3EXTPU18iN7/MjiyPrJVr9xHLKY=" rel="preload stylesheet" as="style">
+<link rel="icon" href="https://entropydecrease.github.io/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="https://entropydecrease.github.io/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://entropydecrease.github.io/favicon-32x32.png">
+<link rel="apple-touch-icon" href="https://entropydecrease.github.io/apple-touch-icon.png">
+<link rel="mask-icon" href="https://entropydecrease.github.io/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<link rel="alternate" hreflang="en" href="https://entropydecrease.github.io/2023_04_01-ont_training_notes/">
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+    <style>
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --theme: rgb(29, 30, 32);
+                --entry: rgb(46, 46, 51);
+                --primary: rgb(218, 218, 219);
+                --secondary: rgb(155, 156, 157);
+                --tertiary: rgb(65, 66, 68);
+                --content: rgb(196, 196, 197);
+                --code-block-bg: rgb(46, 46, 51);
+                --code-bg: rgb(55, 56, 62);
+                --border: rgb(51, 51, 51);
+            }
+
+            .list {
+                background: var(--theme);
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-track {
+                background: 0 0;
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-thumb {
+                border-color: var(--theme);
+            }
+        }
+
+    </style>
+</noscript><meta property="og:title" content="ONT相关的一些笔记" />
+<meta property="og:description" content="准确度
+Kit V14 &#43; R10.4.1
+
+simplex: 99.6%, Q24
+duplex: 99.92%, Q31
+
+duplex
+
+
+一个双链文库分子，两端都有motor protein（马达蛋白）。一端的马达蛋白牵引双链文库靠近纳米孔，并解开双链让其中一条单链进入纳米孔，在其完全进入纳米孔之后，文库另外一端的马达蛋白有可能会牵引文库另外一头直接以单链的形式（无需解链）进入纳米孔（此时也有可能是其他的片段进入纳米孔测序）。这样测得的序列是一条原始分子的正负链都被测到了，所以叫duplex，可以提高测序精度。
+
+
+duplex不是通过新的试剂，只是protocol，让互补链紧跟着正义链过同一个孔而已，有一些reads是duplex，也有很多是simplex。
+据说最新的试剂，可以将duplex reads的比例提高到70%。
+
+
+duplex的精度与长度相互独立
+
+
+测indel要60x才比较准。
+
+
+misc
+
+低覆盖度，1x也可以测CNV
+
+泛基因组
+
+
+泛基因组用ONT组装，只看SV或NSR的话，20x覆盖度够用。但是要看单碱基分辨率的SNV/indel，学校研究人员认为需要用NGS数据做polish.
+
+
+学校研究人员提到长的sv假阳性非常高，他们把5M 以上inv和2M 以上indel都过滤掉了，我也是有点无语，做临床检测的话，这些才是更容易致病的。。。。
+
+
+ONT公司认为泛基因组的组装，SV所需数据量较小，SNV用40x够了，homopolymer处的indel，可以用60x的duplex测序来解决。但是他们一般推荐40x，因为一个芯片标准的测序量是120G，刚好是40x的覆盖度。
+
+
+植物多倍体
+
+组装多倍体比较难，ONT单独无法完成，一般是结合PacBio HiFi，Hi-C和OGM也常用。
+
+适应性采样
+
+NGS短板：读长短，修饰信息丢失
+大量宿主DNA给mNGS带来挑战，唾液中加入PMA，可显著减少人源DNA
+三代测序因序列较长，更容易将耐药基因归属至菌种。
+NGS的扩增可能产生偏向性（bias），三代测序无扩增，可避免此类偏向性。
+适应性采样，提供人类基因组的bed文件，碰到可以匹配到ren基因组的序列，就弹出。
+适应性采样，可提高病原序列比例，且显著提高病原体达到30x覆盖度的速度（4h vs 常规12h）。
+
+文件格式
+Fast5
+
+
+ONT现在的默认格式，未来会被POD替代。
+
+
+采样频率4k Hz == 4000次/秒，碱基的过孔速度 ~400bp/s，相当于每个碱基过孔的时间内有10次的采样。
+
+
+数据量与文件大小
+
+  
+      
+          数据量
+          Fast5文件大小
+          Pod5文件大小
+      
+  
+  
+      
+          1G bp
+          6G Byte
+          0.5G Byte
+      
+      
+          10G bp
+          60 GB
+          5 GB
+      
+      
+          30G bp
+          180 GB
+          15 GB
+      
+      
+          90G bp
+          540 GB
+          45 GB
+      
+  
+
+
+
+Pod5格式
+
+替代Fast5，后续会作为默认文件格式
+MinKnow机器集成
+
+bascalling
+
+
+将Fast5/Pod5文件转换为Fastq/uBam格式的过程" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://entropydecrease.github.io/2023_04_01-ont_training_notes/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2023-04-01T00:00:00+00:00" />
+<meta property="article:modified_time" content="2023-04-01T00:00:00+00:00" /><meta property="og:site_name" content="Entropy Decrease" />
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="ONT相关的一些笔记"/>
+<meta name="twitter:description" content="准确度
+Kit V14 &#43; R10.4.1
+
+simplex: 99.6%, Q24
+duplex: 99.92%, Q31
+
+duplex
+
+
+一个双链文库分子，两端都有motor protein（马达蛋白）。一端的马达蛋白牵引双链文库靠近纳米孔，并解开双链让其中一条单链进入纳米孔，在其完全进入纳米孔之后，文库另外一端的马达蛋白有可能会牵引文库另外一头直接以单链的形式（无需解链）进入纳米孔（此时也有可能是其他的片段进入纳米孔测序）。这样测得的序列是一条原始分子的正负链都被测到了，所以叫duplex，可以提高测序精度。
+
+
+duplex不是通过新的试剂，只是protocol，让互补链紧跟着正义链过同一个孔而已，有一些reads是duplex，也有很多是simplex。
+据说最新的试剂，可以将duplex reads的比例提高到70%。
+
+
+duplex的精度与长度相互独立
+
+
+测indel要60x才比较准。
+
+
+misc
+
+低覆盖度，1x也可以测CNV
+
+泛基因组
+
+
+泛基因组用ONT组装，只看SV或NSR的话，20x覆盖度够用。但是要看单碱基分辨率的SNV/indel，学校研究人员认为需要用NGS数据做polish.
+
+
+学校研究人员提到长的sv假阳性非常高，他们把5M 以上inv和2M 以上indel都过滤掉了，我也是有点无语，做临床检测的话，这些才是更容易致病的。。。。
+
+
+ONT公司认为泛基因组的组装，SV所需数据量较小，SNV用40x够了，homopolymer处的indel，可以用60x的duplex测序来解决。但是他们一般推荐40x，因为一个芯片标准的测序量是120G，刚好是40x的覆盖度。
+
+
+植物多倍体
+
+组装多倍体比较难，ONT单独无法完成，一般是结合PacBio HiFi，Hi-C和OGM也常用。
+
+适应性采样
+
+NGS短板：读长短，修饰信息丢失
+大量宿主DNA给mNGS带来挑战，唾液中加入PMA，可显著减少人源DNA
+三代测序因序列较长，更容易将耐药基因归属至菌种。
+NGS的扩增可能产生偏向性（bias），三代测序无扩增，可避免此类偏向性。
+适应性采样，提供人类基因组的bed文件，碰到可以匹配到ren基因组的序列，就弹出。
+适应性采样，可提高病原序列比例，且显著提高病原体达到30x覆盖度的速度（4h vs 常规12h）。
+
+文件格式
+Fast5
+
+
+ONT现在的默认格式，未来会被POD替代。
+
+
+采样频率4k Hz == 4000次/秒，碱基的过孔速度 ~400bp/s，相当于每个碱基过孔的时间内有10次的采样。
+
+
+数据量与文件大小
+
+  
+      
+          数据量
+          Fast5文件大小
+          Pod5文件大小
+      
+  
+  
+      
+          1G bp
+          6G Byte
+          0.5G Byte
+      
+      
+          10G bp
+          60 GB
+          5 GB
+      
+      
+          30G bp
+          180 GB
+          15 GB
+      
+      
+          90G bp
+          540 GB
+          45 GB
+      
+  
+
+
+
+Pod5格式
+
+替代Fast5，后续会作为默认文件格式
+MinKnow机器集成
+
+bascalling
+
+
+将Fast5/Pod5文件转换为Fastq/uBam格式的过程"/>
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position":  1 ,
+      "name": "Posts",
+      "item": "https://entropydecrease.github.io/posts/"
+    }, 
+    {
+      "@type": "ListItem",
+      "position":  2 ,
+      "name": "ONT相关的一些笔记",
+      "item": "https://entropydecrease.github.io/2023_04_01-ont_training_notes/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "ONT相关的一些笔记",
+  "name": "ONT相关的一些笔记",
+  "description": "准确度 Kit V14 + R10.4.1\nsimplex: 99.6%, Q24 duplex: 99.92%, Q31 duplex 一个双链文库分子，两端都有motor protein（马达蛋白）。一端的马达蛋白牵引双链文库靠近纳米孔，并解开双链让其中一条单链进入纳米孔，在其完全进入纳米孔之后，文库另外一端的马达蛋白有可能会牵引文库另外一头直接以单链的形式（无需解链）进入纳米孔（此时也有可能是其他的片段进入纳米孔测序）。这样测得的序列是一条原始分子的正负链都被测到了，所以叫duplex，可以提高测序精度。\nduplex不是通过新的试剂，只是protocol，让互补链紧跟着正义链过同一个孔而已，有一些reads是duplex，也有很多是simplex。 据说最新的试剂，可以将duplex reads的比例提高到70%。\nduplex的精度与长度相互独立\n测indel要60x才比较准。\nmisc 低覆盖度，1x也可以测CNV 泛基因组 泛基因组用ONT组装，只看SV或NSR的话，20x覆盖度够用。但是要看单碱基分辨率的SNV/indel，学校研究人员认为需要用NGS数据做polish.\n学校研究人员提到长的sv假阳性非常高，他们把5M 以上inv和2M 以上indel都过滤掉了，我也是有点无语，做临床检测的话，这些才是更容易致病的。。。。\nONT公司认为泛基因组的组装，SV所需数据量较小，SNV用40x够了，homopolymer处的indel，可以用60x的duplex测序来解决。但是他们一般推荐40x，因为一个芯片标准的测序量是120G，刚好是40x的覆盖度。\n植物多倍体 组装多倍体比较难，ONT单独无法完成，一般是结合PacBio HiFi，Hi-C和OGM也常用。 适应性采样 NGS短板：读长短，修饰信息丢失 大量宿主DNA给mNGS带来挑战，唾液中加入PMA，可显著减少人源DNA 三代测序因序列较长，更容易将耐药基因归属至菌种。 NGS的扩增可能产生偏向性（bias），三代测序无扩增，可避免此类偏向性。 适应性采样，提供人类基因组的bed文件，碰到可以匹配到ren基因组的序列，就弹出。 适应性采样，可提高病原序列比例，且显著提高病原体达到30x覆盖度的速度（4h vs 常规12h）。 文件格式 Fast5 ONT现在的默认格式，未来会被POD替代。\n采样频率4k Hz == 4000次/秒，碱基的过孔速度 ~400bp/s，相当于每个碱基过孔的时间内有10次的采样。\n数据量与文件大小\n数据量 Fast5文件大小 Pod5文件大小 1G bp 6G Byte 0.5G Byte 10G bp 60 GB 5 GB 30G bp 180 GB 15 GB 90G bp 540 GB 45 GB Pod5格式 替代Fast5，后续会作为默认文件格式 MinKnow机器集成 bascalling 将Fast5/Pod5文件转换为Fastq/uBam格式的过程\n",
+  "keywords": [
+    "nanopore"
+  ],
+  "articleBody": "准确度 Kit V14 + R10.4.1\nsimplex: 99.6%, Q24 duplex: 99.92%, Q31 duplex 一个双链文库分子，两端都有motor protein（马达蛋白）。一端的马达蛋白牵引双链文库靠近纳米孔，并解开双链让其中一条单链进入纳米孔，在其完全进入纳米孔之后，文库另外一端的马达蛋白有可能会牵引文库另外一头直接以单链的形式（无需解链）进入纳米孔（此时也有可能是其他的片段进入纳米孔测序）。这样测得的序列是一条原始分子的正负链都被测到了，所以叫duplex，可以提高测序精度。\nduplex不是通过新的试剂，只是protocol，让互补链紧跟着正义链过同一个孔而已，有一些reads是duplex，也有很多是simplex。 据说最新的试剂，可以将duplex reads的比例提高到70%。\nduplex的精度与长度相互独立\n测indel要60x才比较准。\nmisc 低覆盖度，1x也可以测CNV 泛基因组 泛基因组用ONT组装，只看SV或NSR的话，20x覆盖度够用。但是要看单碱基分辨率的SNV/indel，学校研究人员认为需要用NGS数据做polish.\n学校研究人员提到长的sv假阳性非常高，他们把5M 以上inv和2M 以上indel都过滤掉了，我也是有点无语，做临床检测的话，这些才是更容易致病的。。。。\nONT公司认为泛基因组的组装，SV所需数据量较小，SNV用40x够了，homopolymer处的indel，可以用60x的duplex测序来解决。但是他们一般推荐40x，因为一个芯片标准的测序量是120G，刚好是40x的覆盖度。\n植物多倍体 组装多倍体比较难，ONT单独无法完成，一般是结合PacBio HiFi，Hi-C和OGM也常用。 适应性采样 NGS短板：读长短，修饰信息丢失 大量宿主DNA给mNGS带来挑战，唾液中加入PMA，可显著减少人源DNA 三代测序因序列较长，更容易将耐药基因归属至菌种。 NGS的扩增可能产生偏向性（bias），三代测序无扩增，可避免此类偏向性。 适应性采样，提供人类基因组的bed文件，碰到可以匹配到ren基因组的序列，就弹出。 适应性采样，可提高病原序列比例，且显著提高病原体达到30x覆盖度的速度（4h vs 常规12h）。 文件格式 Fast5 ONT现在的默认格式，未来会被POD替代。\n采样频率4k Hz == 4000次/秒，碱基的过孔速度 ~400bp/s，相当于每个碱基过孔的时间内有10次的采样。\n数据量与文件大小\n数据量 Fast5文件大小 Pod5文件大小 1G bp 6G Byte 0.5G Byte 10G bp 60 GB 5 GB 30G bp 180 GB 15 GB 90G bp 540 GB 45 GB Pod5格式 替代Fast5，后续会作为默认文件格式 MinKnow机器集成 bascalling 将Fast5/Pod5文件转换为Fastq/uBam格式的过程\nbasecalling可在测序仪上实时运行，也可事后在服务器上运行\n采用神经网络模型\nGuppy vs Dorado\n方面 Guppy Dorado 深度学习 TensorFlow PyTorch 速度 CPU, GPU CPU, GUP (速度更快) 支持硬件 Nvidia Nvidia， Apple Silicon GPU 碱基修饰的支持 5mC 5mC、5hmC Guppy summary file，包含序列ID、读长、mean Qscore等信息\nminKnow 可在测序时做alignment 输出bam文件，包含甲基化信息 但耗资源，仅适合小基因组 bascalling with guppy guppy_basecaller\n1 2 3 guppy_basecaller -i fast5_folder ... -x cuda:all # -x cuda:all ：使用所有的GPU guppy_barcoder\n1 2 3 4 guppy_barcoder -i ... -s --barcode_kits ... --trim_barcodes -q 0 -t 8 # -q 0: 输出的每个文件包含多少reads，`0`输出所有reads到同一个文件。 # -t 8: 进程数目 guppy_aligner\n1 guppy_aligner -i ... -s ... -t 8 -a ref.fa remora modified base calling on top of normal base calling\ndorado 1 2 3 dorado --help dorado subcommand read spliting read spliting的必要性\n两条序列可能间隔很短时间先后过同一个纳米孔，系统可能会认为这两条序列是一条序列 在真正序列未通过纳米孔之前，纳米孔也有可能产生电流，会被误认为是正常序列，并和随后正常序列被认为是同一条序列上的。 所以要根据adapter的序列进行read spliting，但有可能adapter的信号不准。\n",
+  "wordCount" : "192",
+  "inLanguage": "en",
+  "datePublished": "2023-04-01T00:00:00Z",
+  "dateModified": "2023-04-01T00:00:00Z",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://entropydecrease.github.io/2023_04_01-ont_training_notes/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Entropy Decrease",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://entropydecrease.github.io/favicon.ico"
+    }
+  }
+}
+</script>
+</head>
+
+<body class="" id="top">
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.body.classList.add('dark');
+    } else if (localStorage.getItem("pref-theme") === "light") {
+        document.body.classList.remove('dark')
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.body.classList.add('dark');
+    }
+
+</script>
+
+<header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="https://entropydecrease.github.io/" accesskey="h" title="Entropy Decrease (Alt + H)">Entropy Decrease</a>
+            <div class="logo-switches">
+                <button id="theme-toggle" accesskey="t" title="(Alt + T)">
+                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <ul id="menu">
+            <li>
+                <a href="https://entropydecrease.github.io/" title="Home">
+                    <span>Home</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://entropydecrease.github.io/posts/" title="Posts">
+                    <span>Posts</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://entropydecrease.github.io/tags/" title="Tags">
+                    <span>Tags</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://entropydecrease.github.io/categories/" title="Categories">
+                    <span>Categories</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://entropydecrease.github.io/about" title="About">
+                    <span>About</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</header>
+<main class="main">
+
+<article class="post-single">
+  <header class="post-header">
+    
+    <h1 class="post-title entry-hint-parent">
+      ONT相关的一些笔记
+    </h1>
+    <div class="post-meta"><span title='2023-04-01 00:00:00 +0000 UTC'>2023-04-01</span>
+
+</div>
+  </header> 
+  <div class="post-content"><h2 id="准确度">准确度<a hidden class="anchor" aria-hidden="true" href="#准确度">#</a></h2>
+<p>Kit V14 + R10.4.1</p>
+<ul>
+<li>simplex: 99.6%, Q24</li>
+<li>duplex: 99.92%, Q31</li>
+</ul>
+<h2 id="duplex">duplex<a hidden class="anchor" aria-hidden="true" href="#duplex">#</a></h2>
+<ul>
+<li>
+<p>一个双链文库分子，两端都有motor protein（马达蛋白）。一端的马达蛋白牵引双链文库靠近纳米孔，并解开双链让其中一条单链进入纳米孔，在其完全进入纳米孔之后，文库另外一端的马达蛋白有可能会牵引文库另外一头直接以单链的形式（无需解链）进入纳米孔（此时也有可能是其他的片段进入纳米孔测序）。这样测得的序列是一条原始分子的正负链都被测到了，所以叫duplex，可以提高测序精度。</p>
+</li>
+<li>
+<p>duplex不是通过新的试剂，只是protocol，让互补链紧跟着正义链过同一个孔而已，有一些reads是duplex，也有很多是simplex。
+据说最新的试剂，可以将duplex reads的比例提高到70%。</p>
+</li>
+<li>
+<p>duplex的精度与长度相互独立</p>
+</li>
+<li>
+<p>测indel要60x才比较准。</p>
+</li>
+</ul>
+<h2 id="misc">misc<a hidden class="anchor" aria-hidden="true" href="#misc">#</a></h2>
+<ul>
+<li>低覆盖度，1x也可以测CNV</li>
+</ul>
+<h2 id="泛基因组">泛基因组<a hidden class="anchor" aria-hidden="true" href="#泛基因组">#</a></h2>
+<ul>
+<li>
+<p>泛基因组用ONT组装，只看SV或NSR的话，20x覆盖度够用。但是要看单碱基分辨率的SNV/indel，学校研究人员认为需要用NGS数据做polish.</p>
+</li>
+<li>
+<p>学校研究人员提到长的sv假阳性非常高，他们把5M 以上inv和2M 以上indel都过滤掉了，我也是有点无语，做临床检测的话，这些才是更容易致病的。。。。</p>
+</li>
+<li>
+<p>ONT公司认为泛基因组的组装，SV所需数据量较小，SNV用40x够了，homopolymer处的indel，可以用60x的duplex测序来解决。但是他们一般推荐40x，因为一个芯片标准的测序量是120G，刚好是40x的覆盖度。</p>
+</li>
+</ul>
+<h2 id="植物多倍体">植物多倍体<a hidden class="anchor" aria-hidden="true" href="#植物多倍体">#</a></h2>
+<ul>
+<li>组装多倍体比较难，ONT单独无法完成，一般是结合PacBio HiFi，Hi-C和OGM也常用。</li>
+</ul>
+<h2 id="适应性采样">适应性采样<a hidden class="anchor" aria-hidden="true" href="#适应性采样">#</a></h2>
+<ul>
+<li>NGS短板：读长短，修饰信息丢失</li>
+<li>大量宿主DNA给mNGS带来挑战，唾液中加入PMA，可显著减少人源DNA</li>
+<li>三代测序因序列较长，更容易将耐药基因归属至菌种。</li>
+<li>NGS的扩增可能产生偏向性（bias），三代测序无扩增，可避免此类偏向性。</li>
+<li>适应性采样，提供人类基因组的bed文件，碰到可以匹配到ren基因组的序列，就弹出。</li>
+<li>适应性采样，可提高病原序列比例，且显著提高病原体达到30x覆盖度的速度（4h vs 常规12h）。</li>
+</ul>
+<h2 id="文件格式">文件格式<a hidden class="anchor" aria-hidden="true" href="#文件格式">#</a></h2>
+<h3 id="fast5">Fast5<a hidden class="anchor" aria-hidden="true" href="#fast5">#</a></h3>
+<ul>
+<li>
+<p>ONT现在的默认格式，未来会被POD替代。</p>
+</li>
+<li>
+<p>采样频率4k Hz == 4000次/秒，碱基的过孔速度 ~400bp/s，相当于每个碱基过孔的时间内有10次的采样。</p>
+</li>
+<li>
+<p>数据量与文件大小</p>
+<table>
+  <thead>
+      <tr>
+          <th style="text-align: left">数据量</th>
+          <th style="text-align: left">Fast5文件大小</th>
+          <th style="text-align: left">Pod5文件大小</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td style="text-align: left">1G bp</td>
+          <td style="text-align: left">6G Byte</td>
+          <td style="text-align: left">0.5G Byte</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">10G bp</td>
+          <td style="text-align: left">60 GB</td>
+          <td style="text-align: left">5 GB</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">30G bp</td>
+          <td style="text-align: left">180 GB</td>
+          <td style="text-align: left">15 GB</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">90G bp</td>
+          <td style="text-align: left">540 GB</td>
+          <td style="text-align: left">45 GB</td>
+      </tr>
+  </tbody>
+</table>
+</li>
+</ul>
+<h3 id="pod5格式">Pod5格式<a hidden class="anchor" aria-hidden="true" href="#pod5格式">#</a></h3>
+<ul>
+<li>替代Fast5，后续会作为默认文件格式</li>
+<li>MinKnow机器集成</li>
+</ul>
+<h2 id="bascalling">bascalling<a hidden class="anchor" aria-hidden="true" href="#bascalling">#</a></h2>
+<ul>
+<li>
+<p>将Fast5/Pod5文件转换为Fastq/uBam格式的过程</p>
+</li>
+<li>
+<p>basecalling可在测序仪上实时运行，也可事后在服务器上运行</p>
+</li>
+<li>
+<p>采用神经网络模型</p>
+</li>
+<li>
+<p>Guppy vs Dorado</p>
+<table>
+  <thead>
+      <tr>
+          <th style="text-align: left">方面</th>
+          <th style="text-align: left">Guppy</th>
+          <th style="text-align: left">Dorado</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td style="text-align: left">深度学习</td>
+          <td style="text-align: left">TensorFlow</td>
+          <td style="text-align: left">PyTorch</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">速度</td>
+          <td style="text-align: left">CPU, GPU</td>
+          <td style="text-align: left">CPU, GUP (速度更快)</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">支持硬件</td>
+          <td style="text-align: left">Nvidia</td>
+          <td style="text-align: left">Nvidia， Apple Silicon GPU</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">碱基修饰的支持</td>
+          <td style="text-align: left">5mC</td>
+          <td style="text-align: left">5mC、5hmC</td>
+      </tr>
+  </tbody>
+</table>
+</li>
+<li>
+<p>Guppy summary file，包含序列ID、读长、mean Qscore等信息</p>
+</li>
+</ul>
+<h2 id="minknow">minKnow<a hidden class="anchor" aria-hidden="true" href="#minknow">#</a></h2>
+<ul>
+<li>可在测序时做alignment</li>
+<li>输出bam文件，包含甲基化信息</li>
+<li>但耗资源，仅适合小基因组</li>
+</ul>
+<h2 id="bascalling-with-guppy">bascalling with guppy<a hidden class="anchor" aria-hidden="true" href="#bascalling-with-guppy">#</a></h2>
+<ul>
+<li>
+<p>guppy_basecaller</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">guppy_basecaller -i fast5_folder ... -x cuda:all
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># -x cuda:all ：使用所有的GPU</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div></li>
+<li>
+<p>guppy_barcoder</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">guppy_barcoder -i ... -s --barcode_kits ... --trim_barcodes -q <span class="m">0</span> -t <span class="m">8</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># -q 0: 输出的每个文件包含多少reads，`0`输出所有reads到同一个文件。</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># -t 8: 进程数目</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div></li>
+<li>
+<p>guppy_aligner</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">guppy_aligner -i ... -s ... -t <span class="m">8</span> -a ref.fa
+</span></span></code></pre></td></tr></table>
+</div>
+</div></li>
+</ul>
+<h2 id="remora">remora<a hidden class="anchor" aria-hidden="true" href="#remora">#</a></h2>
+<p>modified base calling on top of normal base calling</p>
+<h2 id="dorado">dorado<a hidden class="anchor" aria-hidden="true" href="#dorado">#</a></h2>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">dorado --help
+</span></span><span class="line"><span class="cl">    
+</span></span><span class="line"><span class="cl">dorado subcommand
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h2 id="read--spliting">read  spliting<a hidden class="anchor" aria-hidden="true" href="#read--spliting">#</a></h2>
+<ul>
+<li>
+<p>read spliting的必要性</p>
+<ul>
+<li>两条序列可能间隔很短时间先后过同一个纳米孔，系统可能会认为这两条序列是一条序列</li>
+<li>在真正序列未通过纳米孔之前，纳米孔也有可能产生电流，会被误认为是正常序列，并和随后正常序列被认为是同一条序列上的。</li>
+</ul>
+<p>所以要根据adapter的序列进行read spliting，但有可能adapter的信号不准。</p>
+</li>
+</ul>
+
+
+  </div>
+
+  <footer class="post-footer">
+    <ul class="post-tags">
+      <li><a href="https://entropydecrease.github.io/tags/nanopore/">Nanopore</a></li>
+    </ul>
+  </footer>
+</article>
+    </main>
+    
+<footer class="footer">
+        <span>&copy; 2024 <a href="https://entropydecrease.github.io/">Entropy Decrease</a></span> · 
+
+    <span>
+        Powered by
+        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
+        <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>
+    </span>
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+        <path d="M12 6H0l6-6z" />
+    </svg>
+</a>
+
+<script>
+    let menu = document.getElementById('menu')
+    if (menu) {
+        menu.scrollLeft = localStorage.getItem("menu-scroll-position");
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
+</script>
+<script>
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        if (document.body.className.includes("dark")) {
+            document.body.classList.remove('dark');
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            document.body.classList.add('dark');
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+</script>
+</body>
+
+</html>

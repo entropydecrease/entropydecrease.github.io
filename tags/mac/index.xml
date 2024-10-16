@@ -4,21 +4,15 @@
     <title>Mac on Entropy Decrease</title>
     <link>https://entropydecrease.github.io/tags/mac/</link>
     <description>Recent content in Mac on Entropy Decrease</description>
-    <image>
-      <title>Entropy Decrease</title>
-      <url>https://entropydecrease.github.io/images/papermod-cover.png</url>
-      <link>https://entropydecrease.github.io/images/papermod-cover.png</link>
-    </image>
     <generator>Hugo -- 0.135.0</generator>
     <language>en</language>
-    <copyright>[Entropy Decrease]</copyright>
     <lastBuildDate>Mon, 13 Apr 2015 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://entropydecrease.github.io/tags/mac/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>设置hostname，避免DHCP修改hostname</title>
-      <link>https://entropydecrease.github.io/posts/set_hostname/</link>
+      <link>https://entropydecrease.github.io/2015_04_13-set-hostname-not-modifed-by-dhcp/</link>
       <pubDate>Mon, 13 Apr 2015 00:00:00 +0000</pubDate>
-      <guid>https://entropydecrease.github.io/posts/set_hostname/</guid>
+      <guid>https://entropydecrease.github.io/2015_04_13-set-hostname-not-modifed-by-dhcp/</guid>
       <description>&lt;p&gt;It can be annoying to see my hostname being modifed each time I connect to a different WIFI. It is because the hostname was never set.&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;&amp;gt; scutil --get HostName 
 HostName: not set 
