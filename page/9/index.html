@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-	<meta name="generator" content="Hugo 0.134.2">
+	<meta name="generator" content="Hugo 0.135.0">
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="robots" content="noodp" />
@@ -93,6 +93,59 @@
     </div><main class="main">
                 <div class="container"><div class="page home" data-home="posts"><div class="home-profile"><div class="home-subtitle">阅读、思考、写作，都是熵减的过程</div><div class="links"><a href="https://github.com/entropydecrease" title="GitHub" target="_blank" rel="noopener noreffer me"><i class="fab fa-github fa-fw" aria-hidden="true"></i></a><a href="mailto:mailto:en&#43;tr-op*ydecr_ea%5ese@outlook.com%5eremove_unnecessary_chars%5e" title="Email" rel="me"><i class="far fa-envelope fa-fw" aria-hidden="true"></i></a><a href="/index.xml" title="RSS" target="_blank" rel="noopener noreffer me"><i class="fas fa-rss fa-fw" aria-hidden="true"></i></a></div></div>
 <article class="single summary" itemscope itemtype="http://schema.org/Article"><h1 class="single-title" itemprop="name headline">
+        <a href="/2022_05_01-bam-coverage/">计算bam文件中的覆盖度</a>
+    </h1><div class="post-meta"><span class="post-author"><a href="/" title="Author" rel="author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>entropydecrease</a></span>&nbsp;<span class="post-publish">published on <time datetime="2022-05-01">2022-05-01</time></span>&nbsp;<span class="post-category">included in <a href="/categories/bioinf/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>Bioinf</a></span></div><div class="content"><h2 id="things-to-consider">Things to consider</h2>
+<ol>
+<li>
+<p>to exclude some reads, like <code>samtools depth/bedcov</code> and mosdepth do.</p>
+<blockquote>
+<p>&lsquo;UNMAP,SECONDARY,QCFAIL,DUP or 0x704 or 1796&rsquo;</p>
+</blockquote>
+</li>
+<li>
+<p>to only summarize target regions or whole genome</p>
+</li>
+</ol>
+<h2 id="tools-to-use">Tools to use</h2>
+<h3 id="mosdepth">mosdepth</h3>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl"><span class="k">for</span> Bam in *.mkdup.bam
+</span></span><span class="line"><span class="cl"><span class="k">do</span>
+</span></span><span class="line"><span class="cl">        <span class="c1"># skip if index file doesn&#39;t exist</span>
+</span></span><span class="line"><span class="cl">        <span class="o">[</span> -s <span class="si">${</span><span class="nv">Bam</span><span class="si">}</span>.bai <span class="o">]</span> <span class="o">||</span> <span class="k">continue</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        <span class="nv">Base</span><span class="o">=</span><span class="k">$(</span>basename <span class="si">${</span><span class="nv">Bam</span><span class="p">%.mkdup.bam</span><span class="si">}</span><span class="k">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        <span class="c1"># run mosdepth</span>
+</span></span><span class="line"><span class="cl">        <span class="o">[</span> -s <span class="si">${</span><span class="nv">Base</span><span class="si">}</span>.mosdepth.summary.txt <span class="o">]</span> <span class="o">&amp;&amp;</span> <span class="k">continue</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        <span class="nb">echo</span> <span class="nv">$Bam</span>
+</span></span><span class="line"><span class="cl">        mosdepth --by target_hg38.bed <span class="se">\
+</span></span></span><span class="line"><span class="cl"><span class="se"></span>            --threads <span class="m">8</span> --no-per-base --fast-mode <span class="si">${</span><span class="nv">Base</span><span class="si">}</span> <span class="nv">$Bam</span> <span class="p">&amp;</span>
+</span></span><span class="line"><span class="cl"><span class="k">done</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>Problems with mosdepth is <code>mosdepth --by target.bed your.bam</code> could make some region zero coverage when it is not, and don&rsquo;t know the reason now. So use <code>samtools depth/bedcov</code> instead.</p></div><div class="post-footer">
+        <a href="/2022_05_01-bam-coverage/">Read More</a><div class="post-tags">
+                <i class="fas fa-tags fa-fw" aria-hidden="true"></i>&nbsp;<a href="/tags/bam/">Bam</a></div></div>
+</article><article class="single summary" itemscope itemtype="http://schema.org/Article"><h1 class="single-title" itemprop="name headline">
         <a href="/2021_10_01-bcftools_notes/">bcftools notes (转载)</a>
     </h1><div class="post-meta"><span class="post-author"><a href="/" title="Author" rel="author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>entropydecrease</a></span>&nbsp;<span class="post-publish">published on <time datetime="2021-10-01">2021-10-01</time></span>&nbsp;<span class="post-category">included in <a href="/categories/bioinf/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>Bioinf</a></span></div><div class="content"><p>copied from <code>https://gist.github.com/elowy01/93922762e131d7abd3c7e8e166a74a0b</code></p>
 <ul>
@@ -282,7 +335,7 @@
                 <i class="fas fa-tags fa-fw" aria-hidden="true"></i>&nbsp;<a href="/tags/genome/">Genome</a></div></div>
 </article><article class="single summary" itemscope itemtype="http://schema.org/Article"><h1 class="single-title" itemprop="name headline">
         <a href="/2015_12_06-hometown_history/">说说我的家乡，没什么文笔，自娱自乐</a>
-    </h1><div class="post-meta"><span class="post-author"><a href="/" title="Author" rel="author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>entropydecrease</a></span>&nbsp;<span class="post-publish">published on <time datetime="0001-01-01">0001-01-01</time></span>&nbsp;<span class="post-category">included in <a href="/categories/%E9%9A%8F%E7%AC%94/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>随笔</a></span></div><div class="content"><p>我的家乡新郑，洛阳与开封之间、黄河以南四十公里的一个小县，归郑州管辖。</p>
+    </h1><div class="post-meta"><span class="post-author"><a href="/" title="Author" rel="author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>entropydecrease</a></span>&nbsp;<span class="post-publish">published on <time datetime="2015-12-06">2015-12-06</time></span>&nbsp;<span class="post-category">included in <a href="/categories/%E9%9A%8F%E7%AC%94/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>随笔</a></span></div><div class="content"><p>我的家乡新郑，洛阳与开封之间、黄河以南四十公里的一个小县，归郑州管辖。</p>
 <p>这个小县，在今天的年代里默默无闻，但是就像河南很多地方一样，过去的千百年里，也有不少历史的风云变幻星河璀璨。“轩辕故里”，或者“黄帝故里”，“郑韩故城”，都是说的新郑。</p>
 <p>新郑有一座山，叫具茨山，是中岳嵩山的余脉，绵延新郑、新密、禹州等几个县，在本县俗称“西南山”，因为山在县城西南，据说是<code>“炎黄子孙”</code>的<code>“黄”</code>的那个<code>轩辕黄帝</code>出生、活动、建都之地。山上有一座轩辕庙，据说还有一些岩画（整个具茨山地区有大规模岩画）。有人曾问为什么山上什么当时的古迹都没有，只有后人留下的，乍一想，也觉得好像少了点什么，不似其它名胜古迹那般丰富，不过再想想，那个时代不可能留下寺庙、道观、园林、字画、雕像，毕竟那时候才传说开始造文字。</p>
 <p>小时候看过一本“轩辕故里的传说”，里面搜集了很多关于的传说，比如黄帝战蚩尤、制鼓、编制历法、造指南车，皇帝的妻子嫘祖养蚕，仓颉造字等。</p>
@@ -372,32 +425,6 @@
 <p>这还没完，后面还有一堆事。</p></div><div class="post-footer">
         <a href="/2015_12_06-hometown_history/">Read More</a><div class="post-tags">
                 <i class="fas fa-tags fa-fw" aria-hidden="true"></i>&nbsp;<a href="/tags/%E5%AE%B6%E4%B9%A1/">家乡</a>,&nbsp;<a href="/tags/%E5%8E%86%E5%8F%B2/">历史</a></div></div>
-</article><article class="single summary" itemscope itemtype="http://schema.org/Article"><h1 class="single-title" itemprop="name headline">
-        <a href="/2015_11_03-a-few-unix-and-shell-tips/">a few Unix and Shell tips</a>
-    </h1><div class="post-meta"><span class="post-author"><a href="/" title="Author" rel="author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>entropydecrease</a></span>&nbsp;<span class="post-publish">published on <time datetime="0001-01-01">0001-01-01</time></span>&nbsp;<span class="post-category">included in <a href="/categories/%E5%B7%A5%E5%85%B7/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>工具</a></span></div><div class="content"><h2 id="automatically-attach-to-a-tmux-session-via-ssh">automatically attach to a tmux session via SSH</h2>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span><span class="lnt">4
-</span><span class="lnt">5
-</span><span class="lnt">6
-</span><span class="lnt">7
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">alias alias_name=&#39;ssh username@servername -t &#34;tmux attach || tmux&#34; &#39;
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">-t Force pseudo-tty allocation. This can be used to execute arbitrary
-</span></span><span class="line"><span class="cl">   screen-based programs on a remote machine, which can be very useful, e.g., when
-</span></span><span class="line"><span class="cl">   implementing menu services.
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">&#34;tmux attach&#34; tries to attach a tmux session. and if it fails, &#34;tmux&#34; will create a new session.
-</span></span></code></pre></td></tr></table>
-</div>
-</div><h2 id="to-be-continued">to be continued.</h2></div><div class="post-footer">
-        <a href="/2015_11_03-a-few-unix-and-shell-tips/">Read More</a><div class="post-tags">
-                <i class="fas fa-tags fa-fw" aria-hidden="true"></i>&nbsp;<a href="/tags/shell/">Shell</a></div></div>
 </article><ul class="pagination"><li class="page-item ">
                     <span class="page-link">
                         <a href="/">1</a>
@@ -426,7 +453,7 @@
                     </span>
                 </li></ul></div></div>
             </main><footer class="footer">
-        <div class="footer-container"><div class="footer-line">Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.134.2">Hugo</a> | Theme - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.2.11"><i class="far fa-kiss-wink-heart fa-fw" aria-hidden="true"></i> LoveIt</a>
+        <div class="footer-container"><div class="footer-line">Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.135.0">Hugo</a> | Theme - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.2.11"><i class="far fa-kiss-wink-heart fa-fw" aria-hidden="true"></i> LoveIt</a>
                 </div><div class="footer-line" itemscope itemtype="http://schema.org/CreativeWork"><i class="far fa-copyright fa-fw" aria-hidden="true"></i><span itemprop="copyrightYear">2015 - 2024</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/" target="_blank">entropydecrease</a></span></div>
         </div>
     </footer></div>
