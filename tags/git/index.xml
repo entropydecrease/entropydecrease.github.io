@@ -1,31 +1,41 @@
-<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
-    <channel>
-        <title>Git - Tag - Entropy Decrease</title>
-        <link>https://entropydecrease.github.io/tags/git/</link>
-        <description>Git - Tag - Entropy Decrease</description>
-        <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Wed, 25 Mar 2015 00:00:00 &#43;0000</lastBuildDate><atom:link href="https://entropydecrease.github.io/tags/git/" rel="self" type="application/rss+xml" /><item>
-    <title>git tips</title>
-    <link>https://entropydecrease.github.io/2015_03_25-git_tips/</link>
-    <pubDate>Wed, 25 Mar 2015 00:00:00 &#43;0000</pubDate>
-    <author>entropydecrease</author>
-    <guid>https://entropydecrease.github.io/2015_03_25-git_tips/</guid>
-    <description><![CDATA[<h1 id="从现有仓库克隆">从现有仓库克隆</h1>
-<pre><code>$ git clone git://github.com/schacon/grit.git
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Git on Entropy Decrease</title>
+    <link>https://entropydecrease.github.io/tags/git/</link>
+    <description>Recent content in Git on Entropy Decrease</description>
+    <image>
+      <title>Entropy Decrease</title>
+      <url>https://entropydecrease.github.io/images/papermod-cover.png</url>
+      <link>https://entropydecrease.github.io/images/papermod-cover.png</link>
+    </image>
+    <generator>Hugo -- 0.135.0</generator>
+    <language>en</language>
+    <copyright>[Entropy Decrease]</copyright>
+    <lastBuildDate>Wed, 25 Mar 2015 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://entropydecrease.github.io/tags/git/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>git tips</title>
+      <link>https://entropydecrease.github.io/posts/git_tips/</link>
+      <pubDate>Wed, 25 Mar 2015 00:00:00 +0000</pubDate>
+      <guid>https://entropydecrease.github.io/posts/git_tips/</guid>
+      <description>&lt;h1 id=&#34;从现有仓库克隆&#34;&gt;从现有仓库克隆&lt;/h1&gt;
+&lt;pre&gt;&lt;code&gt;$ git clone git://github.com/schacon/grit.git
 
 $ git clone git://github.com/schacon/grit.git mygrit
-</code></pre>
-<h1 id="gitignore">.gitignore</h1>
-<pre><code>$ cat ~/.gitignore
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h1 id=&#34;gitignore&#34;&gt;.gitignore&lt;/h1&gt;
+&lt;pre&gt;&lt;code&gt;$ cat ~/.gitignore
 *~
-</code></pre>
-<h1 id="撤消操作">撤消操作</h1>
-<pre><code>* 修改最后一次提交
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h1 id=&#34;撤消操作&#34;&gt;撤消操作&lt;/h1&gt;
+&lt;pre&gt;&lt;code&gt;* 修改最后一次提交
 
   $ git commit --amend
 
   如果刚才提交时忘了暂存某些修改，可以先补上暂存操作，然后再运行 --amend 提交：
 
-  $ git commit -m 'initial commit'  
+  $ git commit -m &#39;initial commit&#39;  
   $ git add forgotten_file  
   $ git commit --amend  
 
@@ -35,7 +45,7 @@ $ git clone git://github.com/schacon/grit.git mygrit
   $ git status  
   On branch master  
   Changes to be committed:  
-  (use &quot;git reset HEAD &lt;file&gt;...&quot; to unstage)  
+  (use &amp;quot;git reset HEAD &amp;lt;file&amp;gt;...&amp;quot; to unstage)  
 
        modified:   README.txt  
    modified:   benchmarks.rb    
@@ -46,8 +56,8 @@ $ git clone git://github.com/schacon/grit.git mygrit
 * 取消对文件的修改 - git status 同样提示了具体的撤消方法
 
   Changes not staged for commit:  
-  (use &quot;git add &lt;file&gt;...&quot; to update what will be committed)   
-  (use &quot;git checkout -- &lt;file&gt;...&quot; to discard changes in working directory)  
+  (use &amp;quot;git add &amp;lt;file&amp;gt;...&amp;quot; to update what will be committed)   
+  (use &amp;quot;git checkout -- &amp;lt;file&amp;gt;...&amp;quot; to discard changes in working directory)  
 
       modified:   benchmarks.rb  
 
@@ -55,14 +65,14 @@ $ git clone git://github.com/schacon/grit.git mygrit
  $ git status  
  On branch master  
  Changes to be committed:  
- (use &quot;git reset HEAD &lt;file&gt;...&quot; to unstage)  
+ (use &amp;quot;git reset HEAD &amp;lt;file&amp;gt;...&amp;quot; to unstage)  
 
      modified:   README.txt   
 
  任何已经提交到 Git 的都可以被恢复。即便在已经删除的分支中的提交，或者用 --amend 重新改写的提交，都可以被恢复（关于数据恢复的内容见第九章）。所以，你可能失去的数据，仅限于没有提交过的，对 Git 来说它们就像从未存在过一样。
-</code></pre>
-<h1 id="远程仓库的使用">远程仓库的使用</h1>
-<pre><code>* 查看当前的远程库
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h1 id=&#34;远程仓库的使用&#34;&gt;远程仓库的使用&lt;/h1&gt;
+&lt;pre&gt;&lt;code&gt;* 查看当前的远程库
 
   $ git remote  
   $ git remote -v  
@@ -84,8 +94,8 @@ $ git clone git://github.com/schacon/grit.git mygrit
   remote: Total 44 (delta 24), reused 1 (delta 0)  
   Unpacking objects: 100% (44/44), done.  
   From git://github.com/paulboone/ticgit  
-   * [new branch]      master     -&gt; pb/master  
-   * [new branch]      ticgit     -&gt; pb/ticgit  
+   * [new branch]      master     -&amp;gt; pb/master  
+   * [new branch]      ticgit     -&amp;gt; pb/ticgit  
 
 * 从远程仓库抓取数据
 
@@ -108,7 +118,7 @@ $ git clone git://github.com/schacon/grit.git mygrit
   $ git remote show origin  
   * remote origin  
     URL: git://github.com/schacon/ticgit.git  
-    Remote branch merged with 'git pull' while on branch master  
+    Remote branch merged with &#39;git pull&#39; while on branch master  
      master  
     Tracked remote branches  
      master  
@@ -130,7 +140,7 @@ $ git clone git://github.com/schacon/grit.git mygrit
   $ git remote rm paul  
   $ git remote  
   origin  
-</code></pre>]]></description>
-</item>
-</channel>
+&lt;/code&gt;&lt;/pre&gt;</description>
+    </item>
+  </channel>
 </rss>

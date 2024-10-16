@@ -1,84 +1,63 @@
-<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
-    <channel>
-        <title>Download - Tag - Entropy Decrease</title>
-        <link>https://entropydecrease.github.io/tags/download/</link>
-        <description>Download - Tag - Entropy Decrease</description>
-        <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Tue, 07 Feb 2023 18:25:57 &#43;0800</lastBuildDate><atom:link href="https://entropydecrease.github.io/tags/download/" rel="self" type="application/rss+xml" /><item>
-    <title>下载m3u8格式的视频文件并合并为mp4</title>
-    <link>https://entropydecrease.github.io/2023_02_07-download_m3u8/</link>
-    <pubDate>Tue, 07 Feb 2023 18:25:57 &#43;0800</pubDate>
-    <author>entropydecrease</author>
-    <guid>https://entropydecrease.github.io/2023_02_07-download_m3u8/</guid>
-    <description><![CDATA[<p>尝试了一下下载网络的视频，以illumina的一个视频为例：</p>
-<blockquote>
-<p><a href="https://www.illumina.vh.sauos.com/watch/205" target="_blank" rel="noopener noreffer ">https://www.illumina.vh.sauos.com/watch/205</a></p>
-</blockquote>
-<h2 id="得到m3u8文件">得到m3u8文件</h2>
-<p>在firefox中，安装「Video DownloadHelper]及配套的app，然后在firefox中打开该链接，点击「Video DownloadHelper]，可以看到两个视频，长的那个就是目标视频，选择“copy URL”，得到如下链接：</p>
-<blockquote>
-<p><a href="https://tehlsvodhls02.vhallyun.com/vhallyun/vhallrecord/lss_27f054bb/20220724124221_a018e830/record.m3u8?token=2A75182F_MjE3MTIwOTg2XzYzRUI1N0Q2X1lUQXhPR1U0TXpBX2FtOXBibDgzTWpBeE9UUXdORElfdm9k" target="_blank" rel="noopener noreffer ">https://tehlsvodhls02.vhallyun.com/vhallyun/vhallrecord/lss_27f054bb/20220724124221_a018e830/record.m3u8?token=2A75182F_MjE3MTIwOTg2XzYzRUI1N0Q2X1lUQXhPR1U0TXpBX2FtOXBibDgzTWpBeE9UUXdORElfdm9k</a></p>
-</blockquote>
-<p>下载该文件：</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">aria2c -c <span class="s1">&#39;https://tehlsvodhls02.vhallyun.com/vhallyun/vhallrecord/lss_27f054bb/20220724124221_a018e830/record.m3u8?token=2A75182F_MjE3MTIwOTg2XzYzRUI1N0Q2X1lUQXhPR1U0TXpBX2FtOXBibDgzTWpBeE9UUXdORElfdm9k&#39;</span>
-</span></span></code></pre></td></tr></table>
-</div>
-</div><p>打开这个文件，可以看到里面是如下的格式：</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
-</span><span class="lnt"> 2
-</span><span class="lnt"> 3
-</span><span class="lnt"> 4
-</span><span class="lnt"> 5
-</span><span class="lnt"> 6
-</span><span class="lnt"> 7
-</span><span class="lnt"> 8
-</span><span class="lnt"> 9
-</span><span class="lnt">10
-</span><span class="lnt">11
-</span><span class="lnt">12
-</span><span class="lnt">13
-</span><span class="lnt">14
-</span><span class="lnt">15
-</span><span class="lnt">16
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-txt" data-lang="txt"><span class="line"><span class="cl">#EXTM3U
-</span></span><span class="line"><span class="cl">#EXT-X-VERSION:3
-</span></span><span class="line"><span class="cl">#EXT-X-TARGETDURATION:20
-</span></span><span class="line"><span class="cl">#EXT-X-MEDIA-SEQUENCE:0
-</span></span><span class="line"><span class="cl">#EXTINF:4.520000,
-</span></span><span class="line"><span class="cl">/vhallyun/vhallhls/ls/s_/27/lss_27f054bb/lss_27f054bb/20220724084900103860/livestream000007.ts
-</span></span><span class="line"><span class="cl">#EXTINF:4.200000,
-</span></span><span class="line"><span class="cl">/vhallyun/vhallhls/ls/s_/27/lss_27f054bb/lss_27f054bb/20220724084900103860/livestream000008.ts
-</span></span><span class="line"><span class="cl">#EXTINF:4.200000,
-</span></span><span class="line"><span class="cl">/vhallyun/vhallhls/ls/s_/27/lss_27f054bb/lss_27f054bb/20220724084900103860/livestream000009.ts
-</span></span><span class="line"><span class="cl">#EXTINF:4.240000,
-</span></span><span class="line"><span class="cl">/vhallyun/vhallhls/ls/s_/27/lss_27f054bb/lss_27f054bb/20220724084900103860/livestream000010.ts
-</span></span><span class="line"><span class="cl">#EXTINF:5.080000,
-</span></span><span class="line"><span class="cl">/vhallyun/vhallhls/ls/s_/27/lss_27f054bb/lss_27f054bb/20220724084900103860/livestream000011.ts
-</span></span><span class="line"><span class="cl">#EXTINF:5.880000,
-</span></span><span class="line"><span class="cl">/vhallyun/vhallhls/ls/s_/27/lss_27f054bb/lss_27f054bb/20220724084900103860/livestream000012.ts
-</span></span></code></pre></td></tr></table>
-</div>
-</div><p>表头信息可以忽略，我猜测<code>#EXTINF:4.520000</code>是每一个视频文件的长度，紧接的下一行是视频的路径，但是没有hostname。</p>
-<h2 id="下载ts文件">下载ts文件</h2>
-<p>观察一下m3u8文件的地址，前面一段是<code>https://tehlsvodhls02.vhallyun.com/vhallyun/</code>，所以我猜测hostname就是<code>https://tehlsvodhls02.vhallyun.com</code>，后面下载了一个ts文件，发现是正确的。</p>
-<p>下载的ts文件，转换成mp4文件:</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">ffmpeg -i livestream002243.ts -acodec copy -vcodec copy -absf aac_adtstoasc livestream002243.mp4
-</span></span></code></pre></td></tr></table>
-</div>
-</div><p>从m3u8文件中得到ts文件名，并构造完整的url：</p>]]></description>
-</item>
-</channel>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Download on Entropy Decrease</title>
+    <link>https://entropydecrease.github.io/tags/download/</link>
+    <description>Recent content in Download on Entropy Decrease</description>
+    <image>
+      <title>Entropy Decrease</title>
+      <url>https://entropydecrease.github.io/images/papermod-cover.png</url>
+      <link>https://entropydecrease.github.io/images/papermod-cover.png</link>
+    </image>
+    <generator>Hugo -- 0.135.0</generator>
+    <language>en</language>
+    <copyright>[Entropy Decrease]</copyright>
+    <lastBuildDate>Tue, 07 Feb 2023 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://entropydecrease.github.io/tags/download/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>下载m3u8格式的视频文件并合并为mp4</title>
+      <link>https://entropydecrease.github.io/posts/download_m3u8/</link>
+      <pubDate>Tue, 07 Feb 2023 18:25:57 +0800</pubDate>
+      <guid>https://entropydecrease.github.io/posts/download_m3u8/</guid>
+      <description>&lt;p&gt;尝试了一下下载网络的视频，以illumina的一个视频为例：&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;a href=&#34;https://www.illumina.vh.sauos.com/watch/205&#34;&gt;https://www.illumina.vh.sauos.com/watch/205&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;得到m3u8文件&#34;&gt;得到m3u8文件&lt;/h2&gt;
+&lt;p&gt;在firefox中，安装「Video DownloadHelper]及配套的app，然后在firefox中打开该链接，点击「Video DownloadHelper]，可以看到两个视频，长的那个就是目标视频，选择“copy URL”，得到如下链接：&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;a href=&#34;https://tehlsvodhls02.vhallyun.com/vhallyun/vhallrecord/lss_27f054bb/20220724124221_a018e830/record.m3u8?token=2A75182F_MjE3MTIwOTg2XzYzRUI1N0Q2X1lUQXhPR1U0TXpBX2FtOXBibDgzTWpBeE9UUXdORElfdm9k&#34;&gt;https://tehlsvodhls02.vhallyun.com/vhallyun/vhallrecord/lss_27f054bb/20220724124221_a018e830/record.m3u8?token=2A75182F_MjE3MTIwOTg2XzYzRUI1N0Q2X1lUQXhPR1U0TXpBX2FtOXBibDgzTWpBeE9UUXdORElfdm9k&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;下载该文件：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;aria2c -c &lt;span class=&#34;s1&#34;&gt;&amp;#39;https://tehlsvodhls02.vhallyun.com/vhallyun/vhallrecord/lss_27f054bb/20220724124221_a018e830/record.m3u8?token=2A75182F_MjE3MTIwOTg2XzYzRUI1N0Q2X1lUQXhPR1U0TXpBX2FtOXBibDgzTWpBeE9UUXdORElfdm9k&amp;#39;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;打开这个文件，可以看到里面是如下的格式：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-txt&#34; data-lang=&#34;txt&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;#EXTM3U
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;#EXT-X-VERSION:3
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;#EXT-X-TARGETDURATION:20
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;#EXT-X-MEDIA-SEQUENCE:0
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;#EXTINF:4.520000,
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;/vhallyun/vhallhls/ls/s_/27/lss_27f054bb/lss_27f054bb/20220724084900103860/livestream000007.ts
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;#EXTINF:4.200000,
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;/vhallyun/vhallhls/ls/s_/27/lss_27f054bb/lss_27f054bb/20220724084900103860/livestream000008.ts
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;#EXTINF:4.200000,
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;/vhallyun/vhallhls/ls/s_/27/lss_27f054bb/lss_27f054bb/20220724084900103860/livestream000009.ts
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;#EXTINF:4.240000,
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;/vhallyun/vhallhls/ls/s_/27/lss_27f054bb/lss_27f054bb/20220724084900103860/livestream000010.ts
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;#EXTINF:5.080000,
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;/vhallyun/vhallhls/ls/s_/27/lss_27f054bb/lss_27f054bb/20220724084900103860/livestream000011.ts
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;#EXTINF:5.880000,
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;/vhallyun/vhallhls/ls/s_/27/lss_27f054bb/lss_27f054bb/20220724084900103860/livestream000012.ts
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;表头信息可以忽略，我猜测&lt;code&gt;#EXTINF:4.520000&lt;/code&gt;是每一个视频文件的长度，紧接的下一行是视频的路径，但是没有hostname。&lt;/p&gt;
+&lt;h2 id=&#34;下载ts文件&#34;&gt;下载ts文件&lt;/h2&gt;
+&lt;p&gt;观察一下m3u8文件的地址，前面一段是&lt;code&gt;https://tehlsvodhls02.vhallyun.com/vhallyun/&lt;/code&gt;，所以我猜测hostname就是&lt;code&gt;https://tehlsvodhls02.vhallyun.com&lt;/code&gt;，后面下载了一个ts文件，发现是正确的。&lt;/p&gt;
+&lt;p&gt;下载的ts文件，转换成mp4文件:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;ffmpeg -i livestream002243.ts -acodec copy -vcodec copy -absf aac_adtstoasc livestream002243.mp4
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;从m3u8文件中得到ts文件名，并构造完整的url：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt; -s url_list.txt &lt;span class=&#34;o&#34;&gt;]&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;||&lt;/span&gt; &lt;span class=&#34;se&#34;&gt;\
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;se&#34;&gt;&lt;/span&gt;	grep -v &lt;span class=&#34;s1&#34;&gt;&amp;#39;^#EXTM3U&amp;#39;&lt;/span&gt; record.m3u8 &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt; grep -v &lt;span class=&#34;s1&#34;&gt;&amp;#39;^#EXT-X&amp;#39;&lt;/span&gt; &lt;span class=&#34;se&#34;&gt;\
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;se&#34;&gt;&lt;/span&gt;	&lt;span class=&#34;p&#34;&gt;|&lt;/span&gt; tr -d &lt;span class=&#34;s1&#34;&gt;&amp;#39;\n&amp;#39;&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt; sed &lt;span class=&#34;s1&#34;&gt;&amp;#39;s/#EXTINF:/\n/g&amp;#39;&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt; grep -v &lt;span class=&#34;s1&#34;&gt;&amp;#39;^$&amp;#39;&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt; sed &lt;span class=&#34;s1&#34;&gt;&amp;#39;s/,/\t/&amp;#39;&lt;/span&gt; &lt;span class=&#34;se&#34;&gt;\
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;se&#34;&gt;&lt;/span&gt;	&lt;span class=&#34;p&#34;&gt;|&lt;/span&gt; awk &lt;span class=&#34;s1&#34;&gt;&amp;#39;{i+=$1; if (i &amp;gt;= 2000 &amp;amp;&amp;amp; i &amp;lt;= 2050) print $2}&amp;#39;&lt;/span&gt; &amp;gt; url_list.txt
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;需要说明的是，这个视频比较长，所以我只下载了2000至2050秒的视频，使用了awk来计算累计的时间。假如需要直接下载全部视频的话，可以把awk的那部分命令删掉。&lt;/p&gt;</description>
+    </item>
+  </channel>
 </rss>

@@ -1,42 +1,36 @@
-<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
-    <channel>
-        <title>Datamash - Tag - Entropy Decrease</title>
-        <link>https://entropydecrease.github.io/tags/datamash/</link>
-        <description>Datamash - Tag - Entropy Decrease</description>
-        <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Fri, 28 Apr 2023 00:00:00 &#43;0000</lastBuildDate><atom:link href="https://entropydecrease.github.io/tags/datamash/" rel="self" type="application/rss+xml" /><item>
-    <title>datamash tips</title>
-    <link>https://entropydecrease.github.io/2023_04_28-datamash/</link>
-    <pubDate>Fri, 28 Apr 2023 00:00:00 &#43;0000</pubDate>
-    <author>entropydecrease</author>
-    <guid>https://entropydecrease.github.io/2023_04_28-datamash/</guid>
-    <description><![CDATA[<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
-</span><span class="lnt"> 2
-</span><span class="lnt"> 3
-</span><span class="lnt"> 4
-</span><span class="lnt"> 5
-</span><span class="lnt"> 6
-</span><span class="lnt"> 7
-</span><span class="lnt"> 8
-</span><span class="lnt"> 9
-</span><span class="lnt">10
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">&gt; <span class="o">(</span>cat <span class="s">&lt;&lt;-EOF
-</span></span></span><span class="line"><span class="cl"><span class="s">a       1
-</span></span></span><span class="line"><span class="cl"><span class="s">a       2
-</span></span></span><span class="line"><span class="cl"><span class="s">b       3
-</span></span></span><span class="line"><span class="cl"><span class="s">c       4
-</span></span></span><span class="line"><span class="cl"><span class="s">EOF</span>
-</span></span><span class="line"><span class="cl"><span class="o">)</span> <span class="p">|</span> datamash groupby <span class="m">1</span> collapse <span class="m">2</span>
-</span></span><span class="line"><span class="cl">a	1,2
-</span></span><span class="line"><span class="cl">b	<span class="m">3</span>
-</span></span><span class="line"><span class="cl">c	<span class="m">4</span>
-</span></span></code></pre></td></tr></table>
-</div>
-</div><p><code>collapse</code> 操作可以将对应的列（本例中为第二列）进行合并，在本例子，根据第一例的值进行分组，将第二例的值合并。</p>
-<p>另外，为了在一个命令中完成，本例中使用了here document。</p>]]></description>
-</item>
-</channel>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Datamash on Entropy Decrease</title>
+    <link>https://entropydecrease.github.io/tags/datamash/</link>
+    <description>Recent content in Datamash on Entropy Decrease</description>
+    <image>
+      <title>Entropy Decrease</title>
+      <url>https://entropydecrease.github.io/images/papermod-cover.png</url>
+      <link>https://entropydecrease.github.io/images/papermod-cover.png</link>
+    </image>
+    <generator>Hugo -- 0.135.0</generator>
+    <language>en</language>
+    <copyright>[Entropy Decrease]</copyright>
+    <lastBuildDate>Fri, 28 Apr 2023 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://entropydecrease.github.io/tags/datamash/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>datamash tips</title>
+      <link>https://entropydecrease.github.io/posts/datamash_tips1/</link>
+      <pubDate>Fri, 28 Apr 2023 00:00:00 +0000</pubDate>
+      <guid>https://entropydecrease.github.io/posts/datamash_tips1/</guid>
+      <description>&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&amp;gt; &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;cat &lt;span class=&#34;s&#34;&gt;&amp;lt;&amp;lt;-EOF
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;s&#34;&gt;a       1
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;s&#34;&gt;a       2
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;s&#34;&gt;b       3
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;s&#34;&gt;c       4
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;s&#34;&gt;EOF&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt; datamash groupby &lt;span class=&#34;m&#34;&gt;1&lt;/span&gt; collapse &lt;span class=&#34;m&#34;&gt;2&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;a	1,2
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;b	&lt;span class=&#34;m&#34;&gt;3&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;c	&lt;span class=&#34;m&#34;&gt;4&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;code&gt;collapse&lt;/code&gt; 操作可以将对应的列（本例中为第二列）进行合并，在本例子，根据第一例的值进行分组，将第二例的值合并。&lt;/p&gt;
+&lt;p&gt;另外，为了在一个命令中完成，本例中使用了here document。&lt;/p&gt;</description>
+    </item>
+  </channel>
 </rss>

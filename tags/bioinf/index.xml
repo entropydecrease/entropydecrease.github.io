@@ -1,50 +1,58 @@
-<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
-    <channel>
-        <title>Bioinf - Tag - Entropy Decrease</title>
-        <link>https://entropydecrease.github.io/tags/bioinf/</link>
-        <description>Bioinf - Tag - Entropy Decrease</description>
-        <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Mon, 04 Dec 2023 16:46:43 &#43;0000</lastBuildDate><atom:link href="https://entropydecrease.github.io/tags/bioinf/" rel="self" type="application/rss+xml" /><item>
-    <title>2030 年人类基因组学的大胆预测</title>
-    <link>https://entropydecrease.github.io/2023_12_04-genomics_in_2030/</link>
-    <pubDate>Mon, 04 Dec 2023 16:46:43 &#43;0000</pubDate>
-    <author>entropydecrease</author>
-    <guid>https://entropydecrease.github.io/2023_12_04-genomics_in_2030/</guid>
-    <description><![CDATA[<p><a href="https://doi.org/10.1016/j.ajhg.2023.09.010" target="_blank" rel="noopener noreffer ">https://doi.org/10.1016/j.ajhg.2023.09.010</a>
-<a href="https://www.genome.gov/event-calendar/Bold-Predictions-for-Human-Genomics-by-2030" target="_blank" rel="noopener noreffer ">https://www.genome.gov/event-calendar/Bold-Predictions-for-Human-Genomics-by-2030</a></p>
-<p><strong>Bold predictions for human genomics by 2030</strong></p>
-<ul>
-<li>
-<p>(1)  Generating and analyzing a complete human genome sequence will be routine for any research laboratory, becoming as straightforward as carrying out a DNA purification.</p>
-</li>
-<li>
-<p>(2) The biological function(s) of every human gene will be known; for non-coding elements in the human genome, such knowledge will be the rule rather than the exception.</p>
-</li>
-<li>
-<p>(3) The general features of the epigenetic landscape and transcriptional output will be routinely incorporated into predictive models of the impact of genotype on phenotype.</p>]]></description>
-</item>
-<item>
-    <title>Civic数据库介绍</title>
-    <link>https://entropydecrease.github.io/2023_05_03-civicdb/</link>
-    <pubDate>Wed, 03 May 2023 00:00:00 &#43;0000</pubDate>
-    <author>entropydecrease</author>
-    <guid>https://entropydecrease.github.io/2023_05_03-civicdb/</guid>
-    <description><![CDATA[<p>Nucleic Acids Research上有civicdb最新的介绍。</p>
-<p>Krysiak, K. <em>et al.</em> CIViCdb 2022: evolution of an open-access cancer variant interpretation knowledgebase. <em>Nucleic Acids Research</em> <strong>51</strong>, D1230–D1241 (2023).</p>]]></description>
-</item>
-<item>
-    <title>bioinf常见的一些错误</title>
-    <link>https://entropydecrease.github.io/2015_03_14-common_bioinf_mistakes/</link>
-    <pubDate>Sat, 14 Mar 2015 00:00:00 &#43;0000</pubDate>
-    <author>entropydecrease</author>
-    <guid>https://entropydecrease.github.io/2015_03_14-common_bioinf_mistakes/</guid>
-    <description><![CDATA[<p>biostar上的<a href="https://www.biostars.org/p/7126/" target="_blank" rel="noopener noreffer ">这篇文章</a>总结了在生物信息学日常工作中容易犯的一些共性的错误：</p>
-<pre><code>* forget to check both strands
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Bioinf on Entropy Decrease</title>
+    <link>https://entropydecrease.github.io/tags/bioinf/</link>
+    <description>Recent content in Bioinf on Entropy Decrease</description>
+    <image>
+      <title>Entropy Decrease</title>
+      <url>https://entropydecrease.github.io/images/papermod-cover.png</url>
+      <link>https://entropydecrease.github.io/images/papermod-cover.png</link>
+    </image>
+    <generator>Hugo -- 0.135.0</generator>
+    <language>en</language>
+    <copyright>[Entropy Decrease]</copyright>
+    <lastBuildDate>Mon, 04 Dec 2023 16:46:43 +0000</lastBuildDate>
+    <atom:link href="https://entropydecrease.github.io/tags/bioinf/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>2030 年人类基因组学的大胆预测</title>
+      <link>https://entropydecrease.github.io/posts/genomics-in-2030/</link>
+      <pubDate>Mon, 04 Dec 2023 16:46:43 +0000</pubDate>
+      <guid>https://entropydecrease.github.io/posts/genomics-in-2030/</guid>
+      <description>&lt;p&gt;&lt;a href=&#34;https://doi.org/10.1016/j.ajhg.2023.09.010&#34;&gt;https://doi.org/10.1016/j.ajhg.2023.09.010&lt;/a&gt;
+&lt;a href=&#34;https://www.genome.gov/event-calendar/Bold-Predictions-for-Human-Genomics-by-2030&#34;&gt;https://www.genome.gov/event-calendar/Bold-Predictions-for-Human-Genomics-by-2030&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Bold predictions for human genomics by 2030&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;(1)  Generating and analyzing a complete human genome sequence will be routine for any research laboratory, becoming as straightforward as carrying out a DNA purification.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;(2) The biological function(s) of every human gene will be known; for non-coding elements in the human genome, such knowledge will be the rule rather than the exception.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;(3) The general features of the epigenetic landscape and transcriptional output will be routinely incorporated into predictive models of the impact of genotype on phenotype.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Civic数据库介绍</title>
+      <link>https://entropydecrease.github.io/posts/civicdb/</link>
+      <pubDate>Wed, 03 May 2023 00:00:00 +0000</pubDate>
+      <guid>https://entropydecrease.github.io/posts/civicdb/</guid>
+      <description>&lt;p&gt;Nucleic Acids Research上有civicdb最新的介绍。&lt;/p&gt;
+&lt;p&gt;Krysiak, K. &lt;em&gt;et al.&lt;/em&gt; CIViCdb 2022: evolution of an open-access cancer variant interpretation knowledgebase. &lt;em&gt;Nucleic Acids Research&lt;/em&gt; &lt;strong&gt;51&lt;/strong&gt;, D1230–D1241 (2023).&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>bioinf常见的一些错误</title>
+      <link>https://entropydecrease.github.io/posts/common_bioinf_mistakes/</link>
+      <pubDate>Sat, 14 Mar 2015 00:00:00 +0000</pubDate>
+      <guid>https://entropydecrease.github.io/posts/common_bioinf_mistakes/</guid>
+      <description>&lt;p&gt;biostar上的&lt;a href=&#34;https://www.biostars.org/p/7126/&#34;&gt;这篇文章&lt;/a&gt;总结了在生物信息学日常工作中容易犯的一些共性的错误：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;* forget to check both strands
 
 * generate random genomic sites without avoiding masked (NNN) gaps
 
 * confuse genome freezes and even species
 
-* try to see which headers it contained by 'grep &gt; some.fasta' will destory the .fasta file
+* try to see which headers it contained by &#39;grep &amp;gt; some.fasta&#39; will destory the .fasta file
 
 * a lot of off-by-one errors due to switching between formats: Bed is 0 based;  GFF/GTF are 1-based
 
@@ -88,11 +96,11 @@
 
 * not documenting methods fully (to check and correct all of the above)
 
-* Run a batch BLAST job and forgetting to put the &quot;-o something.out&quot; option. Then switching off the monitor and coming the next day to see a bunch of characters in my terminal
+* Run a batch BLAST job and forgetting to put the &amp;quot;-o something.out&amp;quot; option. Then switching off the monitor and coming the next day to see a bunch of characters in my terminal
 
-* &quot;tar -zxvf&quot; without checking the tar file before, I have decompressed thousands of files in my current directory assuming they came in their own folder.
+* &amp;quot;tar -zxvf&amp;quot; without checking the tar file before, I have decompressed thousands of files in my current directory assuming they came in their own folder.
 
-* Using grep to find sequence (or other) IDs without using the -w switch: grep 'seq12' will also find seq121, seq122 and so on.
+* Using grep to find sequence (or other) IDs without using the -w switch: grep &#39;seq12&#39; will also find seq121, seq122 and so on.
 
 * IMHO being off by one is the emperor of all bioinformatics mistakes - it rules them all - and probably causes tens of millions of dollars in wasted effort
 
@@ -102,11 +110,11 @@
 
 * Not testing edge and corner cases for input data
 
-* Assuming that your input data is sane; I've run into all sorts of inconsistency issues with public data sets (i.e. protein domains at positions off the end of the protein, etc). Usually fixed promptly if you complain but you've got to find them first.
+* Assuming that your input data is sane; I&#39;ve run into all sorts of inconsistency issues with public data sets (i.e. protein domains at positions off the end of the protein, etc). Usually fixed promptly if you complain but you&#39;ve got to find them first.
 
 * One mistake: not looking to see that the *0x4* bit in the bitflag column of a SAM (or BAM) file indicates the entry is mapped. RNAME, CIGAR, and POS may be set to something non-null (an actual string!) but these are not meaningful if the 0x4 flag says the read is unmapped.
-</code></pre>
-<p>另外一个需要特别注意的是：<code>gene name might be hacked by MS Excel.</code></p>]]></description>
-</item>
-</channel>
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;另外一个需要特别注意的是：&lt;code&gt;gene name might be hacked by MS Excel.&lt;/code&gt;&lt;/p&gt;</description>
+    </item>
+  </channel>
 </rss>

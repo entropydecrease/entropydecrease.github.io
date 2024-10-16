@@ -1,38 +1,48 @@
-<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
-    <channel>
-        <title>Bcftools - Tag - Entropy Decrease</title>
-        <link>https://entropydecrease.github.io/tags/bcftools/</link>
-        <description>Bcftools - Tag - Entropy Decrease</description>
-        <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Fri, 01 Oct 2021 00:00:00 &#43;0000</lastBuildDate><atom:link href="https://entropydecrease.github.io/tags/bcftools/" rel="self" type="application/rss+xml" /><item>
-    <title>bcftools notes (转载)</title>
-    <link>https://entropydecrease.github.io/2021_10_01-bcftools_notes/</link>
-    <pubDate>Fri, 01 Oct 2021 00:00:00 &#43;0000</pubDate>
-    <author>entropydecrease</author>
-    <guid>https://entropydecrease.github.io/2021_10_01-bcftools_notes/</guid>
-    <description><![CDATA[<p>copied from <code>https://gist.github.com/elowy01/93922762e131d7abd3c7e8e166a74a0b</code></p>
-<ul>
-<li>
-<p>Filter variants per region (in this example, print out only variants mapped to chr1 and chr2)</p>
-<p><code>bcftools filter -r1,2 ALL.chip.omni_broad_sanger_combined.20140818.snps.genotypes.hg38.vcf.gz</code></p>
-</li>
-<li>
-<p>printing out info for only 2 samples:</p>
-<p><code>bcftools view -s NA20818,NA20819 filename.vcf.gz</code></p>
-</li>
-<li>
-<p>printing stats only for variants passing the filter:</p>
-<p><code>bcftools view -f PASS filename.vcf.gz</code></p>
-</li>
-<li>
-<p>printing variants withoud header:</p>
-<p><code>bcftools view -H</code></p>
-</li>
-<li>
-<p>printing variants on a particular region:</p>
-<p><code>bcftools view -r chr20:1-200000 -s NA20818,NA20819 filename.vcf.gz</code></p>
-</li>
-<li>
-<p>print all variants except for the ones falling within region:</p>]]></description>
-</item>
-</channel>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Bcftools on Entropy Decrease</title>
+    <link>https://entropydecrease.github.io/tags/bcftools/</link>
+    <description>Recent content in Bcftools on Entropy Decrease</description>
+    <image>
+      <title>Entropy Decrease</title>
+      <url>https://entropydecrease.github.io/images/papermod-cover.png</url>
+      <link>https://entropydecrease.github.io/images/papermod-cover.png</link>
+    </image>
+    <generator>Hugo -- 0.135.0</generator>
+    <language>en</language>
+    <copyright>[Entropy Decrease]</copyright>
+    <lastBuildDate>Fri, 01 Oct 2021 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://entropydecrease.github.io/tags/bcftools/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>bcftools notes (转载)</title>
+      <link>https://entropydecrease.github.io/posts/bcftools_notes/</link>
+      <pubDate>Fri, 01 Oct 2021 00:00:00 +0000</pubDate>
+      <guid>https://entropydecrease.github.io/posts/bcftools_notes/</guid>
+      <description>&lt;p&gt;copied from &lt;code&gt;https://gist.github.com/elowy01/93922762e131d7abd3c7e8e166a74a0b&lt;/code&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Filter variants per region (in this example, print out only variants mapped to chr1 and chr2)&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;bcftools filter -r1,2 ALL.chip.omni_broad_sanger_combined.20140818.snps.genotypes.hg38.vcf.gz&lt;/code&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;printing out info for only 2 samples:&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;bcftools view -s NA20818,NA20819 filename.vcf.gz&lt;/code&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;printing stats only for variants passing the filter:&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;bcftools view -f PASS filename.vcf.gz&lt;/code&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;printing variants withoud header:&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;bcftools view -H&lt;/code&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;printing variants on a particular region:&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;bcftools view -r chr20:1-200000 -s NA20818,NA20819 filename.vcf.gz&lt;/code&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;print all variants except for the ones falling within region:&lt;/p&gt;</description>
+    </item>
+  </channel>
 </rss>

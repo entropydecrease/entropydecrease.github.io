@@ -1,24 +1,34 @@
-<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
-    <channel>
-        <title>Mac - Tag - Entropy Decrease</title>
-        <link>https://entropydecrease.github.io/tags/mac/</link>
-        <description>Mac - Tag - Entropy Decrease</description>
-        <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Mon, 13 Apr 2015 00:00:00 &#43;0000</lastBuildDate><atom:link href="https://entropydecrease.github.io/tags/mac/" rel="self" type="application/rss+xml" /><item>
-    <title>设置hostname，避免DHCP修改hostname</title>
-    <link>https://entropydecrease.github.io/2015_04_13-set-hostname-not-modifed-by-dhcp/</link>
-    <pubDate>Mon, 13 Apr 2015 00:00:00 &#43;0000</pubDate>
-    <author>entropydecrease</author>
-    <guid>https://entropydecrease.github.io/2015_04_13-set-hostname-not-modifed-by-dhcp/</guid>
-    <description><![CDATA[<p>It can be annoying to see my hostname being modifed each time I connect to a different WIFI. It is because the hostname was never set.</p>
-<pre><code>&gt; scutil --get HostName 
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Mac on Entropy Decrease</title>
+    <link>https://entropydecrease.github.io/tags/mac/</link>
+    <description>Recent content in Mac on Entropy Decrease</description>
+    <image>
+      <title>Entropy Decrease</title>
+      <url>https://entropydecrease.github.io/images/papermod-cover.png</url>
+      <link>https://entropydecrease.github.io/images/papermod-cover.png</link>
+    </image>
+    <generator>Hugo -- 0.135.0</generator>
+    <language>en</language>
+    <copyright>[Entropy Decrease]</copyright>
+    <lastBuildDate>Mon, 13 Apr 2015 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://entropydecrease.github.io/tags/mac/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>设置hostname，避免DHCP修改hostname</title>
+      <link>https://entropydecrease.github.io/posts/set_hostname/</link>
+      <pubDate>Mon, 13 Apr 2015 00:00:00 +0000</pubDate>
+      <guid>https://entropydecrease.github.io/posts/set_hostname/</guid>
+      <description>&lt;p&gt;It can be annoying to see my hostname being modifed each time I connect to a different WIFI. It is because the hostname was never set.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;&amp;gt; scutil --get HostName 
 HostName: not set 
-</code></pre>
-<p>So we just need to set the hostname:</p>
-<pre><code>&gt; sudo scutil --set HostName &quot;new_hostname&quot;  
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;So we just need to set the hostname:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;&amp;gt; sudo scutil --set HostName &amp;quot;new_hostname&amp;quot;  
 Password:  
-&gt; scutil --get HostName              
+&amp;gt; scutil --get HostName              
 new_hostname  
-</code></pre>]]></description>
-</item>
-</channel>
+&lt;/code&gt;&lt;/pre&gt;</description>
+    </item>
+  </channel>
 </rss>

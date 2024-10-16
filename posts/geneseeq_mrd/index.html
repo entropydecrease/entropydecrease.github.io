@@ -1,0 +1,1076 @@
+<!DOCTYPE html>
+<html lang="en" dir="auto">
+
+<head><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="index, follow">
+<title>邵阳对世和MRD的介绍 - MRD的技术创新与应用案例分享 | Entropy Decrease</title>
+<meta name="keywords" content="MRD">
+<meta name="description" content="个人总结
+
+对个体化panel与固定panel的优劣，做了全面而深入的分析
+采用固定化的大panel来做MRD，克服了定制panel的一些问题，想的很细致，做得很坚定，效果也不错
+复发病人阳性率似乎还是没有定制panel高
+在复发风险预测方面，片段组学看起来效果比ctDNA突变要好
+
+
+
+
+
+MRD检测的本质：在于判断患者是否治愈
+
+
+MRD检测主要有两大技术策略
+
+Tumor-informed assay -&gt; 个体化panel
+Tumor naive/agnostic assay -&gt; 固定化panel
+
+
+
+如何评估MRD检测技术路线的优劣势对比
+
+  
+      
+          技术指标
+          核心点
+          个体化panel
+          固定化panel
+      
+  
+  
+      
+          1. 单一突变检测灵敏度：固定化 = 个体化
+          降噪技术、超高测序深度、克隆性造血、采血量
+          超高测序深度结合UMI技术提高单点检测灵敏度，无克隆性造血影响
+          超高深度测序结合多重技术提高单点检测灵敏度，存在一定的克隆性造血干扰
+      
+      
+          2. 监测突变数量：个体化&gt;固定化
+          监测的突变数量越多，灵敏度也会越高，多少数量足够？
+          由方法学设定，常见的个体化panel监测MRD选择16个或更多的突变
+          固定panel：如世和泛实体瘤MRD panel，panel的设置至关重要
+      
+      
+          3. 检测突变质量：固定化 &gt; 个体化
+          监测的突变是否与肿瘤相关？是否是主克隆突变？能否在最短的时间内筛选出需检测的基因？
+          先进行WES，再针对性设计基因检测的个体化panel，短时间内无法进行很好的筛选
+          预先选择与癌种相关的基因或可特异选择尽量多的主克隆基因变异病设计为固定panel
+      
+      
+          4. 检测过程质控：固定化&gt;个体化
+          NGS检测流程复杂，任何环节质控出现问题都会影响结果的可靠性、稳定性、准确(？)性
+          短周期内完成个体化探针的设计和临床检测，对追踪位点检测的质量控制带来了巨大挑战
+          固定化panel在临床推广前经过长周期严格的探针设计、流程优化和反复验证等工作，panel的性能相对稳定、可靠
+      
+      
+          5. 克服肿瘤时空异质性
+          肿瘤存在时空异质性，新发变异可能也与预后(?)相关
+          针对基线组织单次检测结果，无法克服时空异质性。
+          固定化panel检测范围更广，看一定程度上克服肿瘤时空异质性
+      
+  
+
+
+
+单一突变灵敏度：取决于采血量和样本起始多样性
+
+
+监测突变数量：个体化panel优于固定化panel
+
+
+突变数量：突变数量增多，检测灵敏度提高，但有平台期。
+理论LoD计算规则：
+
+假设每个位点的有效测序深度为10000x
+按照3条去dup后突变reads判断为阳性
+根据二项分布去计算单个位点突变的LoD
+进一步根据单位点突变LoD计算多位点LoD
+
+
+">
+<meta name="author" content="Entropy Decrease">
+<link rel="canonical" href="https://entropydecrease.github.io/posts/geneseeq_mrd/">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.fc220c15db4aef0318bbf30adc45d33d4d7c88deff3238b23eb255afdc472ca6.css" integrity="sha256-/CIMFdtK7wMYu/MK3EXTPU18iN7/MjiyPrJVr9xHLKY=" rel="preload stylesheet" as="style">
+<link rel="icon" href="https://entropydecrease.github.io/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="https://entropydecrease.github.io/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://entropydecrease.github.io/favicon-32x32.png">
+<link rel="apple-touch-icon" href="https://entropydecrease.github.io/apple-touch-icon.png">
+<link rel="mask-icon" href="https://entropydecrease.github.io/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<link rel="alternate" hreflang="en" href="https://entropydecrease.github.io/posts/geneseeq_mrd/">
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+    <style>
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --theme: rgb(29, 30, 32);
+                --entry: rgb(46, 46, 51);
+                --primary: rgb(218, 218, 219);
+                --secondary: rgb(155, 156, 157);
+                --tertiary: rgb(65, 66, 68);
+                --content: rgb(196, 196, 197);
+                --code-block-bg: rgb(46, 46, 51);
+                --code-bg: rgb(55, 56, 62);
+                --border: rgb(51, 51, 51);
+            }
+
+            .list {
+                background: var(--theme);
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-track {
+                background: 0 0;
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-thumb {
+                border-color: var(--theme);
+            }
+        }
+
+    </style>
+</noscript><meta property="og:title" content="邵阳对世和MRD的介绍 - MRD的技术创新与应用案例分享" />
+<meta property="og:description" content="个人总结
+
+对个体化panel与固定panel的优劣，做了全面而深入的分析
+采用固定化的大panel来做MRD，克服了定制panel的一些问题，想的很细致，做得很坚定，效果也不错
+复发病人阳性率似乎还是没有定制panel高
+在复发风险预测方面，片段组学看起来效果比ctDNA突变要好
+
+
+
+
+
+MRD检测的本质：在于判断患者是否治愈
+
+
+MRD检测主要有两大技术策略
+
+Tumor-informed assay -&gt; 个体化panel
+Tumor naive/agnostic assay -&gt; 固定化panel
+
+
+
+如何评估MRD检测技术路线的优劣势对比
+
+  
+      
+          技术指标
+          核心点
+          个体化panel
+          固定化panel
+      
+  
+  
+      
+          1. 单一突变检测灵敏度：固定化 = 个体化
+          降噪技术、超高测序深度、克隆性造血、采血量
+          超高测序深度结合UMI技术提高单点检测灵敏度，无克隆性造血影响
+          超高深度测序结合多重技术提高单点检测灵敏度，存在一定的克隆性造血干扰
+      
+      
+          2. 监测突变数量：个体化&gt;固定化
+          监测的突变数量越多，灵敏度也会越高，多少数量足够？
+          由方法学设定，常见的个体化panel监测MRD选择16个或更多的突变
+          固定panel：如世和泛实体瘤MRD panel，panel的设置至关重要
+      
+      
+          3. 检测突变质量：固定化 &gt; 个体化
+          监测的突变是否与肿瘤相关？是否是主克隆突变？能否在最短的时间内筛选出需检测的基因？
+          先进行WES，再针对性设计基因检测的个体化panel，短时间内无法进行很好的筛选
+          预先选择与癌种相关的基因或可特异选择尽量多的主克隆基因变异病设计为固定panel
+      
+      
+          4. 检测过程质控：固定化&gt;个体化
+          NGS检测流程复杂，任何环节质控出现问题都会影响结果的可靠性、稳定性、准确(？)性
+          短周期内完成个体化探针的设计和临床检测，对追踪位点检测的质量控制带来了巨大挑战
+          固定化panel在临床推广前经过长周期严格的探针设计、流程优化和反复验证等工作，panel的性能相对稳定、可靠
+      
+      
+          5. 克服肿瘤时空异质性
+          肿瘤存在时空异质性，新发变异可能也与预后(?)相关
+          针对基线组织单次检测结果，无法克服时空异质性。
+          固定化panel检测范围更广，看一定程度上克服肿瘤时空异质性
+      
+  
+
+
+
+单一突变灵敏度：取决于采血量和样本起始多样性
+
+
+监测突变数量：个体化panel优于固定化panel
+
+
+突变数量：突变数量增多，检测灵敏度提高，但有平台期。
+理论LoD计算规则：
+
+假设每个位点的有效测序深度为10000x
+按照3条去dup后突变reads判断为阳性
+根据二项分布去计算单个位点突变的LoD
+进一步根据单位点突变LoD计算多位点LoD
+
+
+" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://entropydecrease.github.io/posts/geneseeq_mrd/" />
+<meta property="og:image" content="https://entropydecrease.github.io/images/papermod-cover.png" />
+<meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2023-04-27T00:00:00+00:00" />
+<meta property="article:modified_time" content="2023-04-27T00:00:00+00:00" />
+
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:image" content="https://entropydecrease.github.io/images/papermod-cover.png" />
+<meta name="twitter:title" content="邵阳对世和MRD的介绍 - MRD的技术创新与应用案例分享"/>
+<meta name="twitter:description" content="个人总结
+
+对个体化panel与固定panel的优劣，做了全面而深入的分析
+采用固定化的大panel来做MRD，克服了定制panel的一些问题，想的很细致，做得很坚定，效果也不错
+复发病人阳性率似乎还是没有定制panel高
+在复发风险预测方面，片段组学看起来效果比ctDNA突变要好
+
+
+
+
+
+MRD检测的本质：在于判断患者是否治愈
+
+
+MRD检测主要有两大技术策略
+
+Tumor-informed assay -&gt; 个体化panel
+Tumor naive/agnostic assay -&gt; 固定化panel
+
+
+
+如何评估MRD检测技术路线的优劣势对比
+
+  
+      
+          技术指标
+          核心点
+          个体化panel
+          固定化panel
+      
+  
+  
+      
+          1. 单一突变检测灵敏度：固定化 = 个体化
+          降噪技术、超高测序深度、克隆性造血、采血量
+          超高测序深度结合UMI技术提高单点检测灵敏度，无克隆性造血影响
+          超高深度测序结合多重技术提高单点检测灵敏度，存在一定的克隆性造血干扰
+      
+      
+          2. 监测突变数量：个体化&gt;固定化
+          监测的突变数量越多，灵敏度也会越高，多少数量足够？
+          由方法学设定，常见的个体化panel监测MRD选择16个或更多的突变
+          固定panel：如世和泛实体瘤MRD panel，panel的设置至关重要
+      
+      
+          3. 检测突变质量：固定化 &gt; 个体化
+          监测的突变是否与肿瘤相关？是否是主克隆突变？能否在最短的时间内筛选出需检测的基因？
+          先进行WES，再针对性设计基因检测的个体化panel，短时间内无法进行很好的筛选
+          预先选择与癌种相关的基因或可特异选择尽量多的主克隆基因变异病设计为固定panel
+      
+      
+          4. 检测过程质控：固定化&gt;个体化
+          NGS检测流程复杂，任何环节质控出现问题都会影响结果的可靠性、稳定性、准确(？)性
+          短周期内完成个体化探针的设计和临床检测，对追踪位点检测的质量控制带来了巨大挑战
+          固定化panel在临床推广前经过长周期严格的探针设计、流程优化和反复验证等工作，panel的性能相对稳定、可靠
+      
+      
+          5. 克服肿瘤时空异质性
+          肿瘤存在时空异质性，新发变异可能也与预后(?)相关
+          针对基线组织单次检测结果，无法克服时空异质性。
+          固定化panel检测范围更广，看一定程度上克服肿瘤时空异质性
+      
+  
+
+
+
+单一突变灵敏度：取决于采血量和样本起始多样性
+
+
+监测突变数量：个体化panel优于固定化panel
+
+
+突变数量：突变数量增多，检测灵敏度提高，但有平台期。
+理论LoD计算规则：
+
+假设每个位点的有效测序深度为10000x
+按照3条去dup后突变reads判断为阳性
+根据二项分布去计算单个位点突变的LoD
+进一步根据单位点突变LoD计算多位点LoD
+
+
+"/>
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position":  1 ,
+      "name": "Posts",
+      "item": "https://entropydecrease.github.io/posts/"
+    }, 
+    {
+      "@type": "ListItem",
+      "position":  2 ,
+      "name": "邵阳对世和MRD的介绍 - MRD的技术创新与应用案例分享",
+      "item": "https://entropydecrease.github.io/posts/geneseeq_mrd/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "邵阳对世和MRD的介绍 - MRD的技术创新与应用案例分享",
+  "name": "邵阳对世和MRD的介绍 - MRD的技术创新与应用案例分享",
+  "description": "个人总结 对个体化panel与固定panel的优劣，做了全面而深入的分析 采用固定化的大panel来做MRD，克服了定制panel的一些问题，想的很细致，做得很坚定，效果也不错 复发病人阳性率似乎还是没有定制panel高 在复发风险预测方面，片段组学看起来效果比ctDNA突变要好 MRD检测的本质：在于判断患者是否治愈 MRD检测主要有两大技术策略 Tumor-informed assay -\u0026gt; 个体化panel Tumor naive/agnostic assay -\u0026gt; 固定化panel 如何评估MRD检测技术路线的优劣势对比 技术指标 核心点 个体化panel 固定化panel 1. 单一突变检测灵敏度：固定化 = 个体化 降噪技术、超高测序深度、克隆性造血、采血量 超高测序深度结合UMI技术提高单点检测灵敏度，无克隆性造血影响 超高深度测序结合多重技术提高单点检测灵敏度，存在一定的克隆性造血干扰 2. 监测突变数量：个体化\u0026gt;固定化 监测的突变数量越多，灵敏度也会越高，多少数量足够？ 由方法学设定，常见的个体化panel监测MRD选择16个或更多的突变 固定panel：如世和泛实体瘤MRD panel，panel的设置至关重要 3. 检测突变质量：固定化 \u0026gt; 个体化 监测的突变是否与肿瘤相关？是否是主克隆突变？能否在最短的时间内筛选出需检测的基因？ 先进行WES，再针对性设计基因检测的个体化panel，短时间内无法进行很好的筛选 预先选择与癌种相关的基因或可特异选择尽量多的主克隆基因变异病设计为固定panel 4. 检测过程质控：固定化\u0026gt;个体化 NGS检测流程复杂，任何环节质控出现问题都会影响结果的可靠性、稳定性、准确(？)性 短周期内完成个体化探针的设计和临床检测，对追踪位点检测的质量控制带来了巨大挑战 固定化panel在临床推广前经过长周期严格的探针设计、流程优化和反复验证等工作，panel的性能相对稳定、可靠 5. 克服肿瘤时空异质性 肿瘤存在时空异质性，新发变异可能也与预后(?)相关 针对基线组织单次检测结果，无法克服时空异质性。 固定化panel检测范围更广，看一定程度上克服肿瘤时空异质性 单一突变灵敏度：取决于采血量和样本起始多样性 监测突变数量：个体化panel优于固定化panel 突变数量：突变数量增多，检测灵敏度提高，但有平台期。 理论LoD计算规则：\n假设每个位点的有效测序深度为10000x 按照3条去dup后突变reads判断为阳性 根据二项分布去计算单个位点突变的LoD 进一步根据单位点突变LoD计算多位点LoD ",
+  "keywords": [
+    "MRD"
+  ],
+  "articleBody": "个人总结 对个体化panel与固定panel的优劣，做了全面而深入的分析 采用固定化的大panel来做MRD，克服了定制panel的一些问题，想的很细致，做得很坚定，效果也不错 复发病人阳性率似乎还是没有定制panel高 在复发风险预测方面，片段组学看起来效果比ctDNA突变要好 MRD检测的本质：在于判断患者是否治愈 MRD检测主要有两大技术策略 Tumor-informed assay -\u003e 个体化panel Tumor naive/agnostic assay -\u003e 固定化panel 如何评估MRD检测技术路线的优劣势对比 技术指标 核心点 个体化panel 固定化panel 1. 单一突变检测灵敏度：固定化 = 个体化 降噪技术、超高测序深度、克隆性造血、采血量 超高测序深度结合UMI技术提高单点检测灵敏度，无克隆性造血影响 超高深度测序结合多重技术提高单点检测灵敏度，存在一定的克隆性造血干扰 2. 监测突变数量：个体化\u003e固定化 监测的突变数量越多，灵敏度也会越高，多少数量足够？ 由方法学设定，常见的个体化panel监测MRD选择16个或更多的突变 固定panel：如世和泛实体瘤MRD panel，panel的设置至关重要 3. 检测突变质量：固定化 \u003e 个体化 监测的突变是否与肿瘤相关？是否是主克隆突变？能否在最短的时间内筛选出需检测的基因？ 先进行WES，再针对性设计基因检测的个体化panel，短时间内无法进行很好的筛选 预先选择与癌种相关的基因或可特异选择尽量多的主克隆基因变异病设计为固定panel 4. 检测过程质控：固定化\u003e个体化 NGS检测流程复杂，任何环节质控出现问题都会影响结果的可靠性、稳定性、准确(？)性 短周期内完成个体化探针的设计和临床检测，对追踪位点检测的质量控制带来了巨大挑战 固定化panel在临床推广前经过长周期严格的探针设计、流程优化和反复验证等工作，panel的性能相对稳定、可靠 5. 克服肿瘤时空异质性 肿瘤存在时空异质性，新发变异可能也与预后(?)相关 针对基线组织单次检测结果，无法克服时空异质性。 固定化panel检测范围更广，看一定程度上克服肿瘤时空异质性 单一突变灵敏度：取决于采血量和样本起始多样性 监测突变数量：个体化panel优于固定化panel 突变数量：突变数量增多，检测灵敏度提高，但有平台期。 理论LoD计算规则：\n假设每个位点的有效测序深度为10000x 按照3条去dup后突变reads判断为阳性 根据二项分布去计算单个位点突变的LoD 进一步根据单位点突变LoD计算多位点LoD 监测突变数量达到10个左右，灵敏度进入平台期。进一步增加突变数量，灵敏度提升效果微乎其微。\n(按：此处与Natera的研究不一致，Natera认为16个突变是必须的，突变数目超过16个之后，对性能提升有限)\n突变质量：少数重要突变也具有MRD监测效果 某研究只关注15个重要的驱动基因\n突变质量： Natera转战组织panel测序个性化MRD 检测质控：全流程质控与结果可信度密切相关 固定化panel，18-36周的研发周期，保证检测质量 探针合成：2周 探针用量及最适条件确认：4-8周 性能确认（精密度、LoD、准确性）：12-24周 （按：这里24周似乎太长） 临床应用：1周 个体化panel：研发检测周期短，无法保证检测质量 质控关键一：基因/位点覆盖的均一性 固定化panel探针均一度可控 每个区域多探针密集覆盖 每条探针单独合成及质控 探针库反复优化，不同区域探针比例反复优化 （按：似乎有点夸张，不同区域探针比例很难**反复**优化） 性能验证（精密度、LoD、准确性） 个性化panel引物均一度不可控 引物设计影响因素繁杂：引物长度、GC含量、自由能、特异性等等 个性化panel位点明确，引物设计空间有限，引物最终效能无法保证 不同因为扩增效率存在差异，引物间配比缺乏优化，缺乏性能验证评估 质控关键二：有效控制PCR随机错误的比例 固定化panel流程及QC 样本接收 核酸提取 文库构建（~8 cycles PCR） 文库富集（~4 cycles PCR） 上机测序（约30000x（？），有效深度6000-8000x） 个性化panel流程及QC 样本接收 核酸提取 文库构建（~11 cycles PCR） 巢式富集（双链各19 cycles PCR） 上机测序（~100000x，有效约6000-8000x（？）） 时空异质性克服：固定化panel优于个体化panel 个体化panel vs 癌种固定化panel 技术指标 个体化panel技术 癌种固定化panel技术 灵敏度 $\\Delta \\Delta \\Delta$ $\\Delta \\Delta \\Delta$ 特异性 $\\Delta \\Delta \\Delta$ $\\Delta \\Delta$ 稳定性/质量控制 $\\Delta$ $\\Delta \\Delta \\Delta$ 检测周期 $\\Delta$ $\\Delta \\Delta \\Delta$ 空间异质性 $\\times$ $\\surd$ 时间异质性 $\\times$ $\\surd$ 用药指导/科研意义 $\\times$ $\\surd$ 不同技术如何选择？临床验证是检测技术验证的金标准 世和MRD策略：癌种定制化 + ATG-Seq高灵敏技术 定制化\nctDNA定制化热点突变追踪panel\n针对不同癌种中国人群数据定制热点追踪 超高灵敏度： ATG-Seq超高灵敏度检测技术（ATG-Seq三重降噪技术，结合30000x测序深度）\nATG-Seq技术(Automated Triple Groom Sequencing) 降低背景噪音\nBISC技术噪音抛光 BBAM标签去除PCR随机错误 DDAM标签还原双链，去除单链损伤错误 30000x超高深度\n检测性能提升：多重机制降低克隆性造血突变等干扰 去除克隆性造血影响的方法：\nWBC对照 基线组织数据 世和基因自建中国人群CH突变库 多次检测，综合评估 患者年龄辅助判断 世和MRD panel：基于大样本中国人群数据库富集高频位点 超万例WES数据库建设 世和临床WES数据 世和科研WES数据 公告数据库 主克隆突变筛选 生信利用FACETS分析WES测序突变结果 获得CCF（Cancer Cell Fraction），根据CCF\u003e0.8选择主克隆突变 主克隆突变频率从搞到地排序，选择最高频突变位点纳入 世和MRD panel：全面覆盖基因组2365基因(\u003e1M) 真实临床样本验证 中位17突变/患者 95%人群覆盖\u003e=5个突变 77%患者覆盖\u003e=10个突变 灵敏度验证：95%的样本LoD可达0.02% 临床验证：世和MRD多项大型临床研究获国际权威杂志认可 世和MRD肠癌临床验证：多中心肠癌术后动态检测项目 研究设计 时间点\n术前，外周血 术后3-7天 术后6个月 术后9、12、15、18、21、24个月 术后、辅助治疗后或动态检测ctDNA阳性患者复发风险高 83%复发的患者ctDNA阳性，平均提前影像学153天提升复发 （按：复发的患者，只有83%的患者ctDNA阳性，还有17%的假阴性，够好吗？）\n世和MRD肺癌临床验证新成果：揭示更优术后复发监测方案 主克隆性突变对于复发风险可能更有预测价值 MRD检测媒介：多种特征可以用于MRD监测 ctDNA突变检测 甲基化检测 CNV检测 cfDNA片段大小检测：片段组学可为MRD提供更为丰富的xx特征 Motif检测 MERCURY多组学技术用于肺癌术后复发风险预测 相比传统突变方法，片段组学预测复发风险具有更高的敏感性\n片段组学可有效预测术后复发风险 使用术后7天和术后6个月的cfDNA片段大小比值(Fragment Size Ratio, FSR)\n片段组学模型预测复发风险性能优于ctDNA突变 MRD前瞻性干预研究的设计思路 深度布局肿瘤全周期，让精准与可及的肿瘤检测造福全球 ",
+  "wordCount" : "217",
+  "inLanguage": "en",
+  "image": "https://entropydecrease.github.io/images/papermod-cover.png","datePublished": "2023-04-27T00:00:00Z",
+  "dateModified": "2023-04-27T00:00:00Z",
+  "author":{
+    "@type": "Person",
+    "name": "Entropy Decrease"
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://entropydecrease.github.io/posts/geneseeq_mrd/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Entropy Decrease",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://entropydecrease.github.io/favicon.ico"
+    }
+  }
+}
+</script>
+</head>
+
+<body class="" id="top">
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.body.classList.add('dark');
+    } else if (localStorage.getItem("pref-theme") === "light") {
+        document.body.classList.remove('dark')
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.body.classList.add('dark');
+    }
+
+</script>
+
+<header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="https://entropydecrease.github.io/" accesskey="h" title="Entropy Decrease (Alt + H)">Entropy Decrease</a>
+            <div class="logo-switches">
+                <button id="theme-toggle" accesskey="t" title="(Alt + T)">
+                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <ul id="menu">
+            <li>
+                <a href="https://entropydecrease.github.io/posts" title="Posts">
+                    <span>Posts</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://entropydecrease.github.io/categories" title="Categories">
+                    <span>Categories</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://entropydecrease.github.io/tags/" title="Tags">
+                    <span>Tags</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://entropydecrease.github.io/about" title="About">
+                    <span>About</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</header>
+<main class="main">
+
+<article class="post-single">
+  <header class="post-header">
+    <div class="breadcrumbs"><a href="https://entropydecrease.github.io/">Home</a>&nbsp;»&nbsp;<a href="https://entropydecrease.github.io/posts/">Posts</a></div>
+    <h1 class="post-title entry-hint-parent">
+      邵阳对世和MRD的介绍 - MRD的技术创新与应用案例分享
+    </h1>
+    <div class="post-meta"><span title='2023-04-27 00:00:00 +0000 UTC'>April 27, 2023</span>&nbsp;·&nbsp;2 min&nbsp;·&nbsp;Entropy Decrease
+
+</div>
+  </header> <div class="toc">
+    <details >
+        <summary accesskey="c" title="(Alt + C)">
+            <span class="details">Table of Contents</span>
+        </summary>
+
+        <div class="inner"><ul>
+                <li>
+                    <a href="#%e4%b8%aa%e4%ba%ba%e6%80%bb%e7%bb%93" aria-label="个人总结">个人总结</a></li>
+                <li>
+                    <a href="#mrd%e6%a3%80%e6%b5%8b%e7%9a%84%e6%9c%ac%e8%b4%a8%e5%9c%a8%e4%ba%8e%e5%88%a4%e6%96%ad%e6%82%a3%e8%80%85%e6%98%af%e5%90%a6%e6%b2%bb%e6%84%88" aria-label="MRD检测的本质：在于判断患者是否治愈">MRD检测的本质：在于判断患者是否治愈</a></li>
+                <li>
+                    <a href="#mrd%e6%a3%80%e6%b5%8b%e4%b8%bb%e8%a6%81%e6%9c%89%e4%b8%a4%e5%a4%a7%e6%8a%80%e6%9c%af%e7%ad%96%e7%95%a5" aria-label="MRD检测主要有两大技术策略">MRD检测主要有两大技术策略</a></li>
+                <li>
+                    <a href="#%e5%a6%82%e4%bd%95%e8%af%84%e4%bc%b0mrd%e6%a3%80%e6%b5%8b%e6%8a%80%e6%9c%af%e8%b7%af%e7%ba%bf%e7%9a%84%e4%bc%98%e5%8a%a3%e5%8a%bf%e5%af%b9%e6%af%94" aria-label="如何评估MRD检测技术路线的优劣势对比">如何评估MRD检测技术路线的优劣势对比</a></li>
+                <li>
+                    <a href="#%e5%8d%95%e4%b8%80%e7%aa%81%e5%8f%98%e7%81%b5%e6%95%8f%e5%ba%a6%e5%8f%96%e5%86%b3%e4%ba%8e%e9%87%87%e8%a1%80%e9%87%8f%e5%92%8c%e6%a0%b7%e6%9c%ac%e8%b5%b7%e5%a7%8b%e5%a4%9a%e6%a0%b7%e6%80%a7" aria-label="单一突变灵敏度：取决于采血量和样本起始多样性">单一突变灵敏度：取决于采血量和样本起始多样性</a></li>
+                <li>
+                    <a href="#%e7%9b%91%e6%b5%8b%e7%aa%81%e5%8f%98%e6%95%b0%e9%87%8f%e4%b8%aa%e4%bd%93%e5%8c%96panel%e4%bc%98%e4%ba%8e%e5%9b%ba%e5%ae%9a%e5%8c%96panel" aria-label="监测突变数量：个体化panel优于固定化panel">监测突变数量：个体化panel优于固定化panel</a></li>
+                <li>
+                    <a href="#%e7%aa%81%e5%8f%98%e6%95%b0%e9%87%8f%e7%aa%81%e5%8f%98%e6%95%b0%e9%87%8f%e5%a2%9e%e5%a4%9a%e6%a3%80%e6%b5%8b%e7%81%b5%e6%95%8f%e5%ba%a6%e6%8f%90%e9%ab%98%e4%bd%86%e6%9c%89%e5%b9%b3%e5%8f%b0%e6%9c%9f" aria-label="突变数量：突变数量增多，检测灵敏度提高，但有平台期。">突变数量：突变数量增多，检测灵敏度提高，但有平台期。</a></li>
+                <li>
+                    <a href="#%e7%aa%81%e5%8f%98%e8%b4%a8%e9%87%8f%e5%b0%91%e6%95%b0%e9%87%8d%e8%a6%81%e7%aa%81%e5%8f%98%e4%b9%9f%e5%85%b7%e6%9c%89mrd%e7%9b%91%e6%b5%8b%e6%95%88%e6%9e%9c" aria-label="突变质量：少数重要突变也具有MRD监测效果">突变质量：少数重要突变也具有MRD监测效果</a></li>
+                <li>
+                    <a href="#%e7%aa%81%e5%8f%98%e8%b4%a8%e9%87%8f-natera%e8%bd%ac%e6%88%98%e7%bb%84%e7%bb%87panel%e6%b5%8b%e5%ba%8f%e4%b8%aa%e6%80%a7%e5%8c%96mrd" aria-label="突变质量： Natera转战组织panel测序个性化MRD">突变质量： Natera转战组织panel测序个性化MRD</a></li>
+                <li>
+                    <a href="#%e6%a3%80%e6%b5%8b%e8%b4%a8%e6%8e%a7%e5%85%a8%e6%b5%81%e7%a8%8b%e8%b4%a8%e6%8e%a7%e4%b8%8e%e7%bb%93%e6%9e%9c%e5%8f%af%e4%bf%a1%e5%ba%a6%e5%af%86%e5%88%87%e7%9b%b8%e5%85%b3" aria-label="检测质控：全流程质控与结果可信度密切相关">检测质控：全流程质控与结果可信度密切相关</a></li>
+                <li>
+                    <a href="#%e8%b4%a8%e6%8e%a7%e5%85%b3%e9%94%ae%e4%b8%80%e5%9f%ba%e5%9b%a0%e4%bd%8d%e7%82%b9%e8%a6%86%e7%9b%96%e7%9a%84%e5%9d%87%e4%b8%80%e6%80%a7" aria-label="质控关键一：基因/位点覆盖的均一性">质控关键一：基因/位点覆盖的均一性</a></li>
+                <li>
+                    <a href="#%e8%b4%a8%e6%8e%a7%e5%85%b3%e9%94%ae%e4%ba%8c%e6%9c%89%e6%95%88%e6%8e%a7%e5%88%b6pcr%e9%9a%8f%e6%9c%ba%e9%94%99%e8%af%af%e7%9a%84%e6%af%94%e4%be%8b" aria-label="质控关键二：有效控制PCR随机错误的比例">质控关键二：有效控制PCR随机错误的比例</a></li>
+                <li>
+                    <a href="#%e6%97%b6%e7%a9%ba%e5%bc%82%e8%b4%a8%e6%80%a7%e5%85%8b%e6%9c%8d%e5%9b%ba%e5%ae%9a%e5%8c%96panel%e4%bc%98%e4%ba%8e%e4%b8%aa%e4%bd%93%e5%8c%96panel" aria-label="时空异质性克服：固定化panel优于个体化panel">时空异质性克服：固定化panel优于个体化panel</a></li>
+                <li>
+                    <a href="#%e4%b8%aa%e4%bd%93%e5%8c%96panel-vs-%e7%99%8c%e7%a7%8d%e5%9b%ba%e5%ae%9a%e5%8c%96panel" aria-label="个体化panel vs 癌种固定化panel">个体化panel vs 癌种固定化panel</a></li>
+                <li>
+                    <a href="#%e4%b8%8d%e5%90%8c%e6%8a%80%e6%9c%af%e5%a6%82%e4%bd%95%e9%80%89%e6%8b%a9%e4%b8%b4%e5%ba%8a%e9%aa%8c%e8%af%81%e6%98%af%e6%a3%80%e6%b5%8b%e6%8a%80%e6%9c%af%e9%aa%8c%e8%af%81%e7%9a%84%e9%87%91%e6%a0%87%e5%87%86" aria-label="不同技术如何选择？临床验证是检测技术验证的金标准">不同技术如何选择？临床验证是检测技术验证的金标准</a></li>
+                <li>
+                    <a href="#%e4%b8%96%e5%92%8cmrd%e7%ad%96%e7%95%a5%e7%99%8c%e7%a7%8d%e5%ae%9a%e5%88%b6%e5%8c%96--atg-seq%e9%ab%98%e7%81%b5%e6%95%8f%e6%8a%80%e6%9c%af" aria-label="世和MRD策略：癌种定制化 &#43; ATG-Seq高灵敏技术">世和MRD策略：癌种定制化 + ATG-Seq高灵敏技术</a></li>
+                <li>
+                    <a href="#%e6%a3%80%e6%b5%8b%e6%80%a7%e8%83%bd%e6%8f%90%e5%8d%87%e5%a4%9a%e9%87%8d%e6%9c%ba%e5%88%b6%e9%99%8d%e4%bd%8e%e5%85%8b%e9%9a%86%e6%80%a7%e9%80%a0%e8%a1%80%e7%aa%81%e5%8f%98%e7%ad%89%e5%b9%b2%e6%89%b0" aria-label="检测性能提升：多重机制降低克隆性造血突变等干扰">检测性能提升：多重机制降低克隆性造血突变等干扰</a></li>
+                <li>
+                    <a href="#%e4%b8%96%e5%92%8cmrd-panel%e5%9f%ba%e4%ba%8e%e5%a4%a7%e6%a0%b7%e6%9c%ac%e4%b8%ad%e5%9b%bd%e4%ba%ba%e7%be%a4%e6%95%b0%e6%8d%ae%e5%ba%93%e5%af%8c%e9%9b%86%e9%ab%98%e9%a2%91%e4%bd%8d%e7%82%b9" aria-label="世和MRD panel：基于大样本中国人群数据库富集高频位点">世和MRD panel：基于大样本中国人群数据库富集高频位点</a></li>
+                <li>
+                    <a href="#%e4%b8%96%e5%92%8cmrd-panel%e5%85%a8%e9%9d%a2%e8%a6%86%e7%9b%96%e5%9f%ba%e5%9b%a0%e7%bb%842365%e5%9f%ba%e5%9b%a01m" aria-label="世和MRD panel：全面覆盖基因组2365基因(&gt;1M)">世和MRD panel：全面覆盖基因组2365基因(&gt;1M)</a></li>
+                <li>
+                    <a href="#%e7%9c%9f%e5%ae%9e%e4%b8%b4%e5%ba%8a%e6%a0%b7%e6%9c%ac%e9%aa%8c%e8%af%81" aria-label="真实临床样本验证">真实临床样本验证</a></li>
+                <li>
+                    <a href="#%e7%81%b5%e6%95%8f%e5%ba%a6%e9%aa%8c%e8%af%8195%e7%9a%84%e6%a0%b7%e6%9c%aclod%e5%8f%af%e8%be%be002" aria-label="灵敏度验证：95%的样本LoD可达0.02%">灵敏度验证：95%的样本LoD可达0.02%</a></li>
+                <li>
+                    <a href="#%e4%b8%b4%e5%ba%8a%e9%aa%8c%e8%af%81%e4%b8%96%e5%92%8cmrd%e5%a4%9a%e9%a1%b9%e5%a4%a7%e5%9e%8b%e4%b8%b4%e5%ba%8a%e7%a0%94%e7%a9%b6%e8%8e%b7%e5%9b%bd%e9%99%85%e6%9d%83%e5%a8%81%e6%9d%82%e5%bf%97%e8%ae%a4%e5%8f%af" aria-label="临床验证：世和MRD多项大型临床研究获国际权威杂志认可">临床验证：世和MRD多项大型临床研究获国际权威杂志认可</a></li>
+                <li>
+                    <a href="#%e4%b8%96%e5%92%8cmrd%e8%82%a0%e7%99%8c%e4%b8%b4%e5%ba%8a%e9%aa%8c%e8%af%81%e5%a4%9a%e4%b8%ad%e5%bf%83%e8%82%a0%e7%99%8c%e6%9c%af%e5%90%8e%e5%8a%a8%e6%80%81%e6%a3%80%e6%b5%8b%e9%a1%b9%e7%9b%ae" aria-label="世和MRD肠癌临床验证：多中心肠癌术后动态检测项目">世和MRD肠癌临床验证：多中心肠癌术后动态检测项目</a></li>
+                <li>
+                    <a href="#%e7%a0%94%e7%a9%b6%e8%ae%be%e8%ae%a1" aria-label="研究设计">研究设计</a></li>
+                <li>
+                    <a href="#%e6%9c%af%e5%90%8e%e8%be%85%e5%8a%a9%e6%b2%bb%e7%96%97%e5%90%8e%e6%88%96%e5%8a%a8%e6%80%81%e6%a3%80%e6%b5%8bctdna%e9%98%b3%e6%80%a7%e6%82%a3%e8%80%85%e5%a4%8d%e5%8f%91%e9%a3%8e%e9%99%a9%e9%ab%98" aria-label="术后、辅助治疗后或动态检测ctDNA阳性患者复发风险高">术后、辅助治疗后或动态检测ctDNA阳性患者复发风险高</a></li>
+                <li>
+                    <a href="#83%e5%a4%8d%e5%8f%91%e7%9a%84%e6%82%a3%e8%80%85ctdna%e9%98%b3%e6%80%a7%e5%b9%b3%e5%9d%87%e6%8f%90%e5%89%8d%e5%bd%b1%e5%83%8f%e5%ad%a6153%e5%a4%a9%e6%8f%90%e5%8d%87%e5%a4%8d%e5%8f%91" aria-label="83%复发的患者ctDNA阳性，平均提前影像学153天提升复发">83%复发的患者ctDNA阳性，平均提前影像学153天提升复发</a></li>
+                <li>
+                    <a href="#%e4%b8%96%e5%92%8cmrd%e8%82%ba%e7%99%8c%e4%b8%b4%e5%ba%8a%e9%aa%8c%e8%af%81%e6%96%b0%e6%88%90%e6%9e%9c%e6%8f%ad%e7%a4%ba%e6%9b%b4%e4%bc%98%e6%9c%af%e5%90%8e%e5%a4%8d%e5%8f%91%e7%9b%91%e6%b5%8b%e6%96%b9%e6%a1%88" aria-label="世和MRD肺癌临床验证新成果：揭示更优术后复发监测方案">世和MRD肺癌临床验证新成果：揭示更优术后复发监测方案</a></li>
+                <li>
+                    <a href="#%e4%b8%bb%e5%85%8b%e9%9a%86%e6%80%a7%e7%aa%81%e5%8f%98%e5%af%b9%e4%ba%8e%e5%a4%8d%e5%8f%91%e9%a3%8e%e9%99%a9%e5%8f%af%e8%83%bd%e6%9b%b4%e6%9c%89%e9%a2%84%e6%b5%8b%e4%bb%b7%e5%80%bc" aria-label="主克隆性突变对于复发风险可能更有预测价值">主克隆性突变对于复发风险可能更有预测价值</a></li>
+                <li>
+                    <a href="#mrd%e6%a3%80%e6%b5%8b%e5%aa%92%e4%bb%8b%e5%a4%9a%e7%a7%8d%e7%89%b9%e5%be%81%e5%8f%af%e4%bb%a5%e7%94%a8%e4%ba%8emrd%e7%9b%91%e6%b5%8b" aria-label="MRD检测媒介：多种特征可以用于MRD监测">MRD检测媒介：多种特征可以用于MRD监测</a></li>
+                <li>
+                    <a href="#mercury%e5%a4%9a%e7%bb%84%e5%ad%a6%e6%8a%80%e6%9c%af%e7%94%a8%e4%ba%8e%e8%82%ba%e7%99%8c%e6%9c%af%e5%90%8e%e5%a4%8d%e5%8f%91%e9%a3%8e%e9%99%a9%e9%a2%84%e6%b5%8b" aria-label="MERCURY多组学技术用于肺癌术后复发风险预测">MERCURY多组学技术用于肺癌术后复发风险预测</a></li>
+                <li>
+                    <a href="#%e7%89%87%e6%ae%b5%e7%bb%84%e5%ad%a6%e5%8f%af%e6%9c%89%e6%95%88%e9%a2%84%e6%b5%8b%e6%9c%af%e5%90%8e%e5%a4%8d%e5%8f%91%e9%a3%8e%e9%99%a9" aria-label="片段组学可有效预测术后复发风险">片段组学可有效预测术后复发风险</a></li>
+                <li>
+                    <a href="#%e7%89%87%e6%ae%b5%e7%bb%84%e5%ad%a6%e6%a8%a1%e5%9e%8b%e9%a2%84%e6%b5%8b%e5%a4%8d%e5%8f%91%e9%a3%8e%e9%99%a9%e6%80%a7%e8%83%bd%e4%bc%98%e4%ba%8ectdna%e7%aa%81%e5%8f%98" aria-label="片段组学模型预测复发风险性能优于ctDNA突变">片段组学模型预测复发风险性能优于ctDNA突变</a></li>
+                <li>
+                    <a href="#mrd%e5%89%8d%e7%9e%bb%e6%80%a7%e5%b9%b2%e9%a2%84%e7%a0%94%e7%a9%b6%e7%9a%84%e8%ae%be%e8%ae%a1%e6%80%9d%e8%b7%af" aria-label="MRD前瞻性干预研究的设计思路">MRD前瞻性干预研究的设计思路</a></li>
+                <li>
+                    <a href="#%e6%b7%b1%e5%ba%a6%e5%b8%83%e5%b1%80%e8%82%bf%e7%98%a4%e5%85%a8%e5%91%a8%e6%9c%9f%e8%ae%a9%e7%b2%be%e5%87%86%e4%b8%8e%e5%8f%af%e5%8f%8a%e7%9a%84%e8%82%bf%e7%98%a4%e6%a3%80%e6%b5%8b%e9%80%a0%e7%a6%8f%e5%85%a8%e7%90%83" aria-label="深度布局肿瘤全周期，让精准与可及的肿瘤检测造福全球">深度布局肿瘤全周期，让精准与可及的肿瘤检测造福全球</a>
+                </li>
+            </ul>
+        </div>
+    </details>
+</div>
+
+  <div class="post-content"><h3 id="个人总结">个人总结<a hidden class="anchor" aria-hidden="true" href="#个人总结">#</a></h3>
+<ul>
+<li>对个体化panel与固定panel的优劣，做了全面而深入的分析</li>
+<li>采用固定化的大panel来做MRD，克服了定制panel的一些问题，想的很细致，做得很坚定，效果也不错</li>
+<li>复发病人阳性率似乎还是没有定制panel高</li>
+<li>在复发风险预测方面，片段组学看起来效果比ctDNA突变要好</li>
+</ul>
+<p><img loading="lazy" src="resources/581682683182_.pic_hd.jpg" alt="581682683182_.pic_hd"  />
+</p>
+<p><img loading="lazy" src="resources/591682683281_.pic_hd.jpg" alt="591682683281_.pic_hd"  />
+</p>
+<h3 id="mrd检测的本质在于判断患者是否治愈">MRD检测的本质：在于判断患者是否治愈<a hidden class="anchor" aria-hidden="true" href="#mrd检测的本质在于判断患者是否治愈">#</a></h3>
+<p><img loading="lazy" src="resources/601682683316_.pic_hd.jpg" alt="601682683316_.pic_hd"  />
+</p>
+<h3 id="mrd检测主要有两大技术策略">MRD检测主要有两大技术策略<a hidden class="anchor" aria-hidden="true" href="#mrd检测主要有两大技术策略">#</a></h3>
+<ul>
+<li>Tumor-informed assay -&gt; 个体化panel</li>
+<li>Tumor naive/agnostic assay -&gt; 固定化panel</li>
+</ul>
+<p><img loading="lazy" src="resources/611682683356_.pic_hd.jpg" alt="611682683356_.pic_hd"  />
+</p>
+<h3 id="如何评估mrd检测技术路线的优劣势对比">如何评估MRD检测技术路线的优劣势对比<a hidden class="anchor" aria-hidden="true" href="#如何评估mrd检测技术路线的优劣势对比">#</a></h3>
+<table>
+  <thead>
+      <tr>
+          <th style="text-align: left">技术指标</th>
+          <th style="text-align: left">核心点</th>
+          <th style="text-align: left">个体化panel</th>
+          <th style="text-align: left">固定化panel</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td style="text-align: left">1. 单一突变检测灵敏度：固定化 = 个体化</td>
+          <td style="text-align: left">降噪技术、超高测序深度、克隆性造血、采血量</td>
+          <td style="text-align: left">超高测序深度结合UMI技术提高单点检测灵敏度，无克隆性造血影响</td>
+          <td style="text-align: left">超高深度测序结合多重技术提高单点检测灵敏度，存在一定的克隆性造血干扰</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">2. 监测突变数量：个体化&gt;固定化</td>
+          <td style="text-align: left">监测的突变数量越多，灵敏度也会越高，多少数量足够？</td>
+          <td style="text-align: left">由方法学设定，常见的个体化panel监测MRD选择16个或更多的突变</td>
+          <td style="text-align: left">固定panel：如世和泛实体瘤MRD panel，panel的设置至关重要</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">3. 检测突变质量：固定化 &gt; 个体化</td>
+          <td style="text-align: left">监测的突变是否与肿瘤相关？是否是主克隆突变？能否在最短的时间内筛选出需检测的基因？</td>
+          <td style="text-align: left">先进行WES，再针对性设计基因检测的个体化panel，短时间内无法进行很好的筛选</td>
+          <td style="text-align: left">预先选择与癌种相关的基因或可特异选择尽量多的主克隆基因变异病设计为固定panel</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">4. 检测过程质控：固定化&gt;个体化</td>
+          <td style="text-align: left">NGS检测流程复杂，任何环节质控出现问题都会影响结果的可靠性、稳定性、准确(？)性</td>
+          <td style="text-align: left">短周期内完成个体化探针的设计和临床检测，对追踪位点检测的质量控制带来了巨大挑战</td>
+          <td style="text-align: left">固定化panel在临床推广前经过长周期严格的探针设计、流程优化和反复验证等工作，panel的性能相对稳定、可靠</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">5. 克服肿瘤时空异质性</td>
+          <td style="text-align: left">肿瘤存在时空异质性，新发变异可能也与预后(?)相关</td>
+          <td style="text-align: left">针对基线组织单次检测结果，无法克服时空异质性。</td>
+          <td style="text-align: left">固定化panel检测范围更广，看一定程度上克服肿瘤时空异质性</td>
+      </tr>
+  </tbody>
+</table>
+<p><img loading="lazy" src="resources/621682683398_.pic_hd.jpg" alt="621682683398_.pic_hd"  />
+</p>
+<h3 id="单一突变灵敏度取决于采血量和样本起始多样性">单一突变灵敏度：取决于采血量和样本起始多样性<a hidden class="anchor" aria-hidden="true" href="#单一突变灵敏度取决于采血量和样本起始多样性">#</a></h3>
+<p><img loading="lazy" src="resources/631682683485_.pic_hd.jpg" alt="631682683485_.pic_hd"  />
+</p>
+<h3 id="监测突变数量个体化panel优于固定化panel">监测突变数量：个体化panel优于固定化panel<a hidden class="anchor" aria-hidden="true" href="#监测突变数量个体化panel优于固定化panel">#</a></h3>
+<p><img loading="lazy" src="resources/641682683598_.pic_hd.jpg" alt="641682683598_.pic_hd"  />
+</p>
+<h3 id="突变数量突变数量增多检测灵敏度提高但有平台期">突变数量：突变数量增多，检测灵敏度提高，但有平台期。<a hidden class="anchor" aria-hidden="true" href="#突变数量突变数量增多检测灵敏度提高但有平台期">#</a></h3>
+<p>理论LoD计算规则：</p>
+<ul>
+<li>假设每个位点的有效测序深度为10000x</li>
+<li>按照3条去dup后突变reads判断为阳性</li>
+<li>根据二项分布去计算单个位点突变的LoD</li>
+<li>进一步根据单位点突变LoD计算多位点LoD</li>
+</ul>
+<p><img loading="lazy" src="resources/651682683616_.pic_hd.jpg" alt="651682683616_.pic_hd"  />
+</p>
+<p>监测突变数量达到10个左右，灵敏度进入平台期。进一步增加突变数量，灵敏度提升效果微乎其微。</p>
+<p>(按：此处与Natera的研究不一致，Natera认为16个突变是必须的，突变数目超过16个之后，对性能提升有限)</p>
+<p><img loading="lazy" src="resources/661682683644_.pic_hd.jpg" alt="661682683644_.pic_hd"  />
+</p>
+<h3 id="突变质量少数重要突变也具有mrd监测效果">突变质量：少数重要突变也具有MRD监测效果<a hidden class="anchor" aria-hidden="true" href="#突变质量少数重要突变也具有mrd监测效果">#</a></h3>
+<p>某研究只关注15个重要的驱动基因</p>
+<p><img loading="lazy" src="resources/671682683664_.pic_hd.jpg" alt="671682683664_.pic_hd"  />
+</p>
+<h3 id="突变质量-natera转战组织panel测序个性化mrd">突变质量： Natera转战组织panel测序个性化MRD<a hidden class="anchor" aria-hidden="true" href="#突变质量-natera转战组织panel测序个性化mrd">#</a></h3>
+<p><img loading="lazy" src="resources/681682683789_.pic_hd.jpg" alt="681682683789_.pic_hd"  />
+</p>
+<h3 id="检测质控全流程质控与结果可信度密切相关">检测质控：全流程质控与结果可信度密切相关<a hidden class="anchor" aria-hidden="true" href="#检测质控全流程质控与结果可信度密切相关">#</a></h3>
+<ul>
+<li>固定化panel，18-36周的研发周期，保证检测质量
+<ul>
+<li>探针合成：2周</li>
+<li>探针用量及最适条件确认：4-8周</li>
+<li>性能确认（精密度、LoD、准确性）：12-24周 （按：这里24周似乎太长）</li>
+<li>临床应用：1周</li>
+</ul>
+</li>
+<li>个体化panel：研发检测周期短，无法保证检测质量</li>
+</ul>
+<p><img loading="lazy" src="resources/691682683857_.pic_hd.jpg" alt="691682683857_.pic_hd"  />
+</p>
+<h3 id="质控关键一基因位点覆盖的均一性">质控关键一：基因/位点覆盖的均一性<a hidden class="anchor" aria-hidden="true" href="#质控关键一基因位点覆盖的均一性">#</a></h3>
+<ul>
+<li>固定化panel探针均一度可控
+<ul>
+<li>每个区域多探针密集覆盖</li>
+<li>每条探针单独合成及质控</li>
+<li>探针库反复优化，不同区域探针比例反复优化 （按：似乎有点夸张，不同区域探针比例很难**<u>反复</u>**优化）</li>
+<li>性能验证（精密度、LoD、准确性）</li>
+</ul>
+</li>
+<li>个性化panel引物均一度不可控
+<ul>
+<li>引物设计影响因素繁杂：引物长度、GC含量、自由能、特异性等等</li>
+<li>个性化panel位点明确，引物设计空间有限，引物最终效能无法保证</li>
+<li>不同因为扩增效率存在差异，引物间配比缺乏优化，缺乏性能验证评估</li>
+</ul>
+</li>
+</ul>
+<p><img loading="lazy" src="resources/701682683889_.pic_hd.jpg" alt="701682683889_.pic_hd"  />
+</p>
+<h3 id="质控关键二有效控制pcr随机错误的比例">质控关键二：有效控制PCR随机错误的比例<a hidden class="anchor" aria-hidden="true" href="#质控关键二有效控制pcr随机错误的比例">#</a></h3>
+<ul>
+<li>固定化panel流程及QC
+<ul>
+<li>样本接收</li>
+<li>核酸提取</li>
+<li>文库构建（~8 cycles PCR）</li>
+<li>文库富集（~4 cycles PCR）</li>
+<li>上机测序（约30000x（？），有效深度6000-8000x）</li>
+</ul>
+</li>
+<li>个性化panel流程及QC
+<ul>
+<li>样本接收</li>
+<li>核酸提取</li>
+<li>文库构建（~11 cycles PCR）</li>
+<li>巢式富集（双链各19 cycles PCR）</li>
+<li>上机测序（~100000x，有效约6000-8000x（？））</li>
+</ul>
+</li>
+</ul>
+<p><img loading="lazy" src="resources/711682683915_.pic_hd.jpg" alt="711682683915_.pic_hd"  />
+</p>
+<h3 id="时空异质性克服固定化panel优于个体化panel">时空异质性克服：固定化panel优于个体化panel<a hidden class="anchor" aria-hidden="true" href="#时空异质性克服固定化panel优于个体化panel">#</a></h3>
+<p><img loading="lazy" src="resources/731682684048_.pic_hd.jpg" alt="731682684048_.pic_hd"  />
+</p>
+<h3 id="个体化panel-vs-癌种固定化panel">个体化panel vs 癌种固定化panel<a hidden class="anchor" aria-hidden="true" href="#个体化panel-vs-癌种固定化panel">#</a></h3>
+<table>
+  <thead>
+      <tr>
+          <th style="text-align: left">技术指标</th>
+          <th style="text-align: center">个体化panel技术</th>
+          <th style="text-align: center">癌种固定化panel技术</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td style="text-align: left">灵敏度</td>
+          <td style="text-align: center">$\Delta \Delta \Delta$</td>
+          <td style="text-align: center">$\Delta \Delta \Delta$</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">特异性</td>
+          <td style="text-align: center">$\Delta \Delta \Delta$</td>
+          <td style="text-align: center">$\Delta \Delta$</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">稳定性/质量控制</td>
+          <td style="text-align: center">$\Delta$</td>
+          <td style="text-align: center">$\Delta \Delta \Delta$</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">检测周期</td>
+          <td style="text-align: center">$\Delta$</td>
+          <td style="text-align: center">$\Delta \Delta \Delta$</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">空间异质性</td>
+          <td style="text-align: center">$\times$</td>
+          <td style="text-align: center">$\surd$</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">时间异质性</td>
+          <td style="text-align: center">$\times$</td>
+          <td style="text-align: center">$\surd$</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">用药指导/科研意义</td>
+          <td style="text-align: center">$\times$</td>
+          <td style="text-align: center">$\surd$</td>
+      </tr>
+  </tbody>
+</table>
+<p><img loading="lazy" src="resources/741682684299_.pic_hd.jpg" alt="741682684299_.pic_hd"  />
+</p>
+<p><img loading="lazy" src="resources/751682684330_.pic_hd.jpg" alt="751682684330_.pic_hd"  />
+</p>
+<h3 id="不同技术如何选择临床验证是检测技术验证的金标准">不同技术如何选择？临床验证是检测技术验证的金标准<a hidden class="anchor" aria-hidden="true" href="#不同技术如何选择临床验证是检测技术验证的金标准">#</a></h3>
+<p><img loading="lazy" src="resources/image-20230428234901411.png" alt="image-20230428234901411"  />
+</p>
+<h3 id="世和mrd策略癌种定制化--atg-seq高灵敏技术">世和MRD策略：癌种定制化 + ATG-Seq高灵敏技术<a hidden class="anchor" aria-hidden="true" href="#世和mrd策略癌种定制化--atg-seq高灵敏技术">#</a></h3>
+<ul>
+<li>
+<p>定制化</p>
+<ul>
+<li>
+<p>ctDNA定制化热点突变追踪panel</p>
+<ul>
+<li>针对不同癌种中国人群数据定制热点追踪</li>
+</ul>
+</li>
+<li>
+<p>超高灵敏度： ATG-Seq超高灵敏度检测技术（ATG-Seq三重降噪技术，结合30000x测序深度）</p>
+<ul>
+<li>
+<p>ATG-Seq技术(Automated Triple Groom Sequencing) 降低背景噪音</p>
+<ul>
+<li>BISC技术噪音抛光</li>
+<li>BBAM标签去除PCR随机错误</li>
+<li>DDAM标签还原双链，去除单链损伤错误</li>
+</ul>
+</li>
+<li>
+<p>30000x超高深度</p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p><img loading="lazy" src="resources/image-20230428235035750.png" alt="image-20230428235035750"  />
+</p>
+<h3 id="检测性能提升多重机制降低克隆性造血突变等干扰">检测性能提升：多重机制降低克隆性造血突变等干扰<a hidden class="anchor" aria-hidden="true" href="#检测性能提升多重机制降低克隆性造血突变等干扰">#</a></h3>
+<p>去除克隆性造血影响的方法：</p>
+<ul>
+<li>WBC对照</li>
+<li>基线组织数据</li>
+<li>世和基因自建中国人群CH突变库</li>
+<li>多次检测，综合评估</li>
+<li>患者年龄辅助判断</li>
+</ul>
+<p><img loading="lazy" src="resources/image-20230428235416883.png" alt="image-20230428235416883"  />
+</p>
+<h3 id="世和mrd-panel基于大样本中国人群数据库富集高频位点">世和MRD panel：基于大样本中国人群数据库富集高频位点<a hidden class="anchor" aria-hidden="true" href="#世和mrd-panel基于大样本中国人群数据库富集高频位点">#</a></h3>
+<ul>
+<li>超万例WES数据库建设
+<ul>
+<li>世和临床WES数据</li>
+<li>世和科研WES数据</li>
+<li>公告数据库</li>
+</ul>
+</li>
+<li>主克隆突变筛选
+<ol>
+<li>生信利用FACETS分析WES测序突变结果</li>
+<li>获得CCF（Cancer Cell Fraction），根据CCF&gt;0.8选择主克隆突变</li>
+<li>主克隆突变频率从搞到地排序，选择最高频突变位点纳入</li>
+</ol>
+</li>
+</ul>
+<p><img loading="lazy" src="resources/791682684677_.pic_hd.jpg" alt="791682684677_.pic_hd"  />
+</p>
+<h3 id="世和mrd-panel全面覆盖基因组2365基因1m">世和MRD panel：全面覆盖基因组2365基因(&gt;1M)<a hidden class="anchor" aria-hidden="true" href="#世和mrd-panel全面覆盖基因组2365基因1m">#</a></h3>
+<p><img loading="lazy" src="resources/image-20230429000352085.png" alt="image-20230429000352085"  />
+</p>
+<h3 id="真实临床样本验证">真实临床样本验证<a hidden class="anchor" aria-hidden="true" href="#真实临床样本验证">#</a></h3>
+<ul>
+<li>中位17突变/患者</li>
+<li>95%人群覆盖&gt;=5个突变</li>
+<li>77%患者覆盖&gt;=10个突变</li>
+</ul>
+<p><img loading="lazy" src="resources/image-20230429000509892.png" alt="image-20230429000509892"  />
+</p>
+<h3 id="灵敏度验证95的样本lod可达002">灵敏度验证：95%的样本LoD可达0.02%<a hidden class="anchor" aria-hidden="true" href="#灵敏度验证95的样本lod可达002">#</a></h3>
+<p><img loading="lazy" src="resources/image-20230429000703198.png" alt="image-20230429000703198"  />
+</p>
+<h3 id="临床验证世和mrd多项大型临床研究获国际权威杂志认可">临床验证：世和MRD多项大型临床研究获国际权威杂志认可<a hidden class="anchor" aria-hidden="true" href="#临床验证世和mrd多项大型临床研究获国际权威杂志认可">#</a></h3>
+<p><img loading="lazy" src="resources/image-20230429000748007.png" alt="image-20230429000748007"  />
+</p>
+<h3 id="世和mrd肠癌临床验证多中心肠癌术后动态检测项目">世和MRD肠癌临床验证：多中心肠癌术后动态检测项目<a hidden class="anchor" aria-hidden="true" href="#世和mrd肠癌临床验证多中心肠癌术后动态检测项目">#</a></h3>
+<p><img loading="lazy" src="resources/image-20230429000823376.png" alt="image-20230429000823376"  />
+</p>
+<h3 id="研究设计">研究设计<a hidden class="anchor" aria-hidden="true" href="#研究设计">#</a></h3>
+<p>时间点</p>
+<ul>
+<li>术前，外周血</li>
+<li>术后3-7天</li>
+<li>术后6个月</li>
+<li>术后9、12、15、18、21、24个月</li>
+</ul>
+<p><img loading="lazy" src="resources/image-20230429000902077.png" alt="image-20230429000902077"  />
+</p>
+<h3 id="术后辅助治疗后或动态检测ctdna阳性患者复发风险高">术后、辅助治疗后或动态检测ctDNA阳性患者复发风险高<a hidden class="anchor" aria-hidden="true" href="#术后辅助治疗后或动态检测ctdna阳性患者复发风险高">#</a></h3>
+<p><img loading="lazy" src="resources/image-20230429001113449.png" alt="image-20230429001113449"  />
+</p>
+<h3 id="83复发的患者ctdna阳性平均提前影像学153天提升复发">83%复发的患者ctDNA阳性，平均提前影像学153天提升复发<a hidden class="anchor" aria-hidden="true" href="#83复发的患者ctdna阳性平均提前影像学153天提升复发">#</a></h3>
+<p>（按：复发的患者，只有83%的患者ctDNA阳性，还有17%的假阴性，够好吗？）</p>
+<p><img loading="lazy" src="resources/image-20230429001340144.png" alt="image-20230429001340144"  />
+</p>
+<h3 id="世和mrd肺癌临床验证新成果揭示更优术后复发监测方案">世和MRD肺癌临床验证新成果：揭示更优术后复发监测方案<a hidden class="anchor" aria-hidden="true" href="#世和mrd肺癌临床验证新成果揭示更优术后复发监测方案">#</a></h3>
+<p><img loading="lazy" src="resources/image-20230429001445754.png" alt="image-20230429001445754"  />
+</p>
+<h3 id="主克隆性突变对于复发风险可能更有预测价值">主克隆性突变对于复发风险可能更有预测价值<a hidden class="anchor" aria-hidden="true" href="#主克隆性突变对于复发风险可能更有预测价值">#</a></h3>
+<p><img loading="lazy" src="resources/image-20230429001845804.png" alt="image-20230429001845804"  />
+</p>
+<h3 id="mrd检测媒介多种特征可以用于mrd监测">MRD检测媒介：多种特征可以用于MRD监测<a hidden class="anchor" aria-hidden="true" href="#mrd检测媒介多种特征可以用于mrd监测">#</a></h3>
+<ul>
+<li>ctDNA突变检测</li>
+<li>甲基化检测</li>
+<li>CNV检测</li>
+<li>cfDNA片段大小检测：<strong>片段组学可为MRD提供更为丰富的xx特征</strong></li>
+<li>Motif检测</li>
+</ul>
+<p><img loading="lazy" src="resources/901682684722_.pic_hd.jpg" alt="901682684722_.pic_hd"  />
+</p>
+<h3 id="mercury多组学技术用于肺癌术后复发风险预测">MERCURY多组学技术用于肺癌术后复发风险预测<a hidden class="anchor" aria-hidden="true" href="#mercury多组学技术用于肺癌术后复发风险预测">#</a></h3>
+<p><strong>相比传统突变方法，片段组学预测复发风险具有更高的敏感性</strong></p>
+<p><img loading="lazy" src="resources/911682684726_.pic_hd.jpg" alt="911682684726_.pic_hd"  />
+</p>
+<h3 id="片段组学可有效预测术后复发风险">片段组学可有效预测术后复发风险<a hidden class="anchor" aria-hidden="true" href="#片段组学可有效预测术后复发风险">#</a></h3>
+<p>使用术后7天和术后6个月的<strong>cfDNA片段大小比值(Fragment Size Ratio, FSR)</strong></p>
+<p><img loading="lazy" src="resources/image-20230429002229174.png" alt="image-20230429002229174"  />
+</p>
+<h3 id="片段组学模型预测复发风险性能优于ctdna突变">片段组学模型预测复发风险性能优于ctDNA突变<a hidden class="anchor" aria-hidden="true" href="#片段组学模型预测复发风险性能优于ctdna突变">#</a></h3>
+<p><img loading="lazy" src="resources/image-20230429002403244.png" alt="image-20230429002403244"  />
+</p>
+<h3 id="mrd前瞻性干预研究的设计思路">MRD前瞻性干预研究的设计思路<a hidden class="anchor" aria-hidden="true" href="#mrd前瞻性干预研究的设计思路">#</a></h3>
+<p><img loading="lazy" src="resources/image-20230429002521439.png" alt="image-20230429002521439"  />
+</p>
+<h3 id="深度布局肿瘤全周期让精准与可及的肿瘤检测造福全球">深度布局肿瘤全周期，让精准与可及的肿瘤检测造福全球<a hidden class="anchor" aria-hidden="true" href="#深度布局肿瘤全周期让精准与可及的肿瘤检测造福全球">#</a></h3>
+<p><img loading="lazy" src="resources/image-20230429002650580.png" alt="image-20230429002650580"  />
+</p>
+
+
+  </div>
+
+  <footer class="post-footer">
+    <ul class="post-tags">
+      <li><a href="https://entropydecrease.github.io/tags/mrd/">MRD</a></li>
+    </ul>
+<nav class="paginav">
+  <a class="prev" href="https://entropydecrease.github.io/posts/cancer_early_diagnostics/">
+    <span class="title">« Prev</span>
+    <br>
+    <span>肿瘤早诊的思路</span>
+  </a>
+  <a class="next" href="https://entropydecrease.github.io/posts/ont_basics/">
+    <span class="title">Next »</span>
+    <br>
+    <span>图解三代测序（Nanopore） (转载作为备份)</span>
+  </a>
+</nav>
+
+
+<ul class="share-buttons">
+    <li>
+        <a target="_blank" rel="noopener noreferrer" aria-label="share 邵阳对世和MRD的介绍 - MRD的技术创新与应用案例分享 on x"
+            href="https://x.com/intent/tweet/?text=%e9%82%b5%e9%98%b3%e5%af%b9%e4%b8%96%e5%92%8cMRD%e7%9a%84%e4%bb%8b%e7%bb%8d%20-%20MRD%e7%9a%84%e6%8a%80%e6%9c%af%e5%88%9b%e6%96%b0%e4%b8%8e%e5%ba%94%e7%94%a8%e6%a1%88%e4%be%8b%e5%88%86%e4%ba%ab&amp;url=https%3a%2f%2fentropydecrease.github.io%2fposts%2fgeneseeq_mrd%2f&amp;hashtags=MRD">
+            <svg version="1.1" viewBox="0 0 512 512" xml:space="preserve" height="30px" width="30px" fill="currentColor">
+                <path
+                    d="M512 62.554 L 512 449.446 C 512 483.97 483.97 512 449.446 512 L 62.554 512 C 28.03 512 0 483.97 0 449.446 L 0 62.554 C 0 28.03 28.029 0 62.554 0 L 449.446 0 C 483.971 0 512 28.03 512 62.554 Z M 269.951 190.75 L 182.567 75.216 L 56 75.216 L 207.216 272.95 L 63.9 436.783 L 125.266 436.783 L 235.9 310.383 L 332.567 436.783 L 456 436.783 L 298.367 228.367 L 432.367 75.216 L 371.033 75.216 Z M 127.633 110 L 164.101 110 L 383.481 400.065 L 349.5 400.065 Z" />
+            </svg>
+        </a>
+    </li>
+    <li>
+        <a target="_blank" rel="noopener noreferrer" aria-label="share 邵阳对世和MRD的介绍 - MRD的技术创新与应用案例分享 on linkedin"
+            href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https%3a%2f%2fentropydecrease.github.io%2fposts%2fgeneseeq_mrd%2f&amp;title=%e9%82%b5%e9%98%b3%e5%af%b9%e4%b8%96%e5%92%8cMRD%e7%9a%84%e4%bb%8b%e7%bb%8d%20-%20MRD%e7%9a%84%e6%8a%80%e6%9c%af%e5%88%9b%e6%96%b0%e4%b8%8e%e5%ba%94%e7%94%a8%e6%a1%88%e4%be%8b%e5%88%86%e4%ba%ab&amp;summary=%e9%82%b5%e9%98%b3%e5%af%b9%e4%b8%96%e5%92%8cMRD%e7%9a%84%e4%bb%8b%e7%bb%8d%20-%20MRD%e7%9a%84%e6%8a%80%e6%9c%af%e5%88%9b%e6%96%b0%e4%b8%8e%e5%ba%94%e7%94%a8%e6%a1%88%e4%be%8b%e5%88%86%e4%ba%ab&amp;source=https%3a%2f%2fentropydecrease.github.io%2fposts%2fgeneseeq_mrd%2f">
+            <svg version="1.1" viewBox="0 0 512 512" xml:space="preserve" height="30px" width="30px" fill="currentColor">
+                <path
+                    d="M449.446,0c34.525,0 62.554,28.03 62.554,62.554l0,386.892c0,34.524 -28.03,62.554 -62.554,62.554l-386.892,0c-34.524,0 -62.554,-28.03 -62.554,-62.554l0,-386.892c0,-34.524 28.029,-62.554 62.554,-62.554l386.892,0Zm-288.985,423.278l0,-225.717l-75.04,0l0,225.717l75.04,0Zm270.539,0l0,-129.439c0,-69.333 -37.018,-101.586 -86.381,-101.586c-39.804,0 -57.634,21.891 -67.617,37.266l0,-31.958l-75.021,0c0.995,21.181 0,225.717 0,225.717l75.02,0l0,-126.056c0,-6.748 0.486,-13.492 2.474,-18.315c5.414,-13.475 17.767,-27.434 38.494,-27.434c27.135,0 38.007,20.707 38.007,51.037l0,120.768l75.024,0Zm-307.552,-334.556c-25.674,0 -42.448,16.879 -42.448,39.002c0,21.658 16.264,39.002 41.455,39.002l0.484,0c26.165,0 42.452,-17.344 42.452,-39.002c-0.485,-22.092 -16.241,-38.954 -41.943,-39.002Z" />
+            </svg>
+        </a>
+    </li>
+    <li>
+        <a target="_blank" rel="noopener noreferrer" aria-label="share 邵阳对世和MRD的介绍 - MRD的技术创新与应用案例分享 on reddit"
+            href="https://reddit.com/submit?url=https%3a%2f%2fentropydecrease.github.io%2fposts%2fgeneseeq_mrd%2f&title=%e9%82%b5%e9%98%b3%e5%af%b9%e4%b8%96%e5%92%8cMRD%e7%9a%84%e4%bb%8b%e7%bb%8d%20-%20MRD%e7%9a%84%e6%8a%80%e6%9c%af%e5%88%9b%e6%96%b0%e4%b8%8e%e5%ba%94%e7%94%a8%e6%a1%88%e4%be%8b%e5%88%86%e4%ba%ab">
+            <svg version="1.1" viewBox="0 0 512 512" xml:space="preserve" height="30px" width="30px" fill="currentColor">
+                <path
+                    d="M449.446,0c34.525,0 62.554,28.03 62.554,62.554l0,386.892c0,34.524 -28.03,62.554 -62.554,62.554l-386.892,0c-34.524,0 -62.554,-28.03 -62.554,-62.554l0,-386.892c0,-34.524 28.029,-62.554 62.554,-62.554l386.892,0Zm-3.446,265.638c0,-22.964 -18.616,-41.58 -41.58,-41.58c-11.211,0 -21.361,4.457 -28.841,11.666c-28.424,-20.508 -67.586,-33.757 -111.204,-35.278l18.941,-89.121l61.884,13.157c0.756,15.734 13.642,28.29 29.56,28.29c16.407,0 29.706,-13.299 29.706,-29.701c0,-16.403 -13.299,-29.702 -29.706,-29.702c-11.666,0 -21.657,6.792 -26.515,16.578l-69.105,-14.69c-1.922,-0.418 -3.939,-0.042 -5.585,1.036c-1.658,1.073 -2.811,2.761 -3.224,4.686l-21.152,99.438c-44.258,1.228 -84.046,14.494 -112.837,35.232c-7.468,-7.164 -17.589,-11.591 -28.757,-11.591c-22.965,0 -41.585,18.616 -41.585,41.58c0,16.896 10.095,31.41 24.568,37.918c-0.639,4.135 -0.99,8.328 -0.99,12.576c0,63.977 74.469,115.836 166.33,115.836c91.861,0 166.334,-51.859 166.334,-115.836c0,-4.218 -0.347,-8.387 -0.977,-12.493c14.564,-6.47 24.735,-21.034 24.735,-38.001Zm-119.474,108.193c-20.27,20.241 -59.115,21.816 -70.534,21.816c-11.428,0 -50.277,-1.575 -70.522,-21.82c-3.007,-3.008 -3.007,-7.882 0,-10.889c3.003,-2.999 7.882,-3.003 10.885,0c12.777,12.781 40.11,17.317 59.637,17.317c19.522,0 46.86,-4.536 59.657,-17.321c3.016,-2.999 7.886,-2.995 10.885,0.008c3.008,3.011 3.003,7.882 -0.008,10.889Zm-5.23,-48.781c-16.373,0 -29.701,-13.324 -29.701,-29.698c0,-16.381 13.328,-29.714 29.701,-29.714c16.378,0 29.706,13.333 29.706,29.714c0,16.374 -13.328,29.698 -29.706,29.698Zm-160.386,-29.702c0,-16.381 13.328,-29.71 29.714,-29.71c16.369,0 29.689,13.329 29.689,29.71c0,16.373 -13.32,29.693 -29.689,29.693c-16.386,0 -29.714,-13.32 -29.714,-29.693Z" />
+            </svg>
+        </a>
+    </li>
+    <li>
+        <a target="_blank" rel="noopener noreferrer" aria-label="share 邵阳对世和MRD的介绍 - MRD的技术创新与应用案例分享 on facebook"
+            href="https://facebook.com/sharer/sharer.php?u=https%3a%2f%2fentropydecrease.github.io%2fposts%2fgeneseeq_mrd%2f">
+            <svg version="1.1" viewBox="0 0 512 512" xml:space="preserve" height="30px" width="30px" fill="currentColor">
+                <path
+                    d="M449.446,0c34.525,0 62.554,28.03 62.554,62.554l0,386.892c0,34.524 -28.03,62.554 -62.554,62.554l-106.468,0l0,-192.915l66.6,0l12.672,-82.621l-79.272,0l0,-53.617c0,-22.603 11.073,-44.636 46.58,-44.636l36.042,0l0,-70.34c0,0 -32.71,-5.582 -63.982,-5.582c-65.288,0 -107.96,39.569 -107.96,111.204l0,62.971l-72.573,0l0,82.621l72.573,0l0,192.915l-191.104,0c-34.524,0 -62.554,-28.03 -62.554,-62.554l0,-386.892c0,-34.524 28.029,-62.554 62.554,-62.554l386.892,0Z" />
+            </svg>
+        </a>
+    </li>
+    <li>
+        <a target="_blank" rel="noopener noreferrer" aria-label="share 邵阳对世和MRD的介绍 - MRD的技术创新与应用案例分享 on whatsapp"
+            href="https://api.whatsapp.com/send?text=%e9%82%b5%e9%98%b3%e5%af%b9%e4%b8%96%e5%92%8cMRD%e7%9a%84%e4%bb%8b%e7%bb%8d%20-%20MRD%e7%9a%84%e6%8a%80%e6%9c%af%e5%88%9b%e6%96%b0%e4%b8%8e%e5%ba%94%e7%94%a8%e6%a1%88%e4%be%8b%e5%88%86%e4%ba%ab%20-%20https%3a%2f%2fentropydecrease.github.io%2fposts%2fgeneseeq_mrd%2f">
+            <svg version="1.1" viewBox="0 0 512 512" xml:space="preserve" height="30px" width="30px" fill="currentColor">
+                <path
+                    d="M449.446,0c34.525,0 62.554,28.03 62.554,62.554l0,386.892c0,34.524 -28.03,62.554 -62.554,62.554l-386.892,0c-34.524,0 -62.554,-28.03 -62.554,-62.554l0,-386.892c0,-34.524 28.029,-62.554 62.554,-62.554l386.892,0Zm-58.673,127.703c-33.842,-33.881 -78.847,-52.548 -126.798,-52.568c-98.799,0 -179.21,80.405 -179.249,179.234c-0.013,31.593 8.241,62.428 23.927,89.612l-25.429,92.884l95.021,-24.925c26.181,14.28 55.659,21.807 85.658,21.816l0.074,0c98.789,0 179.206,-80.413 179.247,-179.243c0.018,-47.895 -18.61,-92.93 -52.451,-126.81Zm-126.797,275.782l-0.06,0c-26.734,-0.01 -52.954,-7.193 -75.828,-20.767l-5.441,-3.229l-56.386,14.792l15.05,-54.977l-3.542,-5.637c-14.913,-23.72 -22.791,-51.136 -22.779,-79.287c0.033,-82.142 66.867,-148.971 149.046,-148.971c39.793,0.014 77.199,15.531 105.329,43.692c28.128,28.16 43.609,65.592 43.594,105.4c-0.034,82.149 -66.866,148.983 -148.983,148.984Zm81.721,-111.581c-4.479,-2.242 -26.499,-13.075 -30.604,-14.571c-4.105,-1.495 -7.091,-2.241 -10.077,2.241c-2.986,4.483 -11.569,14.572 -14.182,17.562c-2.612,2.988 -5.225,3.364 -9.703,1.12c-4.479,-2.241 -18.91,-6.97 -36.017,-22.23c-13.314,-11.876 -22.304,-26.542 -24.916,-31.026c-2.612,-4.484 -0.279,-6.908 1.963,-9.14c2.016,-2.007 4.48,-5.232 6.719,-7.847c2.24,-2.615 2.986,-4.484 4.479,-7.472c1.493,-2.99 0.747,-5.604 -0.374,-7.846c-1.119,-2.241 -10.077,-24.288 -13.809,-33.256c-3.635,-8.733 -7.327,-7.55 -10.077,-7.688c-2.609,-0.13 -5.598,-0.158 -8.583,-0.158c-2.986,0 -7.839,1.121 -11.944,5.604c-4.105,4.484 -15.675,15.32 -15.675,37.364c0,22.046 16.048,43.342 18.287,46.332c2.24,2.99 31.582,48.227 76.511,67.627c10.685,4.615 19.028,7.371 25.533,9.434c10.728,3.41 20.492,2.929 28.209,1.775c8.605,-1.285 26.499,-10.833 30.231,-21.295c3.732,-10.464 3.732,-19.431 2.612,-21.298c-1.119,-1.869 -4.105,-2.99 -8.583,-5.232Z" />
+            </svg>
+        </a>
+    </li>
+    <li>
+        <a target="_blank" rel="noopener noreferrer" aria-label="share 邵阳对世和MRD的介绍 - MRD的技术创新与应用案例分享 on telegram"
+            href="https://telegram.me/share/url?text=%e9%82%b5%e9%98%b3%e5%af%b9%e4%b8%96%e5%92%8cMRD%e7%9a%84%e4%bb%8b%e7%bb%8d%20-%20MRD%e7%9a%84%e6%8a%80%e6%9c%af%e5%88%9b%e6%96%b0%e4%b8%8e%e5%ba%94%e7%94%a8%e6%a1%88%e4%be%8b%e5%88%86%e4%ba%ab&amp;url=https%3a%2f%2fentropydecrease.github.io%2fposts%2fgeneseeq_mrd%2f">
+            <svg version="1.1" xml:space="preserve" viewBox="2 2 28 28" height="30px" width="30px" fill="currentColor">
+                <path
+                    d="M26.49,29.86H5.5a3.37,3.37,0,0,1-2.47-1,3.35,3.35,0,0,1-1-2.47V5.48A3.36,3.36,0,0,1,3,3,3.37,3.37,0,0,1,5.5,2h21A3.38,3.38,0,0,1,29,3a3.36,3.36,0,0,1,1,2.46V26.37a3.35,3.35,0,0,1-1,2.47A3.38,3.38,0,0,1,26.49,29.86Zm-5.38-6.71a.79.79,0,0,0,.85-.66L24.73,9.24a.55.55,0,0,0-.18-.46.62.62,0,0,0-.41-.17q-.08,0-16.53,6.11a.59.59,0,0,0-.41.59.57.57,0,0,0,.43.52l4,1.24,1.61,4.83a.62.62,0,0,0,.63.43.56.56,0,0,0,.4-.17L16.54,20l4.09,3A.9.9,0,0,0,21.11,23.15ZM13.8,20.71l-1.21-4q8.72-5.55,8.78-5.55c.15,0,.23,0,.23.16a.18.18,0,0,1,0,.06s-2.51,2.3-7.52,6.8Z" />
+            </svg>
+        </a>
+    </li>
+    <li>
+        <a target="_blank" rel="noopener noreferrer" aria-label="share 邵阳对世和MRD的介绍 - MRD的技术创新与应用案例分享 on ycombinator"
+            href="https://news.ycombinator.com/submitlink?t=%e9%82%b5%e9%98%b3%e5%af%b9%e4%b8%96%e5%92%8cMRD%e7%9a%84%e4%bb%8b%e7%bb%8d%20-%20MRD%e7%9a%84%e6%8a%80%e6%9c%af%e5%88%9b%e6%96%b0%e4%b8%8e%e5%ba%94%e7%94%a8%e6%a1%88%e4%be%8b%e5%88%86%e4%ba%ab&u=https%3a%2f%2fentropydecrease.github.io%2fposts%2fgeneseeq_mrd%2f">
+            <svg version="1.1" xml:space="preserve" width="30px" height="30px" viewBox="0 0 512 512" fill="currentColor"
+                xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape">
+                <path
+                    d="M449.446 0C483.971 0 512 28.03 512 62.554L512 449.446C512 483.97 483.97 512 449.446 512L62.554 512C28.03 512 0 483.97 0 449.446L0 62.554C0 28.03 28.029 0 62.554 0L449.446 0ZM183.8767 87.9921H121.8427L230.6673 292.4508V424.0079H281.3328V292.4508L390.1575 87.9921H328.1233L256 238.2489z" />
+            </svg>
+        </a>
+    </li>
+</ul>
+
+  </footer>
+</article>
+    </main>
+    
+<footer class="footer">
+        <span>© [Entropy Decrease]</span> · 
+
+    <span>
+        Powered by
+        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
+        <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>
+    </span>
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+        <path d="M12 6H0l6-6z" />
+    </svg>
+</a>
+
+<script>
+    let menu = document.getElementById('menu')
+    if (menu) {
+        menu.scrollLeft = localStorage.getItem("menu-scroll-position");
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
+</script>
+<script>
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        if (document.body.className.includes("dark")) {
+            document.body.classList.remove('dark');
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            document.body.classList.add('dark');
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+</script>
+<script>
+    document.querySelectorAll('pre > code').forEach((codeblock) => {
+        const container = codeblock.parentNode.parentNode;
+
+        const copybutton = document.createElement('button');
+        copybutton.classList.add('copy-code');
+        copybutton.innerHTML = 'copy';
+
+        function copyingDone() {
+            copybutton.innerHTML = 'copied!';
+            setTimeout(() => {
+                copybutton.innerHTML = 'copy';
+            }, 2000);
+        }
+
+        copybutton.addEventListener('click', (cb) => {
+            if ('clipboard' in navigator) {
+                navigator.clipboard.writeText(codeblock.textContent);
+                copyingDone();
+                return;
+            }
+
+            const range = document.createRange();
+            range.selectNodeContents(codeblock);
+            const selection = window.getSelection();
+            selection.removeAllRanges();
+            selection.addRange(range);
+            try {
+                document.execCommand('copy');
+                copyingDone();
+            } catch (e) { };
+            selection.removeRange(range);
+        });
+
+        if (container.classList.contains("highlight")) {
+            container.appendChild(copybutton);
+        } else if (container.parentNode.firstChild == container) {
+            
+        } else if (codeblock.parentNode.parentNode.parentNode.parentNode.parentNode.nodeName == "TABLE") {
+            
+            codeblock.parentNode.parentNode.parentNode.parentNode.parentNode.appendChild(copybutton);
+        } else {
+            
+            codeblock.parentNode.appendChild(copybutton);
+        }
+    });
+</script>
+</body>
+
+</html>
