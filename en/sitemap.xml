@@ -3,7 +3,7 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://entropydecrease.github.io/categories/</loc>
-    <lastmod>2024-10-16T00:00:00+00:00</lastmod>
+    <lastmod>2025-08-02T16:27:18+08:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-CN"
@@ -26,12 +26,59 @@
                 />
   </url><url>
     <loc>https://entropydecrease.github.io/posts/</loc>
-    <lastmod>2024-10-16T00:00:00+00:00</lastmod>
+    <lastmod>2025-08-02T16:27:18+08:00</lastmod>
   </url><url>
-    <loc>https://entropydecrease.github.io/posts/%E6%80%92%E7%9B%AE%E5%B0%91%E5%B9%B4-%E7%8E%8B%E9%BC%8E%E9%92%A7/</loc>
-    <lastmod>2024-10-16T00:00:00+00:00</lastmod>
+    <loc>https://entropydecrease.github.io/tags/</loc>
+    <lastmod>2025-08-02T16:27:18+08:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh-CN"
+                href="https://entropydecrease.github.io/zh-cn/tags/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="ja-JP"
+                href="https://entropydecrease.github.io/ja/tags/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="fr-FR"
+                href="https://entropydecrease.github.io/fr/tags/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en-US"
+                href="https://entropydecrease.github.io/tags/"
+                />
+  </url><url>
+    <loc>https://entropydecrease.github.io/tags/%E4%BA%BA%E7%89%A9/</loc>
+    <lastmod>2025-08-02T16:27:18+08:00</lastmod>
+  </url><url>
+    <loc>https://entropydecrease.github.io/categories/%E5%8E%86%E5%8F%B2/</loc>
+    <lastmod>2025-08-02T16:27:18+08:00</lastmod>
+  </url><url>
+    <loc>https://entropydecrease.github.io/posts/438cc9c/</loc>
+    <lastmod>2025-08-02T16:27:18+08:00</lastmod>
   </url><url>
     <loc>https://entropydecrease.github.io/categories/%E8%AF%BB%E4%B9%A6/</loc>
+    <lastmod>2025-08-02T16:27:18+08:00</lastmod>
+  </url><url>
+    <loc>https://entropydecrease.github.io/tags/programming/</loc>
+    <lastmod>2025-05-02T16:22:45+08:00</lastmod>
+  </url><url>
+    <loc>https://entropydecrease.github.io/categories/%E5%B7%A5%E5%85%B7/</loc>
+    <lastmod>2025-05-02T16:22:45+08:00</lastmod>
+  </url><url>
+    <loc>https://entropydecrease.github.io/posts/c98f443/</loc>
+    <lastmod>2025-05-02T16:22:45+08:00</lastmod>
+  </url><url>
+    <loc>https://entropydecrease.github.io/posts/%E9%87%91%E9%92%B1%E5%8D%9A%E5%BC%88-%E5%8D%95%E4%BC%9F%E5%BB%BA/</loc>
+    <lastmod>2025-05-01T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://entropydecrease.github.io/posts/%E5%85%B3%E5%B1%B1%E5%A4%BA%E8%B7%AF-%E7%8E%8B%E9%BC%8E%E9%92%A7/</loc>
+    <lastmod>2024-11-16T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://entropydecrease.github.io/posts/%E6%80%92%E7%9B%AE%E5%B0%91%E5%B9%B4-%E7%8E%8B%E9%BC%8E%E9%92%A7/</loc>
     <lastmod>2024-10-16T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://entropydecrease.github.io/posts/%E6%88%91%E7%9A%84%E6%83%85%E6%8A%A5%E4%B8%8E%E5%A4%96%E4%BA%A4%E7%94%9F%E6%B6%AF/</loc>
@@ -129,29 +176,6 @@
     <loc>https://entropydecrease.github.io/tags/bioinf/</loc>
     <lastmod>2023-12-04T16:46:43+00:00</lastmod>
   </url><url>
-    <loc>https://entropydecrease.github.io/tags/</loc>
-    <lastmod>2023-12-04T16:46:43+00:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="zh-CN"
-                href="https://entropydecrease.github.io/zh-cn/tags/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="ja-JP"
-                href="https://entropydecrease.github.io/ja/tags/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="fr-FR"
-                href="https://entropydecrease.github.io/fr/tags/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en-US"
-                href="https://entropydecrease.github.io/tags/"
-                />
-  </url><url>
     <loc>https://entropydecrease.github.io/posts/5steps2fortune/</loc>
     <lastmod>2023-12-03T16:42:53+00:00</lastmod>
   </url><url>
@@ -174,9 +198,6 @@
     <lastmod>2023-10-29T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://entropydecrease.github.io/posts/%E4%BD%BF%E7%94%A8loveit%E4%BD%9C%E4%B8%BAhugo%E7%9A%84%E4%B8%BB%E9%A2%98/</loc>
-    <lastmod>2023-10-04T13:39:45+08:00</lastmod>
-  </url><url>
-    <loc>https://entropydecrease.github.io/categories/%E5%B7%A5%E5%85%B7/</loc>
     <lastmod>2023-10-04T13:39:45+08:00</lastmod>
   </url><url>
     <loc>https://entropydecrease.github.io/posts/use-rclone-to-replace-sshfs-on-mac/</loc>
