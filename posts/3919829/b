@@ -1,0 +1,149 @@
+ExifTool Version Number         : 13.36
+File Name                       : IMG_1576.HEIC_original
+Directory                       : .
+File Size                       : 2.2 MB
+File Modification Date/Time     : 2025:09:14 21:44:39+08:00
+File Access Date/Time           : 2025:09:14 21:46:54+08:00
+File Inode Change Date/Time     : 2025:09:14 22:03:35+08:00
+File Permissions                : -rw-r--r--
+File Type                       : HEIC
+File Type Extension             : heic
+MIME Type                       : image/heic
+Major Brand                     : High Efficiency Image Format HEVC still image (.HEIC)
+Minor Version                   : 0.0.0
+Compatible Brands               : mif1, MiHE, MiPr, miaf, MiHB, heic
+Handler Type                    : Picture
+Primary Item Reference          : 49
+Meta Image Size                 : 4032x3024
+XMP Toolkit                     : XMP Core 6.0.0
+HDR Gain Map Version            : 0.1.0.0
+Exif Byte Order                 : Big-endian (Motorola, MM)
+Make                            : Apple
+Camera Model Name               : iPhone 14
+Orientation                     : Horizontal (normal)
+X Resolution                    : 72
+Y Resolution                    : 72
+Resolution Unit                 : inches
+Software                        : 16.4.1
+Modify Date                     : 2023:05:10 09:31:16
+Host Computer                   : iPhone 14
+Exposure Time                   : 1/327
+F Number                        : 2.4
+Exposure Program                : Program AE
+ISO                             : 32
+Exif Version                    : 0232
+Date/Time Original              : 2023:05:10 09:31:16
+Create Date                     : 2023:05:10 09:31:16
+Offset Time                     : +08:00
+Offset Time Original            : +08:00
+Offset Time Digitized           : +08:00
+Shutter Speed Value             : 1/327
+Aperture Value                  : 2.4
+Brightness Value                : 8.246464349
+Exposure Compensation           : 0
+Metering Mode                   : Multi-segment
+Flash                           : Off, Did not fire
+Focal Length                    : 1.5 mm
+Subject Area                    : 2016 1512 2322 1330
+Maker Note Version              : 14
+Run Time Flags                  : Valid
+Run Time Value                  : 768063154156166
+Run Time Scale                  : 1000000000
+Run Time Epoch                  : 0
+AE Stable                       : Yes
+AE Target                       : 185
+AE Average                      : 214
+AF Stable                       : Yes
+Acceleration Vector             : -0.9242519137 0.02387363836 0.3783589004
+Content Identifier              : 706AFE51-685C-4467-9D7B-589B787F1E5D
+Image Capture Type              : Scene
+Live Photo Video Index          : 5283844
+Photos App Feature Flags        : 0
+HDR Headroom                    : 1.23682034
+Signal To Noise Ratio           : 34.10114672
+Photo Identifier                : 994898AA-EE6B-41CA-83ED-B7C95287288A
+Color Temperature               : 5290
+Camera Type                     : Back Wide Angle
+Focus Position                  : 0
+HDR Gain                        : 0
+Semantic Style                  : {_0=1,_1=0,_2=0,_3=0}
+Sub Sec Time Original           : 233
+Sub Sec Time Digitized          : 233
+Color Space                     : Uncalibrated
+Exif Image Width                : 4032
+Exif Image Height               : 3024
+Sensing Method                  : One-chip color area
+Scene Type                      : Directly photographed
+Exposure Mode                   : Auto
+White Balance                   : Auto
+Digital Zoom Ratio              : 1.037748799
+Focal Length In 35mm Format     : 14 mm
+Lens Info                       : 1.54-5.699999809mm f/1.5-2.4
+Lens Make                       : Apple
+Lens Model                      : iPhone 14 back dual wide camera 1.54mm f/2.4
+Composite Image                 : General Composite Image
+Profile CMM Type                : Apple Computer Inc.
+Profile Version                 : 4.0.0
+Profile Class                   : Display Device Profile
+Color Space Data                : RGB
+Profile Connection Space        : XYZ
+Profile Date Time               : 2022:01:01 00:00:00
+Profile File Signature          : acsp
+Primary Platform                : Apple Computer Inc.
+CMM Flags                       : Not Embedded, Independent
+Device Manufacturer             : Apple Computer Inc.
+Device Model                    : 
+Device Attributes               : Reflective, Glossy, Positive, Color
+Rendering Intent                : Perceptual
+Connection Space Illuminant     : 0.9642 1 0.82491
+Profile Creator                 : Apple Computer Inc.
+Profile ID                      : ecfda38e388547c36db4bd4f7ada182f
+Profile Description             : Display P3
+Profile Copyright               : Copyright Apple Inc., 2022
+Media White Point               : 0.96419 1 0.82489
+Red Matrix Column               : 0.51512 0.2412 -0.00105
+Green Matrix Column             : 0.29198 0.69225 0.04189
+Blue Matrix Column              : 0.1571 0.06657 0.78407
+Red Tone Reproduction Curve     : (Binary data 32 bytes, use -b option to extract)
+Chromatic Adaptation            : 1.04788 0.02292 -0.0502 0.02959 0.99048 -0.01706 -0.00923 0.01508 0.75168
+Blue Tone Reproduction Curve    : (Binary data 32 bytes, use -b option to extract)
+Green Tone Reproduction Curve   : (Binary data 32 bytes, use -b option to extract)
+HEVC Configuration Version      : 1
+General Profile Space           : Conforming
+General Tier Flag               : Main Tier
+General Profile IDC             : Main Still Picture
+Gen Profile Compatibility Flags : Main Still Picture, Main 10, Main
+Constraint Indicator Flags      : 176 0 0 0 0 0
+General Level IDC               : 90 (level 3.0)
+Min Spatial Segmentation IDC    : 0
+Parallelism Type                : 0
+Chroma Format                   : 4:2:0
+Bit Depth Luma                  : 8
+Bit Depth Chroma                : 8
+Average Frame Rate              : 0
+Constant Frame Rate             : Unknown
+Num Temporal Layers             : 1
+Temporal ID Nested              : No
+Image Width                     : 4032
+Image Height                    : 3024
+Image Spatial Extent            : 4032x3024
+Rotation                        : Horizontal (normal)
+Image Pixel Depth               : 8 8 8
+Auxiliary Image Type            : urn:com:apple:photo:2020:aux:hdrgainmap
+Media Data Size                 : 2151487
+Media Data Offset               : 3752
+Run Time Since Power Up         : 8 days 21:21:03
+Aperture                        : 2.4
+Image Size                      : 4032x3024
+Megapixels                      : 12.2
+Scale Factor To 35 mm Equivalent: 9.1
+Shutter Speed                   : 1/327
+Create Date                     : 2023:05:10 09:31:16.233+08:00
+Date/Time Original              : 2023:05:10 09:31:16.233+08:00
+Modify Date                     : 2023:05:10 09:31:16+08:00
+Circle Of Confusion             : 0.003 mm
+Field Of View                   : 104.3 deg
+Focal Length                    : 1.5 mm (35 mm equivalent: 14.0 mm)
+Hyperfocal Distance             : 0.30 m
+Light Value                     : 12.5
+Lens ID                         : iPhone 14 back dual wide camera 1.54mm f/2.4
