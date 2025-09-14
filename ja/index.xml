@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>ホーム on Entropy Decrease</title>
+    <link>https://entropydecrease.github.io/ja/</link>
+    <description>Recent content in ホーム on Entropy Decrease</description>
+    <generator>Hugo</generator>
+    <language>ja-JP</language>
+    <lastBuildDate>Mon, 01 Jan 2024 00:00:00 +0800</lastBuildDate>
+    <atom:link href="https://entropydecrease.github.io/ja/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>について</title>
+      <link>https://entropydecrease.github.io/ja/about/</link>
+      <pubDate>Mon, 01 Jan 2024 00:00:00 +0800</pubDate>
+      <guid>https://entropydecrease.github.io/ja/about/</guid>
+      <description>Hugo Narrow テーマとその技術スタックについて</description>
+    </item>
+  </channel>
+</rss>

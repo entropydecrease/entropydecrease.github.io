@@ -1,106 +1,19 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Database on Entropy Decrease</title>
     <link>https://entropydecrease.github.io/tags/database/</link>
     <description>Recent content in Database on Entropy Decrease</description>
-    <generator>Hugo -- 0.135.0</generator>
-    <language>en</language>
+    <generator>Hugo</generator>
+    <language>en-US</language>
     <lastBuildDate>Sun, 01 May 2022 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://entropydecrease.github.io/tags/database/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>生成af only的gnomad vcf文件</title>
-      <link>https://entropydecrease.github.io/2022_05_01-af_only_gnomad/</link>
+      <link>https://entropydecrease.github.io/posts/gnome_af_only/</link>
       <pubDate>Sun, 01 May 2022 00:00:00 +0000</pubDate>
-      <guid>https://entropydecrease.github.io/2022_05_01-af_only_gnomad/</guid>
-      <description>&lt;p&gt;gnomAD VCF 文件(af-only-gnomad.hg38.vcf.gz)太大了，超过200G，对于GATK来说，只需要用里面的‘AF’信息就够了，所以将多余信息删掉可以极大节省空间和时间。&lt;/p&gt;
-&lt;p&gt;gatk 用来生成用于Mutect2的 &lt;code&gt;af-only-gnomad.hg38.vcf.gz&lt;/code&gt; 的程序：&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;https://github.com/broadinstitute/gatk/blob/master/scripts/mutect2_wdl/mutect_resources.wdl
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;相关部分code：&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;# clear ID and QUAL fields and delete all INFO fields other than AF
-# note that input must be a plain-text vcf, not a vcf.gz.
-# this task re-indexes and compresses the output vcf
-task MakeAlleleFrequencyOnlyVcf {
-
-    # ------------------------------------------------
-    # Input args:
-    File input_vcf
-    String output_name
-
-    File? gatk_override
-
-    # Runtime Options:
-    String gatk_docker
-    Int? mem
-    Int? preemptible_attempts
-    Int? disk_space
-    Int? cpu
-
-    # ------------------------------------------------
-    # Get machine settings:
-    Boolean use_ssd = false
-
-    # You may have to change the following two parameter values depending on the task requirements
-    Int default_ram_mb = 3 * 1024
-    # WARNING: In the workflow, you should calculate the disk space as an input to this task (disk_space_gb).  Please see [TODO: Link from Jose] for examples.
-    Int default_disk_space_gb = 100
-
-    Int default_boot_disk_size_gb = 15
-
-    # Mem is in units of GB but our command and memory runtime values are in MB
-    Int machine_mem = if defined(mem) then mem * 1024 else default_ram_mb
-    Int command_mem = machine_mem - 1024
-
-    # ------------------------------------------------
-    # Run our command:
-    command {
-        set -e
-        export GATK_LOCAL_JAR=${default=&amp;quot;/root/gatk.jar&amp;quot; gatk_override}
-
-        # Save off the header for later:
-        grep &#39;^#&#39; ${input_vcf} &amp;gt; header &amp;amp;
-
-        # Get all lines in the file except the header:
-        # Preserve all fields before INFO, Grab only the AF annotation from the INFO Field
-        # replace ID (3rd) and QUAL (6th) columns with &#39;.&#39; (empty):
-        grep -v &amp;quot;^#&amp;quot; ${input_vcf} | sed -e &#39;s#\(.*\)\t\(.*\)\t\(.*\)\t\(.*\)\t\(.*\)\t\(.*\)\t\(.*\)\t.*;AF=\([0-9]*\.[e0-9+-]*\).*#\1\t\2\t.\t\4\t\5\t.\t\7\tAF=\8#g&#39; &amp;gt; simplified_body &amp;amp;
-
-        # Wait for background processes to finish:
-        wait
-
-        # Consolidate files:
-        cat header simplified_body &amp;gt; simplified.vcf
-
-        # Zip the VCF:
-        bgzip simplified.vcf -O ${output_name}.vcf.gz
-
-        # Index output file:
-        gatk --java-options &amp;quot;-Xmx${command_mem}g&amp;quot; IndexFeatureFile -F ${output_name}.vcf.gz
-
-        # Cleanup:
-        rm -f header body simplified_info simplified_body simplified.vcf simplified.vcf.idx
-    }
-
-    # ------------------------------------------------
-    # Runtime settings:
-    runtime {
-        docker: gatk_docker
-        memory: machine_mem + &amp;quot; GB&amp;quot;
-        disks: &amp;quot;local-disk &amp;quot; + select_first([disk_space, 100]) + if use_ssd then &amp;quot; SSD&amp;quot; else &amp;quot; HDD&amp;quot;
-        preemptible: select_first([preemptible_attempts, 3])
-        cpu: select_first([cpu, 1])
-    }
-
-    # ------------------------------------------------
-    # Outputs:
-    output {
-        File output_vcf = &amp;quot;${output_name}.vcf.gz&amp;quot;
-        File output_vcf_idx = &amp;quot;${output_name}.vcf.gz.tbi&amp;quot;
-    }
-}
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;但是GATK的方法太慢了，所以我写了如下的脚本：&lt;/p&gt;</description>
+      <guid>https://entropydecrease.github.io/posts/gnome_af_only/</guid>
+      <description>&lt;p&gt;gnomAD VCF 文件(af-only-gnomad.hg38.vcf.gz)太大了，超过200G，对于GATK来说，只需要用里面的‘AF’信息就够了，所以将多余信息删掉可以极大节省空间和时间。&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

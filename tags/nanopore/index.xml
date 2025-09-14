@@ -1,167 +1,26 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Nanopore on Entropy Decrease</title>
     <link>https://entropydecrease.github.io/tags/nanopore/</link>
     <description>Recent content in Nanopore on Entropy Decrease</description>
-    <generator>Hugo -- 0.135.0</generator>
-    <language>en</language>
+    <generator>Hugo</generator>
+    <language>en-US</language>
     <lastBuildDate>Sat, 08 Apr 2023 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://entropydecrease.github.io/tags/nanopore/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>图解三代测序（Nanopore） (转载作为备份)</title>
-      <link>https://entropydecrease.github.io/2023_04_08-ont_basics/</link>
+      <link>https://entropydecrease.github.io/posts/ont_basics/</link>
       <pubDate>Sat, 08 Apr 2023 00:00:00 +0000</pubDate>
-      <guid>https://entropydecrease.github.io/2023_04_08-ont_basics/</guid>
-      <description>&lt;p&gt;转载自 &lt;a href=&#34;https://www.cnblogs.com/baimoc/p/14700618.html&#34;&gt;baimoc - 博客园&lt;/a&gt;&lt;/p&gt;
-&lt;hr&gt;
-&lt;h2 id=&#34;一测序原理&#34;&gt;一、测序原理&lt;/h2&gt;
-&lt;p&gt;先介绍 Nanopore 测序中的几位主角：&lt;/p&gt;
-&lt;p&gt;&lt;code&gt;Reader&lt;/code&gt; ：在自然界中，有一种可以嵌入到细胞膜中作为离子或分子通道的跨膜蛋白，具有天然的蛋白纳米孔。经过人为基因工程修饰后，得到的就是 Nanopore 测序所需的 Reader 蛋白。&lt;br&gt;
-&lt;a href=&#34;https://img-blog.csdnimg.cn/img_convert/13bd67376e79c80ad0cd229ccd2cd7f2.png&#34;&gt;&lt;img loading=&#34;lazy&#34; src=&#34;resources/13bd67376e79c80ad0cd229ccd2cd7f2.png&#34; alt=&#34;mark&#34;  /&gt;
-&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;code&gt;Membrane&lt;/code&gt;：Reader 蛋白会被嵌入到高电阻率的 Membrane （人工合成的多聚物膜），膜两侧是离子溶液，在两侧加不同的电位，离子就会在孔中流动，形成电流。&lt;br&gt;
-&lt;a href=&#34;https://img-blog.csdnimg.cn/img_convert/3c152908c2aa9337541c5bfd71ad4634.png&#34;&gt;&lt;img loading=&#34;lazy&#34; src=&#34;resources/3c152908c2aa9337541c5bfd71ad4634.png&#34; alt=&#34;mark&#34;  /&gt;
-&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;code&gt;Motor&lt;/code&gt;：在 Nanopore 文库构建时，需要在接头上连接一种动力蛋白，用于将DNA或RNA分子推入纳米孔中。以DNA解螺旋酶作为 Motor（动力蛋白）为例，它可以除了可以解开双螺旋，使之变为单链，还可以提供推动力。&lt;br&gt;
-&lt;a href=&#34;https://img-blog.csdnimg.cn/img_convert/1c83b72bf3b63bf684bd33ea315e9b63.png&#34;&gt;&lt;img loading=&#34;lazy&#34; src=&#34;resources/1c83b72bf3b63bf684bd33ea315e9b63.png&#34; alt=&#34;mark&#34;  /&gt;
-&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;code&gt;Tether&lt;/code&gt;：该蛋白用于锚定DNA或RNA链，防止在溶液中飘动，并使其进入纳米孔中。&lt;a href=&#34;https://img-blog.csdnimg.cn/img_convert/93972d0bac466454e840b0bfb9d4bd62.gif&#34;&gt;&lt;img loading=&#34;lazy&#34; src=&#34;resources/93972d0bac466454e840b0bfb9d4bd62.gif&#34; alt=&#34;mark&#34;  /&gt;
-&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;这时，解开的其中一条链会穿过蛋白质孔，它在通过蛋白孔时，会对膜两边离子的稳定流动产生扰动。不同的碱基，对离子流的影响不同，也就会产生不同的电流大小，进而形成下面的电流信号图。&lt;br&gt;
-&lt;a href=&#34;https://img-blog.csdnimg.cn/img_convert/64a99d9eb756528ef0029112e086b2e3.png&#34;&gt;&lt;img loading=&#34;lazy&#34; src=&#34;resources/64a99d9eb756528ef0029112e086b2e3.png&#34; alt=&#34;mark&#34;  /&gt;
-&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;利用这些电流信号，使用计算机软件识别后，推断出碱基类型，完成测序。&lt;/p&gt;
-&lt;h2 id=&#34;二测序仪介绍&#34;&gt;二、测序仪介绍&lt;/h2&gt;
-&lt;p&gt;虽然 Nanopore 测序仪种类很多，但都是基于Nanopore芯片来搭建的平台，大到由多个芯片阵列组成的PromehION，GridION系列测序仪，小到可以连接手机的Type C，电脑USB的MnION系列便携式测序仪。&lt;br&gt;
-&lt;a href=&#34;https://img-blog.csdnimg.cn/img_convert/0eb06842f1ff24be0b11f4dacc1a1d1c.png&#34;&gt;&lt;img loading=&#34;lazy&#34; src=&#34;resources/0eb06842f1ff24be0b11f4dacc1a1d1c.png&#34; alt=&#34;mark&#34;  /&gt;
-&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;这里边，最著名的就是MnION系列，2016年8月，美国宇航员凯特·鲁宾斯在国际空间站完成微重力条件的DNA测序。&lt;/p&gt;
-&lt;p&gt;它在测序时，一般像下图这样连接就行，显而易见的便携性。比如，可以直接用它在深入疫区采集样本后进行实时分析，为防疫工作争取大量宝贵的时间和资源。&lt;br&gt;
-&lt;a href=&#34;https://img-blog.csdnimg.cn/img_convert/5de01c91560c9ecc6f3e5199a9478c37.png&#34;&gt;&lt;img loading=&#34;lazy&#34; src=&#34;resources/5de01c91560c9ecc6f3e5199a9478c37.png&#34; alt=&#34;mark&#34;  /&gt;
-&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;测序时，将制备好的文库或样本溶液，滴在芯片小孔中，开始测序。&lt;br&gt;
-&lt;a href=&#34;https://img-blog.csdnimg.cn/img_convert/81c46d5fb50f960a7fa671cb74760736.png&#34;&gt;&lt;img loading=&#34;lazy&#34; src=&#34;resources/81c46d5fb50f960a7fa671cb74760736.png&#34; alt=&#34;mark&#34;  /&gt;
-&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;一张芯片中有 2048 个 membrane wells，也就是芯片上的一个孔，每个孔包含一个nanopore Reader。&lt;br&gt;
-&lt;a href=&#34;https://img-blog.csdnimg.cn/img_convert/a1ea845ba325d4bccf113f53179fdcb4.png&#34;&gt;&lt;img loading=&#34;lazy&#34; src=&#34;resources/a1ea845ba325d4bccf113f53179fdcb4.png&#34; alt=&#34;mark&#34;  /&gt;
-&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;每四个 wells 共享一个 Amplifier（信号放大器），一张芯片中有 512 个信号放大器，也就是 512 组 wells。&lt;br&gt;
-&lt;a href=&#34;https://img-blog.csdnimg.cn/img_convert/676ad237805e85956a821422ea95ae55.png&#34;&gt;&lt;img loading=&#34;lazy&#34; src=&#34;resources/676ad237805e85956a821422ea95ae55.png&#34; alt=&#34;mark&#34;  /&gt;
-&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;在启动测序仪后，机器自检，会将每组 wells 中依据效率高低排序。测序开始，仪器先用每组 wells 中效率最高的 wells，运行 8 小时后，更换效率第二的，以此类推。&lt;/p&gt;
-&lt;p&gt;但是，在实际使用过程中，只有 1200 个 wells可以正常工作。&lt;/p&gt;
-&lt;p&gt;造成 wells 失效的原因：&lt;/p&gt;</description>
+      <guid>https://entropydecrease.github.io/posts/ont_basics/</guid>
+      <description>&lt;p&gt;转载自 &lt;a href=&#34;https://www.cnblogs.com/baimoc/p/14700618.html&#34;target=&#34;_blank&#34;&#xA;  class=&#34;relative inline-flex items-center&#34;&#xA;&gt;baimoc - 博客园&#xA;  &lt;svg id=&#34;external-link&#34; class=&#34;h-3 w-3 ml-1 absolute top-0 right-0 transform translate-x-2/5 -translate-y-1/3&#34;&#xA;    fill=&#34;none&#34;&#xA;    stroke=&#34;currentColor&#34;&#xA;    viewBox=&#34;0 0 24 24&#34;&gt;&lt;path fill=&#34;none&#34; stroke=&#34;currentColor&#34; stroke-linecap=&#34;round&#34; stroke-linejoin=&#34;round&#34; stroke-width=&#34;2&#34; d=&#34;M15 3h6v6m-11 5L21 3m-3 10v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6&#34;/&gt;&lt;/svg&gt;&#xA;&lt;/a&gt;&lt;/p&gt;&#xA;&lt;hr&gt;&#xA;&lt;h2 id=&#34;一测序原理&#34;&gt;一、测序原理&lt;/h2&gt;&#xA;&lt;p&gt;先介绍 Nanopore 测序中的几位主角：&lt;/p&gt;&#xA;&lt;p&gt;&lt;code&gt;Reader&lt;/code&gt; ：在自然界中，有一种可以嵌入到细胞膜中作为离子或分子通道的跨膜蛋白，具有天然的蛋白纳米孔。经过人为基因工程修饰后，得到的就是 Nanopore 测序所需的 Reader 蛋白。&lt;br&gt;&#xA;&lt;a href=&#34;https://img-blog.csdnimg.cn/img_convert/13bd67376e79c80ad0cd229ccd2cd7f2.png&#34;target=&#34;_blank&#34;&#xA;  class=&#34;relative inline-flex items-center&#34;&#xA;&gt;&#xA;&lt;figure class=&#34;image-figure not-prose my-8&#34; &#xA;        data-lightbox-enabled=&#34;false&#34;&#xA;        data-gallery-type=&#34;auto&#34;&gt;&#xA;  &lt;div class=&#34;image-container&#34;&gt;&#xA;    &lt;img&#xA;    src=&#34;https://entropydecrease.github.io/posts/ont_basics/resources/13bd67376e79c80ad0cd229ccd2cd7f2.png&#34;&#xA;    alt=&#34;mark&#34;&#xA;    &#xA;    &#xA;      &#xA;      &#xA;        &#xA;    width=&#34;517&#34;&#xA;    height=&#34;274&#34;&#xA;        &#xA;      &#xA;    &#xA;    loading=&#34;lazy&#34;&#xA;    decoding=&#34;async&#34;&#xA;    data-gallery-src=&#34;https://entropydecrease.github.io/posts/ont_basics/resources/13bd67376e79c80ad0cd229ccd2cd7f2.png&#34;&#xA;    data-gallery-alt=&#34;mark&#34;&#xA;    data-gallery-title=&#34;&#34; /&gt;&lt;/div&gt;&#xA;&#xA;  &lt;/figure&gt;&#xA;  &lt;svg id=&#34;external-link&#34; class=&#34;h-3 w-3 ml-1 absolute top-0 right-0 transform translate-x-2/5 -translate-y-1/3&#34;&#xA;    fill=&#34;none&#34;&#xA;    stroke=&#34;currentColor&#34;&#xA;    viewBox=&#34;0 0 24 24&#34;&gt;&lt;path fill=&#34;none&#34; stroke=&#34;currentColor&#34; stroke-linecap=&#34;round&#34; stroke-linejoin=&#34;round&#34; stroke-width=&#34;2&#34; d=&#34;M15 3h6v6m-11 5L21 3m-3 10v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6&#34;/&gt;&lt;/svg&gt;&#xA;&lt;/a&gt;&lt;/p&gt;</description>
     </item>
     <item>
       <title>ONT相关的一些笔记</title>
-      <link>https://entropydecrease.github.io/2023_04_01-ont_training_notes/</link>
+      <link>https://entropydecrease.github.io/posts/ont_notes/</link>
       <pubDate>Sat, 01 Apr 2023 00:00:00 +0000</pubDate>
-      <guid>https://entropydecrease.github.io/2023_04_01-ont_training_notes/</guid>
-      <description>&lt;h2 id=&#34;准确度&#34;&gt;准确度&lt;/h2&gt;
-&lt;p&gt;Kit V14 + R10.4.1&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;simplex: 99.6%, Q24&lt;/li&gt;
-&lt;li&gt;duplex: 99.92%, Q31&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&#34;duplex&#34;&gt;duplex&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;一个双链文库分子，两端都有motor protein（马达蛋白）。一端的马达蛋白牵引双链文库靠近纳米孔，并解开双链让其中一条单链进入纳米孔，在其完全进入纳米孔之后，文库另外一端的马达蛋白有可能会牵引文库另外一头直接以单链的形式（无需解链）进入纳米孔（此时也有可能是其他的片段进入纳米孔测序）。这样测得的序列是一条原始分子的正负链都被测到了，所以叫duplex，可以提高测序精度。&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;duplex不是通过新的试剂，只是protocol，让互补链紧跟着正义链过同一个孔而已，有一些reads是duplex，也有很多是simplex。
-据说最新的试剂，可以将duplex reads的比例提高到70%。&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;duplex的精度与长度相互独立&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;测indel要60x才比较准。&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&#34;misc&#34;&gt;misc&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;低覆盖度，1x也可以测CNV&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&#34;泛基因组&#34;&gt;泛基因组&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;泛基因组用ONT组装，只看SV或NSR的话，20x覆盖度够用。但是要看单碱基分辨率的SNV/indel，学校研究人员认为需要用NGS数据做polish.&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;学校研究人员提到长的sv假阳性非常高，他们把5M 以上inv和2M 以上indel都过滤掉了，我也是有点无语，做临床检测的话，这些才是更容易致病的。。。。&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;ONT公司认为泛基因组的组装，SV所需数据量较小，SNV用40x够了，homopolymer处的indel，可以用60x的duplex测序来解决。但是他们一般推荐40x，因为一个芯片标准的测序量是120G，刚好是40x的覆盖度。&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&#34;植物多倍体&#34;&gt;植物多倍体&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;组装多倍体比较难，ONT单独无法完成，一般是结合PacBio HiFi，Hi-C和OGM也常用。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&#34;适应性采样&#34;&gt;适应性采样&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;NGS短板：读长短，修饰信息丢失&lt;/li&gt;
-&lt;li&gt;大量宿主DNA给mNGS带来挑战，唾液中加入PMA，可显著减少人源DNA&lt;/li&gt;
-&lt;li&gt;三代测序因序列较长，更容易将耐药基因归属至菌种。&lt;/li&gt;
-&lt;li&gt;NGS的扩增可能产生偏向性（bias），三代测序无扩增，可避免此类偏向性。&lt;/li&gt;
-&lt;li&gt;适应性采样，提供人类基因组的bed文件，碰到可以匹配到ren基因组的序列，就弹出。&lt;/li&gt;
-&lt;li&gt;适应性采样，可提高病原序列比例，且显著提高病原体达到30x覆盖度的速度（4h vs 常规12h）。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&#34;文件格式&#34;&gt;文件格式&lt;/h2&gt;
-&lt;h3 id=&#34;fast5&#34;&gt;Fast5&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;ONT现在的默认格式，未来会被POD替代。&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;采样频率4k Hz == 4000次/秒，碱基的过孔速度 ~400bp/s，相当于每个碱基过孔的时间内有10次的采样。&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;数据量与文件大小&lt;/p&gt;
-&lt;table&gt;
-  &lt;thead&gt;
-      &lt;tr&gt;
-          &lt;th style=&#34;text-align: left&#34;&gt;数据量&lt;/th&gt;
-          &lt;th style=&#34;text-align: left&#34;&gt;Fast5文件大小&lt;/th&gt;
-          &lt;th style=&#34;text-align: left&#34;&gt;Pod5文件大小&lt;/th&gt;
-      &lt;/tr&gt;
-  &lt;/thead&gt;
-  &lt;tbody&gt;
-      &lt;tr&gt;
-          &lt;td style=&#34;text-align: left&#34;&gt;1G bp&lt;/td&gt;
-          &lt;td style=&#34;text-align: left&#34;&gt;6G Byte&lt;/td&gt;
-          &lt;td style=&#34;text-align: left&#34;&gt;0.5G Byte&lt;/td&gt;
-      &lt;/tr&gt;
-      &lt;tr&gt;
-          &lt;td style=&#34;text-align: left&#34;&gt;10G bp&lt;/td&gt;
-          &lt;td style=&#34;text-align: left&#34;&gt;60 GB&lt;/td&gt;
-          &lt;td style=&#34;text-align: left&#34;&gt;5 GB&lt;/td&gt;
-      &lt;/tr&gt;
-      &lt;tr&gt;
-          &lt;td style=&#34;text-align: left&#34;&gt;30G bp&lt;/td&gt;
-          &lt;td style=&#34;text-align: left&#34;&gt;180 GB&lt;/td&gt;
-          &lt;td style=&#34;text-align: left&#34;&gt;15 GB&lt;/td&gt;
-      &lt;/tr&gt;
-      &lt;tr&gt;
-          &lt;td style=&#34;text-align: left&#34;&gt;90G bp&lt;/td&gt;
-          &lt;td style=&#34;text-align: left&#34;&gt;540 GB&lt;/td&gt;
-          &lt;td style=&#34;text-align: left&#34;&gt;45 GB&lt;/td&gt;
-      &lt;/tr&gt;
-  &lt;/tbody&gt;
-&lt;/table&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3 id=&#34;pod5格式&#34;&gt;Pod5格式&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;替代Fast5，后续会作为默认文件格式&lt;/li&gt;
-&lt;li&gt;MinKnow机器集成&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&#34;bascalling&#34;&gt;bascalling&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;将Fast5/Pod5文件转换为Fastq/uBam格式的过程&lt;/p&gt;</description>
+      <guid>https://entropydecrease.github.io/posts/ont_notes/</guid>
+      <description>&lt;h2 id=&#34;准确度&#34;&gt;准确度&lt;/h2&gt;&#xA;&lt;p&gt;Kit V14 + R10.4.1&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;simplex: 99.6%, Q24&lt;/li&gt;&#xA;&lt;li&gt;duplex: 99.92%, Q31&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h2 id=&#34;duplex&#34;&gt;duplex&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;一个双链文库分子，两端都有motor protein（马达蛋白）。一端的马达蛋白牵引双链文库靠近纳米孔，并解开双链让其中一条单链进入纳米孔，在其完全进入纳米孔之后，文库另外一端的马达蛋白有可能会牵引文库另外一头直接以单链的形式（无需解链）进入纳米孔（此时也有可能是其他的片段进入纳米孔测序）。这样测得的序列是一条原始分子的正负链都被测到了，所以叫duplex，可以提高测序精度。&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Accueil on Entropy Decrease</title>
+    <link>https://entropydecrease.github.io/fr/</link>
+    <description>Recent content in Accueil on Entropy Decrease</description>
+    <generator>Hugo</generator>
+    <language>fr-FR</language>
+    <lastBuildDate>Mon, 01 Jan 2024 00:00:00 +0800</lastBuildDate>
+    <atom:link href="https://entropydecrease.github.io/fr/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>À Propos</title>
+      <link>https://entropydecrease.github.io/fr/about/</link>
+      <pubDate>Mon, 01 Jan 2024 00:00:00 +0800</pubDate>
+      <guid>https://entropydecrease.github.io/fr/about/</guid>
+      <description>Découvrez le thème Hugo Narrow et sa pile technologique</description>
+    </item>
+  </channel>
+</rss>
