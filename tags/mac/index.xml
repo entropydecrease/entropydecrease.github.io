@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Mac on Entropy Decrease</title>
+    <link>https://entropydecrease.github.io/tags/mac/</link>
+    <description>Recent content in Mac on Entropy Decrease</description>
+    <generator>Hugo</generator>
+    <language>zh-CN</language>
+    <lastBuildDate>Mon, 13 Apr 2015 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://entropydecrease.github.io/tags/mac/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>设置hostname，避免DHCP修改hostname</title>
+      <link>https://entropydecrease.github.io/posts/set_hostname/</link>
+      <pubDate>Mon, 13 Apr 2015 00:00:00 +0000</pubDate>
+      <guid>https://entropydecrease.github.io/posts/set_hostname/</guid>
+      <description>&lt;p&gt;It can be annoying to see my hostname being modifed each time I connect to a different WIFI. It is because the hostname was never set.&lt;/p&gt;&#xA;&lt;pre&gt;&lt;code&gt;&amp;gt; scutil --get HostName &#xA;HostName: not set &#xA;&lt;/code&gt;&lt;/pre&gt;&#xA;&lt;p&gt;So we just need to set the hostname:&lt;/p&gt;&#xA;&lt;pre&gt;&lt;code&gt;&amp;gt; sudo scutil --set HostName &amp;quot;new_hostname&amp;quot;  &#xA;Password:  &#xA;&amp;gt; scutil --get HostName              &#xA;new_hostname  &#xA;&lt;/code&gt;&lt;/pre&gt;</description>
+    </item>
+  </channel>
+</rss>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Bcftools on Entropy Decrease</title>
+    <link>https://entropydecrease.github.io/tags/bcftools/</link>
+    <description>Recent content in Bcftools on Entropy Decrease</description>
+    <generator>Hugo</generator>
+    <language>zh-CN</language>
+    <lastBuildDate>Fri, 01 Oct 2021 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://entropydecrease.github.io/tags/bcftools/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>bcftools notes (转载)</title>
+      <link>https://entropydecrease.github.io/posts/bcftools_notes/</link>
+      <pubDate>Fri, 01 Oct 2021 00:00:00 +0000</pubDate>
+      <guid>https://entropydecrease.github.io/posts/bcftools_notes/</guid>
+      <description>&lt;p&gt;copied from &lt;code&gt;https://gist.github.com/elowy01/93922762e131d7abd3c7e8e166a74a0b&lt;/code&gt;&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;Filter variants per region (in this example, print out only variants mapped to chr1 and chr2)&lt;/p&gt;&#xA;&lt;p&gt;&lt;code&gt;bcftools filter -r1,2 ALL.chip.omni_broad_sanger_combined.20140818.snps.genotypes.hg38.vcf.gz&lt;/code&gt;&lt;/p&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;printing out info for only 2 samples:&lt;/p&gt;&#xA;&lt;p&gt;&lt;code&gt;bcftools view -s NA20818,NA20819 filename.vcf.gz&lt;/code&gt;&lt;/p&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;printing stats only for variants passing the filter:&lt;/p&gt;&#xA;&lt;p&gt;&lt;code&gt;bcftools view -f PASS filename.vcf.gz&lt;/code&gt;&lt;/p&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;printing variants withoud header:&lt;/p&gt;&#xA;&lt;p&gt;&lt;code&gt;bcftools view -H&lt;/code&gt;&lt;/p&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;printing variants on a particular region:&lt;/p&gt;&#xA;&lt;p&gt;&lt;code&gt;bcftools view -r chr20:1-200000 -s NA20818,NA20819 filename.vcf.gz&lt;/code&gt;&lt;/p&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;print all variants except for the ones falling within region:&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

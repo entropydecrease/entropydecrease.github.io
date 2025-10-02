@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Nanopore on Entropy Decrease</title>
+    <link>https://entropydecrease.github.io/tags/nanopore/</link>
+    <description>Recent content in Nanopore on Entropy Decrease</description>
+    <generator>Hugo</generator>
+    <language>zh-CN</language>
+    <lastBuildDate>Sat, 08 Apr 2023 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://entropydecrease.github.io/tags/nanopore/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>图解三代测序（Nanopore） (转载作为备份)</title>
+      <link>https://entropydecrease.github.io/posts/ont_basics/</link>
+      <pubDate>Sat, 08 Apr 2023 00:00:00 +0000</pubDate>
+      <guid>https://entropydecrease.github.io/posts/ont_basics/</guid>
+      <description>&lt;p&gt;转载自 &lt;a href=&#34;https://www.cnblogs.com/baimoc/p/14700618.html&#34;target=&#34;_blank&#34;&#xA;  class=&#34;relative inline-flex items-center&#34;&#xA;&gt;baimoc - 博客园&#xA;  &lt;svg id=&#34;external-link&#34; class=&#34;h-3 w-3 ml-1 absolute top-0 right-0 transform translate-x-2/5 -translate-y-1/3&#34;&#xA;    fill=&#34;none&#34;&#xA;    stroke=&#34;currentColor&#34;&#xA;    viewBox=&#34;0 0 24 24&#34;&gt;&lt;path fill=&#34;none&#34; stroke=&#34;currentColor&#34; stroke-linecap=&#34;round&#34; stroke-linejoin=&#34;round&#34; stroke-width=&#34;2&#34; d=&#34;M15 3h6v6m-11 5L21 3m-3 10v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6&#34;/&gt;&lt;/svg&gt;&#xA;&lt;/a&gt;&lt;/p&gt;&#xA;&lt;hr&gt;&#xA;&lt;h2 id=&#34;一测序原理&#34;&gt;一、测序原理&lt;/h2&gt;&#xA;&lt;p&gt;先介绍 Nanopore 测序中的几位主角：&lt;/p&gt;&#xA;&lt;p&gt;&lt;code&gt;Reader&lt;/code&gt; ：在自然界中，有一种可以嵌入到细胞膜中作为离子或分子通道的跨膜蛋白，具有天然的蛋白纳米孔。经过人为基因工程修饰后，得到的就是 Nanopore 测序所需的 Reader 蛋白。&lt;br&gt;&#xA;&lt;a href=&#34;https://img-blog.csdnimg.cn/img_convert/13bd67376e79c80ad0cd229ccd2cd7f2.png&#34;target=&#34;_blank&#34;&#xA;  class=&#34;relative inline-flex items-center&#34;&#xA;&gt;&#xA;&lt;figure class=&#34;image-figure not-prose my-8&#34; &#xA;        data-lightbox-enabled=&#34;false&#34;&#xA;        data-gallery-type=&#34;auto&#34;&gt;&#xA;  &lt;div class=&#34;image-container&#34;&gt;&#xA;    &lt;img&#xA;    src=&#34;https://entropydecrease.github.io/posts/ont_basics/resources/13bd67376e79c80ad0cd229ccd2cd7f2.png&#34;&#xA;    alt=&#34;mark&#34;&#xA;    &#xA;    &#xA;      &#xA;      &#xA;        &#xA;    width=&#34;517&#34;&#xA;    height=&#34;274&#34;&#xA;        &#xA;      &#xA;    &#xA;    loading=&#34;lazy&#34;&#xA;    decoding=&#34;async&#34;&#xA;    data-gallery-src=&#34;https://entropydecrease.github.io/posts/ont_basics/resources/13bd67376e79c80ad0cd229ccd2cd7f2.png&#34;&#xA;    data-gallery-alt=&#34;mark&#34;&#xA;    data-gallery-title=&#34;&#34; /&gt;&lt;/div&gt;&#xA;&#xA;  &lt;/figure&gt;&#xA;  &lt;svg id=&#34;external-link&#34; class=&#34;h-3 w-3 ml-1 absolute top-0 right-0 transform translate-x-2/5 -translate-y-1/3&#34;&#xA;    fill=&#34;none&#34;&#xA;    stroke=&#34;currentColor&#34;&#xA;    viewBox=&#34;0 0 24 24&#34;&gt;&lt;path fill=&#34;none&#34; stroke=&#34;currentColor&#34; stroke-linecap=&#34;round&#34; stroke-linejoin=&#34;round&#34; stroke-width=&#34;2&#34; d=&#34;M15 3h6v6m-11 5L21 3m-3 10v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6&#34;/&gt;&lt;/svg&gt;&#xA;&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>ONT相关的一些笔记</title>
+      <link>https://entropydecrease.github.io/posts/ont_notes/</link>
+      <pubDate>Sat, 01 Apr 2023 00:00:00 +0000</pubDate>
+      <guid>https://entropydecrease.github.io/posts/ont_notes/</guid>
+      <description>&lt;h2 id=&#34;准确度&#34;&gt;准确度&lt;/h2&gt;&#xA;&lt;p&gt;Kit V14 + R10.4.1&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;simplex: 99.6%, Q24&lt;/li&gt;&#xA;&lt;li&gt;duplex: 99.92%, Q31&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h2 id=&#34;duplex&#34;&gt;duplex&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;一个双链文库分子，两端都有motor protein（马达蛋白）。一端的马达蛋白牵引双链文库靠近纳米孔，并解开双链让其中一条单链进入纳米孔，在其完全进入纳米孔之后，文库另外一端的马达蛋白有可能会牵引文库另外一头直接以单链的形式（无需解链）进入纳米孔（此时也有可能是其他的片段进入纳米孔测序）。这样测得的序列是一条原始分子的正负链都被测到了，所以叫duplex，可以提高测序精度。&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

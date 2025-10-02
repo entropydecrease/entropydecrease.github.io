@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>MRD on Entropy Decrease</title>
+    <link>https://entropydecrease.github.io/tags/mrd/</link>
+    <description>Recent content in MRD on Entropy Decrease</description>
+    <generator>Hugo</generator>
+    <language>zh-CN</language>
+    <lastBuildDate>Thu, 27 Apr 2023 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://entropydecrease.github.io/tags/mrd/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>邵阳对世和MRD的介绍 - MRD的技术创新与应用案例分享</title>
+      <link>https://entropydecrease.github.io/posts/geneseeq_mrd/</link>
+      <pubDate>Thu, 27 Apr 2023 00:00:00 +0000</pubDate>
+      <guid>https://entropydecrease.github.io/posts/geneseeq_mrd/</guid>
+      <description>&lt;h3 id=&#34;个人总结&#34;&gt;个人总结&lt;/h3&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;对个体化panel与固定panel的优劣，做了全面而深入的分析&lt;/li&gt;&#xA;&lt;li&gt;采用固定化的大panel来做MRD，克服了定制panel的一些问题，想的很细致，做得很坚定，效果也不错&lt;/li&gt;&#xA;&lt;li&gt;复发病人阳性率似乎还是没有定制panel高&lt;/li&gt;&#xA;&lt;li&gt;在复发风险预测方面，片段组学看起来效果比ctDNA突变要好&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;&#xA;&lt;figure class=&#34;image-figure not-prose my-8&#34; &#xA;        data-lightbox-enabled=&#34;false&#34;&#xA;        data-gallery-type=&#34;auto&#34;&gt;&#xA;  &lt;div class=&#34;image-container&#34;&gt;&#xA;    &lt;img&#xA;    src=&#34;https://entropydecrease.github.io/posts/geneseeq_mrd/resources/581682683182_.pic_hd.jpg&#34;&#xA;    alt=&#34;581682683182_.pic_hd&#34;&#xA;    &#xA;    &#xA;      &#xA;      &#xA;        &#xA;    width=&#34;4096&#34;&#xA;    height=&#34;3072&#34;&#xA;        &#xA;      &#xA;    &#xA;    loading=&#34;lazy&#34;&#xA;    decoding=&#34;async&#34;&#xA;    data-gallery-src=&#34;https://entropydecrease.github.io/posts/geneseeq_mrd/resources/581682683182_.pic_hd.jpg&#34;&#xA;    data-gallery-alt=&#34;581682683182_.pic_hd&#34;&#xA;    data-gallery-title=&#34;&#34; /&gt;&lt;/div&gt;&#xA;&#xA;  &lt;/figure&gt;&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>
