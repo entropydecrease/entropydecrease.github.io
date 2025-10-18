@@ -187,8 +187,8 @@ SHELL 折叠 复制 export HOMEBREW_INSTALL_FROM_API=1 export..." />
     
       <link
         rel="stylesheet"
-        href="/css/compiled.min.8a36527c683d41aa99bba02173c0fa399ad66f4bcf25bebd09906809836f109c.css"
-        integrity="sha256-ijZSfGg9QaqZu6Ahc8D6OZrWb0vPJb69CZBoCYNvEJw="
+        href="/css/compiled.min.a8f84a548f754af6a307afd165768308ed68ee63e9fe99d3ef7e3dbcef7c9e3e.css"
+        integrity="sha256-qPhKVI91SvajB6/RZXaDCO1o7mPp/pnT7349vO98nj4="
         crossorigin="anonymous" />
     
   
@@ -1442,7 +1442,7 @@ SHELL 折叠 复制 export HOMEBREW_INSTALL_FROM_API=1 export..." />
 <ul>
 <li>
 <p>首先，需要确保系统中安装了 bash、git 和 curl，对于 macOS 用户需额外要求安装 Command Line Tools (CLT) for Xcode。</p>
-<p>对于 macOS 用户，系统自带 bash、git 和 curl，在命令行输入 xcode-select &ndash;install 安装 CLT for Xcode 即可。
+<p>对于 macOS 用户，系统自带 bash、git 和 curl，在命令行输入 xcode-select &ndash;install 安装 CLT for Xcode 即可。<br>
 对于 Linux 用户，系统自带 bash，仅需额外安装 git 和 curl。</p>
 </li>
 <li>
@@ -1752,7 +1752,7 @@ SHELL 折叠 复制 export HOMEBREW_INSTALL_FROM_API=1 export..." />
 <p>注：自 brew 4.0 起，HOMEBREW_INSTALL_FROM_API 会成为默认行为，无需设置；大部分用户无需再克隆 homebrew/core 仓库，故无需设置 HOMEBREW_CORE_GIT_REMOTE 环境变量。但若需要运行 brew 的开发命令或者 brew 安装在非官方支持的默认 prefix 位置，则仍需设置 HOMEBREW_CORE_GIT_REMOTE 环境变量；如果不想通过 API 安装，可以设置 HOMEBREW_NO_INSTALL_FROM_API=1。</p>
 </li>
 <li>
-<p>从本镜像下载安装脚本并安装 Homebrew / Linuxbrew
+<p>从本镜像下载安装脚本并安装 Homebrew / Linuxbrew<br>
 git clone &ndash;depth=1 <a href="https://mirrors.tuna.tsinghua.edu.cn/git/homebrew/install.git"target="_blank"
   class="relative inline-flex items-center"
 >https://mirrors.tuna.tsinghua.edu.cn/git/homebrew/install.git
@@ -1760,8 +1760,8 @@ git clone &ndash;depth=1 <a href="https://mirrors.tuna.tsinghua.edu.cn/git/homeb
     fill="none"
     stroke="currentColor"
     viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 3h6v6m-11 5L21 3m-3 10v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/></svg>
-</a> brew-install
-/bin/bash brew-install/install.sh
+</a> brew-install<br>
+/bin/bash brew-install/install.sh<br>
 rm -rf brew-install</p>
 </li>
 </ul>
