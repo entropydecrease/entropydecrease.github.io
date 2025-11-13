@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Igv on Entropy Decrease</title>
+    <link>https://entropydecrease.github.io/tags/igv/</link>
+    <description>Recent content in Igv on Entropy Decrease</description>
+    <generator>Hugo</generator>
+    <language>zh-CN</language>
+    <lastBuildDate>Sun, 23 Feb 2020 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://entropydecrease.github.io/tags/igv/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>igv 生成本地的.genome文件</title>
+      <link>https://entropydecrease.github.io/posts/igv_local_genome/</link>
+      <pubDate>Sun, 23 Feb 2020 00:00:00 +0000</pubDate>
+      <guid>https://entropydecrease.github.io/posts/igv_local_genome/</guid>
+      <description>&lt;p&gt;igv假如每次都要从远程加载genome信息的话，网络不好的情况下会很慢，这时候最好做一个本地版的.genome文件。&lt;/p&gt;&#xA;&lt;p&gt;igv的.genome文件其实是一个zip文件。&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

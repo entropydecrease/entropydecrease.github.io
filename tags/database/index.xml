@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Database on Entropy Decrease</title>
+    <link>https://entropydecrease.github.io/tags/database/</link>
+    <description>Recent content in Database on Entropy Decrease</description>
+    <generator>Hugo</generator>
+    <language>zh-CN</language>
+    <lastBuildDate>Sun, 01 May 2022 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://entropydecrease.github.io/tags/database/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>生成af only的gnomad vcf文件</title>
+      <link>https://entropydecrease.github.io/posts/gnome_af_only/</link>
+      <pubDate>Sun, 01 May 2022 00:00:00 +0000</pubDate>
+      <guid>https://entropydecrease.github.io/posts/gnome_af_only/</guid>
+      <description>&lt;p&gt;gnomAD VCF 文件(af-only-gnomad.hg38.vcf.gz)太大了，超过200G，对于GATK来说，只需要用里面的‘AF’信息就够了，所以将多余信息删掉可以极大节省空间和时间。&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Bioinf on Entropy Decrease</title>
+    <link>https://entropydecrease.github.io/tags/bioinf/</link>
+    <description>Recent content in Bioinf on Entropy Decrease</description>
+    <generator>Hugo</generator>
+    <language>zh-CN</language>
+    <lastBuildDate>Mon, 04 Dec 2023 16:46:43 +0000</lastBuildDate>
+    <atom:link href="https://entropydecrease.github.io/tags/bioinf/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>2030 年人类基因组学的大胆预测</title>
+      <link>https://entropydecrease.github.io/posts/genomics_in_2030/</link>
+      <pubDate>Mon, 04 Dec 2023 16:46:43 +0000</pubDate>
+      <guid>https://entropydecrease.github.io/posts/genomics_in_2030/</guid>
+      <description>&lt;p&gt;&lt;a href=&#34;https://doi.org/10.1016/j.ajhg.2023.09.010&#34;target=&#34;_blank&#34;&#xA;  class=&#34;relative inline-flex items-center&#34;&#xA;&gt;https://doi.org/10.1016/j.ajhg.2023.09.010&#xA;  &lt;svg id=&#34;external-link&#34; class=&#34;h-3 w-3 ml-1 absolute top-0 right-0 transform translate-x-2/5 -translate-y-1/3&#34;&#xA;    fill=&#34;none&#34;&#xA;    stroke=&#34;currentColor&#34;&#xA;    viewBox=&#34;0 0 24 24&#34;&gt;&lt;path fill=&#34;none&#34; stroke=&#34;currentColor&#34; stroke-linecap=&#34;round&#34; stroke-linejoin=&#34;round&#34; stroke-width=&#34;2&#34; d=&#34;M15 3h6v6m-11 5L21 3m-3 10v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6&#34;/&gt;&lt;/svg&gt;&#xA;&lt;/a&gt;&#xA;&lt;a href=&#34;https://www.genome.gov/event-calendar/Bold-Predictions-for-Human-Genomics-by-2030&#34;target=&#34;_blank&#34;&#xA;  class=&#34;relative inline-flex items-center&#34;&#xA;&gt;https://www.genome.gov/event-calendar/Bold-Predictions-for-Human-Genomics-by-2030&#xA;  &lt;svg id=&#34;external-link&#34; class=&#34;h-3 w-3 ml-1 absolute top-0 right-0 transform translate-x-2/5 -translate-y-1/3&#34;&#xA;    fill=&#34;none&#34;&#xA;    stroke=&#34;currentColor&#34;&#xA;    viewBox=&#34;0 0 24 24&#34;&gt;&lt;path fill=&#34;none&#34; stroke=&#34;currentColor&#34; stroke-linecap=&#34;round&#34; stroke-linejoin=&#34;round&#34; stroke-width=&#34;2&#34; d=&#34;M15 3h6v6m-11 5L21 3m-3 10v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6&#34;/&gt;&lt;/svg&gt;&#xA;&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Civic数据库介绍</title>
+      <link>https://entropydecrease.github.io/posts/civicdb/</link>
+      <pubDate>Wed, 03 May 2023 00:00:00 +0000</pubDate>
+      <guid>https://entropydecrease.github.io/posts/civicdb/</guid>
+      <description>&lt;p&gt;Nucleic Acids Research上有civicdb最新的介绍。&lt;/p&gt;&#xA;&lt;p&gt;Krysiak, K. &lt;em&gt;et al.&lt;/em&gt; CIViCdb 2022: evolution of an open-access cancer variant interpretation knowledgebase. &lt;em&gt;Nucleic Acids Research&lt;/em&gt; &lt;strong&gt;51&lt;/strong&gt;, D1230–D1241 (2023).&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>bioinf常见的一些错误</title>
+      <link>https://entropydecrease.github.io/posts/common_bioinf_mistakes/</link>
+      <pubDate>Sat, 14 Mar 2015 00:00:00 +0000</pubDate>
+      <guid>https://entropydecrease.github.io/posts/common_bioinf_mistakes/</guid>
+      <description>&lt;p&gt;biostar上的&lt;a href=&#34;https://www.biostars.org/p/7126/&#34;target=&#34;_blank&#34;&#xA;  class=&#34;relative inline-flex items-center&#34;&#xA;&gt;这篇文章&#xA;  &lt;svg id=&#34;external-link&#34; class=&#34;h-3 w-3 ml-1 absolute top-0 right-0 transform translate-x-2/5 -translate-y-1/3&#34;&#xA;    fill=&#34;none&#34;&#xA;    stroke=&#34;currentColor&#34;&#xA;    viewBox=&#34;0 0 24 24&#34;&gt;&lt;path fill=&#34;none&#34; stroke=&#34;currentColor&#34; stroke-linecap=&#34;round&#34; stroke-linejoin=&#34;round&#34; stroke-width=&#34;2&#34; d=&#34;M15 3h6v6m-11 5L21 3m-3 10v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6&#34;/&gt;&lt;/svg&gt;&#xA;&lt;/a&gt;总结了在生物信息学日常工作中容易犯的一些共性的错误：&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

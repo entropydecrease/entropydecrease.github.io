@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Elementbio on Entropy Decrease</title>
+    <link>https://entropydecrease.github.io/tags/elementbio/</link>
+    <description>Recent content in Elementbio on Entropy Decrease</description>
+    <generator>Hugo</generator>
+    <language>zh-CN</language>
+    <lastBuildDate>Sat, 19 Nov 2022 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://entropydecrease.github.io/tags/elementbio/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>ElementBio 在2022年NGS开发者大会上的介绍</title>
+      <link>https://entropydecrease.github.io/posts/elementbio_intro/</link>
+      <pubDate>Sat, 19 Nov 2022 00:00:00 +0000</pubDate>
+      <guid>https://entropydecrease.github.io/posts/elementbio_intro/</guid>
+      <description>&lt;p&gt;Element Bio 是一家新兴的测序仪公司，其产品具有精度高、成本低、通量高的优势，下面是创始人何敏在2022年NGS开发者大会上的介绍，讲的比较清楚。&lt;/p&gt;&#xA;&lt;p&gt;&#xA;&lt;figure class=&#34;image-figure not-prose my-8&#34; &#xA;        data-lightbox-enabled=&#34;false&#34;&#xA;        data-gallery-type=&#34;auto&#34;&gt;&#xA;  &lt;div class=&#34;image-container&#34;&gt;&#xA;    &lt;img&#xA;    src=&#34;https://entropydecrease.github.io/posts/elementbio_intro/resources/a-0.jpg&#34;&#xA;    alt=&#34;a-0&#34;&#xA;    &#xA;    &#xA;      &#xA;      &#xA;        &#xA;    width=&#34;2640&#34;&#xA;    height=&#34;1200&#34;&#xA;        &#xA;      &#xA;    &#xA;    loading=&#34;lazy&#34;&#xA;    decoding=&#34;async&#34;&#xA;    data-gallery-src=&#34;https://entropydecrease.github.io/posts/elementbio_intro/resources/a-0.jpg&#34;&#xA;    data-gallery-alt=&#34;a-0&#34;&#xA;    data-gallery-title=&#34;&#34; /&gt;&lt;/div&gt;&#xA;&#xA;  &lt;/figure&gt;&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Genome on Entropy Decrease</title>
+    <link>https://entropydecrease.github.io/tags/genome/</link>
+    <description>Recent content in Genome on Entropy Decrease</description>
+    <generator>Hugo</generator>
+    <language>zh-CN</language>
+    <lastBuildDate>Sun, 23 Feb 2020 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://entropydecrease.github.io/tags/genome/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>igv 生成本地的.genome文件</title>
+      <link>https://entropydecrease.github.io/posts/igv_local_genome/</link>
+      <pubDate>Sun, 23 Feb 2020 00:00:00 +0000</pubDate>
+      <guid>https://entropydecrease.github.io/posts/igv_local_genome/</guid>
+      <description>&lt;p&gt;igv假如每次都要从远程加载genome信息的话，网络不好的情况下会很慢，这时候最好做一个本地版的.genome文件。&lt;/p&gt;&#xA;&lt;p&gt;igv的.genome文件其实是一个zip文件。&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>应该使用哪个genome</title>
+      <link>https://entropydecrease.github.io/posts/ref_genome/</link>
+      <pubDate>Sun, 23 Feb 2020 00:00:00 +0000</pubDate>
+      <guid>https://entropydecrease.github.io/posts/ref_genome/</guid>
+      <description>&lt;h2 id=&#34;grch37-还是-grch38&#34;&gt;GRCh37 还是 GRCh38&lt;/h2&gt;&#xA;&lt;p&gt;GRCh37 == hg19，GRCh38 ＝＝ hg38&lt;/p&gt;&#xA;&lt;p&gt;理论上来讲，GRCh38是新的人类基因组的参考组装，相对GRCh37(hg19)来说，更接近人类真正的基因组。但是由于历史原因，之前很多的数据库对老版本的GRCh37支持的比较好。 dbSNP和ClinVar已经同时支持 GRCh37和38，但是1k genomes还是对GRCh37支持更好一些.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

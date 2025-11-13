@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Categories on Entropy Decrease</title>
+    <link>https://entropydecrease.github.io/categories/</link>
+    <description>Recent content in Categories on Entropy Decrease</description>
+    <generator>Hugo</generator>
+    <language>zh-CN</language>
+    <lastBuildDate>Sat, 08 Nov 2025 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://entropydecrease.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Life</title>
+      <link>https://entropydecrease.github.io/categories/life/</link>
+      <pubDate>Sat, 08 Nov 2025 00:00:00 +0000</pubDate>
+      <guid>https://entropydecrease.github.io/categories/life/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Tech</title>
+      <link>https://entropydecrease.github.io/categories/tech/</link>
+      <pubDate>Sat, 08 Nov 2025 00:00:00 +0000</pubDate>
+      <guid>https://entropydecrease.github.io/categories/tech/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>工作</title>
+      <link>https://entropydecrease.github.io/categories/%E5%B7%A5%E4%BD%9C/</link>
+      <pubDate>Sat, 08 Nov 2025 00:00:00 +0000</pubDate>
+      <guid>https://entropydecrease.github.io/categories/%E5%B7%A5%E4%BD%9C/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>编程</title>
+      <link>https://entropydecrease.github.io/categories/%E7%BC%96%E7%A8%8B/</link>
+      <pubDate>Sun, 02 Nov 2025 00:00:00 +0000</pubDate>
+      <guid>https://entropydecrease.github.io/categories/%E7%BC%96%E7%A8%8B/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>工具</title>
+      <link>https://entropydecrease.github.io/categories/%E5%B7%A5%E5%85%B7/</link>
+      <pubDate>Sun, 02 Nov 2025 00:00:00 +0000</pubDate>
+      <guid>https://entropydecrease.github.io/categories/%E5%B7%A5%E5%85%B7/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>历史</title>
+      <link>https://entropydecrease.github.io/categories/%E5%8E%86%E5%8F%B2/</link>
+      <pubDate>Thu, 30 Oct 2025 00:00:00 +0000</pubDate>
+      <guid>https://entropydecrease.github.io/categories/%E5%8E%86%E5%8F%B2/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>阅读</title>
+      <link>https://entropydecrease.github.io/categories/%E9%98%85%E8%AF%BB/</link>
+      <pubDate>Sat, 25 Oct 2025 00:00:00 +0000</pubDate>
+      <guid>https://entropydecrease.github.io/categories/%E9%98%85%E8%AF%BB/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>随笔</title>
+      <link>https://entropydecrease.github.io/categories/%E9%9A%8F%E7%AC%94/</link>
+      <pubDate>Sat, 18 Oct 2025 19:47:02 +0800</pubDate>
+      <guid>https://entropydecrease.github.io/categories/%E9%9A%8F%E7%AC%94/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Bioinf</title>
+      <link>https://entropydecrease.github.io/categories/bioinf/</link>
+      <pubDate>Mon, 04 Dec 2023 16:46:43 +0000</pubDate>
+      <guid>https://entropydecrease.github.io/categories/bioinf/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Tools</title>
+      <link>https://entropydecrease.github.io/categories/tools/</link>
+      <pubDate>Thu, 15 Jun 2023 00:00:00 +0000</pubDate>
+      <guid>https://entropydecrease.github.io/categories/tools/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Clinical</title>
+      <link>https://entropydecrease.github.io/categories/clinical/</link>
+      <pubDate>Fri, 28 Apr 2023 00:00:00 +0000</pubDate>
+      <guid>https://entropydecrease.github.io/categories/clinical/</guid>
+      <description></description>
+    </item>
+  </channel>
+</rss>

@@ -1,0 +1,25 @@
+{
+  "background_color": "#ffffff",
+  "categories": [
+    "blog",
+    "technology",
+    "education"
+  ],
+  "description": "阅读、思考、写作，都是熵减的过程",
+  "dir": "ltr",
+  "display": "standalone",
+  "icons": [
+    {
+      "sizes": "any",
+      "src": "/favicon.svg",
+      "type": "image/svg+xml"
+    }
+  ],
+  "lang": "en-US",
+  "name": "Entropy Decrease",
+  "orientation": "portrait-primary",
+  "scope": "/",
+  "short_name": "EntropyDecrease",
+  "start_url": "/",
+  "theme_color": "#09090b"
+}

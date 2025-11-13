@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Bam on Entropy Decrease</title>
+    <link>https://entropydecrease.github.io/tags/bam/</link>
+    <description>Recent content in Bam on Entropy Decrease</description>
+    <generator>Hugo</generator>
+    <language>zh-CN</language>
+    <lastBuildDate>Sun, 01 May 2022 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://entropydecrease.github.io/tags/bam/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>计算bam文件中的覆盖度</title>
+      <link>https://entropydecrease.github.io/posts/%E8%AE%A1%E7%AE%97bam%E6%96%87%E4%BB%B6%E4%B8%AD%E7%9A%84%E8%A6%86%E7%9B%96%E5%BA%A6/</link>
+      <pubDate>Sun, 01 May 2022 00:00:00 +0000</pubDate>
+      <guid>https://entropydecrease.github.io/posts/%E8%AE%A1%E7%AE%97bam%E6%96%87%E4%BB%B6%E4%B8%AD%E7%9A%84%E8%A6%86%E7%9B%96%E5%BA%A6/</guid>
+      <description>&lt;h2 id=&#34;things-to-consider&#34;&gt;Things to consider&lt;/h2&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;to exclude some reads, like &lt;code&gt;samtools depth/bedcov&lt;/code&gt; and mosdepth do.&lt;/p&gt;&#xA;&#xA;  &lt;blockquote&#xA;    class=&#34;border-primary bg-muted/30 hover:bg-muted/40 my-6 rounded-r-lg border-l-4 py-4 pr-4 pl-6 italic transition-all duration-200 ease-out hover:translate-x-1&#34;&gt;&#xA;    &lt;div class=&#34;prose prose-sm max-w-none&#34;&gt;&#xA;      &lt;p&gt;&amp;lsquo;UNMAP,SECONDARY,QCFAIL,DUP or 0x704 or 1796&amp;rsquo;&lt;/p&gt;&#xA;&#xA;    &lt;/div&gt;&#xA;  &lt;/blockquote&gt;&lt;script&gt;&#xA;function toggleAlert(alertId) {&#xA;  const content = document.getElementById(alertId + &#39;-content&#39;);&#xA;  const chevron = document.getElementById(alertId + &#39;-chevron&#39;);&#xA;  const header = content.previousElementSibling;&#xA;  &#xA;  if (content.classList.contains(&#39;hidden&#39;)) {&#xA;    content.classList.remove(&#39;hidden&#39;);&#xA;    chevron.style.transform = &#39;rotate(0deg)&#39;;&#xA;    header.setAttribute(&#39;aria-expanded&#39;, &#39;true&#39;);&#xA;  } else {&#xA;    content.classList.add(&#39;hidden&#39;);&#xA;    chevron.style.transform = &#39;rotate(-90deg)&#39;;&#xA;    header.setAttribute(&#39;aria-expanded&#39;, &#39;false&#39;);&#xA;  }&#xA;}&#xA;&#xA;&#xA;document.addEventListener(&#39;DOMContentLoaded&#39;, function() {&#xA;  const collapsedAlerts = document.querySelectorAll(&#39;.alert-content.hidden&#39;);&#xA;  collapsedAlerts.forEach(function(content) {&#xA;    const alertId = content.id.replace(&#39;-content&#39;, &#39;&#39;);&#xA;    const chevron = document.getElementById(alertId + &#39;-chevron&#39;);&#xA;    if (chevron) {&#xA;      chevron.style.transform = &#39;rotate(-90deg)&#39;;&#xA;    }&#xA;  });&#xA;});&#xA;&lt;/script&gt;&#xA;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;to only summarize target regions or whole genome&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

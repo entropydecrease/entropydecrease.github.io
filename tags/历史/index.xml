@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>历史 on Entropy Decrease</title>
+    <link>https://entropydecrease.github.io/tags/%E5%8E%86%E5%8F%B2/</link>
+    <description>Recent content in 历史 on Entropy Decrease</description>
+    <generator>Hugo</generator>
+    <language>zh-CN</language>
+    <lastBuildDate>Thu, 30 Oct 2025 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://entropydecrease.github.io/tags/%E5%8E%86%E5%8F%B2/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>G2</title>
+      <link>https://entropydecrease.github.io/posts/g2/</link>
+      <pubDate>Thu, 30 Oct 2025 00:00:00 +0000</pubDate>
+      <guid>https://entropydecrease.github.io/posts/g2/</guid>
+      <description>&lt;p&gt;2025年10月30日，中美在韩国达成关于关税的协定，看达成的条款，东大还是比较狼狈，但是，回想贸易战刚开始的黑云压城，到现在达成的妥协，再看其他国家的表现与结果，虽然与漂亮未来的斗争还有很长，还会很被动、很受伤，但是，我认为世界G2格局已经形成，大趋势不可逆转。&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>张发奎口述历史</title>
+      <link>https://entropydecrease.github.io/posts/zhangfakui/</link>
+      <pubDate>Mon, 06 Nov 2023 00:00:00 +0000</pubDate>
+      <guid>https://entropydecrease.github.io/posts/zhangfakui/</guid>
+      <description>&lt;h3 id=&#34;收黑钱&#34;&gt;收黑钱&lt;/h3&gt;&#xA;&#xA;  &lt;blockquote&#xA;    class=&#34;border-primary bg-muted/30 hover:bg-muted/40 my-6 rounded-r-lg border-l-4 py-4 pr-4 pl-6 italic transition-all duration-200 ease-out hover:translate-x-1&#34;&gt;&#xA;    &lt;div class=&#34;prose prose-sm max-w-none&#34;&gt;&#xA;      &lt;p&gt;我禁止营长们收受黑钱，理由很简单：。。。。。。我要集中一切资源，麾下营长们才会听命于我。&lt;/p&gt;&#xA;&#xA;    &lt;/div&gt;&#xA;  &lt;/blockquote&gt;&lt;script&gt;&#xA;function toggleAlert(alertId) {&#xA;  const content = document.getElementById(alertId + &#39;-content&#39;);&#xA;  const chevron = document.getElementById(alertId + &#39;-chevron&#39;);&#xA;  const header = content.previousElementSibling;&#xA;  &#xA;  if (content.classList.contains(&#39;hidden&#39;)) {&#xA;    content.classList.remove(&#39;hidden&#39;);&#xA;    chevron.style.transform = &#39;rotate(0deg)&#39;;&#xA;    header.setAttribute(&#39;aria-expanded&#39;, &#39;true&#39;);&#xA;  } else {&#xA;    content.classList.add(&#39;hidden&#39;);&#xA;    chevron.style.transform = &#39;rotate(-90deg)&#39;;&#xA;    header.setAttribute(&#39;aria-expanded&#39;, &#39;false&#39;);&#xA;  }&#xA;}&#xA;&#xA;&#xA;document.addEventListener(&#39;DOMContentLoaded&#39;, function() {&#xA;  const collapsedAlerts = document.querySelectorAll(&#39;.alert-content.hidden&#39;);&#xA;  collapsedAlerts.forEach(function(content) {&#xA;    const alertId = content.id.replace(&#39;-content&#39;, &#39;&#39;);&#xA;    const chevron = document.getElementById(alertId + &#39;-chevron&#39;);&#xA;    if (chevron) {&#xA;      chevron.style.transform = &#39;rotate(-90deg)&#39;;&#xA;    }&#xA;  });&#xA;});&#xA;&lt;/script&gt;&#xA;&#xA;&lt;h3 id=&#34;叶挺的婚事&#34;&gt;叶挺的婚事&lt;/h3&gt;&#xA;&#xA;  &lt;blockquote&#xA;    class=&#34;border-primary bg-muted/30 hover:bg-muted/40 my-6 rounded-r-lg border-l-4 py-4 pr-4 pl-6 italic transition-all duration-200 ease-out hover:translate-x-1&#34;&gt;&#xA;    &lt;div class=&#34;prose prose-sm max-w-none&#34;&gt;&#xA;      &lt;p&gt;我告诉你，叶挺是怎样当上卅四团团长的。这里包含着一段姻缘的秘密。叶挺与我是好朋友，我俩是校友兼同事。当我俩都当营长时，他在广州认识一个美丽的女孩，在她姐姐出阁前，父母不让妹妹嫁给叶挺。姐姐是个麻脸。叶挺追求她经年，一直不成功。在失望中，他剃光了头发。&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>沈醉回忆录读书笔记</title>
+      <link>https://entropydecrease.github.io/posts/shenzui/</link>
+      <pubDate>Fri, 01 Sep 2023 00:00:00 +0000</pubDate>
+      <guid>https://entropydecrease.github.io/posts/shenzui/</guid>
+      <description>&lt;h2 id=&#34;笔记几则&#34;&gt;笔记几则&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;沈醉1914年生，18岁投奔余乐醒(也是一个重要的特务)开始当特务，28岁成为军统局总务处少将处长，1947年成为云南站站长，1949年被迫参加龙云的云南起义，才35岁。后接受改造至1960年释放（也就是说，在做了18年特务，成为军统的风云人物，入狱改造10年，1960年被释放的时候，才46岁），之后作为政协文史资料委员会文史委员，文革期间曾入狱。1980年身份由战犯改为起义将领。&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;沈醉曾打电话恐吓宋庆龄，并计划开车撞车宋庆龄以警告，后未实行。&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>说说我的家乡，没什么文笔，自娱自乐</title>
+      <link>https://entropydecrease.github.io/posts/some_history_of_my_hometown/</link>
+      <pubDate>Sun, 06 Dec 2015 00:00:00 +0000</pubDate>
+      <guid>https://entropydecrease.github.io/posts/some_history_of_my_hometown/</guid>
+      <description>&lt;p&gt;我的家乡新郑，洛阳与开封之间、黄河以南四十公里的一个小县，归郑州管辖。&lt;/p&gt;&#xA;&lt;p&gt;这个小县，在今天的年代里默默无闻，但是就像河南很多地方一样，过去的千百年里，也有不少历史的风云变幻星河璀璨。“轩辕故里”，或者“黄帝故里”，“郑韩故城”，都是说的新郑。&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

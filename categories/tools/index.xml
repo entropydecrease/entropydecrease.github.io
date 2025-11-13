@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Tools on Entropy Decrease</title>
+    <link>https://entropydecrease.github.io/categories/tools/</link>
+    <description>Recent content in Tools on Entropy Decrease</description>
+    <generator>Hugo</generator>
+    <language>zh-CN</language>
+    <lastBuildDate>Thu, 15 Jun 2023 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://entropydecrease.github.io/categories/tools/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>mosh: Did not find mosh server startup message</title>
+      <link>https://entropydecrease.github.io/posts/mosh-did-not-find-mosh-server-startup-message/</link>
+      <pubDate>Thu, 15 Jun 2023 00:00:00 +0000</pubDate>
+      <guid>https://entropydecrease.github.io/posts/mosh-did-not-find-mosh-server-startup-message/</guid>
+      <description>&lt;p&gt;Mac使用mosh登录新的服务器，发现如下错误：&lt;/p&gt;&#xA;&#xA;  &lt;blockquote&#xA;    class=&#34;border-primary bg-muted/30 hover:bg-muted/40 my-6 rounded-r-lg border-l-4 py-4 pr-4 pl-6 italic transition-all duration-200 ease-out hover:translate-x-1&#34;&gt;&#xA;    &lt;div class=&#34;prose prose-sm max-w-none&#34;&gt;&#xA;      &lt;p&gt;bash: warning: setlocale: LC_ALL: cannot change locale (en_US.UTF-8)&#xA;The locale requested by LC_ALL=en_US.UTF-8 isn&amp;rsquo;t available here.&#xA;Running `locale-gen en_US.UTF-8&amp;rsquo; may be necessary.&lt;/p&gt;&#xA;&lt;p&gt;The locale requested by LC_ALL=en_US.UTF-8 isn&amp;rsquo;t available here.&#xA;Running `locale-gen en_US.UTF-8&amp;rsquo; may be necessary.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>
