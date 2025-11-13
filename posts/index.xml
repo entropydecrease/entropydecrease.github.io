@@ -554,12 +554,5 @@
       <guid>https://entropydecrease.github.io/posts/common_bioinf_mistakes/</guid>
       <description>&lt;p&gt;biostar上的&lt;a href=&#34;https://www.biostars.org/p/7126/&#34;target=&#34;_blank&#34;&#xA;  class=&#34;relative inline-flex items-center&#34;&#xA;&gt;这篇文章&#xA;  &lt;svg id=&#34;external-link&#34; class=&#34;h-3 w-3 ml-1 absolute top-0 right-0 transform translate-x-2/5 -translate-y-1/3&#34;&#xA;    fill=&#34;none&#34;&#xA;    stroke=&#34;currentColor&#34;&#xA;    viewBox=&#34;0 0 24 24&#34;&gt;&lt;path fill=&#34;none&#34; stroke=&#34;currentColor&#34; stroke-linecap=&#34;round&#34; stroke-linejoin=&#34;round&#34; stroke-width=&#34;2&#34; d=&#34;M15 3h6v6m-11 5L21 3m-3 10v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6&#34;/&gt;&lt;/svg&gt;&#xA;&lt;/a&gt;总结了在生物信息学日常工作中容易犯的一些共性的错误：&lt;/p&gt;</description>
     </item>
-    <item>
-      <title></title>
-      <link>https://entropydecrease.github.io/posts/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://entropydecrease.github.io/posts/</guid>
-      <description></description>
-    </item>
   </channel>
 </rss>

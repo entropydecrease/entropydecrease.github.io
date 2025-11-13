@@ -52,7 +52,7 @@
   <meta itemprop="description" content="准备 第一章 代码应当易于理解 在对很多这样的例⼦进⾏研究后，我们总结出，有⼀种对可读性的度量⽐其他任何的度量都要重要。因为它是如此重要，我们把它叫做“可读性基本定理”。">
   <meta itemprop="datePublished" content="2025-10-28T21:40:54+08:00">
   <meta itemprop="dateModified" content="2025-10-28T21:40:54+08:00">
-  <meta itemprop="wordCount" content="33335">
+  <meta itemprop="wordCount" content="32594">
   <meta itemprop="image" content="https://entropydecrease.github.io/images/og-default.avif">
   <meta itemprop="keywords" content="Programming,Tools">
 
@@ -1055,7 +1055,7 @@
     viewBox="0 0 24 24" aria-label="阅读时间"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
 </svg>
           <span
-            >67 分钟</span
+            >66 分钟</span
           >
         </div>
       
@@ -1070,7 +1070,7 @@
     stroke="currentColor"
     viewBox="0 0 24 24" aria-label="字数"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h7" />
 </svg>
-          <span>33335 字</span>
+          <span>32594 字</span>
         </div>
       
 
@@ -16117,7 +16117,7 @@ document.addEventListener('DOMContentLoaded', function() {
         data-gallery-type="auto">
   <div class="image-container">
     <img
-    src="/posts/clean_code/43e01db9a7a783091830e54fffd41e23_MD5.jpeg"
+    src="/posts/clean_code/resources/43e01db9a7a783091830e54fffd41e23_MD5.jpeg"
     alt=""
     
     
@@ -16131,7 +16131,7 @@ document.addEventListener('DOMContentLoaded', function() {
     
     loading="lazy"
     decoding="async"
-    data-gallery-src="/posts/clean_code/43e01db9a7a783091830e54fffd41e23_MD5.jpeg"
+    data-gallery-src="/posts/clean_code/resources/43e01db9a7a783091830e54fffd41e23_MD5.jpeg"
     data-gallery-alt=""
     data-gallery-title="" /></div>
 
@@ -17477,6 +17477,9 @@ document.addEventListener('DOMContentLoaded', function() {
 </script>
 
 <h3 id="减少变量">减少变量</h3>
+<p>【增加变量可以让代码可读性更强，减少变量也可以】</p>
+<p>第8章中，我们讲了如何引⼊“解释”或者“总结”变量来使代码更可读。这些变量很有帮助是因为它们把巨⼤的表达式拆分开，并且可以作为某种形式的⽂档。</p>
+<p>在本节中，我们感兴趣的是减少不能改进可读性的变量。当移除这种变量后，新代码会更精练⽽且同样容易理解。</p>
 <h4 id="没有价值的临时变量">没有价值的临时变量</h4>
 <p>在下面的一小段 Python 代码中，考虑 now 这个变量：</p>
 <div
@@ -17788,1238 +17791,9 @@ document.addEventListener('DOMContentLoaded', function() {
 <pre><code>root_message.last_view_time = datetime.datetime.now ()
 </code></pre>
 <h4 id="减少中间结果">减少中间结果</h4>
-<p>下面的例子是一个 JavaScript 函数，用来从数组中删除一个值：</p>
-<div
-  class="code-block-container border-border bg-card my-6 overflow-hidden rounded-xl border shadow-sm transition-all duration-200 ease-out hover:-translate-y-0.5 hover:shadow-md">
-  
-  <div
-    class="code-block-header bg-muted/30 border-border flex items-center justify-between border-b px-4 py-3">
-    
-    <div class="flex items-center gap-2">
-      <div class="text-muted-foreground flex-shrink-0">
-        
-  <svg class="h-4 w-4"
-    fill="none"
-    stroke="currentColor"
-    viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
-</svg>
-      </div>
-      <span class="text-muted-foreground text-sm font-medium">
-        JAVASCRIPT
-      </span>
-    </div>
-
-    
-    <div class="flex items-center gap-2">
-      <button
-          class="collapse-code-btn text-muted-foreground hover:text-primary hover:bg-primary/10 focus:ring-primary/20 flex items-center gap-1.5 rounded-md px-2 py-1 text-xs font-medium transition-all duration-200 ease-out focus:ring-2 focus:outline-none"
-          data-code-id="code-49"
-          data-default-state="expanded"
-          data-collapsed="false"
-          data-auto-collapse-lines="30"
-          data-auto-collapse-height="400"
-          data-collapsed-height="120"
-          title="折叠"
-          aria-label="折叠">
-          <span class="collapse-icon">
-            
-  <svg class="h-3 w-3"
-    fill="none"
-    stroke="currentColor"
-    viewBox="0 0 24 24"><path fill="currentColor" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6l-6 6z"/></svg>
-          </span>
-          <span class="collapse-text hidden sm:inline"
-            >折叠</span
-          >
-        </button>
-      <button
-        class="copy-code-btn text-muted-foreground hover:text-primary hover:bg-primary/10 focus:ring-primary/20 flex items-center gap-1.5 rounded-md px-2 py-1 text-xs font-medium transition-all duration-200 ease-out focus:ring-2 focus:outline-none"
-        data-code-id="code-49"
-        title="复制"
-        aria-label="复制">
-        <span class="copy-icon">
-          
-  <svg class="h-3 w-3"
-    fill="none"
-    stroke="currentColor"
-    viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z" />
-</svg>
-        </span>
-        <span class="copy-text hidden sm:inline"
-          >复制</span
-        >
-      </button>
-    </div>
-  </div>
-
-  
-  <div class="code-block-content relative" id="code-49">
-    <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-javascript" data-lang="javascript"><span class="line"><span class="cl"><span class="kd">var</span> <span class="nx">remove_one</span> <span class="o">=</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">array</span><span class="p">,</span> <span class="nx">value_to_remove</span><span class="p">)</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">    <span class="kd">var</span> <span class="nx">index_to_remove</span> <span class="o">=</span> <span class="kc">null</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">    <span class="k">for</span> <span class="p">(</span><span class="kd">var</span> <span class="nx">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="nx">i</span> <span class="o">&lt;</span> <span class="nx">array</span><span class="p">.</span><span class="nx">length</span><span class="p">;</span> <span class="nx">i</span> <span class="o">+=</span> <span class="mi">1</span><span class="p">)</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">        <span class="k">if</span> <span class="p">(</span><span class="nx">array</span><span class="p">[</span><span class="nx">i</span><span class="p">]</span> <span class="o">===</span> <span class="nx">value_to_remove</span><span class="p">)</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">            <span class="nx">index_to_remove</span> <span class="o">=</span> <span class="nx">i</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">            <span class="k">break</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">        <span class="p">}</span>
-</span></span><span class="line"><span class="cl">    <span class="p">}</span>
-</span></span><span class="line"><span class="cl">    <span class="k">if</span> <span class="p">(</span><span class="nx">index_to_remove</span> <span class="o">!==</span> <span class="kc">null</span><span class="p">)</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">        <span class="nx">array</span><span class="p">.</span><span class="nx">splice</span><span class="p">(</span><span class="nx">index_to_remove</span><span class="p">,</span> <span class="mi">1</span><span class="p">);</span>
-</span></span><span class="line"><span class="cl">    <span class="p">}</span>
-</span></span><span class="line"><span class="cl"><span class="p">};</span></span></span></code></pre></div>
-    
-    <div
-      class="collapse-overlay to-card/90 pointer-events-none absolute inset-0 bg-gradient-to-b from-transparent via-transparent opacity-0 transition-opacity duration-300">
-      <div
-        class="text-muted-foreground bg-card/80 border-border/50 hover:bg-primary/10 hover:text-primary hover:border-primary/30 absolute bottom-4 left-1/2 -translate-x-1/2 cursor-pointer rounded-full border px-3 py-1.5 text-xs backdrop-blur-sm transition-all duration-200">
-        点击展开查看更多
-      </div>
-    </div>
-  </div>
-</div>
-
-
-<script>
-(function() {
-  const codeId = 'code-49';
-  const copyBtn = document.querySelector('.copy-code-btn[data-code-id="' + codeId + '"]');
-  const collapseBtn = document.querySelector('.collapse-code-btn[data-code-id="' + codeId + '"]');
-  const codeContainer = document.getElementById(codeId);
-
-  if (!codeContainer) return;
-
-  
-  if (copyBtn) {
-    const copyIcon = copyBtn.querySelector('.copy-icon');
-    const copyText = copyBtn.querySelector('.copy-text');
-
-    copyBtn.addEventListener('click', async function() {
-      try {
-        
-        let codeText = '';
-
-        
-        const codeTableCell = codeContainer.querySelector('.lntd:last-child code');
-        if (codeTableCell) {
-          codeText = codeTableCell.textContent || codeTableCell.innerText;
-        } else {
-          
-          const codeElement = codeContainer.querySelector('code');
-          if (codeElement) {
-            
-            const hasInlineLineNumbers = codeElement.querySelector('.ln');
-            if (hasInlineLineNumbers) {
-              
-              const codeLines = codeElement.querySelectorAll('.cl');
-              if (codeLines.length > 0) {
-                codeText = Array.from(codeLines)
-                  .map(line => {
-                    const text = line.textContent || line.innerText;
-                    
-                    return text.replace(/\n+$/, '');
-                  })
-                  .join('\n')
-                  .replace(/\n+$/, ''); 
-              } else {
-                
-                const allText = codeElement.textContent || codeElement.innerText;
-                codeText = allText.replace(/^\d+/gm, '').replace(/^\s+/gm, '');
-              }
-            } else {
-              
-              codeText = codeElement.textContent || codeElement.innerText;
-            }
-          } else {
-            
-            codeText = codeContainer.textContent || codeContainer.innerText;
-          }
-        }
-
-        
-        codeText = codeText.trim();
-
-        
-        await navigator.clipboard.writeText(codeText);
-
-        
-        copyIcon.innerHTML = `\n  \u003csvg class=\u0022h-3 w-3\u0022\n    fill=\u0022none\u0022\n    stroke=\u0022currentColor\u0022\n    viewBox=\u00220 0 24 24\u0022\u003e\u003cpath stroke-linecap=\u0022round\u0022 stroke-linejoin=\u0022round\u0022 stroke-width=\u00222\u0022 d=\u0022M5 13l4 4L19 7\u0022 \/\u003e\n\u003c\/svg\u003e`;
-        if (copyText) {
-          copyText.textContent = '已复制';
-        }
-        copyBtn.classList.add('text-green-600');
-
-        
-        setTimeout(() => {
-          copyIcon.innerHTML = `\n  \u003csvg class=\u0022h-3 w-3\u0022\n    fill=\u0022none\u0022\n    stroke=\u0022currentColor\u0022\n    viewBox=\u00220 0 24 24\u0022\u003e\u003cpath stroke-linecap=\u0022round\u0022 stroke-linejoin=\u0022round\u0022 stroke-width=\u00222\u0022 d=\u0022M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z\u0022 \/\u003e\n\u003c\/svg\u003e`;
-          if (copyText) {
-            copyText.textContent = '复制';
-          }
-          copyBtn.classList.remove('text-green-600');
-        }, 2000);
-
-      } catch (err) {
-        console.error('复制失败:', err);
-
-        
-        const range = document.createRange();
-        const codeElement = codeContainer.querySelector('code') || codeContainer;
-        range.selectNodeContents(codeElement);
-        const selection = window.getSelection();
-        selection.removeAllRanges();
-        selection.addRange(range);
-
-        
-        if (copyText) {
-          copyText.textContent = '已选择';
-        }
-
-        setTimeout(() => {
-          if (copyText) {
-            copyText.textContent = '复制';
-          }
-          selection.removeAllRanges();
-        }, 2000);
-      }
-    });
-  }
-
-  
-  if (collapseBtn) {
-    const collapseIcon = collapseBtn.querySelector('.collapse-icon');
-    const collapseText = collapseBtn.querySelector('.collapse-text');
-    const collapseOverlay = codeContainer.querySelector('.collapse-overlay');
-
-    
-    let codeElement = codeContainer.querySelector('pre.chroma');
-    if (!codeElement) {
-      codeElement = codeContainer.querySelector('pre');
-    }
-
-    const defaultState = collapseBtn.dataset.defaultState || 'expanded';
-    const isCollapsedAttr = collapseBtn.dataset.collapsed === 'true';
-    const autoCollapseLines = parseInt(collapseBtn.dataset.autoCollapseLines) || 30;
-    const autoCollapseHeight = parseInt(collapseBtn.dataset.autoCollapseHeight) || 400;
-    const collapsedHeight = parseInt(collapseBtn.dataset.collapsedHeight) || 120;
-
-    let isCollapsed = false;
-
-    
-    function initCollapse() {
-      
-      const shouldCollapse = isCollapsedAttr ||
-                           defaultState === 'collapsed' ||
-                           shouldAutoCollapse();
-
-      if (shouldCollapse) {
-        setCollapsed(true, false); 
-      }
-    }
-
-    function shouldAutoCollapse() {
-      
-      if (codeElement) {
-        const lines = codeElement.querySelectorAll('.line, .cl');
-        const height = codeElement.offsetHeight;
-        return lines.length > autoCollapseLines || height > autoCollapseHeight;
-      }
-
-      
-      const containerHeight = codeContainer.offsetHeight;
-      if (containerHeight > autoCollapseHeight) {
-        return true;
-      }
-
-      
-      const textContent = codeContainer.textContent || codeContainer.innerText || '';
-      const estimatedLines = textContent.split('\n').length;
-      return estimatedLines > autoCollapseLines;
-    }
-
-    function setCollapsed(collapsed, animate = true) {
-      if (!collapseOverlay) return;
-
-      isCollapsed = collapsed;
-
-      if (collapsed) {
-        
-        codeContainer.style.maxHeight = collapsedHeight + 'px';
-        codeContainer.style.overflow = 'hidden';
-        collapseOverlay.style.opacity = '1';
-        collapseOverlay.style.pointerEvents = 'auto';
-
-        
-        collapseIcon.innerHTML = `\n  \u003csvg class=\u0022h-3 w-3\u0022\n    fill=\u0022none\u0022\n    stroke=\u0022currentColor\u0022\n    viewBox=\u00220 0 24 24\u0022\u003e\u003cpath stroke-linecap=\u0022round\u0022 stroke-linejoin=\u0022round\u0022 stroke-width=\u00222\u0022 d=\u0022M19 9l-7 7-7-7\u0022 \/\u003e\n\u003c\/svg\u003e`;
-        if (collapseText) {
-          collapseText.textContent = '展开';
-        }
-        collapseBtn.title = '展开';
-
-      } else {
-        
-        codeContainer.style.maxHeight = '';
-        codeContainer.style.overflow = '';
-        collapseOverlay.style.opacity = '0';
-        collapseOverlay.style.pointerEvents = 'none';
-
-        
-        collapseIcon.innerHTML = `\n  \u003csvg class=\u0022h-3 w-3\u0022\n    fill=\u0022none\u0022\n    stroke=\u0022currentColor\u0022\n    viewBox=\u00220 0 24 24\u0022\u003e\u003cpath fill=\u0022currentColor\u0022 d=\u0022M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6l-6 6z\u0022\/\u003e\u003c\/svg\u003e`;
-        if (collapseText) {
-          collapseText.textContent = '折叠';
-        }
-        collapseBtn.title = '折叠';
-      }
-
-      
-      if (animate) {
-        codeContainer.style.transition = 'max-height 0.3s ease-out';
-        setTimeout(() => {
-          codeContainer.style.transition = '';
-        }, 300);
-      }
-    }
-
-    function toggleCollapse() {
-      setCollapsed(!isCollapsed, true);
-    }
-
-    
-    collapseBtn.addEventListener('click', toggleCollapse);
-
-    
-    if (collapseOverlay) {
-      collapseOverlay.addEventListener('click', () => {
-        if (isCollapsed) {
-          setCollapsed(false, true);
-        }
-      });
-    }
-
-    
-    initCollapse();
-  }
-})();
-</script>
-<p>变量 index_to_remove 只是用来保存临时结果。有时这种变量可以通过得到后立即处理它而消除。</p>
-<div
-  class="code-block-container border-border bg-card my-6 overflow-hidden rounded-xl border shadow-sm transition-all duration-200 ease-out hover:-translate-y-0.5 hover:shadow-md">
-  
-  <div
-    class="code-block-header bg-muted/30 border-border flex items-center justify-between border-b px-4 py-3">
-    
-    <div class="flex items-center gap-2">
-      <div class="text-muted-foreground flex-shrink-0">
-        
-  <svg class="h-4 w-4"
-    fill="none"
-    stroke="currentColor"
-    viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
-</svg>
-      </div>
-      <span class="text-muted-foreground text-sm font-medium">
-        JAVASCRIPT
-      </span>
-    </div>
-
-    
-    <div class="flex items-center gap-2">
-      <button
-          class="collapse-code-btn text-muted-foreground hover:text-primary hover:bg-primary/10 focus:ring-primary/20 flex items-center gap-1.5 rounded-md px-2 py-1 text-xs font-medium transition-all duration-200 ease-out focus:ring-2 focus:outline-none"
-          data-code-id="code-50"
-          data-default-state="expanded"
-          data-collapsed="false"
-          data-auto-collapse-lines="30"
-          data-auto-collapse-height="400"
-          data-collapsed-height="120"
-          title="折叠"
-          aria-label="折叠">
-          <span class="collapse-icon">
-            
-  <svg class="h-3 w-3"
-    fill="none"
-    stroke="currentColor"
-    viewBox="0 0 24 24"><path fill="currentColor" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6l-6 6z"/></svg>
-          </span>
-          <span class="collapse-text hidden sm:inline"
-            >折叠</span
-          >
-        </button>
-      <button
-        class="copy-code-btn text-muted-foreground hover:text-primary hover:bg-primary/10 focus:ring-primary/20 flex items-center gap-1.5 rounded-md px-2 py-1 text-xs font-medium transition-all duration-200 ease-out focus:ring-2 focus:outline-none"
-        data-code-id="code-50"
-        title="复制"
-        aria-label="复制">
-        <span class="copy-icon">
-          
-  <svg class="h-3 w-3"
-    fill="none"
-    stroke="currentColor"
-    viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z" />
-</svg>
-        </span>
-        <span class="copy-text hidden sm:inline"
-          >复制</span
-        >
-      </button>
-    </div>
-  </div>
-
-  
-  <div class="code-block-content relative" id="code-50">
-    <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-javascript" data-lang="javascript"><span class="line"><span class="cl"><span class="kd">var</span> <span class="nx">remove_one</span> <span class="o">=</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">array</span><span class="p">,</span> <span class="nx">value_to_remove</span><span class="p">)</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">    <span class="k">for</span> <span class="p">(</span><span class="kd">var</span> <span class="nx">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="nx">i</span> <span class="o">&lt;</span> <span class="nx">array</span><span class="p">.</span><span class="nx">length</span><span class="p">;</span> <span class="nx">i</span> <span class="o">+=</span> <span class="mi">1</span><span class="p">)</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">        <span class="k">if</span> <span class="p">(</span><span class="nx">array</span><span class="p">[</span><span class="nx">i</span><span class="p">]</span> <span class="o">===</span> <span class="nx">value_to_remove</span><span class="p">)</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">            <span class="nx">array</span><span class="p">.</span><span class="nx">splice</span><span class="p">(</span><span class="nx">i</span><span class="p">,</span> <span class="mi">1</span><span class="p">);</span>
-</span></span><span class="line"><span class="cl">            <span class="k">return</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">        <span class="p">}</span>
-</span></span><span class="line"><span class="cl">    <span class="p">}</span>
-</span></span><span class="line"><span class="cl"><span class="p">};</span></span></span></code></pre></div>
-    
-    <div
-      class="collapse-overlay to-card/90 pointer-events-none absolute inset-0 bg-gradient-to-b from-transparent via-transparent opacity-0 transition-opacity duration-300">
-      <div
-        class="text-muted-foreground bg-card/80 border-border/50 hover:bg-primary/10 hover:text-primary hover:border-primary/30 absolute bottom-4 left-1/2 -translate-x-1/2 cursor-pointer rounded-full border px-3 py-1.5 text-xs backdrop-blur-sm transition-all duration-200">
-        点击展开查看更多
-      </div>
-    </div>
-  </div>
-</div>
-
-
-<script>
-(function() {
-  const codeId = 'code-50';
-  const copyBtn = document.querySelector('.copy-code-btn[data-code-id="' + codeId + '"]');
-  const collapseBtn = document.querySelector('.collapse-code-btn[data-code-id="' + codeId + '"]');
-  const codeContainer = document.getElementById(codeId);
-
-  if (!codeContainer) return;
-
-  
-  if (copyBtn) {
-    const copyIcon = copyBtn.querySelector('.copy-icon');
-    const copyText = copyBtn.querySelector('.copy-text');
-
-    copyBtn.addEventListener('click', async function() {
-      try {
-        
-        let codeText = '';
-
-        
-        const codeTableCell = codeContainer.querySelector('.lntd:last-child code');
-        if (codeTableCell) {
-          codeText = codeTableCell.textContent || codeTableCell.innerText;
-        } else {
-          
-          const codeElement = codeContainer.querySelector('code');
-          if (codeElement) {
-            
-            const hasInlineLineNumbers = codeElement.querySelector('.ln');
-            if (hasInlineLineNumbers) {
-              
-              const codeLines = codeElement.querySelectorAll('.cl');
-              if (codeLines.length > 0) {
-                codeText = Array.from(codeLines)
-                  .map(line => {
-                    const text = line.textContent || line.innerText;
-                    
-                    return text.replace(/\n+$/, '');
-                  })
-                  .join('\n')
-                  .replace(/\n+$/, ''); 
-              } else {
-                
-                const allText = codeElement.textContent || codeElement.innerText;
-                codeText = allText.replace(/^\d+/gm, '').replace(/^\s+/gm, '');
-              }
-            } else {
-              
-              codeText = codeElement.textContent || codeElement.innerText;
-            }
-          } else {
-            
-            codeText = codeContainer.textContent || codeContainer.innerText;
-          }
-        }
-
-        
-        codeText = codeText.trim();
-
-        
-        await navigator.clipboard.writeText(codeText);
-
-        
-        copyIcon.innerHTML = `\n  \u003csvg class=\u0022h-3 w-3\u0022\n    fill=\u0022none\u0022\n    stroke=\u0022currentColor\u0022\n    viewBox=\u00220 0 24 24\u0022\u003e\u003cpath stroke-linecap=\u0022round\u0022 stroke-linejoin=\u0022round\u0022 stroke-width=\u00222\u0022 d=\u0022M5 13l4 4L19 7\u0022 \/\u003e\n\u003c\/svg\u003e`;
-        if (copyText) {
-          copyText.textContent = '已复制';
-        }
-        copyBtn.classList.add('text-green-600');
-
-        
-        setTimeout(() => {
-          copyIcon.innerHTML = `\n  \u003csvg class=\u0022h-3 w-3\u0022\n    fill=\u0022none\u0022\n    stroke=\u0022currentColor\u0022\n    viewBox=\u00220 0 24 24\u0022\u003e\u003cpath stroke-linecap=\u0022round\u0022 stroke-linejoin=\u0022round\u0022 stroke-width=\u00222\u0022 d=\u0022M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z\u0022 \/\u003e\n\u003c\/svg\u003e`;
-          if (copyText) {
-            copyText.textContent = '复制';
-          }
-          copyBtn.classList.remove('text-green-600');
-        }, 2000);
-
-      } catch (err) {
-        console.error('复制失败:', err);
-
-        
-        const range = document.createRange();
-        const codeElement = codeContainer.querySelector('code') || codeContainer;
-        range.selectNodeContents(codeElement);
-        const selection = window.getSelection();
-        selection.removeAllRanges();
-        selection.addRange(range);
-
-        
-        if (copyText) {
-          copyText.textContent = '已选择';
-        }
-
-        setTimeout(() => {
-          if (copyText) {
-            copyText.textContent = '复制';
-          }
-          selection.removeAllRanges();
-        }, 2000);
-      }
-    });
-  }
-
-  
-  if (collapseBtn) {
-    const collapseIcon = collapseBtn.querySelector('.collapse-icon');
-    const collapseText = collapseBtn.querySelector('.collapse-text');
-    const collapseOverlay = codeContainer.querySelector('.collapse-overlay');
-
-    
-    let codeElement = codeContainer.querySelector('pre.chroma');
-    if (!codeElement) {
-      codeElement = codeContainer.querySelector('pre');
-    }
-
-    const defaultState = collapseBtn.dataset.defaultState || 'expanded';
-    const isCollapsedAttr = collapseBtn.dataset.collapsed === 'true';
-    const autoCollapseLines = parseInt(collapseBtn.dataset.autoCollapseLines) || 30;
-    const autoCollapseHeight = parseInt(collapseBtn.dataset.autoCollapseHeight) || 400;
-    const collapsedHeight = parseInt(collapseBtn.dataset.collapsedHeight) || 120;
-
-    let isCollapsed = false;
-
-    
-    function initCollapse() {
-      
-      const shouldCollapse = isCollapsedAttr ||
-                           defaultState === 'collapsed' ||
-                           shouldAutoCollapse();
-
-      if (shouldCollapse) {
-        setCollapsed(true, false); 
-      }
-    }
-
-    function shouldAutoCollapse() {
-      
-      if (codeElement) {
-        const lines = codeElement.querySelectorAll('.line, .cl');
-        const height = codeElement.offsetHeight;
-        return lines.length > autoCollapseLines || height > autoCollapseHeight;
-      }
-
-      
-      const containerHeight = codeContainer.offsetHeight;
-      if (containerHeight > autoCollapseHeight) {
-        return true;
-      }
-
-      
-      const textContent = codeContainer.textContent || codeContainer.innerText || '';
-      const estimatedLines = textContent.split('\n').length;
-      return estimatedLines > autoCollapseLines;
-    }
-
-    function setCollapsed(collapsed, animate = true) {
-      if (!collapseOverlay) return;
-
-      isCollapsed = collapsed;
-
-      if (collapsed) {
-        
-        codeContainer.style.maxHeight = collapsedHeight + 'px';
-        codeContainer.style.overflow = 'hidden';
-        collapseOverlay.style.opacity = '1';
-        collapseOverlay.style.pointerEvents = 'auto';
-
-        
-        collapseIcon.innerHTML = `\n  \u003csvg class=\u0022h-3 w-3\u0022\n    fill=\u0022none\u0022\n    stroke=\u0022currentColor\u0022\n    viewBox=\u00220 0 24 24\u0022\u003e\u003cpath stroke-linecap=\u0022round\u0022 stroke-linejoin=\u0022round\u0022 stroke-width=\u00222\u0022 d=\u0022M19 9l-7 7-7-7\u0022 \/\u003e\n\u003c\/svg\u003e`;
-        if (collapseText) {
-          collapseText.textContent = '展开';
-        }
-        collapseBtn.title = '展开';
-
-      } else {
-        
-        codeContainer.style.maxHeight = '';
-        codeContainer.style.overflow = '';
-        collapseOverlay.style.opacity = '0';
-        collapseOverlay.style.pointerEvents = 'none';
-
-        
-        collapseIcon.innerHTML = `\n  \u003csvg class=\u0022h-3 w-3\u0022\n    fill=\u0022none\u0022\n    stroke=\u0022currentColor\u0022\n    viewBox=\u00220 0 24 24\u0022\u003e\u003cpath fill=\u0022currentColor\u0022 d=\u0022M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6l-6 6z\u0022\/\u003e\u003c\/svg\u003e`;
-        if (collapseText) {
-          collapseText.textContent = '折叠';
-        }
-        collapseBtn.title = '折叠';
-      }
-
-      
-      if (animate) {
-        codeContainer.style.transition = 'max-height 0.3s ease-out';
-        setTimeout(() => {
-          codeContainer.style.transition = '';
-        }, 300);
-      }
-    }
-
-    function toggleCollapse() {
-      setCollapsed(!isCollapsed, true);
-    }
-
-    
-    collapseBtn.addEventListener('click', toggleCollapse);
-
-    
-    if (collapseOverlay) {
-      collapseOverlay.addEventListener('click', () => {
-        if (isCollapsed) {
-          setCollapsed(false, true);
-        }
-      });
-    }
-
-    
-    initCollapse();
-  }
-})();
-</script>
-<p>通过让代码提前返回，我们不再需要 <code>index_to_remove</code>，并且大幅简化了代码。</p>
 <p>通常来讲，“速战速决” 是一个好的策略。</p>
 <h4 id="减少控制流变量">减少控制流变量</h4>
-<p>有些时候你会在代码的循环中见到如下模式：</p>
-<div
-  class="code-block-container border-border bg-card my-6 overflow-hidden rounded-xl border shadow-sm transition-all duration-200 ease-out hover:-translate-y-0.5 hover:shadow-md">
-  
-  <div
-    class="code-block-header bg-muted/30 border-border flex items-center justify-between border-b px-4 py-3">
-    
-    <div class="flex items-center gap-2">
-      <div class="text-muted-foreground flex-shrink-0">
-        
-  <svg class="h-4 w-4"
-    fill="none"
-    stroke="currentColor"
-    viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
-</svg>
-      </div>
-      <span class="text-muted-foreground text-sm font-medium">
-        JAVASCRIPT
-      </span>
-    </div>
-
-    
-    <div class="flex items-center gap-2">
-      <button
-          class="collapse-code-btn text-muted-foreground hover:text-primary hover:bg-primary/10 focus:ring-primary/20 flex items-center gap-1.5 rounded-md px-2 py-1 text-xs font-medium transition-all duration-200 ease-out focus:ring-2 focus:outline-none"
-          data-code-id="code-51"
-          data-default-state="expanded"
-          data-collapsed="false"
-          data-auto-collapse-lines="30"
-          data-auto-collapse-height="400"
-          data-collapsed-height="120"
-          title="折叠"
-          aria-label="折叠">
-          <span class="collapse-icon">
-            
-  <svg class="h-3 w-3"
-    fill="none"
-    stroke="currentColor"
-    viewBox="0 0 24 24"><path fill="currentColor" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6l-6 6z"/></svg>
-          </span>
-          <span class="collapse-text hidden sm:inline"
-            >折叠</span
-          >
-        </button>
-      <button
-        class="copy-code-btn text-muted-foreground hover:text-primary hover:bg-primary/10 focus:ring-primary/20 flex items-center gap-1.5 rounded-md px-2 py-1 text-xs font-medium transition-all duration-200 ease-out focus:ring-2 focus:outline-none"
-        data-code-id="code-51"
-        title="复制"
-        aria-label="复制">
-        <span class="copy-icon">
-          
-  <svg class="h-3 w-3"
-    fill="none"
-    stroke="currentColor"
-    viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z" />
-</svg>
-        </span>
-        <span class="copy-text hidden sm:inline"
-          >复制</span
-        >
-      </button>
-    </div>
-  </div>
-
-  
-  <div class="code-block-content relative" id="code-51">
-    <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-javascript" data-lang="javascript"><span class="line"><span class="cl"><span class="kr">boolean</span> <span class="nx">done</span> <span class="o">=</span> <span class="kc">false</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl"><span class="k">while</span> <span class="p">(</span><span class="cm">/* condition */</span> <span class="o">&amp;&amp;</span> <span class="o">!</span><span class="nx">done</span><span class="p">)</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">    <span class="p">...</span>
-</span></span><span class="line"><span class="cl">    <span class="k">if</span> <span class="p">(...)</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">        <span class="nx">done</span> <span class="o">=</span> <span class="kc">true</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">        <span class="k">continue</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">    <span class="p">}</span>
-</span></span><span class="line"><span class="cl"><span class="p">}</span></span></span></code></pre></div>
-    
-    <div
-      class="collapse-overlay to-card/90 pointer-events-none absolute inset-0 bg-gradient-to-b from-transparent via-transparent opacity-0 transition-opacity duration-300">
-      <div
-        class="text-muted-foreground bg-card/80 border-border/50 hover:bg-primary/10 hover:text-primary hover:border-primary/30 absolute bottom-4 left-1/2 -translate-x-1/2 cursor-pointer rounded-full border px-3 py-1.5 text-xs backdrop-blur-sm transition-all duration-200">
-        点击展开查看更多
-      </div>
-    </div>
-  </div>
-</div>
-
-
-<script>
-(function() {
-  const codeId = 'code-51';
-  const copyBtn = document.querySelector('.copy-code-btn[data-code-id="' + codeId + '"]');
-  const collapseBtn = document.querySelector('.collapse-code-btn[data-code-id="' + codeId + '"]');
-  const codeContainer = document.getElementById(codeId);
-
-  if (!codeContainer) return;
-
-  
-  if (copyBtn) {
-    const copyIcon = copyBtn.querySelector('.copy-icon');
-    const copyText = copyBtn.querySelector('.copy-text');
-
-    copyBtn.addEventListener('click', async function() {
-      try {
-        
-        let codeText = '';
-
-        
-        const codeTableCell = codeContainer.querySelector('.lntd:last-child code');
-        if (codeTableCell) {
-          codeText = codeTableCell.textContent || codeTableCell.innerText;
-        } else {
-          
-          const codeElement = codeContainer.querySelector('code');
-          if (codeElement) {
-            
-            const hasInlineLineNumbers = codeElement.querySelector('.ln');
-            if (hasInlineLineNumbers) {
-              
-              const codeLines = codeElement.querySelectorAll('.cl');
-              if (codeLines.length > 0) {
-                codeText = Array.from(codeLines)
-                  .map(line => {
-                    const text = line.textContent || line.innerText;
-                    
-                    return text.replace(/\n+$/, '');
-                  })
-                  .join('\n')
-                  .replace(/\n+$/, ''); 
-              } else {
-                
-                const allText = codeElement.textContent || codeElement.innerText;
-                codeText = allText.replace(/^\d+/gm, '').replace(/^\s+/gm, '');
-              }
-            } else {
-              
-              codeText = codeElement.textContent || codeElement.innerText;
-            }
-          } else {
-            
-            codeText = codeContainer.textContent || codeContainer.innerText;
-          }
-        }
-
-        
-        codeText = codeText.trim();
-
-        
-        await navigator.clipboard.writeText(codeText);
-
-        
-        copyIcon.innerHTML = `\n  \u003csvg class=\u0022h-3 w-3\u0022\n    fill=\u0022none\u0022\n    stroke=\u0022currentColor\u0022\n    viewBox=\u00220 0 24 24\u0022\u003e\u003cpath stroke-linecap=\u0022round\u0022 stroke-linejoin=\u0022round\u0022 stroke-width=\u00222\u0022 d=\u0022M5 13l4 4L19 7\u0022 \/\u003e\n\u003c\/svg\u003e`;
-        if (copyText) {
-          copyText.textContent = '已复制';
-        }
-        copyBtn.classList.add('text-green-600');
-
-        
-        setTimeout(() => {
-          copyIcon.innerHTML = `\n  \u003csvg class=\u0022h-3 w-3\u0022\n    fill=\u0022none\u0022\n    stroke=\u0022currentColor\u0022\n    viewBox=\u00220 0 24 24\u0022\u003e\u003cpath stroke-linecap=\u0022round\u0022 stroke-linejoin=\u0022round\u0022 stroke-width=\u00222\u0022 d=\u0022M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z\u0022 \/\u003e\n\u003c\/svg\u003e`;
-          if (copyText) {
-            copyText.textContent = '复制';
-          }
-          copyBtn.classList.remove('text-green-600');
-        }, 2000);
-
-      } catch (err) {
-        console.error('复制失败:', err);
-
-        
-        const range = document.createRange();
-        const codeElement = codeContainer.querySelector('code') || codeContainer;
-        range.selectNodeContents(codeElement);
-        const selection = window.getSelection();
-        selection.removeAllRanges();
-        selection.addRange(range);
-
-        
-        if (copyText) {
-          copyText.textContent = '已选择';
-        }
-
-        setTimeout(() => {
-          if (copyText) {
-            copyText.textContent = '复制';
-          }
-          selection.removeAllRanges();
-        }, 2000);
-      }
-    });
-  }
-
-  
-  if (collapseBtn) {
-    const collapseIcon = collapseBtn.querySelector('.collapse-icon');
-    const collapseText = collapseBtn.querySelector('.collapse-text');
-    const collapseOverlay = codeContainer.querySelector('.collapse-overlay');
-
-    
-    let codeElement = codeContainer.querySelector('pre.chroma');
-    if (!codeElement) {
-      codeElement = codeContainer.querySelector('pre');
-    }
-
-    const defaultState = collapseBtn.dataset.defaultState || 'expanded';
-    const isCollapsedAttr = collapseBtn.dataset.collapsed === 'true';
-    const autoCollapseLines = parseInt(collapseBtn.dataset.autoCollapseLines) || 30;
-    const autoCollapseHeight = parseInt(collapseBtn.dataset.autoCollapseHeight) || 400;
-    const collapsedHeight = parseInt(collapseBtn.dataset.collapsedHeight) || 120;
-
-    let isCollapsed = false;
-
-    
-    function initCollapse() {
-      
-      const shouldCollapse = isCollapsedAttr ||
-                           defaultState === 'collapsed' ||
-                           shouldAutoCollapse();
-
-      if (shouldCollapse) {
-        setCollapsed(true, false); 
-      }
-    }
-
-    function shouldAutoCollapse() {
-      
-      if (codeElement) {
-        const lines = codeElement.querySelectorAll('.line, .cl');
-        const height = codeElement.offsetHeight;
-        return lines.length > autoCollapseLines || height > autoCollapseHeight;
-      }
-
-      
-      const containerHeight = codeContainer.offsetHeight;
-      if (containerHeight > autoCollapseHeight) {
-        return true;
-      }
-
-      
-      const textContent = codeContainer.textContent || codeContainer.innerText || '';
-      const estimatedLines = textContent.split('\n').length;
-      return estimatedLines > autoCollapseLines;
-    }
-
-    function setCollapsed(collapsed, animate = true) {
-      if (!collapseOverlay) return;
-
-      isCollapsed = collapsed;
-
-      if (collapsed) {
-        
-        codeContainer.style.maxHeight = collapsedHeight + 'px';
-        codeContainer.style.overflow = 'hidden';
-        collapseOverlay.style.opacity = '1';
-        collapseOverlay.style.pointerEvents = 'auto';
-
-        
-        collapseIcon.innerHTML = `\n  \u003csvg class=\u0022h-3 w-3\u0022\n    fill=\u0022none\u0022\n    stroke=\u0022currentColor\u0022\n    viewBox=\u00220 0 24 24\u0022\u003e\u003cpath stroke-linecap=\u0022round\u0022 stroke-linejoin=\u0022round\u0022 stroke-width=\u00222\u0022 d=\u0022M19 9l-7 7-7-7\u0022 \/\u003e\n\u003c\/svg\u003e`;
-        if (collapseText) {
-          collapseText.textContent = '展开';
-        }
-        collapseBtn.title = '展开';
-
-      } else {
-        
-        codeContainer.style.maxHeight = '';
-        codeContainer.style.overflow = '';
-        collapseOverlay.style.opacity = '0';
-        collapseOverlay.style.pointerEvents = 'none';
-
-        
-        collapseIcon.innerHTML = `\n  \u003csvg class=\u0022h-3 w-3\u0022\n    fill=\u0022none\u0022\n    stroke=\u0022currentColor\u0022\n    viewBox=\u00220 0 24 24\u0022\u003e\u003cpath fill=\u0022currentColor\u0022 d=\u0022M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6l-6 6z\u0022\/\u003e\u003c\/svg\u003e`;
-        if (collapseText) {
-          collapseText.textContent = '折叠';
-        }
-        collapseBtn.title = '折叠';
-      }
-
-      
-      if (animate) {
-        codeContainer.style.transition = 'max-height 0.3s ease-out';
-        setTimeout(() => {
-          codeContainer.style.transition = '';
-        }, 300);
-      }
-    }
-
-    function toggleCollapse() {
-      setCollapsed(!isCollapsed, true);
-    }
-
-    
-    collapseBtn.addEventListener('click', toggleCollapse);
-
-    
-    if (collapseOverlay) {
-      collapseOverlay.addEventListener('click', () => {
-        if (isCollapsed) {
-          setCollapsed(false, true);
-        }
-      });
-    }
-
-    
-    initCollapse();
-  }
-})();
-</script>
-<p>甚至可以在循环里多处把变量 done 设置为 true。</p>
-<p>这样的代码通常是为了满足某些心照不宣的规则，即你不该从循环中间跳出去。根本就没有这样的规则！</p>
-<p>像 done 这样的变量，称为 “控制流变量”。它们唯一的目的就是控制程序的执行 —— 它们没有包含任何程序的数据。在我们的经验中，控制流变量通常可以通过更好地运用结构化编程而消除。</p>
-<div
-  class="code-block-container border-border bg-card my-6 overflow-hidden rounded-xl border shadow-sm transition-all duration-200 ease-out hover:-translate-y-0.5 hover:shadow-md">
-  
-  <div
-    class="code-block-header bg-muted/30 border-border flex items-center justify-between border-b px-4 py-3">
-    
-    <div class="flex items-center gap-2">
-      <div class="text-muted-foreground flex-shrink-0">
-        
-  <svg class="h-4 w-4"
-    fill="none"
-    stroke="currentColor"
-    viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
-</svg>
-      </div>
-      <span class="text-muted-foreground text-sm font-medium">
-        JAVASCRIPT
-      </span>
-    </div>
-
-    
-    <div class="flex items-center gap-2">
-      <button
-          class="collapse-code-btn text-muted-foreground hover:text-primary hover:bg-primary/10 focus:ring-primary/20 flex items-center gap-1.5 rounded-md px-2 py-1 text-xs font-medium transition-all duration-200 ease-out focus:ring-2 focus:outline-none"
-          data-code-id="code-52"
-          data-default-state="expanded"
-          data-collapsed="false"
-          data-auto-collapse-lines="30"
-          data-auto-collapse-height="400"
-          data-collapsed-height="120"
-          title="折叠"
-          aria-label="折叠">
-          <span class="collapse-icon">
-            
-  <svg class="h-3 w-3"
-    fill="none"
-    stroke="currentColor"
-    viewBox="0 0 24 24"><path fill="currentColor" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6l-6 6z"/></svg>
-          </span>
-          <span class="collapse-text hidden sm:inline"
-            >折叠</span
-          >
-        </button>
-      <button
-        class="copy-code-btn text-muted-foreground hover:text-primary hover:bg-primary/10 focus:ring-primary/20 flex items-center gap-1.5 rounded-md px-2 py-1 text-xs font-medium transition-all duration-200 ease-out focus:ring-2 focus:outline-none"
-        data-code-id="code-52"
-        title="复制"
-        aria-label="复制">
-        <span class="copy-icon">
-          
-  <svg class="h-3 w-3"
-    fill="none"
-    stroke="currentColor"
-    viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z" />
-</svg>
-        </span>
-        <span class="copy-text hidden sm:inline"
-          >复制</span
-        >
-      </button>
-    </div>
-  </div>
-
-  
-  <div class="code-block-content relative" id="code-52">
-    <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-javascript" data-lang="javascript"><span class="line"><span class="cl"><span class="k">while</span> <span class="p">(</span><span class="cm">/* condition */</span><span class="p">)</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">    <span class="p">...</span>
-</span></span><span class="line"><span class="cl">    <span class="k">if</span> <span class="p">(...)</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">        <span class="k">break</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">    <span class="p">}</span>
-</span></span><span class="line"><span class="cl"><span class="p">}</span></span></span></code></pre></div>
-    
-    <div
-      class="collapse-overlay to-card/90 pointer-events-none absolute inset-0 bg-gradient-to-b from-transparent via-transparent opacity-0 transition-opacity duration-300">
-      <div
-        class="text-muted-foreground bg-card/80 border-border/50 hover:bg-primary/10 hover:text-primary hover:border-primary/30 absolute bottom-4 left-1/2 -translate-x-1/2 cursor-pointer rounded-full border px-3 py-1.5 text-xs backdrop-blur-sm transition-all duration-200">
-        点击展开查看更多
-      </div>
-    </div>
-  </div>
-</div>
-
-
-<script>
-(function() {
-  const codeId = 'code-52';
-  const copyBtn = document.querySelector('.copy-code-btn[data-code-id="' + codeId + '"]');
-  const collapseBtn = document.querySelector('.collapse-code-btn[data-code-id="' + codeId + '"]');
-  const codeContainer = document.getElementById(codeId);
-
-  if (!codeContainer) return;
-
-  
-  if (copyBtn) {
-    const copyIcon = copyBtn.querySelector('.copy-icon');
-    const copyText = copyBtn.querySelector('.copy-text');
-
-    copyBtn.addEventListener('click', async function() {
-      try {
-        
-        let codeText = '';
-
-        
-        const codeTableCell = codeContainer.querySelector('.lntd:last-child code');
-        if (codeTableCell) {
-          codeText = codeTableCell.textContent || codeTableCell.innerText;
-        } else {
-          
-          const codeElement = codeContainer.querySelector('code');
-          if (codeElement) {
-            
-            const hasInlineLineNumbers = codeElement.querySelector('.ln');
-            if (hasInlineLineNumbers) {
-              
-              const codeLines = codeElement.querySelectorAll('.cl');
-              if (codeLines.length > 0) {
-                codeText = Array.from(codeLines)
-                  .map(line => {
-                    const text = line.textContent || line.innerText;
-                    
-                    return text.replace(/\n+$/, '');
-                  })
-                  .join('\n')
-                  .replace(/\n+$/, ''); 
-              } else {
-                
-                const allText = codeElement.textContent || codeElement.innerText;
-                codeText = allText.replace(/^\d+/gm, '').replace(/^\s+/gm, '');
-              }
-            } else {
-              
-              codeText = codeElement.textContent || codeElement.innerText;
-            }
-          } else {
-            
-            codeText = codeContainer.textContent || codeContainer.innerText;
-          }
-        }
-
-        
-        codeText = codeText.trim();
-
-        
-        await navigator.clipboard.writeText(codeText);
-
-        
-        copyIcon.innerHTML = `\n  \u003csvg class=\u0022h-3 w-3\u0022\n    fill=\u0022none\u0022\n    stroke=\u0022currentColor\u0022\n    viewBox=\u00220 0 24 24\u0022\u003e\u003cpath stroke-linecap=\u0022round\u0022 stroke-linejoin=\u0022round\u0022 stroke-width=\u00222\u0022 d=\u0022M5 13l4 4L19 7\u0022 \/\u003e\n\u003c\/svg\u003e`;
-        if (copyText) {
-          copyText.textContent = '已复制';
-        }
-        copyBtn.classList.add('text-green-600');
-
-        
-        setTimeout(() => {
-          copyIcon.innerHTML = `\n  \u003csvg class=\u0022h-3 w-3\u0022\n    fill=\u0022none\u0022\n    stroke=\u0022currentColor\u0022\n    viewBox=\u00220 0 24 24\u0022\u003e\u003cpath stroke-linecap=\u0022round\u0022 stroke-linejoin=\u0022round\u0022 stroke-width=\u00222\u0022 d=\u0022M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z\u0022 \/\u003e\n\u003c\/svg\u003e`;
-          if (copyText) {
-            copyText.textContent = '复制';
-          }
-          copyBtn.classList.remove('text-green-600');
-        }, 2000);
-
-      } catch (err) {
-        console.error('复制失败:', err);
-
-        
-        const range = document.createRange();
-        const codeElement = codeContainer.querySelector('code') || codeContainer;
-        range.selectNodeContents(codeElement);
-        const selection = window.getSelection();
-        selection.removeAllRanges();
-        selection.addRange(range);
-
-        
-        if (copyText) {
-          copyText.textContent = '已选择';
-        }
-
-        setTimeout(() => {
-          if (copyText) {
-            copyText.textContent = '复制';
-          }
-          selection.removeAllRanges();
-        }, 2000);
-      }
-    });
-  }
-
-  
-  if (collapseBtn) {
-    const collapseIcon = collapseBtn.querySelector('.collapse-icon');
-    const collapseText = collapseBtn.querySelector('.collapse-text');
-    const collapseOverlay = codeContainer.querySelector('.collapse-overlay');
-
-    
-    let codeElement = codeContainer.querySelector('pre.chroma');
-    if (!codeElement) {
-      codeElement = codeContainer.querySelector('pre');
-    }
-
-    const defaultState = collapseBtn.dataset.defaultState || 'expanded';
-    const isCollapsedAttr = collapseBtn.dataset.collapsed === 'true';
-    const autoCollapseLines = parseInt(collapseBtn.dataset.autoCollapseLines) || 30;
-    const autoCollapseHeight = parseInt(collapseBtn.dataset.autoCollapseHeight) || 400;
-    const collapsedHeight = parseInt(collapseBtn.dataset.collapsedHeight) || 120;
-
-    let isCollapsed = false;
-
-    
-    function initCollapse() {
-      
-      const shouldCollapse = isCollapsedAttr ||
-                           defaultState === 'collapsed' ||
-                           shouldAutoCollapse();
-
-      if (shouldCollapse) {
-        setCollapsed(true, false); 
-      }
-    }
-
-    function shouldAutoCollapse() {
-      
-      if (codeElement) {
-        const lines = codeElement.querySelectorAll('.line, .cl');
-        const height = codeElement.offsetHeight;
-        return lines.length > autoCollapseLines || height > autoCollapseHeight;
-      }
-
-      
-      const containerHeight = codeContainer.offsetHeight;
-      if (containerHeight > autoCollapseHeight) {
-        return true;
-      }
-
-      
-      const textContent = codeContainer.textContent || codeContainer.innerText || '';
-      const estimatedLines = textContent.split('\n').length;
-      return estimatedLines > autoCollapseLines;
-    }
-
-    function setCollapsed(collapsed, animate = true) {
-      if (!collapseOverlay) return;
-
-      isCollapsed = collapsed;
-
-      if (collapsed) {
-        
-        codeContainer.style.maxHeight = collapsedHeight + 'px';
-        codeContainer.style.overflow = 'hidden';
-        collapseOverlay.style.opacity = '1';
-        collapseOverlay.style.pointerEvents = 'auto';
-
-        
-        collapseIcon.innerHTML = `\n  \u003csvg class=\u0022h-3 w-3\u0022\n    fill=\u0022none\u0022\n    stroke=\u0022currentColor\u0022\n    viewBox=\u00220 0 24 24\u0022\u003e\u003cpath stroke-linecap=\u0022round\u0022 stroke-linejoin=\u0022round\u0022 stroke-width=\u00222\u0022 d=\u0022M19 9l-7 7-7-7\u0022 \/\u003e\n\u003c\/svg\u003e`;
-        if (collapseText) {
-          collapseText.textContent = '展开';
-        }
-        collapseBtn.title = '展开';
-
-      } else {
-        
-        codeContainer.style.maxHeight = '';
-        codeContainer.style.overflow = '';
-        collapseOverlay.style.opacity = '0';
-        collapseOverlay.style.pointerEvents = 'none';
-
-        
-        collapseIcon.innerHTML = `\n  \u003csvg class=\u0022h-3 w-3\u0022\n    fill=\u0022none\u0022\n    stroke=\u0022currentColor\u0022\n    viewBox=\u00220 0 24 24\u0022\u003e\u003cpath fill=\u0022currentColor\u0022 d=\u0022M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6l-6 6z\u0022\/\u003e\u003c\/svg\u003e`;
-        if (collapseText) {
-          collapseText.textContent = '折叠';
-        }
-        collapseBtn.title = '折叠';
-      }
-
-      
-      if (animate) {
-        codeContainer.style.transition = 'max-height 0.3s ease-out';
-        setTimeout(() => {
-          codeContainer.style.transition = '';
-        }, 300);
-      }
-    }
-
-    function toggleCollapse() {
-      setCollapsed(!isCollapsed, true);
-    }
-
-    
-    collapseBtn.addEventListener('click', toggleCollapse);
-
-    
-    if (collapseOverlay) {
-      collapseOverlay.addEventListener('click', () => {
-        if (isCollapsed) {
-          setCollapsed(false, true);
-        }
-      });
-    }
-
-    
-    initCollapse();
-  }
-})();
-</script>
-<p>这个例子改起来很简单，但是如果有多个嵌套循环，一个简单的 break 根本不够怎办呢？在这种更复杂的情况下，解决方案通常包括把代码挪到一个新函数中（要么是循环中的代码，要么是整个循环）。</p>
+<p>控制流变量通常可以通过更好地运⽤结构化编程（即，使用<code>continue</code>和<code>break</code>）⽽消除。</p>
 <div
     class="alert alert-note my-6 overflow-hidden rounded-lg transition-all duration-200 ease-out hover:-translate-y-0.5 hover:shadow-md"
     style="background-color: color-mix(in srgb, var(--color-note) 10%, transparent);
@@ -19158,9 +17932,11 @@ document.addEventListener('DOMContentLoaded', function() {
 <p>把大文件拆分成小文件，或者把大函数拆分成小函数也是同样的道理。这么做的一个重要的动机就是数据（即变量）分离。</p>
 <p>但是不同的语言有不同的管理作用域的规则。</p>
 <h3 id="把定义下移">把定义下移</h3>
+<p>【把变量的定义下移到开始使用的地方，方便阅读和理解】</p>
 <p>原来的C语言要求把所有的变量定义放在函数或语句块的顶端。这个要求很令人遗憾，因为对于有很多变量的函数，它强迫读者马上思考所有这些变量，即使是要到很久之后才会用到它们。（C99和C++去掉了这个要求。）</p>
 <p>因为读者在读到后面之前不需要知道所有变量，所以可以简单地把每个定义移到对它的使用之前。</p>
 <h3 id="只写一次的变量更好">只写一次的变量更好</h3>
+<p>【变量的定义和赋值尽量靠近；一个变量不在很多地方进行修改】</p>
 <p>不断变化的变量更难让人理解。跟踪这种变量的值更有难度。</p>
 <p>要解决这种问题，我们有一个听起来怪怪的建议：<strong>只写一次的变量更好</strong>。</p>
 <p>“永久固定” 的变量更容易思考。当前，像这种常量：</p>
@@ -19188,7 +17964,7 @@ document.addEventListener('DOMContentLoaded', function() {
     <div class="flex items-center gap-2">
       <button
           class="collapse-code-btn text-muted-foreground hover:text-primary hover:bg-primary/10 focus:ring-primary/20 flex items-center gap-1.5 rounded-md px-2 py-1 text-xs font-medium transition-all duration-200 ease-out focus:ring-2 focus:outline-none"
-          data-code-id="code-53"
+          data-code-id="code-49"
           data-default-state="expanded"
           data-collapsed="false"
           data-auto-collapse-lines="30"
@@ -19209,7 +17985,7 @@ document.addEventListener('DOMContentLoaded', function() {
         </button>
       <button
         class="copy-code-btn text-muted-foreground hover:text-primary hover:bg-primary/10 focus:ring-primary/20 flex items-center gap-1.5 rounded-md px-2 py-1 text-xs font-medium transition-all duration-200 ease-out focus:ring-2 focus:outline-none"
-        data-code-id="code-53"
+        data-code-id="code-49"
         title="复制"
         aria-label="复制">
         <span class="copy-icon">
@@ -19228,7 +18004,7 @@ document.addEventListener('DOMContentLoaded', function() {
   </div>
 
   
-  <div class="code-block-content relative" id="code-53">
+  <div class="code-block-content relative" id="code-49">
     <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-c++" data-lang="c++"><span class="line"><span class="cl"><span class="k">static</span> <span class="k">const</span> <span class="kt">int</span> <span class="n">NUM_THREADS</span> <span class="o">=</span> <span class="mi">10</span><span class="p">;</span></span></span></code></pre></div>
     
     <div
@@ -19244,7 +18020,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
 <script>
 (function() {
-  const codeId = 'code-53';
+  const codeId = 'code-49';
   const copyBtn = document.querySelector('.copy-code-btn[data-code-id="' + codeId + '"]');
   const collapseBtn = document.querySelector('.collapse-code-btn[data-code-id="' + codeId + '"]');
   const codeContainer = document.getElementById(codeId);
@@ -19530,1260 +18306,76 @@ document.addEventListener('DOMContentLoaded', function() {
 
 <p>那么怎么做呢？能把一个变量改成只写一次吗？很多时间这需要修改代码的结构，就像你将在下面的例子中所见到的那样。</p>
 <h4 id="最后的例子">最后的例子</h4>
-<p>作为本章最后一个例子，我们要给出一个能演示目前为止我们所讨论过的多条原则的例子。</p>
-<p>假设你有一个网页，上面有几个文本输入字段，布置如下：</p>
-<div
-  class="code-block-container border-border bg-card my-6 overflow-hidden rounded-xl border shadow-sm transition-all duration-200 ease-out hover:-translate-y-0.5 hover:shadow-md">
-  
-  <div
-    class="code-block-header bg-muted/30 border-border flex items-center justify-between border-b px-4 py-3">
-    
-    <div class="flex items-center gap-2">
-      <div class="text-muted-foreground flex-shrink-0">
-        
-  <svg class="h-4 w-4"
-    fill="none"
-    stroke="currentColor"
-    viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
-</svg>
-      </div>
-      <span class="text-muted-foreground text-sm font-medium">
-        HTML
-      </span>
-    </div>
-
-    
-    <div class="flex items-center gap-2">
-      <button
-          class="collapse-code-btn text-muted-foreground hover:text-primary hover:bg-primary/10 focus:ring-primary/20 flex items-center gap-1.5 rounded-md px-2 py-1 text-xs font-medium transition-all duration-200 ease-out focus:ring-2 focus:outline-none"
-          data-code-id="code-54"
-          data-default-state="expanded"
-          data-collapsed="false"
-          data-auto-collapse-lines="30"
-          data-auto-collapse-height="400"
-          data-collapsed-height="120"
-          title="折叠"
-          aria-label="折叠">
-          <span class="collapse-icon">
-            
-  <svg class="h-3 w-3"
-    fill="none"
-    stroke="currentColor"
-    viewBox="0 0 24 24"><path fill="currentColor" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6l-6 6z"/></svg>
-          </span>
-          <span class="collapse-text hidden sm:inline"
-            >折叠</span
-          >
-        </button>
-      <button
-        class="copy-code-btn text-muted-foreground hover:text-primary hover:bg-primary/10 focus:ring-primary/20 flex items-center gap-1.5 rounded-md px-2 py-1 text-xs font-medium transition-all duration-200 ease-out focus:ring-2 focus:outline-none"
-        data-code-id="code-54"
-        title="复制"
-        aria-label="复制">
-        <span class="copy-icon">
-          
-  <svg class="h-3 w-3"
-    fill="none"
-    stroke="currentColor"
-    viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z" />
-</svg>
-        </span>
-        <span class="copy-text hidden sm:inline"
-          >复制</span
-        >
-      </button>
-    </div>
-  </div>
-
-  
-  <div class="code-block-content relative" id="code-54">
-    <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">&#34;text&#34;</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;input1&#34;</span> <span class="na">value</span><span class="o">=</span><span class="s">&#34;Dustin&#34;</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">&#34;text&#34;</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;input2&#34;</span> <span class="na">value</span><span class="o">=</span><span class="s">&#34;Trevor&#34;</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">&#34;text&#34;</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;input3&#34;</span> <span class="na">value</span><span class="o">=</span><span class="s">&#34;&#34;</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">&#34;text&#34;</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;input4&#34;</span> <span class="na">value</span><span class="o">=</span><span class="s">&#34;Melissa&#34;</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">...</span></span></code></pre></div>
-    
-    <div
-      class="collapse-overlay to-card/90 pointer-events-none absolute inset-0 bg-gradient-to-b from-transparent via-transparent opacity-0 transition-opacity duration-300">
-      <div
-        class="text-muted-foreground bg-card/80 border-border/50 hover:bg-primary/10 hover:text-primary hover:border-primary/30 absolute bottom-4 left-1/2 -translate-x-1/2 cursor-pointer rounded-full border px-3 py-1.5 text-xs backdrop-blur-sm transition-all duration-200">
-        点击展开查看更多
-      </div>
-    </div>
-  </div>
-</div>
-
-
-<script>
-(function() {
-  const codeId = 'code-54';
-  const copyBtn = document.querySelector('.copy-code-btn[data-code-id="' + codeId + '"]');
-  const collapseBtn = document.querySelector('.collapse-code-btn[data-code-id="' + codeId + '"]');
-  const codeContainer = document.getElementById(codeId);
-
-  if (!codeContainer) return;
-
-  
-  if (copyBtn) {
-    const copyIcon = copyBtn.querySelector('.copy-icon');
-    const copyText = copyBtn.querySelector('.copy-text');
-
-    copyBtn.addEventListener('click', async function() {
-      try {
-        
-        let codeText = '';
-
-        
-        const codeTableCell = codeContainer.querySelector('.lntd:last-child code');
-        if (codeTableCell) {
-          codeText = codeTableCell.textContent || codeTableCell.innerText;
-        } else {
-          
-          const codeElement = codeContainer.querySelector('code');
-          if (codeElement) {
-            
-            const hasInlineLineNumbers = codeElement.querySelector('.ln');
-            if (hasInlineLineNumbers) {
-              
-              const codeLines = codeElement.querySelectorAll('.cl');
-              if (codeLines.length > 0) {
-                codeText = Array.from(codeLines)
-                  .map(line => {
-                    const text = line.textContent || line.innerText;
-                    
-                    return text.replace(/\n+$/, '');
-                  })
-                  .join('\n')
-                  .replace(/\n+$/, ''); 
-              } else {
-                
-                const allText = codeElement.textContent || codeElement.innerText;
-                codeText = allText.replace(/^\d+/gm, '').replace(/^\s+/gm, '');
-              }
-            } else {
-              
-              codeText = codeElement.textContent || codeElement.innerText;
-            }
-          } else {
-            
-            codeText = codeContainer.textContent || codeContainer.innerText;
-          }
-        }
-
-        
-        codeText = codeText.trim();
-
-        
-        await navigator.clipboard.writeText(codeText);
-
-        
-        copyIcon.innerHTML = `\n  \u003csvg class=\u0022h-3 w-3\u0022\n    fill=\u0022none\u0022\n    stroke=\u0022currentColor\u0022\n    viewBox=\u00220 0 24 24\u0022\u003e\u003cpath stroke-linecap=\u0022round\u0022 stroke-linejoin=\u0022round\u0022 stroke-width=\u00222\u0022 d=\u0022M5 13l4 4L19 7\u0022 \/\u003e\n\u003c\/svg\u003e`;
-        if (copyText) {
-          copyText.textContent = '已复制';
-        }
-        copyBtn.classList.add('text-green-600');
-
-        
-        setTimeout(() => {
-          copyIcon.innerHTML = `\n  \u003csvg class=\u0022h-3 w-3\u0022\n    fill=\u0022none\u0022\n    stroke=\u0022currentColor\u0022\n    viewBox=\u00220 0 24 24\u0022\u003e\u003cpath stroke-linecap=\u0022round\u0022 stroke-linejoin=\u0022round\u0022 stroke-width=\u00222\u0022 d=\u0022M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z\u0022 \/\u003e\n\u003c\/svg\u003e`;
-          if (copyText) {
-            copyText.textContent = '复制';
-          }
-          copyBtn.classList.remove('text-green-600');
-        }, 2000);
-
-      } catch (err) {
-        console.error('复制失败:', err);
-
-        
-        const range = document.createRange();
-        const codeElement = codeContainer.querySelector('code') || codeContainer;
-        range.selectNodeContents(codeElement);
-        const selection = window.getSelection();
-        selection.removeAllRanges();
-        selection.addRange(range);
-
-        
-        if (copyText) {
-          copyText.textContent = '已选择';
-        }
-
-        setTimeout(() => {
-          if (copyText) {
-            copyText.textContent = '复制';
-          }
-          selection.removeAllRanges();
-        }, 2000);
-      }
-    });
-  }
-
-  
-  if (collapseBtn) {
-    const collapseIcon = collapseBtn.querySelector('.collapse-icon');
-    const collapseText = collapseBtn.querySelector('.collapse-text');
-    const collapseOverlay = codeContainer.querySelector('.collapse-overlay');
-
-    
-    let codeElement = codeContainer.querySelector('pre.chroma');
-    if (!codeElement) {
-      codeElement = codeContainer.querySelector('pre');
-    }
-
-    const defaultState = collapseBtn.dataset.defaultState || 'expanded';
-    const isCollapsedAttr = collapseBtn.dataset.collapsed === 'true';
-    const autoCollapseLines = parseInt(collapseBtn.dataset.autoCollapseLines) || 30;
-    const autoCollapseHeight = parseInt(collapseBtn.dataset.autoCollapseHeight) || 400;
-    const collapsedHeight = parseInt(collapseBtn.dataset.collapsedHeight) || 120;
-
-    let isCollapsed = false;
-
-    
-    function initCollapse() {
-      
-      const shouldCollapse = isCollapsedAttr ||
-                           defaultState === 'collapsed' ||
-                           shouldAutoCollapse();
-
-      if (shouldCollapse) {
-        setCollapsed(true, false); 
-      }
-    }
-
-    function shouldAutoCollapse() {
-      
-      if (codeElement) {
-        const lines = codeElement.querySelectorAll('.line, .cl');
-        const height = codeElement.offsetHeight;
-        return lines.length > autoCollapseLines || height > autoCollapseHeight;
-      }
-
-      
-      const containerHeight = codeContainer.offsetHeight;
-      if (containerHeight > autoCollapseHeight) {
-        return true;
-      }
-
-      
-      const textContent = codeContainer.textContent || codeContainer.innerText || '';
-      const estimatedLines = textContent.split('\n').length;
-      return estimatedLines > autoCollapseLines;
-    }
-
-    function setCollapsed(collapsed, animate = true) {
-      if (!collapseOverlay) return;
-
-      isCollapsed = collapsed;
-
-      if (collapsed) {
-        
-        codeContainer.style.maxHeight = collapsedHeight + 'px';
-        codeContainer.style.overflow = 'hidden';
-        collapseOverlay.style.opacity = '1';
-        collapseOverlay.style.pointerEvents = 'auto';
-
-        
-        collapseIcon.innerHTML = `\n  \u003csvg class=\u0022h-3 w-3\u0022\n    fill=\u0022none\u0022\n    stroke=\u0022currentColor\u0022\n    viewBox=\u00220 0 24 24\u0022\u003e\u003cpath stroke-linecap=\u0022round\u0022 stroke-linejoin=\u0022round\u0022 stroke-width=\u00222\u0022 d=\u0022M19 9l-7 7-7-7\u0022 \/\u003e\n\u003c\/svg\u003e`;
-        if (collapseText) {
-          collapseText.textContent = '展开';
-        }
-        collapseBtn.title = '展开';
-
-      } else {
-        
-        codeContainer.style.maxHeight = '';
-        codeContainer.style.overflow = '';
-        collapseOverlay.style.opacity = '0';
-        collapseOverlay.style.pointerEvents = 'none';
-
-        
-        collapseIcon.innerHTML = `\n  \u003csvg class=\u0022h-3 w-3\u0022\n    fill=\u0022none\u0022\n    stroke=\u0022currentColor\u0022\n    viewBox=\u00220 0 24 24\u0022\u003e\u003cpath fill=\u0022currentColor\u0022 d=\u0022M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6l-6 6z\u0022\/\u003e\u003c\/svg\u003e`;
-        if (collapseText) {
-          collapseText.textContent = '折叠';
-        }
-        collapseBtn.title = '折叠';
-      }
-
-      
-      if (animate) {
-        codeContainer.style.transition = 'max-height 0.3s ease-out';
-        setTimeout(() => {
-          codeContainer.style.transition = '';
-        }, 300);
-      }
-    }
-
-    function toggleCollapse() {
-      setCollapsed(!isCollapsed, true);
-    }
-
-    
-    collapseBtn.addEventListener('click', toggleCollapse);
-
-    
-    if (collapseOverlay) {
-      collapseOverlay.addEventListener('click', () => {
-        if (isCollapsed) {
-          setCollapsed(false, true);
-        }
-      });
-    }
-
-    
-    initCollapse();
-  }
-})();
-</script>
-<p>如你所见，id 从 input1 开始增加。</p>
-<p>你的工作是写一个叫 setFirstEmptyInput () 的函数，它接受一个字符串并把它放在页面上第一个空的<code>&lt;input&gt;</code>字段中（在给出的示例中是 &ldquo;<code>input3</code>&quot;）。这个函数应当返回已更新的那个 DOM 元素（如果没有剩下任何空字段则返回 <code>null</code>）。下面是完成这项工作的代码，它没有遵守本章中的原则：</p>
-<div
-  class="code-block-container border-border bg-card my-6 overflow-hidden rounded-xl border shadow-sm transition-all duration-200 ease-out hover:-translate-y-0.5 hover:shadow-md">
-  
-  <div
-    class="code-block-header bg-muted/30 border-border flex items-center justify-between border-b px-4 py-3">
-    
-    <div class="flex items-center gap-2">
-      <div class="text-muted-foreground flex-shrink-0">
-        
-  <svg class="h-4 w-4"
-    fill="none"
-    stroke="currentColor"
-    viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
-</svg>
-      </div>
-      <span class="text-muted-foreground text-sm font-medium">
-        JAVASCRIPT
-      </span>
-    </div>
-
-    
-    <div class="flex items-center gap-2">
-      <button
-          class="collapse-code-btn text-muted-foreground hover:text-primary hover:bg-primary/10 focus:ring-primary/20 flex items-center gap-1.5 rounded-md px-2 py-1 text-xs font-medium transition-all duration-200 ease-out focus:ring-2 focus:outline-none"
-          data-code-id="code-55"
-          data-default-state="expanded"
-          data-collapsed="false"
-          data-auto-collapse-lines="30"
-          data-auto-collapse-height="400"
-          data-collapsed-height="120"
-          title="折叠"
-          aria-label="折叠">
-          <span class="collapse-icon">
-            
-  <svg class="h-3 w-3"
-    fill="none"
-    stroke="currentColor"
-    viewBox="0 0 24 24"><path fill="currentColor" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6l-6 6z"/></svg>
-          </span>
-          <span class="collapse-text hidden sm:inline"
-            >折叠</span
-          >
-        </button>
-      <button
-        class="copy-code-btn text-muted-foreground hover:text-primary hover:bg-primary/10 focus:ring-primary/20 flex items-center gap-1.5 rounded-md px-2 py-1 text-xs font-medium transition-all duration-200 ease-out focus:ring-2 focus:outline-none"
-        data-code-id="code-55"
-        title="复制"
-        aria-label="复制">
-        <span class="copy-icon">
-          
-  <svg class="h-3 w-3"
-    fill="none"
-    stroke="currentColor"
-    viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z" />
-</svg>
-        </span>
-        <span class="copy-text hidden sm:inline"
-          >复制</span
-        >
-      </button>
-    </div>
-  </div>
-
-  
-  <div class="code-block-content relative" id="code-55">
-    <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-javascript" data-lang="javascript"><span class="line"><span class="cl"><span class="kd">var</span> <span class="nx">setFirstEmptyInput</span> <span class="o">=</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">new_value</span><span class="p">)</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">    <span class="kd">var</span> <span class="nx">found</span> <span class="o">=</span> <span class="kc">false</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">    <span class="kd">var</span> <span class="nx">i</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">    <span class="kd">var</span> <span class="nx">elem</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s1">&#39;input&#39;</span> <span class="o">+</span> <span class="nx">i</span><span class="p">);</span>
-</span></span><span class="line"><span class="cl">    <span class="k">while</span> <span class="p">(</span><span class="nx">elem</span> <span class="o">!==</span> <span class="kc">null</span><span class="p">)</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">        <span class="k">if</span> <span class="p">(</span><span class="nx">elem</span><span class="p">.</span><span class="nx">value</span> <span class="o">===</span> <span class="s1">&#39;&#39;</span><span class="p">)</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">            <span class="nx">found</span> <span class="o">=</span> <span class="kc">true</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">            <span class="k">break</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">        <span class="p">}</span>
-</span></span><span class="line"><span class="cl">        <span class="nx">i</span><span class="o">++</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">        <span class="nx">elem</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s1">&#39;input&#39;</span> <span class="o">+</span> <span class="nx">i</span><span class="p">);</span>
-</span></span><span class="line"><span class="cl">    <span class="p">}</span>
-</span></span><span class="line"><span class="cl">    <span class="k">if</span> <span class="p">(</span><span class="nx">found</span><span class="p">)</span> <span class="nx">elem</span><span class="p">.</span><span class="nx">value</span> <span class="o">=</span> <span class="nx">new_value</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="nx">elem</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl"><span class="p">};</span></span></span></code></pre></div>
-    
-    <div
-      class="collapse-overlay to-card/90 pointer-events-none absolute inset-0 bg-gradient-to-b from-transparent via-transparent opacity-0 transition-opacity duration-300">
-      <div
-        class="text-muted-foreground bg-card/80 border-border/50 hover:bg-primary/10 hover:text-primary hover:border-primary/30 absolute bottom-4 left-1/2 -translate-x-1/2 cursor-pointer rounded-full border px-3 py-1.5 text-xs backdrop-blur-sm transition-all duration-200">
-        点击展开查看更多
-      </div>
-    </div>
-  </div>
-</div>
-
-
-<script>
-(function() {
-  const codeId = 'code-55';
-  const copyBtn = document.querySelector('.copy-code-btn[data-code-id="' + codeId + '"]');
-  const collapseBtn = document.querySelector('.collapse-code-btn[data-code-id="' + codeId + '"]');
-  const codeContainer = document.getElementById(codeId);
-
-  if (!codeContainer) return;
-
-  
-  if (copyBtn) {
-    const copyIcon = copyBtn.querySelector('.copy-icon');
-    const copyText = copyBtn.querySelector('.copy-text');
-
-    copyBtn.addEventListener('click', async function() {
-      try {
-        
-        let codeText = '';
-
-        
-        const codeTableCell = codeContainer.querySelector('.lntd:last-child code');
-        if (codeTableCell) {
-          codeText = codeTableCell.textContent || codeTableCell.innerText;
-        } else {
-          
-          const codeElement = codeContainer.querySelector('code');
-          if (codeElement) {
-            
-            const hasInlineLineNumbers = codeElement.querySelector('.ln');
-            if (hasInlineLineNumbers) {
-              
-              const codeLines = codeElement.querySelectorAll('.cl');
-              if (codeLines.length > 0) {
-                codeText = Array.from(codeLines)
-                  .map(line => {
-                    const text = line.textContent || line.innerText;
-                    
-                    return text.replace(/\n+$/, '');
-                  })
-                  .join('\n')
-                  .replace(/\n+$/, ''); 
-              } else {
-                
-                const allText = codeElement.textContent || codeElement.innerText;
-                codeText = allText.replace(/^\d+/gm, '').replace(/^\s+/gm, '');
-              }
-            } else {
-              
-              codeText = codeElement.textContent || codeElement.innerText;
-            }
-          } else {
-            
-            codeText = codeContainer.textContent || codeContainer.innerText;
-          }
-        }
-
-        
-        codeText = codeText.trim();
-
-        
-        await navigator.clipboard.writeText(codeText);
-
-        
-        copyIcon.innerHTML = `\n  \u003csvg class=\u0022h-3 w-3\u0022\n    fill=\u0022none\u0022\n    stroke=\u0022currentColor\u0022\n    viewBox=\u00220 0 24 24\u0022\u003e\u003cpath stroke-linecap=\u0022round\u0022 stroke-linejoin=\u0022round\u0022 stroke-width=\u00222\u0022 d=\u0022M5 13l4 4L19 7\u0022 \/\u003e\n\u003c\/svg\u003e`;
-        if (copyText) {
-          copyText.textContent = '已复制';
-        }
-        copyBtn.classList.add('text-green-600');
-
-        
-        setTimeout(() => {
-          copyIcon.innerHTML = `\n  \u003csvg class=\u0022h-3 w-3\u0022\n    fill=\u0022none\u0022\n    stroke=\u0022currentColor\u0022\n    viewBox=\u00220 0 24 24\u0022\u003e\u003cpath stroke-linecap=\u0022round\u0022 stroke-linejoin=\u0022round\u0022 stroke-width=\u00222\u0022 d=\u0022M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z\u0022 \/\u003e\n\u003c\/svg\u003e`;
-          if (copyText) {
-            copyText.textContent = '复制';
-          }
-          copyBtn.classList.remove('text-green-600');
-        }, 2000);
-
-      } catch (err) {
-        console.error('复制失败:', err);
-
-        
-        const range = document.createRange();
-        const codeElement = codeContainer.querySelector('code') || codeContainer;
-        range.selectNodeContents(codeElement);
-        const selection = window.getSelection();
-        selection.removeAllRanges();
-        selection.addRange(range);
-
-        
-        if (copyText) {
-          copyText.textContent = '已选择';
-        }
-
-        setTimeout(() => {
-          if (copyText) {
-            copyText.textContent = '复制';
-          }
-          selection.removeAllRanges();
-        }, 2000);
-      }
-    });
-  }
-
-  
-  if (collapseBtn) {
-    const collapseIcon = collapseBtn.querySelector('.collapse-icon');
-    const collapseText = collapseBtn.querySelector('.collapse-text');
-    const collapseOverlay = codeContainer.querySelector('.collapse-overlay');
-
-    
-    let codeElement = codeContainer.querySelector('pre.chroma');
-    if (!codeElement) {
-      codeElement = codeContainer.querySelector('pre');
-    }
-
-    const defaultState = collapseBtn.dataset.defaultState || 'expanded';
-    const isCollapsedAttr = collapseBtn.dataset.collapsed === 'true';
-    const autoCollapseLines = parseInt(collapseBtn.dataset.autoCollapseLines) || 30;
-    const autoCollapseHeight = parseInt(collapseBtn.dataset.autoCollapseHeight) || 400;
-    const collapsedHeight = parseInt(collapseBtn.dataset.collapsedHeight) || 120;
-
-    let isCollapsed = false;
-
-    
-    function initCollapse() {
-      
-      const shouldCollapse = isCollapsedAttr ||
-                           defaultState === 'collapsed' ||
-                           shouldAutoCollapse();
-
-      if (shouldCollapse) {
-        setCollapsed(true, false); 
-      }
-    }
-
-    function shouldAutoCollapse() {
-      
-      if (codeElement) {
-        const lines = codeElement.querySelectorAll('.line, .cl');
-        const height = codeElement.offsetHeight;
-        return lines.length > autoCollapseLines || height > autoCollapseHeight;
-      }
-
-      
-      const containerHeight = codeContainer.offsetHeight;
-      if (containerHeight > autoCollapseHeight) {
-        return true;
-      }
-
-      
-      const textContent = codeContainer.textContent || codeContainer.innerText || '';
-      const estimatedLines = textContent.split('\n').length;
-      return estimatedLines > autoCollapseLines;
-    }
-
-    function setCollapsed(collapsed, animate = true) {
-      if (!collapseOverlay) return;
-
-      isCollapsed = collapsed;
-
-      if (collapsed) {
-        
-        codeContainer.style.maxHeight = collapsedHeight + 'px';
-        codeContainer.style.overflow = 'hidden';
-        collapseOverlay.style.opacity = '1';
-        collapseOverlay.style.pointerEvents = 'auto';
-
-        
-        collapseIcon.innerHTML = `\n  \u003csvg class=\u0022h-3 w-3\u0022\n    fill=\u0022none\u0022\n    stroke=\u0022currentColor\u0022\n    viewBox=\u00220 0 24 24\u0022\u003e\u003cpath stroke-linecap=\u0022round\u0022 stroke-linejoin=\u0022round\u0022 stroke-width=\u00222\u0022 d=\u0022M19 9l-7 7-7-7\u0022 \/\u003e\n\u003c\/svg\u003e`;
-        if (collapseText) {
-          collapseText.textContent = '展开';
-        }
-        collapseBtn.title = '展开';
-
-      } else {
-        
-        codeContainer.style.maxHeight = '';
-        codeContainer.style.overflow = '';
-        collapseOverlay.style.opacity = '0';
-        collapseOverlay.style.pointerEvents = 'none';
-
-        
-        collapseIcon.innerHTML = `\n  \u003csvg class=\u0022h-3 w-3\u0022\n    fill=\u0022none\u0022\n    stroke=\u0022currentColor\u0022\n    viewBox=\u00220 0 24 24\u0022\u003e\u003cpath fill=\u0022currentColor\u0022 d=\u0022M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6l-6 6z\u0022\/\u003e\u003c\/svg\u003e`;
-        if (collapseText) {
-          collapseText.textContent = '折叠';
-        }
-        collapseBtn.title = '折叠';
-      }
-
-      
-      if (animate) {
-        codeContainer.style.transition = 'max-height 0.3s ease-out';
-        setTimeout(() => {
-          codeContainer.style.transition = '';
-        }, 300);
-      }
-    }
-
-    function toggleCollapse() {
-      setCollapsed(!isCollapsed, true);
-    }
-
-    
-    collapseBtn.addEventListener('click', toggleCollapse);
-
-    
-    if (collapseOverlay) {
-      collapseOverlay.addEventListener('click', () => {
-        if (isCollapsed) {
-          setCollapsed(false, true);
-        }
-      });
-    }
-
-    
-    initCollapse();
-  }
-})();
-</script>
-<p>这段代码可以完成工作，但看上去并不完美。什么地方不对？如何改进？</p>
-<p>有很多途径可以用来思考对这段代码的改进，但我们会从它所使用的变量这个角度开始考虑：</p>
-<ul>
-<li>var found</li>
-<li>var i</li>
-<li>var elem</li>
-</ul>
-<p>所有三个变量都存在于整个函数中，并且写入了多次。让我们来尝试改进它们中的每一个。</p>
-<p>如我们在本章前面讨论过的，中间变量（如 found）通常可以通过提前返回来消除。下面是这一点改进：</p>
-<div
-  class="code-block-container border-border bg-card my-6 overflow-hidden rounded-xl border shadow-sm transition-all duration-200 ease-out hover:-translate-y-0.5 hover:shadow-md">
-  
-  <div
-    class="code-block-header bg-muted/30 border-border flex items-center justify-between border-b px-4 py-3">
-    
-    <div class="flex items-center gap-2">
-      <div class="text-muted-foreground flex-shrink-0">
-        
-  <svg class="h-4 w-4"
-    fill="none"
-    stroke="currentColor"
-    viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
-</svg>
-      </div>
-      <span class="text-muted-foreground text-sm font-medium">
-        JAVASCRIPT
-      </span>
-    </div>
-
-    
-    <div class="flex items-center gap-2">
-      <button
-          class="collapse-code-btn text-muted-foreground hover:text-primary hover:bg-primary/10 focus:ring-primary/20 flex items-center gap-1.5 rounded-md px-2 py-1 text-xs font-medium transition-all duration-200 ease-out focus:ring-2 focus:outline-none"
-          data-code-id="code-56"
-          data-default-state="expanded"
-          data-collapsed="false"
-          data-auto-collapse-lines="30"
-          data-auto-collapse-height="400"
-          data-collapsed-height="120"
-          title="折叠"
-          aria-label="折叠">
-          <span class="collapse-icon">
-            
-  <svg class="h-3 w-3"
-    fill="none"
-    stroke="currentColor"
-    viewBox="0 0 24 24"><path fill="currentColor" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6l-6 6z"/></svg>
-          </span>
-          <span class="collapse-text hidden sm:inline"
-            >折叠</span
-          >
-        </button>
-      <button
-        class="copy-code-btn text-muted-foreground hover:text-primary hover:bg-primary/10 focus:ring-primary/20 flex items-center gap-1.5 rounded-md px-2 py-1 text-xs font-medium transition-all duration-200 ease-out focus:ring-2 focus:outline-none"
-        data-code-id="code-56"
-        title="复制"
-        aria-label="复制">
-        <span class="copy-icon">
-          
-  <svg class="h-3 w-3"
-    fill="none"
-    stroke="currentColor"
-    viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z" />
-</svg>
-        </span>
-        <span class="copy-text hidden sm:inline"
-          >复制</span
-        >
-      </button>
-    </div>
-  </div>
-
-  
-  <div class="code-block-content relative" id="code-56">
-    <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-javascript" data-lang="javascript"><span class="line"><span class="cl"><span class="kd">var</span> <span class="nx">setFirstEmptyInput</span> <span class="o">=</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">new_value</span><span class="p">)</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">    <span class="kd">var</span> <span class="nx">i</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">    <span class="kd">var</span> <span class="nx">elem</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s1">&#39;input&#39;</span> <span class="o">+</span> <span class="nx">i</span><span class="p">);</span>
-</span></span><span class="line"><span class="cl">    <span class="k">while</span> <span class="p">(</span><span class="nx">elem</span> <span class="o">!==</span> <span class="kc">null</span><span class="p">)</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">        <span class="k">if</span> <span class="p">(</span><span class="nx">elem</span><span class="p">.</span><span class="nx">value</span> <span class="o">===</span> <span class="s1">&#39;&#39;</span><span class="p">)</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">            <span class="nx">elem</span><span class="p">.</span><span class="nx">value</span> <span class="o">=</span> <span class="nx">new_value</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">            <span class="k">return</span> <span class="nx">elem</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">        <span class="p">}</span>
-</span></span><span class="line"><span class="cl">        <span class="nx">i</span><span class="o">++</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">        <span class="nx">elem</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s1">&#39;input&#39;</span> <span class="o">+</span> <span class="nx">i</span><span class="p">);</span>
-</span></span><span class="line"><span class="cl">    <span class="p">}</span>
-</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="kc">null</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl"><span class="p">};</span></span></span></code></pre></div>
-    
-    <div
-      class="collapse-overlay to-card/90 pointer-events-none absolute inset-0 bg-gradient-to-b from-transparent via-transparent opacity-0 transition-opacity duration-300">
-      <div
-        class="text-muted-foreground bg-card/80 border-border/50 hover:bg-primary/10 hover:text-primary hover:border-primary/30 absolute bottom-4 left-1/2 -translate-x-1/2 cursor-pointer rounded-full border px-3 py-1.5 text-xs backdrop-blur-sm transition-all duration-200">
-        点击展开查看更多
-      </div>
-    </div>
-  </div>
-</div>
-
-
-<script>
-(function() {
-  const codeId = 'code-56';
-  const copyBtn = document.querySelector('.copy-code-btn[data-code-id="' + codeId + '"]');
-  const collapseBtn = document.querySelector('.collapse-code-btn[data-code-id="' + codeId + '"]');
-  const codeContainer = document.getElementById(codeId);
-
-  if (!codeContainer) return;
-
-  
-  if (copyBtn) {
-    const copyIcon = copyBtn.querySelector('.copy-icon');
-    const copyText = copyBtn.querySelector('.copy-text');
-
-    copyBtn.addEventListener('click', async function() {
-      try {
-        
-        let codeText = '';
-
-        
-        const codeTableCell = codeContainer.querySelector('.lntd:last-child code');
-        if (codeTableCell) {
-          codeText = codeTableCell.textContent || codeTableCell.innerText;
-        } else {
-          
-          const codeElement = codeContainer.querySelector('code');
-          if (codeElement) {
-            
-            const hasInlineLineNumbers = codeElement.querySelector('.ln');
-            if (hasInlineLineNumbers) {
-              
-              const codeLines = codeElement.querySelectorAll('.cl');
-              if (codeLines.length > 0) {
-                codeText = Array.from(codeLines)
-                  .map(line => {
-                    const text = line.textContent || line.innerText;
-                    
-                    return text.replace(/\n+$/, '');
-                  })
-                  .join('\n')
-                  .replace(/\n+$/, ''); 
-              } else {
-                
-                const allText = codeElement.textContent || codeElement.innerText;
-                codeText = allText.replace(/^\d+/gm, '').replace(/^\s+/gm, '');
-              }
-            } else {
-              
-              codeText = codeElement.textContent || codeElement.innerText;
-            }
-          } else {
-            
-            codeText = codeContainer.textContent || codeContainer.innerText;
-          }
-        }
-
-        
-        codeText = codeText.trim();
-
-        
-        await navigator.clipboard.writeText(codeText);
-
-        
-        copyIcon.innerHTML = `\n  \u003csvg class=\u0022h-3 w-3\u0022\n    fill=\u0022none\u0022\n    stroke=\u0022currentColor\u0022\n    viewBox=\u00220 0 24 24\u0022\u003e\u003cpath stroke-linecap=\u0022round\u0022 stroke-linejoin=\u0022round\u0022 stroke-width=\u00222\u0022 d=\u0022M5 13l4 4L19 7\u0022 \/\u003e\n\u003c\/svg\u003e`;
-        if (copyText) {
-          copyText.textContent = '已复制';
-        }
-        copyBtn.classList.add('text-green-600');
-
-        
-        setTimeout(() => {
-          copyIcon.innerHTML = `\n  \u003csvg class=\u0022h-3 w-3\u0022\n    fill=\u0022none\u0022\n    stroke=\u0022currentColor\u0022\n    viewBox=\u00220 0 24 24\u0022\u003e\u003cpath stroke-linecap=\u0022round\u0022 stroke-linejoin=\u0022round\u0022 stroke-width=\u00222\u0022 d=\u0022M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z\u0022 \/\u003e\n\u003c\/svg\u003e`;
-          if (copyText) {
-            copyText.textContent = '复制';
-          }
-          copyBtn.classList.remove('text-green-600');
-        }, 2000);
-
-      } catch (err) {
-        console.error('复制失败:', err);
-
-        
-        const range = document.createRange();
-        const codeElement = codeContainer.querySelector('code') || codeContainer;
-        range.selectNodeContents(codeElement);
-        const selection = window.getSelection();
-        selection.removeAllRanges();
-        selection.addRange(range);
-
-        
-        if (copyText) {
-          copyText.textContent = '已选择';
-        }
-
-        setTimeout(() => {
-          if (copyText) {
-            copyText.textContent = '复制';
-          }
-          selection.removeAllRanges();
-        }, 2000);
-      }
-    });
-  }
-
-  
-  if (collapseBtn) {
-    const collapseIcon = collapseBtn.querySelector('.collapse-icon');
-    const collapseText = collapseBtn.querySelector('.collapse-text');
-    const collapseOverlay = codeContainer.querySelector('.collapse-overlay');
-
-    
-    let codeElement = codeContainer.querySelector('pre.chroma');
-    if (!codeElement) {
-      codeElement = codeContainer.querySelector('pre');
-    }
-
-    const defaultState = collapseBtn.dataset.defaultState || 'expanded';
-    const isCollapsedAttr = collapseBtn.dataset.collapsed === 'true';
-    const autoCollapseLines = parseInt(collapseBtn.dataset.autoCollapseLines) || 30;
-    const autoCollapseHeight = parseInt(collapseBtn.dataset.autoCollapseHeight) || 400;
-    const collapsedHeight = parseInt(collapseBtn.dataset.collapsedHeight) || 120;
-
-    let isCollapsed = false;
-
-    
-    function initCollapse() {
-      
-      const shouldCollapse = isCollapsedAttr ||
-                           defaultState === 'collapsed' ||
-                           shouldAutoCollapse();
-
-      if (shouldCollapse) {
-        setCollapsed(true, false); 
-      }
-    }
-
-    function shouldAutoCollapse() {
-      
-      if (codeElement) {
-        const lines = codeElement.querySelectorAll('.line, .cl');
-        const height = codeElement.offsetHeight;
-        return lines.length > autoCollapseLines || height > autoCollapseHeight;
-      }
-
-      
-      const containerHeight = codeContainer.offsetHeight;
-      if (containerHeight > autoCollapseHeight) {
-        return true;
-      }
-
-      
-      const textContent = codeContainer.textContent || codeContainer.innerText || '';
-      const estimatedLines = textContent.split('\n').length;
-      return estimatedLines > autoCollapseLines;
-    }
-
-    function setCollapsed(collapsed, animate = true) {
-      if (!collapseOverlay) return;
-
-      isCollapsed = collapsed;
-
-      if (collapsed) {
-        
-        codeContainer.style.maxHeight = collapsedHeight + 'px';
-        codeContainer.style.overflow = 'hidden';
-        collapseOverlay.style.opacity = '1';
-        collapseOverlay.style.pointerEvents = 'auto';
-
-        
-        collapseIcon.innerHTML = `\n  \u003csvg class=\u0022h-3 w-3\u0022\n    fill=\u0022none\u0022\n    stroke=\u0022currentColor\u0022\n    viewBox=\u00220 0 24 24\u0022\u003e\u003cpath stroke-linecap=\u0022round\u0022 stroke-linejoin=\u0022round\u0022 stroke-width=\u00222\u0022 d=\u0022M19 9l-7 7-7-7\u0022 \/\u003e\n\u003c\/svg\u003e`;
-        if (collapseText) {
-          collapseText.textContent = '展开';
-        }
-        collapseBtn.title = '展开';
-
-      } else {
-        
-        codeContainer.style.maxHeight = '';
-        codeContainer.style.overflow = '';
-        collapseOverlay.style.opacity = '0';
-        collapseOverlay.style.pointerEvents = 'none';
-
-        
-        collapseIcon.innerHTML = `\n  \u003csvg class=\u0022h-3 w-3\u0022\n    fill=\u0022none\u0022\n    stroke=\u0022currentColor\u0022\n    viewBox=\u00220 0 24 24\u0022\u003e\u003cpath fill=\u0022currentColor\u0022 d=\u0022M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6l-6 6z\u0022\/\u003e\u003c\/svg\u003e`;
-        if (collapseText) {
-          collapseText.textContent = '折叠';
-        }
-        collapseBtn.title = '折叠';
-      }
-
-      
-      if (animate) {
-        codeContainer.style.transition = 'max-height 0.3s ease-out';
-        setTimeout(() => {
-          codeContainer.style.transition = '';
-        }, 300);
-      }
-    }
-
-    function toggleCollapse() {
-      setCollapsed(!isCollapsed, true);
-    }
-
-    
-    collapseBtn.addEventListener('click', toggleCollapse);
-
-    
-    if (collapseOverlay) {
-      collapseOverlay.addEventListener('click', () => {
-        if (isCollapsed) {
-          setCollapsed(false, true);
-        }
-      });
-    }
-
-    
-    initCollapse();
-  }
-})();
-</script>
-<p>接下来，看一下 elem。它在整个代码中以循环的方式多次用到，这让我们很难跟踪它的值。这段代码让我们觉得 elem 就是在迭代的值，实际上只是在累加 i。所以把 while 循环重写成对 i 的 for 循环。</p>
-<div
-  class="code-block-container border-border bg-card my-6 overflow-hidden rounded-xl border shadow-sm transition-all duration-200 ease-out hover:-translate-y-0.5 hover:shadow-md">
-  
-  <div
-    class="code-block-header bg-muted/30 border-border flex items-center justify-between border-b px-4 py-3">
-    
-    <div class="flex items-center gap-2">
-      <div class="text-muted-foreground flex-shrink-0">
-        
-  <svg class="h-4 w-4"
-    fill="none"
-    stroke="currentColor"
-    viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
-</svg>
-      </div>
-      <span class="text-muted-foreground text-sm font-medium">
-        JAVASCRIPT
-      </span>
-    </div>
-
-    
-    <div class="flex items-center gap-2">
-      <button
-          class="collapse-code-btn text-muted-foreground hover:text-primary hover:bg-primary/10 focus:ring-primary/20 flex items-center gap-1.5 rounded-md px-2 py-1 text-xs font-medium transition-all duration-200 ease-out focus:ring-2 focus:outline-none"
-          data-code-id="code-57"
-          data-default-state="expanded"
-          data-collapsed="false"
-          data-auto-collapse-lines="30"
-          data-auto-collapse-height="400"
-          data-collapsed-height="120"
-          title="折叠"
-          aria-label="折叠">
-          <span class="collapse-icon">
-            
-  <svg class="h-3 w-3"
-    fill="none"
-    stroke="currentColor"
-    viewBox="0 0 24 24"><path fill="currentColor" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6l-6 6z"/></svg>
-          </span>
-          <span class="collapse-text hidden sm:inline"
-            >折叠</span
-          >
-        </button>
-      <button
-        class="copy-code-btn text-muted-foreground hover:text-primary hover:bg-primary/10 focus:ring-primary/20 flex items-center gap-1.5 rounded-md px-2 py-1 text-xs font-medium transition-all duration-200 ease-out focus:ring-2 focus:outline-none"
-        data-code-id="code-57"
-        title="复制"
-        aria-label="复制">
-        <span class="copy-icon">
-          
-  <svg class="h-3 w-3"
-    fill="none"
-    stroke="currentColor"
-    viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z" />
-</svg>
-        </span>
-        <span class="copy-text hidden sm:inline"
-          >复制</span
-        >
-      </button>
-    </div>
-  </div>
-
-  
-  <div class="code-block-content relative" id="code-57">
-    <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-javascript" data-lang="javascript"><span class="line"><span class="cl"><span class="kd">var</span> <span class="nx">setFirstEmptyInput</span> <span class="o">=</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">new_value</span><span class="p">)</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">    <span class="k">for</span> <span class="p">(</span><span class="kd">var</span> <span class="nx">i</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span> <span class="kc">true</span><span class="p">;</span> <span class="nx">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">        <span class="kd">var</span> <span class="nx">elem</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s1">&#39;input&#39;</span> <span class="o">+</span> <span class="nx">i</span><span class="p">);</span>
-</span></span><span class="line"><span class="cl">        <span class="k">if</span> <span class="p">(</span><span class="nx">elem</span> <span class="o">===</span> <span class="kc">null</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl">            <span class="k">return</span> <span class="kc">null</span><span class="p">;</span> <span class="c1">// Search Failed. No empty input found.
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>        <span class="k">if</span> <span class="p">(</span><span class="nx">elem</span><span class="p">.</span><span class="nx">value</span> <span class="o">===</span> <span class="s1">&#39;&#39;</span><span class="p">)</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">            <span class="nx">elem</span><span class="p">.</span><span class="nx">value</span> <span class="o">=</span> <span class="nx">new_value</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">            <span class="k">return</span> <span class="nx">elem</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">        <span class="p">}</span>
-</span></span><span class="line"><span class="cl">    <span class="p">}</span>
-</span></span><span class="line"><span class="cl"><span class="p">};</span></span></span></code></pre></div>
-    
-    <div
-      class="collapse-overlay to-card/90 pointer-events-none absolute inset-0 bg-gradient-to-b from-transparent via-transparent opacity-0 transition-opacity duration-300">
-      <div
-        class="text-muted-foreground bg-card/80 border-border/50 hover:bg-primary/10 hover:text-primary hover:border-primary/30 absolute bottom-4 left-1/2 -translate-x-1/2 cursor-pointer rounded-full border px-3 py-1.5 text-xs backdrop-blur-sm transition-all duration-200">
-        点击展开查看更多
-      </div>
-    </div>
-  </div>
-</div>
-
-
-<script>
-(function() {
-  const codeId = 'code-57';
-  const copyBtn = document.querySelector('.copy-code-btn[data-code-id="' + codeId + '"]');
-  const collapseBtn = document.querySelector('.collapse-code-btn[data-code-id="' + codeId + '"]');
-  const codeContainer = document.getElementById(codeId);
-
-  if (!codeContainer) return;
-
-  
-  if (copyBtn) {
-    const copyIcon = copyBtn.querySelector('.copy-icon');
-    const copyText = copyBtn.querySelector('.copy-text');
-
-    copyBtn.addEventListener('click', async function() {
-      try {
-        
-        let codeText = '';
-
-        
-        const codeTableCell = codeContainer.querySelector('.lntd:last-child code');
-        if (codeTableCell) {
-          codeText = codeTableCell.textContent || codeTableCell.innerText;
-        } else {
-          
-          const codeElement = codeContainer.querySelector('code');
-          if (codeElement) {
-            
-            const hasInlineLineNumbers = codeElement.querySelector('.ln');
-            if (hasInlineLineNumbers) {
-              
-              const codeLines = codeElement.querySelectorAll('.cl');
-              if (codeLines.length > 0) {
-                codeText = Array.from(codeLines)
-                  .map(line => {
-                    const text = line.textContent || line.innerText;
-                    
-                    return text.replace(/\n+$/, '');
-                  })
-                  .join('\n')
-                  .replace(/\n+$/, ''); 
-              } else {
-                
-                const allText = codeElement.textContent || codeElement.innerText;
-                codeText = allText.replace(/^\d+/gm, '').replace(/^\s+/gm, '');
-              }
-            } else {
-              
-              codeText = codeElement.textContent || codeElement.innerText;
-            }
-          } else {
-            
-            codeText = codeContainer.textContent || codeContainer.innerText;
-          }
-        }
-
-        
-        codeText = codeText.trim();
-
-        
-        await navigator.clipboard.writeText(codeText);
-
-        
-        copyIcon.innerHTML = `\n  \u003csvg class=\u0022h-3 w-3\u0022\n    fill=\u0022none\u0022\n    stroke=\u0022currentColor\u0022\n    viewBox=\u00220 0 24 24\u0022\u003e\u003cpath stroke-linecap=\u0022round\u0022 stroke-linejoin=\u0022round\u0022 stroke-width=\u00222\u0022 d=\u0022M5 13l4 4L19 7\u0022 \/\u003e\n\u003c\/svg\u003e`;
-        if (copyText) {
-          copyText.textContent = '已复制';
-        }
-        copyBtn.classList.add('text-green-600');
-
-        
-        setTimeout(() => {
-          copyIcon.innerHTML = `\n  \u003csvg class=\u0022h-3 w-3\u0022\n    fill=\u0022none\u0022\n    stroke=\u0022currentColor\u0022\n    viewBox=\u00220 0 24 24\u0022\u003e\u003cpath stroke-linecap=\u0022round\u0022 stroke-linejoin=\u0022round\u0022 stroke-width=\u00222\u0022 d=\u0022M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z\u0022 \/\u003e\n\u003c\/svg\u003e`;
-          if (copyText) {
-            copyText.textContent = '复制';
-          }
-          copyBtn.classList.remove('text-green-600');
-        }, 2000);
-
-      } catch (err) {
-        console.error('复制失败:', err);
-
-        
-        const range = document.createRange();
-        const codeElement = codeContainer.querySelector('code') || codeContainer;
-        range.selectNodeContents(codeElement);
-        const selection = window.getSelection();
-        selection.removeAllRanges();
-        selection.addRange(range);
-
-        
-        if (copyText) {
-          copyText.textContent = '已选择';
-        }
-
-        setTimeout(() => {
-          if (copyText) {
-            copyText.textContent = '复制';
-          }
-          selection.removeAllRanges();
-        }, 2000);
-      }
-    });
-  }
-
-  
-  if (collapseBtn) {
-    const collapseIcon = collapseBtn.querySelector('.collapse-icon');
-    const collapseText = collapseBtn.querySelector('.collapse-text');
-    const collapseOverlay = codeContainer.querySelector('.collapse-overlay');
-
-    
-    let codeElement = codeContainer.querySelector('pre.chroma');
-    if (!codeElement) {
-      codeElement = codeContainer.querySelector('pre');
-    }
-
-    const defaultState = collapseBtn.dataset.defaultState || 'expanded';
-    const isCollapsedAttr = collapseBtn.dataset.collapsed === 'true';
-    const autoCollapseLines = parseInt(collapseBtn.dataset.autoCollapseLines) || 30;
-    const autoCollapseHeight = parseInt(collapseBtn.dataset.autoCollapseHeight) || 400;
-    const collapsedHeight = parseInt(collapseBtn.dataset.collapsedHeight) || 120;
-
-    let isCollapsed = false;
-
-    
-    function initCollapse() {
-      
-      const shouldCollapse = isCollapsedAttr ||
-                           defaultState === 'collapsed' ||
-                           shouldAutoCollapse();
-
-      if (shouldCollapse) {
-        setCollapsed(true, false); 
-      }
-    }
-
-    function shouldAutoCollapse() {
-      
-      if (codeElement) {
-        const lines = codeElement.querySelectorAll('.line, .cl');
-        const height = codeElement.offsetHeight;
-        return lines.length > autoCollapseLines || height > autoCollapseHeight;
-      }
-
-      
-      const containerHeight = codeContainer.offsetHeight;
-      if (containerHeight > autoCollapseHeight) {
-        return true;
-      }
-
-      
-      const textContent = codeContainer.textContent || codeContainer.innerText || '';
-      const estimatedLines = textContent.split('\n').length;
-      return estimatedLines > autoCollapseLines;
-    }
-
-    function setCollapsed(collapsed, animate = true) {
-      if (!collapseOverlay) return;
-
-      isCollapsed = collapsed;
-
-      if (collapsed) {
-        
-        codeContainer.style.maxHeight = collapsedHeight + 'px';
-        codeContainer.style.overflow = 'hidden';
-        collapseOverlay.style.opacity = '1';
-        collapseOverlay.style.pointerEvents = 'auto';
-
-        
-        collapseIcon.innerHTML = `\n  \u003csvg class=\u0022h-3 w-3\u0022\n    fill=\u0022none\u0022\n    stroke=\u0022currentColor\u0022\n    viewBox=\u00220 0 24 24\u0022\u003e\u003cpath stroke-linecap=\u0022round\u0022 stroke-linejoin=\u0022round\u0022 stroke-width=\u00222\u0022 d=\u0022M19 9l-7 7-7-7\u0022 \/\u003e\n\u003c\/svg\u003e`;
-        if (collapseText) {
-          collapseText.textContent = '展开';
-        }
-        collapseBtn.title = '展开';
-
-      } else {
-        
-        codeContainer.style.maxHeight = '';
-        codeContainer.style.overflow = '';
-        collapseOverlay.style.opacity = '0';
-        collapseOverlay.style.pointerEvents = 'none';
-
-        
-        collapseIcon.innerHTML = `\n  \u003csvg class=\u0022h-3 w-3\u0022\n    fill=\u0022none\u0022\n    stroke=\u0022currentColor\u0022\n    viewBox=\u00220 0 24 24\u0022\u003e\u003cpath fill=\u0022currentColor\u0022 d=\u0022M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6l-6 6z\u0022\/\u003e\u003c\/svg\u003e`;
-        if (collapseText) {
-          collapseText.textContent = '折叠';
-        }
-        collapseBtn.title = '折叠';
-      }
-
-      
-      if (animate) {
-        codeContainer.style.transition = 'max-height 0.3s ease-out';
-        setTimeout(() => {
-          codeContainer.style.transition = '';
-        }, 300);
-      }
-    }
-
-    function toggleCollapse() {
-      setCollapsed(!isCollapsed, true);
-    }
-
-    
-    collapseBtn.addEventListener('click', toggleCollapse);
-
-    
-    if (collapseOverlay) {
-      collapseOverlay.addEventListener('click', () => {
-        if (isCollapsed) {
-          setCollapsed(false, true);
-        }
-      });
-    }
-
-    
-    initCollapse();
-  }
-})();
-</script>
-<p>特别地，请注意 elem 是如何成为一个只写一次的变量的，它的生命周期只在循环内。用 true 来作为 for 循环的条件并不多见，但作为交换，我们可以在同一行里看到 i 的定义与修改。（传统的 while (true) 也是个合理的选择。）</p>
+<p>【略】</p>
 <h3 id="总结-7">总结</h3>
-<p>本章是关于程序中的变量是如何快速累积而变得难以跟踪的。你可以通过减少变量的数量和让它们尽量“轻量级”来让代码更有可读性。具体有：</p>
-<ul>
+<div
+    class="alert alert-important my-6 overflow-hidden rounded-lg transition-all duration-200 ease-out hover:-translate-y-0.5 hover:shadow-md"
+    style="background-color: color-mix(in srgb, var(--color-important) 10%, transparent);
+              border-left-color: var(--color-important);
+              --hover-bg: color-mix(in srgb, var(--color-important) 15%, transparent);"
+    onmouseover="this.style.backgroundColor = this.style.getPropertyValue('--hover-bg')"
+    onmouseout="this.style.backgroundColor = 'color-mix(in srgb, var(--color-important) 10%, transparent)'"
+    role="alert"
+    aria-labelledby="alert-24-title">
+    
+    <div
+      class=" flex items-center justify-between px-6 py-6"
+      >
+      <div class="flex items-center gap-3">
+        
+        <h4
+          id="alert-24-title"
+          class="m-0 font-semibold text-foreground/90">
+          本章是关于程序中的变量是如何快速累积而变得难以跟踪的。你可以通过减少变量的数量和让它们尽量“轻量级”来让代码f更有可读性。具体有：
+        </h4>
+      </div>
+
+      
+      
+    </div>
+
+    
+    <div
+      id="alert-24-content"
+      class="alert-content  px-6 pb-6">
+      <div class="prose prose-sm text-foreground/90 max-w-none">
+        <ul>
 <li>减少变量，即那些妨碍的变量。我们给出了几个例子来演示如何通过立刻处理结果来消除“中间结果”变量。</li>
 <li>减小每个变量的作用域，越小越好。把变量移到一个有最少代码可以看到它的地方。眼不见，心不烦。</li>
 <li>只写一次的变量更好。那些只设置一次值的变量（或者const、final、常量）使得代码更容易理解。</li>
 </ul>
+      </div>
+    </div>
+  </div><script>
+function toggleAlert(alertId) {
+  const content = document.getElementById(alertId + '-content');
+  const chevron = document.getElementById(alertId + '-chevron');
+  const header = content.previousElementSibling;
+  
+  if (content.classList.contains('hidden')) {
+    content.classList.remove('hidden');
+    chevron.style.transform = 'rotate(0deg)';
+    header.setAttribute('aria-expanded', 'true');
+  } else {
+    content.classList.add('hidden');
+    chevron.style.transform = 'rotate(-90deg)';
+    header.setAttribute('aria-expanded', 'false');
+  }
+}
+
+
+document.addEventListener('DOMContentLoaded', function() {
+  const collapsedAlerts = document.querySelectorAll('.alert-content.hidden');
+  collapsedAlerts.forEach(function(content) {
+    const alertId = content.id.replace('-content', '');
+    const chevron = document.getElementById(alertId + '-chevron');
+    if (chevron) {
+      chevron.style.transform = 'rotate(-90deg)';
+    }
+  });
+});
+</script>
+
 <h1 id="第三部分-重新组织代码">第三部分 重新组织代码</h1>
 <p>第二部分讨论了如何改变程序的“循环与逻辑”来让代码更有可读性。我们描述了几种技巧，这些技巧都需要对代码结构做出微小的改动。</p>
 <p>本部分会讨论可以在函数级别对代码做的更大的改动。具体来讲，我们会讲到三种组织代码的方法：</p>
@@ -20804,10 +18396,12 @@ document.addEventListener('DOMContentLoaded', function() {
 <p>你每天可能都会把代码抽取到单独的函数中。但在本章中，我们决定关注抽取的一个特别情形：不相关的子问题，在这种情形下抽取出的函数无忧无虑，并不关心为什么会调用它。</p>
 <p>你将会看到，这是个简单的技巧却可以从根本上改进你的代码。然而由于某些原因，很多程序员没有充分使用这一技巧。这里的诀窍就是主动地寻找那些不相关的子问题。</p>
 <h3 id="介绍性的例子findclosestlocation">介绍性的例子：findClosestLocation()</h3>
-<p>【将一个大的函数中相对独立的一部分拆出来，单独作为一个函数】这段代码的可读性好得多，因为读者可以关注于高层次目标，而不必因为复杂的几何公式分心。</p>
+<p>【将函数里面的一部分具备通用性和独立性的代码抽取出来作为单独的函数，一方面让程序结构更清晰、简单，另一方面抽取出来的函数方便单独做测试，也方便重用】</p>
+<p>这段代码的可读性好得多，因为读者可以关注于高层次目标，而不必因为复杂的几何公式分心。</p>
 <p>作为额外的奖励，<code>spherical_distance()</code>很容易单独做测试。并且<code>spherical_distance()</code>是那种在以后可以重用的函数。这就是为什么它是一个“不相关”的子问题——它完全是自包含的，不知道其他程序是如何使用它的。</p>
 <h3 id="纯工具代码">纯工具代码</h3>
 <p>【自己将常用的但是标准函数库里面没有的功能写成一些工具箱函数备用】</p>
+<p>有⼀组核⼼任务⼤多数程序都会做，例如操作字符串、使⽤哈希表以及读/写⽂件。通常，这些“基本⼯具”是由编程语⾔中内置的库来实现的。但有时你要自己来填充这中间的空白。</p>
 <p>通常来讲，如果你在想：“我希望我们的库里有XYZ()函数”，那么就写一个！（如果它还不存在的话）经过一段时间，你会建立起一组不错的工具代码，后者可以应用于多个项目。</p>
 <h3 id="创建大量通用代码">创建大量通用代码</h3>
 <p><code>ReadFileToString()</code> 和 <code>format_pretty()</code> 这两个函数是不相关子问题的好例子。它们是如此基本而广泛适用，所以很可能会在多个项目中重用。代码库常常有个专门的目录来存放这种代码（例如 util），这样它们就很方便重用。</p>
@@ -20822,7 +18416,7 @@ document.addEventListener('DOMContentLoaded', function() {
     onmouseover="this.style.backgroundColor = this.style.getPropertyValue('--hover-bg')"
     onmouseout="this.style.backgroundColor = 'color-mix(in srgb, var(--color-note) 10%, transparent)'"
     role="alert"
-    aria-labelledby="alert-24-title">
+    aria-labelledby="alert-25-title">
     
     <div
       class=" flex items-center justify-between px-6 py-6"
@@ -20830,7 +18424,7 @@ document.addEventListener('DOMContentLoaded', function() {
       <div class="flex items-center gap-3">
         
         <h4
-          id="alert-24-title"
+          id="alert-25-title"
           class="m-0 font-semibold text-foreground/90">
           这是自顶向下或者自底向上式编程吗？
         </h4>
@@ -20842,7 +18436,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     
     <div
-      id="alert-24-content"
+      id="alert-25-content"
       class="alert-content  px-6 pb-6">
       <div class="prose prose-sm text-foreground/90 max-w-none">
         <p>自顶向下编程是一种风格，先设计高层次模块和函数，然后根据支持它们的需要来实现低层次函数。</p>
@@ -20882,18 +18476,19 @@ document.addEventListener('DOMContentLoaded', function() {
 
 <h3 id="项目专有功能">项目专有功能</h3>
 <p>在理想情况下，你所抽取出的子问题对项目一无所知。但是就算它们不是这样，也没有问题。分离子问题仍然可能创造奇迹。</p>
+<p>【抽取出来的功能，有可能还是有一些专一性的，即不是完全对其他程序通用，可以放在单独的<code>util/</code>目录，也可以保留在原来的代码文件中，但是具体放在哪里不重要，以后可以随时移动抽取出来的函数的位置。】</p>
 <h3 id="简化已有接口">简化已有接口</h3>
 <p>人人都爱提供整洁接口的库 —— 那种参数少，不需要很多设置并且通常只需要花一点工夫就可以使用的库。它让你的代码看起来优雅：简单而又强大。</p>
 <p>但如果你所用的接口并不整洁，你还是可以创建自己整洁的 “包装” 函数。</p>
+<p>这⾥我们学到的是“<strong>你永远都不要安于使⽤不理想的接⼝</strong>”。你总是可以创建你⾃⼰的包装函数来隐藏接⼝的粗陋细节，让它不再成为你的阻碍。</p>
 <p>【自己设计接口，要直观、简洁，符合人的本能思维逻辑，不需要动脑子就能一目了然】</p>
 <h3 id="按需重塑接口">按需重塑接口</h3>
 <p>程序中很多代码在那里只是为了支持其他代码 —— 例如，为函数设置输入或者对输出做后期处理。这些 “粘附” 代码常常和程序的实际逻辑没有任何关系。这种传统的代码是抽取到独立函数的最好机会。</p>
 <h3 id="过犹不及">过犹不及</h3>
 <p>像我们在本章的开头所说的那样，我们的目标是“积极地发现和抽取不相关的子问题”。我们说“积极地”是因为大多数程序员不够积极。但也可能会过于积极，导致过犹不及。</p>
+<p>【拆的太细了反倒降低效率】</p>
 <p>为代码增加一个函数存在一个小的（却有形的）可读性代价。在前面的情况里，付出这种代价却什么也没有得到。如果你项目的其他部分也需要这些小函数，那么增加它们是有道理的。但是目前为止，还没有这个需要。</p>
 <h3 id="总结-8">总结</h3>
-<p>对本章一个简单的总结就是“把一般代码和项目专有的代码分开”。其结果是，大部分代码都是一般代码。通过建立一大组库和辅助函数来解决一般问题，剩下的只是让你的程序与众不同的核心部分。</p>
-<p>这个技巧有帮助的原因是它使程序员关注小而定义良好的问题，这些问题已经同项目的其他部分脱离。其结果是，对于这些子问题的解决方案倾向于更加完整和正确。你也可以在以后重用它们。</p>
 <div
     class="alert alert-important my-6 overflow-hidden rounded-lg transition-all duration-200 ease-out hover:-translate-y-0.5 hover:shadow-md"
     style="background-color: color-mix(in srgb, var(--color-important) 10%, transparent);
@@ -20902,7 +18497,7 @@ document.addEventListener('DOMContentLoaded', function() {
     onmouseover="this.style.backgroundColor = this.style.getPropertyValue('--hover-bg')"
     onmouseout="this.style.backgroundColor = 'color-mix(in srgb, var(--color-important) 10%, transparent)'"
     role="alert"
-    aria-labelledby="alert-25-title">
+    aria-labelledby="alert-26-title">
     
     <div
       class=" flex items-center justify-between px-6 py-6"
@@ -20910,7 +18505,72 @@ document.addEventListener('DOMContentLoaded', function() {
       <div class="flex items-center gap-3">
         
         <h4
-          id="alert-25-title"
+          id="alert-26-title"
+          class="m-0 font-semibold text-foreground/90">
+          总结
+        </h4>
+      </div>
+
+      
+      
+    </div>
+
+    
+    <div
+      id="alert-26-content"
+      class="alert-content  px-6 pb-6">
+      <div class="prose prose-sm text-foreground/90 max-w-none">
+        <p>对本章⼀个简单的总结就是“<strong>把⼀般代码和项⽬专有的代码分开</strong>”。其结果是，<strong>⼤部分代码都是⼀般代码</strong>。通过建⽴⼀⼤组库和辅助函数来解决⼀般问题，剩下的只是让你的程序与众不同的核⼼部分。</p>
+<p>这个技巧有帮助的原因是它使程序员关注⼩⽽定义良好的问题，这些问题已经同项⽬的其他部分脱离。其结果是，对于这些⼦问题的解决⽅案倾向于更加完整和正确。你也可以在以后重⽤它们。</p>
+      </div>
+    </div>
+  </div><script>
+function toggleAlert(alertId) {
+  const content = document.getElementById(alertId + '-content');
+  const chevron = document.getElementById(alertId + '-chevron');
+  const header = content.previousElementSibling;
+  
+  if (content.classList.contains('hidden')) {
+    content.classList.remove('hidden');
+    chevron.style.transform = 'rotate(0deg)';
+    header.setAttribute('aria-expanded', 'true');
+  } else {
+    content.classList.add('hidden');
+    chevron.style.transform = 'rotate(-90deg)';
+    header.setAttribute('aria-expanded', 'false');
+  }
+}
+
+
+document.addEventListener('DOMContentLoaded', function() {
+  const collapsedAlerts = document.querySelectorAll('.alert-content.hidden');
+  collapsedAlerts.forEach(function(content) {
+    const alertId = content.id.replace('-content', '');
+    const chevron = document.getElementById(alertId + '-chevron');
+    if (chevron) {
+      chevron.style.transform = 'rotate(-90deg)';
+    }
+  });
+});
+</script>
+
+<div
+    class="alert alert-important my-6 overflow-hidden rounded-lg transition-all duration-200 ease-out hover:-translate-y-0.5 hover:shadow-md"
+    style="background-color: color-mix(in srgb, var(--color-important) 10%, transparent);
+              border-left-color: var(--color-important);
+              --hover-bg: color-mix(in srgb, var(--color-important) 15%, transparent);"
+    onmouseover="this.style.backgroundColor = this.style.getPropertyValue('--hover-bg')"
+    onmouseout="this.style.backgroundColor = 'color-mix(in srgb, var(--color-important) 10%, transparent)'"
+    role="alert"
+    aria-labelledby="alert-27-title">
+    
+    <div
+      class=" flex items-center justify-between px-6 py-6"
+      >
+      <div class="flex items-center gap-3">
+        
+        <h4
+          id="alert-27-title"
           class="m-0 font-semibold text-foreground/90">
           阅读参考
         </h4>
@@ -20922,7 +18582,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     
     <div
-      id="alert-25-content"
+      id="alert-27-content"
       class="alert-content  px-6 pb-6">
       <div class="prose prose-sm text-foreground/90 max-w-none">
         <ul>
@@ -20972,7 +18632,7 @@ document.addEventListener('DOMContentLoaded', function() {
     onmouseover="this.style.backgroundColor = this.style.getPropertyValue('--hover-bg')"
     onmouseout="this.style.backgroundColor = 'color-mix(in srgb, var(--color-important) 10%, transparent)'"
     role="alert"
-    aria-labelledby="alert-26-title">
+    aria-labelledby="alert-28-title">
     
     <div
       class=" flex items-center justify-between px-6 py-6"
@@ -20980,7 +18640,7 @@ document.addEventListener('DOMContentLoaded', function() {
       <div class="flex items-center gap-3">
         
         <h4
-          id="alert-26-title"
+          id="alert-28-title"
           class="m-0 font-semibold text-foreground/90">
           关键思想
         </h4>
@@ -20992,7 +18652,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     
     <div
-      id="alert-26-content"
+      id="alert-28-content"
       class="alert-content  px-6 pb-6">
       <div class="prose prose-sm text-foreground/90 max-w-none">
         <p>应该把代码组织得一次只做一件事情。</p>
@@ -21036,8 +18696,70 @@ document.addEventListener('DOMContentLoaded', function() {
 <li>尽量把这件任务拆分到不同的函数中，或者至少是代码中不同的段落中。</li>
 </ol>
 <h3 id="总结-9">总结</h3>
-<p>本章给出了一个组织代码的简单技巧：<strong>一次只做一件事情</strong>。</p>
-<p>如果你有很难读的代码，尝试把它所做的所有任务列出来。其中一些任务可以很容易地变成单独的函数（或类）。其他的可以简单地成为一个函数中的逻辑 “段落”。具体如何拆分这些任务没有它们已经分开这个事实那样重要。难的是要准确地描述你的程序所做的所有这些小事情。</p>
+<div
+    class="alert alert-important my-6 overflow-hidden rounded-lg transition-all duration-200 ease-out hover:-translate-y-0.5 hover:shadow-md"
+    style="background-color: color-mix(in srgb, var(--color-important) 10%, transparent);
+              border-left-color: var(--color-important);
+              --hover-bg: color-mix(in srgb, var(--color-important) 15%, transparent);"
+    onmouseover="this.style.backgroundColor = this.style.getPropertyValue('--hover-bg')"
+    onmouseout="this.style.backgroundColor = 'color-mix(in srgb, var(--color-important) 10%, transparent)'"
+    role="alert"
+    aria-labelledby="alert-29-title">
+    
+    <div
+      class=" flex items-center justify-between px-6 py-6"
+      >
+      <div class="flex items-center gap-3">
+        
+        <h4
+          id="alert-29-title"
+          class="m-0 font-semibold text-foreground/90">
+          本章给出了⼀个组织代码的简单技巧：⼀次只做⼀件事情。
+        </h4>
+      </div>
+
+      
+      
+    </div>
+
+    
+    <div
+      id="alert-29-content"
+      class="alert-content  px-6 pb-6">
+      <div class="prose prose-sm text-foreground/90 max-w-none">
+        <p>如果你有很难读的代码，尝试把它所做的所有任务列出来。其中⼀些任务可以很容易地变成单独的函数（或类）。其他的可以简单地成为⼀个函数中的逻辑“段落”。具体如何拆分这些任务没有它们已经分开这个事实那样重要。难的是要准确地描述你的程序所做的所有这些⼩事情。</p>
+      </div>
+    </div>
+  </div><script>
+function toggleAlert(alertId) {
+  const content = document.getElementById(alertId + '-content');
+  const chevron = document.getElementById(alertId + '-chevron');
+  const header = content.previousElementSibling;
+  
+  if (content.classList.contains('hidden')) {
+    content.classList.remove('hidden');
+    chevron.style.transform = 'rotate(0deg)';
+    header.setAttribute('aria-expanded', 'true');
+  } else {
+    content.classList.add('hidden');
+    chevron.style.transform = 'rotate(-90deg)';
+    header.setAttribute('aria-expanded', 'false');
+  }
+}
+
+
+document.addEventListener('DOMContentLoaded', function() {
+  const collapsedAlerts = document.querySelectorAll('.alert-content.hidden');
+  collapsedAlerts.forEach(function(content) {
+    const alertId = content.id.replace('-content', '');
+    const chevron = document.getElementById(alertId + '-chevron');
+    if (chevron) {
+      chevron.style.transform = 'rotate(-90deg)';
+    }
+  });
+});
+</script>
+
 <h2 id="第12章-把想法变成代码">第12章 把想法变成代码</h2>
 
   <blockquote
@@ -21101,7 +18823,31 @@ document.addEventListener('DOMContentLoaded', function() {
 <li>number_of_shares（股票数量，如：100）</li>
 </ul>
 <p>由于一些奇怪的原因，这些数据分布在三个分开的数据库表中，在每个数据库中，time 是唯一的主键。</p>
-<p>![[Pasted image 20251113171453.png]]</p>
+<p>
+<figure class="image-figure not-prose my-8" 
+        data-lightbox-enabled="false"
+        data-gallery-type="auto">
+  <div class="image-container">
+    <img
+    src="/posts/clean_code/resources/13171453.png"
+    alt=""
+    
+    
+      
+      
+        
+    width="1688"
+    height="396"
+        
+      
+    
+    loading="lazy"
+    decoding="async"
+    data-gallery-src="/posts/clean_code/resources/13171453.png"
+    data-gallery-alt=""
+    data-gallery-title="" /></div>
+
+  </figure></p>
 <p>现在，我们要写一个程序来把三个表联合在一起（就像在 SQL 中的 JOIN 操作所做的那样）。这个步骤应该是简单的，因为这些行都是按 time 来排序的，但是有些行缺失了。你希望找到这 3 个 time 匹配的所有行，忽略任何不匹配的行。</p>
 <p>下面是一段 Python 代码，用来找到所有的匹配行：</p>
 <div
@@ -21128,7 +18874,7 @@ document.addEventListener('DOMContentLoaded', function() {
     <div class="flex items-center gap-2">
       <button
           class="collapse-code-btn text-muted-foreground hover:text-primary hover:bg-primary/10 focus:ring-primary/20 flex items-center gap-1.5 rounded-md px-2 py-1 text-xs font-medium transition-all duration-200 ease-out focus:ring-2 focus:outline-none"
-          data-code-id="code-58"
+          data-code-id="code-50"
           data-default-state="expanded"
           data-collapsed="false"
           data-auto-collapse-lines="30"
@@ -21149,7 +18895,7 @@ document.addEventListener('DOMContentLoaded', function() {
         </button>
       <button
         class="copy-code-btn text-muted-foreground hover:text-primary hover:bg-primary/10 focus:ring-primary/20 flex items-center gap-1.5 rounded-md px-2 py-1 text-xs font-medium transition-all duration-200 ease-out focus:ring-2 focus:outline-none"
-        data-code-id="code-58"
+        data-code-id="code-50"
         title="复制"
         aria-label="复制">
         <span class="copy-icon">
@@ -21168,7 +18914,7 @@ document.addEventListener('DOMContentLoaded', function() {
   </div>
 
   
-  <div class="code-block-content relative" id="code-58">
+  <div class="code-block-content relative" id="code-50">
     <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">PrintStockTransactions</span><span class="p">():</span>
 </span></span><span class="line"><span class="cl">    <span class="n">stock_iter</span> <span class="o">=</span> <span class="n">db_read</span><span class="p">(</span><span class="s2">&#34;SELECT time, ticker_symbol FROM ...&#34;</span><span class="p">)</span>
 </span></span><span class="line"><span class="cl">    <span class="n">price_iter</span> <span class="o">=</span> <span class="o">...</span>
@@ -21218,7 +18964,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
 <script>
 (function() {
-  const codeId = 'code-58';
+  const codeId = 'code-50';
   const copyBtn = document.querySelector('.copy-code-btn[data-code-id="' + codeId + '"]');
   const collapseBtn = document.querySelector('.collapse-code-btn[data-code-id="' + codeId + '"]');
   const codeContainer = document.getElementById(codeId);
@@ -21472,7 +19218,7 @@ document.addEventListener('DOMContentLoaded', function() {
     <div class="flex items-center gap-2">
       <button
           class="collapse-code-btn text-muted-foreground hover:text-primary hover:bg-primary/10 focus:ring-primary/20 flex items-center gap-1.5 rounded-md px-2 py-1 text-xs font-medium transition-all duration-200 ease-out focus:ring-2 focus:outline-none"
-          data-code-id="code-59"
+          data-code-id="code-51"
           data-default-state="expanded"
           data-collapsed="false"
           data-auto-collapse-lines="30"
@@ -21493,7 +19239,7 @@ document.addEventListener('DOMContentLoaded', function() {
         </button>
       <button
         class="copy-code-btn text-muted-foreground hover:text-primary hover:bg-primary/10 focus:ring-primary/20 flex items-center gap-1.5 rounded-md px-2 py-1 text-xs font-medium transition-all duration-200 ease-out focus:ring-2 focus:outline-none"
-        data-code-id="code-59"
+        data-code-id="code-51"
         title="复制"
         aria-label="复制">
         <span class="copy-icon">
@@ -21512,7 +19258,7 @@ document.addEventListener('DOMContentLoaded', function() {
   </div>
 
   
-  <div class="code-block-content relative" id="code-59">
+  <div class="code-block-content relative" id="code-51">
     <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">PrintStockTransactions</span><span class="p">():</span>
 </span></span><span class="line"><span class="cl">    <span class="n">stock_iter</span> <span class="o">=</span> <span class="o">...</span>
 </span></span><span class="line"><span class="cl">    <span class="n">price_iter</span> <span class="o">=</span> <span class="o">...</span>
@@ -21545,7 +19291,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
 <script>
 (function() {
-  const codeId = 'code-59';
+  const codeId = 'code-51';
   const copyBtn = document.querySelector('.copy-code-btn[data-code-id="' + codeId + '"]');
   const collapseBtn = document.querySelector('.collapse-code-btn[data-code-id="' + codeId + '"]');
   const codeContainer = document.getElementById(codeId);
@@ -21790,7 +19536,7 @@ document.addEventListener('DOMContentLoaded', function() {
     <div class="flex items-center gap-2">
       <button
           class="collapse-code-btn text-muted-foreground hover:text-primary hover:bg-primary/10 focus:ring-primary/20 flex items-center gap-1.5 rounded-md px-2 py-1 text-xs font-medium transition-all duration-200 ease-out focus:ring-2 focus:outline-none"
-          data-code-id="code-60"
+          data-code-id="code-52"
           data-default-state="expanded"
           data-collapsed="false"
           data-auto-collapse-lines="30"
@@ -21811,7 +19557,7 @@ document.addEventListener('DOMContentLoaded', function() {
         </button>
       <button
         class="copy-code-btn text-muted-foreground hover:text-primary hover:bg-primary/10 focus:ring-primary/20 flex items-center gap-1.5 rounded-md px-2 py-1 text-xs font-medium transition-all duration-200 ease-out focus:ring-2 focus:outline-none"
-        data-code-id="code-60"
+        data-code-id="code-52"
         title="复制"
         aria-label="复制">
         <span class="copy-icon">
@@ -21830,7 +19576,7 @@ document.addEventListener('DOMContentLoaded', function() {
   </div>
 
   
-  <div class="code-block-content relative" id="code-60">
+  <div class="code-block-content relative" id="code-52">
     <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">AdvanceToMatchingTime</span><span class="p">(</span><span class="n">stock_iter</span><span class="p">,</span> <span class="n">price_iter</span><span class="p">,</span> <span class="n">num_shares_iter</span><span class="p">):</span>
 </span></span><span class="line"><span class="cl">    <span class="c1"># Iterate through all the rows of the 3 tables in parallel.</span>
 </span></span><span class="line"><span class="cl">    <span class="k">while</span> <span class="n">stock_iter</span> <span class="ow">and</span> <span class="n">price_iter</span> <span class="ow">and</span> <span class="n">num_shares_iter</span><span class="p">:</span>
@@ -21866,7 +19612,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
 <script>
 (function() {
-  const codeId = 'code-60';
+  const codeId = 'code-52';
   const copyBtn = document.querySelector('.copy-code-btn[data-code-id="' + codeId + '"]');
   const collapseBtn = document.querySelector('.collapse-code-btn[data-code-id="' + codeId + '"]');
   const codeContainer = document.getElementById(codeId);
@@ -22115,7 +19861,7 @@ document.addEventListener('DOMContentLoaded', function() {
     <div class="flex items-center gap-2">
       <button
           class="collapse-code-btn text-muted-foreground hover:text-primary hover:bg-primary/10 focus:ring-primary/20 flex items-center gap-1.5 rounded-md px-2 py-1 text-xs font-medium transition-all duration-200 ease-out focus:ring-2 focus:outline-none"
-          data-code-id="code-61"
+          data-code-id="code-53"
           data-default-state="expanded"
           data-collapsed="false"
           data-auto-collapse-lines="30"
@@ -22136,7 +19882,7 @@ document.addEventListener('DOMContentLoaded', function() {
         </button>
       <button
         class="copy-code-btn text-muted-foreground hover:text-primary hover:bg-primary/10 focus:ring-primary/20 flex items-center gap-1.5 rounded-md px-2 py-1 text-xs font-medium transition-all duration-200 ease-out focus:ring-2 focus:outline-none"
-        data-code-id="code-61"
+        data-code-id="code-53"
         title="复制"
         aria-label="复制">
         <span class="copy-icon">
@@ -22155,7 +19901,7 @@ document.addEventListener('DOMContentLoaded', function() {
   </div>
 
   
-  <div class="code-block-content relative" id="code-61">
+  <div class="code-block-content relative" id="code-53">
     <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">AdvanceToMatchingTime</span><span class="p">(</span><span class="n">row_iter1</span><span class="p">,</span> <span class="n">row_iter2</span><span class="p">,</span> <span class="n">row_iter3</span><span class="p">):</span>
 </span></span><span class="line"><span class="cl">    <span class="k">while</span> <span class="n">row_iter1</span> <span class="ow">and</span> <span class="n">row_iter2</span> <span class="ow">and</span> <span class="n">row_iter3</span><span class="p">:</span>
 </span></span><span class="line"><span class="cl">        <span class="n">t1</span> <span class="o">=</span> <span class="n">row_iter1</span><span class="o">.</span><span class="n">time</span>
@@ -22188,7 +19934,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
 <script>
 (function() {
-  const codeId = 'code-61';
+  const codeId = 'code-53';
   const copyBtn = document.querySelector('.copy-code-btn[data-code-id="' + codeId + '"]');
   const collapseBtn = document.querySelector('.collapse-code-btn[data-code-id="' + codeId + '"]');
   const codeContainer = document.getElementById(codeId);
@@ -22409,8 +20155,71 @@ document.addEventListener('DOMContentLoaded', function() {
 <p>【最后这个函数非常简洁】
 如你所见，这段代码比以前清楚得多。该算法变得更简单，并现在那种微妙的比较更少了。我们用了像 <code>t1</code> 这样的短名字，却不用再考虑那些具体涉及的数据库字段。</p>
 <h3 id="总结-10">总结</h3>
-<p>本章讨论了一个简单的技巧，用自然语言描述程序然后用这个描述来帮助你写出更自然的代码。这个技巧出人意料地简单，但很强大。看到你在描述中所用的词和短语还可以帮助你发现哪些子问题可以拆分出来。</p>
+<div
+    class="alert alert-important my-6 overflow-hidden rounded-lg transition-all duration-200 ease-out hover:-translate-y-0.5 hover:shadow-md"
+    style="background-color: color-mix(in srgb, var(--color-important) 10%, transparent);
+              border-left-color: var(--color-important);
+              --hover-bg: color-mix(in srgb, var(--color-important) 15%, transparent);"
+    onmouseover="this.style.backgroundColor = this.style.getPropertyValue('--hover-bg')"
+    onmouseout="this.style.backgroundColor = 'color-mix(in srgb, var(--color-important) 10%, transparent)'"
+    role="alert"
+    aria-labelledby="alert-31-title">
+    
+    <div
+      class=" flex items-center justify-between px-6 py-6"
+      >
+      <div class="flex items-center gap-3">
+        
+        <h4
+          id="alert-31-title"
+          class="m-0 font-semibold text-foreground/90">
+          总结
+        </h4>
+      </div>
+
+      
+      
+    </div>
+
+    
+    <div
+      id="alert-31-content"
+      class="alert-content  px-6 pb-6">
+      <div class="prose prose-sm text-foreground/90 max-w-none">
+        <p>本章讨论了一个简单的技巧，用自然语言描述程序然后用这个描述来帮助你写出更自然的代码。这个技巧出人意料地简单，但很强大。看到你在描述中所用的词和短语还可以帮助你发现哪些子问题可以拆分出来。</p>
 <p>但是这个 “用自然语言说事情” 的过程不仅可以用于写代码。例如，某个大学计算机实验室的规定声称当有学生需要别人帮它调试程序时，他首先要对房间角落的一只专用的泰迪熊解释他遇到的问题。令人惊讶的是，仅仅通过大声把问题描述出来，往往就能帮这个学生找到解决的办法。这个技巧叫做 “橡皮鸭技术”。</p>
+      </div>
+    </div>
+  </div><script>
+function toggleAlert(alertId) {
+  const content = document.getElementById(alertId + '-content');
+  const chevron = document.getElementById(alertId + '-chevron');
+  const header = content.previousElementSibling;
+  
+  if (content.classList.contains('hidden')) {
+    content.classList.remove('hidden');
+    chevron.style.transform = 'rotate(0deg)';
+    header.setAttribute('aria-expanded', 'true');
+  } else {
+    content.classList.add('hidden');
+    chevron.style.transform = 'rotate(-90deg)';
+    header.setAttribute('aria-expanded', 'false');
+  }
+}
+
+
+document.addEventListener('DOMContentLoaded', function() {
+  const collapsedAlerts = document.querySelectorAll('.alert-content.hidden');
+  collapsedAlerts.forEach(function(content) {
+    const alertId = content.id.replace('-content', '');
+    const chevron = document.getElementById(alertId + '-chevron');
+    if (chevron) {
+      chevron.style.transform = 'rotate(-90deg)';
+    }
+  });
+});
+</script>
+
 <h2 id="第13章-少写代码">第13章 少写代码</h2>
 <p>知道什么时候不写代码可能对于一个程序员来讲是他所要学习的最重要的技巧。你所写的每一行代码都是要测试和维护的。通过重用库或者减少功能，你可以节省时间并且让你的代码库保持精简节约。
 【代码并不是越多越好，有时候砍掉一些意义不大的功能，会让代码更清晰、皮实】</p>
@@ -22422,7 +20231,7 @@ document.addEventListener('DOMContentLoaded', function() {
     onmouseover="this.style.backgroundColor = this.style.getPropertyValue('--hover-bg')"
     onmouseout="this.style.backgroundColor = 'color-mix(in srgb, var(--color-important) 10%, transparent)'"
     role="alert"
-    aria-labelledby="alert-28-title">
+    aria-labelledby="alert-32-title">
     
     <div
       class=" flex items-center justify-between px-6 py-6"
@@ -22430,7 +20239,7 @@ document.addEventListener('DOMContentLoaded', function() {
       <div class="flex items-center gap-3">
         
         <h4
-          id="alert-28-title"
+          id="alert-32-title"
           class="m-0 font-semibold text-foreground/90">
           关键思想
         </h4>
@@ -22442,7 +20251,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     
     <div
-      id="alert-28-content"
+      id="alert-32-content"
       class="alert-content  px-6 pb-6">
       <div class="prose prose-sm text-foreground/90 max-w-none">
         <p>最好读的代码就是没有代码。</p>
@@ -22535,7 +20344,7 @@ document.addEventListener('DOMContentLoaded', function() {
     <div class="flex items-center gap-2">
       <button
           class="collapse-code-btn text-muted-foreground hover:text-primary hover:bg-primary/10 focus:ring-primary/20 flex items-center gap-1.5 rounded-md px-2 py-1 text-xs font-medium transition-all duration-200 ease-out focus:ring-2 focus:outline-none"
-          data-code-id="code-62"
+          data-code-id="code-54"
           data-default-state="expanded"
           data-collapsed="false"
           data-auto-collapse-lines="30"
@@ -22556,7 +20365,7 @@ document.addEventListener('DOMContentLoaded', function() {
         </button>
       <button
         class="copy-code-btn text-muted-foreground hover:text-primary hover:bg-primary/10 focus:ring-primary/20 flex items-center gap-1.5 rounded-md px-2 py-1 text-xs font-medium transition-all duration-200 ease-out focus:ring-2 focus:outline-none"
-        data-code-id="code-62"
+        data-code-id="code-54"
         title="复制"
         aria-label="复制">
         <span class="copy-icon">
@@ -22575,7 +20384,7 @@ document.addEventListener('DOMContentLoaded', function() {
   </div>
 
   
-  <div class="code-block-content relative" id="code-62">
+  <div class="code-block-content relative" id="code-54">
     <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="n">DiskObject</span><span class="w"> </span><span class="n">lastUsed</span><span class="p">;</span><span class="w">  </span><span class="c1">// class member</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="n">DiskObject</span><span class="w"> </span><span class="nf">lookUp</span><span class="p">(</span><span class="n">String</span><span class="w"> </span><span class="n">key</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">lastUsed</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="kc">null</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="o">!</span><span class="n">lastUsed</span><span class="p">.</span><span class="na">key</span><span class="p">().</span><span class="na">equals</span><span class="p">(</span><span class="n">key</span><span class="p">))</span><span class="w"> </span><span class="p">{</span><span class="w">
@@ -22597,7 +20406,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
 <script>
 (function() {
-  const codeId = 'code-62';
+  const codeId = 'code-54';
   const copyBtn = document.querySelector('.copy-code-btn[data-code-id="' + codeId + '"]');
   const collapseBtn = document.querySelector('.collapse-code-btn[data-code-id="' + codeId + '"]');
   const codeContainer = document.getElementById(codeId);
@@ -22884,13 +20693,76 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 </script>
 
-<p>本章是关于写越少代码越好的。每行新的代码都需要测试、写文档和维护。另外，代码库中的代码越多，它就越 “重”，而且在其上开发就越难。</p>
+<div
+    class="alert alert-important my-6 overflow-hidden rounded-lg transition-all duration-200 ease-out hover:-translate-y-0.5 hover:shadow-md"
+    style="background-color: color-mix(in srgb, var(--color-important) 10%, transparent);
+              border-left-color: var(--color-important);
+              --hover-bg: color-mix(in srgb, var(--color-important) 15%, transparent);"
+    onmouseover="this.style.backgroundColor = this.style.getPropertyValue('--hover-bg')"
+    onmouseout="this.style.backgroundColor = 'color-mix(in srgb, var(--color-important) 10%, transparent)'"
+    role="alert"
+    aria-labelledby="alert-34-title">
+    
+    <div
+      class=" flex items-center justify-between px-6 py-6"
+      >
+      <div class="flex items-center gap-3">
+        
+        <h4
+          id="alert-34-title"
+          class="m-0 font-semibold text-foreground/90">
+          总结
+        </h4>
+      </div>
+
+      
+      
+    </div>
+
+    
+    <div
+      id="alert-34-content"
+      class="alert-content  px-6 pb-6">
+      <div class="prose prose-sm text-foreground/90 max-w-none">
+        <p>本章是关于写越少代码越好的。每行新的代码都需要测试、写文档和维护。另外，代码库中的代码越多，它就越 “重”，而且在其上开发就越难。</p>
 <p>你可以通过以下方法避免编写新代码：</p>
 <ul>
 <li>从项目中消除不必要的功能，不要过度设计。</li>
 <li>重新考虑需求，解决版本最简单的问题，只要能完成工作就行。</li>
 <li>经常性地通读标准库的整个 API，保持对它们的熟悉程度。</li>
 </ul>
+      </div>
+    </div>
+  </div><script>
+function toggleAlert(alertId) {
+  const content = document.getElementById(alertId + '-content');
+  const chevron = document.getElementById(alertId + '-chevron');
+  const header = content.previousElementSibling;
+  
+  if (content.classList.contains('hidden')) {
+    content.classList.remove('hidden');
+    chevron.style.transform = 'rotate(0deg)';
+    header.setAttribute('aria-expanded', 'true');
+  } else {
+    content.classList.add('hidden');
+    chevron.style.transform = 'rotate(-90deg)';
+    header.setAttribute('aria-expanded', 'false');
+  }
+}
+
+
+document.addEventListener('DOMContentLoaded', function() {
+  const collapsedAlerts = document.querySelectorAll('.alert-content.hidden');
+  collapsedAlerts.forEach(function(content) {
+    const alertId = content.id.replace('-content', '');
+    const chevron = document.getElementById(alertId + '-chevron');
+    if (chevron) {
+      chevron.style.transform = 'rotate(-90deg)';
+    }
+  });
+});
+</script>
+
 <h1 id="第四部分-精选话题">第四部分 精选话题</h1>
 <p>本书前三部分覆盖了使代码简单易读的各种技巧。在该部分中，我们会把这些技术应用在两个精选出的话题中。</p>
 <p>首先，我们会讨论测试 —— 如何同时写出有效而又可读的测试。</p>
@@ -22907,7 +20779,7 @@ document.addEventListener('DOMContentLoaded', function() {
     onmouseover="this.style.backgroundColor = this.style.getPropertyValue('--hover-bg')"
     onmouseout="this.style.backgroundColor = 'color-mix(in srgb, var(--color-important) 10%, transparent)'"
     role="alert"
-    aria-labelledby="alert-30-title">
+    aria-labelledby="alert-35-title">
     
     <div
       class=" flex items-center justify-between px-6 py-6"
@@ -22915,7 +20787,7 @@ document.addEventListener('DOMContentLoaded', function() {
       <div class="flex items-center gap-3">
         
         <h4
-          id="alert-30-title"
+          id="alert-35-title"
           class="m-0 font-semibold text-foreground/90">
           关键思想
         </h4>
@@ -22927,7 +20799,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     
     <div
-      id="alert-30-content"
+      id="alert-35-content"
       class="alert-content  px-6 pb-6">
       <div class="prose prose-sm text-foreground/90 max-w-none">
         <p>测试应当具有可读性，以便其他程序员可以舒服地改变或者增加测试。</p>
@@ -23004,7 +20876,7 @@ document.addEventListener('DOMContentLoaded', function() {
     <div class="flex items-center gap-2">
       <button
           class="collapse-code-btn text-muted-foreground hover:text-primary hover:bg-primary/10 focus:ring-primary/20 flex items-center gap-1.5 rounded-md px-2 py-1 text-xs font-medium transition-all duration-200 ease-out focus:ring-2 focus:outline-none"
-          data-code-id="code-63"
+          data-code-id="code-55"
           data-default-state="expanded"
           data-collapsed="false"
           data-auto-collapse-lines="30"
@@ -23025,7 +20897,7 @@ document.addEventListener('DOMContentLoaded', function() {
         </button>
       <button
         class="copy-code-btn text-muted-foreground hover:text-primary hover:bg-primary/10 focus:ring-primary/20 flex items-center gap-1.5 rounded-md px-2 py-1 text-xs font-medium transition-all duration-200 ease-out focus:ring-2 focus:outline-none"
-        data-code-id="code-63"
+        data-code-id="code-55"
         title="复制"
         aria-label="复制">
         <span class="copy-icon">
@@ -23044,7 +20916,7 @@ document.addEventListener('DOMContentLoaded', function() {
   </div>
 
   
-  <div class="code-block-content relative" id="code-63">
+  <div class="code-block-content relative" id="code-55">
     <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="line"><span class="cl"><span class="n">CheckScoresBeforeAfter</span><span class="p">(</span><span class="s">&#34;-5, 1, 4, -99998.7, 3&#34;</span><span class="p">,</span> <span class="s">&#34;4, 3, 1&#34;</span><span class="p">);</span></span></span></code></pre></div>
     
     <div
@@ -23060,7 +20932,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
 <script>
 (function() {
-  const codeId = 'code-63';
+  const codeId = 'code-55';
   const copyBtn = document.querySelector('.copy-code-btn[data-code-id="' + codeId + '"]');
   const collapseBtn = document.querySelector('.collapse-code-btn[data-code-id="' + codeId + '"]');
   const codeContainer = document.getElementById(codeId);
@@ -23322,7 +21194,7 @@ document.addEventListener('DOMContentLoaded', function() {
     <div class="flex items-center gap-2">
       <button
           class="collapse-code-btn text-muted-foreground hover:text-primary hover:bg-primary/10 focus:ring-primary/20 flex items-center gap-1.5 rounded-md px-2 py-1 text-xs font-medium transition-all duration-200 ease-out focus:ring-2 focus:outline-none"
-          data-code-id="code-64"
+          data-code-id="code-56"
           data-default-state="expanded"
           data-collapsed="false"
           data-auto-collapse-lines="30"
@@ -23343,7 +21215,7 @@ document.addEventListener('DOMContentLoaded', function() {
         </button>
       <button
         class="copy-code-btn text-muted-foreground hover:text-primary hover:bg-primary/10 focus:ring-primary/20 flex items-center gap-1.5 rounded-md px-2 py-1 text-xs font-medium transition-all duration-200 ease-out focus:ring-2 focus:outline-none"
-        data-code-id="code-64"
+        data-code-id="code-56"
         title="复制"
         aria-label="复制">
         <span class="copy-icon">
@@ -23362,7 +21234,7 @@ document.addEventListener('DOMContentLoaded', function() {
   </div>
 
   
-  <div class="code-block-content relative" id="code-64">
+  <div class="code-block-content relative" id="code-56">
     <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="line"><span class="cl"><span class="n">CheckScoresBeforeAfter</span><span class="p">(</span><span class="s">&#34;1, 2, -1, 3&#34;</span><span class="p">,</span> <span class="s">&#34;3, 2, 1&#34;</span><span class="p">);</span></span></span></code></pre></div>
     
     <div
@@ -23378,7 +21250,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
 <script>
 (function() {
-  const codeId = 'code-64';
+  const codeId = 'code-56';
   const copyBtn = document.querySelector('.copy-code-btn[data-code-id="' + codeId + '"]');
   const collapseBtn = document.querySelector('.collapse-code-btn[data-code-id="' + codeId + '"]');
   const codeContainer = document.getElementById(codeId);
@@ -23605,7 +21477,7 @@ document.addEventListener('DOMContentLoaded', function() {
     onmouseover="this.style.backgroundColor = this.style.getPropertyValue('--hover-bg')"
     onmouseout="this.style.backgroundColor = 'color-mix(in srgb, var(--color-important) 10%, transparent)'"
     role="alert"
-    aria-labelledby="alert-31-title">
+    aria-labelledby="alert-36-title">
     
     <div
       class=" flex items-center justify-between px-6 py-6"
@@ -23613,7 +21485,7 @@ document.addEventListener('DOMContentLoaded', function() {
       <div class="flex items-center gap-3">
         
         <h4
-          id="alert-31-title"
+          id="alert-36-title"
           class="m-0 font-semibold text-foreground/90">
           关键思想
         </h4>
@@ -23625,7 +21497,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     
     <div
-      id="alert-31-content"
+      id="alert-36-content"
       class="alert-content  px-6 pb-6">
       <div class="prose prose-sm text-foreground/90 max-w-none">
         <p>又简单又能完成工作的测试值更好。</p>
@@ -23690,7 +21562,7 @@ document.addEventListener('DOMContentLoaded', function() {
     <div class="flex items-center gap-2">
       <button
           class="collapse-code-btn text-muted-foreground hover:text-primary hover:bg-primary/10 focus:ring-primary/20 flex items-center gap-1.5 rounded-md px-2 py-1 text-xs font-medium transition-all duration-200 ease-out focus:ring-2 focus:outline-none"
-          data-code-id="code-65"
+          data-code-id="code-57"
           data-default-state="expanded"
           data-collapsed="false"
           data-auto-collapse-lines="30"
@@ -23711,7 +21583,7 @@ document.addEventListener('DOMContentLoaded', function() {
         </button>
       <button
         class="copy-code-btn text-muted-foreground hover:text-primary hover:bg-primary/10 focus:ring-primary/20 flex items-center gap-1.5 rounded-md px-2 py-1 text-xs font-medium transition-all duration-200 ease-out focus:ring-2 focus:outline-none"
-        data-code-id="code-65"
+        data-code-id="code-57"
         title="复制"
         aria-label="复制">
         <span class="copy-icon">
@@ -23730,7 +21602,7 @@ document.addEventListener('DOMContentLoaded', function() {
   </div>
 
   
-  <div class="code-block-content relative" id="code-65">
+  <div class="code-block-content relative" id="code-57">
     <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="line"><span class="cl"><span class="n">CheckScoresBeforeAfter</span><span class="p">(</span><span class="s">&#34;2, 1, 3&#34;</span><span class="p">,</span> <span class="s">&#34;3, 2, 1&#34;</span><span class="p">);</span>    <span class="c1">// Basic sorting
 </span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="n">CheckScoresBeforeAfter</span><span class="p">(</span><span class="s">&#34;0, -0.1, -10&#34;</span><span class="p">,</span> <span class="s">&#34;0&#34;</span><span class="p">);</span>      <span class="c1">// All values &lt; 0 removed
 </span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="n">CheckScoresBeforeAfter</span><span class="p">(</span><span class="s">&#34;1, -2, 1, -2&#34;</span><span class="p">,</span> <span class="s">&#34;1, 1&#34;</span><span class="p">);</span>  <span class="c1">// Duplicates not a problem
@@ -23750,7 +21622,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
 <script>
 (function() {
-  const codeId = 'code-65';
+  const codeId = 'code-57';
   const copyBtn = document.querySelector('.copy-code-btn[data-code-id="' + codeId + '"]');
   const collapseBtn = document.querySelector('.collapse-code-btn[data-code-id="' + codeId + '"]');
   const codeContainer = document.getElementById(codeId);
@@ -24004,7 +21876,7 @@ document.addEventListener('DOMContentLoaded', function() {
     <div class="flex items-center gap-2">
       <button
           class="collapse-code-btn text-muted-foreground hover:text-primary hover:bg-primary/10 focus:ring-primary/20 flex items-center gap-1.5 rounded-md px-2 py-1 text-xs font-medium transition-all duration-200 ease-out focus:ring-2 focus:outline-none"
-          data-code-id="code-66"
+          data-code-id="code-58"
           data-default-state="expanded"
           data-collapsed="false"
           data-auto-collapse-lines="30"
@@ -24025,7 +21897,7 @@ document.addEventListener('DOMContentLoaded', function() {
         </button>
       <button
         class="copy-code-btn text-muted-foreground hover:text-primary hover:bg-primary/10 focus:ring-primary/20 flex items-center gap-1.5 rounded-md px-2 py-1 text-xs font-medium transition-all duration-200 ease-out focus:ring-2 focus:outline-none"
-        data-code-id="code-66"
+        data-code-id="code-58"
         title="复制"
         aria-label="复制">
         <span class="copy-icon">
@@ -24044,7 +21916,7 @@ document.addEventListener('DOMContentLoaded', function() {
   </div>
 
   
-  <div class="code-block-content relative" id="code-66">
+  <div class="code-block-content relative" id="code-58">
     <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="line"><span class="cl"><span class="kt">void</span> <span class="nf">Test_SortAndFilterDocs</span><span class="p">()</span> <span class="p">{</span>
 </span></span><span class="line"><span class="cl">    <span class="p">...</span>
 </span></span><span class="line"><span class="cl"><span class="p">}</span></span></span></code></pre></div>
@@ -24062,7 +21934,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
 <script>
 (function() {
-  const codeId = 'code-66';
+  const codeId = 'code-58';
   const copyBtn = document.querySelector('.copy-code-btn[data-code-id="' + codeId + '"]');
   const collapseBtn = document.querySelector('.collapse-code-btn[data-code-id="' + codeId + '"]');
   const codeContainer = document.getElementById(codeId);
@@ -24305,7 +22177,7 @@ document.addEventListener('DOMContentLoaded', function() {
     <div class="flex items-center gap-2">
       <button
           class="collapse-code-btn text-muted-foreground hover:text-primary hover:bg-primary/10 focus:ring-primary/20 flex items-center gap-1.5 rounded-md px-2 py-1 text-xs font-medium transition-all duration-200 ease-out focus:ring-2 focus:outline-none"
-          data-code-id="code-67"
+          data-code-id="code-59"
           data-default-state="expanded"
           data-collapsed="false"
           data-auto-collapse-lines="30"
@@ -24326,7 +22198,7 @@ document.addEventListener('DOMContentLoaded', function() {
         </button>
       <button
         class="copy-code-btn text-muted-foreground hover:text-primary hover:bg-primary/10 focus:ring-primary/20 flex items-center gap-1.5 rounded-md px-2 py-1 text-xs font-medium transition-all duration-200 ease-out focus:ring-2 focus:outline-none"
-        data-code-id="code-67"
+        data-code-id="code-59"
         title="复制"
         aria-label="复制">
         <span class="copy-icon">
@@ -24345,7 +22217,7 @@ document.addEventListener('DOMContentLoaded', function() {
   </div>
 
   
-  <div class="code-block-content relative" id="code-67">
+  <div class="code-block-content relative" id="code-59">
     <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="line"><span class="cl"><span class="kt">void</span> <span class="nf">Test_SortAndFilterDocs_BasicSorting</span><span class="p">()</span> <span class="p">{</span>
 </span></span><span class="line"><span class="cl">    <span class="p">...</span>
 </span></span><span class="line"><span class="cl"><span class="p">}</span>
@@ -24368,7 +22240,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
 <script>
 (function() {
-  const codeId = 'code-67';
+  const codeId = 'code-59';
   const copyBtn = document.querySelector('.copy-code-btn[data-code-id="' + codeId + '"]');
   const collapseBtn = document.querySelector('.collapse-code-btn[data-code-id="' + codeId + '"]');
   const codeContainer = document.getElementById(codeId);
@@ -24615,7 +22487,7 @@ document.addEventListener('DOMContentLoaded', function() {
     <div class="flex items-center gap-2">
       <button
           class="collapse-code-btn text-muted-foreground hover:text-primary hover:bg-primary/10 focus:ring-primary/20 flex items-center gap-1.5 rounded-md px-2 py-1 text-xs font-medium transition-all duration-200 ease-out focus:ring-2 focus:outline-none"
-          data-code-id="code-68"
+          data-code-id="code-60"
           data-default-state="expanded"
           data-collapsed="false"
           data-auto-collapse-lines="30"
@@ -24636,7 +22508,7 @@ document.addEventListener('DOMContentLoaded', function() {
         </button>
       <button
         class="copy-code-btn text-muted-foreground hover:text-primary hover:bg-primary/10 focus:ring-primary/20 flex items-center gap-1.5 rounded-md px-2 py-1 text-xs font-medium transition-all duration-200 ease-out focus:ring-2 focus:outline-none"
-        data-code-id="code-68"
+        data-code-id="code-60"
         title="复制"
         aria-label="复制">
         <span class="copy-icon">
@@ -24655,7 +22527,7 @@ document.addEventListener('DOMContentLoaded', function() {
   </div>
 
   
-  <div class="code-block-content relative" id="code-68">
+  <div class="code-block-content relative" id="code-60">
     <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="line"><span class="cl"><span class="kt">void</span> <span class="nf">Test1</span><span class="p">()</span> <span class="p">{</span>
 </span></span><span class="line"><span class="cl">    <span class="n">vector</span><span class="o">&lt;</span><span class="n">ScoredDocument</span><span class="o">&gt;</span> <span class="n">docs</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl">    <span class="n">docs</span><span class="p">.</span><span class="n">resize</span><span class="p">(</span><span class="mi">5</span><span class="p">);</span>
@@ -24691,7 +22563,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
 <script>
 (function() {
-  const codeId = 'code-68';
+  const codeId = 'code-60';
   const copyBtn = document.querySelector('.copy-code-btn[data-code-id="' + codeId + '"]');
   const collapseBtn = document.querySelector('.collapse-code-btn[data-code-id="' + codeId + '"]');
   const codeContainer = document.getElementById(codeId);
@@ -24931,7 +22803,7 @@ document.addEventListener('DOMContentLoaded', function() {
     onmouseover="this.style.backgroundColor = this.style.getPropertyValue('--hover-bg')"
     onmouseout="this.style.backgroundColor = 'color-mix(in srgb, var(--color-note) 10%, transparent)'"
     role="alert"
-    aria-labelledby="alert-32-title">
+    aria-labelledby="alert-37-title">
     
     <div
       class=" flex items-center justify-between px-6 py-6"
@@ -24939,7 +22811,7 @@ document.addEventListener('DOMContentLoaded', function() {
       <div class="flex items-center gap-3">
         
         <h4
-          id="alert-32-title"
+          id="alert-37-title"
           class="m-0 font-semibold text-foreground/90">
           测试驱动开发
         </h4>
@@ -24951,7 +22823,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     
     <div
-      id="alert-32-content"
+      id="alert-37-content"
       class="alert-content  px-6 pb-6">
       <div class="prose prose-sm text-foreground/90 max-w-none">
         <p>测试驱动开发（TDD）是一种编程风格，你在写真实代码之前就写出测试。TDD 的支持者相信这种流程对没有测试的代码来讲会做出极大的质量改进，比写出代码之后再写测试要大得多。</p>
@@ -25072,7 +22944,38 @@ document.addEventListener('DOMContentLoaded', function() {
 </li>
 </ul>
 <h3 id="总结-12">总结</h3>
-<p>在测试代码中，可读性仍然很重要。如果测试的可读性很好，其结果是它们也会变得很容易写，因此大家会写更多的测试。并且，如果你把事实代码设计得容易测试，代码的整个设计会变得更好。</p>
+<div
+    class="alert alert-important my-6 overflow-hidden rounded-lg transition-all duration-200 ease-out hover:-translate-y-0.5 hover:shadow-md"
+    style="background-color: color-mix(in srgb, var(--color-important) 10%, transparent);
+              border-left-color: var(--color-important);
+              --hover-bg: color-mix(in srgb, var(--color-important) 15%, transparent);"
+    onmouseover="this.style.backgroundColor = this.style.getPropertyValue('--hover-bg')"
+    onmouseout="this.style.backgroundColor = 'color-mix(in srgb, var(--color-important) 10%, transparent)'"
+    role="alert"
+    aria-labelledby="alert-38-title">
+    
+    <div
+      class=" flex items-center justify-between px-6 py-6"
+      >
+      <div class="flex items-center gap-3">
+        
+        <h4
+          id="alert-38-title"
+          class="m-0 font-semibold text-foreground/90">
+          总结
+        </h4>
+      </div>
+
+      
+      
+    </div>
+
+    
+    <div
+      id="alert-38-content"
+      class="alert-content  px-6 pb-6">
+      <div class="prose prose-sm text-foreground/90 max-w-none">
+        <p>在测试代码中，可读性仍然很重要。如果测试的可读性很好，其结果是它们也会变得很容易写，因此大家会写更多的测试。并且，如果你把事实代码设计得容易测试，代码的整个设计会变得更好。</p>
 <p>以下是如何改进测试的几个具体要点：</p>
 <ul>
 <li>每个测试的最高一层应该越简明越好。最好每个测试的输入 / 输出可以用一行代码来描述。</li>
@@ -25081,6 +22984,38 @@ document.addEventListener('DOMContentLoaded', function() {
 <li>给测试函数取一个有完整描述性的名字，以使每个测试所测到的东西很明确。不要用 <code>Test1()</code>，而用像 <code>Test_&lt;FunctionName&gt;_&lt;Situation&gt;</code>这样的名字。</li>
 </ul>
 <p>最重要的是，要使它易于改动和增加新的测试。</p>
+      </div>
+    </div>
+  </div><script>
+function toggleAlert(alertId) {
+  const content = document.getElementById(alertId + '-content');
+  const chevron = document.getElementById(alertId + '-chevron');
+  const header = content.previousElementSibling;
+  
+  if (content.classList.contains('hidden')) {
+    content.classList.remove('hidden');
+    chevron.style.transform = 'rotate(0deg)';
+    header.setAttribute('aria-expanded', 'true');
+  } else {
+    content.classList.add('hidden');
+    chevron.style.transform = 'rotate(-90deg)';
+    header.setAttribute('aria-expanded', 'false');
+  }
+}
+
+
+document.addEventListener('DOMContentLoaded', function() {
+  const collapsedAlerts = document.querySelectorAll('.alert-content.hidden');
+  collapsedAlerts.forEach(function(content) {
+    const alertId = content.id.replace('-content', '');
+    const chevron = document.getElementById(alertId + '-chevron');
+    if (chevron) {
+      chevron.style.transform = 'rotate(-90deg)';
+    }
+  });
+});
+</script>
+
 <h2 id="第15章-设计并改进分钟小时计数器">第15章 设计并改进“分钟/小时计数器”</h2>
 <div
     class="alert alert-note my-6 overflow-hidden rounded-lg transition-all duration-200 ease-out hover:-translate-y-0.5 hover:shadow-md"
@@ -25090,7 +23025,7 @@ document.addEventListener('DOMContentLoaded', function() {
     onmouseover="this.style.backgroundColor = this.style.getPropertyValue('--hover-bg')"
     onmouseout="this.style.backgroundColor = 'color-mix(in srgb, var(--color-note) 10%, transparent)'"
     role="alert"
-    aria-labelledby="alert-33-title">
+    aria-labelledby="alert-39-title">
     
     <div
       class=" flex items-center justify-between px-6 py-6"
@@ -25098,7 +23033,7 @@ document.addEventListener('DOMContentLoaded', function() {
       <div class="flex items-center gap-3">
         
         <h4
-          id="alert-33-title"
+          id="alert-39-title"
           class="m-0 font-semibold text-foreground/90">
           得到外部视角的观点
         </h4>
@@ -25110,7 +23045,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     
     <div
-      id="alert-33-content"
+      id="alert-39-content"
       class="alert-content  px-6 pb-6">
       <div class="prose prose-sm text-foreground/90 max-w-none">
         <p>你可能已经注意到，我们已经有两次通过同事来帮助我们解决问题了。询问外部视角的观点是测试你的代码是否 “对用户友好” 的好办法。要试着对他们的第一印象持开放的态度，因为其他人可能会有同样的结论。并且这些 “其他人” 里可能就包含 6 个月之后的你自己。</p>
@@ -25186,7 +23121,38 @@ document.addEventListener('DOMContentLoaded', function() {
 <p>有时，把一个问题拆成多个类可能引入类之间的复杂度（在有单个类的方案中是不会有的）。然而，在本例中，有一个简单的 “线性” 链条连接着每个类，并且只有一个类暴露给了最终用户。总体来讲，拆分这个问题所得到的好处更大。</p>
 <p>【评价程序的好坏，不能机械式地按照代码数量来评估，应该因地制宜，一个比较好的判断的标准是，一个外人来理解和维护你的代码所需要的工作量和难易程度】</p>
 <h3 id="总结-13">总结</h3>
-<p>让我们回顾得到最后的 MinuteHourCounter 设计所走过的路。这是个典型的代码片段演进过程。</p>
+<div
+    class="alert alert-important my-6 overflow-hidden rounded-lg transition-all duration-200 ease-out hover:-translate-y-0.5 hover:shadow-md"
+    style="background-color: color-mix(in srgb, var(--color-important) 10%, transparent);
+              border-left-color: var(--color-important);
+              --hover-bg: color-mix(in srgb, var(--color-important) 15%, transparent);"
+    onmouseover="this.style.backgroundColor = this.style.getPropertyValue('--hover-bg')"
+    onmouseout="this.style.backgroundColor = 'color-mix(in srgb, var(--color-important) 10%, transparent)'"
+    role="alert"
+    aria-labelledby="alert-40-title">
+    
+    <div
+      class=" flex items-center justify-between px-6 py-6"
+      >
+      <div class="flex items-center gap-3">
+        
+        <h4
+          id="alert-40-title"
+          class="m-0 font-semibold text-foreground/90">
+          总结
+        </h4>
+      </div>
+
+      
+      
+    </div>
+
+    
+    <div
+      id="alert-40-content"
+      class="alert-content  px-6 pb-6">
+      <div class="prose prose-sm text-foreground/90 max-w-none">
+        <p>让我们回顾得到最后的 MinuteHourCounter 设计所走过的路。这是个典型的代码片段演进过程。</p>
 <p>首先，我们从编写一个幼稚的方案开始。这帮助我们意识到两个设计上的挑战：速度和内存使用情况。</p>
 <p>接下来，我们尝试用 “传送带” 设计方案。这种设计改进了速度和内存使用情况，但对于高性能应用来讲还是不够好。并且，这个设计不是很灵活：让这段代码能处理其他的时间间隔需要很多工作。</p>
 <p>我们最终的设计解决了前面的问题，通过把问题拆分成子问题。下面是创建的三个类，自下向上，以及每个类所解决的子问题：</p>
@@ -25195,6 +23161,38 @@ document.addEventListener('DOMContentLoaded', function() {
 <li><strong>TrailingBucketCounter</strong>：根据过去了多少时间来移动 ConveyorQueue，并且按所给的精度来维护单一（最后）的时间间隔中的计数。</li>
 <li><strong>MinuteHourCounter</strong>：简单地包含两个 TrailingBucketCounters，一个用来统计分钟，一个用来统计小时。</li>
 </ul>
+      </div>
+    </div>
+  </div><script>
+function toggleAlert(alertId) {
+  const content = document.getElementById(alertId + '-content');
+  const chevron = document.getElementById(alertId + '-chevron');
+  const header = content.previousElementSibling;
+  
+  if (content.classList.contains('hidden')) {
+    content.classList.remove('hidden');
+    chevron.style.transform = 'rotate(0deg)';
+    header.setAttribute('aria-expanded', 'true');
+  } else {
+    content.classList.add('hidden');
+    chevron.style.transform = 'rotate(-90deg)';
+    header.setAttribute('aria-expanded', 'false');
+  }
+}
+
+
+document.addEventListener('DOMContentLoaded', function() {
+  const collapsedAlerts = document.querySelectorAll('.alert-content.hidden');
+  collapsedAlerts.forEach(function(content) {
+    const alertId = content.id.replace('-content', '');
+    const chevron = document.getElementById(alertId + '-chevron');
+    if (chevron) {
+      chevron.style.transform = 'rotate(-90deg)';
+    }
+  });
+});
+</script>
+
 <h1 id="附录">附录</h1>
 <h2 id="深入阅读">深入阅读</h2>
 <h3 id="关于写高质量代码的书">关于写高质量代码的书</h3>
