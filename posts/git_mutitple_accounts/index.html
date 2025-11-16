@@ -2,24 +2,24 @@
 <html
   lang="zh-CN"
   data-theme="Emerald">
-  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <head>
     <meta charset="utf-8" />
 <meta
   name="viewport"
   content="width=device-width, initial-scale=1, shrink-to-fit=no" />
 <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 
-<title>蒋介石传-布莱恩克罗泽 | Entropy Decrease</title>
+<title>git的不同账户使用不同密钥 | Entropy Decrease</title>
 
-<meta name="description" content="怎样登上权力中心 与我们这个时代的其他军人政治家一样，蒋介石是个无所畏惧的人，无论是在心理上还是精神上都是这样。
-在决策时他虽然有时会略前顾后，但一旦作出决策，他就会毫无顾是地以惊人的速度加以实施。那些向他挑战的人都一个个先后被处死或投人牢狱。
-在军事谋略方面，蒋介石受过良好的训练，久经沙场，但他只..." />
-<meta name="keywords" content="人物" />
+<meta name="description" content="不同的github或gitlab账户，希望用不同的密钥文件，这是一个比较常见的需求。
+有一种方法是在 ~/.ssh/config里面为github的不同账户设置不同的github别名，但是这个在后续使用的时候需要修改版本库的URL里面的主机名称（使用别名），有点麻烦。
+这里介绍另外一种方法，其原理是..." />
+<meta name="keywords" content="programming, git" />
 <meta name="author" content="Entropy Decrease" />
 <meta name="language" content="en-US" />
 
 <meta name="robots" content="index, follow" />
-<link rel="canonical" href="http://localhost:1313/posts/jiangjieshi/" />
+<link rel="canonical" href="https://entropydecrease.github.io/posts/git_mutitple_accounts/" />
 
 
 
@@ -28,35 +28,36 @@
 
 
 <link rel="manifest" href="/site.webmanifest" />
-<meta property="og:url" content="http://localhost:1313/posts/jiangjieshi/">
+<meta property="og:url" content="https://entropydecrease.github.io/posts/git_mutitple_accounts/">
   <meta property="og:site_name" content="Entropy Decrease">
-  <meta property="og:title" content="蒋介石传-布莱恩克罗泽">
-  <meta property="og:description" content="怎样登上权力中心 与我们这个时代的其他军人政治家一样，蒋介石是个无所畏惧的人，无论是在心理上还是精神上都是这样。
-在决策时他虽然有时会略前顾后，但一旦作出决策，他就会毫无顾是地以惊人的速度加以实施。那些向他挑战的人都一个个先后被处死或投人牢狱。">
+  <meta property="og:title" content="git的不同账户使用不同密钥">
+  <meta property="og:description" content="不同的github或gitlab账户，希望用不同的密钥文件，这是一个比较常见的需求。
+有一种方法是在 ~/.ssh/config里面为github的不同账户设置不同的github别名，但是这个在后续使用的时候需要修改版本库的URL里面的主机名称（使用别名），有点麻烦。">
   <meta property="og:locale" content="zh_CN">
   <meta property="og:type" content="article">
     <meta property="article:section" content="posts">
-    <meta property="article:published_time" content="2025-08-02T16:27:18+08:00">
-    <meta property="article:modified_time" content="2025-08-02T16:27:18+08:00">
-    <meta property="article:tag" content="人物">
-    <meta property="og:image" content="http://localhost:1313/images/og-default.avif">
+    <meta property="article:published_time" content="2025-11-15T00:00:00+00:00">
+    <meta property="article:modified_time" content="2025-11-15T00:00:00+00:00">
+    <meta property="article:tag" content="Programming">
+    <meta property="article:tag" content="Git">
+    <meta property="og:image" content="https://entropydecrease.github.io/images/og-default.avif">
 
 
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:image" content="http://localhost:1313/images/og-default.avif">
-  <meta name="twitter:title" content="蒋介石传-布莱恩克罗泽">
-  <meta name="twitter:description" content="怎样登上权力中心 与我们这个时代的其他军人政治家一样，蒋介石是个无所畏惧的人，无论是在心理上还是精神上都是这样。
-在决策时他虽然有时会略前顾后，但一旦作出决策，他就会毫无顾是地以惊人的速度加以实施。那些向他挑战的人都一个个先后被处死或投人牢狱。">
+  <meta name="twitter:image" content="https://entropydecrease.github.io/images/og-default.avif">
+  <meta name="twitter:title" content="git的不同账户使用不同密钥">
+  <meta name="twitter:description" content="不同的github或gitlab账户，希望用不同的密钥文件，这是一个比较常见的需求。
+有一种方法是在 ~/.ssh/config里面为github的不同账户设置不同的github别名，但是这个在后续使用的时候需要修改版本库的URL里面的主机名称（使用别名），有点麻烦。">
 
 
-  <meta itemprop="name" content="蒋介石传-布莱恩克罗泽">
-  <meta itemprop="description" content="怎样登上权力中心 与我们这个时代的其他军人政治家一样，蒋介石是个无所畏惧的人，无论是在心理上还是精神上都是这样。
-在决策时他虽然有时会略前顾后，但一旦作出决策，他就会毫无顾是地以惊人的速度加以实施。那些向他挑战的人都一个个先后被处死或投人牢狱。">
-  <meta itemprop="datePublished" content="2025-08-02T16:27:18+08:00">
-  <meta itemprop="dateModified" content="2025-08-02T16:27:18+08:00">
-  <meta itemprop="wordCount" content="6829">
-  <meta itemprop="image" content="http://localhost:1313/images/og-default.avif">
-  <meta itemprop="keywords" content="人物">
+  <meta itemprop="name" content="git的不同账户使用不同密钥">
+  <meta itemprop="description" content="不同的github或gitlab账户，希望用不同的密钥文件，这是一个比较常见的需求。
+有一种方法是在 ~/.ssh/config里面为github的不同账户设置不同的github别名，但是这个在后续使用的时候需要修改版本库的URL里面的主机名称（使用别名），有点麻烦。">
+  <meta itemprop="datePublished" content="2025-11-15T00:00:00+00:00">
+  <meta itemprop="dateModified" content="2025-11-15T00:00:00+00:00">
+  <meta itemprop="wordCount" content="701">
+  <meta itemprop="image" content="https://entropydecrease.github.io/images/og-default.avif">
+  <meta itemprop="keywords" content="Programming,Git">
 
 
 
@@ -185,7 +186,13 @@
 
 
   
-    <link rel="stylesheet" href="/css/compiled.css" />
+    
+      <link
+        rel="stylesheet"
+        href="/css/compiled.min.a8f84a548f754af6a307afd165768308ed68ee63e9fe99d3ef7e3dbcef7c9e3e.css"
+        integrity="sha256-qPhKVI91SvajB6/RZXaDCO1o7mPp/pnT7349vO98nj4="
+        crossorigin="anonymous" />
+    
   
 
 
@@ -193,7 +200,13 @@
 
 
   
-    <link rel="stylesheet" href="/css/chroma.css" />
+    
+      <link
+        rel="stylesheet"
+        href="/css/chroma.min.491df36221f739b5948a747a0351f100ee7ccaaf466d9f46288bf06de1d59123.css"
+        integrity="sha256-SR3zYiH3ObWUinR6A1HxAO58yq9GbZ9GKIvwbeHVkSM="
+        crossorigin="anonymous" />
+    
   
 
 
@@ -207,7 +220,10 @@
 
 
 
-      <script src="/js/main.js"></script>
+        <script
+          src="/js/main.ba969e49a7a874e6938fe689a7dcaa00cb64cb4d429c2cf98d09bde512a16c6d.js"
+          integrity="sha256-upaeSaeodOaTj&#43;aJp9yqAMtky01CnCz5jQm95RKhbG0="
+          crossorigin="anonymous"></script>
 
 
 
@@ -215,15 +231,27 @@
 
 
 
-        <script src="/js/toc.js" defer></script>
+          <script
+            src="/js/toc.70654aebf0b738a78ae2df95297cc10ebc6e590f3c942dd1325fa852f50038b2.js"
+            integrity="sha256-cGVK6/C3OKeK4t&#43;VKXzBDrxuWQ88lC3RMl&#43;oUvUAOLI="
+            crossorigin="anonymous"
+            defer></script>
 
 
 
-      <script src="/js/search.js" defer></script>
+        <script
+          src="/js/search.de3eba3540834efb8328121784bff4774e06362412ee41eee665f5b4f987f393.js"
+          integrity="sha256-3j66NUCDTvuDKBIXhL/0d04GNiQS7kHu5mX1tPmH85M="
+          crossorigin="anonymous"
+          defer></script>
 
 
 
-      <script src="/js/dock.js" defer></script>
+        <script
+          src="/js/dock.e68dfcd7c5d37f18f40d8855905ee50c98c58f3b204d0ffb207d4956c987ead0.js"
+          integrity="sha256-5o3818XTfxj0DYhVkF7lDJjFjzsgTQ/7IH1JVsmH6tA="
+          crossorigin="anonymous"
+          defer></script>
 
 
 
@@ -968,7 +996,7 @@
     stroke="currentColor"
     viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
 </svg>
-              <span class="max-w-[8rem] md:max-w-[16rem] lg:max-w-none truncate">蒋介石传-布莱恩克罗泽</span>
+              <span class="max-w-[8rem] md:max-w-[16rem] lg:max-w-none truncate">git的不同账户使用不同密钥</span>
             </span>
           </div>
         
@@ -991,7 +1019,7 @@
 <div class="post-meta">
   
   <h1 class="text-foreground mb-6 text-3xl leading-tight font-bold md:text-4xl">
-    蒋介石传-布莱恩克罗泽
+    git的不同账户使用不同密钥
   </h1>
 
   
@@ -1011,8 +1039,8 @@
     stroke="currentColor"
     viewBox="0 0 24 24" aria-label="发布于"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
 </svg>
-        <time datetime="2025-08-02">
-          2025 年 08 月 02 日
+        <time datetime="2025-11-15">
+          2025 年 11 月 15 日
         </time>
       </div>
 
@@ -1030,7 +1058,7 @@
     viewBox="0 0 24 24" aria-label="阅读时间"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
 </svg>
           <span
-            >14 分钟</span
+            >2 分钟</span
           >
         </div>
       
@@ -1045,7 +1073,7 @@
     stroke="currentColor"
     viewBox="0 0 24 24" aria-label="字数"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h7" />
 </svg>
-          <span>6829 字</span>
+          <span>701 字</span>
         </div>
       
 
@@ -1069,15 +1097,9 @@
             <div class="flex flex-wrap gap-2">
               
                 <a
-                  href="/categories/%E9%98%85%E8%AF%BB/"
+                  href="/categories/tech/"
                   class="bg-primary/10 text-primary hover:bg-primary/20 focus:ring-primary/20 inline-flex items-center rounded-full px-3 py-1 text-sm font-medium transition-all duration-200 ease-out hover:-translate-y-0.5 hover:scale-105 hover:shadow-md focus:ring-2 focus:outline-none">
-                  阅读
-                </a>
-              
-                <a
-                  href="/categories/%E5%8E%86%E5%8F%B2/"
-                  class="bg-primary/10 text-primary hover:bg-primary/20 focus:ring-primary/20 inline-flex items-center rounded-full px-3 py-1 text-sm font-medium transition-all duration-200 ease-out hover:-translate-y-0.5 hover:scale-105 hover:shadow-md focus:ring-2 focus:outline-none">
-                  历史
+                  Tech
                 </a>
               
             </div>
@@ -1104,9 +1126,15 @@
             <div class="flex flex-wrap gap-2">
               
                 <a
-                  href="/tags/%E4%BA%BA%E7%89%A9/"
+                  href="/tags/programming/"
                   class="bg-muted/50 text-muted-foreground hover:bg-primary/10 hover:text-primary focus:ring-primary/20 inline-flex items-center rounded px-2 py-1 text-sm transition-all duration-200 ease-out hover:-translate-y-0.5 hover:scale-105 focus:ring-2 focus:outline-none">
-                  #人物
+                  #programming
+                </a>
+              
+                <a
+                  href="/tags/git/"
+                  class="bg-muted/50 text-muted-foreground hover:bg-primary/10 hover:text-primary focus:ring-primary/20 inline-flex items-center rounded px-2 py-1 text-sm transition-all duration-200 ease-out hover:-translate-y-0.5 hover:scale-105 focus:ring-2 focus:outline-none">
+                  #git
                 </a>
               
             </div>
@@ -1127,520 +1155,1220 @@
 
   
   <article class="prose prose-neutral dark:prose-invert mb-12 max-w-none">
-    <h1 id="怎样登上权力中心">怎样登上权力中心</h1>
-
-  <blockquote
-    class="border-primary bg-muted/30 hover:bg-muted/40 my-6 rounded-r-lg border-l-4 py-4 pr-4 pl-6 italic transition-all duration-200 ease-out hover:translate-x-1">
-    <div class="prose prose-sm max-w-none">
-      <p>与我们这个时代的其他军人政治家一样，蒋介石是个无所畏惧的人，无论是在心理上还是精神上都是这样。</p>
-<p>在决策时他虽然有时会略前顾后，但一旦作出决策，他就会毫无顾是地以惊人的速度加以实施。那些向他挑战的人都一个个先后被处死或投人牢狱。</p>
-<p>在军事谋略方面，蒋介石受过良好的训练，久经沙场，但他只是一个战术家而非战略家。他的真正天才是善于搞政治阴谋。观其一生，他总是使各个派系互相敌视，对自己的追随者也是疑心重重。</p>
-
-    </div>
-  </blockquote><script>
-function toggleAlert(alertId) {
-  const content = document.getElementById(alertId + '-content');
-  const chevron = document.getElementById(alertId + '-chevron');
-  const header = content.previousElementSibling;
+    <p>不同的github或gitlab账户，希望用不同的密钥文件，这是一个比较常见的需求。</p>
+<p>有一种方法是在 <code>~/.ssh/config</code>里面为github的不同账户设置不同的github别名，但是这个在后续使用的时候需要修改版本库的URL里面的主机名称（使用别名），有点麻烦。</p>
+<p>这里介绍另外一种方法，其原理是为不同的账户指定不同的文件夹，在各自文件夹里面用&rsquo;.gitconfg&rsquo;文件来指定用户信息和&rsquo;sshCommand&rsquo;命令，该命令指定了ssh登录使用的密钥文件，然后在&rsquo;~/.gitconfig&rsquo;文件里面针对不同的目录指定不同的&rsquo;.gitconfig&rsquo;文件。</p>
+<h2 id="1-为不同的账户设定不同的文件夹">1. 为不同的账户设定不同的文件夹</h2>
+<p>比如说设定两个文件夹，针对个人和工作账户，分别是 <code>~/personal</code>和<code>~/work</code>。</p>
+<div
+  class="code-block-container border-border bg-card my-6 overflow-hidden rounded-xl border shadow-sm transition-all duration-200 ease-out hover:-translate-y-0.5 hover:shadow-md">
   
-  if (content.classList.contains('hidden')) {
-    content.classList.remove('hidden');
-    chevron.style.transform = 'rotate(0deg)';
-    header.setAttribute('aria-expanded', 'true');
-  } else {
-    content.classList.add('hidden');
-    chevron.style.transform = 'rotate(-90deg)';
-    header.setAttribute('aria-expanded', 'false');
-  }
-}
-
-
-document.addEventListener('DOMContentLoaded', function() {
-  const collapsedAlerts = document.querySelectorAll('.alert-content.hidden');
-  collapsedAlerts.forEach(function(content) {
-    const alertId = content.id.replace('-content', '');
-    const chevron = document.getElementById(alertId + '-chevron');
-    if (chevron) {
-      chevron.style.transform = 'rotate(-90deg)';
-    }
-  });
-});
-</script>
-
-
-  <blockquote
-    class="border-primary bg-muted/30 hover:bg-muted/40 my-6 rounded-r-lg border-l-4 py-4 pr-4 pl-6 italic transition-all duration-200 ease-out hover:translate-x-1">
-    <div class="prose prose-sm max-w-none">
-      <p>。。。他的同学们认为他傲慢。不过他对一个人是例外，那就是张群—他是蒋介石当时的同学，并赢得了蒋介石的终生信赖。除了蒋夫人和蒋经国外，张群要算蒋介石最亲密的知己了。</p>
-
+  <div
+    class="code-block-header bg-muted/30 border-border flex items-center justify-between border-b px-4 py-3">
+    
+    <div class="flex items-center gap-2">
+      <div class="text-muted-foreground flex-shrink-0">
+        
+  <svg class="h-4 w-4"
+    fill="none"
+    stroke="currentColor"
+    viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
+</svg>
+      </div>
+      <span class="text-muted-foreground text-sm font-medium">
+        SHELL
+      </span>
     </div>
-  </blockquote><script>
-function toggleAlert(alertId) {
-  const content = document.getElementById(alertId + '-content');
-  const chevron = document.getElementById(alertId + '-chevron');
-  const header = content.previousElementSibling;
-  
-  if (content.classList.contains('hidden')) {
-    content.classList.remove('hidden');
-    chevron.style.transform = 'rotate(0deg)';
-    header.setAttribute('aria-expanded', 'true');
-  } else {
-    content.classList.add('hidden');
-    chevron.style.transform = 'rotate(-90deg)';
-    header.setAttribute('aria-expanded', 'false');
-  }
-}
 
-
-document.addEventListener('DOMContentLoaded', function() {
-  const collapsedAlerts = document.querySelectorAll('.alert-content.hidden');
-  collapsedAlerts.forEach(function(content) {
-    const alertId = content.id.replace('-content', '');
-    const chevron = document.getElementById(alertId + '-chevron');
-    if (chevron) {
-      chevron.style.transform = 'rotate(-90deg)';
-    }
-  });
-});
-</script>
-
-
-  <blockquote
-    class="border-primary bg-muted/30 hover:bg-muted/40 my-6 rounded-r-lg border-l-4 py-4 pr-4 pl-6 italic transition-all duration-200 ease-out hover:translate-x-1">
-    <div class="prose prose-sm max-w-none">
-      <p>他的领袖天赋是无可非议的，但良好的判断并不能说明一切，他对军事和战略的分析在地缘政治方面不无道理，但他对政治的领悟还远远不够，他主要是从军事上来理解权力，而一旦他靠操纵他人对自己的忠诚来行使权力时，他就将自己的那种对政治的理解如实地、毫不掩饰地付诸行动。最后，他也就无法理解权力赖以维持的社会和政治因素。</p>
-<p>他最终失败的原因盖源于此。</p>
-
+    
+    <div class="flex items-center gap-2">
+      <button
+          class="collapse-code-btn text-muted-foreground hover:text-primary hover:bg-primary/10 focus:ring-primary/20 flex items-center gap-1.5 rounded-md px-2 py-1 text-xs font-medium transition-all duration-200 ease-out focus:ring-2 focus:outline-none"
+          data-code-id="code-0"
+          data-default-state="expanded"
+          data-collapsed="false"
+          data-auto-collapse-lines="30"
+          data-auto-collapse-height="400"
+          data-collapsed-height="120"
+          title="折叠"
+          aria-label="折叠">
+          <span class="collapse-icon">
+            
+  <svg class="h-3 w-3"
+    fill="none"
+    stroke="currentColor"
+    viewBox="0 0 24 24"><path fill="currentColor" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6l-6 6z"/></svg>
+          </span>
+          <span class="collapse-text hidden sm:inline"
+            >折叠</span
+          >
+        </button>
+      <button
+        class="copy-code-btn text-muted-foreground hover:text-primary hover:bg-primary/10 focus:ring-primary/20 flex items-center gap-1.5 rounded-md px-2 py-1 text-xs font-medium transition-all duration-200 ease-out focus:ring-2 focus:outline-none"
+        data-code-id="code-0"
+        title="复制"
+        aria-label="复制">
+        <span class="copy-icon">
+          
+  <svg class="h-3 w-3"
+    fill="none"
+    stroke="currentColor"
+    viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z" />
+</svg>
+        </span>
+        <span class="copy-text hidden sm:inline"
+          >复制</span
+        >
+      </button>
     </div>
-  </blockquote><script>
-function toggleAlert(alertId) {
-  const content = document.getElementById(alertId + '-content');
-  const chevron = document.getElementById(alertId + '-chevron');
-  const header = content.previousElementSibling;
+  </div>
+
   
-  if (content.classList.contains('hidden')) {
-    content.classList.remove('hidden');
-    chevron.style.transform = 'rotate(0deg)';
-    header.setAttribute('aria-expanded', 'true');
-  } else {
-    content.classList.add('hidden');
-    chevron.style.transform = 'rotate(-90deg)';
-    header.setAttribute('aria-expanded', 'false');
-  }
-}
-
-
-document.addEventListener('DOMContentLoaded', function() {
-  const collapsedAlerts = document.querySelectorAll('.alert-content.hidden');
-  collapsedAlerts.forEach(function(content) {
-    const alertId = content.id.replace('-content', '');
-    const chevron = document.getElementById(alertId + '-chevron');
-    if (chevron) {
-      chevron.style.transform = 'rotate(-90deg)';
-    }
-  });
-});
-</script>
-
-
-  <blockquote
-    class="border-primary bg-muted/30 hover:bg-muted/40 my-6 rounded-r-lg border-l-4 py-4 pr-4 pl-6 italic transition-all duration-200 ease-out hover:translate-x-1">
-    <div class="prose prose-sm max-w-none">
-      <p>在7月9日的第二封信中，蒋介石抱怨情况越来越糟，他“身心憔悴”，有些地区土匪活动猖獗，但由于部队纪律涣散，内部派系斗争严重，他们根本无力对付土匪。为避免人们指责他迷恋官职，喜欢投机，蒋介石决定辞去第二支队司令一职。</p>
-<p><em>在蒋介石的生涯中，每当形势不能如他所愿时，他就以辞职的方式来以退为进。他多次辞职，试图以此来证明他是不可缺少的，其结果也往往是他一旦复出，职权就会更大。</em> 这次孙中山和陈炯明再三挽留，但蒋介石都予以拒绝。</p>
-
+  <div class="code-block-content relative" id="code-0">
+    <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">mkdir ~/personal ~/work</span></span></code></pre></div>
+    
+    <div
+      class="collapse-overlay to-card/90 pointer-events-none absolute inset-0 bg-gradient-to-b from-transparent via-transparent opacity-0 transition-opacity duration-300">
+      <div
+        class="text-muted-foreground bg-card/80 border-border/50 hover:bg-primary/10 hover:text-primary hover:border-primary/30 absolute bottom-4 left-1/2 -translate-x-1/2 cursor-pointer rounded-full border px-3 py-1.5 text-xs backdrop-blur-sm transition-all duration-200">
+        点击展开查看更多
+      </div>
     </div>
-  </blockquote><script>
-function toggleAlert(alertId) {
-  const content = document.getElementById(alertId + '-content');
-  const chevron = document.getElementById(alertId + '-chevron');
-  const header = content.previousElementSibling;
+  </div>
+</div>
+
+
+<script>
+(function() {
+  const codeId = 'code-0';
+  const copyBtn = document.querySelector('.copy-code-btn[data-code-id="' + codeId + '"]');
+  const collapseBtn = document.querySelector('.collapse-code-btn[data-code-id="' + codeId + '"]');
+  const codeContainer = document.getElementById(codeId);
+
+  if (!codeContainer) return;
+
   
-  if (content.classList.contains('hidden')) {
-    content.classList.remove('hidden');
-    chevron.style.transform = 'rotate(0deg)';
-    header.setAttribute('aria-expanded', 'true');
-  } else {
-    content.classList.add('hidden');
-    chevron.style.transform = 'rotate(-90deg)';
-    header.setAttribute('aria-expanded', 'false');
+  if (copyBtn) {
+    const copyIcon = copyBtn.querySelector('.copy-icon');
+    const copyText = copyBtn.querySelector('.copy-text');
+
+    copyBtn.addEventListener('click', async function() {
+      try {
+        
+        let codeText = '';
+
+        
+        const codeTableCell = codeContainer.querySelector('.lntd:last-child code');
+        if (codeTableCell) {
+          codeText = codeTableCell.textContent || codeTableCell.innerText;
+        } else {
+          
+          const codeElement = codeContainer.querySelector('code');
+          if (codeElement) {
+            
+            const hasInlineLineNumbers = codeElement.querySelector('.ln');
+            if (hasInlineLineNumbers) {
+              
+              const codeLines = codeElement.querySelectorAll('.cl');
+              if (codeLines.length > 0) {
+                codeText = Array.from(codeLines)
+                  .map(line => {
+                    const text = line.textContent || line.innerText;
+                    
+                    return text.replace(/\n+$/, '');
+                  })
+                  .join('\n')
+                  .replace(/\n+$/, ''); 
+              } else {
+                
+                const allText = codeElement.textContent || codeElement.innerText;
+                codeText = allText.replace(/^\d+/gm, '').replace(/^\s+/gm, '');
+              }
+            } else {
+              
+              codeText = codeElement.textContent || codeElement.innerText;
+            }
+          } else {
+            
+            codeText = codeContainer.textContent || codeContainer.innerText;
+          }
+        }
+
+        
+        codeText = codeText.trim();
+
+        
+        await navigator.clipboard.writeText(codeText);
+
+        
+        copyIcon.innerHTML = `\n  \u003csvg class=\u0022h-3 w-3\u0022\n    fill=\u0022none\u0022\n    stroke=\u0022currentColor\u0022\n    viewBox=\u00220 0 24 24\u0022\u003e\u003cpath stroke-linecap=\u0022round\u0022 stroke-linejoin=\u0022round\u0022 stroke-width=\u00222\u0022 d=\u0022M5 13l4 4L19 7\u0022 \/\u003e\n\u003c\/svg\u003e`;
+        if (copyText) {
+          copyText.textContent = '已复制';
+        }
+        copyBtn.classList.add('text-green-600');
+
+        
+        setTimeout(() => {
+          copyIcon.innerHTML = `\n  \u003csvg class=\u0022h-3 w-3\u0022\n    fill=\u0022none\u0022\n    stroke=\u0022currentColor\u0022\n    viewBox=\u00220 0 24 24\u0022\u003e\u003cpath stroke-linecap=\u0022round\u0022 stroke-linejoin=\u0022round\u0022 stroke-width=\u00222\u0022 d=\u0022M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z\u0022 \/\u003e\n\u003c\/svg\u003e`;
+          if (copyText) {
+            copyText.textContent = '复制';
+          }
+          copyBtn.classList.remove('text-green-600');
+        }, 2000);
+
+      } catch (err) {
+        console.error('复制失败:', err);
+
+        
+        const range = document.createRange();
+        const codeElement = codeContainer.querySelector('code') || codeContainer;
+        range.selectNodeContents(codeElement);
+        const selection = window.getSelection();
+        selection.removeAllRanges();
+        selection.addRange(range);
+
+        
+        if (copyText) {
+          copyText.textContent = '已选择';
+        }
+
+        setTimeout(() => {
+          if (copyText) {
+            copyText.textContent = '复制';
+          }
+          selection.removeAllRanges();
+        }, 2000);
+      }
+    });
   }
-}
 
+  
+  if (collapseBtn) {
+    const collapseIcon = collapseBtn.querySelector('.collapse-icon');
+    const collapseText = collapseBtn.querySelector('.collapse-text');
+    const collapseOverlay = codeContainer.querySelector('.collapse-overlay');
 
-document.addEventListener('DOMContentLoaded', function() {
-  const collapsedAlerts = document.querySelectorAll('.alert-content.hidden');
-  collapsedAlerts.forEach(function(content) {
-    const alertId = content.id.replace('-content', '');
-    const chevron = document.getElementById(alertId + '-chevron');
-    if (chevron) {
-      chevron.style.transform = 'rotate(-90deg)';
+    
+    let codeElement = codeContainer.querySelector('pre.chroma');
+    if (!codeElement) {
+      codeElement = codeContainer.querySelector('pre');
     }
-  });
-});
+
+    const defaultState = collapseBtn.dataset.defaultState || 'expanded';
+    const isCollapsedAttr = collapseBtn.dataset.collapsed === 'true';
+    const autoCollapseLines = parseInt(collapseBtn.dataset.autoCollapseLines) || 30;
+    const autoCollapseHeight = parseInt(collapseBtn.dataset.autoCollapseHeight) || 400;
+    const collapsedHeight = parseInt(collapseBtn.dataset.collapsedHeight) || 120;
+
+    let isCollapsed = false;
+
+    
+    function initCollapse() {
+      
+      const shouldCollapse = isCollapsedAttr ||
+                           defaultState === 'collapsed' ||
+                           shouldAutoCollapse();
+
+      if (shouldCollapse) {
+        setCollapsed(true, false); 
+      }
+    }
+
+    function shouldAutoCollapse() {
+      
+      if (codeElement) {
+        const lines = codeElement.querySelectorAll('.line, .cl');
+        const height = codeElement.offsetHeight;
+        return lines.length > autoCollapseLines || height > autoCollapseHeight;
+      }
+
+      
+      const containerHeight = codeContainer.offsetHeight;
+      if (containerHeight > autoCollapseHeight) {
+        return true;
+      }
+
+      
+      const textContent = codeContainer.textContent || codeContainer.innerText || '';
+      const estimatedLines = textContent.split('\n').length;
+      return estimatedLines > autoCollapseLines;
+    }
+
+    function setCollapsed(collapsed, animate = true) {
+      if (!collapseOverlay) return;
+
+      isCollapsed = collapsed;
+
+      if (collapsed) {
+        
+        codeContainer.style.maxHeight = collapsedHeight + 'px';
+        codeContainer.style.overflow = 'hidden';
+        collapseOverlay.style.opacity = '1';
+        collapseOverlay.style.pointerEvents = 'auto';
+
+        
+        collapseIcon.innerHTML = `\n  \u003csvg class=\u0022h-3 w-3\u0022\n    fill=\u0022none\u0022\n    stroke=\u0022currentColor\u0022\n    viewBox=\u00220 0 24 24\u0022\u003e\u003cpath stroke-linecap=\u0022round\u0022 stroke-linejoin=\u0022round\u0022 stroke-width=\u00222\u0022 d=\u0022M19 9l-7 7-7-7\u0022 \/\u003e\n\u003c\/svg\u003e`;
+        if (collapseText) {
+          collapseText.textContent = '展开';
+        }
+        collapseBtn.title = '展开';
+
+      } else {
+        
+        codeContainer.style.maxHeight = '';
+        codeContainer.style.overflow = '';
+        collapseOverlay.style.opacity = '0';
+        collapseOverlay.style.pointerEvents = 'none';
+
+        
+        collapseIcon.innerHTML = `\n  \u003csvg class=\u0022h-3 w-3\u0022\n    fill=\u0022none\u0022\n    stroke=\u0022currentColor\u0022\n    viewBox=\u00220 0 24 24\u0022\u003e\u003cpath fill=\u0022currentColor\u0022 d=\u0022M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6l-6 6z\u0022\/\u003e\u003c\/svg\u003e`;
+        if (collapseText) {
+          collapseText.textContent = '折叠';
+        }
+        collapseBtn.title = '折叠';
+      }
+
+      
+      if (animate) {
+        codeContainer.style.transition = 'max-height 0.3s ease-out';
+        setTimeout(() => {
+          codeContainer.style.transition = '';
+        }, 300);
+      }
+    }
+
+    function toggleCollapse() {
+      setCollapsed(!isCollapsed, true);
+    }
+
+    
+    collapseBtn.addEventListener('click', toggleCollapse);
+
+    
+    if (collapseOverlay) {
+      collapseOverlay.addEventListener('click', () => {
+        if (isCollapsed) {
+          setCollapsed(false, true);
+        }
+      });
+    }
+
+    
+    initCollapse();
+  }
+})();
 </script>
-
-
-  <blockquote
-    class="border-primary bg-muted/30 hover:bg-muted/40 my-6 rounded-r-lg border-l-4 py-4 pr-4 pl-6 italic transition-all duration-200 ease-out hover:translate-x-1">
-    <div class="prose prose-sm max-w-none">
-      <p>6月16日，陈炯明倚仗北洋政府在政治和军事上的支持，公然派他的部队炮击孙中山的官邸，企图谋害孙中山。</p>
-<p>这时，蒋介石还在上海，他后来回忆说，陈炯明曾向他的部下许诺，如果能杀死孙中山，则犒赏20万美元，他还要洗劫广州城三天。</p>
-<p>孙中山坚持到最后，只是在他的同志们的劝说下才离开广州。在广州的大街上，他一度与叛军相遇，但侥幸的是未被认出来，孙中山逃到停泊在黄埔港的“永丰”号军舰上。</p>
-<p>尽管孙中山不听蒋介石的劝告，以致到了今天这样的处境，但蒋介石如果不忠诚于孙中山，他也将一文不值。</p>
-<p>蒋介石闻讯立即由沪南下，继续追随孙中山。他们在舰上待了56天。舰上闷热难熬，又缺乏食物和淡水。一到晚上，蒋介石就上岸寻找食物，天亮则回到舰上睡觉或在甲板上警戒。</p>
-<p>他们没有很快乘舰离开，因他们寄希望于蒋的同事许崇智率领讨伐军打败陈炯明。但是，他们的希望落空了。8月6日他们得到许战败的坏消息。7日，他们又得知详细情况。两天以后，他们的内线报告有人要阴谋杀害孙中山。终于，这艘英国军舰同意将孙中山及其不多的追随者送往香港，再从那里去上海。</p>
-
+<h2 id="2-生成密钥文件">2. 生成密钥文件</h2>
+<div
+  class="code-block-container border-border bg-card my-6 overflow-hidden rounded-xl border shadow-sm transition-all duration-200 ease-out hover:-translate-y-0.5 hover:shadow-md">
+  
+  <div
+    class="code-block-header bg-muted/30 border-border flex items-center justify-between border-b px-4 py-3">
+    
+    <div class="flex items-center gap-2">
+      <div class="text-muted-foreground flex-shrink-0">
+        
+  <svg class="h-4 w-4"
+    fill="none"
+    stroke="currentColor"
+    viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
+</svg>
+      </div>
+      <span class="text-muted-foreground text-sm font-medium">
+        SHELL
+      </span>
     </div>
-  </blockquote><script>
-function toggleAlert(alertId) {
-  const content = document.getElementById(alertId + '-content');
-  const chevron = document.getElementById(alertId + '-chevron');
-  const header = content.previousElementSibling;
-  
-  if (content.classList.contains('hidden')) {
-    content.classList.remove('hidden');
-    chevron.style.transform = 'rotate(0deg)';
-    header.setAttribute('aria-expanded', 'true');
-  } else {
-    content.classList.add('hidden');
-    chevron.style.transform = 'rotate(-90deg)';
-    header.setAttribute('aria-expanded', 'false');
-  }
-}
 
-
-document.addEventListener('DOMContentLoaded', function() {
-  const collapsedAlerts = document.querySelectorAll('.alert-content.hidden');
-  collapsedAlerts.forEach(function(content) {
-    const alertId = content.id.replace('-content', '');
-    const chevron = document.getElementById(alertId + '-chevron');
-    if (chevron) {
-      chevron.style.transform = 'rotate(-90deg)';
-    }
-  });
-});
-</script>
-
-
-  <blockquote
-    class="border-primary bg-muted/30 hover:bg-muted/40 my-6 rounded-r-lg border-l-4 py-4 pr-4 pl-6 italic transition-all duration-200 ease-out hover:translate-x-1">
-    <div class="prose prose-sm max-w-none">
-      <p>蒋介石曾拒绝在军校工作以表现他似乎对此漠不关心，然而一旦他开始从事这项工作，他便倾注了极大的精力。很明显，黄埔军校校长这一职务是他获取大权的一个台阶。</p>
-<p>在当时，蒋的资历以及政治上的天生弱点使他还不能进入更高的国民党政治决策机构，不论人们是征求他的意见还是仅仅采纳他的建议，他的主张都不可能被当做命令来执行，但作为被任命来训练未来的国家军队的人，他的影响则在逐步扩大，他至少已开始组建一支军队，使之听命于实际存在的中央权威，而不是满足某个军阀的强权和贪婪。</p>
-<p>很难说那时候蒋就考虑在短期内攫取个人最高权力，因为孙中山仍健在，而且只有58岁，相对而言还是年轻的。</p>
-
+    
+    <div class="flex items-center gap-2">
+      <button
+          class="collapse-code-btn text-muted-foreground hover:text-primary hover:bg-primary/10 focus:ring-primary/20 flex items-center gap-1.5 rounded-md px-2 py-1 text-xs font-medium transition-all duration-200 ease-out focus:ring-2 focus:outline-none"
+          data-code-id="code-1"
+          data-default-state="expanded"
+          data-collapsed="false"
+          data-auto-collapse-lines="30"
+          data-auto-collapse-height="400"
+          data-collapsed-height="120"
+          title="折叠"
+          aria-label="折叠">
+          <span class="collapse-icon">
+            
+  <svg class="h-3 w-3"
+    fill="none"
+    stroke="currentColor"
+    viewBox="0 0 24 24"><path fill="currentColor" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6l-6 6z"/></svg>
+          </span>
+          <span class="collapse-text hidden sm:inline"
+            >折叠</span
+          >
+        </button>
+      <button
+        class="copy-code-btn text-muted-foreground hover:text-primary hover:bg-primary/10 focus:ring-primary/20 flex items-center gap-1.5 rounded-md px-2 py-1 text-xs font-medium transition-all duration-200 ease-out focus:ring-2 focus:outline-none"
+        data-code-id="code-1"
+        title="复制"
+        aria-label="复制">
+        <span class="copy-icon">
+          
+  <svg class="h-3 w-3"
+    fill="none"
+    stroke="currentColor"
+    viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z" />
+</svg>
+        </span>
+        <span class="copy-text hidden sm:inline"
+          >复制</span
+        >
+      </button>
     </div>
-  </blockquote><script>
-function toggleAlert(alertId) {
-  const content = document.getElementById(alertId + '-content');
-  const chevron = document.getElementById(alertId + '-chevron');
-  const header = content.previousElementSibling;
+  </div>
+
   
-  if (content.classList.contains('hidden')) {
-    content.classList.remove('hidden');
-    chevron.style.transform = 'rotate(0deg)';
-    header.setAttribute('aria-expanded', 'true');
-  } else {
-    content.classList.add('hidden');
-    chevron.style.transform = 'rotate(-90deg)';
-    header.setAttribute('aria-expanded', 'false');
-  }
-}
-
-
-document.addEventListener('DOMContentLoaded', function() {
-  const collapsedAlerts = document.querySelectorAll('.alert-content.hidden');
-  collapsedAlerts.forEach(function(content) {
-    const alertId = content.id.replace('-content', '');
-    const chevron = document.getElementById(alertId + '-chevron');
-    if (chevron) {
-      chevron.style.transform = 'rotate(-90deg)';
-    }
-  });
-});
-</script>
-
-
-  <blockquote
-    class="border-primary bg-muted/30 hover:bg-muted/40 my-6 rounded-r-lg border-l-4 py-4 pr-4 pl-6 italic transition-all duration-200 ease-out hover:translate-x-1">
-    <div class="prose prose-sm max-w-none">
-      <p>学员们肯定都被相互对立的学说弄糊涂了。共产党人在给学员讲课时带来的是热情和苏维埃式的作风，国民党则有很多人忙于宣传孙博士的新思想。</p>
-<p>然而在国民党这一边，已存在明是的意识形态不统一的迹象。</p>
-<p>军校的政治委员廖仲恺代表了左派，他们热心于同俄国人和中国共产党人进行全面的合作。国民党宣传部长汪精卫是中间派人物，他最先组建国民党，支持与俄国人联系，是因为孙博士倡导这样做。而保守的右派胡汉民则公开反对这样做。</p>
-<p>蒋介石的立场是模棱两可的，而且使其同事们颇感困惑。在赴莫斯科之前，他满腔热情地与布尔什维克合作。他从俄国回来后改变想法这一事实几乎无人知晓。</p>
-<p>孙中山忽视了蒋的具有相反意见的赴俄考察报告，廖仲恺也未重视他的来信。这时，他还未决定公开反对共产党人，他仍然亲近地同俄国人共事，特别是加伦将军。因而他通常被看做是左派阵线中的一员。</p>
-
+  <div class="code-block-content relative" id="code-1">
+    <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">ssh-keygen -t ed25519 -C <span class="s2">&#34;personal&#34;</span> -f ~/.ssh/ed25519.personal
+</span></span><span class="line"><span class="cl">ssh-keygen -t ed25519 -C <span class="s2">&#34;work&#34;</span> -f ~/.ssh/ed25519.work</span></span></code></pre></div>
+    
+    <div
+      class="collapse-overlay to-card/90 pointer-events-none absolute inset-0 bg-gradient-to-b from-transparent via-transparent opacity-0 transition-opacity duration-300">
+      <div
+        class="text-muted-foreground bg-card/80 border-border/50 hover:bg-primary/10 hover:text-primary hover:border-primary/30 absolute bottom-4 left-1/2 -translate-x-1/2 cursor-pointer rounded-full border px-3 py-1.5 text-xs backdrop-blur-sm transition-all duration-200">
+        点击展开查看更多
+      </div>
     </div>
-  </blockquote><script>
-function toggleAlert(alertId) {
-  const content = document.getElementById(alertId + '-content');
-  const chevron = document.getElementById(alertId + '-chevron');
-  const header = content.previousElementSibling;
+  </div>
+</div>
+
+
+<script>
+(function() {
+  const codeId = 'code-1';
+  const copyBtn = document.querySelector('.copy-code-btn[data-code-id="' + codeId + '"]');
+  const collapseBtn = document.querySelector('.collapse-code-btn[data-code-id="' + codeId + '"]');
+  const codeContainer = document.getElementById(codeId);
+
+  if (!codeContainer) return;
+
   
-  if (content.classList.contains('hidden')) {
-    content.classList.remove('hidden');
-    chevron.style.transform = 'rotate(0deg)';
-    header.setAttribute('aria-expanded', 'true');
-  } else {
-    content.classList.add('hidden');
-    chevron.style.transform = 'rotate(-90deg)';
-    header.setAttribute('aria-expanded', 'false');
+  if (copyBtn) {
+    const copyIcon = copyBtn.querySelector('.copy-icon');
+    const copyText = copyBtn.querySelector('.copy-text');
+
+    copyBtn.addEventListener('click', async function() {
+      try {
+        
+        let codeText = '';
+
+        
+        const codeTableCell = codeContainer.querySelector('.lntd:last-child code');
+        if (codeTableCell) {
+          codeText = codeTableCell.textContent || codeTableCell.innerText;
+        } else {
+          
+          const codeElement = codeContainer.querySelector('code');
+          if (codeElement) {
+            
+            const hasInlineLineNumbers = codeElement.querySelector('.ln');
+            if (hasInlineLineNumbers) {
+              
+              const codeLines = codeElement.querySelectorAll('.cl');
+              if (codeLines.length > 0) {
+                codeText = Array.from(codeLines)
+                  .map(line => {
+                    const text = line.textContent || line.innerText;
+                    
+                    return text.replace(/\n+$/, '');
+                  })
+                  .join('\n')
+                  .replace(/\n+$/, ''); 
+              } else {
+                
+                const allText = codeElement.textContent || codeElement.innerText;
+                codeText = allText.replace(/^\d+/gm, '').replace(/^\s+/gm, '');
+              }
+            } else {
+              
+              codeText = codeElement.textContent || codeElement.innerText;
+            }
+          } else {
+            
+            codeText = codeContainer.textContent || codeContainer.innerText;
+          }
+        }
+
+        
+        codeText = codeText.trim();
+
+        
+        await navigator.clipboard.writeText(codeText);
+
+        
+        copyIcon.innerHTML = `\n  \u003csvg class=\u0022h-3 w-3\u0022\n    fill=\u0022none\u0022\n    stroke=\u0022currentColor\u0022\n    viewBox=\u00220 0 24 24\u0022\u003e\u003cpath stroke-linecap=\u0022round\u0022 stroke-linejoin=\u0022round\u0022 stroke-width=\u00222\u0022 d=\u0022M5 13l4 4L19 7\u0022 \/\u003e\n\u003c\/svg\u003e`;
+        if (copyText) {
+          copyText.textContent = '已复制';
+        }
+        copyBtn.classList.add('text-green-600');
+
+        
+        setTimeout(() => {
+          copyIcon.innerHTML = `\n  \u003csvg class=\u0022h-3 w-3\u0022\n    fill=\u0022none\u0022\n    stroke=\u0022currentColor\u0022\n    viewBox=\u00220 0 24 24\u0022\u003e\u003cpath stroke-linecap=\u0022round\u0022 stroke-linejoin=\u0022round\u0022 stroke-width=\u00222\u0022 d=\u0022M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z\u0022 \/\u003e\n\u003c\/svg\u003e`;
+          if (copyText) {
+            copyText.textContent = '复制';
+          }
+          copyBtn.classList.remove('text-green-600');
+        }, 2000);
+
+      } catch (err) {
+        console.error('复制失败:', err);
+
+        
+        const range = document.createRange();
+        const codeElement = codeContainer.querySelector('code') || codeContainer;
+        range.selectNodeContents(codeElement);
+        const selection = window.getSelection();
+        selection.removeAllRanges();
+        selection.addRange(range);
+
+        
+        if (copyText) {
+          copyText.textContent = '已选择';
+        }
+
+        setTimeout(() => {
+          if (copyText) {
+            copyText.textContent = '复制';
+          }
+          selection.removeAllRanges();
+        }, 2000);
+      }
+    });
   }
-}
 
+  
+  if (collapseBtn) {
+    const collapseIcon = collapseBtn.querySelector('.collapse-icon');
+    const collapseText = collapseBtn.querySelector('.collapse-text');
+    const collapseOverlay = codeContainer.querySelector('.collapse-overlay');
 
-document.addEventListener('DOMContentLoaded', function() {
-  const collapsedAlerts = document.querySelectorAll('.alert-content.hidden');
-  collapsedAlerts.forEach(function(content) {
-    const alertId = content.id.replace('-content', '');
-    const chevron = document.getElementById(alertId + '-chevron');
-    if (chevron) {
-      chevron.style.transform = 'rotate(-90deg)';
+    
+    let codeElement = codeContainer.querySelector('pre.chroma');
+    if (!codeElement) {
+      codeElement = codeContainer.querySelector('pre');
     }
-  });
-});
+
+    const defaultState = collapseBtn.dataset.defaultState || 'expanded';
+    const isCollapsedAttr = collapseBtn.dataset.collapsed === 'true';
+    const autoCollapseLines = parseInt(collapseBtn.dataset.autoCollapseLines) || 30;
+    const autoCollapseHeight = parseInt(collapseBtn.dataset.autoCollapseHeight) || 400;
+    const collapsedHeight = parseInt(collapseBtn.dataset.collapsedHeight) || 120;
+
+    let isCollapsed = false;
+
+    
+    function initCollapse() {
+      
+      const shouldCollapse = isCollapsedAttr ||
+                           defaultState === 'collapsed' ||
+                           shouldAutoCollapse();
+
+      if (shouldCollapse) {
+        setCollapsed(true, false); 
+      }
+    }
+
+    function shouldAutoCollapse() {
+      
+      if (codeElement) {
+        const lines = codeElement.querySelectorAll('.line, .cl');
+        const height = codeElement.offsetHeight;
+        return lines.length > autoCollapseLines || height > autoCollapseHeight;
+      }
+
+      
+      const containerHeight = codeContainer.offsetHeight;
+      if (containerHeight > autoCollapseHeight) {
+        return true;
+      }
+
+      
+      const textContent = codeContainer.textContent || codeContainer.innerText || '';
+      const estimatedLines = textContent.split('\n').length;
+      return estimatedLines > autoCollapseLines;
+    }
+
+    function setCollapsed(collapsed, animate = true) {
+      if (!collapseOverlay) return;
+
+      isCollapsed = collapsed;
+
+      if (collapsed) {
+        
+        codeContainer.style.maxHeight = collapsedHeight + 'px';
+        codeContainer.style.overflow = 'hidden';
+        collapseOverlay.style.opacity = '1';
+        collapseOverlay.style.pointerEvents = 'auto';
+
+        
+        collapseIcon.innerHTML = `\n  \u003csvg class=\u0022h-3 w-3\u0022\n    fill=\u0022none\u0022\n    stroke=\u0022currentColor\u0022\n    viewBox=\u00220 0 24 24\u0022\u003e\u003cpath stroke-linecap=\u0022round\u0022 stroke-linejoin=\u0022round\u0022 stroke-width=\u00222\u0022 d=\u0022M19 9l-7 7-7-7\u0022 \/\u003e\n\u003c\/svg\u003e`;
+        if (collapseText) {
+          collapseText.textContent = '展开';
+        }
+        collapseBtn.title = '展开';
+
+      } else {
+        
+        codeContainer.style.maxHeight = '';
+        codeContainer.style.overflow = '';
+        collapseOverlay.style.opacity = '0';
+        collapseOverlay.style.pointerEvents = 'none';
+
+        
+        collapseIcon.innerHTML = `\n  \u003csvg class=\u0022h-3 w-3\u0022\n    fill=\u0022none\u0022\n    stroke=\u0022currentColor\u0022\n    viewBox=\u00220 0 24 24\u0022\u003e\u003cpath fill=\u0022currentColor\u0022 d=\u0022M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6l-6 6z\u0022\/\u003e\u003c\/svg\u003e`;
+        if (collapseText) {
+          collapseText.textContent = '折叠';
+        }
+        collapseBtn.title = '折叠';
+      }
+
+      
+      if (animate) {
+        codeContainer.style.transition = 'max-height 0.3s ease-out';
+        setTimeout(() => {
+          codeContainer.style.transition = '';
+        }, 300);
+      }
+    }
+
+    function toggleCollapse() {
+      setCollapsed(!isCollapsed, true);
+    }
+
+    
+    collapseBtn.addEventListener('click', toggleCollapse);
+
+    
+    if (collapseOverlay) {
+      collapseOverlay.addEventListener('click', () => {
+        if (isCollapsed) {
+          setCollapsed(false, true);
+        }
+      });
+    }
+
+    
+    initCollapse();
+  }
+})();
 </script>
-
-
-  <blockquote
-    class="border-primary bg-muted/30 hover:bg-muted/40 my-6 rounded-r-lg border-l-4 py-4 pr-4 pl-6 italic transition-all duration-200 ease-out hover:translate-x-1">
-    <div class="prose prose-sm max-w-none">
-      <p>在孙中山逝世后，国民党内部展开了一场争郁继承权的斗争。在开始的时候，蒋介石算不上一个真正的竞争者。</p>
-<p>一方面，人们认为他太年轻了，他当时还不到40岁，另一方面，他是一个军人—一而不是一个搞党务的人（尽管他是一个党员）。</p>
-<p>汪精卫、胡汉民和廖仲恺三人则是真正有实力的竞争者一一孙中山对他们三人几乎都给予了同样的信任。此外，他们三人还有一个有利条件，他们都是广东人，这一条是蒋介石所欠缺的。人们都知道孙博士对他的广东同乡较为偏心，他与大多数广东人一样，认为自己的同多比其他省的人更聪明更富于革命性，那些不幸的外省人免不了在孙中山的背后议论说他不能摆脱“老乡观念”。</p>
-<p>汪精卫后来由于在1937 ~1945年中日战争期间与日本人合作而在中国历史上留下了恶名，他在日本人手下担任傀儡政府主席的职务，从此他被冠以 “汉奸”、“傀儡”之类的称呼。</p>
-<p>但在20世纪20年代，汪精卫被公认为是一个有献身精神的革命者，他曾在1910年试图刺杀清王朝的摄政王并因此而受到监禁。革命发生后他才重获自由，从此他身上就笼罩着某种神圣的光环。在三个竞争者中，他是唯一一个陪孙博士北上的人。在孙中山弥留之际，由汪精卫负责起草了他的政治遗嘱，该遗嘱经孙中山修改后于 1925年2月20日被抄录下来。由于汪精卫后来背叛祖国，有些国民党人又试图对这份遗嘱提出疑问，但这份遗嘱只不过表达了孙中山希望自己的追随者要继续自己未竟的事业这一愿望，它并没提谁是孙中山的继承人，怀疑汪精卫伪造了这份文件的想法是没有根据的。</p>
-<p>在中国，年纪大的人比年轻人更受尊敬。汪精卫的一个不利之处在于他是三个竞争者中最年轻的一个。他在公共场合总是强烈支持与俄国人进行合作。因此，人们认为他是个左派，但他从未明确表示过他有什么特别的原则。</p>
-<p>廖仲恺则是一个更富有献身精神的左派，右翼的国民党人怀疑他是一个共产党的秘密党员（尽管他们并没有掌握任何有力的证据），他曾受孙中山的派遣，到日本与苏联代表越飞就国民党与苏联合作一事进行过长达一个月的会谈。</p>
-<p>第三个竞争者胡汉民是一个保守派。他对俄国人抱有很深的疑虑。胡汉民有着光菜的革命经历，因为他过去一直都在协助孙中山进行革命工作，他曾在香港编辑出版一份报纸并因此而闻名全国。胡汉民是一个学者，曾担任过孙中山的秘书——汪精卫也偶尔干过这工作。比起另外两个竞争者来，胡汉民还有一大优势，那就是孙中山在起程前往北京之前曾任命他为代理大元帅。</p>
-<p>当时的竞争局面就是这样的，但蒋介石这匹黑马却取得了最后的胜利。</p>
-<p>中国当时还发生了两起流血事件，从而进一步激起了中国人的仇外情绪。当外国人得罪了中国人时，国民党总是能从中获益。这一次俄国人也成了受益者，因这一次他们没有与帝国主义列强同流合污。</p>
-<p>英国人把这两次发生的事称为“事件”，而中国人则称之为“惨案”，这牵涉到谁是受害者的问题。</p>
-<p>第一件是“5月30日事件”（或者说是中国历史学家所称的“五卅惨案”），英国军官指挥各国巡捕向上海的示威群众开枪射击，当场打死了很多人。鲍罗廷得知了这个消息之后说：“我们没有制造五卅惨案，这是别人送上门来的礼物。”</p>
-<p>第二件是“沙基惨案”（或者说“沙基事件”）。6月23日，一艘停泊在广州英国租界旁边的法国炮舰向正在就“五卅惨案”举行示威的群众开炮，英国人则用机枪进行扫射，造成了很多人的伤亡。而大约在10天前，也就是6月12日，蒋介石刚刚从云南和广西军阀手中夺回了广州，粉碎了这两个地方的军阀企图利用孙中山的逝世而夺权的计划。</p>
-<p>当时的广州明显地笼罩着一种对外国人既恨又怕的气氛，其中又混杂着一些胜利的喜悦情绪，因为这时国民党正要进行重新改组，它所控制的地盘也有所扩大。国民觉的大元帅府也改称为“国民政府”，这样听起来就显得更正式一些了。所有忠于国民觉的军队现在也改称为“国民革命军”。1925年7月1日，国民党选出了一个 16人的委员制的国民政府和一个8人的军事委员会。汪精卫当上了这两个委员会的主席。在大多数人看来，汪精卫这时明显地被推上了孙中山的继承人的位置。</p>
-<p>。。。。。。</p>
-<p>尽管汪精卫偏向左派，但他同时也为国民党右派所接受。正因为他是左右两派都可接受的人物，才使得他在竞争中压倒了胡汉民和廖仲恺而夺得主席的宝座，尽管他比他们两人都年轻，胡汉民为左派所僧恶，而廖仲恺则得不到右派的信任。不过，这两人也都当选国民政府的委员和军事委员会的委员。蒋介石也当选为军事委员会的委员。</p>
-<p>清王朝被推翻后，谋杀和背叛在中国成了司空见惯的事，1925年8月25日，廖仲恺被人暗杀，毫无疑问，暗杀是右派分子策划的。胡汉民的堂弟胡毅生也是暗杀的策划者之一，此事令胡汉民十分难堪。</p>
-<p>鲍罗廷认为胡汉民与此事也有牵连，由于胡毅生已经逃跑，因此鲍罗廷要求惩罚胡汉民，但蒋介石和汪精卫都不相信这一指控。蒋介石还将胡汉民藏在自己的家里。不久，胡汉民被有意派到苏联去执行一项特别使命，这在某种程度上算是对他的一种奇怪的惩罚。由于此事严重地削弱了国民党右派在党内的地位，一批右派离开广州，到上海或北方去另起炉灶。</p>
-<p>此事使得汪精卫在党内的竞争中处于领先地位，蒋介石则紧随其后。</p>
-<p>但情况并不这么简单。军事部长许崇智当时是蒋介石的上级，尽管他不是一个积极的竞争者，但他的存在对蒋介石可能抱有的政治野心仍不失为一个障碍。在廖仲恺被暗杀后，国民党成立了一个处理军政事务的特别委员会，许、汪、蒋三人是这个特别委员会的“三巨头”。</p>
-<p>接下来的是进一步的钩心斗角。人们后来发现，许崇智与被击败的客家人陈炯明将军保持着秘密接触，而且他手下的军官也与廖仲恺一案有牵连。</p>
-<p>9月20日，蒋介石率领他手下的黄埔军校学员突然解除了许票智部队的武装，而这些部队后来被并入蒋介石的第一军。</p>
-<p>第二天，许崇智被解除了军事部长的职务，并被剩夺了对粤军的指第权。他还被从广州驱逐到上海。现在，竞拿国民党最高领导人的对平只制下蒋、汪两人了。</p>
-<p>。。。。。。</p>
-<p>接着便是“3 20事件”（“中山舰事件”）。</p>
-<p>蒋声称中山舰开到黄埔，“是共产党的一个阴谋”，他以广东警备司令的名义宣布了戒严令。</p>
-<p>根据他的命令，25名共产党员被逮捕或受到严密监视，其中包括周恩来。1926年3月20日凌晨3点，在广东有更多的人遭到逮捕。1925年6月20日“沙基事件”后，为支持全面罢工而成立的由共产党领导的省港罢工委员会武装纠察队，这一次也被缴械。军队进驻总工会和中山舰，苏联顾问被软禁。</p>
-<p>由于完全没有准备，蒋对共产党的突然袭击是毁灭性的。中共和俄国人都没有事先觉察。冯玉祥到达莫斯科两个月之后，有人告诉他，在蒋早些时候访苏时，给人的印象是比俄国人所见到的其他中国人还要左，还要革命，“320事件”使俄国人和在莫斯科的中国人感到惊讶。冯写道：“他们无法想象出发生了什么事。”</p>
-<p>非常突然的是，汪以中国特有的方式承认在这次间接的权力斗争中的失败。[1] 作为一个糖尿病患者，他对紧张局势感到厌倦。21日，蒋试图给他写信，但又不知从何说起。蒋在日记中写道：</p>
-<p>“我既不想对朋友虚情假意，又不能够向他倾吐肺腑，所以，很难下笔。”22日，由汪主持召开政治委员会，会上他以使蒋感到奇怪的热情认可了蒋的行动。</p>
-<p>第二天，汪失踪了，表面理由是治病。后来，汪在一封给朋友的信中道出了事情的真相：“我受到怀疑和厌恨，所以，我再也不想承担政治责任了。”5月份，胡汉民从俄国回来不久，汪精卫便去了法国，他在那儿待了一段时间。蒋向他道歉并请他回国，但汪深感伤害、差辱、不可谅解，依然沉默地待在那里。</p>
-<p>这样一来，蒋成了国民党中占压倒优势的人物。在他的对手中，一个死了，另一个由于受到怀疑而漂泊海外，还有一个也将受到驱逐。</p>
-<p>蒋曾在日记中表示他不喜欢政治，他写道：</p>
-<p>“政治使人过狗一般的生活……道德何在？友谊何在？”但是不久表明，在政治权术方面，他是一个“进步”很快的新手</p>
-<p>在蒋对俄国人和中共的打击中，右派看到了希望。但是，蒋给他的学生的一封信打破了他们的这种希望。他写道：“孙先生认为，容纳共产党是我们的革命原则。我也认为，如果不容纳共产党，革命战线就不能统一。”他警告右派，他仍然认为“西山会议”是个错误。</p>
-<p>事件的发生表明，蒋自从访苏以后，就一直是一个反共者。</p>
-<p>但蒋自己在叙述这些事件的时候很谨慎，没有提到这方面的内容，这样他就可以不对自己的矛盾行为作出解释了。从当时的情况来看，如果蒋要担任国民革命的领袖，而他的北方对手又依赖其他势力的话，那么他仍然需要苏联的帮助。因此，蒋当时还不能完全和共产党与俄国人闹翻</p>
-<p>另外，右派领袖胡汉民即将从俄国回来，蒋从左派那里抓到了领导权，也不会把它交给右派。事实上，当胡汉民5月份从俄国回到广东时，就没有被安排任何职务，他在广东待了几天就到上海去了。</p>
-<p>蒋在采取镇压行动以后，又表示要改善“和共产党之间的关系”。4月29日，鲍罗廷回到广东同蒋进行了多次会晤。5月15日，蒋介石召开中央执行委员会紧急会议，他第一次主持了会议。在紧张的气氛中，通过了一项在党内限制共产党的新规则，鲍罗廷对此没有提出反对意见。</p>
-<p>蒋极为老练地扩大了自己的战果，他甚至通过解散“孙文学会”来表示他的“让步”。然而，共产党却丧失了许多席位。毛失去了在宜传部1的职务（允许他继续保留农讲所负责人的职务，在那里他继续培训农民鼓动者，后来打败了蒋介石），另外两名共产党员也被解除了重要职务。</p>
-<p>4月初，蒋向国民党提出了一个关于北伐的详尽计划。6月5日，他被任命为北伐军总司令，在此前后他还被选为中央执行委员会主席和国民政府军事委员会主席，并担任国民党中央组织部和军事部长。</p>
-
+<h2 id="3-生成每个账户的配置文件">3. 生成每个账户的配置文件</h2>
+<p>将配置文件集中放置在 <code>~/.git/</code>下面，例如，对于personal，生成 <code>~/.git/.gitconfig-personal</code></p>
+<div
+  class="code-block-container border-border bg-card my-6 overflow-hidden rounded-xl border shadow-sm transition-all duration-200 ease-out hover:-translate-y-0.5 hover:shadow-md">
+  
+  <div
+    class="code-block-header bg-muted/30 border-border flex items-center justify-between border-b px-4 py-3">
+    
+    <div class="flex items-center gap-2">
+      <div class="text-muted-foreground flex-shrink-0">
+        
+  <svg class="h-4 w-4"
+    fill="none"
+    stroke="currentColor"
+    viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
+</svg>
+      </div>
+      <span class="text-muted-foreground text-sm font-medium">
+        TEXT
+      </span>
     </div>
-  </blockquote><script>
-function toggleAlert(alertId) {
-  const content = document.getElementById(alertId + '-content');
-  const chevron = document.getElementById(alertId + '-chevron');
-  const header = content.previousElementSibling;
-  
-  if (content.classList.contains('hidden')) {
-    content.classList.remove('hidden');
-    chevron.style.transform = 'rotate(0deg)';
-    header.setAttribute('aria-expanded', 'true');
-  } else {
-    content.classList.add('hidden');
-    chevron.style.transform = 'rotate(-90deg)';
-    header.setAttribute('aria-expanded', 'false');
-  }
-}
 
-
-document.addEventListener('DOMContentLoaded', function() {
-  const collapsedAlerts = document.querySelectorAll('.alert-content.hidden');
-  collapsedAlerts.forEach(function(content) {
-    const alertId = content.id.replace('-content', '');
-    const chevron = document.getElementById(alertId + '-chevron');
-    if (chevron) {
-      chevron.style.transform = 'rotate(-90deg)';
-    }
-  });
-});
-</script>
-
-<p>^[1］在“中山舰事件”中，蒋不仅还陷共产党人，也诬陷汪参与此事，汪因此受到打击。&ndash; 译者注</p>
-<h1 id="蒋的统治为什么不稳">蒋的统治为什么不稳</h1>
-
-  <blockquote
-    class="border-primary bg-muted/30 hover:bg-muted/40 my-6 rounded-r-lg border-l-4 py-4 pr-4 pl-6 italic transition-all duration-200 ease-out hover:translate-x-1">
-    <div class="prose prose-sm max-w-none">
-      <p>蒋介石自己及外界认为，他在1928年年底已经取得了中国的“统一”。然而，这只不过是一个残酷的假象。</p>
-<p>这一假象表面显得堂而皇之，并给人留下深刻的印象，但如果仔细观察一下，就会发现它实质上并没有什么真东西。</p>
-<p>蒋介石率军北伐一事深得民心，这使得许多敌对部队及其将领都投到他的麾下。但是这也带来了这样的问题：尽管蒋介石为了保住自己的权力而不时与各地的军阀进行激烈的战斗，但他却从没有真正地控制他的对手或征服他们的地盘。</p>
-<p>他们只是以一种中国传统的方式承认蒋介石比自己强大，因而才决定顺风转舵。这就是蒋介石在战场上为什么能够推进得如此迅速以及国民军能在1928年号称拥有200万人，比最初的10万人增加20倍的原因。</p>
-<p>尽管从严格的意义上说，佛朗哥对西班牙的征服与蒋介石对中国的所谓征服是不可比的，但如果将这两者之间的不同列举出来，也不无益处。</p>
-<p>佛朗哥经过了差不多32个月艰苦和血腥的战争才成了整个西班牙的主人，而蒋介石只花了12个月时间&ndash;其中头9个月是在1926年和1927年之间。随后是一个政治上的休战时期；后3个月是在1928年4月至6月就“征服”了面积比西班牙大7倍的中原。</p>
-<p>佛朗哥消灭了自己的敌人，在战场上击败了他们，并将残余的敌人流放或处死，而蒋介石却满足于对手们形式上的屈服。</p>
-<p>北伐开始之前的中国与1928年年底的中国之主要不同在于，那些原来与国民党为敌的军阀后来都声称自己是国民党党员。在大多数情况下，这些军阀在自己的地盘内仍保留着原有的权力。</p>
-<p>由于蒋介石急于迅速取得成功，因为这会给他带来一时的荣耀和威望，所以他忽视了在一个封建的国家里进行领士征服所应注意的唯一正确的原则，那就是：<em>他应该除掉那些最初反对他的人，用自己选定的人来代替这些人，而新选出的人应该忠于新生的民国，并忠于民国首脑蒋介石。</em></p>
-<p>蒋介石未能取得对地方的实际控制权，他很容易就满足于地方军阀对他的毫无意义的效忠，这是他判断上的最大失误。</p>
-<p>在后来的岁月里，蒋介石的权威多次受到地方军阀的挑战。虽然蒋介石总是胜利者，但这些接连不断的地区战争消耗了他的力量，并使他无法集中注意力来处理中国真正面临的问题。与此同时，中国共产党的根据地正在日益扩大。此外，从1931 年起，蒋介石还要应付日本侵略者所造成的巨大威胁。</p>
-
+    
+    <div class="flex items-center gap-2">
+      <button
+          class="collapse-code-btn text-muted-foreground hover:text-primary hover:bg-primary/10 focus:ring-primary/20 flex items-center gap-1.5 rounded-md px-2 py-1 text-xs font-medium transition-all duration-200 ease-out focus:ring-2 focus:outline-none"
+          data-code-id="code-2"
+          data-default-state="expanded"
+          data-collapsed="false"
+          data-auto-collapse-lines="30"
+          data-auto-collapse-height="400"
+          data-collapsed-height="120"
+          title="折叠"
+          aria-label="折叠">
+          <span class="collapse-icon">
+            
+  <svg class="h-3 w-3"
+    fill="none"
+    stroke="currentColor"
+    viewBox="0 0 24 24"><path fill="currentColor" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6l-6 6z"/></svg>
+          </span>
+          <span class="collapse-text hidden sm:inline"
+            >折叠</span
+          >
+        </button>
+      <button
+        class="copy-code-btn text-muted-foreground hover:text-primary hover:bg-primary/10 focus:ring-primary/20 flex items-center gap-1.5 rounded-md px-2 py-1 text-xs font-medium transition-all duration-200 ease-out focus:ring-2 focus:outline-none"
+        data-code-id="code-2"
+        title="复制"
+        aria-label="复制">
+        <span class="copy-icon">
+          
+  <svg class="h-3 w-3"
+    fill="none"
+    stroke="currentColor"
+    viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z" />
+</svg>
+        </span>
+        <span class="copy-text hidden sm:inline"
+          >复制</span
+        >
+      </button>
     </div>
-  </blockquote><script>
-function toggleAlert(alertId) {
-  const content = document.getElementById(alertId + '-content');
-  const chevron = document.getElementById(alertId + '-chevron');
-  const header = content.previousElementSibling;
+  </div>
+
   
-  if (content.classList.contains('hidden')) {
-    content.classList.remove('hidden');
-    chevron.style.transform = 'rotate(0deg)';
-    header.setAttribute('aria-expanded', 'true');
-  } else {
-    content.classList.add('hidden');
-    chevron.style.transform = 'rotate(-90deg)';
-    header.setAttribute('aria-expanded', 'false');
-  }
-}
-
-
-document.addEventListener('DOMContentLoaded', function() {
-  const collapsedAlerts = document.querySelectorAll('.alert-content.hidden');
-  collapsedAlerts.forEach(function(content) {
-    const alertId = content.id.replace('-content', '');
-    const chevron = document.getElementById(alertId + '-chevron');
-    if (chevron) {
-      chevron.style.transform = 'rotate(-90deg)';
-    }
-  });
-});
-</script>
-
-
-  <blockquote
-    class="border-primary bg-muted/30 hover:bg-muted/40 my-6 rounded-r-lg border-l-4 py-4 pr-4 pl-6 italic transition-all duration-200 ease-out hover:translate-x-1">
-    <div class="prose prose-sm max-w-none">
-      <p>1929年，蒋介石试图通过裁军来削弱地方军阀的势力，结果引起一场危机，这使他深切地感到自己权力之有限。其他任何事都不曾像这使他清醒地认识到这一点。【由此造成了桂系的不满及后来起兵、兵败、下野】</p>
-
+  <div class="code-block-content relative" id="code-2">
+    <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">[user]
+</span></span><span class="line"><span class="cl">	name = personal
+</span></span><span class="line"><span class="cl">	email = yourname_personal@users.noreply.github.com
+</span></span><span class="line"><span class="cl">[core]
+</span></span><span class="line"><span class="cl">	sshCommand = &#34;ssh -i ~/.ssh/ed25519.personal&#34;</span></span></code></pre></div>
+    
+    <div
+      class="collapse-overlay to-card/90 pointer-events-none absolute inset-0 bg-gradient-to-b from-transparent via-transparent opacity-0 transition-opacity duration-300">
+      <div
+        class="text-muted-foreground bg-card/80 border-border/50 hover:bg-primary/10 hover:text-primary hover:border-primary/30 absolute bottom-4 left-1/2 -translate-x-1/2 cursor-pointer rounded-full border px-3 py-1.5 text-xs backdrop-blur-sm transition-all duration-200">
+        点击展开查看更多
+      </div>
     </div>
-  </blockquote><script>
-function toggleAlert(alertId) {
-  const content = document.getElementById(alertId + '-content');
-  const chevron = document.getElementById(alertId + '-chevron');
-  const header = content.previousElementSibling;
+  </div>
+</div>
+
+
+<script>
+(function() {
+  const codeId = 'code-2';
+  const copyBtn = document.querySelector('.copy-code-btn[data-code-id="' + codeId + '"]');
+  const collapseBtn = document.querySelector('.collapse-code-btn[data-code-id="' + codeId + '"]');
+  const codeContainer = document.getElementById(codeId);
+
+  if (!codeContainer) return;
+
   
-  if (content.classList.contains('hidden')) {
-    content.classList.remove('hidden');
-    chevron.style.transform = 'rotate(0deg)';
-    header.setAttribute('aria-expanded', 'true');
-  } else {
-    content.classList.add('hidden');
-    chevron.style.transform = 'rotate(-90deg)';
-    header.setAttribute('aria-expanded', 'false');
+  if (copyBtn) {
+    const copyIcon = copyBtn.querySelector('.copy-icon');
+    const copyText = copyBtn.querySelector('.copy-text');
+
+    copyBtn.addEventListener('click', async function() {
+      try {
+        
+        let codeText = '';
+
+        
+        const codeTableCell = codeContainer.querySelector('.lntd:last-child code');
+        if (codeTableCell) {
+          codeText = codeTableCell.textContent || codeTableCell.innerText;
+        } else {
+          
+          const codeElement = codeContainer.querySelector('code');
+          if (codeElement) {
+            
+            const hasInlineLineNumbers = codeElement.querySelector('.ln');
+            if (hasInlineLineNumbers) {
+              
+              const codeLines = codeElement.querySelectorAll('.cl');
+              if (codeLines.length > 0) {
+                codeText = Array.from(codeLines)
+                  .map(line => {
+                    const text = line.textContent || line.innerText;
+                    
+                    return text.replace(/\n+$/, '');
+                  })
+                  .join('\n')
+                  .replace(/\n+$/, ''); 
+              } else {
+                
+                const allText = codeElement.textContent || codeElement.innerText;
+                codeText = allText.replace(/^\d+/gm, '').replace(/^\s+/gm, '');
+              }
+            } else {
+              
+              codeText = codeElement.textContent || codeElement.innerText;
+            }
+          } else {
+            
+            codeText = codeContainer.textContent || codeContainer.innerText;
+          }
+        }
+
+        
+        codeText = codeText.trim();
+
+        
+        await navigator.clipboard.writeText(codeText);
+
+        
+        copyIcon.innerHTML = `\n  \u003csvg class=\u0022h-3 w-3\u0022\n    fill=\u0022none\u0022\n    stroke=\u0022currentColor\u0022\n    viewBox=\u00220 0 24 24\u0022\u003e\u003cpath stroke-linecap=\u0022round\u0022 stroke-linejoin=\u0022round\u0022 stroke-width=\u00222\u0022 d=\u0022M5 13l4 4L19 7\u0022 \/\u003e\n\u003c\/svg\u003e`;
+        if (copyText) {
+          copyText.textContent = '已复制';
+        }
+        copyBtn.classList.add('text-green-600');
+
+        
+        setTimeout(() => {
+          copyIcon.innerHTML = `\n  \u003csvg class=\u0022h-3 w-3\u0022\n    fill=\u0022none\u0022\n    stroke=\u0022currentColor\u0022\n    viewBox=\u00220 0 24 24\u0022\u003e\u003cpath stroke-linecap=\u0022round\u0022 stroke-linejoin=\u0022round\u0022 stroke-width=\u00222\u0022 d=\u0022M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z\u0022 \/\u003e\n\u003c\/svg\u003e`;
+          if (copyText) {
+            copyText.textContent = '复制';
+          }
+          copyBtn.classList.remove('text-green-600');
+        }, 2000);
+
+      } catch (err) {
+        console.error('复制失败:', err);
+
+        
+        const range = document.createRange();
+        const codeElement = codeContainer.querySelector('code') || codeContainer;
+        range.selectNodeContents(codeElement);
+        const selection = window.getSelection();
+        selection.removeAllRanges();
+        selection.addRange(range);
+
+        
+        if (copyText) {
+          copyText.textContent = '已选择';
+        }
+
+        setTimeout(() => {
+          if (copyText) {
+            copyText.textContent = '复制';
+          }
+          selection.removeAllRanges();
+        }, 2000);
+      }
+    });
   }
-}
 
+  
+  if (collapseBtn) {
+    const collapseIcon = collapseBtn.querySelector('.collapse-icon');
+    const collapseText = collapseBtn.querySelector('.collapse-text');
+    const collapseOverlay = codeContainer.querySelector('.collapse-overlay');
 
-document.addEventListener('DOMContentLoaded', function() {
-  const collapsedAlerts = document.querySelectorAll('.alert-content.hidden');
-  collapsedAlerts.forEach(function(content) {
-    const alertId = content.id.replace('-content', '');
-    const chevron = document.getElementById(alertId + '-chevron');
-    if (chevron) {
-      chevron.style.transform = 'rotate(-90deg)';
+    
+    let codeElement = codeContainer.querySelector('pre.chroma');
+    if (!codeElement) {
+      codeElement = codeContainer.querySelector('pre');
     }
-  });
-});
+
+    const defaultState = collapseBtn.dataset.defaultState || 'expanded';
+    const isCollapsedAttr = collapseBtn.dataset.collapsed === 'true';
+    const autoCollapseLines = parseInt(collapseBtn.dataset.autoCollapseLines) || 30;
+    const autoCollapseHeight = parseInt(collapseBtn.dataset.autoCollapseHeight) || 400;
+    const collapsedHeight = parseInt(collapseBtn.dataset.collapsedHeight) || 120;
+
+    let isCollapsed = false;
+
+    
+    function initCollapse() {
+      
+      const shouldCollapse = isCollapsedAttr ||
+                           defaultState === 'collapsed' ||
+                           shouldAutoCollapse();
+
+      if (shouldCollapse) {
+        setCollapsed(true, false); 
+      }
+    }
+
+    function shouldAutoCollapse() {
+      
+      if (codeElement) {
+        const lines = codeElement.querySelectorAll('.line, .cl');
+        const height = codeElement.offsetHeight;
+        return lines.length > autoCollapseLines || height > autoCollapseHeight;
+      }
+
+      
+      const containerHeight = codeContainer.offsetHeight;
+      if (containerHeight > autoCollapseHeight) {
+        return true;
+      }
+
+      
+      const textContent = codeContainer.textContent || codeContainer.innerText || '';
+      const estimatedLines = textContent.split('\n').length;
+      return estimatedLines > autoCollapseLines;
+    }
+
+    function setCollapsed(collapsed, animate = true) {
+      if (!collapseOverlay) return;
+
+      isCollapsed = collapsed;
+
+      if (collapsed) {
+        
+        codeContainer.style.maxHeight = collapsedHeight + 'px';
+        codeContainer.style.overflow = 'hidden';
+        collapseOverlay.style.opacity = '1';
+        collapseOverlay.style.pointerEvents = 'auto';
+
+        
+        collapseIcon.innerHTML = `\n  \u003csvg class=\u0022h-3 w-3\u0022\n    fill=\u0022none\u0022\n    stroke=\u0022currentColor\u0022\n    viewBox=\u00220 0 24 24\u0022\u003e\u003cpath stroke-linecap=\u0022round\u0022 stroke-linejoin=\u0022round\u0022 stroke-width=\u00222\u0022 d=\u0022M19 9l-7 7-7-7\u0022 \/\u003e\n\u003c\/svg\u003e`;
+        if (collapseText) {
+          collapseText.textContent = '展开';
+        }
+        collapseBtn.title = '展开';
+
+      } else {
+        
+        codeContainer.style.maxHeight = '';
+        codeContainer.style.overflow = '';
+        collapseOverlay.style.opacity = '0';
+        collapseOverlay.style.pointerEvents = 'none';
+
+        
+        collapseIcon.innerHTML = `\n  \u003csvg class=\u0022h-3 w-3\u0022\n    fill=\u0022none\u0022\n    stroke=\u0022currentColor\u0022\n    viewBox=\u00220 0 24 24\u0022\u003e\u003cpath fill=\u0022currentColor\u0022 d=\u0022M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6l-6 6z\u0022\/\u003e\u003c\/svg\u003e`;
+        if (collapseText) {
+          collapseText.textContent = '折叠';
+        }
+        collapseBtn.title = '折叠';
+      }
+
+      
+      if (animate) {
+        codeContainer.style.transition = 'max-height 0.3s ease-out';
+        setTimeout(() => {
+          codeContainer.style.transition = '';
+        }, 300);
+      }
+    }
+
+    function toggleCollapse() {
+      setCollapsed(!isCollapsed, true);
+    }
+
+    
+    collapseBtn.addEventListener('click', toggleCollapse);
+
+    
+    if (collapseOverlay) {
+      collapseOverlay.addEventListener('click', () => {
+        if (isCollapsed) {
+          setCollapsed(false, true);
+        }
+      });
+    }
+
+    
+    initCollapse();
+  }
+})();
 </script>
-
-
-  <blockquote
-    class="border-primary bg-muted/30 hover:bg-muted/40 my-6 rounded-r-lg border-l-4 py-4 pr-4 pl-6 italic transition-all duration-200 ease-out hover:translate-x-1">
-    <div class="prose prose-sm max-w-none">
-      <p>毛泽东后来告诉埃德加·斯诺，共产党没有和福建军队联合起来，这是当时所犯的一个重大错误。</p>
-<p>事实的确如此，如果他们联合起来，将比各自为战给南京政府造成的威胁更大。</p>
-
+<h2 id="4-配置gitconfig文件">4. 配置<code>~/.gitconfig</code>文件</h2>
+<p>在<code>~/.gitconfig</code>中增加下面的配置：</p>
+<div
+  class="code-block-container border-border bg-card my-6 overflow-hidden rounded-xl border shadow-sm transition-all duration-200 ease-out hover:-translate-y-0.5 hover:shadow-md">
+  
+  <div
+    class="code-block-header bg-muted/30 border-border flex items-center justify-between border-b px-4 py-3">
+    
+    <div class="flex items-center gap-2">
+      <div class="text-muted-foreground flex-shrink-0">
+        
+  <svg class="h-4 w-4"
+    fill="none"
+    stroke="currentColor"
+    viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
+</svg>
+      </div>
+      <span class="text-muted-foreground text-sm font-medium">
+        TEXT
+      </span>
     </div>
-  </blockquote><script>
-function toggleAlert(alertId) {
-  const content = document.getElementById(alertId + '-content');
-  const chevron = document.getElementById(alertId + '-chevron');
-  const header = content.previousElementSibling;
-  
-  if (content.classList.contains('hidden')) {
-    content.classList.remove('hidden');
-    chevron.style.transform = 'rotate(0deg)';
-    header.setAttribute('aria-expanded', 'true');
-  } else {
-    content.classList.add('hidden');
-    chevron.style.transform = 'rotate(-90deg)';
-    header.setAttribute('aria-expanded', 'false');
-  }
-}
 
-
-document.addEventListener('DOMContentLoaded', function() {
-  const collapsedAlerts = document.querySelectorAll('.alert-content.hidden');
-  collapsedAlerts.forEach(function(content) {
-    const alertId = content.id.replace('-content', '');
-    const chevron = document.getElementById(alertId + '-chevron');
-    if (chevron) {
-      chevron.style.transform = 'rotate(-90deg)';
-    }
-  });
-});
-</script>
-
-
-  <blockquote
-    class="border-primary bg-muted/30 hover:bg-muted/40 my-6 rounded-r-lg border-l-4 py-4 pr-4 pl-6 italic transition-all duration-200 ease-out hover:translate-x-1">
-    <div class="prose prose-sm max-w-none">
-      <p>最后，对蒋介石的一生进行总结，蒋介石有自己的勇气、精力和领袖品质，他不仅是一个有很大缺陷的人物，而且从希腊悲剧的意义上讲，他也是一个悲剧性的人物。</p>
-<p>他的悲剧是他个人造成的。</p>
-
+    
+    <div class="flex items-center gap-2">
+      <button
+          class="collapse-code-btn text-muted-foreground hover:text-primary hover:bg-primary/10 focus:ring-primary/20 flex items-center gap-1.5 rounded-md px-2 py-1 text-xs font-medium transition-all duration-200 ease-out focus:ring-2 focus:outline-none"
+          data-code-id="code-3"
+          data-default-state="expanded"
+          data-collapsed="false"
+          data-auto-collapse-lines="30"
+          data-auto-collapse-height="400"
+          data-collapsed-height="120"
+          title="折叠"
+          aria-label="折叠">
+          <span class="collapse-icon">
+            
+  <svg class="h-3 w-3"
+    fill="none"
+    stroke="currentColor"
+    viewBox="0 0 24 24"><path fill="currentColor" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6l-6 6z"/></svg>
+          </span>
+          <span class="collapse-text hidden sm:inline"
+            >折叠</span
+          >
+        </button>
+      <button
+        class="copy-code-btn text-muted-foreground hover:text-primary hover:bg-primary/10 focus:ring-primary/20 flex items-center gap-1.5 rounded-md px-2 py-1 text-xs font-medium transition-all duration-200 ease-out focus:ring-2 focus:outline-none"
+        data-code-id="code-3"
+        title="复制"
+        aria-label="复制">
+        <span class="copy-icon">
+          
+  <svg class="h-3 w-3"
+    fill="none"
+    stroke="currentColor"
+    viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z" />
+</svg>
+        </span>
+        <span class="copy-text hidden sm:inline"
+          >复制</span
+        >
+      </button>
     </div>
-  </blockquote><script>
-function toggleAlert(alertId) {
-  const content = document.getElementById(alertId + '-content');
-  const chevron = document.getElementById(alertId + '-chevron');
-  const header = content.previousElementSibling;
+  </div>
+
   
-  if (content.classList.contains('hidden')) {
-    content.classList.remove('hidden');
-    chevron.style.transform = 'rotate(0deg)';
-    header.setAttribute('aria-expanded', 'true');
-  } else {
-    content.classList.add('hidden');
-    chevron.style.transform = 'rotate(-90deg)';
-    header.setAttribute('aria-expanded', 'false');
+  <div class="code-block-content relative" id="code-3">
+    <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">[includeIf &#34;gitdir:~/personal/&#34;]
+</span></span><span class="line"><span class="cl">    path = ~/.git/.gitconfig-personal
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">[includeIf &#34;gitdir:~/work/&#34;]
+</span></span><span class="line"><span class="cl">    path = ~/.git/.gitconfig-work</span></span></code></pre></div>
+    
+    <div
+      class="collapse-overlay to-card/90 pointer-events-none absolute inset-0 bg-gradient-to-b from-transparent via-transparent opacity-0 transition-opacity duration-300">
+      <div
+        class="text-muted-foreground bg-card/80 border-border/50 hover:bg-primary/10 hover:text-primary hover:border-primary/30 absolute bottom-4 left-1/2 -translate-x-1/2 cursor-pointer rounded-full border px-3 py-1.5 text-xs backdrop-blur-sm transition-all duration-200">
+        点击展开查看更多
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<script>
+(function() {
+  const codeId = 'code-3';
+  const copyBtn = document.querySelector('.copy-code-btn[data-code-id="' + codeId + '"]');
+  const collapseBtn = document.querySelector('.collapse-code-btn[data-code-id="' + codeId + '"]');
+  const codeContainer = document.getElementById(codeId);
+
+  if (!codeContainer) return;
+
+  
+  if (copyBtn) {
+    const copyIcon = copyBtn.querySelector('.copy-icon');
+    const copyText = copyBtn.querySelector('.copy-text');
+
+    copyBtn.addEventListener('click', async function() {
+      try {
+        
+        let codeText = '';
+
+        
+        const codeTableCell = codeContainer.querySelector('.lntd:last-child code');
+        if (codeTableCell) {
+          codeText = codeTableCell.textContent || codeTableCell.innerText;
+        } else {
+          
+          const codeElement = codeContainer.querySelector('code');
+          if (codeElement) {
+            
+            const hasInlineLineNumbers = codeElement.querySelector('.ln');
+            if (hasInlineLineNumbers) {
+              
+              const codeLines = codeElement.querySelectorAll('.cl');
+              if (codeLines.length > 0) {
+                codeText = Array.from(codeLines)
+                  .map(line => {
+                    const text = line.textContent || line.innerText;
+                    
+                    return text.replace(/\n+$/, '');
+                  })
+                  .join('\n')
+                  .replace(/\n+$/, ''); 
+              } else {
+                
+                const allText = codeElement.textContent || codeElement.innerText;
+                codeText = allText.replace(/^\d+/gm, '').replace(/^\s+/gm, '');
+              }
+            } else {
+              
+              codeText = codeElement.textContent || codeElement.innerText;
+            }
+          } else {
+            
+            codeText = codeContainer.textContent || codeContainer.innerText;
+          }
+        }
+
+        
+        codeText = codeText.trim();
+
+        
+        await navigator.clipboard.writeText(codeText);
+
+        
+        copyIcon.innerHTML = `\n  \u003csvg class=\u0022h-3 w-3\u0022\n    fill=\u0022none\u0022\n    stroke=\u0022currentColor\u0022\n    viewBox=\u00220 0 24 24\u0022\u003e\u003cpath stroke-linecap=\u0022round\u0022 stroke-linejoin=\u0022round\u0022 stroke-width=\u00222\u0022 d=\u0022M5 13l4 4L19 7\u0022 \/\u003e\n\u003c\/svg\u003e`;
+        if (copyText) {
+          copyText.textContent = '已复制';
+        }
+        copyBtn.classList.add('text-green-600');
+
+        
+        setTimeout(() => {
+          copyIcon.innerHTML = `\n  \u003csvg class=\u0022h-3 w-3\u0022\n    fill=\u0022none\u0022\n    stroke=\u0022currentColor\u0022\n    viewBox=\u00220 0 24 24\u0022\u003e\u003cpath stroke-linecap=\u0022round\u0022 stroke-linejoin=\u0022round\u0022 stroke-width=\u00222\u0022 d=\u0022M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z\u0022 \/\u003e\n\u003c\/svg\u003e`;
+          if (copyText) {
+            copyText.textContent = '复制';
+          }
+          copyBtn.classList.remove('text-green-600');
+        }, 2000);
+
+      } catch (err) {
+        console.error('复制失败:', err);
+
+        
+        const range = document.createRange();
+        const codeElement = codeContainer.querySelector('code') || codeContainer;
+        range.selectNodeContents(codeElement);
+        const selection = window.getSelection();
+        selection.removeAllRanges();
+        selection.addRange(range);
+
+        
+        if (copyText) {
+          copyText.textContent = '已选择';
+        }
+
+        setTimeout(() => {
+          if (copyText) {
+            copyText.textContent = '复制';
+          }
+          selection.removeAllRanges();
+        }, 2000);
+      }
+    });
   }
-}
 
+  
+  if (collapseBtn) {
+    const collapseIcon = collapseBtn.querySelector('.collapse-icon');
+    const collapseText = collapseBtn.querySelector('.collapse-text');
+    const collapseOverlay = codeContainer.querySelector('.collapse-overlay');
 
-document.addEventListener('DOMContentLoaded', function() {
-  const collapsedAlerts = document.querySelectorAll('.alert-content.hidden');
-  collapsedAlerts.forEach(function(content) {
-    const alertId = content.id.replace('-content', '');
-    const chevron = document.getElementById(alertId + '-chevron');
-    if (chevron) {
-      chevron.style.transform = 'rotate(-90deg)';
+    
+    let codeElement = codeContainer.querySelector('pre.chroma');
+    if (!codeElement) {
+      codeElement = codeContainer.querySelector('pre');
     }
-  });
-});
-</script>
 
+    const defaultState = collapseBtn.dataset.defaultState || 'expanded';
+    const isCollapsedAttr = collapseBtn.dataset.collapsed === 'true';
+    const autoCollapseLines = parseInt(collapseBtn.dataset.autoCollapseLines) || 30;
+    const autoCollapseHeight = parseInt(collapseBtn.dataset.autoCollapseHeight) || 400;
+    const collapsedHeight = parseInt(collapseBtn.dataset.collapsedHeight) || 120;
+
+    let isCollapsed = false;
+
+    
+    function initCollapse() {
+      
+      const shouldCollapse = isCollapsedAttr ||
+                           defaultState === 'collapsed' ||
+                           shouldAutoCollapse();
+
+      if (shouldCollapse) {
+        setCollapsed(true, false); 
+      }
+    }
+
+    function shouldAutoCollapse() {
+      
+      if (codeElement) {
+        const lines = codeElement.querySelectorAll('.line, .cl');
+        const height = codeElement.offsetHeight;
+        return lines.length > autoCollapseLines || height > autoCollapseHeight;
+      }
+
+      
+      const containerHeight = codeContainer.offsetHeight;
+      if (containerHeight > autoCollapseHeight) {
+        return true;
+      }
+
+      
+      const textContent = codeContainer.textContent || codeContainer.innerText || '';
+      const estimatedLines = textContent.split('\n').length;
+      return estimatedLines > autoCollapseLines;
+    }
+
+    function setCollapsed(collapsed, animate = true) {
+      if (!collapseOverlay) return;
+
+      isCollapsed = collapsed;
+
+      if (collapsed) {
+        
+        codeContainer.style.maxHeight = collapsedHeight + 'px';
+        codeContainer.style.overflow = 'hidden';
+        collapseOverlay.style.opacity = '1';
+        collapseOverlay.style.pointerEvents = 'auto';
+
+        
+        collapseIcon.innerHTML = `\n  \u003csvg class=\u0022h-3 w-3\u0022\n    fill=\u0022none\u0022\n    stroke=\u0022currentColor\u0022\n    viewBox=\u00220 0 24 24\u0022\u003e\u003cpath stroke-linecap=\u0022round\u0022 stroke-linejoin=\u0022round\u0022 stroke-width=\u00222\u0022 d=\u0022M19 9l-7 7-7-7\u0022 \/\u003e\n\u003c\/svg\u003e`;
+        if (collapseText) {
+          collapseText.textContent = '展开';
+        }
+        collapseBtn.title = '展开';
+
+      } else {
+        
+        codeContainer.style.maxHeight = '';
+        codeContainer.style.overflow = '';
+        collapseOverlay.style.opacity = '0';
+        collapseOverlay.style.pointerEvents = 'none';
+
+        
+        collapseIcon.innerHTML = `\n  \u003csvg class=\u0022h-3 w-3\u0022\n    fill=\u0022none\u0022\n    stroke=\u0022currentColor\u0022\n    viewBox=\u00220 0 24 24\u0022\u003e\u003cpath fill=\u0022currentColor\u0022 d=\u0022M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6l-6 6z\u0022\/\u003e\u003c\/svg\u003e`;
+        if (collapseText) {
+          collapseText.textContent = '折叠';
+        }
+        collapseBtn.title = '折叠';
+      }
+
+      
+      if (animate) {
+        codeContainer.style.transition = 'max-height 0.3s ease-out';
+        setTimeout(() => {
+          codeContainer.style.transition = '';
+        }, 300);
+      }
+    }
+
+    function toggleCollapse() {
+      setCollapsed(!isCollapsed, true);
+    }
+
+    
+    collapseBtn.addEventListener('click', toggleCollapse);
+
+    
+    if (collapseOverlay) {
+      collapseOverlay.addEventListener('click', () => {
+        if (isCollapsed) {
+          setCollapsed(false, true);
+        }
+      });
+    }
+
+    
+    initCollapse();
+  }
+})();
+</script>
+<p><code>includeIf</code>后面的文件夹路径，一定要以<code>/</code>结尾，这样，该文件夹下的所有版本库都会采用<code>path</code>指定的配置文件。</p>
+<h2 id="5-测试">5. 测试</h2>
+<p>可以到 <code>~/work</code>下面运行一下<code>git config --list</code>，看看<code>user.name</code>、<code>user.email</code>和<code>core.sshcommand</code>的值是否跟预期用的一样。</p>
 
   </article>
 
@@ -1694,9 +2422,9 @@ document.addEventListener('DOMContentLoaded', function() {
           <p>
             <strong>链接:</strong>
             <a
-              href="http://localhost:1313/posts/jiangjieshi/"
+              href="https://entropydecrease.github.io/posts/git_mutitple_accounts/"
               class="text-primary hover:text-primary/80 transition-colors break-all hyphens-auto duration-200">
-              http://localhost:1313/posts/jiangjieshi/
+              https://entropydecrease.github.io/posts/git_mutitple_accounts/
             </a>
           </p>
 
@@ -1742,7 +2470,7 @@ document.addEventListener('DOMContentLoaded', function() {
       <div class="nav-item">
         
           <a
-            href="/posts/software_philsophy/"
+            href="/posts/softskills/"
             class="group bg-card border-border hover:bg-primary/5 hover:border-primary/20 focus:ring-primary/20 flex min-h-[140px] flex-col justify-between rounded-xl border p-6 transition-all duration-300 ease-out hover:-translate-y-1 hover:scale-[1.02] hover:shadow-lg focus:ring-2 focus:outline-none">
             <div>
               <div class="mb-3 flex items-center gap-3">
@@ -1759,7 +2487,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
               <h3
                 class="text-foreground group-hover:text-primary mb-3 line-clamp-2 text-lg leading-tight font-semibold transition-colors duration-200">
-                软件设计的哲学
+                软技能──代码之外的生存指南 【未完待续】
               </h3>
             </div>
 
@@ -1771,8 +2499,8 @@ document.addEventListener('DOMContentLoaded', function() {
     stroke="currentColor"
     viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
 </svg>
-              <time datetime="2025-05-02">
-                05 月 02 日
+              <time datetime="2025-11-08">
+                11 月 08 日
               </time>
             </div>
           </a>
@@ -1782,41 +2510,23 @@ document.addEventListener('DOMContentLoaded', function() {
       
       <div class="nav-item">
         
-          <a
-            href="/posts/744d7b0/"
-            class="group bg-card border-border hover:bg-primary/5 hover:border-primary/20 focus:ring-primary/20 flex min-h-[140px] flex-col justify-between rounded-xl border p-6 transition-all duration-300 ease-out hover:-translate-y-1 hover:scale-[1.02] hover:shadow-lg focus:ring-2 focus:outline-none">
-            <div>
-              <div class="mb-3 flex items-center justify-end gap-3">
-                <span class="text-muted-foreground text-sm font-medium">
-                  下一篇
-                </span>
-                
+          <div
+            class="bg-muted/30 border-border/50 flex min-h-[140px] flex-col justify-center rounded-xl border p-6">
+            <div class="mb-3 flex items-center justify-end gap-3">
+              <span class="text-muted-foreground/50 text-sm font-medium">
+                没有下一篇
+              </span>
+              
   <svg class="h-4 w-4"
     fill="none"
     stroke="currentColor"
     viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
 </svg>
-              </div>
-
-              <h3
-                class="text-foreground group-hover:text-primary mb-3 line-clamp-2 text-right text-lg leading-tight font-semibold transition-colors duration-200">
-                常德会战周致远致未婚妻林绣英书
-              </h3>
             </div>
-
-            <div
-              class="text-muted-foreground mt-auto flex items-center justify-end gap-2 text-xs">
-              <time datetime="2025-08-27">
-                08 月 27 日
-              </time>
-              
-  <svg class="h-3 w-3"
-    fill="none"
-    stroke="currentColor"
-    viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
-</svg>
-            </div>
-          </a>
+            <p class="text-muted-foreground/50 text-right text-sm">
+              这是最新的文章
+            </p>
+          </div>
         
       </div>
     </div>
@@ -1833,6 +2543,56 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
 
+
+  <section class="related-posts mb-12">
+    
+    <div class="mb-6 flex items-center gap-3">
+      
+  <svg class="h-5 w-5"
+    fill="none"
+    stroke="currentColor"
+    viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1" />
+</svg>
+      <h2 class="text-foreground text-2xl font-bold">
+        相关文章
+      </h2>
+    </div>
+
+    
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 w-full">
+      
+        <article class="group">
+          <a href="/posts/softskills/" class="block">
+            <div class="bg-card border-border hover:bg-primary/5 hover:border-primary/20 focus:ring-primary/20 flex items-center rounded-xl border p-5 transition-all duration-300 ease-out hover:-translate-y-1 hover:scale-[1.02] hover:shadow-lg focus:ring-2 focus:outline-none min-h-[120px]">
+              <h3 class="text-foreground group-hover:text-primary text-lg font-semibold leading-snug line-clamp-3 w-full">
+                软技能──代码之外的生存指南 【未完待续】
+              </h3>
+            </div>
+          </a>
+        </article>
+      
+        <article class="group">
+          <a href="/posts/just_and_nushell/" class="block">
+            <div class="bg-card border-border hover:bg-primary/5 hover:border-primary/20 focus:ring-primary/20 flex items-center rounded-xl border p-5 transition-all duration-300 ease-out hover:-translate-y-1 hover:scale-[1.02] hover:shadow-lg focus:ring-2 focus:outline-none min-h-[120px]">
+              <h3 class="text-foreground group-hover:text-primary text-lg font-semibold leading-snug line-clamp-3 w-full">
+                两个有意思的工具
+              </h3>
+            </div>
+          </a>
+        </article>
+      
+        <article class="group">
+          <a href="/clean_code/" class="block">
+            <div class="bg-card border-border hover:bg-primary/5 hover:border-primary/20 focus:ring-primary/20 flex items-center rounded-xl border p-5 transition-all duration-300 ease-out hover:-translate-y-1 hover:scale-[1.02] hover:shadow-lg focus:ring-2 focus:outline-none min-h-[120px]">
+              <h3 class="text-foreground group-hover:text-primary text-lg font-semibold leading-snug line-clamp-3 w-full">
+                编写可读代码的艺术
+              </h3>
+            </div>
+          </a>
+        </article>
+      
+    </div>
+  </section>
 
 
 
@@ -2221,7 +2981,15 @@ document.addEventListener('DOMContentLoaded', function() {
         aria-label="文章目录导航">
           
           <div id="toc-content">
-            <nav id="TableOfContents"></nav>
+            <nav id="TableOfContents">
+  <ul>
+    <li><a href="#1-为不同的账户设定不同的文件夹">1. 为不同的账户设定不同的文件夹</a></li>
+    <li><a href="#2-生成密钥文件">2. 生成密钥文件</a></li>
+    <li><a href="#3-生成每个账户的配置文件">3. 生成每个账户的配置文件</a></li>
+    <li><a href="#4-配置gitconfig文件">4. 配置<code>~/.gitconfig</code>文件</a></li>
+    <li><a href="#5-测试">5. 测试</a></li>
+  </ul>
+</nav>
           </div>
       </nav>
     </div>

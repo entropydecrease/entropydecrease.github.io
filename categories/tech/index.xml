@@ -6,14 +6,21 @@
     <description>Recent content in Tech on Entropy Decrease</description>
     <generator>Hugo</generator>
     <language>zh-CN</language>
-    <lastBuildDate>Sat, 08 Nov 2025 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 15 Nov 2025 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://entropydecrease.github.io/categories/tech/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>git的不同账户使用不同密钥</title>
+      <link>https://entropydecrease.github.io/posts/git_mutitple_accounts/</link>
+      <pubDate>Sat, 15 Nov 2025 00:00:00 +0000</pubDate>
+      <guid>https://entropydecrease.github.io/posts/git_mutitple_accounts/</guid>
+      <description>&lt;p&gt;不同的github或gitlab账户，希望用不同的密钥文件，这是一个比较常见的需求。&lt;/p&gt;&#xA;&lt;p&gt;有一种方法是在 &lt;code&gt;~/.ssh/config&lt;/code&gt;里面为github的不同账户设置不同的github别名，但是这个在后续使用的时候需要修改版本库的URL里面的主机名称（使用别名），有点麻烦。&lt;/p&gt;</description>
+    </item>
     <item>
       <title>软技能──代码之外的生存指南 【未完待续】</title>
       <link>https://entropydecrease.github.io/posts/softskills/</link>
       <pubDate>Sat, 08 Nov 2025 00:00:00 +0000</pubDate>
       <guid>https://entropydecrease.github.io/posts/softskills/</guid>
-      <description>&lt;p&gt;《软技能──代码之外的生存指南》，虽然是一本针对程序员的书，但是对于一般人来讲也有指导意义，不是说按照书里面的去做，是可以从书里面的思维方式得到一些启发，开拓思路。就算只简单看一下目录，了解整体框架，也是很有意义的。&lt;/p&gt;</description>
+      <description>&lt;p&gt;《软技能──代码之外的生存指南》，虽然是一本针对程序员的书，但是对于一般人来讲也有指导意义，不是说按照书里面的去做，是可以从书里面的思维方式得到一些启发，开拓思路。这本书所覆盖的广度，让我有相见恨晚的感觉，就算只简单看一下目录，了解整体框架，也是很有意义的。&lt;/p&gt;</description>
     </item>
     <item>
       <title>hisat2官方下载的index的错误</title>

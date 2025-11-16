@@ -17,6 +17,13 @@
     </item>
     <item>
       <title>编写可读代码的艺术</title>
+      <link>https://entropydecrease.github.io/clean_code/</link>
+      <pubDate>Tue, 28 Oct 2025 21:40:54 +0800</pubDate>
+      <guid>https://entropydecrease.github.io/clean_code/</guid>
+      <description>&lt;h1 id=&#34;准备&#34;&gt;准备&lt;/h1&gt;&#xA;&lt;h2 id=&#34;第一章-代码应当易于理解&#34;&gt;第一章 代码应当易于理解&lt;/h2&gt;&#xA;&lt;p&gt;在对很多这样的例⼦进⾏研究后，我们总结出，有⼀种对可读性的度量⽐其他任何的度量都要重要。因为它是如此重要，我们把它叫做“可读性基本定理”。&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>编写可读代码的艺术</title>
       <link>https://entropydecrease.github.io/posts/clean_code/</link>
       <pubDate>Tue, 28 Oct 2025 21:40:54 +0800</pubDate>
       <guid>https://entropydecrease.github.io/posts/clean_code/</guid>

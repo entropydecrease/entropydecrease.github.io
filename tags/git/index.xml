@@ -6,8 +6,15 @@
     <description>Recent content in Git on Entropy Decrease</description>
     <generator>Hugo</generator>
     <language>zh-CN</language>
-    <lastBuildDate>Wed, 25 Mar 2015 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 15 Nov 2025 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://entropydecrease.github.io/tags/git/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>git的不同账户使用不同密钥</title>
+      <link>https://entropydecrease.github.io/posts/git_mutitple_accounts/</link>
+      <pubDate>Sat, 15 Nov 2025 00:00:00 +0000</pubDate>
+      <guid>https://entropydecrease.github.io/posts/git_mutitple_accounts/</guid>
+      <description>&lt;p&gt;不同的github或gitlab账户，希望用不同的密钥文件，这是一个比较常见的需求。&lt;/p&gt;&#xA;&lt;p&gt;有一种方法是在 &lt;code&gt;~/.ssh/config&lt;/code&gt;里面为github的不同账户设置不同的github别名，但是这个在后续使用的时候需要修改版本库的URL里面的主机名称（使用别名），有点麻烦。&lt;/p&gt;</description>
+    </item>
     <item>
       <title>git tips</title>
       <link>https://entropydecrease.github.io/posts/git_tips/</link>

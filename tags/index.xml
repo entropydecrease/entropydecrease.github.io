@@ -6,12 +6,19 @@
     <description>Recent content in Tags on Entropy Decrease</description>
     <generator>Hugo</generator>
     <language>zh-CN</language>
-    <lastBuildDate>Sat, 08 Nov 2025 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 15 Nov 2025 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://entropydecrease.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Git</title>
+      <link>https://entropydecrease.github.io/tags/git/</link>
+      <pubDate>Sat, 15 Nov 2025 00:00:00 +0000</pubDate>
+      <guid>https://entropydecrease.github.io/tags/git/</guid>
+      <description></description>
+    </item>
     <item>
       <title>Programming</title>
       <link>https://entropydecrease.github.io/tags/programming/</link>
-      <pubDate>Sat, 08 Nov 2025 00:00:00 +0000</pubDate>
+      <pubDate>Sat, 15 Nov 2025 00:00:00 +0000</pubDate>
       <guid>https://entropydecrease.github.io/tags/programming/</guid>
       <description></description>
     </item>
@@ -209,13 +216,6 @@
       <link>https://entropydecrease.github.io/tags/mac/</link>
       <pubDate>Mon, 13 Apr 2015 00:00:00 +0000</pubDate>
       <guid>https://entropydecrease.github.io/tags/mac/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Git</title>
-      <link>https://entropydecrease.github.io/tags/git/</link>
-      <pubDate>Wed, 25 Mar 2015 00:00:00 +0000</pubDate>
-      <guid>https://entropydecrease.github.io/tags/git/</guid>
       <description></description>
     </item>
   </channel>
