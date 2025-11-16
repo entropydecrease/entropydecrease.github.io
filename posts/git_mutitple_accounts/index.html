@@ -55,7 +55,7 @@
 有一种方法是在 ~/.ssh/config里面为github的不同账户设置不同的github别名，但是这个在后续使用的时候需要修改版本库的URL里面的主机名称（使用别名），有点麻烦。">
   <meta itemprop="datePublished" content="2025-11-15T00:00:00+00:00">
   <meta itemprop="dateModified" content="2025-11-15T00:00:00+00:00">
-  <meta itemprop="wordCount" content="701">
+  <meta itemprop="wordCount" content="746">
   <meta itemprop="image" content="https://entropydecrease.github.io/images/og-default.avif">
   <meta itemprop="keywords" content="Programming,Git">
 
@@ -1073,7 +1073,7 @@
     stroke="currentColor"
     viewBox="0 0 24 24" aria-label="字数"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h7" />
 </svg>
-          <span>701 字</span>
+          <span>746 字</span>
         </div>
       
 
@@ -1760,6 +1760,7 @@
 </script>
 <h2 id="3-生成每个账户的配置文件">3. 生成每个账户的配置文件</h2>
 <p>将配置文件集中放置在 <code>~/.git/</code>下面，例如，对于personal，生成 <code>~/.git/.gitconfig-personal</code></p>
+<p>为了避免ssh-agent缓存多个密钥的影响，设置<code>sshCommand</code>的时候增加<code>-o IdentitiesOnly=yes</code></p>
 <div
   class="code-block-container border-border bg-card my-6 overflow-hidden rounded-xl border shadow-sm transition-all duration-200 ease-out hover:-translate-y-0.5 hover:shadow-md">
   
@@ -1829,7 +1830,7 @@
 </span></span><span class="line"><span class="cl">	name = personal
 </span></span><span class="line"><span class="cl">	email = yourname_personal@users.noreply.github.com
 </span></span><span class="line"><span class="cl">[core]
-</span></span><span class="line"><span class="cl">	sshCommand = &#34;ssh -i ~/.ssh/ed25519.personal&#34;</span></span></code></pre></div>
+</span></span><span class="line"><span class="cl">	sshCommand = &#34;ssh -i ~/.ssh/ed25519.personal -o IdentitiesOnly=yes&#34;</span></span></code></pre></div>
     
     <div
       class="collapse-overlay to-card/90 pointer-events-none absolute inset-0 bg-gradient-to-b from-transparent via-transparent opacity-0 transition-opacity duration-300">
