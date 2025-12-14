@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Snakemake on Entropy Decrease</title>
+    <link>https://entropydecrease.github.io/tags/snakemake/</link>
+    <description>Recent content in Snakemake on Entropy Decrease</description>
+    <generator>Hugo</generator>
+    <language>zh-CN</language>
+    <lastBuildDate>Sun, 01 May 2022 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://entropydecrease.github.io/tags/snakemake/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>snakemake tips</title>
+      <link>https://entropydecrease.github.io/posts/snakemake-tips/</link>
+      <pubDate>Sun, 01 May 2022 00:00:00 +0000</pubDate>
+      <guid>https://entropydecrease.github.io/posts/snakemake-tips/</guid>
+      <description>&lt;h1 id=&#34;head-will-make-a-pipe-fail&#34;&gt;head will make a pipe fail&lt;/h1&gt;&#xA;&lt;p&gt;&lt;a href=&#34;https://snakemake.readthedocs.io/en/stable/project_info/faq.html#my-shell-command-fails-with-exit-code-0-from-within-a-pipe-what-s-wrong&#34;target=&#34;_blank&#34;&#xA;  class=&#34;relative inline-flex items-center&#34;&#xA;&gt;https://snakemake.readthedocs.io/en/stable/project_info/faq.html#my-shell-command-fails-with-exit-code-0-from-within-a-pipe-what-s-wrong&#xA;  &lt;svg id=&#34;external-link&#34; class=&#34;h-3 w-3 ml-1 absolute top-0 right-0 transform translate-x-2/5 -translate-y-1/3&#34;&#xA;    fill=&#34;none&#34;&#xA;    stroke=&#34;currentColor&#34;&#xA;    viewBox=&#34;0 0 24 24&#34;&gt;&lt;path fill=&#34;none&#34; stroke=&#34;currentColor&#34; stroke-linecap=&#34;round&#34; stroke-linejoin=&#34;round&#34; stroke-width=&#34;2&#34; d=&#34;M15 3h6v6m-11 5L21 3m-3 10v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6&#34;/&gt;&lt;/svg&gt;&#xA;&lt;/a&gt;&lt;/p&gt;&#xA;&lt;p&gt;Because gzip exits before finishing the whole file, this will get a non-zero exit code.&lt;/p&gt;&#xA;&lt;pre&gt;&lt;code&gt;set -euo pipefail; gzip -d -c raw/smp_combined_R1.fastq.gz | head -n 400000 | gzip &amp;gt; sampling/smp_combined_R1.fastq.gz&#xA;&lt;/code&gt;&lt;/pre&gt;&#xA;&lt;p&gt;The solution is to add &lt;code&gt;set +o pipefail&lt;/code&gt; to such commands with &lt;code&gt;head&lt;/code&gt; or &lt;code&gt;tail&lt;/code&gt;.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

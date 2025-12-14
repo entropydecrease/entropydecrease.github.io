@@ -11,10 +11,8 @@
 
 <title>igv 生成本地的.genome文件 | Entropy Decrease</title>
 
-<meta name="description" content="igv假如每次都要从远程加载genome信息的话，网络不好的情况下会很慢，这时候最好做一个本地版的.genome文件。
-igv的.genome文件其实是一个zip文件。
-先看一下hg19.genome的内容：
-SHELL 折叠 复制 &gt; cp ~/igv/genomes/hg19.genome..." />
+<meta name="description" content=" 待办 2025.11.27: 还有一个需要改进的地方是，对于refGene.txt里面的转录本，去掉不重要的（例如 XM_为前缀的），保留MANE或者refseq select的，这样比较清爽。
+igv假如每次都要从远程加载genome信息的话，网络不好的情况下会很慢，这时候最好做一个本地版的..." />
 <meta name="keywords" content="igv, genome" />
 <meta name="author" content="Entropy Decrease" />
 <meta name="language" content="en-US" />
@@ -32,8 +30,7 @@ SHELL 折叠 复制 &gt; cp ~/igv/genomes/hg19.genome..." />
 <meta property="og:url" content="https://entropydecrease.github.io/posts/igv_local_genome/">
   <meta property="og:site_name" content="Entropy Decrease">
   <meta property="og:title" content="igv 生成本地的.genome文件">
-  <meta property="og:description" content="igv假如每次都要从远程加载genome信息的话，网络不好的情况下会很慢，这时候最好做一个本地版的.genome文件。
-igv的.genome文件其实是一个zip文件。">
+  <meta property="og:description" content="待办 2025.11.27: 还有一个需要改进的地方是，对于refGene.txt里面的转录本，去掉不重要的（例如 XM_为前缀的），保留MANE或者refseq select的，这样比较清爽。">
   <meta property="og:locale" content="zh_CN">
   <meta property="og:type" content="article">
     <meta property="article:section" content="posts">
@@ -47,16 +44,14 @@ igv的.genome文件其实是一个zip文件。">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:image" content="https://entropydecrease.github.io/images/og-default.avif">
   <meta name="twitter:title" content="igv 生成本地的.genome文件">
-  <meta name="twitter:description" content="igv假如每次都要从远程加载genome信息的话，网络不好的情况下会很慢，这时候最好做一个本地版的.genome文件。
-igv的.genome文件其实是一个zip文件。">
+  <meta name="twitter:description" content="待办 2025.11.27: 还有一个需要改进的地方是，对于refGene.txt里面的转录本，去掉不重要的（例如 XM_为前缀的），保留MANE或者refseq select的，这样比较清爽。">
 
 
   <meta itemprop="name" content="igv 生成本地的.genome文件">
-  <meta itemprop="description" content="igv假如每次都要从远程加载genome信息的话，网络不好的情况下会很慢，这时候最好做一个本地版的.genome文件。
-igv的.genome文件其实是一个zip文件。">
+  <meta itemprop="description" content="待办 2025.11.27: 还有一个需要改进的地方是，对于refGene.txt里面的转录本，去掉不重要的（例如 XM_为前缀的），保留MANE或者refseq select的，这样比较清爽。">
   <meta itemprop="datePublished" content="2020-02-23T00:00:00+00:00">
   <meta itemprop="dateModified" content="2020-02-23T00:00:00+00:00">
-  <meta itemprop="wordCount" content="428">
+  <meta itemprop="wordCount" content="511">
   <meta itemprop="image" content="https://entropydecrease.github.io/images/og-default.avif">
   <meta itemprop="keywords" content="Igv,Genome">
 
@@ -1059,7 +1054,7 @@ igv的.genome文件其实是一个zip文件。">
     viewBox="0 0 24 24" aria-label="阅读时间"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
 </svg>
           <span
-            >1 分钟</span
+            >2 分钟</span
           >
         </div>
       
@@ -1074,7 +1069,7 @@ igv的.genome文件其实是一个zip文件。">
     stroke="currentColor"
     viewBox="0 0 24 24" aria-label="字数"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h7" />
 </svg>
-          <span>428 字</span>
+          <span>511 字</span>
         </div>
       
 
@@ -1156,7 +1151,71 @@ igv的.genome文件其实是一个zip文件。">
 
   
   <article class="prose prose-neutral dark:prose-invert mb-12 max-w-none">
-    <p>igv假如每次都要从远程加载genome信息的话，网络不好的情况下会很慢，这时候最好做一个本地版的.genome文件。</p>
+    <div
+    class="alert alert-todo my-6 overflow-hidden rounded-lg transition-all duration-200 ease-out hover:-translate-y-0.5 hover:shadow-md"
+    style="background-color: color-mix(in srgb, var(--color-) 10%, transparent);
+              border-left-color: var(--color-);
+              --hover-bg: color-mix(in srgb, var(--color-) 15%, transparent);"
+    onmouseover="this.style.backgroundColor = this.style.getPropertyValue('--hover-bg')"
+    onmouseout="this.style.backgroundColor = 'color-mix(in srgb, var(--color-) 10%, transparent)'"
+    role="alert"
+    aria-labelledby="alert-0-title">
+    
+    <div
+      class=" flex items-center justify-between px-6 py-6"
+      >
+      <div class="flex items-center gap-3">
+        
+        <h4
+          id="alert-0-title"
+          class="m-0 font-semibold text-foreground/90">
+          待办
+        </h4>
+      </div>
+
+      
+      
+    </div>
+
+    
+    <div
+      id="alert-0-content"
+      class="alert-content  px-6 pb-6">
+      <div class="prose prose-sm text-foreground/90 max-w-none">
+        <p>2025.11.27: 还有一个需要改进的地方是，对于refGene.txt里面的转录本，去掉不重要的（例如 XM_为前缀的），保留MANE或者refseq select的，这样比较清爽。</p>
+      </div>
+    </div>
+  </div><script>
+function toggleAlert(alertId) {
+  const content = document.getElementById(alertId + '-content');
+  const chevron = document.getElementById(alertId + '-chevron');
+  const header = content.previousElementSibling;
+  
+  if (content.classList.contains('hidden')) {
+    content.classList.remove('hidden');
+    chevron.style.transform = 'rotate(0deg)';
+    header.setAttribute('aria-expanded', 'true');
+  } else {
+    content.classList.add('hidden');
+    chevron.style.transform = 'rotate(-90deg)';
+    header.setAttribute('aria-expanded', 'false');
+  }
+}
+
+
+document.addEventListener('DOMContentLoaded', function() {
+  const collapsedAlerts = document.querySelectorAll('.alert-content.hidden');
+  collapsedAlerts.forEach(function(content) {
+    const alertId = content.id.replace('-content', '');
+    const chevron = document.getElementById(alertId + '-chevron');
+    if (chevron) {
+      chevron.style.transform = 'rotate(-90deg)';
+    }
+  });
+});
+</script>
+
+<p>igv假如每次都要从远程加载genome信息的话，网络不好的情况下会很慢，这时候最好做一个本地版的.genome文件。</p>
 <p>igv的.genome文件其实是一个zip文件。</p>
 <p>先看一下hg19.genome的内容：</p>
 <div

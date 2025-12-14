@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Brew on Entropy Decrease</title>
+    <link>https://entropydecrease.github.io/tags/brew/</link>
+    <description>Recent content in Brew on Entropy Decrease</description>
+    <generator>Hugo</generator>
+    <language>zh-CN</language>
+    <lastBuildDate>Mon, 22 Feb 2016 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://entropydecrease.github.io/tags/brew/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>brew and macvim</title>
+      <link>https://entropydecrease.github.io/posts/brew-and-macvim/</link>
+      <pubDate>Mon, 22 Feb 2016 00:00:00 +0000</pubDate>
+      <guid>https://entropydecrease.github.io/posts/brew-and-macvim/</guid>
+      <description>&lt;p&gt;there might be problem when you try to use &lt;code&gt;brew install macvim&lt;/code&gt; if you already have conda python installed. It is because the installation of macvim via brew requires framework python.&lt;/p&gt;&#xA;&lt;p&gt;So in order to install macvim, and upgrade macvim:&lt;/p&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;Open a new terminal and run &lt;code&gt;export PATH=/System/Library/Frameworks/Python.framework/Versions/2.7/bin:$PATH&lt;/code&gt;, but don&amp;rsquo;t put this line in your .bashrc or .zshrc.&lt;/p&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;&lt;code&gt;brew install macvim&lt;/code&gt; or &lt;code&gt;brew upgrade macvim&lt;/code&gt;&lt;/p&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;close the terminal, so your &lt;code&gt;$PATH&lt;/code&gt; will restore to default.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

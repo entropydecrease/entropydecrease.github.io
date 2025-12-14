@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Markdown on Entropy Decrease</title>
+    <link>https://entropydecrease.github.io/tags/markdown/</link>
+    <description>Recent content in Markdown on Entropy Decrease</description>
+    <generator>Hugo</generator>
+    <language>zh-CN</language>
+    <lastBuildDate>Sun, 18 Sep 2022 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://entropydecrease.github.io/tags/markdown/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>hugo tips</title>
+      <link>https://entropydecrease.github.io/posts/hugo-tips/</link>
+      <pubDate>Sun, 18 Sep 2022 18:12:49 +0800</pubDate>
+      <guid>https://entropydecrease.github.io/posts/hugo-tips/</guid>
+      <description>&lt;h1 id=&#34;怎么引用另外一个markdown文件&#34;&gt;怎么引用另外一个markdown文件&lt;/h1&gt;&#xA;&lt;p&gt;&lt;a href=&#34;https://gohugo.io/content-management/cross-references/&#34;target=&#34;_blank&#34;&#xA;  class=&#34;relative inline-flex items-center&#34;&#xA;&gt;https://gohugo.io/content-management/cross-references/&#xA;  &lt;svg id=&#34;external-link&#34; class=&#34;h-3 w-3 ml-1 absolute top-0 right-0 transform translate-x-2/5 -translate-y-1/3&#34;&#xA;    fill=&#34;none&#34;&#xA;    stroke=&#34;currentColor&#34;&#xA;    viewBox=&#34;0 0 24 24&#34;&gt;&lt;path fill=&#34;none&#34; stroke=&#34;currentColor&#34; stroke-linecap=&#34;round&#34; stroke-linejoin=&#34;round&#34; stroke-width=&#34;2&#34; d=&#34;M15 3h6v6m-11 5L21 3m-3 10v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6&#34;/&gt;&lt;/svg&gt;&#xA;&lt;/a&gt;&lt;/p&gt;&#xA;&lt;p&gt;方法是是用 &lt;code&gt;shortcode&lt;/code&gt;&lt;/p&gt;&#xA;&lt;p&gt;Shortcodes for creating links to documents.&#xA;The ref and relref shortcodes display the absolute and relative permalinks to a document, respectively.&lt;/p&gt;&#xA;&lt;p&gt;Use &lt;code&gt;ref&lt;/code&gt; and &lt;code&gt;relref&lt;/code&gt;&lt;/p&gt;&#xA;&lt;p&gt;&#xA;&lt;figure class=&#34;image-figure not-prose my-8&#34; &#xA;        data-lightbox-enabled=&#34;false&#34;&#xA;        data-gallery-type=&#34;auto&#34;&gt;&#xA;  &lt;div class=&#34;image-container&#34;&gt;&#xA;    &lt;img&#xA;    src=&#34;https://entropydecrease.github.io/posts/hugo-tips/resources/image-20220918182547440.png&#34;&#xA;    alt=&#34;image-20220918182547440&#34;&#xA;    &#xA;    &#xA;      &#xA;      &#xA;        &#xA;    width=&#34;660&#34;&#xA;    height=&#34;670&#34;&#xA;        &#xA;      &#xA;    &#xA;    loading=&#34;lazy&#34;&#xA;    decoding=&#34;async&#34;&#xA;    data-gallery-src=&#34;https://entropydecrease.github.io/posts/hugo-tips/resources/image-20220918182547440.png&#34;&#xA;    data-gallery-alt=&#34;image-20220918182547440&#34;&#xA;    data-gallery-title=&#34;&#34; /&gt;&lt;/div&gt;&#xA;&#xA;  &lt;/figure&gt;&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

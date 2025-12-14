@@ -11,8 +11,9 @@
 
 <title>设置hostname，避免DHCP修改hostname | Entropy Decrease</title>
 
-<meta name="description" content="It can be annoying to see my hostname being modifed each time I connect to a different WIFI. It is because the hostname was never set.
-&gt; scutil..." />
+<meta name="description" content="新的mac电脑可能会发现主机名会经常变，这是因为没有设置hostname.
+&gt; scutil --get HostName HostName: not set 只需设置hostname即可：
+&gt; sudo scutil --set HostName..." />
 <meta name="keywords" content="Mac" />
 <meta name="author" content="Entropy Decrease" />
 <meta name="language" content="en-US" />
@@ -30,8 +31,8 @@
 <meta property="og:url" content="https://entropydecrease.github.io/posts/set_hostname/">
   <meta property="og:site_name" content="Entropy Decrease">
   <meta property="og:title" content="设置hostname，避免DHCP修改hostname">
-  <meta property="og:description" content="It can be annoying to see my hostname being modifed each time I connect to a different WIFI. It is because the hostname was never set.
-&gt; scutil --get HostName HostName: not set So we just need to set the hostname:
+  <meta property="og:description" content="新的mac电脑可能会发现主机名会经常变，这是因为没有设置hostname.
+&gt; scutil --get HostName HostName: not set 只需设置hostname即可：
 &gt; sudo scutil --set HostName &#34;new_hostname&#34; Password: &gt; scutil --get HostName new_hostname">
   <meta property="og:locale" content="zh_CN">
   <meta property="og:type" content="article">
@@ -45,18 +46,18 @@
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:image" content="https://entropydecrease.github.io/images/og-default.avif">
   <meta name="twitter:title" content="设置hostname，避免DHCP修改hostname">
-  <meta name="twitter:description" content="It can be annoying to see my hostname being modifed each time I connect to a different WIFI. It is because the hostname was never set.
-&gt; scutil --get HostName HostName: not set So we just need to set the hostname:
+  <meta name="twitter:description" content="新的mac电脑可能会发现主机名会经常变，这是因为没有设置hostname.
+&gt; scutil --get HostName HostName: not set 只需设置hostname即可：
 &gt; sudo scutil --set HostName &#34;new_hostname&#34; Password: &gt; scutil --get HostName new_hostname">
 
 
   <meta itemprop="name" content="设置hostname，避免DHCP修改hostname">
-  <meta itemprop="description" content="It can be annoying to see my hostname being modifed each time I connect to a different WIFI. It is because the hostname was never set.
-&gt; scutil --get HostName HostName: not set So we just need to set the hostname:
+  <meta itemprop="description" content="新的mac电脑可能会发现主机名会经常变，这是因为没有设置hostname.
+&gt; scutil --get HostName HostName: not set 只需设置hostname即可：
 &gt; sudo scutil --set HostName &#34;new_hostname&#34; Password: &gt; scutil --get HostName new_hostname">
   <meta itemprop="datePublished" content="2015-04-13T00:00:00+00:00">
   <meta itemprop="dateModified" content="2015-04-13T00:00:00+00:00">
-  <meta itemprop="wordCount" content="53">
+  <meta itemprop="wordCount" content="71">
   <meta itemprop="image" content="https://entropydecrease.github.io/images/og-default.avif">
   <meta itemprop="keywords" content="Mac">
 
@@ -1074,7 +1075,7 @@
     stroke="currentColor"
     viewBox="0 0 24 24" aria-label="字数"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h7" />
 </svg>
-          <span>53 字</span>
+          <span>71 字</span>
         </div>
       
 
@@ -1150,11 +1151,11 @@
 
   
   <article class="prose prose-neutral dark:prose-invert mb-12 max-w-none">
-    <p>It can be annoying to see my hostname being modifed each time I connect to a different WIFI. It is because the hostname was never set.</p>
+    <p>新的mac电脑可能会发现主机名会经常变，这是因为没有设置hostname.</p>
 <pre><code>&gt; scutil --get HostName 
 HostName: not set 
 </code></pre>
-<p>So we just need to set the hostname:</p>
+<p>只需设置hostname即可：</p>
 <pre><code>&gt; sudo scutil --set HostName &quot;new_hostname&quot;  
 Password:  
 &gt; scutil --get HostName              

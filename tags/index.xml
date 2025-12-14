@@ -6,27 +6,27 @@
     <description>Recent content in Tags on Entropy Decrease</description>
     <generator>Hugo</generator>
     <language>zh-CN</language>
-    <lastBuildDate>Sat, 15 Nov 2025 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 14 Dec 2025 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://entropydecrease.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>Git</title>
-      <link>https://entropydecrease.github.io/tags/git/</link>
-      <pubDate>Sat, 15 Nov 2025 00:00:00 +0000</pubDate>
-      <guid>https://entropydecrease.github.io/tags/git/</guid>
-      <description></description>
-    </item>
     <item>
       <title>Programming</title>
       <link>https://entropydecrease.github.io/tags/programming/</link>
-      <pubDate>Sat, 15 Nov 2025 00:00:00 +0000</pubDate>
+      <pubDate>Sun, 14 Dec 2025 00:00:00 +0000</pubDate>
       <guid>https://entropydecrease.github.io/tags/programming/</guid>
       <description></description>
     </item>
     <item>
       <title>创业</title>
       <link>https://entropydecrease.github.io/tags/%E5%88%9B%E4%B8%9A/</link>
-      <pubDate>Sat, 08 Nov 2025 00:00:00 +0000</pubDate>
+      <pubDate>Sun, 14 Dec 2025 00:00:00 +0000</pubDate>
       <guid>https://entropydecrease.github.io/tags/%E5%88%9B%E4%B8%9A/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Git</title>
+      <link>https://entropydecrease.github.io/tags/git/</link>
+      <pubDate>Sat, 15 Nov 2025 00:00:00 +0000</pubDate>
+      <guid>https://entropydecrease.github.io/tags/git/</guid>
       <description></description>
     </item>
     <item>
@@ -170,6 +170,41 @@
       <description></description>
     </item>
     <item>
+      <title>Markdown</title>
+      <link>https://entropydecrease.github.io/tags/markdown/</link>
+      <pubDate>Sun, 18 Sep 2022 18:12:49 +0800</pubDate>
+      <guid>https://entropydecrease.github.io/tags/markdown/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>NGS</title>
+      <link>https://entropydecrease.github.io/tags/ngs/</link>
+      <pubDate>Sun, 18 Sep 2022 17:43:39 +0800</pubDate>
+      <guid>https://entropydecrease.github.io/tags/ngs/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>TNGS</title>
+      <link>https://entropydecrease.github.io/tags/tngs/</link>
+      <pubDate>Sun, 18 Sep 2022 17:43:39 +0800</pubDate>
+      <guid>https://entropydecrease.github.io/tags/tngs/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>CtDNA</title>
+      <link>https://entropydecrease.github.io/tags/ctdna/</link>
+      <pubDate>Tue, 12 Jul 2022 00:00:00 +0000</pubDate>
+      <guid>https://entropydecrease.github.io/tags/ctdna/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Illumina</title>
+      <link>https://entropydecrease.github.io/tags/illumina/</link>
+      <pubDate>Thu, 05 May 2022 00:00:00 +0000</pubDate>
+      <guid>https://entropydecrease.github.io/tags/illumina/</guid>
+      <description></description>
+    </item>
+    <item>
       <title>Bam</title>
       <link>https://entropydecrease.github.io/tags/bam/</link>
       <pubDate>Sun, 01 May 2022 00:00:00 +0000</pubDate>
@@ -181,6 +216,27 @@
       <link>https://entropydecrease.github.io/tags/database/</link>
       <pubDate>Sun, 01 May 2022 00:00:00 +0000</pubDate>
       <guid>https://entropydecrease.github.io/tags/database/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Mutation</title>
+      <link>https://entropydecrease.github.io/tags/mutation/</link>
+      <pubDate>Sun, 01 May 2022 00:00:00 +0000</pubDate>
+      <guid>https://entropydecrease.github.io/tags/mutation/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Snakemake</title>
+      <link>https://entropydecrease.github.io/tags/snakemake/</link>
+      <pubDate>Sun, 01 May 2022 00:00:00 +0000</pubDate>
+      <guid>https://entropydecrease.github.io/tags/snakemake/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>家乡</title>
+      <link>https://entropydecrease.github.io/tags/%E5%AE%B6%E4%B9%A1/</link>
+      <pubDate>Sun, 01 May 2022 00:00:00 +0000</pubDate>
+      <guid>https://entropydecrease.github.io/tags/%E5%AE%B6%E4%B9%A1/</guid>
       <description></description>
     </item>
     <item>
@@ -205,17 +261,31 @@
       <description></description>
     </item>
     <item>
-      <title>家乡</title>
-      <link>https://entropydecrease.github.io/tags/%E5%AE%B6%E4%B9%A1/</link>
-      <pubDate>Sun, 06 Dec 2015 00:00:00 +0000</pubDate>
-      <guid>https://entropydecrease.github.io/tags/%E5%AE%B6%E4%B9%A1/</guid>
+      <title>Linux</title>
+      <link>https://entropydecrease.github.io/tags/linux/</link>
+      <pubDate>Mon, 11 Apr 2016 00:00:00 +0000</pubDate>
+      <guid>https://entropydecrease.github.io/tags/linux/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Brew</title>
+      <link>https://entropydecrease.github.io/tags/brew/</link>
+      <pubDate>Mon, 22 Feb 2016 00:00:00 +0000</pubDate>
+      <guid>https://entropydecrease.github.io/tags/brew/</guid>
       <description></description>
     </item>
     <item>
       <title>Mac</title>
       <link>https://entropydecrease.github.io/tags/mac/</link>
-      <pubDate>Mon, 13 Apr 2015 00:00:00 +0000</pubDate>
+      <pubDate>Mon, 22 Feb 2016 00:00:00 +0000</pubDate>
       <guid>https://entropydecrease.github.io/tags/mac/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Make</title>
+      <link>https://entropydecrease.github.io/tags/make/</link>
+      <pubDate>Thu, 02 Jul 2015 00:00:00 +0000</pubDate>
+      <guid>https://entropydecrease.github.io/tags/make/</guid>
       <description></description>
     </item>
   </channel>

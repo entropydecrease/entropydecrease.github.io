@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Make on Entropy Decrease</title>
+    <link>https://entropydecrease.github.io/tags/make/</link>
+    <description>Recent content in Make on Entropy Decrease</description>
+    <generator>Hugo</generator>
+    <language>zh-CN</language>
+    <lastBuildDate>Thu, 02 Jul 2015 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://entropydecrease.github.io/tags/make/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>GNU make - how to get 2nd or 3rd prerequisite file</title>
+      <link>https://entropydecrease.github.io/posts/gnu-make-how-to-get-2nd-or-3rd-prerequisite-file/</link>
+      <pubDate>Thu, 02 Jul 2015 00:00:00 +0000</pubDate>
+      <guid>https://entropydecrease.github.io/posts/gnu-make-how-to-get-2nd-or-3rd-prerequisite-file/</guid>
+      <description>&lt;p&gt;在写&lt;code&gt;makefile&lt;/code&gt;的时候，有时候依赖文件有多个，并且需要分别使用。例如，需要把两个vcf合并（两个vcf文件是对应不同染色体的，所以直接cat就可以，但是对于第二个vcf文件不需要开头的行首为‘#’的meta信息部分。&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>GNU Make - multiple targets in one recipe and parallel execution</title>
+      <link>https://entropydecrease.github.io/posts/gnu-make-multiple-targets-in-one-recipe-and-parallel-execution/</link>
+      <pubDate>Fri, 19 Jun 2015 00:00:00 +0000</pubDate>
+      <guid>https://entropydecrease.github.io/posts/gnu-make-multiple-targets-in-one-recipe-and-parallel-execution/</guid>
+      <description>&lt;p&gt;Inspired by &lt;code&gt;http://stackoverflow.com/questions/19822435/multiple-targets-from-one-recipe-and-parallel-execution.&lt;/code&gt;&lt;/p&gt;&#xA;&lt;p&gt;很多时候，写&lt;code&gt;makefile&lt;/code&gt;的时候，一条rule可以产生多个target，但是这样有一个问题，假如这些target不是pattern rules，make对于其中每一个target，都会运行一次recipe。&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

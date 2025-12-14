@@ -6,26 +6,26 @@
     <description>Recent content in Categories on Entropy Decrease</description>
     <generator>Hugo</generator>
     <language>zh-CN</language>
-    <lastBuildDate>Sat, 15 Nov 2025 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 14 Dec 2025 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://entropydecrease.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>Tech</title>
-      <link>https://entropydecrease.github.io/categories/tech/</link>
-      <pubDate>Sat, 15 Nov 2025 00:00:00 +0000</pubDate>
-      <guid>https://entropydecrease.github.io/categories/tech/</guid>
-      <description></description>
-    </item>
     <item>
       <title>Life</title>
       <link>https://entropydecrease.github.io/categories/life/</link>
-      <pubDate>Sat, 08 Nov 2025 00:00:00 +0000</pubDate>
+      <pubDate>Sun, 14 Dec 2025 00:00:00 +0000</pubDate>
       <guid>https://entropydecrease.github.io/categories/life/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Tech</title>
+      <link>https://entropydecrease.github.io/categories/tech/</link>
+      <pubDate>Sun, 14 Dec 2025 00:00:00 +0000</pubDate>
+      <guid>https://entropydecrease.github.io/categories/tech/</guid>
       <description></description>
     </item>
     <item>
       <title>工作</title>
       <link>https://entropydecrease.github.io/categories/%E5%B7%A5%E4%BD%9C/</link>
-      <pubDate>Sat, 08 Nov 2025 00:00:00 +0000</pubDate>
+      <pubDate>Sun, 14 Dec 2025 00:00:00 +0000</pubDate>
       <guid>https://entropydecrease.github.io/categories/%E5%B7%A5%E4%BD%9C/</guid>
       <description></description>
     </item>
@@ -83,6 +83,13 @@
       <link>https://entropydecrease.github.io/categories/clinical/</link>
       <pubDate>Fri, 28 Apr 2023 00:00:00 +0000</pubDate>
       <guid>https://entropydecrease.github.io/categories/clinical/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Code</title>
+      <link>https://entropydecrease.github.io/categories/code/</link>
+      <pubDate>Mon, 11 Apr 2016 00:00:00 +0000</pubDate>
+      <guid>https://entropydecrease.github.io/categories/code/</guid>
       <description></description>
     </item>
   </channel>

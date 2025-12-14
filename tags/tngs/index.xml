@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>TNGS on Entropy Decrease</title>
+    <link>https://entropydecrease.github.io/tags/tngs/</link>
+    <description>Recent content in TNGS on Entropy Decrease</description>
+    <generator>Hugo</generator>
+    <language>zh-CN</language>
+    <lastBuildDate>Sun, 18 Sep 2022 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://entropydecrease.github.io/tags/tngs/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>靶向病原微生物检测</title>
+      <link>https://entropydecrease.github.io/posts/%E9%9D%B6%E5%90%91%E7%97%85%E5%8E%9F%E5%BE%AE%E7%94%9F%E7%89%A9%E6%A3%80%E6%B5%8B/</link>
+      <pubDate>Sun, 18 Sep 2022 17:43:39 +0800</pubDate>
+      <guid>https://entropydecrease.github.io/posts/%E9%9D%B6%E5%90%91%E7%97%85%E5%8E%9F%E5%BE%AE%E7%94%9F%E7%89%A9%E6%A3%80%E6%B5%8B/</guid>
+      <description>&lt;p&gt;现在宏基因组（mNGS）在病原体检测中的应用如火如荼，头部公司有好几家，融资此起彼伏。靶向病原检测，或称“小宏基因组”也有很多公司在开展，例如金域、微远、冰缘、迪安。其中&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

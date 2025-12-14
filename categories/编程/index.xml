@@ -17,17 +17,24 @@
     </item>
     <item>
       <title>编写可读代码的艺术</title>
-      <link>https://entropydecrease.github.io/clean_code/</link>
-      <pubDate>Tue, 28 Oct 2025 21:40:54 +0800</pubDate>
-      <guid>https://entropydecrease.github.io/clean_code/</guid>
-      <description>&lt;h1 id=&#34;准备&#34;&gt;准备&lt;/h1&gt;&#xA;&lt;h2 id=&#34;第一章-代码应当易于理解&#34;&gt;第一章 代码应当易于理解&lt;/h2&gt;&#xA;&lt;p&gt;在对很多这样的例⼦进⾏研究后，我们总结出，有⼀种对可读性的度量⽐其他任何的度量都要重要。因为它是如此重要，我们把它叫做“可读性基本定理”。&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>编写可读代码的艺术</title>
       <link>https://entropydecrease.github.io/posts/clean_code/</link>
       <pubDate>Tue, 28 Oct 2025 21:40:54 +0800</pubDate>
       <guid>https://entropydecrease.github.io/posts/clean_code/</guid>
       <description>&lt;h1 id=&#34;准备&#34;&gt;准备&lt;/h1&gt;&#xA;&lt;h2 id=&#34;第一章-代码应当易于理解&#34;&gt;第一章 代码应当易于理解&lt;/h2&gt;&#xA;&lt;p&gt;在对很多这样的例⼦进⾏研究后，我们总结出，有⼀种对可读性的度量⽐其他任何的度量都要重要。因为它是如此重要，我们把它叫做“可读性基本定理”。&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>GNU make - how to get 2nd or 3rd prerequisite file</title>
+      <link>https://entropydecrease.github.io/posts/gnu-make-how-to-get-2nd-or-3rd-prerequisite-file/</link>
+      <pubDate>Thu, 02 Jul 2015 00:00:00 +0000</pubDate>
+      <guid>https://entropydecrease.github.io/posts/gnu-make-how-to-get-2nd-or-3rd-prerequisite-file/</guid>
+      <description>&lt;p&gt;在写&lt;code&gt;makefile&lt;/code&gt;的时候，有时候依赖文件有多个，并且需要分别使用。例如，需要把两个vcf合并（两个vcf文件是对应不同染色体的，所以直接cat就可以，但是对于第二个vcf文件不需要开头的行首为‘#’的meta信息部分。&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>GNU Make - multiple targets in one recipe and parallel execution</title>
+      <link>https://entropydecrease.github.io/posts/gnu-make-multiple-targets-in-one-recipe-and-parallel-execution/</link>
+      <pubDate>Fri, 19 Jun 2015 00:00:00 +0000</pubDate>
+      <guid>https://entropydecrease.github.io/posts/gnu-make-multiple-targets-in-one-recipe-and-parallel-execution/</guid>
+      <description>&lt;p&gt;Inspired by &lt;code&gt;http://stackoverflow.com/questions/19822435/multiple-targets-from-one-recipe-and-parallel-execution.&lt;/code&gt;&lt;/p&gt;&#xA;&lt;p&gt;很多时候，写&lt;code&gt;makefile&lt;/code&gt;的时候，一条rule可以产生多个target，但是这样有一个问题，假如这些target不是pattern rules，make对于其中每一个target，都会运行一次recipe。&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>
