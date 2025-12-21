@@ -243,8 +243,8 @@ gatk 用来生成用于Mutect2的 af-only-gnomad.hg38.vcf.gz 的程序..." />
 
 
         <script
-          src="/js/dock.e68dfcd7c5d37f18f40d8855905ee50c98c58f3b204d0ffb207d4956c987ead0.js"
-          integrity="sha256-5o3818XTfxj0DYhVkF7lDJjFjzsgTQ/7IH1JVsmH6tA="
+          src="/js/dock.f0bd0caa69c431df6d8552bce7c1e1a5fb421ee1327a12849c47b061fd854670.js"
+          integrity="sha256-8L0MqmnEMd9thVK858HhpftCHuEyehKEnEewYf2FRnA="
           crossorigin="anonymous"
           defer></script>
 
@@ -1298,11 +1298,11 @@ task MakeAlleleFrequencyOnlyVcf {
   
   <div class="code-block-content relative" id="code-0">
     <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl"><span class="cp">#!/bin/bash
-</span></span></span><span class="line"><span class="cl"><span class="cp"></span>
+</span></span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl"><span class="c1"># gatk removes ID/UQAL and INFO except &#39;AF&#39;</span>
 </span></span><span class="line"><span class="cl">bcftools annotate -x <span class="s1">&#39;FILTER,INFO/AC,^INFO/AF,INFO/AF_eas,INFO/AF_eas_male,INFO/AF_eas_female&#39;</span> <span class="se">\
-</span></span></span><span class="line"><span class="cl"><span class="se"></span>        -Oz -o gnomad.genomes.r3.0.sites.fix.af_only.vcf.gz --threads <span class="m">8</span> <span class="se">\
-</span></span></span><span class="line"><span class="cl"><span class="se"></span>        gnomad.genomes.r3.0.sites.fix.vcf.gz 2&gt;mk_gnomad_af_only.log
+</span></span></span><span class="line"><span class="cl">        -Oz -o gnomad.genomes.r3.0.sites.fix.af_only.vcf.gz --threads <span class="m">8</span> <span class="se">\
+</span></span></span><span class="line"><span class="cl">        gnomad.genomes.r3.0.sites.fix.vcf.gz 2&gt;mk_gnomad_af_only.log
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">bcftools index -t --threads <span class="m">8</span> --force gnomad.genomes.r3.0.sites.fix.af_only.vcf.gz 2&gt;&gt;mk_gnomad_af_only.log</span></span></code></pre></div>
     
@@ -1638,7 +1638,7 @@ task MakeAlleleFrequencyOnlyVcf {
       <div class="nav-item">
         
           <a
-            href="/posts/bcftools_notes/"
+            href="/posts/%E5%BA%8F%E5%88%97%E5%A4%8D%E6%9D%82%E5%BA%A6/"
             class="group bg-card border-border hover:bg-primary/5 hover:border-primary/20 focus:ring-primary/20 flex min-h-[140px] flex-col justify-between rounded-xl border p-6 transition-all duration-300 ease-out hover:-translate-y-1 hover:scale-[1.02] hover:shadow-lg focus:ring-2 focus:outline-none">
             <div>
               <div class="mb-3 flex items-center gap-3">
@@ -1655,7 +1655,7 @@ task MakeAlleleFrequencyOnlyVcf {
 
               <h3
                 class="text-foreground group-hover:text-primary mb-3 line-clamp-2 text-lg leading-tight font-semibold transition-colors duration-200">
-                bcftools notes (转载)
+                序列复杂度
               </h3>
             </div>
 
@@ -1667,8 +1667,8 @@ task MakeAlleleFrequencyOnlyVcf {
     stroke="currentColor"
     viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
 </svg>
-              <time datetime="2021-10-01">
-                10 月 01 日
+              <time datetime="2022-05-01">
+                05 月 01 日
               </time>
             </div>
           </a>

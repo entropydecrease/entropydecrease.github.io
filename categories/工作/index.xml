@@ -6,8 +6,15 @@
     <description>Recent content in 工作 on Entropy Decrease</description>
     <generator>Hugo</generator>
     <language>zh-CN</language>
-    <lastBuildDate>Sun, 14 Dec 2025 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 15 Dec 2025 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://entropydecrease.github.io/categories/%E5%B7%A5%E4%BD%9C/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>关于AI的一些思考</title>
+      <link>https://entropydecrease.github.io/posts/ai_misc/</link>
+      <pubDate>Mon, 15 Dec 2025 00:00:00 +0000</pubDate>
+      <guid>https://entropydecrease.github.io/posts/ai_misc/</guid>
+      <description>&lt;p&gt;关于AI的一些思考，想到哪写到哪。&lt;/p&gt;&#xA;&lt;h2 id=&#34;ai的头部公司里能做出头的&#34;&gt;AI的头部公司里，能做出头的：&lt;/h2&gt;&#xA;&lt;h3 id=&#34;1-字节肯定算一个&#34;&gt;1. 字节肯定算一个&lt;/h3&gt;&#xA;&lt;p&gt;字节的模型虽然没有deepseqk和千问出风头，但是一方面，他的模型应该也是国内一流的，另一个很重要的方面，他的软件做得比其他家好太多，比如豆包、TRAE，断崖式领先。&lt;/p&gt;</description>
+    </item>
     <item>
       <title>软技能──代码之外的生存指南 - 8 - 附录</title>
       <link>https://entropydecrease.github.io/posts/softskills8/</link>

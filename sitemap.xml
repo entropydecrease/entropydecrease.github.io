@@ -3,27 +3,60 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://entropydecrease.github.io/categories/</loc>
-    <lastmod>2025-12-14T00:00:00+00:00</lastmod>
+    <lastmod>2025-12-21T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://entropydecrease.github.io/categories/life/</loc>
-    <lastmod>2025-12-14T00:00:00+00:00</lastmod>
+    <loc>https://entropydecrease.github.io/tags/mac/</loc>
+    <lastmod>2025-12-21T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://entropydecrease.github.io/posts/</loc>
-    <lastmod>2025-12-14T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://entropydecrease.github.io/tags/programming/</loc>
-    <lastmod>2025-12-14T00:00:00+00:00</lastmod>
+    <lastmod>2025-12-21T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://entropydecrease.github.io/tags/</loc>
-    <lastmod>2025-12-14T00:00:00+00:00</lastmod>
+    <lastmod>2025-12-21T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://entropydecrease.github.io/categories/tech/</loc>
-    <lastmod>2025-12-14T00:00:00+00:00</lastmod>
+    <lastmod>2025-12-21T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://entropydecrease.github.io/categories/%E5%B7%A5%E5%85%B7/</loc>
+    <lastmod>2025-12-21T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://entropydecrease.github.io/posts/%E4%B8%80%E7%A7%8D%E8%BD%AF%E4%BB%B6%E9%94%80%E5%94%AE%E7%9A%84%E6%A8%A1%E5%BC%8F/</loc>
+    <lastmod>2025-12-21T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://entropydecrease.github.io/tags/ai/</loc>
+    <lastmod>2025-12-20T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://entropydecrease.github.io/posts/%E5%85%B3%E4%BA%8Eai%E7%9A%84%E6%96%87%E6%91%98%E4%BA%8C%E5%88%99/</loc>
+    <lastmod>2025-12-20T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://entropydecrease.github.io/posts/%E5%AD%A6%E4%B9%A0%E7%89%A9%E7%90%86%E7%9A%84%E7%90%86%E7%94%B1/</loc>
+    <lastmod>2025-12-20T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://entropydecrease.github.io/categories/code/</loc>
+    <lastmod>2025-12-16T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://entropydecrease.github.io/tags/shell/</loc>
+    <lastmod>2025-12-16T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://entropydecrease.github.io/posts/xargs%E5%B0%8F%E6%8A%80%E5%B7%A7%E9%9A%8F%E6%89%8B%E8%AE%B0/</loc>
+    <lastmod>2025-12-16T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://entropydecrease.github.io/posts/%E4%BD%BF%E7%94%A8xargs%E5%92%8Cparallel%E5%B9%B6%E8%A1%8C%E8%BF%90%E8%A1%8C%E4%BB%BB%E5%8A%A1/</loc>
+    <lastmod>2025-12-16T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://entropydecrease.github.io/categories/life/</loc>
+    <lastmod>2025-12-15T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://entropydecrease.github.io/tags/%E5%88%9B%E4%B8%9A/</loc>
-    <lastmod>2025-12-14T00:00:00+00:00</lastmod>
+    <lastmod>2025-12-15T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://entropydecrease.github.io/categories/%E5%B7%A5%E4%BD%9C/</loc>
+    <lastmod>2025-12-15T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://entropydecrease.github.io/posts/ai_misc/</loc>
+    <lastmod>2025-12-15T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://entropydecrease.github.io/tags/programming/</loc>
     <lastmod>2025-12-14T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://entropydecrease.github.io/posts/softskills8/</loc>
@@ -71,12 +104,6 @@
     <loc>https://entropydecrease.github.io/posts/hisat2_index_error/</loc>
     <lastmod>2025-11-04T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://entropydecrease.github.io/tags/shell/</loc>
-    <lastmod>2025-11-04T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://entropydecrease.github.io/categories/%E5%B7%A5%E5%85%B7/</loc>
-    <lastmod>2025-11-04T00:00:00+00:00</lastmod>
-  </url><url>
     <loc>https://entropydecrease.github.io/categories/%E7%BC%96%E7%A8%8B/</loc>
     <lastmod>2025-11-02T00:00:00+00:00</lastmod>
   </url><url>
@@ -118,9 +145,6 @@
   </url><url>
     <loc>https://entropydecrease.github.io/posts/%E6%9D%A8%E6%8C%AF%E5%AE%81/</loc>
     <lastmod>2025-10-18T19:47:02+08:00</lastmod>
-  </url><url>
-    <loc>https://entropydecrease.github.io/tags/ai/</loc>
-    <lastmod>2025-10-02T11:16:17+08:00</lastmod>
   </url><url>
     <loc>https://entropydecrease.github.io/posts/ai_in_10000days/</loc>
     <lastmod>2025-10-02T11:16:17+08:00</lastmod>
@@ -371,6 +395,9 @@
     <loc>https://entropydecrease.github.io/posts/%E6%B2%B3%E5%8D%97%E6%96%B9%E8%A8%80-%E7%9F%A5%E4%B9%8E%E6%9F%90%E4%BD%9C-%E8%80%85%E6%96%87%E6%91%98/</loc>
     <lastmod>2022-05-02T00:00:00+00:00</lastmod>
   </url><url>
+    <loc>https://entropydecrease.github.io/tags/annotation/</loc>
+    <lastmod>2022-05-01T00:00:00+00:00</lastmod>
+  </url><url>
     <loc>https://entropydecrease.github.io/tags/bam/</loc>
     <lastmod>2022-05-01T00:00:00+00:00</lastmod>
   </url><url>
@@ -413,6 +440,9 @@
     <loc>https://entropydecrease.github.io/posts/gnome_af_only/</loc>
     <lastmod>2022-05-01T00:00:00+00:00</lastmod>
   </url><url>
+    <loc>https://entropydecrease.github.io/posts/%E5%BA%8F%E5%88%97%E5%A4%8D%E6%9D%82%E5%BA%A6/</loc>
+    <lastmod>2022-05-01T00:00:00+00:00</lastmod>
+  </url><url>
     <loc>https://entropydecrease.github.io/tags/bcftools/</loc>
     <lastmod>2021-10-01T00:00:00+00:00</lastmod>
   </url><url>
@@ -440,9 +470,6 @@
     <loc>https://entropydecrease.github.io/posts/nextseq-500%E7%9A%84flowcell%E7%BB%93%E6%9E%84/</loc>
     <lastmod>2018-01-01T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://entropydecrease.github.io/categories/code/</loc>
-    <lastmod>2016-04-11T00:00:00+00:00</lastmod>
-  </url><url>
     <loc>https://entropydecrease.github.io/posts/install-circos-on-ubuntu/</loc>
     <lastmod>2016-04-11T00:00:00+00:00</lastmod>
   </url><url>
@@ -453,9 +480,6 @@
     <lastmod>2016-02-22T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://entropydecrease.github.io/posts/brew-and-macvim/</loc>
-    <lastmod>2016-02-22T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://entropydecrease.github.io/tags/mac/</loc>
     <lastmod>2016-02-22T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://entropydecrease.github.io/posts/some_history_of_my_hometown/</loc>

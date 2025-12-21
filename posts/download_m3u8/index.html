@@ -246,8 +246,8 @@ https://www.illumina.vh.sauos.com/watch/205">
 
 
         <script
-          src="/js/dock.e68dfcd7c5d37f18f40d8855905ee50c98c58f3b204d0ffb207d4956c987ead0.js"
-          integrity="sha256-5o3818XTfxj0DYhVkF7lDJjFjzsgTQ/7IH1JVsmH6tA="
+          src="/js/dock.f0bd0caa69c431df6d8552bce7c1e1a5fb421ee1327a12849c47b061fd854670.js"
+          integrity="sha256-8L0MqmnEMd9thVK858HhpftCHuEyehKEnEewYf2FRnA="
           crossorigin="anonymous"
           defer></script>
 
@@ -2233,9 +2233,9 @@ document.addEventListener('DOMContentLoaded', function() {
   
   <div class="code-block-content relative" id="code-3">
     <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl"><span class="o">[</span> -s url_list.txt <span class="o">]</span> <span class="o">||</span> <span class="se">\
-</span></span></span><span class="line"><span class="cl"><span class="se"></span>	grep -v <span class="s1">&#39;^#EXTM3U&#39;</span> record.m3u8 <span class="p">|</span> grep -v <span class="s1">&#39;^#EXT-X&#39;</span> <span class="se">\
-</span></span></span><span class="line"><span class="cl"><span class="se"></span>	<span class="p">|</span> tr -d <span class="s1">&#39;\n&#39;</span> <span class="p">|</span> sed <span class="s1">&#39;s/#EXTINF:/\n/g&#39;</span> <span class="p">|</span> grep -v <span class="s1">&#39;^$&#39;</span> <span class="p">|</span> sed <span class="s1">&#39;s/,/\t/&#39;</span> <span class="se">\
-</span></span></span><span class="line"><span class="cl"><span class="se"></span>	<span class="p">|</span> awk <span class="s1">&#39;{i+=$1; if (i &gt;= 2000 &amp;&amp; i &lt;= 2050) print $2}&#39;</span> &gt; url_list.txt</span></span></code></pre></div>
+</span></span></span><span class="line"><span class="cl">	grep -v <span class="s1">&#39;^#EXTM3U&#39;</span> record.m3u8 <span class="p">|</span> grep -v <span class="s1">&#39;^#EXT-X&#39;</span> <span class="se">\
+</span></span></span><span class="line"><span class="cl">	<span class="p">|</span> tr -d <span class="s1">&#39;\n&#39;</span> <span class="p">|</span> sed <span class="s1">&#39;s/#EXTINF:/\n/g&#39;</span> <span class="p">|</span> grep -v <span class="s1">&#39;^$&#39;</span> <span class="p">|</span> sed <span class="s1">&#39;s/,/\t/&#39;</span> <span class="se">\
+</span></span></span><span class="line"><span class="cl">	<span class="p">|</span> awk <span class="s1">&#39;{i+=$1; if (i &gt;= 2000 &amp;&amp; i &lt;= 2050) print $2}&#39;</span> &gt; url_list.txt</span></span></code></pre></div>
     
     <div
       class="collapse-overlay to-card/90 pointer-events-none absolute inset-0 bg-gradient-to-b from-transparent via-transparent opacity-0 transition-opacity duration-300">

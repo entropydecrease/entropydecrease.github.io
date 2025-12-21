@@ -6,20 +6,41 @@
     <description>Recent content in Tags on Entropy Decrease</description>
     <generator>Hugo</generator>
     <language>zh-CN</language>
-    <lastBuildDate>Sun, 14 Dec 2025 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 21 Dec 2025 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://entropydecrease.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Programming</title>
-      <link>https://entropydecrease.github.io/tags/programming/</link>
-      <pubDate>Sun, 14 Dec 2025 00:00:00 +0000</pubDate>
-      <guid>https://entropydecrease.github.io/tags/programming/</guid>
+      <title>Mac</title>
+      <link>https://entropydecrease.github.io/tags/mac/</link>
+      <pubDate>Sun, 21 Dec 2025 00:00:00 +0000</pubDate>
+      <guid>https://entropydecrease.github.io/tags/mac/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>AI</title>
+      <link>https://entropydecrease.github.io/tags/ai/</link>
+      <pubDate>Sat, 20 Dec 2025 00:00:00 +0000</pubDate>
+      <guid>https://entropydecrease.github.io/tags/ai/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Shell</title>
+      <link>https://entropydecrease.github.io/tags/shell/</link>
+      <pubDate>Tue, 16 Dec 2025 00:00:00 +0000</pubDate>
+      <guid>https://entropydecrease.github.io/tags/shell/</guid>
       <description></description>
     </item>
     <item>
       <title>创业</title>
       <link>https://entropydecrease.github.io/tags/%E5%88%9B%E4%B8%9A/</link>
-      <pubDate>Sun, 14 Dec 2025 00:00:00 +0000</pubDate>
+      <pubDate>Mon, 15 Dec 2025 00:00:00 +0000</pubDate>
       <guid>https://entropydecrease.github.io/tags/%E5%88%9B%E4%B8%9A/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Programming</title>
+      <link>https://entropydecrease.github.io/tags/programming/</link>
+      <pubDate>Sun, 14 Dec 2025 00:00:00 +0000</pubDate>
+      <guid>https://entropydecrease.github.io/tags/programming/</guid>
       <description></description>
     </item>
     <item>
@@ -41,13 +62,6 @@
       <link>https://entropydecrease.github.io/tags/code/</link>
       <pubDate>Tue, 04 Nov 2025 00:00:00 +0000</pubDate>
       <guid>https://entropydecrease.github.io/tags/code/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Shell</title>
-      <link>https://entropydecrease.github.io/tags/shell/</link>
-      <pubDate>Tue, 04 Nov 2025 00:00:00 +0000</pubDate>
-      <guid>https://entropydecrease.github.io/tags/shell/</guid>
       <description></description>
     </item>
     <item>
@@ -83,13 +97,6 @@
       <link>https://entropydecrease.github.io/tags/%E4%BA%BA%E7%89%A9/</link>
       <pubDate>Sat, 25 Oct 2025 00:00:00 +0000</pubDate>
       <guid>https://entropydecrease.github.io/tags/%E4%BA%BA%E7%89%A9/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>AI</title>
-      <link>https://entropydecrease.github.io/tags/ai/</link>
-      <pubDate>Thu, 02 Oct 2025 11:16:17 +0800</pubDate>
-      <guid>https://entropydecrease.github.io/tags/ai/</guid>
       <description></description>
     </item>
     <item>
@@ -205,6 +212,13 @@
       <description></description>
     </item>
     <item>
+      <title>Annotation</title>
+      <link>https://entropydecrease.github.io/tags/annotation/</link>
+      <pubDate>Sun, 01 May 2022 00:00:00 +0000</pubDate>
+      <guid>https://entropydecrease.github.io/tags/annotation/</guid>
+      <description></description>
+    </item>
+    <item>
       <title>Bam</title>
       <link>https://entropydecrease.github.io/tags/bam/</link>
       <pubDate>Sun, 01 May 2022 00:00:00 +0000</pubDate>
@@ -272,13 +286,6 @@
       <link>https://entropydecrease.github.io/tags/brew/</link>
       <pubDate>Mon, 22 Feb 2016 00:00:00 +0000</pubDate>
       <guid>https://entropydecrease.github.io/tags/brew/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Mac</title>
-      <link>https://entropydecrease.github.io/tags/mac/</link>
-      <pubDate>Mon, 22 Feb 2016 00:00:00 +0000</pubDate>
-      <guid>https://entropydecrease.github.io/tags/mac/</guid>
       <description></description>
     </item>
     <item>
