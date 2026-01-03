@@ -6,15 +6,8 @@
     <description>Recent content in 工具 on Entropy Decrease</description>
     <generator>Hugo</generator>
     <language>zh-CN</language>
-    <lastBuildDate>Sun, 21 Dec 2025 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 20 Dec 2025 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://entropydecrease.github.io/categories/%E5%B7%A5%E5%85%B7/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>一种软件销售的模式</title>
-      <link>https://entropydecrease.github.io/posts/%E4%B8%80%E7%A7%8D%E8%BD%AF%E4%BB%B6%E9%94%80%E5%94%AE%E7%9A%84%E6%A8%A1%E5%BC%8F/</link>
-      <pubDate>Sun, 21 Dec 2025 00:00:00 +0000</pubDate>
-      <guid>https://entropydecrease.github.io/posts/%E4%B8%80%E7%A7%8D%E8%BD%AF%E4%BB%B6%E9%94%80%E5%94%AE%E7%9A%84%E6%A8%A1%E5%BC%8F/</guid>
-      <description>&lt;p&gt;从外置硬盘往存储卡里导数据的时候死机了，强行重启之后，存储卡读不出来了，可以看到有分区，但是不能挂载。&lt;/p&gt;&#xA;&lt;p&gt;搜索了很多，问&lt;code&gt;deepseek&lt;/code&gt;很久，尝试了GUI工具&lt;code&gt;Disk Drill&lt;/code&gt;和&lt;code&gt;R-Studio&lt;/code&gt;（不是R语言那个&lt;code&gt;rstudio&lt;/code&gt;），还尝试了免费的命令行工具&lt;code&gt;testdisk&lt;/code&gt;，最后付费三百多块买了&lt;code&gt;Disk Drill&lt;/code&gt;。&lt;/p&gt;</description>
-    </item>
     <item>
       <title>学习物理的理由</title>
       <link>https://entropydecrease.github.io/posts/%E5%AD%A6%E4%B9%A0%E7%89%A9%E7%90%86%E7%9A%84%E7%90%86%E7%94%B1/</link>
