@@ -6,8 +6,29 @@
     <description>Recent content in Categories on Entropy Decrease</description>
     <generator>Hugo</generator>
     <language>zh-CN</language>
-    <lastBuildDate>Sun, 18 Jan 2026 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 09 May 2026 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://entropydecrease.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Life</title>
+      <link>https://entropydecrease.github.io/categories/life/</link>
+      <pubDate>Sat, 09 May 2026 00:00:00 +0000</pubDate>
+      <guid>https://entropydecrease.github.io/categories/life/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>阅读</title>
+      <link>https://entropydecrease.github.io/categories/%E9%98%85%E8%AF%BB/</link>
+      <pubDate>Fri, 08 May 2026 00:00:00 +0000</pubDate>
+      <guid>https://entropydecrease.github.io/categories/%E9%98%85%E8%AF%BB/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Tech</title>
+      <link>https://entropydecrease.github.io/categories/tech/</link>
+      <pubDate>Wed, 06 May 2026 00:00:00 +0000</pubDate>
+      <guid>https://entropydecrease.github.io/categories/tech/</guid>
+      <description></description>
+    </item>
     <item>
       <title>随笔</title>
       <link>https://entropydecrease.github.io/categories/%E9%9A%8F%E7%AC%94/</link>
@@ -23,20 +44,6 @@
       <description></description>
     </item>
     <item>
-      <title>阅读</title>
-      <link>https://entropydecrease.github.io/categories/%E9%98%85%E8%AF%BB/</link>
-      <pubDate>Sat, 10 Jan 2026 00:00:00 +0000</pubDate>
-      <guid>https://entropydecrease.github.io/categories/%E9%98%85%E8%AF%BB/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Tech</title>
-      <link>https://entropydecrease.github.io/categories/tech/</link>
-      <pubDate>Sat, 20 Dec 2025 00:00:00 +0000</pubDate>
-      <guid>https://entropydecrease.github.io/categories/tech/</guid>
-      <description></description>
-    </item>
-    <item>
       <title>工具</title>
       <link>https://entropydecrease.github.io/categories/%E5%B7%A5%E5%85%B7/</link>
       <pubDate>Sat, 20 Dec 2025 00:00:00 +0000</pubDate>
@@ -48,13 +55,6 @@
       <link>https://entropydecrease.github.io/categories/code/</link>
       <pubDate>Tue, 16 Dec 2025 00:00:00 +0000</pubDate>
       <guid>https://entropydecrease.github.io/categories/code/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Life</title>
-      <link>https://entropydecrease.github.io/categories/life/</link>
-      <pubDate>Mon, 15 Dec 2025 00:00:00 +0000</pubDate>
-      <guid>https://entropydecrease.github.io/categories/life/</guid>
       <description></description>
     </item>
     <item>

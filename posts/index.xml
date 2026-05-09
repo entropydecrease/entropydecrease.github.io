@@ -6,8 +6,92 @@
     <description>Recent content in Posts on Entropy Decrease</description>
     <generator>Hugo</generator>
     <language>zh-CN</language>
-    <lastBuildDate>Sun, 18 Jan 2026 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 09 May 2026 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://entropydecrease.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>天空为什么是蓝色的？（转载）</title>
+      <link>https://entropydecrease.github.io/posts/bluesky/</link>
+      <pubDate>Sat, 09 May 2026 00:00:00 +0000</pubDate>
+      <guid>https://entropydecrease.github.io/posts/bluesky/</guid>
+      <description>&lt;p&gt;按：这篇文章不错，一方面考虑保留下来以防以后不能打开了，另一方面也做一个翻译方便阅读，所以全文转载并用豆包翻译成中英文对照。有些图片是动态的，而且是可以调整参数实时更新的，我截了多张图来展示，但是最好还是看&lt;a href=&#34;https://explainers.blog/posts/why-is-the-sky-blue/&#34;target=&#34;_blank&#34;&#xA;  class=&#34;relative inline-flex items-center&#34;&#xA;&gt;原文&#xA;  &lt;svg id=&#34;external-link&#34; class=&#34;h-3 w-3 ml-1 absolute top-0 right-0 transform translate-x-2/5 -translate-y-1/3&#34;&#xA;    fill=&#34;none&#34;&#xA;    stroke=&#34;currentColor&#34;&#xA;    viewBox=&#34;0 0 24 24&#34;&gt;&lt;path fill=&#34;none&#34; stroke=&#34;currentColor&#34; stroke-linecap=&#34;round&#34; stroke-linejoin=&#34;round&#34; stroke-width=&#34;2&#34; d=&#34;M15 3h6v6m-11 5L21 3m-3 10v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6&#34;/&gt;&lt;/svg&gt;&#xA;&lt;/a&gt;.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>从20万到30亿：特朗普自传</title>
+      <link>https://entropydecrease.github.io/posts/%E4%BB%8E20%E4%B8%87%E5%88%B030%E4%BA%BF%E7%89%B9%E6%9C%97%E6%99%AE%E8%87%AA%E4%BC%A0/</link>
+      <pubDate>Fri, 08 May 2026 00:00:00 +0000</pubDate>
+      <guid>https://entropydecrease.github.io/posts/%E4%BB%8E20%E4%B8%87%E5%88%B030%E4%BA%BF%E7%89%B9%E6%9C%97%E6%99%AE%E8%87%AA%E4%BC%A0/</guid>
+      <description>&lt;p&gt;懂王的书，简单易懂，因为这个人表里如一，始终如一。书里一眼就看到当今懂王的样子：&lt;/p&gt;&#xA;&lt;h2 id=&#34;牵制对手&#34;&gt;牵制对手&lt;/h2&gt;&#xA;&lt;p&gt;在一笔生意中，千万不要表现出你为了生意奋不顾身，这会让对手轻而易举地把你干掉。在生意中，要善于发挥优势，能够牵制对手，就是一大优势。牵制对手，就是你手里要握有对方想要、需要、离不了的东西。&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>AI来了，人类更要多读书（转载）</title>
+      <link>https://entropydecrease.github.io/posts/ai_reading/</link>
+      <pubDate>Wed, 06 May 2026 00:00:00 +0000</pubDate>
+      <guid>https://entropydecrease.github.io/posts/ai_reading/</guid>
+      <description>&lt;p&gt;让我觉得有意义的主要是下面一段：&lt;/p&gt;&#xA;&#xA;  &lt;blockquote&#xA;    class=&#34;border-primary bg-muted/30 hover:bg-muted/40 my-6 rounded-r-lg border-l-4 py-4 pr-4 pl-6 italic transition-all duration-200 ease-out hover:translate-x-1&#34;&gt;&#xA;    &lt;div class=&#34;prose prose-sm max-w-none&#34;&gt;&#xA;      &lt;p&gt;当我和朋友聊起AI的时候，他说他已经用了几个月的 Claude Code, 现在 Claude Code 写出来的代码他已经不想看了；不过好几次 Claude 搞不出来的功能，只能自己下手写 design 教它怎么搞；但是代码的确已经不想看了，更何况自己动手写代码。&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>怎样修改epub文件</title>
+      <link>https://entropydecrease.github.io/posts/modify_epub/</link>
+      <pubDate>Wed, 15 Apr 2026 00:00:00 +0000</pubDate>
+      <guid>https://entropydecrease.github.io/posts/modify_epub/</guid>
+      <description>&lt;p&gt;epub文件，本质上是一个zip文件，所以后缀名改成zip，解压缩就得到一个文件夹。&lt;/p&gt;&#xA;&lt;p&gt;接下来可以打开解压出的文件夹，通常会有一个名为 &lt;code&gt;OEBPS&lt;/code&gt;、&lt;code&gt;EPUB&lt;/code&gt; 或 &lt;code&gt;Text&lt;/code&gt; 的文件夹。里面的 &lt;code&gt;.html&lt;/code&gt; 或 &lt;code&gt;.xhtml&lt;/code&gt; 文件就是书的正文。&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>我最难忘的一个将军-李敖写宋希濂</title>
+      <link>https://entropydecrease.github.io/posts/%E6%88%91%E6%9C%80%E9%9A%BE%E5%BF%98%E7%9A%84%E4%B8%80%E4%B8%AA%E5%B0%86%E5%86%9B/</link>
+      <pubDate>Tue, 14 Apr 2026 00:00:00 +0000</pubDate>
+      <guid>https://entropydecrease.github.io/posts/%E6%88%91%E6%9C%80%E9%9A%BE%E5%BF%98%E7%9A%84%E4%B8%80%E4%B8%AA%E5%B0%86%E5%86%9B/</guid>
+      <description>&lt;h2 id=&#34;我最难忘的一个将军&#34;&gt;&lt;a href=&#34;https://whatot.github.io/leeao/01.%E8%87%AA%E4%BC%A0%E5%9B%9E%E5%BF%86%E7%B1%BB/%E6%88%91%E6%9C%80%E9%9A%BE%E5%BF%98%E7%9A%84%E4%BA%8B%E5%92%8C%E4%BA%BA.html#%E6%88%91%E6%9C%80%E9%9A%BE%E5%BF%98%E7%9A%84%E4%B8%80%E4%B8%AA%E5%B0%86%E5%86%9B&#34;target=&#34;_blank&#34;&#xA;  class=&#34;relative inline-flex items-center&#34;&#xA;&gt;我最难忘的一个将军&#xA;  &lt;svg id=&#34;external-link&#34; class=&#34;h-3 w-3 ml-1 absolute top-0 right-0 transform translate-x-2/5 -translate-y-1/3&#34;&#xA;    fill=&#34;none&#34;&#xA;    stroke=&#34;currentColor&#34;&#xA;    viewBox=&#34;0 0 24 24&#34;&gt;&lt;path fill=&#34;none&#34; stroke=&#34;currentColor&#34; stroke-linecap=&#34;round&#34; stroke-linejoin=&#34;round&#34; stroke-width=&#34;2&#34; d=&#34;M15 3h6v6m-11 5L21 3m-3 10v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6&#34;/&gt;&lt;/svg&gt;&#xA;&lt;/a&gt;&lt;/h2&gt;&#xA;&lt;p&gt;——为宋希濂将军出书经过&lt;/p&gt;&#xA;&lt;p&gt;我生平喜欢打抱不平。不但为朋友打，也为敌人打；不但为认识的人打，也为陌生的人打；不但为近在眼前的人打，也为远在天边的人打。只要真理所在、真相所在、人道有关、公道有关，我都不论亲疏、不分彼此，一概奋笔为文，要打个痛快。自 1949 年起，我困处台湾小岛，被国民党政权作弄一二十年、二三十年、三四十年，肤尝身受于国民党政权者更酷更多，所以在感情上，尤为激越。这一激越，更使我要把人间不平之事，广为搜求，以个案详追，留为证词，述往昭来，且为乱臣贼子惧。在这种又感情又理性的态度下，每逢有代表性或特殊性的案例出现，我便特别注意，收为资料，写成文章。&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>黄绍竑回忆录</title>
+      <link>https://entropydecrease.github.io/posts/%E9%BB%84%E7%BB%8D%E7%AB%91%E5%9B%9E%E5%BF%86%E5%BD%95/</link>
+      <pubDate>Sun, 05 Apr 2026 00:00:00 +0000</pubDate>
+      <guid>https://entropydecrease.github.io/posts/%E9%BB%84%E7%BB%8D%E7%AB%91%E5%9B%9E%E5%BF%86%E5%BD%95/</guid>
+      <description>&lt;h2 id=&#34;黄绍竑回忆录序&#34;&gt;《黄绍竑回忆录》序&lt;/h2&gt;&#xA;&lt;p&gt;程思远&lt;/p&gt;&#xA;&lt;p&gt;国民党在两广统一时期，黄绍竑与李宗仁、白崇禧，号称广西三杰。&lt;/p&gt;&#xA;&lt;p&gt;时孙中山先生在统率粤军驱逐盘据广东五年之久的桂系陆荣廷以后，在广州成立大元帅府，重建革命根据地。不意陈炯明谋叛，占领东江，而广西又为陆荣廷、沈鸿英割据。不时威胁广州，革命形势，危如累卵。&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>张雪给我的启发</title>
+      <link>https://entropydecrease.github.io/posts/%E5%BC%A0%E9%9B%AA/</link>
+      <pubDate>Sat, 04 Apr 2026 00:00:00 +0000</pubDate>
+      <guid>https://entropydecrease.github.io/posts/%E5%BC%A0%E9%9B%AA/</guid>
+      <description>&lt;p&gt;张雪峰猝死，互联网上纪念的热潮还没有过去，一个叫「张雪」的人火起来。&lt;/p&gt;&#xA;&lt;p&gt;张雪的故事很鼓舞人，有个人的努力，也有时代的机遇，真心为他的成功感到高兴。&lt;/p&gt;&#xA;&lt;p&gt;让我深思的是，一个初中生，自己造摩托，而且是自己造发动机的那种造摩托。他假如能造摩托，且能造成世界先进水平的摩托（包括发动机）的话，那我呢？&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>关于张雪峰之思考</title>
+      <link>https://entropydecrease.github.io/posts/%E5%BC%A0%E9%9B%AA%E5%B3%B0/</link>
+      <pubDate>Sun, 29 Mar 2026 00:00:00 +0000</pubDate>
+      <guid>https://entropydecrease.github.io/posts/%E5%BC%A0%E9%9B%AA%E5%B3%B0/</guid>
+      <description>&lt;p&gt;2026.03.24，张雪峰心源性猝死。1984年生，黑龙江人，郑州大学2023级给排水工程本科，之后从考研辅导进入教育行业，以考研报考咨询出名，成为知名企业家及教育博主，殁年41岁。&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>周鸿祎自述：我的互联网方法论</title>
+      <link>https://entropydecrease.github.io/posts/%E5%91%A8%E9%B8%BF%E7%A5%8E/</link>
+      <pubDate>Sun, 29 Mar 2026 00:00:00 +0000</pubDate>
+      <guid>https://entropydecrease.github.io/posts/%E5%91%A8%E9%B8%BF%E7%A5%8E/</guid>
+      <description>&lt;h2 id=&#34;自序---我的价值观&#34;&gt;自序 - 我的价值观&lt;/h2&gt;&#xA;&#xA;  &lt;blockquote&#xA;    class=&#34;border-primary bg-muted/30 hover:bg-muted/40 my-6 rounded-r-lg border-l-4 py-4 pr-4 pl-6 italic transition-all duration-200 ease-out hover:translate-x-1&#34;&gt;&#xA;    &lt;div class=&#34;prose prose-sm max-w-none&#34;&gt;&#xA;      &lt;p&gt;按：有很多书，序言很值得一读。&lt;/p&gt;&#xA;&#xA;    &lt;/div&gt;&#xA;  &lt;/blockquote&gt;&lt;script&gt;&#xA;function toggleAlert(alertId) {&#xA;  const content = document.getElementById(alertId + &#39;-content&#39;);&#xA;  const chevron = document.getElementById(alertId + &#39;-chevron&#39;);&#xA;  const header = content.previousElementSibling;&#xA;  &#xA;  if (content.classList.contains(&#39;hidden&#39;)) {&#xA;    content.classList.remove(&#39;hidden&#39;);&#xA;    chevron.style.transform = &#39;rotate(0deg)&#39;;&#xA;    header.setAttribute(&#39;aria-expanded&#39;, &#39;true&#39;);&#xA;  } else {&#xA;    content.classList.add(&#39;hidden&#39;);&#xA;    chevron.style.transform = &#39;rotate(-90deg)&#39;;&#xA;    header.setAttribute(&#39;aria-expanded&#39;, &#39;false&#39;);&#xA;  }&#xA;}&#xA;&#xA;&#xA;document.addEventListener(&#39;DOMContentLoaded&#39;, function() {&#xA;  const collapsedAlerts = document.querySelectorAll(&#39;.alert-content.hidden&#39;);&#xA;  collapsedAlerts.forEach(function(content) {&#xA;    const alertId = content.id.replace(&#39;-content&#39;, &#39;&#39;);&#xA;    const chevron = document.getElementById(alertId + &#39;-chevron&#39;);&#xA;    if (chevron) {&#xA;      chevron.style.transform = &#39;rotate(-90deg)&#39;;&#xA;    }&#xA;  });&#xA;});&#xA;&lt;/script&gt;&#xA;&#xA;&lt;p&gt;中信出版社希望我给这本书写一个序，按理说一本书的序言就是说为什么要写这本书，大体分为哪几个部分，分别讲了什么，最后还要写一些要感谢的人。我觉得这个套路有点过时，因为讲了什么，翻几页看一下目录就行了，何必要再重复一遍？所以，我在序言里就讲影响我的价值观的电影和书。&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>《原则》-达利欧</title>
+      <link>https://entropydecrease.github.io/posts/%E5%8E%9F%E5%88%99/</link>
+      <pubDate>Tue, 24 Feb 2026 00:00:00 +0000</pubDate>
+      <guid>https://entropydecrease.github.io/posts/%E5%8E%9F%E5%88%99/</guid>
+      <description>&lt;blockquote&#xA;    class=&#34;border-primary bg-muted/30 hover:bg-muted/40 my-6 rounded-r-lg border-l-4 py-4 pr-4 pl-6 italic transition-all duration-200 ease-out hover:translate-x-1&#34;&gt;&#xA;    &lt;div class=&#34;prose prose-sm max-w-none&#34;&gt;&#xA;      &lt;p&gt;时间就像一条河流，&lt;/p&gt;&#xA;&lt;p&gt;载着我们顺流而下，&lt;/p&gt;&#xA;&lt;p&gt;让我们遇到现实并做出决策。&lt;/p&gt;&#xA;&lt;p&gt;我们无法停留，&lt;/p&gt;&#xA;&lt;p&gt;也无法回避，&lt;/p&gt;&#xA;&lt;p&gt;只能以最好的方式应对.&lt;/p&gt;&#xA;&#xA;    &lt;/div&gt;&#xA;  &lt;/blockquote&gt;&lt;script&gt;&#xA;function toggleAlert(alertId) {&#xA;  const content = document.getElementById(alertId + &#39;-content&#39;);&#xA;  const chevron = document.getElementById(alertId + &#39;-chevron&#39;);&#xA;  const header = content.previousElementSibling;&#xA;  &#xA;  if (content.classList.contains(&#39;hidden&#39;)) {&#xA;    content.classList.remove(&#39;hidden&#39;);&#xA;    chevron.style.transform = &#39;rotate(0deg)&#39;;&#xA;    header.setAttribute(&#39;aria-expanded&#39;, &#39;true&#39;);&#xA;  } else {&#xA;    content.classList.add(&#39;hidden&#39;);&#xA;    chevron.style.transform = &#39;rotate(-90deg)&#39;;&#xA;    header.setAttribute(&#39;aria-expanded&#39;, &#39;false&#39;);&#xA;  }&#xA;}&#xA;&#xA;&#xA;document.addEventListener(&#39;DOMContentLoaded&#39;, function() {&#xA;  const collapsedAlerts = document.querySelectorAll(&#39;.alert-content.hidden&#39;);&#xA;  collapsedAlerts.forEach(function(content) {&#xA;    const alertId = content.id.replace(&#39;-content&#39;, &#39;&#39;);&#xA;    const chevron = document.getElementById(alertId + &#39;-chevron&#39;);&#xA;    if (chevron) {&#xA;      chevron.style.transform = &#39;rotate(-90deg)&#39;;&#xA;    }&#xA;  });&#xA;});&#xA;&lt;/script&gt;&#xA;&#xA;&#xA;  &lt;blockquote&#xA;    class=&#34;border-primary bg-muted/30 hover:bg-muted/40 my-6 rounded-r-lg border-l-4 py-4 pr-4 pl-6 italic transition-all duration-200 ease-out hover:translate-x-1&#34;&gt;&#xA;    &lt;div class=&#34;prose prose-sm max-w-none&#34;&gt;&#xA;      &lt;p&gt;思考我们如何做出决定有好处，因为这将决定我们的生活质量。&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>《镖人》观后感</title>
+      <link>https://entropydecrease.github.io/posts/%E9%95%96%E4%BA%BA/</link>
+      <pubDate>Tue, 17 Feb 2026 00:00:00 +0000</pubDate>
+      <guid>https://entropydecrease.github.io/posts/%E9%95%96%E4%BA%BA/</guid>
+      <description>&lt;h1 id=&#34;镖人观后感&#34;&gt;《镖人》观后感&lt;/h1&gt;&#xA;&lt;p&gt;1、李连杰，一开始就出场了，还以为会贯穿始终，结果这样一个功夫皇帝，不但第一场就（带张晋一起）结账走人了，而且他和张晋的戏份，完全可有可无，删掉之后完全不影响电影情节。&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>在谷歌工作14年的21个教训（转载）</title>
+      <link>https://entropydecrease.github.io/posts/21lessonsingoogle/</link>
+      <pubDate>Fri, 23 Jan 2026 00:00:00 +0000</pubDate>
+      <guid>https://entropydecrease.github.io/posts/21lessonsingoogle/</guid>
+      <description>&lt;p&gt;&lt;a href=&#34;https://addyosmani.com/blog/21-lessons/&#34;target=&#34;_blank&#34;&#xA;  class=&#34;relative inline-flex items-center&#34;&#xA;&gt;# 21 Lessons From 14 Years at Google&#xA;  &lt;svg id=&#34;external-link&#34; class=&#34;h-3 w-3 ml-1 absolute top-0 right-0 transform translate-x-2/5 -translate-y-1/3&#34;&#xA;    fill=&#34;none&#34;&#xA;    stroke=&#34;currentColor&#34;&#xA;    viewBox=&#34;0 0 24 24&#34;&gt;&lt;path fill=&#34;none&#34; stroke=&#34;currentColor&#34; stroke-linecap=&#34;round&#34; stroke-linejoin=&#34;round&#34; stroke-width=&#34;2&#34; d=&#34;M15 3h6v6m-11 5L21 3m-3 10v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6&#34;/&gt;&lt;/svg&gt;&#xA;&lt;/a&gt;&lt;/p&gt;&#xA;&lt;p&gt;豆包的翻译：&lt;/p&gt;&#xA;&lt;h1 id=&#34;在谷歌14年的21条经验教训&#34;&gt;在谷歌14年的21条经验教训&lt;/h1&gt;&#xA;&lt;h2 id=&#34;january-3-20262026年1月3日&#34;&gt;January 3, 2026 2026年1月3日&lt;/h2&gt;&#xA;&lt;p&gt;大约14年前我加入谷歌时，以为这份工作就是写出优秀的代码。我当时的想法有一部分是对的。但待得越久，我就越意识到，那些能取得成功的工程师未必是最优秀的程序员——他们是那些弄明白了如何应对代码之外所有事情的人：与人打交道、办公室政治、达成共识、处理模糊性问题。&lt;/p&gt;</description>
+    </item>
     <item>
       <title>回乡杂记</title>
       <link>https://entropydecrease.github.io/posts/backtohometown/</link>
@@ -27,7 +111,7 @@
       <link>https://entropydecrease.github.io/posts/%E6%89%A7%E8%A1%8C/</link>
       <pubDate>Sat, 10 Jan 2026 00:00:00 +0000</pubDate>
       <guid>https://entropydecrease.github.io/posts/%E6%89%A7%E8%A1%8C/</guid>
-      <description>&lt;h2 id=&#34;勇气的缺乏&#34;&gt;勇气的缺乏&lt;/h2&gt;&#xA;&lt;p&gt;&lt;em&gt;大多数人都知道自己组织里的某个人并不能胜任他的工作，却一直在这个岗位上待了很多年。出现这种情况时，我们会发现通常的原因就是这个人的上司没有足够的勇气让他离开。&lt;/em&gt;&lt;/p&gt;</description>
+      <description>&lt;h2 id=&#34;企业领导者的主要工作&#34;&gt;企业领导者的主要工作&lt;/h2&gt;&#xA;&lt;p&gt;&lt;em&gt;领导必须亲自运营这三个流程──挑选其他领导者，确定战略方向，以及引导企业运营，并在此过程中落实各项计划。这些工作都是执行的核心，而且无论一个组织的规模大小，企业领导者们都不应将其交付给其他任何人。&lt;/em&gt;&lt;/p&gt;</description>
     </item>
     <item>
       <title>委内瑞拉</title>
