@@ -1,40 +1,73 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>历史 on Entropy Decrease</title>
-    <link>https://entropydecrease.github.io/tags/%E5%8E%86%E5%8F%B2/</link>
-    <description>Recent content in 历史 on Entropy Decrease</description>
-    <generator>Hugo</generator>
-    <language>zh-CN</language>
-    <lastBuildDate>Thu, 30 Oct 2025 00:00:00 +0000</lastBuildDate>
-    <atom:link href="https://entropydecrease.github.io/tags/%E5%8E%86%E5%8F%B2/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>G2</title>
-      <link>https://entropydecrease.github.io/posts/g2/</link>
-      <pubDate>Thu, 30 Oct 2025 00:00:00 +0000</pubDate>
-      <guid>https://entropydecrease.github.io/posts/g2/</guid>
-      <description>&lt;p&gt;2025年10月30日，中美在韩国达成关于关税的协定，看达成的条款，东大还是比较狼狈，但是，回想贸易战刚开始的黑云压城，到现在达成的妥协，再看其他国家的表现与结果，虽然与漂亮未来的斗争还有很长，还会很被动、很受伤，但是，我认为世界G2格局已经形成，大趋势不可逆转。&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>张发奎口述历史</title>
-      <link>https://entropydecrease.github.io/posts/zhangfakui/</link>
-      <pubDate>Mon, 06 Nov 2023 00:00:00 +0000</pubDate>
-      <guid>https://entropydecrease.github.io/posts/zhangfakui/</guid>
-      <description>&lt;h3 id=&#34;收黑钱&#34;&gt;收黑钱&lt;/h3&gt;&#xA;&#xA;  &lt;blockquote&#xA;    class=&#34;border-primary bg-muted/30 hover:bg-muted/40 my-6 rounded-r-lg border-l-4 py-4 pr-4 pl-6 italic transition-all duration-200 ease-out hover:translate-x-1&#34;&gt;&#xA;    &lt;div class=&#34;prose prose-sm max-w-none&#34;&gt;&#xA;      &lt;p&gt;我禁止营长们收受黑钱，理由很简单：。。。。。。我要集中一切资源，麾下营长们才会听命于我。&lt;/p&gt;&#xA;&#xA;    &lt;/div&gt;&#xA;  &lt;/blockquote&gt;&lt;script&gt;&#xA;function toggleAlert(alertId) {&#xA;  const content = document.getElementById(alertId + &#39;-content&#39;);&#xA;  const chevron = document.getElementById(alertId + &#39;-chevron&#39;);&#xA;  const header = content.previousElementSibling;&#xA;  &#xA;  if (content.classList.contains(&#39;hidden&#39;)) {&#xA;    content.classList.remove(&#39;hidden&#39;);&#xA;    chevron.style.transform = &#39;rotate(0deg)&#39;;&#xA;    header.setAttribute(&#39;aria-expanded&#39;, &#39;true&#39;);&#xA;  } else {&#xA;    content.classList.add(&#39;hidden&#39;);&#xA;    chevron.style.transform = &#39;rotate(-90deg)&#39;;&#xA;    header.setAttribute(&#39;aria-expanded&#39;, &#39;false&#39;);&#xA;  }&#xA;}&#xA;&#xA;&#xA;document.addEventListener(&#39;DOMContentLoaded&#39;, function() {&#xA;  const collapsedAlerts = document.querySelectorAll(&#39;.alert-content.hidden&#39;);&#xA;  collapsedAlerts.forEach(function(content) {&#xA;    const alertId = content.id.replace(&#39;-content&#39;, &#39;&#39;);&#xA;    const chevron = document.getElementById(alertId + &#39;-chevron&#39;);&#xA;    if (chevron) {&#xA;      chevron.style.transform = &#39;rotate(-90deg)&#39;;&#xA;    }&#xA;  });&#xA;});&#xA;&lt;/script&gt;&#xA;&#xA;&lt;h3 id=&#34;叶挺的婚事&#34;&gt;叶挺的婚事&lt;/h3&gt;&#xA;&#xA;  &lt;blockquote&#xA;    class=&#34;border-primary bg-muted/30 hover:bg-muted/40 my-6 rounded-r-lg border-l-4 py-4 pr-4 pl-6 italic transition-all duration-200 ease-out hover:translate-x-1&#34;&gt;&#xA;    &lt;div class=&#34;prose prose-sm max-w-none&#34;&gt;&#xA;      &lt;p&gt;我告诉你，叶挺是怎样当上卅四团团长的。这里包含着一段姻缘的秘密。叶挺与我是好朋友，我俩是校友兼同事。当我俩都当营长时，他在广州认识一个美丽的女孩，在她姐姐出阁前，父母不让妹妹嫁给叶挺。姐姐是个麻脸。叶挺追求她经年，一直不成功。在失望中，他剃光了头发。&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>沈醉回忆录读书笔记</title>
-      <link>https://entropydecrease.github.io/posts/shenzui/</link>
-      <pubDate>Fri, 01 Sep 2023 00:00:00 +0000</pubDate>
-      <guid>https://entropydecrease.github.io/posts/shenzui/</guid>
-      <description>&lt;h2 id=&#34;笔记几则&#34;&gt;笔记几则&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;沈醉1914年生，18岁投奔余乐醒(也是一个重要的特务)开始当特务，28岁成为军统局总务处少将处长，1947年成为云南站站长，1949年被迫参加龙云的云南起义，才35岁。后接受改造至1960年释放（也就是说，在做了18年特务，成为军统的风云人物，入狱改造10年，1960年被释放的时候，才46岁），之后作为政协文史资料委员会文史委员，文革期间曾入狱。1980年身份由战犯改为起义将领。&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;沈醉曾打电话恐吓宋庆龄，并计划开车撞车宋庆龄以警告，后未实行。&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>说说我的家乡，没什么文笔，自娱自乐</title>
-      <link>https://entropydecrease.github.io/posts/some_history_of_my_hometown/</link>
-      <pubDate>Sun, 06 Dec 2015 00:00:00 +0000</pubDate>
-      <guid>https://entropydecrease.github.io/posts/some_history_of_my_hometown/</guid>
-      <description>&lt;p&gt;我的家乡新郑，洛阳与开封之间、黄河以南四十公里的一个小县，归郑州管辖。&lt;/p&gt;&#xA;&lt;p&gt;这个小县，在今天的年代里默默无闻，但是就像河南很多地方一样，过去的千百年里，也有不少历史的风云变幻星河璀璨。“轩辕故里”，或者“黄帝故里”，“郑韩故城”，都是说的新郑。&lt;/p&gt;</description>
-    </item>
-  </channel>
+	<channel>
+		<title>历史 on Entropy Decrease</title>
+		<link>https://entropydecrease.github.io/tags/%E5%8E%86%E5%8F%B2/</link>
+		<description>Recent content in 历史 on Entropy Decrease</description>
+		<generator>Hugo</generator>
+		<language>zh-CN</language>
+		
+		
+		
+		
+			<lastBuildDate>Sun, 24 May 2026 00:00:00 +0000</lastBuildDate>
+		
+			<atom:link href="https://entropydecrease.github.io/tags/%E5%8E%86%E5%8F%B2/index.xml" rel="self" type="application/rss+xml" />
+			<item>
+				<title>溥杰自传</title>
+				<link>https://entropydecrease.github.io/posts/%E6%BA%A5%E6%9D%B0%E8%87%AA%E4%BC%A0/</link>
+				<pubDate>Sun, 24 May 2026 00:00:00 +0000</pubDate>
+				<guid>https://entropydecrease.github.io/posts/%E6%BA%A5%E6%9D%B0%E8%87%AA%E4%BC%A0/</guid>
+				<description>&lt;div&#xA;    class=&#34;alert alert-note my-6 overflow-hidden rounded-lg transition-all duration-200 ease-out hover:-translate-y-0.5 hover:shadow-md&#34;&#xA;    style=&#34;background-color: color-mix(in srgb, var(--color-note) 10%, transparent);&#xA;              border-left-color: var(--color-note);&#xA;              --hover-bg: color-mix(in srgb, var(--color-note) 15%, transparent);&#34;&#xA;    onmouseover=&#34;this.style.backgroundColor = this.style.getPropertyValue(&#39;--hover-bg&#39;)&#34;&#xA;    onmouseout=&#34;this.style.backgroundColor = &#39;color-mix(in srgb, var(--color-note) 10%, transparent)&#39;&#34;&#xA;    role=&#34;alert&#34;&#xA;    aria-labelledby=&#34;alert-0-title&#34;&#xA;  &gt;&#xA;    &#xA;    &lt;div&#xA;      class=&#34; flex items-center justify-between px-6 py-6&#34;&#xA;      &#xA;    &gt;&#xA;      &lt;div class=&#34;flex items-center gap-3&#34;&gt;&#xA;        &#xA;        &lt;h4 id=&#34;alert-0-title&#34; class=&#34;text-foreground/90 m-0 font-semibold&#34;&gt;&#xA;          &#xA;        &lt;/h4&gt;&#xA;      &lt;/div&gt;&#xA;&#xA;      &#xA;      &#xA;    &lt;/div&gt;&#xA;&#xA;    &#xA;    &lt;div&#xA;      id=&#34;alert-0-content&#34;&#xA;      class=&#34;alert-content  px-6 pb-6&#34;&#xA;    &gt;&#xA;      &lt;div class=&#34;prose prose-sm text-foreground/90 max-w-none&#34;&gt;&#xA;        &lt;p&gt;按：溥杰与妻子浩及两个女儿的故事比较吸引我，所以摘录了文中相关的部分。嵯峨浩的书《流浪的王妃》我也找来看了，很短，也值得一读，回头也会摘录一些有意思的片段。醇亲王的故事也有些吸引我，能够历经晚清、辛亥、北洋、国民政府、抗日（北京是较早沦陷的地方）、内战、新中国多个时代，而保持气节，保护一家老小，后面可能也会找书来看一下。&lt;/p&gt;</description>
+			</item>
+			<item>
+				<title>黄克诚回忆录</title>
+				<link>https://entropydecrease.github.io/posts/%E9%BB%84%E5%85%8B%E8%AF%9A%E5%9B%9E%E5%BF%86%E5%BD%95/</link>
+				<pubDate>Sat, 23 May 2026 00:00:00 +0000</pubDate>
+				<guid>https://entropydecrease.github.io/posts/%E9%BB%84%E5%85%8B%E8%AF%9A%E5%9B%9E%E5%BF%86%E5%BD%95/</guid>
+				<description>&lt;h2 id=&#34;姐姐&#34;&gt;姐姐&lt;a href=&#34;#%e5%a7%90%e5%a7%90&#34; class=&#34;heading-anchor&#34; aria-label=&#34;&#34;&gt;&lt;svg class=&#34;h-4 w-4&#34; aria-hidden=&#34;true&#34; xmlns=&#34;http://www.w3.org/2000/svg&#34; viewBox=&#34;0 0 24 24&#34;&gt;&lt;g fill=&#34;none&#34; stroke=&#34;currentColor&#34; stroke-linecap=&#34;round&#34; stroke-linejoin=&#34;round&#34; stroke-width=&#34;2&#34;&gt;&lt;path d=&#34;M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71&#34;/&gt;&lt;path d=&#34;M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71&#34;/&gt;&lt;/g&gt;&lt;/svg&gt;&lt;/a&gt;&lt;/h2&gt;&#xA;  &lt;blockquote&#xA;    class=&#34;border-primary bg-muted/30 hover:bg-muted/40 my-6 rounded-r-lg border-l-4 py-4 pr-4 pl-6 italic transition-all duration-200 ease-out hover:translate-x-1&#34;&#xA;  &gt;&#xA;    &lt;div class=&#34;prose prose-sm max-w-none&#34;&gt;&#xA;      &lt;p&gt;我从五岁起开始参加劳动。每天除拾粪外，还得陪伴⽐我⼤⼗岁的姐姐到⽥⾥做农活。姐姐⾃⼩害⽺⻆疯病，家⾥⽆钱替她医治，时常发病，⼀发作起来就倒在地上，⼝吐⽩沫，⼈事不知，所以家⾥就让我伴随她在⽥⾥劳动，以便在她发病时能及时喊救。在姐姐很⼩的时候，家⾥就给她订了婚。但她⾃⼰⼼⾥明⽩，害着这种病，连亲⽣⽗⺟尚且讨厌，将来到了婆家以后，还会有什么好结果？所以，她⾮常悲观，整天只是闷着头⼲活，极少⾔笑。在我六岁那年，有⼀次她偷偷上吊⾃杀，脚下踩的凳⼦还没有踢倒，怡巧被⽗亲进屋看⻅了。但⽗亲并没有去解救她，⽽是上前将她脚下的凳⼦推倒，好让她快死。⽗亲刚⾛，就⼜有⼈进屋来，才把她救活。打这以后，姐姐也就更加明⽩⾃⼰是家⾥的⼀个累赘，尤其为⽗亲所不容。后来，她⼜找了⼀个空⼉，终于上吊死了。姐姐死后，⽗亲感到松了⼀⼝⽓。⺟亲有些难过，但也感到姐姐还是死了好，也松了⼝⽓。⺟亲嘱咐我说：到外边不要说姐姐是上吊死的，就说是跌死的。这是我第⼀次接触到的实际社会问题，亲眼看⻅环境是怎样把⼈逼上绝路，⼈与⼈之间的关系是何等淡薄，甚⾄⽗⺟⼦⼥之间竟会变得如此冷酷⽆情。但这种事情在那时的农村⼜是⼗分平常！这件事深深地刺痛了我的⼼。&lt;/p&gt;</description>
+			</item>
+			<item>
+				<title>烛尽梦犹虚</title>
+				<link>https://entropydecrease.github.io/posts/%E7%83%9B%E5%B0%BD%E6%A2%A6%E7%8A%B9%E8%99%9A/</link>
+				<pubDate>Fri, 22 May 2026 00:00:00 +0000</pubDate>
+				<guid>https://entropydecrease.github.io/posts/%E7%83%9B%E5%B0%BD%E6%A2%A6%E7%8A%B9%E8%99%9A/</guid>
+				<description>&lt;p&gt;摘自《烛尽梦犹虚-林牧回忆录》&lt;/p&gt;&#xA;&lt;h2 id=&#34;盗亦有道&#34;&gt;盗亦有道&lt;a href=&#34;#%e7%9b%97%e4%ba%a6%e6%9c%89%e9%81%93&#34; class=&#34;heading-anchor&#34; aria-label=&#34;&#34;&gt;&lt;svg class=&#34;h-4 w-4&#34; aria-hidden=&#34;true&#34; xmlns=&#34;http://www.w3.org/2000/svg&#34; viewBox=&#34;0 0 24 24&#34;&gt;&lt;g fill=&#34;none&#34; stroke=&#34;currentColor&#34; stroke-linecap=&#34;round&#34; stroke-linejoin=&#34;round&#34; stroke-width=&#34;2&#34;&gt;&lt;path d=&#34;M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71&#34;/&gt;&lt;path d=&#34;M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71&#34;/&gt;&lt;/g&gt;&lt;/svg&gt;&lt;/a&gt;&lt;/h2&gt;&#xA;  &lt;blockquote&#xA;    class=&#34;border-primary bg-muted/30 hover:bg-muted/40 my-6 rounded-r-lg border-l-4 py-4 pr-4 pl-6 italic transition-all duration-200 ease-out hover:translate-x-1&#34;&#xA;  &gt;&#xA;    &lt;div class=&#34;prose prose-sm max-w-none&#34;&gt;&#xA;      &lt;p&gt;陕南山大林深，民国年间土匪如毛。大的如跨省土匪王三春、邱正德；中等的如汉阴的沈氏兄弟，等等。山区土匪除了拦路抢劫以外，绑肉票是其惯技。据说：土匪绑票多半绑那些为富不仁的土财主。我家在金城地区的商业活动是收土产和卖洋货，就是把山区的桐油、生漆、木耳、石棉、药材收购进来，用木船运到汉口，连木船一起卖了，再从武汉买进绸缎、布匹和日用百货，统称洋货，用汽车运回来。（抗日战争中不行了）因为，下水船快，从金城到汉口，七天可到；上水船慢，一个月才能从汉口到金城，不如卖掉木船用汽车运洋货。可是，我的父亲是个奇人，善于聚财，又能够仗义疏财，冬施棉衣、棉被，夏施成药，灾荒年办粥厂；而且广交三教九流，可以说是“座上客常满，樽中酒不空”。他又常常运用他的辛亥元老、地方士绅的身份，营救那些陷入军阀和国民党牢狱中的人，包括中共地下党员、县委书记和没有杀人、放火的义盗。我家派往山区收购土特产的店员，包括我的大伯，从未受到土匪绑票和打劫。有时，一些靠肩挑背负经营土特产的小商贩，拿上印有我家字号的信封，可以在匪区当通行证使用。&lt;/p&gt;</description>
+			</item>
+			<item>
+				<title>大国霸业的兴废-许倬云</title>
+				<link>https://entropydecrease.github.io/posts/%E5%A4%A7%E5%9B%BD%E9%9C%B8%E4%B8%9A%E7%9A%84%E5%85%B4%E5%BA%9F/</link>
+				<pubDate>Thu, 30 Apr 2026 00:00:00 +0000</pubDate>
+				<guid>https://entropydecrease.github.io/posts/%E5%A4%A7%E5%9B%BD%E9%9C%B8%E4%B8%9A%E7%9A%84%E5%85%B4%E5%BA%9F/</guid>
+				<description>&lt;div&#xA;    class=&#34;alert alert-note my-6 overflow-hidden rounded-lg transition-all duration-200 ease-out hover:-translate-y-0.5 hover:shadow-md&#34;&#xA;    style=&#34;background-color: color-mix(in srgb, var(--color-note) 10%, transparent);&#xA;              border-left-color: var(--color-note);&#xA;              --hover-bg: color-mix(in srgb, var(--color-note) 15%, transparent);&#34;&#xA;    onmouseover=&#34;this.style.backgroundColor = this.style.getPropertyValue(&#39;--hover-bg&#39;)&#34;&#xA;    onmouseout=&#34;this.style.backgroundColor = &#39;color-mix(in srgb, var(--color-note) 10%, transparent)&#39;&#34;&#xA;    role=&#34;alert&#34;&#xA;    aria-labelledby=&#34;alert-0-title&#34;&#xA;  &gt;&#xA;    &#xA;    &lt;div&#xA;      class=&#34; flex items-center justify-between px-6 py-6&#34;&#xA;      &#xA;    &gt;&#xA;      &lt;div class=&#34;flex items-center gap-3&#34;&gt;&#xA;        &#xA;        &lt;h4 id=&#34;alert-0-title&#34; class=&#34;text-foreground/90 m-0 font-semibold&#34;&gt;&#xA;          笔记&#xA;        &lt;/h4&gt;&#xA;      &lt;/div&gt;&#xA;&#xA;      &#xA;      &#xA;    &lt;/div&gt;&#xA;&#xA;    &#xA;    &lt;div&#xA;      id=&#34;alert-0-content&#34;&#xA;      class=&#34;alert-content  px-6 pb-6&#34;&#xA;    &gt;&#xA;      &lt;div class=&#34;prose prose-sm text-foreground/90 max-w-none&#34;&gt;&#xA;        &lt;p&gt;刚开始看，没看几页就发现很好。全书的精华也就在这前几页。&lt;/p&gt;</description>
+			</item>
+			<item>
+				<title>G2</title>
+				<link>https://entropydecrease.github.io/posts/g2/</link>
+				<pubDate>Thu, 30 Oct 2025 00:00:00 +0000</pubDate>
+				<guid>https://entropydecrease.github.io/posts/g2/</guid>
+				<description>&lt;p&gt;2025年10月30日，中美在韩国达成关于关税的协定，看达成的条款，东大还是比较狼狈，但是，回想贸易战刚开始的黑云压城，到现在达成的妥协，再看其他国家的表现与结果，虽然与漂亮未来的斗争还有很长，还会很被动、很受伤，但是，我认为世界G2格局已经形成，大趋势不可逆转。&lt;/p&gt;</description>
+			</item>
+			<item>
+				<title>张发奎口述历史</title>
+				<link>https://entropydecrease.github.io/posts/zhangfakui/</link>
+				<pubDate>Mon, 06 Nov 2023 00:00:00 +0000</pubDate>
+				<guid>https://entropydecrease.github.io/posts/zhangfakui/</guid>
+				<description>&lt;h3 id=&#34;收黑钱&#34;&gt;收黑钱&lt;a href=&#34;#%e6%94%b6%e9%bb%91%e9%92%b1&#34; class=&#34;heading-anchor&#34; aria-label=&#34;&#34;&gt;&lt;svg class=&#34;h-4 w-4&#34; aria-hidden=&#34;true&#34; xmlns=&#34;http://www.w3.org/2000/svg&#34; viewBox=&#34;0 0 24 24&#34;&gt;&lt;g fill=&#34;none&#34; stroke=&#34;currentColor&#34; stroke-linecap=&#34;round&#34; stroke-linejoin=&#34;round&#34; stroke-width=&#34;2&#34;&gt;&lt;path d=&#34;M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71&#34;/&gt;&lt;path d=&#34;M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71&#34;/&gt;&lt;/g&gt;&lt;/svg&gt;&lt;/a&gt;&lt;/h3&gt;&#xA;  &lt;blockquote&#xA;    class=&#34;border-primary bg-muted/30 hover:bg-muted/40 my-6 rounded-r-lg border-l-4 py-4 pr-4 pl-6 italic transition-all duration-200 ease-out hover:translate-x-1&#34;&#xA;  &gt;&#xA;    &lt;div class=&#34;prose prose-sm max-w-none&#34;&gt;&#xA;      &lt;p&gt;我禁止营长们收受黑钱，理由很简单：。。。。。。我要集中一切资源，麾下营长们才会听命于我。&lt;/p&gt;</description>
+			</item>
+			<item>
+				<title>沈醉回忆录读书笔记</title>
+				<link>https://entropydecrease.github.io/posts/shenzui/</link>
+				<pubDate>Fri, 01 Sep 2023 00:00:00 +0000</pubDate>
+				<guid>https://entropydecrease.github.io/posts/shenzui/</guid>
+				<description>&lt;h2 id=&#34;笔记几则&#34;&gt;笔记几则&lt;a href=&#34;#%e7%ac%94%e8%ae%b0%e5%87%a0%e5%88%99&#34; class=&#34;heading-anchor&#34; aria-label=&#34;&#34;&gt;&lt;svg class=&#34;h-4 w-4&#34; aria-hidden=&#34;true&#34; xmlns=&#34;http://www.w3.org/2000/svg&#34; viewBox=&#34;0 0 24 24&#34;&gt;&lt;g fill=&#34;none&#34; stroke=&#34;currentColor&#34; stroke-linecap=&#34;round&#34; stroke-linejoin=&#34;round&#34; stroke-width=&#34;2&#34;&gt;&lt;path d=&#34;M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71&#34;/&gt;&lt;path d=&#34;M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71&#34;/&gt;&lt;/g&gt;&lt;/svg&gt;&lt;/a&gt;&lt;/h2&gt;&lt;ul&gt;&#xA;&lt;li&gt;沈醉1914年生，18岁投奔余乐醒(也是一个重要的特务)开始当特务，28岁成为军统局总务处少将处长，1947年成为云南站站长，1949年被迫参加龙云的云南起义，才35岁。后接受改造至1960年释放（也就是说，在做了18年特务，成为军统的风云人物，入狱改造10年，1960年被释放的时候，才46岁），之后作为政协文史资料委员会文史委员，文革期间曾入狱。1980年身份由战犯改为起义将领。&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;沈醉曾打电话恐吓宋庆龄，并计划开车撞车宋庆龄以警告，后未实行。&lt;/p&gt;</description>
+			</item>
+			<item>
+				<title>说说我的家乡，没什么文笔，自娱自乐</title>
+				<link>https://entropydecrease.github.io/posts/some_history_of_my_hometown/</link>
+				<pubDate>Sun, 06 Dec 2015 00:00:00 +0000</pubDate>
+				<guid>https://entropydecrease.github.io/posts/some_history_of_my_hometown/</guid>
+				<description>&lt;p&gt;我的家乡新郑，洛阳与开封之间、黄河以南四十公里的一个小县，归郑州管辖。&lt;/p&gt;&#xA;&lt;p&gt;这个小县，在今天的年代里默默无闻，但是就像河南很多地方一样，过去的千百年里，也有不少历史的风云变幻星河璀璨。“轩辕故里”，或者“黄帝故里”，“郑韩故城”，都是说的新郑。&lt;/p&gt;</description>
+			</item>
+	</channel>
 </rss>

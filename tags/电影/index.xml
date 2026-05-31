@@ -1,19 +1,24 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>电影 on Entropy Decrease</title>
-    <link>https://entropydecrease.github.io/tags/%E7%94%B5%E5%BD%B1/</link>
-    <description>Recent content in 电影 on Entropy Decrease</description>
-    <generator>Hugo</generator>
-    <language>zh-CN</language>
-    <lastBuildDate>Tue, 17 Feb 2026 00:00:00 +0000</lastBuildDate>
-    <atom:link href="https://entropydecrease.github.io/tags/%E7%94%B5%E5%BD%B1/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>《镖人》观后感</title>
-      <link>https://entropydecrease.github.io/posts/%E9%95%96%E4%BA%BA/</link>
-      <pubDate>Tue, 17 Feb 2026 00:00:00 +0000</pubDate>
-      <guid>https://entropydecrease.github.io/posts/%E9%95%96%E4%BA%BA/</guid>
-      <description>&lt;h1 id=&#34;镖人观后感&#34;&gt;《镖人》观后感&lt;/h1&gt;&#xA;&lt;p&gt;1、李连杰，一开始就出场了，还以为会贯穿始终，结果这样一个功夫皇帝，不但第一场就（带张晋一起）结账走人了，而且他和张晋的戏份，完全可有可无，删掉之后完全不影响电影情节。&lt;/p&gt;</description>
-    </item>
-  </channel>
+	<channel>
+		<title>电影 on Entropy Decrease</title>
+		<link>https://entropydecrease.github.io/tags/%E7%94%B5%E5%BD%B1/</link>
+		<description>Recent content in 电影 on Entropy Decrease</description>
+		<generator>Hugo</generator>
+		<language>zh-CN</language>
+		
+		
+		
+		
+			<lastBuildDate>Tue, 17 Feb 2026 00:00:00 +0000</lastBuildDate>
+		
+			<atom:link href="https://entropydecrease.github.io/tags/%E7%94%B5%E5%BD%B1/index.xml" rel="self" type="application/rss+xml" />
+			<item>
+				<title>《镖人》观后感</title>
+				<link>https://entropydecrease.github.io/posts/%E9%95%96%E4%BA%BA/</link>
+				<pubDate>Tue, 17 Feb 2026 00:00:00 +0000</pubDate>
+				<guid>https://entropydecrease.github.io/posts/%E9%95%96%E4%BA%BA/</guid>
+				<description>&lt;h1 id=&#34;镖人观后感&#34;&gt;《镖人》观后感&lt;a href=&#34;#%e9%95%96%e4%ba%ba%e8%a7%82%e5%90%8e%e6%84%9f&#34; class=&#34;heading-anchor&#34; aria-label=&#34;&#34;&gt;&lt;svg class=&#34;h-4 w-4&#34; aria-hidden=&#34;true&#34; xmlns=&#34;http://www.w3.org/2000/svg&#34; viewBox=&#34;0 0 24 24&#34;&gt;&lt;g fill=&#34;none&#34; stroke=&#34;currentColor&#34; stroke-linecap=&#34;round&#34; stroke-linejoin=&#34;round&#34; stroke-width=&#34;2&#34;&gt;&lt;path d=&#34;M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71&#34;/&gt;&lt;path d=&#34;M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71&#34;/&gt;&lt;/g&gt;&lt;/svg&gt;&lt;/a&gt;&lt;/h1&gt;&lt;p&gt;1、李连杰，一开始就出场了，还以为会贯穿始终，结果这样一个功夫皇帝，不但第一场就（带张晋一起）结账走人了，而且他和张晋的戏份，完全可有可无，删掉之后完全不影响电影情节。&lt;/p&gt;</description>
+			</item>
+	</channel>
 </rss>

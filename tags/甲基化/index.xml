@@ -1,19 +1,24 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>甲基化 on Entropy Decrease</title>
-    <link>https://entropydecrease.github.io/tags/%E7%94%B2%E5%9F%BA%E5%8C%96/</link>
-    <description>Recent content in 甲基化 on Entropy Decrease</description>
-    <generator>Hugo</generator>
-    <language>zh-CN</language>
-    <lastBuildDate>Tue, 02 May 2023 00:00:00 +0000</lastBuildDate>
-    <atom:link href="https://entropydecrease.github.io/tags/%E7%94%B2%E5%9F%BA%E5%8C%96/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>甲基化与膀胱癌检测</title>
-      <link>https://entropydecrease.github.io/posts/methylation_and_cancer/</link>
-      <pubDate>Tue, 02 May 2023 00:00:00 +0000</pubDate>
-      <guid>https://entropydecrease.github.io/posts/methylation_and_cancer/</guid>
-      <description>&lt;h2 id=&#34;1-甲基化肿瘤检测产品综述&#34;&gt;1. 甲基化肿瘤检测产品综述&lt;/h2&gt;&#xA;&lt;h3 id=&#34;11-截至2018年的国外商业化甲基化肿瘤检测&#34;&gt;1.1 截至2018年的国外商业化甲基化肿瘤检测&lt;/h3&gt;&#xA;&lt;p&gt;Koch, A. &lt;em&gt;et al.&lt;/em&gt; Analysis of DNA methylation in cancer: location revisited. &lt;em&gt;Nat Rev Clin Oncol&lt;/em&gt; &lt;strong&gt;15&lt;/strong&gt;, 459–466 (2018).&lt;/p&gt;&#xA;&lt;p&gt;&#xA;&lt;figure class=&#34;image-figure not-prose my-8&#34; &#xA;        data-lightbox-enabled=&#34;false&#34;&#xA;        data-gallery-type=&#34;auto&#34;&gt;&#xA;  &lt;div class=&#34;image-container&#34;&gt;&#xA;    &lt;img&#xA;    src=&#34;https://entropydecrease.github.io/posts/methylation_and_cancer/resources/image-20230502212305388.png&#34;&#xA;    alt=&#34;image-20230502212305388&#34;&#xA;    &#xA;    &#xA;      &#xA;      &#xA;        &#xA;    width=&#34;2028&#34;&#xA;    height=&#34;1426&#34;&#xA;        &#xA;      &#xA;    &#xA;    loading=&#34;lazy&#34;&#xA;    decoding=&#34;async&#34;&#xA;    data-gallery-src=&#34;https://entropydecrease.github.io/posts/methylation_and_cancer/resources/image-20230502212305388.png&#34;&#xA;    data-gallery-alt=&#34;image-20230502212305388&#34;&#xA;    data-gallery-title=&#34;&#34; /&gt;&lt;/div&gt;&#xA;&#xA;  &lt;/figure&gt;&lt;/p&gt;&#xA;&lt;p&gt;The Cancer Genome Atlas (TCGA) data for all biomarkers with commercially available assays were analysed for differential methylation between tumour and nonmalignant samples and to determine whether or not methylation status at the location of the area covered by the assay is correlated with expression. We also investigated whether or not the biomarkers are located in the promoter region of their corresponding genes and whether or not they are located in a CpG island. Data on the clinical performance of these biomarkers, as reported in the literature, are listed in Supplementary Table 2. CRC, colorectal cancer; NA, not available. ^a^Two different &lt;em&gt;SEPT9&lt;/em&gt; biomarkers are available, which both target the same genomic region but at slightly different locations. In some publications, the &lt;em&gt;SEPT9&lt;/em&gt; biomarker is variably referred to as the ColoVantage test by Quest Diagnostics, as a test provided by ARUP Laboratories, or as the Epi proColon test provided by Epigenomics. Both biomarkers have been patented by Epigenomics^83,85^, which has licensed one of them to Quest Diagnostics and ARUP Laboratories. ^b^A positive, instead of a negative, correlation exists between DNA methylation and gene expression of &lt;em&gt;SHOX2&lt;/em&gt;, &lt;em&gt;OTX1&lt;/em&gt;, and &lt;em&gt;ONECUT2.&lt;/em&gt; ^c^&lt;em&gt;MGMT&lt;/em&gt; is a predictive marker, rendering the comparison between tumour and nonmalignant samples less relevant. Furthermore, no nonmalignant samples of brain tissue are available in TCGA for comparisons with glioblastoma specimens.&lt;/p&gt;</description>
-    </item>
-  </channel>
+	<channel>
+		<title>甲基化 on Entropy Decrease</title>
+		<link>https://entropydecrease.github.io/tags/%E7%94%B2%E5%9F%BA%E5%8C%96/</link>
+		<description>Recent content in 甲基化 on Entropy Decrease</description>
+		<generator>Hugo</generator>
+		<language>zh-CN</language>
+		
+		
+		
+		
+			<lastBuildDate>Tue, 02 May 2023 00:00:00 +0000</lastBuildDate>
+		
+			<atom:link href="https://entropydecrease.github.io/tags/%E7%94%B2%E5%9F%BA%E5%8C%96/index.xml" rel="self" type="application/rss+xml" />
+			<item>
+				<title>甲基化与膀胱癌检测</title>
+				<link>https://entropydecrease.github.io/posts/methylation_and_cancer/</link>
+				<pubDate>Tue, 02 May 2023 00:00:00 +0000</pubDate>
+				<guid>https://entropydecrease.github.io/posts/methylation_and_cancer/</guid>
+				<description>&lt;h2 id=&#34;1-甲基化肿瘤检测产品综述&#34;&gt;1. 甲基化肿瘤检测产品综述&lt;a href=&#34;#1-%e7%94%b2%e5%9f%ba%e5%8c%96%e8%82%bf%e7%98%a4%e6%a3%80%e6%b5%8b%e4%ba%a7%e5%93%81%e7%bb%bc%e8%bf%b0&#34; class=&#34;heading-anchor&#34; aria-label=&#34;&#34;&gt;&lt;svg class=&#34;h-4 w-4&#34; aria-hidden=&#34;true&#34; xmlns=&#34;http://www.w3.org/2000/svg&#34; viewBox=&#34;0 0 24 24&#34;&gt;&lt;g fill=&#34;none&#34; stroke=&#34;currentColor&#34; stroke-linecap=&#34;round&#34; stroke-linejoin=&#34;round&#34; stroke-width=&#34;2&#34;&gt;&lt;path d=&#34;M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71&#34;/&gt;&lt;path d=&#34;M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71&#34;/&gt;&lt;/g&gt;&lt;/svg&gt;&lt;/a&gt;&lt;/h2&gt;&lt;h3 id=&#34;11-截至2018年的国外商业化甲基化肿瘤检测&#34;&gt;1.1 截至2018年的国外商业化甲基化肿瘤检测&lt;a href=&#34;#11-%e6%88%aa%e8%87%b32018%e5%b9%b4%e7%9a%84%e5%9b%bd%e5%a4%96%e5%95%86%e4%b8%9a%e5%8c%96%e7%94%b2%e5%9f%ba%e5%8c%96%e8%82%bf%e7%98%a4%e6%a3%80%e6%b5%8b&#34; class=&#34;heading-anchor&#34; aria-label=&#34;&#34;&gt;&lt;svg class=&#34;h-4 w-4&#34; aria-hidden=&#34;true&#34; xmlns=&#34;http://www.w3.org/2000/svg&#34; viewBox=&#34;0 0 24 24&#34;&gt;&lt;g fill=&#34;none&#34; stroke=&#34;currentColor&#34; stroke-linecap=&#34;round&#34; stroke-linejoin=&#34;round&#34; stroke-width=&#34;2&#34;&gt;&lt;path d=&#34;M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71&#34;/&gt;&lt;path d=&#34;M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71&#34;/&gt;&lt;/g&gt;&lt;/svg&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;Koch, A. &lt;em&gt;et al.&lt;/em&gt; Analysis of DNA methylation in cancer: location revisited. &lt;em&gt;Nat Rev Clin Oncol&lt;/em&gt; &lt;strong&gt;15&lt;/strong&gt;, 459–466 (2018).&lt;/p&gt;</description>
+			</item>
+	</channel>
 </rss>
