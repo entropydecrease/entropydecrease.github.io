@@ -5,22 +5,17 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
 <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 
-<title>这一小段路，可能就是十年 |
+<title>中国 AI 大厂访问记-deepseek整理和总结 |
     Entropy Decrease</title>
 
 <meta
   name="description"
-  content="全文转载自王建硕微信公众号 效率的提升太快，需求的提升还不明显；
-工作的消失太迅速，替代工作的诞生还比较缓慢；
-焦虑的情绪已经蔓延，安抚人心的曙光没有出现。
-方向是光明的，但难的是走过去的这一小段路。
-一小段路，说不定就是十年。
-每一次大的技术革命，都不是平滑的。
-效率先跑出来，需求跟在后面。是一对..."
+  content="阮一峰本期的科技爱好者周刊 的「中国 AI 大厂访问记」部分提到：
+所有成员都是科技分析师，回到美国后，每个人都写了访问观感：Kevin Xu 、afra Wang 、Florian Brand 、Nathan Lambert 、 Azeem Azhar 、Lily Ottinger and Kai..."
 />
 <meta
   name="keywords"
-  content="AI"
+  content="AI, 大模型"
 />
 <meta
   name="author"
@@ -32,43 +27,41 @@
   name="robots"
   content="index, follow"
 />
-<link rel="canonical" href="https://entropydecrease.github.io/posts/%E8%BF%99%E4%B8%80%E5%B0%8F%E6%AE%B5%E8%B7%AF%E5%8F%AF%E8%83%BD%E5%B0%B1%E6%98%AF%E5%8D%81%E5%B9%B4/" />
+<link rel="canonical" href="https://entropydecrease.github.io/posts/%E4%B8%AD%E5%9B%BD-ai-%E5%A4%A7%E5%8E%82%E8%AE%BF%E9%97%AE%E8%AE%B0-deepseek%E6%95%B4%E7%90%86%E5%92%8C%E6%80%BB%E7%BB%93/" />
 
 
   <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 <link rel="manifest" href="/site.webmanifest" />
-<meta property="og:url" content="https://entropydecrease.github.io/posts/%E8%BF%99%E4%B8%80%E5%B0%8F%E6%AE%B5%E8%B7%AF%E5%8F%AF%E8%83%BD%E5%B0%B1%E6%98%AF%E5%8D%81%E5%B9%B4/">
+<meta property="og:url" content="https://entropydecrease.github.io/posts/%E4%B8%AD%E5%9B%BD-ai-%E5%A4%A7%E5%8E%82%E8%AE%BF%E9%97%AE%E8%AE%B0-deepseek%E6%95%B4%E7%90%86%E5%92%8C%E6%80%BB%E7%BB%93/">
 	<meta property="og:site_name" content="Entropy Decrease">
-	<meta property="og:title" content="这一小段路，可能就是十年">
-	<meta property="og:description" content="全文转载自王建硕微信公众号 效率的提升太快，需求的提升还不明显；
-工作的消失太迅速，替代工作的诞生还比较缓慢；
-焦虑的情绪已经蔓延，安抚人心的曙光没有出现。">
+	<meta property="og:title" content="中国 AI 大厂访问记-deepseek整理和总结">
+	<meta property="og:description" content="阮一峰本期的科技爱好者周刊 的「中国 AI 大厂访问记」部分提到：
+所有成员都是科技分析师，回到美国后，每个人都写了访问观感：Kevin Xu 、afra Wang 、Florian Brand 、Nathan Lambert 、 Azeem Azhar 、Lily Ottinger and Kai Williams 、Jasmine Sun 、Lingua Sinica 、Caithrin 。">
 	<meta property="og:locale" content="zh_CN">
 	<meta property="og:type" content="article">
 		<meta property="article:section" content="posts">
-		<meta property="article:published_time" content="2026-05-31T00:00:00+00:00">
-		<meta property="article:modified_time" content="2026-05-31T00:00:00+00:00">
+		<meta property="article:published_time" content="2026-06-05T13:05:00+00:00">
+		<meta property="article:modified_time" content="2026-06-05T13:05:00+00:00">
 		<meta property="article:tag" content="AI">
+		<meta property="article:tag" content="大模型">
 		<meta property="og:image" content="https://entropydecrease.github.io/images/og-default.avif">
 
 
 	<meta name="twitter:card" content="summary_large_image">
 	<meta name="twitter:image" content="https://entropydecrease.github.io/images/og-default.avif">
-	<meta name="twitter:title" content="这一小段路，可能就是十年">
-	<meta name="twitter:description" content="全文转载自王建硕微信公众号 效率的提升太快，需求的提升还不明显；
-工作的消失太迅速，替代工作的诞生还比较缓慢；
-焦虑的情绪已经蔓延，安抚人心的曙光没有出现。">
+	<meta name="twitter:title" content="中国 AI 大厂访问记-deepseek整理和总结">
+	<meta name="twitter:description" content="阮一峰本期的科技爱好者周刊 的「中国 AI 大厂访问记」部分提到：
+所有成员都是科技分析师，回到美国后，每个人都写了访问观感：Kevin Xu 、afra Wang 、Florian Brand 、Nathan Lambert 、 Azeem Azhar 、Lily Ottinger and Kai Williams 、Jasmine Sun 、Lingua Sinica 、Caithrin 。">
 
 
-	<meta itemprop="name" content="这一小段路，可能就是十年">
-	<meta itemprop="description" content="全文转载自王建硕微信公众号 效率的提升太快，需求的提升还不明显；
-工作的消失太迅速，替代工作的诞生还比较缓慢；
-焦虑的情绪已经蔓延，安抚人心的曙光没有出现。">
-	<meta itemprop="datePublished" content="2026-05-31T00:00:00+00:00">
-	<meta itemprop="dateModified" content="2026-05-31T00:00:00+00:00">
-	<meta itemprop="wordCount" content="647">
+	<meta itemprop="name" content="中国 AI 大厂访问记-deepseek整理和总结">
+	<meta itemprop="description" content="阮一峰本期的科技爱好者周刊 的「中国 AI 大厂访问记」部分提到：
+所有成员都是科技分析师，回到美国后，每个人都写了访问观感：Kevin Xu 、afra Wang 、Florian Brand 、Nathan Lambert 、 Azeem Azhar 、Lily Ottinger and Kai Williams 、Jasmine Sun 、Lingua Sinica 、Caithrin 。">
+	<meta itemprop="datePublished" content="2026-06-05T13:05:00+00:00">
+	<meta itemprop="dateModified" content="2026-06-05T13:05:00+00:00">
+	<meta itemprop="wordCount" content="10537">
 	<meta itemprop="image" content="https://entropydecrease.github.io/images/og-default.avif">
-	<meta itemprop="keywords" content="AI">
+	<meta itemprop="keywords" content="AI,大模型">
 
 
 
@@ -690,7 +683,7 @@
           <svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
 </svg>
-          <span class="max-w-32 truncate md:max-w-[16rem] lg:max-w-none">这一小段路，可能就是十年</span>
+          <span class="max-w-32 truncate md:max-w-[16rem] lg:max-w-none">中国 AI 大厂访问记-deepseek整理和总结</span>
         </span>
       </li>
     </ol>
@@ -711,7 +704,7 @@
 <div class="post-meta mb-8">
   
   <h1 class="text-foreground mb-6 text-3xl leading-tight font-bold md:text-4xl">
-    这一小段路，可能就是十年
+    中国 AI 大厂访问记-deepseek整理和总结
   </h1>
 
   
@@ -732,8 +725,8 @@
   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
 </svg>
 
-              <time datetime="2026-05-31">
-                May 31, 2026
+              <time datetime="2026-06-05">
+                June 5, 2026
               </time>
             </div>
 
@@ -778,6 +771,10 @@
                     class="inline-flex items-center rounded-full px-2.5 py-1 text-sm font-medium transition-all duration-200 bg-muted/50 text-muted-foreground hover:bg-muted hover:text-foreground">
                     Tech
                   </a>
+                  <a href="/categories/%E9%98%85%E8%AF%BB/"
+                    class="inline-flex items-center rounded-full px-2.5 py-1 text-sm font-medium transition-all duration-200 bg-muted/50 text-muted-foreground hover:bg-muted hover:text-foreground">
+                    阅读
+                  </a>
                 </div>
               </div>
             </div>
@@ -797,6 +794,10 @@
                     class="inline-flex items-center rounded-full px-2.5 py-1 text-sm font-medium transition-all duration-200 bg-muted/50 text-muted-foreground hover:bg-muted hover:text-foreground">
                     AI
                   </a>
+                  <a href="/tags/%E5%A4%A7%E6%A8%A1%E5%9E%8B/"
+                    class="inline-flex items-center rounded-full px-2.5 py-1 text-sm font-medium transition-all duration-200 bg-muted/50 text-muted-foreground hover:bg-muted hover:text-foreground">
+                    大模型
+                  </a>
                 </div>
               </div>
             </div>
@@ -809,64 +810,356 @@
 
   
   <article class="prose prose-neutral dark:prose-invert mb-12 max-w-none">
-    <p><a
-    href="https://mp.weixin.qq.com/s/ARXn7Bp4GcwwDey1K_nyZg"target="_blank"
+    <p>阮一峰本期的<a
+    href="https://www.ruanyifeng.com/blog/2026/06/weekly-issue-399.html"target="_blank"
     class="inline-flex items-center gap-1"
-  >全文转载自王建硕微信公众号<svg class="h-3 w-3 flex-shrink-0" id="external-link" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 3h6v6m-11 5L21 3m-3 10v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/></svg>
+  >科技爱好者周刊<svg class="h-3 w-3 flex-shrink-0" id="external-link" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 3h6v6m-11 5L21 3m-3 10v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/></svg>
+  </a>的「中国 AI 大厂访问记」部分提到：</p>
+<p>所有成员都是科技分析师，回到美国后，每个人都写了访问观感：<a
+    href="https://interconnect.substack.com/p/chinai-mood-april-26-may-4-2026"target="_blank"
+    class="inline-flex items-center gap-1"
+  >Kevin Xu<svg class="h-3 w-3 flex-shrink-0" id="external-link" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 3h6v6m-11 5L21 3m-3 10v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/></svg>
+  </a>、<a
+    href="https://afraw.substack.com/p/mandate-of-ai"target="_blank"
+    class="inline-flex items-center gap-1"
+  >afra Wang<svg class="h-3 w-3 flex-shrink-0" id="external-link" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 3h6v6m-11 5L21 3m-3 10v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/></svg>
+  </a>、<a
+    href="https://florianbrand.com/posts/china-trip"target="_blank"
+    class="inline-flex items-center gap-1"
+  >Florian Brand<svg class="h-3 w-3 flex-shrink-0" id="external-link" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 3h6v6m-11 5L21 3m-3 10v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/></svg>
+  </a>、<a
+    href="https://www.interconnects.ai/p/notes-from-inside-chinas-ai-labs"target="_blank"
+    class="inline-flex items-center gap-1"
+  >Nathan Lambert<svg class="h-3 w-3 flex-shrink-0" id="external-link" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 3h6v6m-11 5L21 3m-3 10v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/></svg>
+  </a>、 <a
+    href="https://www.exponentialview.co/p/inside-chinese-ai-labs-efficiency-moat"target="_blank"
+    class="inline-flex items-center gap-1"
+  >Azeem Azhar<svg class="h-3 w-3 flex-shrink-0" id="external-link" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 3h6v6m-11 5L21 3m-3 10v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/></svg>
+  </a>、<a
+    href="https://archive.md/myA7R"target="_blank"
+    class="inline-flex items-center gap-1"
+  >Lily Ottinger and Kai Williams<svg class="h-3 w-3 flex-shrink-0" id="external-link" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 3h6v6m-11 5L21 3m-3 10v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/></svg>
+  </a>、<a
+    href="https://jasmi.news/p/party-in-the-permanent-underclass"target="_blank"
+    class="inline-flex items-center gap-1"
+  >Jasmine Sun<svg class="h-3 w-3 flex-shrink-0" id="external-link" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 3h6v6m-11 5L21 3m-3 10v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/></svg>
+  </a>、<a
+    href="https://linguasinica.substack.com/p/notes-from-a-trip-to-chinas-ai-labs"target="_blank"
+    class="inline-flex items-center gap-1"
+  >Lingua Sinica<svg class="h-3 w-3 flex-shrink-0" id="external-link" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 3h6v6m-11 5L21 3m-3 10v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/></svg>
+  </a>、<a
+    href="https://www.caithrin.com/p/searching-for-amanda-askell-with"target="_blank"
+    class="inline-flex items-center gap-1"
+  >Caithrin<svg class="h-3 w-3 flex-shrink-0" id="external-link" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 3h6v6m-11 5L21 3m-3 10v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/></svg>
+  </a>。</p>
+<p>我也让AI总结了一下，放在这里。</p>
+<h1 id="九位科技分析师中国-ai-访问观感精华">九位科技分析师中国 AI 访问观感精华<a href="#%e4%b9%9d%e4%bd%8d%e7%a7%91%e6%8a%80%e5%88%86%e6%9e%90%e5%b8%88%e4%b8%ad%e5%9b%bd-ai-%e8%ae%bf%e9%97%ae%e8%a7%82%e6%84%9f%e7%b2%be%e5%8d%8e" class="heading-anchor" aria-label=""><svg class="h-4 w-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></g></svg></a></h1>
+  <blockquote
+    class="border-primary bg-muted/30 hover:bg-muted/40 my-6 rounded-r-lg border-l-4 py-4 pr-4 pl-6 italic transition-all duration-200 ease-out hover:translate-x-1"
+  >
+    <div class="prose prose-sm max-w-none">
+      <p>来源：<a
+    href="https://www.ruanyifeng.com/blog/2026/06/weekly-issue-399.html"target="_blank"
+    class="inline-flex items-center gap-1"
+  >阮一峰 · 科技爱好者周刊（第 399 期）<svg class="h-3 w-3 flex-shrink-0" id="external-link" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 3h6v6m-11 5L21 3m-3 10v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/></svg>
   </a></p>
-<p>效率的提升太快，需求的提升还不明显；<br>
-工作的消失太迅速，替代工作的诞生还比较缓慢；<br>
-焦虑的情绪已经蔓延，安抚人心的曙光没有出现。</p>
-<p>方向是光明的，但难的是走过去的这一小段路。<br>
-一小段路，说不定就是十年。</p>
-<p>每一次大的技术革命，都不是平滑的。</p>
-<p>效率先跑出来，需求跟在后面。是一对永远不同步的兄弟。</p>
-<p>工业革命的时候是这样。蒸汽机出来，纺织效率翻了几十倍，但消费者并不会立刻多买几十倍的布。中间隔着几十年的失业、抗议、暴动。新工作最后是有的——电报员、铁路工、工厂技师——但那是写进历史书之后才看得清。当时的人看不见。</p>
-<p>每次都是这样：<strong>效率是指数级跳的，新需求和新工作是缓慢爬出来的</strong>。中间那道沟，就是焦虑的来源。</p>
-<p>现在的 AI，差不多就在这道沟里。</p>
-<p>写代码效率提升十倍，编辑器自己改完了，工程师还来不及想下一步。</p>
-<p>做设计的、做翻译的、做文案的、做客服的、做分析的——每天打开电脑都觉得自己在被替代。</p>
-<p>看着新闻里说 AI 会创造更多新工作，心里知道是真话，但<strong>那些新工作还没出现，自己手上的工作已经在消失</strong>。</p>
-<p>这种感觉最难受的，不是失业本身，是不知道往哪个方向走。</p>
-<p>工业革命的工人至少知道：新工厂在建。<br>
-互联网泡沫破了之后，程序员至少知道：还有网站要做。<br>
-现在的人，知道一切在变，但不知道变完之后的样子是什么。</p>
-<p>更难的是，这次错位比以往任何一次都大。效率端一年翻一倍，社会的结构、教育的内容、技能的体系，还按旧的在运转。两边的差速越来越大，中间这道沟也就越拉越深。</p>
-<p>我没有答案。</p>
-<p>但我大概知道一件事：这一小段路，<strong>说不定真的就是十年</strong>。</p>
-<p>
-<figure
-  class="image-figure not-prose my-8"
-  data-lightbox-enabled="
-    false
-  "
-  data-gallery-type="auto"
-  data-image-width="1080"
-  data-image-height="720"
-  data-image-src="/posts/%E8%BF%99%E4%B8%80%E5%B0%8F%E6%AE%B5%E8%B7%AF%E5%8F%AF%E8%83%BD%E5%B0%B1%E6%98%AF%E5%8D%81%E5%B9%B4/resources/e382221bbb4d661a4d85c9147d2f4481_MD5.png"
->
-  <div class="image-container">
-    <img
-    src="/posts/%E8%BF%99%E4%B8%80%E5%B0%8F%E6%AE%B5%E8%B7%AF%E5%8F%AF%E8%83%BD%E5%B0%B1%E6%98%AF%E5%8D%81%E5%B9%B4/resources/e382221bbb4d661a4d85c9147d2f4481_MD5.png"
-    alt=""
-    
-    
-      
-      
-        
-          width="1080" height="720"
-        
-      
-    
-    loading="lazy"
-    decoding="async"
-    data-gallery-src="/posts/%E8%BF%99%E4%B8%80%E5%B0%8F%E6%AE%B5%E8%B7%AF%E5%8F%AF%E8%83%BD%E5%B0%B1%E6%98%AF%E5%8D%81%E5%B9%B4/resources/e382221bbb4d661a4d85c9147d2f4481_MD5.png"
-    data-gallery-alt=""
-    data-gallery-title=""
-  /></div>
+<p>整理日期：2026-06-05</p>
 
-  </figure>
-</p>
+    </div>
+  </blockquote><script>
+  function toggleAlert(alertId) {
+    const content = document.getElementById(alertId + "-content");
+    const chevron = document.getElementById(alertId + "-chevron");
+    const header = content.previousElementSibling;
+
+    if (content.classList.contains("hidden")) {
+      content.classList.remove("hidden");
+      chevron.style.transform = "rotate(0deg)";
+      header.setAttribute("aria-expanded", "true");
+    } else {
+      content.classList.add("hidden");
+      chevron.style.transform = "rotate(-90deg)";
+      header.setAttribute("aria-expanded", "false");
+    }
+  }
+
+  
+  document.addEventListener("DOMContentLoaded", function () {
+    const collapsedAlerts = document.querySelectorAll(".alert-content.hidden");
+    collapsedAlerts.forEach(function (content) {
+      const alertId = content.id.replace("-content", "");
+      const chevron = document.getElementById(alertId + "-chevron");
+      if (chevron) {
+        chevron.style.transform = "rotate(-90deg)";
+      }
+    });
+  });
+</script>
+<hr>
+<h2 id="1-kevin-xu">1. Kevin Xu<a href="#1-kevin-xu" class="heading-anchor" aria-label=""><svg class="h-4 w-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></g></svg></a></h2><p><strong>身份</strong>：Interconnected newsletter 作者，长期关注中国 AI 生态</p>
+<p><strong>原文链接</strong>：<a
+    href="https://interconnect.substack.com/p/chinai-mood-april-26-may-4-2026"target="_blank"
+    class="inline-flex items-center gap-1"
+  >https://interconnect.substack.com/p/chinai-mood-april-26-may-4-2026<svg class="h-3 w-3 flex-shrink-0" id="external-link" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 3h6v6m-11 5L21 3m-3 10v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/></svg>
+  </a></p>
+<p><strong>核心观点</strong>：</p>
+<ul>
+<li>
+<p><strong>&ldquo;超强实习生&quot;是中国 AI 实验室的主力军</strong>。大多数核心研究人员是博士生，年龄在 25 岁左右，享有&quot;全职员工&quot;级别权限，可完整访问数据、算力和系统。这和美国头部 AI 实验室（OpenAI、Anthropic 等）不提供实习岗位形成鲜明反差。动因很务实：LLM 领域变化太快，资深教授或博士毕业生的&quot;经验&quot;价值有限，实验室更看重&quot;原始脑力&quot;和不受旧范式束缚的新鲜思维。同时，大学内算力资源匮乏，将学生&quot;托付&quot;给企业实验室发论文，对导师是双赢。</p>
+</li>
+<li>
+<p><strong>中国没有&quot;哲人王&rdquo;（Philosopher Kings）</strong>。西方 AI 研究者热衷在 Twitter、播客甚至立法层面讨论 AI 的社会意义与风险。中国研究者则奉行一种儒家式的&quot;角色分工&quot;——管好技术，安全的事交给政府。这不是天真或单纯，而是制度塑造的理性行为：在缺乏个人政治代理渠道的环境里，花时间思考那些问题是浪费精力。</p>
+</li>
+<li>
+<p><strong>算力受限，但研究投入反而更高</strong>。一些实验室将总算力按 3:1:1 分配（研究 : 预训练 : 后训练），有的给基础研究分配一半总算力。因为算力稀缺，大训练跑每次成本极高，因此必须在研究实验阶段把资源花在刀刃上。当他告诉中国研究者 OpenAI 每个研究员的人均 GPU 数量时，&ldquo;他们的下巴真的掉下来了&rdquo;。</p>
+</li>
+<li>
+<p><strong>开源与闭源的分水岭在&quot;万亿参数&quot;</strong>。部分实验室认为，万亿参数以上的开源模型没人能在本地部署，是浪费资源，应走 API 商业路线。另一些则把做到万亿级开源视为&quot;上牌桌的门票&quot;。字节跳动的豆包（Doubao，闭源模型）是所有人最害怕的竞争对手。</p>
+</li>
+<li>
+<p><strong>中国 AI 公司的&quot;组织性格&quot;正在分化</strong>：有的走硅谷式酷炫风格，有的走&quot;展厅政治&quot;路线。但两种风格都能服务于&quot;出海&quot;——后者的套路是：CEO 亲自带队领客户参观展示厅，吃饭喝酒签单。对全球南方传统行业的大企业 CEO，这套&quot;自上而下硬推&quot;的经典打法依然极其有效。</p>
+</li>
+</ul>
+<hr>
+<h2 id="2-afra-wang">2. afra Wang<a href="#2-afra-wang" class="heading-anchor" aria-label=""><svg class="h-4 w-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></g></svg></a></h2><p><strong>身份</strong>：Concurrent newsletter 作者，在中国出生长大，现居硅谷（afra 为笔名，全小写）</p>
+<p><strong>原文链接</strong>：<a
+    href="https://afraw.substack.com/p/mandate-of-ai"target="_blank"
+    class="inline-flex items-center gap-1"
+  >https://afraw.substack.com/p/mandate-of-ai<svg class="h-3 w-3 flex-shrink-0" id="external-link" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 3h6v6m-11 5L21 3m-3 10v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/></svg>
+  </a></p>
+<p><strong>核心观点</strong>：</p>
+<ul>
+<li>
+<p><strong>&ldquo;AI 的使命&quot;由谁承担，本质是政治问题</strong>。硅谷的科技领袖相信自己在定义未来，主动承担起思考 AI 与人类命运的责任——这就是她命名的&quot;AI 的使命&rdquo;（mandate of AI）。在中国的社会契约中，这项使命归属于国家，AI 产业只是执行国家愿景的诸多工具之一，最终会被吸收进&quot;升级、转型、新质生产力&quot;等国家叙事词汇体系中。她引用了 Andreas Gursky 拍摄的《平壤》系列摄影作品来比喻：&ldquo;集市犹存，大教堂已悄然将其包围&rdquo;。</p>
+</li>
+<li>
+<p><strong>中国 AI 研究者以&quot;修道士般的强度&quot;专注于技术</strong>，几乎不谈论 AI 的社会风险、经济冲击或哲学意义。Nathan Lambert 将此解释为&quot;工程气质&quot;，她则认为这和文化气质无关——硬核的社会问题（AI 与就业、AI 与不平等、AI 与人的意义）早已被社会契约为&quot;不归你管&quot;，归国家和国家资助的学术机构。这个契约意味着中国科技公司&quot;该做什么、该想什么、不该做什么、不该想什么&quot;早已被默认设定好。</p>
+</li>
+<li>
+<p><strong>中国 AI 界不认为自己是硅谷的&quot;近等对手&quot;（near-peer）</strong>。尽管中国 AI 过去一年成就数不胜数，但产业界几乎在所有关键维度上仍依赖硅谷。实验室的研究者都在偷偷用 Claude（通过各类中转站绕过封禁），绝大多数实验室将编程能力作为首要优化目标——这恰恰是 Claude 和 ChatGPT 定义的竞争赛道。她指出一个深层现象：硅谷掌握着&quot;命名权&quot;（Anthropic 定义&quot;宪法式 AI&quot;、Karpathy 命名&quot;vibe coding&quot;），这种软实力在持续扩大认知差距。</p>
+</li>
+<li>
+<p><strong>宇树（Unitree）机器人的震撼是物理性的</strong>。G1 人形机器人跳舞时，每个关节马达发出的精密切换声是视频无法传递的——&ldquo;裂纹声是可听见的机械努力&rdquo;。这种震撼让她想起第一次拿起 iPhone 的感受。但她保持清醒：人形机器人的实际应用场景仍然很窄，当前局面更像 2017 年前后的中国新能源车——政策绿灯一亮，地方政府、产业资本、供应链、创业者、媒体一拥而上。</p>
+</li>
+</ul>
+<hr>
+<h2 id="3-florian-brand弗洛里安布兰德">3. Florian Brand（弗洛里安·布兰德）<a href="#3-florian-brand%e5%bc%97%e6%b4%9b%e9%87%8c%e5%ae%89%e5%b8%83%e5%85%b0%e5%be%b7" class="heading-anchor" aria-label=""><svg class="h-4 w-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></g></svg></a></h2><p><strong>身份</strong>：AI 研究者，开源 AI 与开放研究的坚定支持者</p>
+<p><strong>原文链接</strong>：<a
+    href="https://florianbrand.com/posts/china-trip"target="_blank"
+    class="inline-flex items-center gap-1"
+  >https://florianbrand.com/posts/china-trip<svg class="h-3 w-3 flex-shrink-0" id="external-link" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 3h6v6m-11 5L21 3m-3 10v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/></svg>
+  </a></p>
+<p><strong>核心观点</strong>：</p>
+<ul>
+<li>
+<p><strong>中美 AI 社区文化的根本差异</strong>：中国研究者对其他实验室评价很高，对 DeepSeek 普遍怀有敬意，同行间是朋友关系，公开讨论工作细节。美国则更&quot;零和&quot;——实验室注重对外定位，研究者警惕竞争，领导者之间的攻击互骂甚至出现在&quot;泄露的备忘录&quot;中。他将部分原因归于中国实验室以开源为主，使得合作自然；而美国头部实验室闭源，边界分明。</p>
+</li>
+<li>
+<p><strong>中国实验室对字节跳动的豆包&quot;是害怕的&quot;</strong>——这款闭源聊天机器人的使用量断崖式领先所有对手。</p>
+</li>
+<li>
+<p><strong>中美研究者的核心驱动力差异</strong>：中国研究者专注于&quot;训练更好的模型&quot;（train better models），而硅谷同行会同时思考 AI 的政治或哲学影响。当被问到这些话题时，中国研究者的态度是——不思考大规模失业，不讨论模型是否有意识，&ldquo;他们只想训练出伟大的模型&rdquo;。看到用户使用自己的模型时，他们眼睛发亮，急于在下个版本修复所有缺陷，甚至通宵推发布。</p>
+</li>
+<li>
+<p><strong>人才结构年轻到令人惊讶</strong>，许多核心贡献者才 20 岁出头。产业界被认为&quot;比学术界更有趣&quot;。实验室积极招聘实习生和研究生——这在西方头部实验室几乎不存在。</p>
+</li>
+<li>
+<p><strong>中国普通人对技术更乐观</strong>——父母和祖父母辈会用豆包和 DeepSeek 聊数学定理；相比之下，&ldquo;西方公众鄙视 AI&rdquo;。作为开源 AI 的坚定支持者，此行让他对开源和跨国合作的未来更加乐观。</p>
+</li>
+</ul>
+<hr>
+<h2 id="4-nathan-lambert内森兰伯特">4. Nathan Lambert（内森·兰伯特）<a href="#4-nathan-lambert%e5%86%85%e6%a3%ae%e5%85%b0%e4%bc%af%e7%89%b9" class="heading-anchor" aria-label=""><svg class="h-4 w-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></g></svg></a></h2><p><strong>身份</strong>：Interconnects AI 创始人，AI 研究者</p>
+<p><strong>原文链接</strong>：<a
+    href="https://www.interconnects.ai/p/notes-from-inside-chinas-ai-labs"target="_blank"
+    class="inline-flex items-center gap-1"
+  >https://www.interconnects.ai/p/notes-from-inside-chinas-ai-labs<svg class="h-3 w-3 flex-shrink-0" id="external-link" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 3h6v6m-11 5L21 3m-3 10v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/></svg>
+  </a></p>
+<p><strong>核心观点</strong>：</p>
+<ul>
+<li>
+<p><strong>中国实验室是&quot;完美的快速跟进者&quot;（perfect fast-followers）</strong>。他论证中国文化的某些特质——细致、自我意识淡薄、执行力至上——在当前 LLM 构建游戏中表现出色。美国实验室存在&quot;内部政治倾轧&quot;（他暗示 Llama 组织可能在政治重压下内部崩溃），而中国团队更愿为集体模型搁置个人想法。</p>
+</li>
+<li>
+<p><strong>学生主力军 + 无&quot;明星科学家&quot;文化</strong>。大量核心贡献者是&quot;乐于谦逊地放弃所有预设&quot;的学生，不受之前 AI 炒作周期的影响，能更快适应范式转换（从 MoE 到 RL 到 Agent）。他惊讶于中国没有系统性地培养&quot;个人明星光环&quot;的路径——不像美国有 Dwarkesh 或 Lex 这样的播客能将研究者塑造成公众人物。</p>
+</li>
+<li>
+<p><strong>中国 AI 研究者对 AI 社会风险的回应经常是&quot;简单的困惑&quot;</strong>。他强调这不只是谦逊，也反映了&quot;他们被训练和成长的系统&quot;。一位研究者引用 Dan Wang 的著名论断：中国由工程师治理，美国由律师治理——只想建造，不过多解释。</p>
+</li>
+<li>
+<p><strong>中国的 LLM 社区更像&quot;生态系统&quot;而非&quot;互相厮杀的部落&quot;</strong>。美国在私下场合则&quot;火花四溅&quot;。他挑战了&quot;中国公司不付费买软件所以不会为 AI 付费&quot;的惯性假设——AI 支出可能跟踪云计算市场（大）而非 SaaS 市场（小）。&ldquo;大多数开发者都是 Claude 上瘾者&rdquo;——尽管名义上被封禁。</p>
+</li>
+<li>
+<p><strong>政府角色模糊</strong>：确实存在帮助但不清楚有多大。地方政府竞争性地吸引科技公司，可能主要是消除官僚障碍。他&quot;没有发现中国政府高层影响模型任何技术决策的迹象&quot;。</p>
+</li>
+<li>
+<p><strong>一个值得注意的反驳</strong>：某实验室的研究者后来私下反映，中国实验室间的部落主义真实存在，只是&quot;不想在访客面前展示&quot;。他还质疑，纯粹工程文化是否足以建造超级智能——这需要&quot;足够成熟来对智能负责的人&quot;，而这一视角&quot;在纯粹工程思维中被淹没了&quot;。</p>
+</li>
+</ul>
+<hr>
+<h2 id="5-azeem-azhar阿泽姆阿扎尔">5. Azeem Azhar（阿泽姆·阿扎尔）<a href="#5-azeem-azhar%e9%98%bf%e6%b3%bd%e5%a7%86%e9%98%bf%e6%89%8e%e5%b0%94" class="heading-anchor" aria-label=""><svg class="h-4 w-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></g></svg></a></h2><p><strong>身份</strong>：Exponential View 创始人，科技趋势分析师</p>
+<p><strong>原文链接</strong>：<a
+    href="https://www.exponentialview.co/p/inside-chinese-ai-labs-efficiency-moat"target="_blank"
+    class="inline-flex items-center gap-1"
+  >https://www.exponentialview.co/p/inside-chinese-ai-labs-efficiency-moat<svg class="h-3 w-3 flex-shrink-0" id="external-link" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 3h6v6m-11 5L21 3m-3 10v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/></svg>
+  </a></p>
+<p><strong>核心观点</strong>：</p>
+<ul>
+<li>
+<p><strong>出口管制实现了与其意图完全相反的效果</strong>。制裁非但没有扼杀中国 AI，反而催生了世界级竞争对手，产生了&quot;能力生成&quot;效应。他的核心量化发现：中国实验室从每单位算力提取的智能水平，比&quot;朴素外推预测&quot;高出 <strong>4 到 7 倍</strong>。尽管中国 AI 算力储备落后美国两到三年，但开源模型仅落后美国前沿 <strong>6 到 8 个月</strong>。</p>
+</li>
+<li>
+<p><strong>效率的三大来源</strong>：</p>
+<ol>
+<li><strong>&ldquo;卷&quot;文化</strong>：博士生是研发核心；上海工程师凌晨 1 点离开夜店后回实验室继续工作；实验室为不回家的研究者配备行军床。竞争源于中国城市之间激烈的产业政策竞赛，而非单纯追赶硅谷；</li>
+<li><strong>开源反馈循环</strong>：DeepSeek 2024 年 5 月提出的多头潜在注意力（MLA）技术一年内被五家以上实验室采用。与美国五家前沿实验室垄断训练的格局不同，中国是&quot;百花齐放&rdquo;；</li>
+<li><strong>架构优化的纪律约束</strong>：某实验室只采用能带来 20% 以上效率提升的架构变更，低于 10% 的直接放弃。DeepSeek V4 Flash 相比前代成绩更高、上下文窗口扩大 8 倍，&ldquo;仅使用 10% 的内存和 27% 的 FLOPs&rdquo;。</li>
+</ol>
+</li>
+<li>
+<p><strong>与丰田生产系统（TPS）的类比</strong>是核心理论贡献。日本汽车业当年因资本稀缺、钢铁昂贵被迫创新，最终形成美国无法匹敌的成本结构和持续改进文化。在中国 AI 实验室，&ldquo;算力必须分配给最准备好使用的团队&quot;这一分配纪律本身，已经成为一种核心竞争力。美国前沿实验室因为&quot;拥有几乎不限量的 Nvidia 芯片&rdquo;，外推压力点远在更远处。</p>
+</li>
+<li>
+<p><strong>未来 AI 经济，价格成为国际竞争利器</strong>：DeepSeek V4 Pro 输入价格是美国同类模型 Opus 4.6 的 <strong>1/11</strong>，输出为 <strong>1/28</strong>。Z.ai 和 MiniMax 毛利率分别为 50% 和 70%，MiniMax 超 70% 收入来自海外。Uber CTO 透露 5000 名工程师&quot;Claude 成瘾&quot;，公司 4 月就已耗尽全年 AI 预算。</p>
+</li>
+<li>
+<p><strong>核心论断</strong>：&ldquo;即使算力瓶颈今天突然解除，中国实验室也不太可能放弃使它们保持竞争力的独特特质。&rdquo;</p>
+</li>
+</ul>
+<hr>
+<h2 id="6-lily-ottinger莉莉奥廷格-kai-williams凯威廉姆斯">6. Lily Ottinger（莉莉·奥廷格）&amp; Kai Williams（凯·威廉姆斯）<a href="#6-lily-ottinger%e8%8e%89%e8%8e%89%e5%a5%a5%e5%bb%b7%e6%a0%bc-kai-williams%e5%87%af%e5%a8%81%e5%bb%89%e5%a7%86%e6%96%af" class="heading-anchor" aria-label=""><svg class="h-4 w-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></g></svg></a></h2><p><strong>身份</strong>：Lily 是 ChinaTalk 编辑兼研究员（会中文），Kai 是 Understanding AI 记者</p>
+<p><strong>原文链接</strong>：<a
+    href="https://archive.md/myA7R"target="_blank"
+    class="inline-flex items-center gap-1"
+  >https://archive.md/myA7R<svg class="h-3 w-3 flex-shrink-0" id="external-link" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 3h6v6m-11 5L21 3m-3 10v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/></svg>
+  </a></p>
+<p><strong>核心观点</strong>：</p>
+<ul>
+<li>
+<p><strong>算力不足是最普遍的抱怨</strong>。几乎每位受访研究者都抱怨缺乏足够先进算力。随着美国开始整合 Nvidia Blackwell 芯片，中美算力差距只会进一步扩大。尽管黄仁勋公开声称中国企业已有足够算力，&ldquo;我们交谈过的中国研究者中没有一个人真心相信这个说辞&rdquo;。</p>
+</li>
+<li>
+<p><strong>AGI 像一种宗教</strong>——无论中国还是美国，对&quot;机器之神&quot;的崇拜表现为加班和熬夜。一位研究人员因 DeepSeek R1 发布后被迫持续加班，连与妻子备孕的计划都被打断，胸前出现了长期皮疹。Lily 误入一个实验室走廊时看到了&quot;显然被大量使用的行军床&quot;。五一劳动节假期期间，仍有约四分之一的研究者在伏案工作，含糖含咖啡因的饮料像&quot;大学派对上的塑料杯&quot;一样铺满桌面。</p>
+</li>
+<li>
+<p><strong>中国公司在产品化上走得比西方同行更早</strong>。MiniMax 最赚钱的业务是 AI 陪伴产品，但在给参观者的演示中只简短提及。蚂蚁集团深耕 AI 医疗服务——这在美国会是隐私噩梦。深层逻辑是：中国科技巨头奉行&quot;赚钱才是核心竞争力&quot;（Dan Wang 语），不像美国专业模型公司执着于&quot;只做模型&quot;。</p>
+</li>
+<li>
+<p><strong>字节跳动的阴影笼罩一切</strong>。豆包月活近 3.5 亿，是中国遥遥领先的第一聊天机器人，被训练使用多种中文方言对话。Kimi 和 DeepSeek 的研究者见面时谦逊有礼，而字节跳动的研究者&quot;挺着胸、叼着烟走进来&quot;。某位其他实验室的人说：&ldquo;跟字节比起来，我们都是中等体量。&rdquo;</p>
+</li>
+<li>
+<p><strong>机器人物流已落地盈利</strong>。Galbot 机器人药房 2025 年已交付超 100 万单，其中 20% 为夜间订单。&ldquo;这些订单不需要前沿模型或超人类智能。&ldquo;中国机器人产业正在利用 AI 现在就赚钱，而美国因失去工业基础，&ldquo;这些创新注定将从中国产生&rdquo;。</p>
+</li>
+</ul>
+<hr>
+<h2 id="7-jasmine-sun贾斯敏孙">7. Jasmine Sun（贾斯敏·孙）<a href="#7-jasmine-sun%e8%b4%be%e6%96%af%e6%95%8f%e5%ad%99" class="heading-anchor" aria-label=""><svg class="h-4 w-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></g></svg></a></h2><p><strong>身份</strong>：记者，专注于 AI 与劳动力议题的交叉报道</p>
+<p><strong>原文链接</strong>：<a
+    href="https://jasmi.news/p/party-in-the-permanent-underclass"target="_blank"
+    class="inline-flex items-center gap-1"
+  >https://jasmi.news/p/party-in-the-permanent-underclass<svg class="h-3 w-3 flex-shrink-0" id="external-link" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 3h6v6m-11 5L21 3m-3 10v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/></svg>
+  </a></p>
+<p><strong>核心观点</strong>：</p>
+<ul>
+<li>
+<p><strong>中国青年失业是结构性问题，与 AI 冲击关系不大</strong>。1999 年高校大规模扩招造成&quot;知识工作者过剩，工厂工人不足&quot;的深层失衡。她的一位中国表亲直言找不到工作是因为&quot;人太多&rdquo;，而非 AI。这和当前美国因 AI 引发的就业焦虑语境完全不同。</p>
+</li>
+<li>
+<p><strong>三种应对失业的中国式社会现象</strong>：</p>
+<ul>
+<li><strong>躺平</strong>：一种小众但可行的策略，因中国生活成本远低于美国而具有物质基础。她 2024 年在大理看到许多年轻人在街头摆摊算塔罗牌；</li>
+<li><strong>全职儿女</strong>：年轻人搬回家做家务换取报酬，&ldquo;本质上是 Z 世代靠上一代积累度日&rdquo;；</li>
+<li><strong>外卖配送</strong>：日薪约 14 美元，高强度、有安全风险，但已构成重要就业出口。</li>
+</ul>
+</li>
+<li>
+<p><strong>中美 AI 焦虑的四个根源差异</strong>：</p>
+<ol>
+<li><strong>经济结构不同</strong>：月薪 3000 元人民币的工作用 AI 替代&quot;不划算&rdquo;；美国年薪超 10 万美元的知识岗位才是重灾区；</li>
+<li><strong>&ldquo;技术决定论的务实主义&rdquo;</strong>：中国人面对 AI 的心态是&quot;自救&quot;——&ldquo;要么学会 AI 让自己更强，要么被淘汰&rdquo;，没有第三种选择；</li>
+<li><strong>政府更主动干预</strong>：北京已有劳动仲裁案例裁定，仅因 AI 能做你的工作就解雇员工&quot;违反《劳动合同法》&quot;。在国企工作的阿姨告诉她，即使&quot;两个人能干三个人的活&quot;，公司也不会裁员；</li>
+<li><strong>公共部门实质上是就业计划</strong>：公园修剪每根枝条的园丁、地铁站打扫已干净步道的清洁工——人数远超实际需要，但这种&quot;低效&quot;带来了生活质量的实质提升。</li>
+</ol>
+</li>
+<li>
+<p><strong>最锋利的洞察</strong>：<strong>中国不是对 AI 替代感到乐观，而是根本没有余裕去恐慌。</strong> 蓝领工人的&quot;生存压力大得没时间考虑 AI 替代&quot;。AI 公司的价值主张恰恰是&quot;替代人类工人&quot;——中国 AI 研究者将&quot;造出一个能替代自己的 AI&quot;视为 AGI 的定义标准，说这话时眼睛发亮。</p>
+</li>
+</ul>
+<hr>
+<h2 id="8-lingua-sinica">8. Lingua Sinica<a href="#8-lingua-sinica" class="heading-anchor" aria-label=""><svg class="h-4 w-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></g></svg></a></h2><p><strong>身份</strong>：China Chatbot newsletter 作者（笔名，拉丁语意为&quot;中国语言&quot;），即将加入澳大利亚战略政策研究所（ASPI）</p>
+<p><strong>原文链接</strong>：<a
+    href="https://linguasinica.substack.com/p/notes-from-a-trip-to-chinas-ai-labs"target="_blank"
+    class="inline-flex items-center gap-1"
+  >https://linguasinica.substack.com/p/notes-from-a-trip-to-chinas-ai-labs<svg class="h-3 w-3 flex-shrink-0" id="external-link" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 3h6v6m-11 5L21 3m-3 10v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/></svg>
+  </a></p>
+<p><strong>核心观点</strong>：</p>
+<ul>
+<li>
+<p><strong>访问是双向的&quot;审视&quot;</strong>。《新京报》报道了此次访问，并引述匿名中国 AI 从业者称：&ldquo;坦白讲，除了 OpenAI 和 Anthropic 等美国顶级 AI 公司，我们在技术实践上的经验领先于这些来访学者。这次交流也是向海外传播中国 AI 大模型影响力的好机会。&ldquo;显然，参观者们也是中国 AI 公司国际营销计划中的一环。</p>
+</li>
+<li>
+<p><strong>&ldquo;美国创新，中国模仿&quot;的老命题依然顽固有效</strong>。梁文峰在 ChatGPT 爆火前在研究自动驾驶——是 OpenAI 的催化让他决定转向大语言模型。没有那个来自加州的催化剂，连 DeepSeek 可能都不会进入 AI 模型领域。如今各实验室的技术人员依然盯着硅谷：用被封禁的 Claude Code 构建自己的模型，用英文写 vibe coding 的 prompt，通过西方评测机构而非中国评测体系来判断模型好坏。</p>
+</li>
+<li>
+<p><strong>网信办目前是&quot;放手&quot;姿态，但未必持久</strong>。深夜非正式交流中获知，网信办正在让 AI 生态先发展。但如果属实，各实验室模型间意识形态控制的差异，更多源于各自公司文化和目标市场选择，而非监管的直接指令。结构性张力在于：网信办是党的价值观执行者，工信部和发改委推动&quot;改革开放&rdquo;——所有主要 AI 实验室站在发改委一边，但运行模型需要网信办许可。行业普遍的假设是&quot;在被拍肩膀之前能跑多快跑多快&rdquo;。</p>
+</li>
+<li>
+<p><strong>开源的话语在技术圈和宣传圈截然不同</strong>。研究人员出于学术实用主义真诚热爱开源。但在政策和传播人员口中，开源升格为&quot;造福全人类&quot;的宏大叙事，暗示中国的开源 = 普惠全球 vs 西方的闭源 = 霸权垄断。他实地调查东南亚开发者后发现，大多数人并不买账——&ldquo;AI 开源还是闭源并不重要&rdquo;，中美不过是在该国没有话语权的&quot;两个竞争中的超级大国&rdquo;。</p>
+</li>
+</ul>
+<hr>
+<h2 id="9-caithrin-rintoul凯斯林林图尔">9. Caithrin Rintoul（凯斯林·林图尔）<a href="#9-caithrin-rintoul%e5%87%af%e6%96%af%e6%9e%97%e6%9e%97%e5%9b%be%e5%b0%94" class="heading-anchor" aria-label=""><svg class="h-4 w-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></g></svg></a></h2><p><strong>身份</strong>：SAIL Media 撰稿人，此次访问行程的组织者</p>
+<p><strong>原文链接</strong>：<a
+    href="https://www.caithrin.com/p/searching-for-amanda-askell-with"target="_blank"
+    class="inline-flex items-center gap-1"
+  >https://www.caithrin.com/p/searching-for-amanda-askell-with<svg class="h-3 w-3 flex-shrink-0" id="external-link" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 3h6v6m-11 5L21 3m-3 10v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/></svg>
+  </a></p>
+<p><strong>核心观点</strong>：</p>
+<ul>
+<li>
+<p><strong>整个中国 AI 界缺失一个关键角色——没有人做 Amanda Askell 的工作</strong>。Amanda Askell 是 Anthropic 的哲学家，负责塑造 Claude 的人格、价值观和性格。当 Caithrin 询问中国实验室&quot;谁负责模型性格塑造&quot;时，得到的回应往往是困惑。这是一个惊人的空白。</p>
+</li>
+<li>
+<p><strong>尖锐的矛盾</strong>：所有人都想复现 Claude，却没人愿意复制创造 Claude 的方法论。中国实验室的路径主要是蒸馏——从 Claude 采样输出训练学生模型。这能复制&quot;帮助性、拒答模式、含糊风格&quot;的表面质感，但只能产生&quot;披着教师外衣的称职通才&quot;。蒸馏是通往 Claude 的一条路；另一条路是雇佣、授权和信任一个像 Amanda Askell 那样的人。</p>
+</li>
+<li>
+<p><strong>逐一反驳三种&quot;为什么不能&quot;的辩解</strong>：</p>
+<ol>
+<li><strong>&ldquo;监管不让&rdquo;</strong>：基本是错的——合规管的是不能讨论什么话题，而非模型能否有立场和&quot;声音&quot;。DeepSeek R1 的可爱性格不是&quot;中国官僚体制的产物&quot;，而是训练流程的设计结果；</li>
+<li><strong>&ldquo;文化不可移植&rdquo;</strong>：说 Amanda 式角色是湾区/LessWrong 文化的产物这没错——但这恰恰证明中国实验室不该照搬，而应从自己的知识传统（鲁迅的锋芒、科幻作家的想象力、当代中国哲学）中建立独属于中国模型的性格；</li>
+<li><strong>&ldquo;不划算&rdquo;</strong>：为什么花钱做人格研发而不免费蒸馏？答案是：这个领域的每一个重大转向，在成为事实之前，都看起来像是一个无法量化的赌注。</li>
+</ol>
+</li>
+<li>
+<p><strong>R1 的&quot;可爱&quot;是其成功的关键</strong>——&ldquo;内心独白给人的印象是一颗头脑在诚实思考问题，而非神谕在陈述答案&rdquo;。Kimi K2 虽&quot;情感流畅、风格化&quot;，但英语写作仍大量模仿 Claude——属于&quot;通过蒸馏获得的宪法，而非刻意锻造一颗天才头脑&quot;。</p>
+</li>
+<li>
+<p><strong>核心呼吁</strong>：他设想一套&quot;中文优先编写的宪法&quot;（constitution），由中国作家为中文模型量身定做，塑造有立场、可反驳的模型——&ldquo;直率、大胆，关注与西方不同的问题&rdquo;。他认为，首个真正理解和投资这一理念的中国实验室，&ldquo;将创造历史&rdquo;。</p>
+</li>
+</ul>
+<hr>
+<h2 id="综合观察与思考-这也是ai的产出不是我的观点">综合观察与思考 (这也是AI的产出，不是我的观点)<a href="#%e7%bb%bc%e5%90%88%e8%a7%82%e5%af%9f%e4%b8%8e%e6%80%9d%e8%80%83-%e8%bf%99%e4%b9%9f%e6%98%afai%e7%9a%84%e4%ba%a7%e5%87%ba%e4%b8%8d%e6%98%af%e6%88%91%e7%9a%84%e8%a7%82%e7%82%b9" class="heading-anchor" aria-label=""><svg class="h-4 w-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></g></svg></a></h2><p>九篇文章并置在一起，构成了一幅异常丰富的多棱镜。以下是几条贯穿始终、值得进一步思考的线索。</p>
+<h3 id="一关于不谈风险的层层解释链">一、关于&quot;不谈风险&quot;的层层解释链<a href="#%e4%b8%80%e5%85%b3%e4%ba%8e%e4%b8%8d%e8%b0%88%e9%a3%8e%e9%99%a9%e7%9a%84%e5%b1%82%e5%b1%82%e8%a7%a3%e9%87%8a%e9%93%be" class="heading-anchor" aria-label=""><svg class="h-4 w-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></g></svg></a></h3><p>多位作者都注意到了中国 AI 研究者不谈论社会风险这一现象，但解释层层递进，构成一个从浅到深的理解阶梯：</p>
+<ul>
+<li><strong>Florian Brand</strong> 描述了现象层面：中国研究者专注技术，硅谷同行热衷哲学讨论；</li>
+<li><strong>Nathan Lambert</strong> 将其归因为&quot;工程气质&quot;和&quot;他们被训练的系统&quot;；</li>
+<li><strong>Kevin Xu</strong> 用&quot;儒家式角色分工&quot;给出了行为逻辑——研究者管技术，政府管安全，各安其位；</li>
+<li><strong>afra Wang</strong> 将分析推到了制度层面：这并非文化气质或个体选择，而是&quot;社会契约&quot;的结果。在中国，定义未来的权力属于国家。研究者&quot;不谈&quot;不是因为不想，而是因为那些问题&quot;不归你管&quot;。</li>
+</ul>
+<p>这四层解释从行为观察到制度分析，互相补充而非互相否定。理解这一点，对于任何想与中国 AI 界深度互动的人来说都至关重要：你不是在和&quot;缺乏思考深度&quot;的人对话，而是在和一个&quot;问题域已被划分好&quot;的体系对话。</p>
+<h3 id="二约束催生能力的反直觉叙事">二、约束催生能力的&quot;反直觉&quot;叙事<a href="#%e4%ba%8c%e7%ba%a6%e6%9d%9f%e5%82%ac%e7%94%9f%e8%83%bd%e5%8a%9b%e7%9a%84%e5%8f%8d%e7%9b%b4%e8%a7%89%e5%8f%99%e4%ba%8b" class="heading-anchor" aria-label=""><svg class="h-4 w-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></g></svg></a></h3><p>Azeem Azhar 的丰田生产系统类比可能是这九篇文章中最具理论穿透力的一个。当几乎所有文章都在描述&quot;算力不足&quot;的抱怨时，Azhar 却从中看到了一个能力生成机制：约束不仅仅是被克服的困难，它本身就在塑造一种不同的竞争力。</p>
+<p>这个视角的威力在于，它同时解释了&quot;为什么中国落后&quot;和&quot;为什么中国可怕&quot;这两个看似矛盾的命题——落后的算力数量，恰恰在催生出领先的算力利用效率。而这种效率一旦形成，就不会因为算力瓶颈解除而消失。</p>
+<p>但这套叙事也面临一个压力测试：如果效率差距真的如此巨大（4 到 7 倍），为什么中美前沿模型仍有 6 到 8 个月的差距？答案可能藏在 Nathan Lambert 和 Lily &amp; Kai 提供的细节中——效率优势部分被算力的绝对差距（8 倍且还在扩大）所抵消。效率红利能让你少落后，但算力的绝对鸿沟仍然在拖慢追赶速度。这不是对 Azhar 论点的反驳，而是对其边界的限定。</p>
+<h3 id="三caithrin-的空白最被低估的赛道">三、Caithrin 的&quot;空白&quot;——最被低估的赛道<a href="#%e4%b8%89caithrin-%e7%9a%84%e7%a9%ba%e7%99%bd%e6%9c%80%e8%a2%ab%e4%bd%8e%e4%bc%b0%e7%9a%84%e8%b5%9b%e9%81%93" class="heading-anchor" aria-label=""><svg class="h-4 w-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></g></svg></a></h3><p>Caithrin 的文章是这九篇中&quot;最独辟蹊径&quot;的一篇。当其他八位分析师的注意力都集中在算力、benchmark、参数规模、出口管制等&quot;硬件&quot;维度时，他问了一个所有人都没有问的问题：谁在塑造模型的人格？</p>
+<p>这个问题的力量在于，它将注意力从&quot;你有多强&quot;转移到了&quot;你是谁&quot;。在一个所有竞争者的能力曲线都趋于收敛的世界里，&ldquo;模型是谁&quot;可能比&quot;模型多强&quot;更容易形成不对称优势。Claude 的成功至少部分证明了这一点——它的吸引力不只是能力，更是某种难以量化的&quot;人格质感&rdquo;。</p>
+<p>Caithrin 的观察还有一个隐含的讽刺：中国 AI 界对 Claude 的痴迷已经到了蒸馏复现的程度，却对创造 Claude 的方法论——雇佣一个哲学家来定义模型的价值观——完全不感兴趣。这本身就是一个文化诊断：在一个以&quot;卷&quot;为核心竞争力的生态中，一个&quot;无法量化的赌注&quot;天然缺乏吸引力。而这恰恰是瓶颈所在：你可以蒸馏一个模型的输出，但你无法蒸馏它的灵魂。</p>
+<h3 id="四被忽略的弱信号">四、被忽略的&quot;弱信号&quot;<a href="#%e5%9b%9b%e8%a2%ab%e5%bf%bd%e7%95%a5%e7%9a%84%e5%bc%b1%e4%bf%a1%e5%8f%b7" class="heading-anchor" aria-label=""><svg class="h-4 w-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></g></svg></a></h3><p>几篇文章中散布着一些容易被大叙事淹没的细节，单独挑出来看却格外有趣：</p>
+<ul>
+<li><strong>字节跳动研究者的肢体语言</strong>（Lily &amp; Kai）：Kimi 和 DeepSeek 的人谦逊入场，字节的人&quot;挺着胸叼着烟进来&quot;。这个细节比任何数据都更能说明，谁在这个生态里真正掌控着用户和分发渠道；</li>
+<li><strong>华为芯片&quot;强制采购、但不使用&quot;</strong>（afra Wang）：一位创始人告诉她，采购华为是必须的，&ldquo;但我们不用华为芯片&rdquo;。这句话揭示了产业政策与工程现实之间那条无法用文件填平的鸿沟；</li>
+<li><strong>《新京报》的英文引述</strong>（Lingua Sinica）：中国实验室让外国访客看到的叙事，和他们在中文媒体上对国内受众讲述的叙事，是两套完全不同的故事。参观者以为自己在考察，实际上自己也是展览的一部分；</li>
+<li><strong>Uber 全年 AI 预算 4 月耗尽</strong>（Azeem Azhar）：这不是中国故事，却是整个 AI 经济转向中最具信号意义的数据点之一——如果连 Uber 这样的公司都开始对 Token 账单感到剧烈疼痛，那么&quot;便宜&quot;就不再是锦上添花，而是核心购买理由。</li>
+</ul>
+<h3 id="五一个开放问题">五、一个开放问题<a href="#%e4%ba%94%e4%b8%80%e4%b8%aa%e5%bc%80%e6%94%be%e9%97%ae%e9%a2%98" class="heading-anchor" aria-label=""><svg class="h-4 w-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></g></svg></a></h3><p>读完这九篇文章，我最大的感受是：我们正处于一个奇怪的时刻。一方面，几乎所有分析师都承认中国 AI 在某些维度上（效率、产品化速度、开源生态）展现出令人敬畏的独特性。另一方面，几乎没有人认为中国 AI 已经或即将&quot;超越&quot;美国——落后的算力、依赖硅谷的技术风向标、缺失的基础研究引领能力，每一项都在约束天花板。</p>
+<p>这或许指向一个更微妙的未来图景：不是&quot;谁能赢&quot;，而是&quot;两个生态将越来越不同&quot;。一个生态拥有更多的原始算力和基础研究引领权，另一个生态在被压缩的空间里演化出了不同的生存策略。两个生态都将在某些方面领先，在某些方面落后——而最有意思的创新，可能恰恰诞生在两个生态的交界处。</p>
 
   </article>
 
@@ -915,10 +1208,10 @@
           <p>
             <strong>:</strong>
             <a
-              href="https://entropydecrease.github.io/posts/%E8%BF%99%E4%B8%80%E5%B0%8F%E6%AE%B5%E8%B7%AF%E5%8F%AF%E8%83%BD%E5%B0%B1%E6%98%AF%E5%8D%81%E5%B9%B4/"
+              href="https://entropydecrease.github.io/posts/%E4%B8%AD%E5%9B%BD-ai-%E5%A4%A7%E5%8E%82%E8%AE%BF%E9%97%AE%E8%AE%B0-deepseek%E6%95%B4%E7%90%86%E5%92%8C%E6%80%BB%E7%BB%93/"
               class="text-primary hover:text-primary/80 break-all hyphens-auto transition-colors duration-200"
             >
-              https://entropydecrease.github.io/posts/%E8%BF%99%E4%B8%80%E5%B0%8F%E6%AE%B5%E8%B7%AF%E5%8F%AF%E8%83%BD%E5%B0%B1%E6%98%AF%E5%8D%81%E5%B9%B4/
+              https://entropydecrease.github.io/posts/%E4%B8%AD%E5%9B%BD-ai-%E5%A4%A7%E5%8E%82%E8%AE%BF%E9%97%AE%E8%AE%B0-deepseek%E6%95%B4%E7%90%86%E5%92%8C%E6%80%BB%E7%BB%93/
             </a>
           </p>
 
@@ -964,7 +1257,7 @@
       <div class="nav-item">
         
           <a
-            href="/posts/%E6%BA%A5%E6%9D%B0%E8%87%AA%E4%BC%A0/"
+            href="/posts/%E4%B8%AD%E5%9B%BD-ai-%E5%A4%A7%E5%8E%82%E8%AE%BF%E9%97%AE%E8%AE%B0/"
             class="group bg-card border-border hover:bg-primary/5 hover:border-primary/20 focus:ring-primary/20 flex min-h-[140px] flex-col justify-between rounded-xl border p-6 transition-all duration-300 ease-out hover:-translate-y-1 hover:scale-[1.02] hover:shadow-lg focus:ring-2 focus:outline-none"
           >
             <div>
@@ -980,7 +1273,7 @@
               <h3
                 class="text-foreground group-hover:text-primary mb-3 line-clamp-2 text-lg leading-tight font-semibold transition-colors duration-200"
               >
-                溥杰自传
+                中国 AI 大厂访问记
               </h3>
             </div>
 
@@ -989,8 +1282,8 @@
   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
 </svg>
 
-              <time datetime="2026-05-24">
-                5/24/26
+              <time datetime="2026-06-05">
+                6/5/26
               </time>
             </div>
           </a>
@@ -1001,7 +1294,7 @@
       <div class="nav-item">
         
           <a
-            href="/posts/%E6%B6%88%E8%B4%B9%E8%80%85%E5%85%B6%E5%AE%9E%E4%B8%8D%E7%9F%A5%E9%81%93%E8%87%AA%E5%B7%B1%E6%83%B3%E8%A6%81%E4%BB%80%E4%B9%88/"
+            href="/posts/%E6%B8%B8%E6%88%8F%E4%B8%BA%E4%BB%80%E4%B9%88%E6%AF%94%E4%BD%9C%E4%B8%9A%E6%9B%B4%E6%87%82%E5%AD%A9%E5%AD%90/"
             class="group bg-card border-border hover:bg-primary/5 hover:border-primary/20 focus:ring-primary/20 flex min-h-[140px] flex-col justify-between rounded-xl border p-6 transition-all duration-300 ease-out hover:-translate-y-1 hover:scale-[1.02] hover:shadow-lg focus:ring-2 focus:outline-none"
           >
             <div>
@@ -1017,7 +1310,7 @@
               <h3
                 class="text-foreground group-hover:text-primary mb-3 line-clamp-2 text-right text-lg leading-tight font-semibold transition-colors duration-200"
               >
-                消费者其实不知道自己想要什么
+                游戏为什么比作业更懂孩子？
               </h3>
             </div>
 
@@ -1063,42 +1356,42 @@
     <div class="grid w-full grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3">
       
         <article class="group">
-          <a href="/posts/%E7%A7%91%E5%AD%A6%E9%9C%80%E8%A6%81%E4%B8%80%E7%A7%8D%E5%85%A8%E6%96%B0%E7%9A%84%E5%8D%8F%E4%BD%9C%E6%A8%A1%E5%BC%8F/" class="block">
+          <a href="/posts/%E4%B8%AD%E5%9B%BD-ai-%E5%A4%A7%E5%8E%82%E8%AE%BF%E9%97%AE%E8%AE%B0/" class="block">
             <div
               class="bg-card border-border hover:bg-primary/5 hover:border-primary/20 focus:ring-primary/20 flex min-h-[120px] items-center rounded-xl border p-5 transition-all duration-300 ease-out hover:-translate-y-1 hover:scale-[1.02] hover:shadow-lg focus:ring-2 focus:outline-none"
             >
               <h3
                 class="text-foreground group-hover:text-primary line-clamp-3 w-full text-lg leading-snug font-semibold"
               >
-                科学需要一种全新的协作模式
+                中国 AI 大厂访问记
               </h3>
             </div>
           </a>
         </article>
       
         <article class="group">
-          <a href="/posts/%E5%88%9B%E5%A7%8B%E4%BA%BA%E5%AE%9E%E6%88%98%E6%89%8B%E5%86%8C%E6%89%93%E9%80%A0ai%E5%8E%9F%E7%94%9F%E5%88%9D%E5%88%9B%E4%BC%81%E4%B8%9A/" class="block">
+          <a href="/posts/internet_viewership/" class="block">
             <div
               class="bg-card border-border hover:bg-primary/5 hover:border-primary/20 focus:ring-primary/20 flex min-h-[120px] items-center rounded-xl border p-5 transition-all duration-300 ease-out hover:-translate-y-1 hover:scale-[1.02] hover:shadow-lg focus:ring-2 focus:outline-none"
             >
               <h3
                 class="text-foreground group-hover:text-primary line-clamp-3 w-full text-lg leading-snug font-semibold"
               >
-                创始人实战手册：打造AI原生初创企业
+                “流量变现正在崩塌”，以及由此的思考
               </h3>
             </div>
           </a>
         </article>
       
         <article class="group">
-          <a href="/posts/%E5%85%B3%E4%BA%8Eai%E7%9A%84%E6%96%87%E6%91%98%E4%BA%8C%E5%88%99/" class="block">
+          <a href="/posts/%E8%BF%99%E4%B8%80%E5%B0%8F%E6%AE%B5%E8%B7%AF%E5%8F%AF%E8%83%BD%E5%B0%B1%E6%98%AF%E5%8D%81%E5%B9%B4/" class="block">
             <div
               class="bg-card border-border hover:bg-primary/5 hover:border-primary/20 focus:ring-primary/20 flex min-h-[120px] items-center rounded-xl border p-5 transition-all duration-300 ease-out hover:-translate-y-1 hover:scale-[1.02] hover:shadow-lg focus:ring-2 focus:outline-none"
             >
               <h3
                 class="text-foreground group-hover:text-primary line-clamp-3 w-full text-lg leading-snug font-semibold"
               >
-                关于AI的文摘二则
+                这一小段路，可能就是十年
               </h3>
             </div>
           </a>
@@ -1353,7 +1646,70 @@
   </div>
 
 
-      
+      <aside
+    id="toc-container"
+    class="toc-center"
+    data-position="center"
+  >
+      <div
+        id="toc-center"
+        class="pointer-events-none fixed top-28 right-0 left-0 z-40 mx-auto w-full max-w-4xl px-4 transition-all duration-300"
+      >
+        <div class="pointer-events-auto relative mx-auto w-fit">
+          <button
+            id="toc-center-toggle"
+            class="bg-card/80 border-border text-muted-foreground hover:text-primary hover:bg-primary/10 ring-offset-background focus-visible:ring-ring flex cursor-pointer items-center gap-2 rounded-full border px-4 py-1.5 text-sm shadow-sm backdrop-blur-sm transition-colors focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:outline-none"
+          >
+            <svg class="h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <line x1="8" x2="21" y1="6" y2="6"/>
+  <line x1="8" x2="21" y1="12" y2="12"/>
+  <line x1="8" x2="21" y1="18" y2="18"/>
+  <line x1="3" x2="3.01" y1="6" y2="6"/>
+  <line x1="3" x2="3.01" y1="12" y2="12"/>
+  <line x1="3" x2="3.01" y1="18" y2="18"/>
+</svg>
+
+            <span id="toc-center-title" class="max-w-[200px] truncate"></span>
+            <svg class="h-3 w-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+</svg>
+          </button>
+
+          
+          <div
+            id="toc-center-dropdown"
+            class="bg-card border-border scrollbar-hide absolute top-full left-1/2 mt-2 hidden max-h-[60vh] w-[280px] origin-top -translate-x-1/2 scale-95 overflow-y-auto rounded-xl border p-4 opacity-0 shadow-lg transition-all"
+          >
+            <div
+              id="toc-center-content"
+              class="[&_a]:text-muted-foreground [&_a:hover]:bg-primary/10 [&_a:hover]:text-primary [&_a.active]:bg-primary/10 [&_a.active]:text-primary text-sm [&_a]:block [&_a]:truncate [&_a]:rounded-md [&_a]:px-2 [&_a]:py-1 [&_a]:transition-colors [&_a.active]:font-medium [&_li]:my-1.5 [&_nav>ul]:pl-0 [&_ul]:list-none [&_ul]:pl-4"
+            >
+              <nav id="TableOfContents">
+  <ul>
+    <li><a href="#1-kevin-xu">1. Kevin Xu</a></li>
+    <li><a href="#2-afra-wang">2. afra Wang</a></li>
+    <li><a href="#3-florian-brand弗洛里安布兰德">3. Florian Brand（弗洛里安·布兰德）</a></li>
+    <li><a href="#4-nathan-lambert内森兰伯特">4. Nathan Lambert（内森·兰伯特）</a></li>
+    <li><a href="#5-azeem-azhar阿泽姆阿扎尔">5. Azeem Azhar（阿泽姆·阿扎尔）</a></li>
+    <li><a href="#6-lily-ottinger莉莉奥廷格-kai-williams凯威廉姆斯">6. Lily Ottinger（莉莉·奥廷格）&amp; Kai Williams（凯·威廉姆斯）</a></li>
+    <li><a href="#7-jasmine-sun贾斯敏孙">7. Jasmine Sun（贾斯敏·孙）</a></li>
+    <li><a href="#8-lingua-sinica">8. Lingua Sinica</a></li>
+    <li><a href="#9-caithrin-rintoul凯斯林林图尔">9. Caithrin Rintoul（凯斯林·林图尔）</a></li>
+    <li><a href="#综合观察与思考-这也是ai的产出不是我的观点">综合观察与思考 (这也是AI的产出，不是我的观点)</a>
+      <ul>
+        <li><a href="#一关于不谈风险的层层解释链">一、关于&quot;不谈风险&quot;的层层解释链</a></li>
+        <li><a href="#二约束催生能力的反直觉叙事">二、约束催生能力的&quot;反直觉&quot;叙事</a></li>
+        <li><a href="#三caithrin-的空白最被低估的赛道">三、Caithrin 的&quot;空白&quot;——最被低估的赛道</a></li>
+        <li><a href="#四被忽略的弱信号">四、被忽略的&quot;弱信号&quot;</a></li>
+        <li><a href="#五一个开放问题">五、一个开放问题</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+            </div>
+          </div>
+        </div>
+      </div></aside>
       
 <div
   id="search-overlay"
