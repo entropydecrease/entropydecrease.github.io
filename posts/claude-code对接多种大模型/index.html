@@ -5,16 +5,18 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
 <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 
-<title>大模型 |
+<title>Claude Code对接多种大模型 |
     Entropy Decrease</title>
 
 <meta
   name="description"
-  content="阅读、思考、写作，都是熵减的过程"
+  content="有用cc-switch的，也有用cc-use-model的，我在deepseek的帮助下，采用了自建shell命令的方法。
+我的shell是fish，所以在~/.config/fish/functions/下面建立多个函数：
+SHELL # cc-deepseek.fish function..."
 />
 <meta
   name="keywords"
-  content="阅读, 思考, 写作, 技术, 生活"
+  content="AI, 大模型"
 />
 <meta
   name="author"
@@ -26,40 +28,43 @@
   name="robots"
   content="index, follow"
 />
-<link rel="canonical" href="https://entropydecrease.github.io/tags/%E5%A4%A7%E6%A8%A1%E5%9E%8B/" />
+<link rel="canonical" href="https://entropydecrease.github.io/posts/claude-code%E5%AF%B9%E6%8E%A5%E5%A4%9A%E7%A7%8D%E5%A4%A7%E6%A8%A1%E5%9E%8B/" />
 
 
   <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 <link rel="manifest" href="/site.webmanifest" />
-<meta property="og:url" content="https://entropydecrease.github.io/tags/%E5%A4%A7%E6%A8%A1%E5%9E%8B/">
+<meta property="og:url" content="https://entropydecrease.github.io/posts/claude-code%E5%AF%B9%E6%8E%A5%E5%A4%9A%E7%A7%8D%E5%A4%A7%E6%A8%A1%E5%9E%8B/">
 	<meta property="og:site_name" content="Entropy Decrease">
-	<meta property="og:title" content="大模型">
-	<meta property="og:description" content="阅读、思考、写作，都是熵减的过程">
+	<meta property="og:title" content="Claude Code对接多种大模型">
+	<meta property="og:description" content="有用cc-switch的，也有用cc-use-model的，我在deepseek的帮助下，采用了自建shell命令的方法。
+我的shell是fish，所以在~/.config/fish/functions/下面建立多个函数：">
 	<meta property="og:locale" content="zh_CN">
-	<meta property="og:type" content="website">
+	<meta property="og:type" content="article">
+		<meta property="article:section" content="posts">
+		<meta property="article:published_time" content="2026-06-08T00:00:00+00:00">
+		<meta property="article:modified_time" content="2026-06-08T00:00:00+00:00">
+		<meta property="article:tag" content="AI">
+		<meta property="article:tag" content="大模型">
 		<meta property="og:image" content="https://entropydecrease.github.io/images/og-default.avif">
 
 
 	<meta name="twitter:card" content="summary_large_image">
 	<meta name="twitter:image" content="https://entropydecrease.github.io/images/og-default.avif">
-	<meta name="twitter:title" content="大模型">
-	<meta name="twitter:description" content="阅读、思考、写作，都是熵减的过程">
+	<meta name="twitter:title" content="Claude Code对接多种大模型">
+	<meta name="twitter:description" content="有用cc-switch的，也有用cc-use-model的，我在deepseek的帮助下，采用了自建shell命令的方法。
+我的shell是fish，所以在~/.config/fish/functions/下面建立多个函数：">
 
 
-	<meta itemprop="name" content="大模型">
-	<meta itemprop="description" content="阅读、思考、写作，都是熵减的过程">
+	<meta itemprop="name" content="Claude Code对接多种大模型">
+	<meta itemprop="description" content="有用cc-switch的，也有用cc-use-model的，我在deepseek的帮助下，采用了自建shell命令的方法。
+我的shell是fish，所以在~/.config/fish/functions/下面建立多个函数：">
 	<meta itemprop="datePublished" content="2026-06-08T00:00:00+00:00">
 	<meta itemprop="dateModified" content="2026-06-08T00:00:00+00:00">
+	<meta itemprop="wordCount" content="670">
 	<meta itemprop="image" content="https://entropydecrease.github.io/images/og-default.avif">
+	<meta itemprop="keywords" content="AI,大模型">
 
 
-
-  <link
-    rel="alternate"
-    type="application/rss+xml"
-    title="Entropy Decrease"
-    href="https://entropydecrease.github.io/tags/%E5%A4%A7%E6%A8%A1%E5%9E%8B/index.xml"
-  />
 
 
 
@@ -120,6 +125,12 @@
 
 
 
+            <script
+              src="/js/toc.3026ef97e410bb3e98d57739bcabc32ac568e9001b2e42385de731663378ae85.js"
+              integrity="sha256-MCbvl&#43;QQuz6Y1Xc5vKvDKsVo6QAbLkI4XecxZjN4roU="
+              crossorigin="anonymous"
+              defer
+            ></script>
 
 
 
@@ -649,13 +660,13 @@
 </svg>
             </span>
             <a
-              href="/tags/"
+              href="/posts/"
               class="text-muted-foreground hover:text-primary hover:bg-primary/10 flex shrink-0 items-center gap-1 rounded-lg px-1 py-0.5 transition-all duration-200 ease-out hover:-translate-y-0.5 hover:scale-[1.02] md:px-3 md:py-1.5"
             >
               <svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 7v10a2 2 0 002 2h14a2 2 0 002-2V9a2 2 0 00-2-2h-6l-2-2H5a2 2 0 00-2 2z" />
 </svg>
-              <span class="max-w-16 truncate md:max-w-none">Tags</span>
+              <span class="max-w-16 truncate md:max-w-none">Posts</span>
             </a>
           </li>
         
@@ -673,7 +684,7 @@
           <svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
 </svg>
-          <span class="max-w-32 truncate md:max-w-[16rem] lg:max-w-none">大模型</span>
+          <span class="max-w-32 truncate md:max-w-[16rem] lg:max-w-none">Claude Code对接多种大模型</span>
         </span>
       </li>
     </ol>
@@ -682,39 +693,306 @@
 
         
   
+
+
+  
   <header class="mb-8">
-    <div class="mb-4 flex items-center gap-3">
-      
-        <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-	<g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
-		<path d="M12.586 2.586A2 2 0 0 0 11.172 2H4a2 2 0 0 0-2 2v7.172a2 2 0 0 0 .586 1.414l8.704 8.704a2.426 2.426 0 0 0 3.42 0l6.58-6.58a2.426 2.426 0 0 0 0-3.42z" />
-		<circle cx="7.5" cy="7.5" r=".5" fill="currentColor" />
-	</g>
-</svg>
-      
-      <h1 class="text-foreground text-3xl font-bold">
-        大模型
-      </h1>
-    </div>
-
     
 
 
+
+
+<div class="post-meta mb-8">
+  
+  <h1 class="text-foreground mb-6 text-3xl leading-tight font-bold md:text-4xl">
+    Claude Code对接多种大模型
+  </h1>
+
+  
+  
+
+  
+  <div class="bg-card border-border rounded-xl border">
+
     
-    <div class="text-muted-foreground flex items-center gap-4 text-sm">
-      <div class="flex items-center gap-1">
-        <svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+        
+        <div class="p-6">
+
+          
+          <div class="text-muted-foreground flex flex-wrap items-center gap-3 text-sm mb-4">
+            
+            <div class="flex items-center gap-2">
+              <svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
 </svg>
-        <span></span>
-      </div>
+
+              <time datetime="2026-06-08">
+                June 8, 2026
+              </time>
+            </div>
+
+            
+            
+            <div class="flex items-center gap-2">
+              <svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+</svg>
+
+              <span></span>
+            </div>
+            
+
+            
+            
+            <div class="flex items-center gap-2">
+              <svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h7" />
+</svg>
+
+              <span></span>
+            </div>
+            
+          </div>
+
+          
+          <div class="text-muted-foreground space-y-3 pt-4 border-t border-border">
+            <div class="flex items-center gap-2">
+              <div class="shrink-0">
+                <svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10" />
+</svg>
+
+              </div>
+              <div class="flex-1 min-w-0">
+                <div class="flex flex-wrap items-center gap-1.5">
+                  <span class="text-muted-foreground text-sm font-medium">
+                    Categories:
+                  </span>
+                  <a href="/categories/tech/"
+                    class="inline-flex items-center rounded-full px-2.5 py-1 text-sm font-medium transition-all duration-200 bg-muted/50 text-muted-foreground hover:bg-muted hover:text-foreground">
+                    Tech
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="flex items-center gap-2">
+              <div class="shrink-0">
+                <svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 7h.01M7 3h5c.512 0 1.024.195 1.414.586l7 7a2 2 0 010 2.828l-7 7a2 2 0 01-2.828 0l-7-7A1.994 1.994 0 013 12V7a4 4 0 014-4z" />
+</svg>
+
+              </div>
+              <div class="flex-1 min-w-0">
+                <div class="flex flex-wrap items-center gap-1.5">
+                  <span class="text-muted-foreground text-sm font-medium">
+                    Tags:
+                  </span>
+                  <a href="/tags/ai/"
+                    class="inline-flex items-center rounded-full px-2.5 py-1 text-sm font-medium transition-all duration-200 bg-muted/50 text-muted-foreground hover:bg-muted hover:text-foreground">
+                    AI
+                  </a>
+                  <a href="/tags/%E5%A4%A7%E6%A8%A1%E5%9E%8B/"
+                    class="inline-flex items-center rounded-full px-2.5 py-1 text-sm font-medium transition-all duration-200 bg-muted/50 text-muted-foreground hover:bg-muted hover:text-foreground">
+                    大模型
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
     </div>
+  </div>
+</div>
+
   </header>
 
   
+  <article class="prose prose-neutral dark:prose-invert mb-12 max-w-none">
+    <p>有用cc-switch的，也有用cc-use-model的，我在deepseek的帮助下，采用了自建shell命令的方法。</p>
+<p>我的shell是fish，所以在<code>~/.config/fish/functions/</code>下面建立多个函数：</p>
+<div
+  class="code-block-container border-border bg-card my-6 overflow-hidden rounded-xl border shadow-sm transition-all duration-200 ease-out hover:-translate-y-0.5 hover:shadow-md"
+  data-code-block
+  data-code-id="code-0"
+  data-collapsible="true"
+  data-default-state="expanded"
+  data-collapsed="false"
+  data-auto-collapse-lines="30"
+  data-auto-collapse-height="400"
+  data-collapsed-height="120"
+>
+  
+  <div
+    class="code-block-header bg-muted/30 border-border flex items-center justify-between border-b px-4 py-3"
+  >
+    
+    <div class="flex items-center gap-2">
+      <div class="text-muted-foreground shrink-0">
+        <svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
+</svg>
+      </div>
+      <span class="text-muted-foreground text-sm font-medium">
+        SHELL
+      </span>
+    </div>
+
+    
+    <div class="flex items-center gap-2">
+      <button
+          class="collapse-code-btn text-muted-foreground hover:text-primary hover:bg-primary/10 focus:ring-primary/20 flex items-center gap-1.5 rounded-md px-2 py-1 text-xs font-medium transition-all duration-200 ease-out focus:ring-2 focus:outline-none"
+          type="button"
+          data-code-action="toggle-collapse"
+          data-label-expand=""
+          data-label-collapse=""
+          title=""
+          aria-label=""
+          aria-controls="code-0"
+          aria-expanded="true"
+        >
+          <span class="collapse-chevron transition-transform duration-200 ease-out">
+            <svg class="h-3 w-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+</svg>
+          </span>
+          <span class="collapse-text hidden sm:inline"></span>
+        </button>
+      <button
+        class="copy-code-btn text-muted-foreground hover:text-primary hover:bg-primary/10 focus:ring-primary/20 flex items-center gap-1.5 rounded-md px-2 py-1 text-xs font-medium transition-all duration-200 ease-out focus:ring-2 focus:outline-none"
+        type="button"
+        data-code-action="copy"
+        data-label-copy=""
+        data-label-copied=""
+        title=""
+        aria-label=""
+      >
+        <span class="copy-icon">
+          <svg class="h-3 w-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z" />
+</svg>
+        </span>
+        <span class="copy-text hidden sm:inline"></span>
+      </button>
+    </div>
+  </div>
+
+  
+  <div class="code-block-content relative" id="code-0">
+    <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl"><span class="c1"># cc-deepseek.fish</span>
+</span></span><span class="line"><span class="cl"><span class="k">function</span> cc-deepseek
+</span></span><span class="line"><span class="cl">    <span class="nb">set</span> -gx ANTHROPIC_BASE_URL <span class="s2">&#34;https://api.deepseek.com/anthropic&#34;</span>
+</span></span><span class="line"><span class="cl">    <span class="nb">set</span> -gx ANTHROPIC_AUTH_TOKEN <span class="s2">&#34;sk-yourkey&#34;</span>
+</span></span><span class="line"><span class="cl">    <span class="nb">set</span> -gx ANTHROPIC_MODEL <span class="s2">&#34;deepseek-v4-pro&#34;</span>
+</span></span><span class="line"><span class="cl">    <span class="nb">set</span> -gx ANTHROPIC_DEFAULT_OPUS_MODEL <span class="s2">&#34;deepseek-v4-pro&#34;</span>
+</span></span><span class="line"><span class="cl">    <span class="nb">set</span> -gx ANTHROPIC_DEFAULT_SONNET_MODEL <span class="s2">&#34;deepseek-v4-pro&#34;</span>
+</span></span><span class="line"><span class="cl">    <span class="nb">set</span> -gx ANTHROPIC_DEFAULT_HAIKU_MODEL <span class="s2">&#34;deepseek-v4-flash&#34;</span>
+</span></span><span class="line"><span class="cl">    <span class="nb">set</span> -gx CLAUDE_CODE_SUBAGENT_MODEL <span class="s2">&#34;deepseek-v4-flash&#34;</span>
+</span></span><span class="line"><span class="cl">    <span class="nb">echo</span> <span class="s2">&#34;✅ DeepSeek V4 (主: pro / 轻量: flash)&#34;</span>
+</span></span><span class="line"><span class="cl">end
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># cc-minimax.fish</span>
+</span></span><span class="line"><span class="cl"><span class="k">function</span> cc-minimax
+</span></span><span class="line"><span class="cl">    <span class="nb">set</span> -gx ANTHROPIC_BASE_URL <span class="s2">&#34;https://api.minimaxi.com/anthropic&#34;</span>
+</span></span><span class="line"><span class="cl">    <span class="nb">set</span> -gx ANTHROPIC_AUTH_TOKEN <span class="s2">&#34;sk-yourkey&#34;</span>
+</span></span><span class="line"><span class="cl">    <span class="nb">set</span> -gx ANTHROPIC_MODEL <span class="s2">&#34;MiniMax-M3&#34;</span>
+</span></span><span class="line"><span class="cl">    <span class="nb">set</span> -gx ANTHROPIC_DEFAULT_OPUS_MODEL <span class="s2">&#34;MiniMax-M3&#34;</span>
+</span></span><span class="line"><span class="cl">    <span class="nb">set</span> -gx ANTHROPIC_DEFAULT_SONNET_MODEL <span class="s2">&#34;MiniMax-M3&#34;</span>
+</span></span><span class="line"><span class="cl">    <span class="nb">set</span> -gx ANTHROPIC_DEFAULT_HAIKU_MODEL <span class="s2">&#34;MiniMax-M3&#34;</span>
+</span></span><span class="line"><span class="cl">    <span class="nb">set</span> -gx CLAUDE_CODE_SUBAGENT_MODEL <span class="s2">&#34;MiniMax-M3&#34;</span>
+</span></span><span class="line"><span class="cl">    <span class="nb">echo</span> <span class="s2">&#34;✅ MiniMax M3&#34;</span>
+</span></span><span class="line"><span class="cl">end
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">## cc-status</span>
+</span></span><span class="line"><span class="cl"><span class="k">function</span> cc-status
+</span></span><span class="line"><span class="cl">	<span class="k">if</span> <span class="nb">set</span> -q ANTHROPIC_MODEL <span class="o">&amp;&amp;</span> <span class="nb">set</span> -q ANTHROPIC_BASE_URL
+</span></span><span class="line"><span class="cl">		<span class="nb">echo</span> <span class="s2">&#34;📍 当前: </span><span class="nv">$ANTHROPIC_MODEL</span><span class="s2">  @  </span><span class="nv">$ANTHROPIC_BASE_URL</span><span class="s2">&#34;</span>
+</span></span><span class="line"><span class="cl">	<span class="k">else</span>
+</span></span><span class="line"><span class="cl">		<span class="nb">echo</span> <span class="s2">&#34;⚠️  未设置 ANTHROPIC_MODEL 或 ANTHROPIC_BASE_URL&#34;</span>
+</span></span><span class="line"><span class="cl">		<span class="k">return</span> <span class="m">1</span>
+</span></span><span class="line"><span class="cl">	end
+</span></span><span class="line"><span class="cl">end
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">## cc-clean</span>
+</span></span><span class="line"><span class="cl"><span class="k">function</span> cc-clean
+</span></span><span class="line"><span class="cl">    <span class="nb">set</span> -e ANTHROPIC_BASE_URL
+</span></span><span class="line"><span class="cl">    <span class="nb">set</span> -e ANTHROPIC_AUTH_TOKEN
+</span></span><span class="line"><span class="cl">    <span class="nb">set</span> -e ANTHROPIC_MODEL
+</span></span><span class="line"><span class="cl">    <span class="nb">set</span> -e ANTHROPIC_DEFAULT_OPUS_MODEL
+</span></span><span class="line"><span class="cl">    <span class="nb">set</span> -e ANTHROPIC_DEFAULT_SONNET_MODEL
+</span></span><span class="line"><span class="cl">    <span class="nb">set</span> -e ANTHROPIC_DEFAULT_HAIKU_MODEL
+</span></span><span class="line"><span class="cl">    <span class="nb">set</span> -e CLAUDE_CODE_SUBAGENT_MODEL
+</span></span><span class="line"><span class="cl">    <span class="nb">echo</span> <span class="s2">&#34;✅ claude related env cleaned&#34;</span>
+</span></span><span class="line"><span class="cl">end</span></span></code></pre></div>
+    <div hidden data-code-source># cc-deepseek.fish
+function cc-deepseek
+    set -gx ANTHROPIC_BASE_URL &#34;https://api.deepseek.com/anthropic&#34;
+    set -gx ANTHROPIC_AUTH_TOKEN &#34;sk-yourkey&#34;
+    set -gx ANTHROPIC_MODEL &#34;deepseek-v4-pro&#34;
+    set -gx ANTHROPIC_DEFAULT_OPUS_MODEL &#34;deepseek-v4-pro&#34;
+    set -gx ANTHROPIC_DEFAULT_SONNET_MODEL &#34;deepseek-v4-pro&#34;
+    set -gx ANTHROPIC_DEFAULT_HAIKU_MODEL &#34;deepseek-v4-flash&#34;
+    set -gx CLAUDE_CODE_SUBAGENT_MODEL &#34;deepseek-v4-flash&#34;
+    echo &#34;✅ DeepSeek V4 (主: pro / 轻量: flash)&#34;
+end
+
+# cc-minimax.fish
+function cc-minimax
+    set -gx ANTHROPIC_BASE_URL &#34;https://api.minimaxi.com/anthropic&#34;
+    set -gx ANTHROPIC_AUTH_TOKEN &#34;sk-yourkey&#34;
+    set -gx ANTHROPIC_MODEL &#34;MiniMax-M3&#34;
+    set -gx ANTHROPIC_DEFAULT_OPUS_MODEL &#34;MiniMax-M3&#34;
+    set -gx ANTHROPIC_DEFAULT_SONNET_MODEL &#34;MiniMax-M3&#34;
+    set -gx ANTHROPIC_DEFAULT_HAIKU_MODEL &#34;MiniMax-M3&#34;
+    set -gx CLAUDE_CODE_SUBAGENT_MODEL &#34;MiniMax-M3&#34;
+    echo &#34;✅ MiniMax M3&#34;
+end
+
+## cc-status
+function cc-status
+	if set -q ANTHROPIC_MODEL &amp;&amp; set -q ANTHROPIC_BASE_URL
+		echo &#34;📍 当前: $ANTHROPIC_MODEL  @  $ANTHROPIC_BASE_URL&#34;
+	else
+		echo &#34;⚠️  未设置 ANTHROPIC_MODEL 或 ANTHROPIC_BASE_URL&#34;
+		return 1
+	end
+end
+
+## cc-clean
+function cc-clean
+    set -e ANTHROPIC_BASE_URL
+    set -e ANTHROPIC_AUTH_TOKEN
+    set -e ANTHROPIC_MODEL
+    set -e ANTHROPIC_DEFAULT_OPUS_MODEL
+    set -e ANTHROPIC_DEFAULT_SONNET_MODEL
+    set -e ANTHROPIC_DEFAULT_HAIKU_MODEL
+    set -e CLAUDE_CODE_SUBAGENT_MODEL
+    echo &#34;✅ claude related env cleaned&#34;
+end</div>
+    
+    <div
+      class="collapse-overlay to-card/90 pointer-events-none absolute inset-0 bg-linear-to-b from-transparent via-transparent opacity-0 transition-opacity duration-300"
+      hidden
+    >
+      <button
+        class="collapse-overlay-btn text-muted-foreground bg-card/80 border-border/50 hover:bg-primary/10 hover:text-primary hover:border-primary/30 absolute bottom-4 left-1/2 flex -translate-x-1/2 items-center justify-center rounded-full border p-2 backdrop-blur-sm transition-all duration-200"
+        type="button"
+        data-code-action="expand"
+        aria-label=""
+        title=""
+      >
+        <svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+</svg>
+      </button>
+    </div>
+  </div>
+</div>
+<p>之后，要切换大模型的时候，只需要在命令行运行<code>cc-deepseek</code>或<code>cc-minimax</code>即可，并且可以用<code>cc-status</code>来查看当前模型。<code>cc-clean</code>用来清理当前窗口的环境命令，但是基本用不上。</p>
+<p>因为只是通过改变当前shell的环境变量来切换模型，所以新开一个shell窗口是不受影响的，可以继续通过<code>cc-deepseek</code>或<code>cc-minimax</code>来选择模型。还有一个额外的好处是，你可以在不同的窗口里面运行不同的大模型。</p>
+
+  </article>
+
   
   
-    
 
 
 
@@ -723,355 +1001,218 @@
 
 
 
-  <section class="post-list">
-    
-    
+
+  
 
 
-    
-    <div class="space-y-4">
+
+
+  <div class="post-license bg-muted/30 border-border mb-8 rounded-xl border p-6">
+    <div class="flex items-start gap-4">
       
-        
+      <div class="bg-primary/10 flex h-12 w-12 shrink-0 items-center justify-center rounded-lg">
+        <svg class="h-6 w-6" aria-label="许可证" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+</svg>
+      </div>
 
-
-
-
-<article class="group">
-  <a href="/posts/claude-code%E5%AF%B9%E6%8E%A5%E5%A4%9A%E7%A7%8D%E5%A4%A7%E6%A8%A1%E5%9E%8B/" class="block">
-    <div
-      class="bg-card border-border hover:bg-primary/5 hover:border-primary/20 focus:ring-primary/20 relative flex flex-col overflow-hidden rounded-xl border transition-all duration-300 ease-out hover:-translate-y-1 hover:scale-[1.02] hover:shadow-lg focus:ring-2 focus:outline-none md:flex-row"
-    >
       
-      <div class="flex flex-1 flex-col justify-center gap-4 p-6">
-        
-        <h3
-          class="text-foreground group-hover:text-primary text-xl leading-tight font-bold transition-colors duration-200"
-        >
-          Claude Code对接多种大模型
+      <div class="min-w-0 flex-1">
+        <h3 class="text-foreground mb-2 text-lg font-semibold">
+          
         </h3>
 
-        
-        
-          <p class="text-muted-foreground line-clamp-3 text-sm leading-relaxed md:line-clamp-2">
-            有用cc-switch的，也有用cc-use-model的，我在deepseek的帮助下，采用了自建shell命令的方法。
-我的shell是fish，所以在~/.config/fish/functions/下面建立多个函数：
+        <div class="text-muted-foreground space-y-2 text-sm">
+          
+          
+            <p>
+              <strong>:</strong>
+              Entropy Decrease
+            </p>
+          
 
+
+          
+          <p>
+            <strong>:</strong>
+            <a
+              href="https://entropydecrease.github.io/posts/claude-code%E5%AF%B9%E6%8E%A5%E5%A4%9A%E7%A7%8D%E5%A4%A7%E6%A8%A1%E5%9E%8B/"
+              class="text-primary hover:text-primary/80 break-all hyphens-auto transition-colors duration-200"
+            >
+              https://entropydecrease.github.io/posts/claude-code%E5%AF%B9%E6%8E%A5%E5%A4%9A%E7%A7%8D%E5%A4%A7%E6%A8%A1%E5%9E%8B/
+            </a>
           </p>
-        
-
-
-        
-        <div class="text-muted-foreground mt-2 flex flex-wrap items-center gap-x-4 gap-y-2 text-sm">
-          
-          <div class="flex items-center gap-1.5">
-            <svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
-</svg>
-
-            <time datetime="2026-06-08" class="font-medium">
-              June 8, 2026
-            </time>
-          </div>
 
           
-          
-            <div class="flex items-center gap-1.5">
-              <svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
-</svg>
-
-              <span class="truncate font-medium"
-                ></span
+          <p>
+            <strong>:</strong>
+            
+              <a
+                href="https://creativecommons.org/licenses/by-nc-sa/4.0/"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="text-primary hover:text-primary/80 transition-colors duration-200"
               >
-            </div>
-          
+                CC BY-NC-SA 4.0
+              </a>
+            
+          </p>
 
-
           
           
-            <div class="ml-auto flex flex-wrap items-center gap-1.5 md:ml-0">
-              
-                <span
-                  class="bg-muted/50 border-muted/30 flex items-center gap-1 rounded-md border px-2 py-0.5 text-xs"
-                >
-                  <span class="font-medium">AI</span>
-                </span>
-              
-                <span
-                  class="bg-muted/50 border-muted/30 flex items-center gap-1 rounded-md border px-2 py-0.5 text-xs"
-                >
-                  <span class="font-medium">大模型</span>
-                </span>
-              
-            </div>
+            <p class="text-xs">
+              This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License. Please attribute the source, use non-commercially, and maintain the same license.
+            </p>
           
         </div>
       </div>
     </div>
-  </a>
-</article>
+  </div>
 
+
+
+
+  
+  
+
+
+
+
+
+  <nav class="post-navigation mb-12">
+    <div class="grid grid-cols-1 gap-4 md:grid-cols-2">
       
+      <div class="nav-item">
         
+          <a
+            href="/posts/15%E8%A1%8Cpython%E4%BB%A3%E7%A0%81%E5%AE%9E%E7%8E%B0%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C%E7%9A%84%E9%9B%8F%E5%BD%A2/"
+            class="group bg-card border-border hover:bg-primary/5 hover:border-primary/20 focus:ring-primary/20 flex min-h-[140px] flex-col justify-between rounded-xl border p-6 transition-all duration-300 ease-out hover:-translate-y-1 hover:scale-[1.02] hover:shadow-lg focus:ring-2 focus:outline-none"
+          >
+            <div>
+              <div class="mb-3 flex items-center gap-3">
+                <svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+</svg>
+                <span class="text-muted-foreground text-sm font-medium">
+                  
+                </span>
+              </div>
 
+              <h3
+                class="text-foreground group-hover:text-primary mb-3 line-clamp-2 text-lg leading-tight font-semibold transition-colors duration-200"
+              >
+                15行python代码实现神经网络的雏形
+              </h3>
+            </div>
 
-
-
-<article class="group">
-  <a href="/posts/%E4%B8%AD%E5%9B%BD-ai-%E5%A4%A7%E5%8E%82%E8%AE%BF%E9%97%AE%E8%AE%B0-deepseek%E6%95%B4%E7%90%86%E5%92%8C%E6%80%BB%E7%BB%93/" class="block">
-    <div
-      class="bg-card border-border hover:bg-primary/5 hover:border-primary/20 focus:ring-primary/20 relative flex flex-col overflow-hidden rounded-xl border transition-all duration-300 ease-out hover:-translate-y-1 hover:scale-[1.02] hover:shadow-lg focus:ring-2 focus:outline-none md:flex-row"
-    >
-      
-      <div class="flex flex-1 flex-col justify-center gap-4 p-6">
-        
-        <h3
-          class="text-foreground group-hover:text-primary text-xl leading-tight font-bold transition-colors duration-200"
-        >
-          中国 AI 大厂访问记-deepseek整理和总结
-        </h3>
-
-        
-        
-          <p class="text-muted-foreground line-clamp-3 text-sm leading-relaxed md:line-clamp-2">
-            阮一峰本期的科技爱好者周刊 的「中国 AI 大厂访问记」部分提到：
-所有成员都是科技分析师，回到美国后，每个人都写了访问观感：Kevin Xu 、afra Wang 、Florian Brand 、Nathan Lambert 、 Azeem Azhar 、Lily …
-          </p>
-        
-
-
-        
-        <div class="text-muted-foreground mt-2 flex flex-wrap items-center gap-x-4 gap-y-2 text-sm">
-          
-          <div class="flex items-center gap-1.5">
-            <svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <div class="text-muted-foreground mt-auto flex items-center gap-2 text-xs">
+              <svg class="h-3 w-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
 </svg>
 
-            <time datetime="2026-06-05" class="font-medium">
-              June 5, 2026
-            </time>
-          </div>
+              <time datetime="2026-06-06">
+                6/6/26
+              </time>
+            </div>
+          </a>
+        
+      </div>
 
-          
-          
-            <div class="flex items-center gap-1.5">
+      
+      <div class="nav-item">
+        
+          <div
+            class="bg-muted/30 border-border/50 flex min-h-[140px] flex-col justify-center rounded-xl border p-6"
+          >
+            <div class="mb-3 flex items-center justify-end gap-3">
+              <span class="text-muted-foreground/50 text-sm font-medium">
+                
+              </span>
               <svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
 </svg>
-
-              <span class="truncate font-medium"
-                ></span
-              >
             </div>
-          
-
-
-          
-          
-            <div class="ml-auto flex flex-wrap items-center gap-1.5 md:ml-0">
-              
-                <span
-                  class="bg-muted/50 border-muted/30 flex items-center gap-1 rounded-md border px-2 py-0.5 text-xs"
-                >
-                  <span class="font-medium">AI</span>
-                </span>
-              
-                <span
-                  class="bg-muted/50 border-muted/30 flex items-center gap-1 rounded-md border px-2 py-0.5 text-xs"
-                >
-                  <span class="font-medium">大模型</span>
-                </span>
-              
-            </div>
-          
-        </div>
+          </div>
+        
       </div>
     </div>
-  </a>
-</article>
-
-      
-        
+  </nav>
 
 
 
 
-<article class="group">
-  <a href="/posts/%E4%B8%AD%E5%9B%BD-ai-%E5%A4%A7%E5%8E%82%E8%AE%BF%E9%97%AE%E8%AE%B0/" class="block">
-    <div
-      class="bg-card border-border hover:bg-primary/5 hover:border-primary/20 focus:ring-primary/20 relative flex flex-col overflow-hidden rounded-xl border transition-all duration-300 ease-out hover:-translate-y-1 hover:scale-[1.02] hover:shadow-lg focus:ring-2 focus:outline-none md:flex-row"
-    >
-      
-      <div class="flex flex-1 flex-col justify-center gap-4 p-6">
-        
-        <h3
-          class="text-foreground group-hover:text-primary text-xl leading-tight font-bold transition-colors duration-200"
-        >
-          中国 AI 大厂访问记
-        </h3>
-
-        
-        
-          <p class="text-muted-foreground line-clamp-3 text-sm leading-relaxed md:line-clamp-2">
-            阮一峰本期的科技爱好者周刊 的「中国 AI 大厂访问记」部分提到：
-所有成员都是科技分析师，回到美国后，每个人都写了访问观感：Kevin Xu 、afra Wang 、Florian Brand 、Nathan Lambert 、 Azeem Azhar 、Lily …
-          </p>
-        
+  
+  
 
 
-        
-        <div class="text-muted-foreground mt-2 flex flex-wrap items-center gap-x-4 gap-y-2 text-sm">
-          
-          <div class="flex items-center gap-1.5">
-            <svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+
+
+
+
+
+  <section class="related-posts mb-12">
+    
+    <div class="mb-6 flex items-center gap-3">
+      <svg class="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1" />
 </svg>
-
-            <time datetime="2026-06-05" class="font-medium">
-              June 5, 2026
-            </time>
-          </div>
-
-          
-          
-            <div class="flex items-center gap-1.5">
-              <svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
-</svg>
-
-              <span class="truncate font-medium"
-                ></span
-              >
-            </div>
-          
-
-
-          
-          
-            <div class="ml-auto flex flex-wrap items-center gap-1.5 md:ml-0">
-              
-                <span
-                  class="bg-muted/50 border-muted/30 flex items-center gap-1 rounded-md border px-2 py-0.5 text-xs"
-                >
-                  <span class="font-medium">AI</span>
-                </span>
-              
-                <span
-                  class="bg-muted/50 border-muted/30 flex items-center gap-1 rounded-md border px-2 py-0.5 text-xs"
-                >
-                  <span class="font-medium">大模型</span>
-                </span>
-              
-            </div>
-          
-        </div>
-      </div>
-    </div>
-  </a>
-</article>
-
-      
+      <h2 class="text-foreground text-2xl font-bold">
         
-
-
-
-
-<article class="group">
-  <a href="/posts/internet_viewership/" class="block">
-    <div
-      class="bg-card border-border hover:bg-primary/5 hover:border-primary/20 focus:ring-primary/20 relative flex flex-col overflow-hidden rounded-xl border transition-all duration-300 ease-out hover:-translate-y-1 hover:scale-[1.02] hover:shadow-lg focus:ring-2 focus:outline-none md:flex-row"
-    >
-      
-      <div class="flex flex-1 flex-col justify-center gap-4 p-6">
-        
-        <h3
-          class="text-foreground group-hover:text-primary text-xl leading-tight font-bold transition-colors duration-200"
-        >
-          “流量变现正在崩塌”，以及由此的思考
-        </h3>
-
-        
-        
-          <p class="text-muted-foreground line-clamp-3 text-sm leading-relaxed md:line-clamp-2">
-            看到一个有意思的观点 ：
-PLAINTEXT 上周，Cloudflare 创始人兼 CEO 马修·普林斯（Matthew Prince）接受了访谈。 他说了一个全新的观点，互联网&#34;流量为王&#34;的时代就要结束了，AI 将终结传统的互联网商业模式。 我觉得，他表达得很完 …
-          </p>
-        
-
-
-        
-        <div class="text-muted-foreground mt-2 flex flex-wrap items-center gap-x-4 gap-y-2 text-sm">
-          
-          <div class="flex items-center gap-1.5">
-            <svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
-</svg>
-
-            <time datetime="2025-09-14" class="font-medium">
-              September 14, 2025
-            </time>
-          </div>
-
-          
-          
-            <div class="flex items-center gap-1.5">
-              <svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
-</svg>
-
-              <span class="truncate font-medium"
-                ></span
-              >
-            </div>
-          
-
-
-          
-          
-            <div class="ml-auto flex flex-wrap items-center gap-1.5 md:ml-0">
-              
-                <span
-                  class="bg-muted/50 border-muted/30 flex items-center gap-1 rounded-md border px-2 py-0.5 text-xs"
-                >
-                  <span class="font-medium">互联网</span>
-                </span>
-              
-                <span
-                  class="bg-muted/50 border-muted/30 flex items-center gap-1 rounded-md border px-2 py-0.5 text-xs"
-                >
-                  <span class="font-medium">大模型</span>
-                </span>
-              
-                <span
-                  class="bg-muted/50 border-muted/30 flex items-center gap-1 rounded-md border px-2 py-0.5 text-xs"
-                >
-                  <span class="font-medium">AI</span>
-                </span>
-              
-                <span
-                  class="bg-muted/50 border-muted/30 flex items-center gap-1 rounded-md border px-2 py-0.5 text-xs"
-                >
-                  <span class="font-medium">经济</span>
-                </span>
-              
-            </div>
-          
-        </div>
-      </div>
-    </div>
-  </a>
-</article>
-
-      
+      </h2>
     </div>
 
     
-    
-
+    <div class="grid w-full grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3">
+      
+        <article class="group">
+          <a href="/posts/%E4%B8%AD%E5%9B%BD-ai-%E5%A4%A7%E5%8E%82%E8%AE%BF%E9%97%AE%E8%AE%B0-deepseek%E6%95%B4%E7%90%86%E5%92%8C%E6%80%BB%E7%BB%93/" class="block">
+            <div
+              class="bg-card border-border hover:bg-primary/5 hover:border-primary/20 focus:ring-primary/20 flex min-h-[120px] items-center rounded-xl border p-5 transition-all duration-300 ease-out hover:-translate-y-1 hover:scale-[1.02] hover:shadow-lg focus:ring-2 focus:outline-none"
+            >
+              <h3
+                class="text-foreground group-hover:text-primary line-clamp-3 w-full text-lg leading-snug font-semibold"
+              >
+                中国 AI 大厂访问记-deepseek整理和总结
+              </h3>
+            </div>
+          </a>
+        </article>
+      
+        <article class="group">
+          <a href="/posts/%E4%B8%AD%E5%9B%BD-ai-%E5%A4%A7%E5%8E%82%E8%AE%BF%E9%97%AE%E8%AE%B0/" class="block">
+            <div
+              class="bg-card border-border hover:bg-primary/5 hover:border-primary/20 focus:ring-primary/20 flex min-h-[120px] items-center rounded-xl border p-5 transition-all duration-300 ease-out hover:-translate-y-1 hover:scale-[1.02] hover:shadow-lg focus:ring-2 focus:outline-none"
+            >
+              <h3
+                class="text-foreground group-hover:text-primary line-clamp-3 w-full text-lg leading-snug font-semibold"
+              >
+                中国 AI 大厂访问记
+              </h3>
+            </div>
+          </a>
+        </article>
+      
+        <article class="group">
+          <a href="/posts/internet_viewership/" class="block">
+            <div
+              class="bg-card border-border hover:bg-primary/5 hover:border-primary/20 focus:ring-primary/20 flex min-h-[120px] items-center rounded-xl border p-5 transition-all duration-300 ease-out hover:-translate-y-1 hover:scale-[1.02] hover:shadow-lg focus:ring-2 focus:outline-none"
+            >
+              <h3
+                class="text-foreground group-hover:text-primary line-clamp-3 w-full text-lg leading-snug font-semibold"
+              >
+                “流量变现正在崩塌”，以及由此的思考
+              </h3>
+            </div>
+          </a>
+        </article>
+      
+    </div>
   </section>
 
 
+
+
+  
   
 
 
@@ -1465,6 +1606,46 @@ PLAINTEXT 上周，Cloudflare 创始人兼 CEO 马修·普林斯（Matthew Princ
       
 
 
+  <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/katex@0.16.22/dist/katex.min.css"
+    integrity="sha384-5TcZemv2l/9On385z///+d7MSYlvIEw9FuZTIdZ14vJLqWphw7e7ZPuOiCHJcFCP"
+    crossorigin="anonymous"
+  />
+  <script
+    defer
+    src="https://cdn.jsdelivr.net/npm/katex@0.16.22/dist/katex.min.js"
+    integrity="sha384-cMkvdD8LoxVzGF/RPUKAcvmm49FQ0oxwDF3BGKtDXcEc+T1b2N+teh/OJfpU0jr6"
+    crossorigin="anonymous"
+  ></script>
+  <script
+    defer
+    src="https://cdn.jsdelivr.net/npm/katex@0.16.22/dist/contrib/auto-render.min.js"
+    integrity="sha384-hCXGrW6PitJEwbkoStFjeJxv+fSOOQKOPbJxSfM6G5sWZjAyWhXiTIIAmQqnlLlh"
+    crossorigin="anonymous"
+  ></script>
+
+  <script>
+    function initKaTeX() {
+      if (typeof renderMathInElement === "undefined") {
+        setTimeout(initKaTeX, 100);
+        return;
+      }renderMathInElement(document.body, {
+        delimiters: [{"display":true,"left":"$$","right":"$$"},{"display":false,"left":"$","right":"$"},{"display":false,"left":"\\(","right":"\\)"},{"display":true,"left":"\\[","right":"\\]"}],
+        throwOnError: false,
+        errorColor: "#cc0000",
+        fleqn: false,
+        leqno: false,
+        trust: false,
+      });
+    }
+
+    if (document.readyState === "loading") {
+      document.addEventListener("DOMContentLoaded", initKaTeX, { once: true });
+    } else {
+      initKaTeX();
+    }
+  </script>
       
 
 
