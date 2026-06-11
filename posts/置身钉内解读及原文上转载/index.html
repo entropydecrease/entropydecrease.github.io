@@ -1,0 +1,2092 @@
+<!doctype html>
+<html lang="zh-CN" data-theme="emerald">
+  <head>
+    <meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+<title>《置身钉内》解读及原文（上）（转载） |
+    Entropy Decrease</title>
+
+<meta
+  name="description"
+  content="转载自微信公众号「退休僧」《置身钉内》解读及原文（上） 《置身钉内》解读及原文（上）文章概要
+6月4日，曾任职于钉钉的产品经理滕雅辛（花名 “幽素”）在公司内网发布了一篇包含 7.5 万字的长篇文章—《置身钉内》，这篇长达7.5万字的深度复盘文章，作者以第一人称视角记录了其在钉钉核心保密项目..."
+/>
+<meta
+  name="keywords"
+  content="AI, 个人成长, 互联网"
+/>
+<meta
+  name="author"
+  content="Entropy Decrease"
+/>
+<meta name="language" content="en-US" />
+
+<meta
+  name="robots"
+  content="index, follow"
+/>
+<link rel="canonical" href="https://entropydecrease.github.io/posts/%E7%BD%AE%E8%BA%AB%E9%92%89%E5%86%85%E8%A7%A3%E8%AF%BB%E5%8F%8A%E5%8E%9F%E6%96%87%E4%B8%8A%E8%BD%AC%E8%BD%BD/" />
+
+
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+<link rel="manifest" href="/site.webmanifest" />
+<meta property="og:url" content="https://entropydecrease.github.io/posts/%E7%BD%AE%E8%BA%AB%E9%92%89%E5%86%85%E8%A7%A3%E8%AF%BB%E5%8F%8A%E5%8E%9F%E6%96%87%E4%B8%8A%E8%BD%AC%E8%BD%BD/">
+	<meta property="og:site_name" content="Entropy Decrease">
+	<meta property="og:title" content="《置身钉内》解读及原文（上）（转载）">
+	<meta property="og:description" content="转载自微信公众号「退休僧」《置身钉内》解读及原文（上） 《置身钉内》解读及原文（上）文章概要">
+	<meta property="og:locale" content="zh_CN">
+	<meta property="og:type" content="article">
+		<meta property="article:section" content="posts">
+		<meta property="article:published_time" content="2026-06-11T00:00:00+00:00">
+		<meta property="article:modified_time" content="2026-06-11T00:00:00+00:00">
+		<meta property="article:tag" content="AI">
+		<meta property="article:tag" content="个人成长">
+		<meta property="article:tag" content="互联网">
+		<meta property="og:image" content="https://entropydecrease.github.io/images/og-default.avif">
+
+
+	<meta name="twitter:card" content="summary_large_image">
+	<meta name="twitter:image" content="https://entropydecrease.github.io/images/og-default.avif">
+	<meta name="twitter:title" content="《置身钉内》解读及原文（上）（转载）">
+	<meta name="twitter:description" content="转载自微信公众号「退休僧」《置身钉内》解读及原文（上） 《置身钉内》解读及原文（上）文章概要">
+
+
+	<meta itemprop="name" content="《置身钉内》解读及原文（上）（转载）">
+	<meta itemprop="description" content="转载自微信公众号「退休僧」《置身钉内》解读及原文（上） 《置身钉内》解读及原文（上）文章概要">
+	<meta itemprop="datePublished" content="2026-06-11T00:00:00+00:00">
+	<meta itemprop="dateModified" content="2026-06-11T00:00:00+00:00">
+	<meta itemprop="wordCount" content="42818">
+	<meta itemprop="image" content="https://entropydecrease.github.io/images/og-default.avif">
+	<meta itemprop="keywords" content="AI,个人成长,互联网">
+
+
+
+
+
+<script id="search-config" type="application/json">"{\"searchIndexURL\":\"/index.json\"}"</script>
+
+
+
+
+
+
+  
+    
+      <link
+        rel="stylesheet"
+        href="/css/compiled.min.4a6fd33c0e2db207c1646e8a588be381fd817a1b0cd86004cbb040e8dcf50b31.css"
+        integrity="sha256-Sm/TPA4tsgfBZG6KWIvjgf2BehsM2GAEy7BA6Nz1CzE="
+        crossorigin="anonymous"
+      />
+    
+  
+
+
+
+
+  
+    
+      <link
+        rel="stylesheet"
+        href="/css/chroma.min.491df36221f739b5948a747a0351f100ee7ccaaf466d9f46288bf06de1d59123.css"
+        integrity="sha256-SR3zYiH3ObWUinR6A1HxAO58yq9GbZ9GKIvwbeHVkSM="
+        crossorigin="anonymous"
+      />
+    
+  
+
+
+
+
+  
+    
+      <link
+        rel="stylesheet"
+        href="/css/custom/typography.min.f66fd1cfe0a5652929cb8c19ba1b5e686c5477e001b2e9735c3d385634050207.css"
+        integrity="sha256-9m/Rz&#43;ClZSkpy4wZuhteaGxUd&#43;ABsulzXD04VjQFAgc="
+        crossorigin="anonymous"
+      />
+    
+  
+
+
+
+        <script
+          src="/js/main.f482676046fba6a50f6e6580bd1306489d4fea5f7144231757bf01af2498b168.js"
+          integrity="sha256-9IJnYEb7pqUPbmWAvRMGSJ1P6l9xRCMXV78BrySYsWg="
+          crossorigin="anonymous"
+          defer
+        ></script>
+
+
+
+            <script
+              src="/js/toc.3026ef97e410bb3e98d57739bcabc32ac568e9001b2e42385de731663378ae85.js"
+              integrity="sha256-MCbvl&#43;QQuz6Y1Xc5vKvDKsVo6QAbLkI4XecxZjN4roU="
+              crossorigin="anonymous"
+              defer
+            ></script>
+
+
+
+        <script
+          src="/js/search.33fef1d91398b17cbc46483d902493b800642d25754e7ff8e998b12499c7fde3.js"
+          integrity="sha256-M/7x2ROYsXy8Rkg9kCSTuABkLSV1Tn/46ZixJJnH/eM="
+          crossorigin="anonymous"
+          defer
+        ></script>
+
+
+
+        <script
+          src="/js/dock.fc33c1fd0e0525acdd5b7abed135239608c36a061f3b566fbc9e5841594b11af.js"
+          integrity="sha256-/DPB/Q4FJazdW3q&#43;0TUjlgjDagYfO1ZvvJ5YQVlLEa8="
+          crossorigin="anonymous"
+          defer
+        ></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+    <script>(function(){const e=localStorage.getItem("theme")||"system",n=localStorage.getItem("colorScheme")||"emerald";document.documentElement.setAttribute("data-theme",n);function t(){e==="dark"||e==="system"&&window.matchMedia("(prefers-color-scheme: dark)").matches?document.documentElement.classList.add("dark"):document.documentElement.classList.remove("dark")}t(),e==="system"&&window.matchMedia("(prefers-color-scheme: dark)").addEventListener("change",t)})()</script>
+  </head><body class="bg-background text-foreground min-h-screen antialiased">
+    <main class="mx-auto w-full" style="max-width: 56rem">
+      <div
+    id="reading-progress-bar"
+    class="from-primary to-primary/80 pointer-events-none fixed top-0 left-0 z-50 h-[3px] w-0 bg-linear-to-r transition-[width] duration-150 ease-out"
+  ></div>
+
+  <script>
+    (function () {
+      const bar = document.getElementById("reading-progress-bar");
+      if (!bar) return;
+
+      function update() {
+        const scrolled = window.scrollY;
+        const total = document.documentElement.scrollHeight - window.innerHeight;
+        bar.style.width = total > 0 ? (scrolled / total) * 100 + "%" : "0%";
+      }
+
+      let ticking = false;
+      window.addEventListener(
+        "scroll",
+        () => {
+          if (!ticking) {
+            requestAnimationFrame(() => {
+              update();
+              ticking = false;
+            });
+            ticking = true;
+          }
+        },
+        { passive: true }
+      );
+
+      update();
+    })();
+  </script>
+
+      <header class=" px-4 py-6">
+  <div
+    class="border-border bg-card/80 flex items-center rounded-xl border px-6 py-4 shadow-sm backdrop-blur-sm"
+  >
+    
+    <div class="hidden w-full items-center md:flex md:min-w-0">
+      
+      <div class="flex items-center">
+        
+          <a
+            href="
+              /
+            "
+            class="flex h-10 w-10 items-center justify-center overflow-hidden rounded-full transition-transform duration-200 hover:scale-105"
+            aria-label="Entropy Decrease"
+          >
+            <img
+              src="/"
+              alt="Entropy Decrease"
+              class="h-full w-full object-cover"
+            />
+          </a>
+        
+      </div>
+
+      
+      <nav class="mx-8 flex min-w-0 flex-1 items-center justify-center">
+        <div class="flex flex-wrap items-center justify-center space-x-1">
+          
+          
+            
+            
+            
+              
+                
+              
+            
+            
+              
+              <a
+                href="/posts/"
+                class="nav-link 
+                  text-muted-foreground hover:text-primary hover:bg-primary/10
+                 focus:ring-primary/20 relative flex items-center gap-2 rounded-lg px-4 py-2 text-sm font-medium transition-all duration-300 ease-out hover:-translate-y-0.5 hover:scale-105 focus:ring-2 focus:outline-none"
+              >
+                
+                  <svg class="h-5 w-5" aria-label="posts" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 20H5a2 2 0 01-2-2V6a2 2 0 012-2h10a2 2 0 012 2v1m2 13a2 2 0 01-2-2V7m2 13a2 2 0 002-2V9a2 2 0 00-2-2h-2m-4-3H9M7 16h6M7 8h6v4H7V8z" />
+</svg>
+
+                
+                <span>posts</span>
+              </a>
+            
+          
+            
+            
+            
+              
+                
+              
+            
+            
+              
+              <a
+                href="/categories/"
+                class="nav-link 
+                  text-muted-foreground hover:text-primary hover:bg-primary/10
+                 focus:ring-primary/20 relative flex items-center gap-2 rounded-lg px-4 py-2 text-sm font-medium transition-all duration-300 ease-out hover:-translate-y-0.5 hover:scale-105 focus:ring-2 focus:outline-none"
+              >
+                
+                  <svg class="h-5 w-5" aria-label="categories" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10" />
+</svg>
+
+                
+                <span>categories</span>
+              </a>
+            
+          
+            
+            
+            
+              
+                
+              
+            
+            
+              
+              <a
+                href="/tags/"
+                class="nav-link 
+                  text-muted-foreground hover:text-primary hover:bg-primary/10
+                 focus:ring-primary/20 relative flex items-center gap-2 rounded-lg px-4 py-2 text-sm font-medium transition-all duration-300 ease-out hover:-translate-y-0.5 hover:scale-105 focus:ring-2 focus:outline-none"
+              >
+                
+                  <svg class="h-5 w-5" aria-label="tags" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 7h.01M7 3h5c.512 0 1.024.195 1.414.586l7 7a2 2 0 010 2.828l-7 7a2 2 0 01-2.828 0l-7-7A1.994 1.994 0 013 12V7a4 4 0 014-4z" />
+</svg>
+
+                
+                <span>tags</span>
+              </a>
+            
+          
+            
+            
+            
+              
+                
+              
+            
+            
+              
+              <a
+                href="/archives/"
+                class="nav-link 
+                  text-muted-foreground hover:text-primary hover:bg-primary/10
+                 focus:ring-primary/20 relative flex items-center gap-2 rounded-lg px-4 py-2 text-sm font-medium transition-all duration-300 ease-out hover:-translate-y-0.5 hover:scale-105 focus:ring-2 focus:outline-none"
+              >
+                
+                  <svg class="h-5 w-5" aria-label="archives" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 8h14M5 8a2 2 0 110-4h14a2 2 0 110 4M5 8v10a2 2 0 002 2h10a2 2 0 002-2V8m-9 4h4" />
+</svg>
+
+                
+                <span>archives</span>
+              </a>
+            
+          
+        </div>
+      </nav>
+
+      
+      <div class="flex items-center space-x-2">
+        
+        
+
+
+        
+        <div class="relative">
+    <button
+      id="color-scheme-toggle"
+      class="dropdown-toggle border-border bg-background text-muted-foreground hover:text-primary hover:bg-primary/10 focus:ring-primary/20 flex h-10 w-10 items-center justify-center rounded-lg border transition-all duration-300 ease-out hover:scale-105 focus:ring-2 focus:outline-none active:scale-95"
+      data-dropdown-type="color-scheme"
+      aria-label=""
+      aria-expanded="false"
+      aria-haspopup="true"
+    ><svg class="h-5 w-5 relative z-10" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zM21 5a2 2 0 00-2-2h-4a2 2 0 00-2 2v6a2 2 0 002 2h4a2 2 0 002-2V5z" />
+</svg>
+</button>
+
+    <div
+      id="color-scheme-dropdown"
+      class="dropdown-menu border-border bg-popover/95 w-44 absolute top-12 right-0 z-60 hidden rounded-lg border p-1 shadow-lg backdrop-blur-sm transition-all duration-200 ease-out"
+      data-dropdown-type="color-scheme"
+      
+    ><button data-color-scheme="default" class="text-accent-foreground hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground flex w-full items-center rounded-md px-4 py-2 text-sm transition-all duration-200 ease-out focus:outline-none"><span>Default</span></button><button data-color-scheme="claude" class="text-accent-foreground hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground flex w-full items-center rounded-md px-4 py-2 text-sm transition-all duration-200 ease-out focus:outline-none"><span>Claude</span></button><button data-color-scheme="bumblebee" class="text-accent-foreground hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground flex w-full items-center rounded-md px-4 py-2 text-sm transition-all duration-200 ease-out focus:outline-none"><span>Bumblebee</span></button><button data-color-scheme="emerald" class="text-accent-foreground hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground flex w-full items-center rounded-md px-4 py-2 text-sm transition-all duration-200 ease-out focus:outline-none"><span>Emerald</span></button><button data-color-scheme="nord" class="text-accent-foreground hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground flex w-full items-center rounded-md px-4 py-2 text-sm transition-all duration-200 ease-out focus:outline-none"><span>Nord</span></button><button data-color-scheme="sunset" class="text-accent-foreground hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground flex w-full items-center rounded-md px-4 py-2 text-sm transition-all duration-200 ease-out focus:outline-none"><span>Sunset</span></button><button data-color-scheme="abyss" class="text-accent-foreground hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground flex w-full items-center rounded-md px-4 py-2 text-sm transition-all duration-200 ease-out focus:outline-none"><span>Abyss</span></button><button data-color-scheme="dracula" class="text-accent-foreground hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground flex w-full items-center rounded-md px-4 py-2 text-sm transition-all duration-200 ease-out focus:outline-none"><span>Dracula</span></button><button data-color-scheme="amethyst" class="text-accent-foreground hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground flex w-full items-center rounded-md px-4 py-2 text-sm transition-all duration-200 ease-out focus:outline-none"><span>Amethyst</span></button><button data-color-scheme="slate" class="text-accent-foreground hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground flex w-full items-center rounded-md px-4 py-2 text-sm transition-all duration-200 ease-out focus:outline-none"><span>Slate</span></button><button data-color-scheme="twitter" class="text-accent-foreground hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground flex w-full items-center rounded-md px-4 py-2 text-sm transition-all duration-200 ease-out focus:outline-none"><span>Twitter</span></button></div>
+  </div>
+
+
+        
+        <div class="relative">
+    <button
+      id="theme-toggle"
+      class="dropdown-toggle border-border bg-background text-muted-foreground hover:text-primary hover:bg-primary/10 focus:ring-primary/20 flex h-10 w-10 items-center justify-center rounded-lg border transition-all duration-300 ease-out hover:scale-105 focus:ring-2 focus:outline-none active:scale-95"
+      data-dropdown-type="theme"
+      aria-label=""
+      aria-expanded="false"
+      aria-haspopup="true"
+    ><svg class="h-5 w-5 sun-icon hidden relative z-10" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" />
+</svg>
+
+        <svg class="h-5 w-5 moon-icon hidden relative z-10" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" />
+</svg>
+
+        <svg class="h-5 w-5 system-icon hidden relative z-10" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+</svg>
+</button>
+
+    <div
+      id="theme-dropdown"
+      class="dropdown-menu border-border bg-popover/95 w-40 absolute top-12 right-0 z-60 hidden rounded-lg border p-1 shadow-lg backdrop-blur-sm transition-all duration-200 ease-out"
+      data-dropdown-type="theme"
+      
+    ><button data-theme="light" class="text-accent-foreground hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground flex w-full items-center rounded-md px-4 py-2 text-sm transition-all duration-200 ease-out focus:outline-none"><svg class="h-5 w-5 mr-3 h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" />
+</svg>
+<span></span></button><button data-theme="dark" class="text-accent-foreground hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground flex w-full items-center rounded-md px-4 py-2 text-sm transition-all duration-200 ease-out focus:outline-none"><svg class="h-5 w-5 mr-3 h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" />
+</svg>
+<span></span></button><button data-theme="system" class="text-accent-foreground hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground flex w-full items-center rounded-md px-4 py-2 text-sm transition-all duration-200 ease-out focus:outline-none"><svg class="h-5 w-5 mr-3 h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+</svg>
+<span></span></button></div>
+  </div>
+      </div>
+    </div>
+
+    
+    <div class="flex w-full items-center justify-between md:hidden">
+      
+      
+<button
+  id="mobile-nav-toggle"
+  class="nav-panel-toggle border-border bg-background text-muted-foreground hover:bg-accent hover:text-foreground flex h-10 w-10 items-center justify-center rounded-lg border transition-colors duration-200"
+  aria-label=""
+  aria-expanded="false"
+  aria-controls="mobile-nav-panel"
+>
+  <svg class="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+</svg>
+
+</button>
+
+
+
+      
+      <div class="flex items-center space-x-2">
+        
+        
+
+
+        
+        <div class="relative">
+    <button
+      id="color-scheme-toggle"
+      class="dropdown-toggle border-border bg-background text-muted-foreground hover:text-primary hover:bg-primary/10 focus:ring-primary/20 flex h-10 w-10 items-center justify-center rounded-lg border transition-all duration-300 ease-out hover:scale-105 focus:ring-2 focus:outline-none active:scale-95"
+      data-dropdown-type="color-scheme"
+      aria-label=""
+      aria-expanded="false"
+      aria-haspopup="true"
+    ><svg class="h-5 w-5 relative z-10" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zM21 5a2 2 0 00-2-2h-4a2 2 0 00-2 2v6a2 2 0 002 2h4a2 2 0 002-2V5z" />
+</svg>
+</button>
+
+    <div
+      id="color-scheme-dropdown"
+      class="dropdown-menu border-border bg-popover/95 w-44 absolute top-12 right-0 z-60 hidden rounded-lg border p-1 shadow-lg backdrop-blur-sm transition-all duration-200 ease-out"
+      data-dropdown-type="color-scheme"
+      
+    ><button data-color-scheme="default" class="text-accent-foreground hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground flex w-full items-center rounded-md px-4 py-2 text-sm transition-all duration-200 ease-out focus:outline-none"><span>Default</span></button><button data-color-scheme="claude" class="text-accent-foreground hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground flex w-full items-center rounded-md px-4 py-2 text-sm transition-all duration-200 ease-out focus:outline-none"><span>Claude</span></button><button data-color-scheme="bumblebee" class="text-accent-foreground hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground flex w-full items-center rounded-md px-4 py-2 text-sm transition-all duration-200 ease-out focus:outline-none"><span>Bumblebee</span></button><button data-color-scheme="emerald" class="text-accent-foreground hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground flex w-full items-center rounded-md px-4 py-2 text-sm transition-all duration-200 ease-out focus:outline-none"><span>Emerald</span></button><button data-color-scheme="nord" class="text-accent-foreground hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground flex w-full items-center rounded-md px-4 py-2 text-sm transition-all duration-200 ease-out focus:outline-none"><span>Nord</span></button><button data-color-scheme="sunset" class="text-accent-foreground hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground flex w-full items-center rounded-md px-4 py-2 text-sm transition-all duration-200 ease-out focus:outline-none"><span>Sunset</span></button><button data-color-scheme="abyss" class="text-accent-foreground hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground flex w-full items-center rounded-md px-4 py-2 text-sm transition-all duration-200 ease-out focus:outline-none"><span>Abyss</span></button><button data-color-scheme="dracula" class="text-accent-foreground hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground flex w-full items-center rounded-md px-4 py-2 text-sm transition-all duration-200 ease-out focus:outline-none"><span>Dracula</span></button><button data-color-scheme="amethyst" class="text-accent-foreground hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground flex w-full items-center rounded-md px-4 py-2 text-sm transition-all duration-200 ease-out focus:outline-none"><span>Amethyst</span></button><button data-color-scheme="slate" class="text-accent-foreground hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground flex w-full items-center rounded-md px-4 py-2 text-sm transition-all duration-200 ease-out focus:outline-none"><span>Slate</span></button><button data-color-scheme="twitter" class="text-accent-foreground hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground flex w-full items-center rounded-md px-4 py-2 text-sm transition-all duration-200 ease-out focus:outline-none"><span>Twitter</span></button></div>
+  </div>
+
+
+        
+        <div class="relative">
+    <button
+      id="theme-toggle"
+      class="dropdown-toggle border-border bg-background text-muted-foreground hover:text-primary hover:bg-primary/10 focus:ring-primary/20 flex h-10 w-10 items-center justify-center rounded-lg border transition-all duration-300 ease-out hover:scale-105 focus:ring-2 focus:outline-none active:scale-95"
+      data-dropdown-type="theme"
+      aria-label=""
+      aria-expanded="false"
+      aria-haspopup="true"
+    ><svg class="h-5 w-5 sun-icon hidden relative z-10" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" />
+</svg>
+
+        <svg class="h-5 w-5 moon-icon hidden relative z-10" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" />
+</svg>
+
+        <svg class="h-5 w-5 system-icon hidden relative z-10" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+</svg>
+</button>
+
+    <div
+      id="theme-dropdown"
+      class="dropdown-menu border-border bg-popover/95 w-40 absolute top-12 right-0 z-60 hidden rounded-lg border p-1 shadow-lg backdrop-blur-sm transition-all duration-200 ease-out"
+      data-dropdown-type="theme"
+      
+    ><button data-theme="light" class="text-accent-foreground hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground flex w-full items-center rounded-md px-4 py-2 text-sm transition-all duration-200 ease-out focus:outline-none"><svg class="h-5 w-5 mr-3 h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" />
+</svg>
+<span></span></button><button data-theme="dark" class="text-accent-foreground hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground flex w-full items-center rounded-md px-4 py-2 text-sm transition-all duration-200 ease-out focus:outline-none"><svg class="h-5 w-5 mr-3 h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" />
+</svg>
+<span></span></button><button data-theme="system" class="text-accent-foreground hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground flex w-full items-center rounded-md px-4 py-2 text-sm transition-all duration-200 ease-out focus:outline-none"><svg class="h-5 w-5 mr-3 h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+</svg>
+<span></span></button></div>
+  </div>
+      </div>
+    </div>
+  </div>
+
+  
+  
+<div
+  id="mobile-nav-panel"
+  class="mt-2 hidden md:hidden"
+  role="navigation"
+  aria-label=""
+  aria-hidden="true"
+  tabindex="-1"
+>
+  <div
+    class="border-border bg-popover/95 overflow-hidden rounded-xl border shadow-lg backdrop-blur-sm"
+  >
+    
+    <nav class="flex flex-col p-2">
+      
+      
+        
+        
+        
+          
+            
+          
+        
+        
+          
+          <a
+            href="/posts/"
+            class="nav-panel-link 
+              text-muted-foreground hover:text-primary hover:bg-primary/10
+             focus:ring-primary/20 flex items-center gap-3 rounded-lg px-4 py-3 text-sm font-medium transition-all duration-200 ease-out focus:ring-2 focus:outline-none"
+            role="menuitem"
+            
+          >
+            
+              <svg class="h-5 w-5" aria-label="posts" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 20H5a2 2 0 01-2-2V6a2 2 0 012-2h10a2 2 0 012 2v1m2 13a2 2 0 01-2-2V7m2 13a2 2 0 002-2V9a2 2 0 00-2-2h-2m-4-3H9M7 16h6M7 8h6v4H7V8z" />
+</svg>
+
+            
+            <span>posts</span>
+          </a>
+        
+      
+        
+        
+        
+          
+            
+          
+        
+        
+          
+          <a
+            href="/categories/"
+            class="nav-panel-link 
+              text-muted-foreground hover:text-primary hover:bg-primary/10
+             focus:ring-primary/20 flex items-center gap-3 rounded-lg px-4 py-3 text-sm font-medium transition-all duration-200 ease-out focus:ring-2 focus:outline-none"
+            role="menuitem"
+            
+          >
+            
+              <svg class="h-5 w-5" aria-label="categories" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10" />
+</svg>
+
+            
+            <span>categories</span>
+          </a>
+        
+      
+        
+        
+        
+          
+            
+          
+        
+        
+          
+          <a
+            href="/tags/"
+            class="nav-panel-link 
+              text-muted-foreground hover:text-primary hover:bg-primary/10
+             focus:ring-primary/20 flex items-center gap-3 rounded-lg px-4 py-3 text-sm font-medium transition-all duration-200 ease-out focus:ring-2 focus:outline-none"
+            role="menuitem"
+            
+          >
+            
+              <svg class="h-5 w-5" aria-label="tags" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 7h.01M7 3h5c.512 0 1.024.195 1.414.586l7 7a2 2 0 010 2.828l-7 7a2 2 0 01-2.828 0l-7-7A1.994 1.994 0 013 12V7a4 4 0 014-4z" />
+</svg>
+
+            
+            <span>tags</span>
+          </a>
+        
+      
+        
+        
+        
+          
+            
+          
+        
+        
+          
+          <a
+            href="/archives/"
+            class="nav-panel-link 
+              text-muted-foreground hover:text-primary hover:bg-primary/10
+             focus:ring-primary/20 flex items-center gap-3 rounded-lg px-4 py-3 text-sm font-medium transition-all duration-200 ease-out focus:ring-2 focus:outline-none"
+            role="menuitem"
+            
+          >
+            
+              <svg class="h-5 w-5" aria-label="archives" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 8h14M5 8a2 2 0 110-4h14a2 2 0 110 4M5 8v10a2 2 0 002 2h10a2 2 0 002-2V8m-9 4h4" />
+</svg>
+
+            
+            <span>archives</span>
+          </a>
+        
+      
+    </nav>
+  </div>
+</div>
+
+</header>
+
+
+
+      <div class="px-4 py-6">
+        
+  <nav class="breadcrumb mb-4 py-1 md:mb-6" aria-label="">
+    <ol
+      class="text-muted-foreground scrollbar-hide flex items-center space-x-1 overflow-x-auto py-1 text-sm whitespace-nowrap md:space-x-2"
+    >
+      
+        
+          
+          <li class="shrink-0">
+            <a
+              href="/"
+              class="text-muted-foreground hover:text-primary hover:bg-primary/10 flex items-center gap-1 rounded-lg px-1 py-0.5 transition-all duration-200 ease-out hover:-translate-y-0.5 hover:scale-[1.02] md:py-1.5"
+            >
+              <svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m3 12 2-2m0 0 7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
+</svg>
+
+              <span class="max-w-16 truncate md:max-w-none">首页</span>
+            </a>
+          </li>
+        
+      
+        
+          
+          <li class="flex min-w-0 items-center gap-1 md:gap-2">
+            <span class="text-muted-foreground/50 shrink-0"
+              ><svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+</svg>
+            </span>
+            <a
+              href="/posts/"
+              class="text-muted-foreground hover:text-primary hover:bg-primary/10 flex shrink-0 items-center gap-1 rounded-lg px-1 py-0.5 transition-all duration-200 ease-out hover:-translate-y-0.5 hover:scale-[1.02] md:px-3 md:py-1.5"
+            >
+              <svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 7v10a2 2 0 002 2h14a2 2 0 002-2V9a2 2 0 00-2-2h-6l-2-2H5a2 2 0 00-2 2z" />
+</svg>
+              <span class="max-w-16 truncate md:max-w-none">Posts</span>
+            </a>
+          </li>
+        
+      
+
+
+      
+      <li class="flex min-w-0 items-center gap-1 md:gap-2">
+        <span class="text-muted-foreground/50 shrink-0"
+          ><svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+</svg>
+        </span>
+        <span class="text-foreground flex min-w-0 items-center gap-1 font-medium">
+          <svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+</svg>
+          <span class="max-w-32 truncate md:max-w-[16rem] lg:max-w-none">《置身钉内》解读及原文（上）（转载）</span>
+        </span>
+      </li>
+    </ol>
+  </nav>
+
+
+        
+  
+
+
+  
+  <header class="mb-8">
+    
+
+
+
+
+<div class="post-meta mb-8">
+  
+  <h1 class="text-foreground mb-6 text-3xl leading-tight font-bold md:text-4xl">
+    《置身钉内》解读及原文（上）（转载）
+  </h1>
+
+  
+  
+
+  
+  <div class="bg-card border-border rounded-xl border">
+
+    
+        
+        <div class="p-6">
+
+          
+          <div class="text-muted-foreground flex flex-wrap items-center gap-3 text-sm mb-4">
+            
+            <div class="flex items-center gap-2">
+              <svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+</svg>
+
+              <time datetime="2026-06-11">
+                June 11, 2026
+              </time>
+            </div>
+
+            
+            
+            <div class="flex items-center gap-2">
+              <svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+</svg>
+
+              <span></span>
+            </div>
+            
+
+            
+            
+            <div class="flex items-center gap-2">
+              <svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h7" />
+</svg>
+
+              <span></span>
+            </div>
+            
+          </div>
+
+          
+          <div class="text-muted-foreground space-y-3 pt-4 border-t border-border">
+            <div class="flex items-center gap-2">
+              <div class="shrink-0">
+                <svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10" />
+</svg>
+
+              </div>
+              <div class="flex-1 min-w-0">
+                <div class="flex flex-wrap items-center gap-1.5">
+                  <span class="text-muted-foreground text-sm font-medium">
+                    Categories:
+                  </span>
+                  <a href="/categories/%E9%98%85%E8%AF%BB/"
+                    class="inline-flex items-center rounded-full px-2.5 py-1 text-sm font-medium transition-all duration-200 bg-muted/50 text-muted-foreground hover:bg-muted hover:text-foreground">
+                    阅读
+                  </a>
+                  <a href="/categories/tech/"
+                    class="inline-flex items-center rounded-full px-2.5 py-1 text-sm font-medium transition-all duration-200 bg-muted/50 text-muted-foreground hover:bg-muted hover:text-foreground">
+                    Tech
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="flex items-center gap-2">
+              <div class="shrink-0">
+                <svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 7h.01M7 3h5c.512 0 1.024.195 1.414.586l7 7a2 2 0 010 2.828l-7 7a2 2 0 01-2.828 0l-7-7A1.994 1.994 0 013 12V7a4 4 0 014-4z" />
+</svg>
+
+              </div>
+              <div class="flex-1 min-w-0">
+                <div class="flex flex-wrap items-center gap-1.5">
+                  <span class="text-muted-foreground text-sm font-medium">
+                    Tags:
+                  </span>
+                  <a href="/tags/ai/"
+                    class="inline-flex items-center rounded-full px-2.5 py-1 text-sm font-medium transition-all duration-200 bg-muted/50 text-muted-foreground hover:bg-muted hover:text-foreground">
+                    AI
+                  </a>
+                  <a href="/tags/%E4%B8%AA%E4%BA%BA%E6%88%90%E9%95%BF/"
+                    class="inline-flex items-center rounded-full px-2.5 py-1 text-sm font-medium transition-all duration-200 bg-muted/50 text-muted-foreground hover:bg-muted hover:text-foreground">
+                    个人成长
+                  </a>
+                  <a href="/tags/%E4%BA%92%E8%81%94%E7%BD%91/"
+                    class="inline-flex items-center rounded-full px-2.5 py-1 text-sm font-medium transition-all duration-200 bg-muted/50 text-muted-foreground hover:bg-muted hover:text-foreground">
+                    互联网
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+    </div>
+  </div>
+</div>
+
+  </header>
+
+  
+  <article class="prose prose-neutral dark:prose-invert mb-12 max-w-none">
+    <p>转载自微信公众号「退休僧」<a
+    href="https://mp.weixin.qq.com/s/Opc0b897i7aRJh2IofBUKg"target="_blank"
+    class="inline-flex items-center gap-1"
+  >《置身钉内》解读及原文（上）<svg class="h-3 w-3 flex-shrink-0" id="external-link" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 3h6v6m-11 5L21 3m-3 10v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/></svg>
+  </a></p>
+<h1 id="置身钉内解读及原文上">《置身钉内》解读及原文（上）<a href="#%e7%bd%ae%e8%ba%ab%e9%92%89%e5%86%85%e8%a7%a3%e8%af%bb%e5%8f%8a%e5%8e%9f%e6%96%87%e4%b8%8a" class="heading-anchor" aria-label=""><svg class="h-4 w-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></g></svg></a></h1><p>文章概要</p>
+<p>6月4日，曾任职于钉钉的产品经理滕雅辛（花名 “幽素”）在公司内网发布了一篇包含 7.5 万字的长篇文章—《置身钉内》，这篇长达7.5万字的深度复盘文章，作者以第一人称视角记录了其在钉钉核心保密项目“ONE”（后被称为“O项目”）中近三百天的亲身经历。文章以雨燕为隐喻——这种可以连续飞行三百多天不落地的“无脚之鸟”——象征作者在钉钉高压环境中的漂泊与挣扎。</p>
+<p>ONE项目是钉钉创始人无招回归后力推的AI原生项目，定位为“AI工作信息流”，试图以卡片形式主动向用户推送整理后的工作信息，实现“让事找人”。文章从发心、定位、设计、用户、敏捷、秩序、军争、长期八个维度，层层剖析了这款曾被寄予厚望的产品从孕育、发布到收缩的全过程。</p>
+<p>核心困境在于多重矛盾：产品既要服务老板又要服务员工，却无法同时满足；设计上采用卡片形式虽适合Demo展示，却在实际使用中面临IM消息实时性、已读恐怖主义、迁移成本高等问题；敏捷开发“每日一包”的节奏让团队疲于响应老板需求，却难以沉淀长期价值；组织秩序中的Scrum评分、保密制度、加班文化等，与创造性劳动的本质相冲突。</p>
+<p>文章最终揭示了一个深层命题：当一款AI产品试图同时承载用户价值、商业目标、组织意志和个人野心时，发心的不纯必然导致定位的摇摆、设计的变形和用户的离场。作者以亲身经历（包括两次晕倒送医）反思了“人是目的还是手段”的根本问题，认为真正的长期主义不是透支身体追逐风口，而是在快与慢之间找到平衡，保护人的尊严与创造力。这不是一篇简单的项目复盘，而是一代AI产品人在时代浪潮中的心灵史。</p>
+<p>以下为原文</p>
+<h1 id="置身钉内">置身钉内<a href="#%e7%bd%ae%e8%ba%ab%e9%92%89%e5%86%85" class="heading-anchor" aria-label=""><svg class="h-4 w-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></g></svg></a></h1><h2 id="楔子">楔子<a href="#%e6%a5%94%e5%ad%90" class="heading-anchor" aria-label=""><svg class="h-4 w-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></g></svg></a></h2><p>钉钉是一只雨燕</p>
+<p>钉钉的动物园形象钉三多，是一只尖尾雨燕，世界上平飞最快的鸟类之一。它最特殊的地方在于，可以吃喝、睡眠、交配通通在空中完成；每年从非洲飞经印度和东南亚，回中国北方繁殖，最多可以连续飞行三百多天不落地。</p>
+<p>尖尾雨燕的拉丁文是apus apus，「pus」是「脚」的词根，「a」是「没有，否定」的词缀，所以雨燕是字面意义上的「没有脚的鸟」。</p>
+<p>我在2025年6月入职钉钉，入职即加入了作为核心保密项目的「O项目」。后来我才知道，「O」代表「ONE」。</p>
+<p>说起来我应该是ONE最晚进入的核心PD，同时是最后一个留下并送走ONE的。我参与了从0到1的迭代，接触了从项目成型开始，到项目暮年运营期所有阶段，所有核心决策。也目送走了许多同事。</p>
+<p>在钉钉飞行了300多天，将满一年，最近也到了重新踩回地面的，离开的节点。</p>
+<p>ONE是一个怎样的项目</p>
+<p>ONE的生命周期从2025年的4月份开始孕育，8月25日发布会首次公开，DAU巅峰稳定在300万左右，是无招回归后第一个主推的号称AI原生的项目。</p>
+<p>影响ONE一系列产品决策的，主要是产品设计团队。ONE的第一个一号位曾经是设计中心的负责人，这决定了ONE是一个设计基因极重、参与决策浓度很高的项目。</p>
+<p>据我所知的，参与过ONE的产品设计是不少的，但ONE是一个流动性极大的项目。我来的第二周，我的设计leader（也是第一个一号位）就离开了，第四周，联系并推荐我进组的师兄也被调离去了其他部门。在ONE超过3个月的产品只有3个人，我是其中一个。</p>
+<p>本文是一篇怎样的内容</p>
+<p>本文将夹叙夹议地回首，这样一款曾经站在战略级风口位置的AI产品的开发往事。我想记录一个AI产品从立项、发布、共创到收缩的过程中，理想如何被翻译成目标，目标如何被拆成需求，需求如何在组织里变形、落地，如何进入真实的用户现场——而退远镜头的景别，这一切究竟如何在钉钉、在时代的背景下发生。</p>
+<p>「凡历来在于常数，而不在于变行。」编订历法，需要归纳规律性的常数，而不在于一味记载关注短期变化。感谢钉钉的高强度和快产品节奏，我在十个月内就完整体验了一款大用户量级的AI产品的生老病死。这实在是非常宝贵的经验。</p>
+<p>因此，这篇文档既想记录我这三百多天亲历的「变行」，也想尽可能凝练出一些在反复实践、受挫和复盘之后得到的「常数」。</p>
+<p>当然，这里的「常数」可能不是把一个项目的成败归纳成几条规整、漂亮、让读者有充分获得感的原则。可能它只是一场现场经验留下的残余判断：在高速变化的AI产品开发中，哪些问题看似每次不同，其实反复出现；哪些冲突看似来自具体的人和事，其实来自组织、技术、商业与用户之间长期存在的结构性张力；哪些选择当时像偶然，事后看却几乎必然。</p>
+<p>这份记录必不可能完全客观，我无法、也不愿意假装站在一个无菌的观察位上。很多判断来自我亲历的会议、争论、上线、复盘和失落，也来自我作为最后留下的PD，对一款产品从热烈理想走向收缩的复杂感受。</p>
+<p>但也正因如此，它或许能保留一些正式复盘里不容易出现的东西：真实的犹豫、判断的代价、组织的惯性，以及一个产品人在现场里倍速积累的经验。</p>
+<p>总之，希望这份记录能给所有正在、或希望从事AI产品开发的同事、同学与同道，提供一汪小小的经验池。若你能借此印证一些观点，或避开一些坑，那我便觉得略尽绵力，已经值得。</p>
+<p>总之，请汉娜阿伦特和茨威格上我的身，请你和我一起翻开属于ONE的，昨日的世界。</p>
+<p>FBI Warning （补充说明）</p>
+<p>本文成文较长，7.5万字左右，三易其稿，是最近一两周工作间隙 加 紧急大熬夜写的；所以如略有前言不搭后语之处，敬请包涵雅正。</p>
+<h2 id="发心第一">发心第一<a href="#%e5%8f%91%e5%bf%83%e7%ac%ac%e4%b8%80" class="heading-anchor" aria-label=""><svg class="h-4 w-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></g></svg></a></h2><p>发心是行为的内在动机与根本誓愿，是一切工作、生活、实践、修行的起点、方向和动力源泉。</p>
+<p>一个理性善良人的行为的发心，往往在帮助世界、物质回报和成就自我之间逡巡。在不同阶段，三种发心会有不同的优先级，促使人做出不同决策。</p>
+<p>产品也有产品的发心。产品的发心就是它的发起人最原始的出发点，主要有以下几类：解决某个尚未被解决的具体问题，提升解决某个问题的效率，服务好某个具体的人群，推广某种理念，销售某种资源，等等。</p>
+<p>举几个具体的例子：「淘宝」，发心是「提升解决商家对接客户销售地问题的效率」，也就是「让天下没有难做的生意」。「安缦酒店」，发心是「服务好度假的高净值人群」。「番茄钟」类产品，发心是「推广25min专注+5min休息的工作节奏的理念」。</p>
+<p>上述列出的发心类型中，越靠前的越有可能诞生有历史价值的产品，因为发心越纯粹。虽然和人一样，一个产品也会混合以上多种发心，但大部分情况下，好产品只有一个主发心。大道至简，这也和许多投资人会提倡的「一句话说清产品价值」异曲同工。</p>
+<p>当一个产品的发心又多又没有主次的时候，就会成为一个贪心而焦虑的产品。贪心是七罪之一。什么都想要，容易什么都得不到。这一点在下文也会阐述更多。</p>
+<p>环境背景</p>
+<p>外部环境：2025年的风向</p>
+<p>2025年中，整个大环境的AI产品的叙事正在换挡。前一阶段，大家还在惊叹模型会聊天、会总结、会搜索。到了这一年，行业更关心AI能怎样调用工具、完成任务、进入真实工作流。</p>
+<p>5月，Google I/O 2025举办，Google在Search模块里强调AI Mode，也在Cloud侧推出和增强了Agent Development Kit、Agent Engine UI、Agent2Agent等agent相关能力。它的重心已经从降低幻觉、回答问题的叙事，走向让模型进入更复杂的应用生态和工作流程。</p>
+<p>7月，OpenAI发布ChatGPT agent，强调ChatGPT可以用自己的工具和计算机完成研究、预订、制作幻灯片等任务。</p>
+<p>9月，Anthropic发布Claude Sonnet 4.5，重点也落在complex agents和computer use上。</p>
+<p>钉钉有组织关系，有消息、日程、待办、会议、文档、审批等一系列产品。AI如果要进入真实工作现场，钉钉这样的办公软件天然比一个单独的聊天机器人能满足用户需求。这也是我当时被钉钉吸引的原因之一。</p>
+<p>银泰的经历让我切实意识到，LLM在缺少context和不服务用户刚需时，有多鸡肋。</p>
+<p>当然，优势也伴随着麻烦。钉钉不是白纸，它有多年积下来的产品逻辑、权限系统、端侧差异、多组织问题、客户定制和用户习惯。AI要在这里做事，必须穿过旧系统的技术债。它站在一个很有吸引力的风口，但是取景再往远退一舍，就会发现，这个风口正处在一片难以改造的旧城中央。</p>
+<p>内部环境：无招回归</p>
+<p>另外，无招的回归本身也是一个非常奇特的变量。一个人绕了一大圈，又回到自己曾经亲手点燃火种的迦密山。</p>
+<p>来往失败后，无招带着几个人退到湖畔花园，从一片败局里做出钉钉。那几年，DING、已读未读、企业通讯录、审批，把钉钉从微信的阴影里硬生生拧将出来。那些功能后来被很多人批评为强管理、强控制，但在当年，它们确实回答了企业里最朴素也最焦虑的问题：我说的话，对方到底看见没有；我交代的事，到底有没有往前走。更具体一些，解决了管理者的问题，解决了一个企业里愿意付钱的人的问题。</p>
+<p>一个产品经理最难摆脱的，往往不是失败，而是成功。因为失败会留下伤口，而成功会留下手感。钉钉早年的胜利，给无招留下了一套很深的身体记忆：站在发信人一侧，替组织争取确定性，用强触达把事情往前推。</p>
+<p>这套记忆后来也进入了ONE。为什么卡片里的消息一定要算已读，为什么系统要主动把事推到用户面前，为什么钉钉总忍不住替组织催促人——很多答案，都可以回到这里。</p>
+<p>但2025年4月的无招，已经不是2014年湖畔花园里的无招。他曾经离开钉钉，被调离自己一手做大的产品；也曾经离开阿里，去日本做了「两氢一氧」。那个项目没有跑出来。</p>
+<p>一个人最耀眼的战功留在过去，新的创业又未能证明自己，这时候再蒙旧主召回，很难只是一次普通任命。更何况召他回来的人是在他职业生涯几个关键节点上反复出现的学长，像命中有一根透明而柔韧的鱼线，把他从阿里第一位实习生、淘宝搜索、来往、钉钉，又牵回钉钉。创立钉钉，被迫远走重回再挂帅。此人此景，似曾相识燕归来。</p>
+<p>Stay Hungry，Stay Foolish。无招的钉钉签名用它，钉钉的文化衫印它，在内部外部讲话，他也在寻找精神偶像的寄托时，每每提到那个男人——乔布斯。</p>
+<p>乔布斯讲「stay hungry，stay foolish」的出处，是2005年斯坦福毕业典礼演讲。他讲到自己的辍学，讲到去印度学禅修、学字体课，讲被苹果赶走，讲感到死亡临近；最后说起《全球概览》封底上的一张乡间小路照片，底下印着Stay Hungry，Stay Foolish。他把这句话送给毕业生，也像是在给自己一生盖印：不要太快履足，不要太早聪明，保持不满，保持探索。</p>
+<p>无招身上也有这种叙事的诱惑。创立钉钉，又离开钉钉；出去折腾一圈，再被召回旧地。一个人骤然发现命运之书被风吹开到和偶像相似的一页，很难不教人动心、疑心这是命运的召唤。</p>
+<p>不过乔布斯离开苹果以后，做了NeXT和Pixar。NeXT商业上并不耀眼，却带回了苹果后来操作系统的骨架；Pixar则已在外部世界证明了自己。无招回钉钉时，手里只有商业结果存疑的HHO。它更像一次不甘心的出走。证明他仍然想做事，出去转了一圈却没有带回更多筹码。背上背着的还是已经长出半刃铜锈的朴刀。</p>
+<p>身后是淘天的旧梦，来往的败绩，钉钉的胜利，HHO的空响；眼前是AI重新洗牌的机会，时代重新开局的诱惑。一个人半生的伤口和功业，忽然都指向同一个方向，便很容易生出一种近乎宿命的确信。</p>
+<p>ONE后来的许多气味，都可以从这里闻到：它急着做成新入口，急着证明钉钉没有老，急着把AI落到消息、日程、审批和组织关系里；同时，它也带着旧钉钉的手感，带着发信人立场，带着强触达，带着把事情往前推的固执。</p>
+<p>也正因为如此，ONE这个项目本身，对他有一种特殊的吸引力。我忍不住现象，在25年初，也许还在日本，也许他在见吴妈前，也在镜前反复练习和自问：当年我用钉钉把企业协作从微信嘴里抢出一口事业来；十年后，AI要重写办公软件，我怎么带领团队，再搞一波大的？</p>
+<p>镜子里的人脸上写满野心，也写满迫切和焦虑。后来的很多设计和争议，皆源于斯。</p>
+<p>个人背景</p>
+<p>最美逆行者</p>
+<p>我在去年六月来到钉钉。在那个节点，很多朋友开玩笑说我是「最美逆行者」。</p>
+<p>原因是，四月初无招回归后，雷厉风行地举行一系列措施：工时调整——提前到9点上班、开固定晨会晚会、午休缩短、周末单休，再兼全员Python考试，节假福利削减，部分职级以上薪酬调整，还有要求不私下加微信、需要说「对不起我只用钉钉」等等，组织整体在人口净流出。</p>
+<p>岔开一句：这个人口净流出的数据结果，可能也是组织需要的，尽管流出的原因值得斟酌。</p>
+<p>伴随着流出数据的是大家对新入职钉钉的同事的同情和打趣，是就业者对钉钉的规避（并非虚言，君见各社媒劝退贴）（不过删帖公关也快，能不能见，要看手速），是钉钉像孔乙己一样走进咸亨酒店，空气里就弥漫着快活的气氛。</p>
+<p>收回——总之，现在回想起来，那时种种debuff，重峦叠嶂，但由于更在意具体做什么事情，以至于我对这一切毫不敏感，在当时有其他明显更好条件的offer的情况下，跳上轻舟，平薪平职来了钉钉。</p>
+<p>前情结算</p>
+<p>在钉钉之前，我在银泰工作了一年多。也是做AI产品，做了银泰喵街app里的AI导购「喵街答答」和一些其他相关的AI服务——可以理解为银泰版淘宝问问（现「AI万能搜」）。</p>
+<p>为什么来钉钉呢？一方面，彼时正值银泰出售，新东家是传统企业，对AI和产研的投入逐渐不明；另一方面，银泰的工作实践也让我深刻意识到一件事，就是LLM有效服务成立的条件有两个，而银泰彼时的环境条件都不那么具备：【必要条件】足够的数据基建和context；【充分条件】最好用户想要消费的对象本身，就是LLM生产的产物。</p>
+<p>智能是平权的，但是context是不平权的。有context，才能判断用户的背景和偏好，才能提供用户想消费的商品/服务/内容。</p>
+<p>其次，用户在电商零售场合最终想要获得的是「更好」或「更有性价比」的商品，LLM只是一个路径，在对比多种路径的性价比和给用户带来的损耗/收益比的平衡上，就会非常如履薄冰。电商的本质是「商」，是商品，是把渠道对接到销售——AI可以加速、或者优化这个本质的体验，但不会取代或者动摇这个本质。</p>
+<p>而钉钉不同。AI一定会颠覆人们组织办公的方式，如果跟不上，钉钉必然面临淘汰凋亡，此诚危急生死存亡之秋也。不过，挑战伴随着机遇——因为从这条思路出发，整个即时通讯的牌桌也有重新洗牌的可能。</p>
+<p>学徒</p>
+<p>虽然就从工作时间性价比和人性化程度而言，钉钉都不值得看好，但在面试的过程中，我觉得我有望在钉钉好好的学到一些东西。</p>
+<p>一方面，在来到钉钉的那个节点，我自认为有一些审美，但苦手于总感觉还不能很好地把眼睛、舌头上的审美，转化到手上，真正成为创造力和生产力。入职时招我的 +1 是设计出身，他给我的感受是，他有这样的手，以及他不吝让我从他身上好好学到这部分。</p>
+<p>其次，更重的原因是，无招确实是一个超级产品经理型CEO。当时的我，跟过一些leader，也自己做过一些小产品，但始终没有在一个高压高强的环境下，学徒式的学习过。关键词「学徒」。</p>
+<p>做产品和做菜、做手工一样，是一门手艺。有一个综艺叫《一饭封神》，里面许多厨师，流转于许多米其林三星的后厨，积累经验，最终的梦想是独当一面成为米三的主厨，或者开一间自己的餐厅。做产品也一样，在各个大中小司流转，学到本领，最后在哪里栖身独当一面，或者自立门户。</p>
+<p>钉钉的面试流程很快，几乎就是一周之内，还包含了一个做大作业的周末。当时的最后一面就是面无招。可能超级产品经理型的CEO都是这样——后来认识了在理想工作过的朋友，他们告诉我，产品经理去面理想，也要做大作业，也要过范皓宇和李想。</p>
+<p>和无招的面试，让我产生一种强烈的直觉，钉钉或许是我的VEA（香港米兰，《一饭封神》评委Vicky主厨的餐厅）。它迷人的地方不只在于昂贵、精致、难进，而在于它代表了一种高压、严苛、以及非常私人化的创作现场。那是一个后厨式的工作环境，一个主厨把自己的审美、野心、控制欲和成就欲，全部压缩进一套系统里，然后要求每个进入其中的人，都先接受这套系统的重力。</p>
+<p>很多人警告过我也在指导产品工作过程中的暴虐——这点在我正式入职钉钉之后，也有所领略——但在那次面试中，他更多是以一种温和的态度，表达出和对人快速判断的能力和对产品的偏执的理想主义。</p>
+<p>面试前半段聊得很顺。我们谈了我在银泰的经历，谈使命感，谈我学习AI的背景，也谈到本科心理学。直到聊大作业，我刚解释到「没有完成家族组织」的部分，无招就皱眉打断了我。</p>
+<p>钉钉面试前要先完成的那份大作业，题目是「族谱上钉」。要求描述得比较模糊，大意是：把家族成员拉进钉钉，建立一个6人以上的族谱组织，让他们在上面真实活动，并基于体验给出产品见解。</p>
+<p>坦白说，这件事我没有真正完成。我家里人比较少，能真正使用钉钉的人更少，无法满足「6人以上家族组织」的要求。不过我想，做这个作业核心是考察我的产品洞察，敏捷响应，和纳投名状。</p>
+<p>所以我做了代偿的证明工作：那个周末我去本地图书馆查阅真实的大型族谱，用表格和文档为别人的族谱做编撰和数字化；联系专门做族谱生意的商家，调研商业链条和可能的产品方向；也动员朋友上钉钉，搭了一个出境旅游前事项沟通的朋友组织。这些工作不算少，我觉得也证明了我的工作能力，并纳上了投名状。</p>
+<p>他反复追问：为什么做不成？父亲家还有人吗？母亲家还有人吗？外公外婆还在吗？真的找不到了吗？真的凑不齐六个能上钉钉的家人吗？一系列低宜人性的问题，换个环境可能被投诉到政府工会。在反复追问确认我的显示情况确实凑不齐后，他沉默了大概十几秒，然后开始讲2014年他刚做钉钉时的经历。</p>
+<p>彼时的钉钉也没有办法证明自己的价值，没有成熟产品和市场共识，只能一遍遍见客户、确认需求、陪笑脸，先承诺、再把东西做出来。大概就是典型的「fake it until you make it」：在没有路径的时候，先把自己推到必须兑现的位置上。</p>
+<p>最后，他给我的判断是：我的「学术底色」太重。</p>
+<p>我至今仍不完全认同他的判断，也认为这是一种对人的服从性高于对人的能力的考察。你可以说这是挑选理想主义伙伴，也可以说这是PUA；可以说这是创业精神，也可以说这是权力关系下的过度索取——说到「PUA」，后来他还问了我的婚姻交友情况，以及问我创业有没有做好抛弃这些的准备。</p>
+<p>不过，总之，这次面试确实引发了我的反思。我并不完全同意无招说的，理想主义者就是在看不到希望时，也要坚持往一个方向做。不是所有事情都应该靠意志力硬推，也不是所有不计成本都值得赞美。</p>
+<p>但我还是被某种信念系统吸引了。我有时候着迷于那种经验事实上成立，但我不能从原理上解释它的东西，比如宗教。它们未必严密，甚至充满问题，但它们能组织人群意志和塑造现实。就像索罗斯的「反身性」原理：市场上的信念足够强烈时，会反过来介入现实，改变参与者的预期、行动和资源分布，最终让现实朝着信念本身靠拢。</p>
+<p>「族谱上钉」也是这样，看似荒诞，但却有它实际的用途。换位思考，用最奚落的人际关系来类比，站在王伦的角度，让林冲上山前纳投名状，也是他最低成本判断和提前沟通上山后的工作模式的方式。</p>
+<p>最后他还是通过了我的面试。</p>
+<p>总之——在换工作之际，我最大的憧憬可以聚合到三个关键词上：一是context，二是主动服务，三是学徒。他们分别是我认为LLM有效服务成立的条件、我一直想实现的产品形态、和我渴望获得的阶段性成长的环境。对于我这种一个逐context（或者说数据）和产品工作而居的游牧民族来说，钉钉似乎都是一片应许的迦南，是撒马尔罕。</p>
+<p>ONE的发心</p>
+<p>叫「ONE」的产品有很多，比如同为效率应用方向的Google ONE，或者韩寒其实也有一个app叫ONE，slogan是「复杂世界里，一个就够了」。</p>
+<p>ONE的愿景发心，和所有叫「ONE」的产品一样：「all in ONE」，所有工作都在一页内处理。更具象地拆，可以分成几层。</p>
+<p>第一层，是用户发心。 钉钉里的工作信息太散，群聊、待办、日程、会议、文档、审批各管一段，用户每天靠自己的记忆和注意力，把它们勉强串起来。ONE想解决的是这个问题：让重要的事自己浮上来，让用户少一点遗漏，少一点翻找。</p>
+<p>第二层，是产品发心。 钉钉需要一个AI时代的新入口。它不能只把AI做成聊天框，也不能只把AI藏在各个老功能里。ONE要把钉钉已有的消息、日程、待办、会议、文档重新摆一次，让外界看见：钉钉不是旧办公软件，它还能重新组织工作。</p>
+<p>第三层，是组织发心。 无招回归后，钉钉需要一场新的战役来聚人心、提士气、改形象。ONE承担了这个角色。它既是产品，也是旗帜。旗帜能聚拢人，也容易把太多东西都挂上去。</p>
+<p>第四层，是商业发心。 AI要消耗token，模型能力也需要场景消化。这个阶段有点像发动机刚被发明出来，全世界都在找哪里可以装发动机。钉钉有大量工作场景，如果AI真能帮用户提升效率，当然是用户、产品、集团三方共赢。</p>
+<p>这些发心若再压缩，可以归成几条：解决深度用户工作信息爆炸的问题，提升工作效率，更好地服务KP人群，销售token资源。哪怕最后一条是从集团使命出发，也有它自己的顺理成章。刚有了发动机，世界当然会寻找发动机的用武之地；如果它确实让车跑得更快，让船行得更远，那就是完美共赢。</p>
+<p>所以ONE一开始就不是一个发心单纯的产品。它既想替用户减负，也想替钉钉换代；既想证明AI能进入工作流，也想证明钉钉还能站在下一代办公入口上。这里面有理想，也有指标；有用户价值，也有组织意志。</p>
+<p>后来很多问题，都可以从这里追溯：ONE究竟先服务用户减负，还是先服务发布会表达？先做所有人的入口，还是先做少数深度用户的真需求？先让事被看见，还是先让事被做完？</p>
+<p>这些问题，在「发心」章里只是种子，到了后面的「定位」「设计」「用户」「敏捷」，它们会一层层萌芽、抽象、长叶、开花，结出完整的产品果实。</p>
+<h2 id="定位第二">定位第二<a href="#%e5%ae%9a%e4%bd%8d%e7%ac%ac%e4%ba%8c" class="heading-anchor" aria-label=""><svg class="h-4 w-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></g></svg></a></h2><p>如「发心」章所述，ONE最吸引我的地方，在于钉钉丰饶的数据土壤，以及「主动服务」这个产品理念。但发心只是起念，是马丁路德金的「I have a dream」，发散，抒情。一个产品真正进入开发，要回答的不是「想做什么」，甚至不是「要做什么」，而是「先做什么」。</p>
+<p>所以，发心之后必须有定位。</p>
+<p>如果把一个产品从虚到实的过程，比作拾柴点火，发心是选柴，定位就是捆柴的绳。柴选得好，只说明有得烧；捆不好，设计进来就是到处点火，这一丛，那一丛，看着热闹，风一吹就散。用户用不上、记不住，团队也徒耗力气和信心。</p>
+<p>ONE后来的许多问题，表面上出在设计、用户反馈和开发节奏里，根却埋在更早的定位问题：到底为谁服务，在哪个场景里用，解决什么价值，又凭什么由钉钉来做。</p>
+<p>本章先不急着讲具体功能。我们先回到产品落地的第一步，看烧起ONE的这把柴火，最初究竟是怎样被捆起来的。</p>
+<p>什么是产品定位</p>
+<p>产品的定位其实可以拆为一系列关键的产品策略，一系列彼此解耦的主观选择和假设。有的假设是客观题，有的则是主观题。主客观之间的底层差异在于，客观题是可以通过物理规律验证的，而主观题则符合索罗斯的反身性定律——好比股票市场，多数人的信念会反向影响现实。</p>
+<p>客观题到了一定阶段可以证伪，比如行业垂类小模型；而主观题无关真伪，纯粹是品味和选择，比如：苹果选择闭源，安卓选择开源，ChatGPT、豆包选择大DAU，Anthropic、Manus选择高净值塔尖用户，闭源还是开源，DAU还是塔尖用户——都没问题，都是选择，想清楚且走到底，都有可能成为开宗立派的现实。</p>
+<p>反过来说，如果一直在多种底层策略的判断上逡巡不定——那么从用户侧看来也会不伦不类，产品迭代起来鸡犬不宁。另外从资源效能和团队信心角度出发，也是极大的浪费。</p>
+<p>更具体地，要说清产品定位，需要明确回答四个问题：</p>
+<p>1.用户定位——“为谁” 目标用户是谁？不是谁？用户的关键特征是什么（规模、行业、角色、习惯）？</p>
+<p>2.场景定位——“在哪用” 用户在什么情境下想到这个产品？是高频日常工具，还是特定场景的解决方案？</p>
+<p>3.价值定位——“解决什么问题” 产品提供的核心价值是什么？用户原本愿意花费多少钱/时间/其他资源，来达成这种价值？</p>
+<p>4.竞争定位——“为什么是我们” 和替代方案相比，差异化在哪？这个差异化是否可持续？</p>
+<p>当这些问题能够一句话说清时，产品就有了清晰的定位。</p>
+<p>ONE的产品定位</p>
+<p>无招在2025年4月1日回归钉钉，8月25日开了第一次产品发布会，版本8.0，主题「蕨」。按照第一次发布会的口径，ONE是「钉钉面向AI时代打造的、以Agent驱动的工作信息流」。更详细的阐释是：ONE是一次试图把群聊、待办、会议、文档、表格等分散工作信息重新组织起来的尝试——让AI不只是被动回答，而是主动替用户发现、整理和推进工作。我们当时的slogan叫，「让『人找事』变成『事找人』」。</p>
+<p>按照上述四个定位问题，来整理ONE的定位，大致如下：</p>
+<p>定位问题：钉钉ONE</p>
+<p>•为谁：高信息密度、高协作负担、对消息/日程/任务闭环负责的钉钉用户</p>
+<p>•在哪用：呈现钉钉内的工作信息流，尤其是消息、日程、待办、听记之间</p>
+<p>•解决什么问题：消息太多、事项太散、重点不清、容易漏回、任务难闭环</p>
+<p>•为什么是我们：钉钉掌握组织关系、消息、日程、待办、会议、企业协作链路，比通用AI有更贴近真实工作现场的丰富context</p>
+<p>然而，分析是清晰的、指日可待的，现实却往往是泥泞的、出乎意料的。就像项飙在《跨越边界的社区》中写道：「不管是一个人还是一个民族，发展主要来自不断的探索，而不是事先一揽子的设计。」</p>
+<p>2025年，正值LLM从demo走向真实工作流动荡而迅猛的上升期，能力令人兴奋，但稳定性、评测、成本、延迟、操作权限、用户隐私等等都还是一团草莽，没有成熟机制可以参考模仿。同时，钉钉作为企业协作产品，本来就天然同时服务组织中多组相对角色的目标、管理者和员工、发信人和收信人，如何在相对角色中设立公平范式，还在探索期；而ONE又承担了对外宣发、对内集团指标、对客服务、商业化探索、及产品形象创新换代的多重目标，无法像一个独立创业产品那样，看住一个窄切口慢工打磨。</p>
+<p>ONE看似是一个很清楚的产品：一个AI工作信息流，一个专属工作秘书，一个让事找人的入口。但越往下做越会发现，它真正的难点不是功能实现，而在于要在一块小小的移动端屏幕上，同时回应管理者对全局掌控感的渴望、员工对信息过载的抗拒、以及AI对「什么值得我关注」这一判断本身所携带的权力属性。</p>
+<p>一个「让事找人」的入口，一旦运行起来，就不得不替组织回答：谁的事算「事」？在谁的优先级序列里插队？AI替谁节省时间，又替谁增加可见度？</p>
+<p>更深处，LLM的不确定性让这些张力被急剧放大。当模型幻觉可能出现在审批意见、周报总结、跨部门同步中时，「秘书」的可靠性不再是技术指标，而变成了组织信任问题。成本约束要求我们对每一次「主动推送」精打细算，可重要信息恰恰可能因为一次节省资源的静默而被错过。隐私边界在多角色环境中没有明确标线：为员工提供更好的上下文，往往意味着让更多数据对模型可见；而向管理者透明化过程，又可能滑向微观监控。</p>
+<p>总之，ONE不是先定义好再执行的产品，而是在多方目标拉扯、技术草莽与现实泥泞中，一边建立判断力一边长出来的工作界面。</p>
+<p>所设想的典型工作场景</p>
+<p>在场景定位上，ONE的核心假设非常纯粹：用AI帮用户整理工作并重新排序。团队并没有把功能零散地扔给用户，而是紧扣着职场人一整天最高频、最容易产生信息焦虑的三个特定时间节点，拎出了三段式的「时间线场景」：</p>
+<p>场景一：高压之后的「补课与跟进」（信息堆积场景）</p>
+<p>这是职场人最常见的痛点。当你开了一个两小时的长会，或者半天没看手机，再次打开钉钉时，面对的是几十个群里炸开的海量未读消息。此时用户的核心诉求是「快速赶上进度」。ONE的场景定位就是在这个瞬间充当智能过滤器，不让用户逐条去翻聊天记录，而是把堆积的信息自动排好优先级，像呈送摘要一样让用户一目了然。</p>
+<p>场景二：下班前的「查漏补缺」（收尾复盘场景）</p>
+<p>在一天工作即将结束、准备下班的节骨眼上，用户需要有一种「今天的事情都交代好了」的确定性。ONE在这里的定位是安全网。它会启动「已读不回」的智能提醒，防止你遗漏重要客户或老板的信息；同时，它会把今天所有群聊里的金句、核心技术结论、重大业务决策进行汇总总结，让用户气定神闲地完成今日闭环。</p>
+<p>场景三：晨间的「排兵布阵」与「发现」（开启新一天场景）</p>
+<p>这是用户每天早上开启工作前的准备阶段。ONE会在清晨为用户梳理好这一天的整体工作待办、准备好即将开始的日程，做好优先级的智能排班。在这个场景的尾端，产品还长出了一个具有前瞻性的「发现」功能——AI会根据用户的日常工作上下文，主动推送你可能需要阅读的学术Paper、竞品动态或行业新闻简讯，作为开启一天的认知燃料。</p>
+<p>这三个场景在底层是高度自洽的，它们本质上都是在用户最需要组织生产力的时候，用AI的「事找人」去对抗无序的信息重力。</p>
+<p>2025年9月25日，OpenAI推出了同样主打「主动服务」的ChatGPT Pulse：</p>
+<table>
+	<thead>
+			<tr>
+					<th></th>
+			</tr>
+	</thead>
+	<tbody>
+			<tr>
+					<td>每天更新，从不缺席<br><br>Today&rsquo;s pulse<br><br>London travel tips, and a few new trail run ideas.<br><br>Ask anything<br><br>ChatGPT现在可以代替您进行错时研究。每天晚上，它都会综合您的记忆、聊天记录和直接反馈提炼出与您最为相关的信息，然后在第二天为您提供重点突出的个性化更新。具体内容可能包括您经常谈及的话题跟进，简单又健康的晚餐建议，或者铁人三项训练等长期目标的后续步骤。您还可以连接Gmail和Google Calendar来提供补充背景信息，这样它就能提出更具相关性的建议。连接日历之后，ChatGPT可能会起草一份会议日程样本、提醒您购买生日礼物，或者为即将开启的旅程推荐备选餐厅。这些整合功能默认处于关闭状态，您随时可以通过设置开启或关闭。<br><br>2026-06-04<br><br>September 25<br><br>Hey Aleks, your big trip is around the corner. Here&rsquo;s a handy guide for Heathrow and a few dinner ideas.<br><br>A Guide to Europe&rsquo;s Busiest Airport<br><br>Check Your Terminal: Heathrow has four terminals, and they&rsquo;re far apart.</td>
+			</tr>
+	</tbody>
+</table>
+<p>Pulse宣称打破了传统的「人问AI答」的被动范式，通过理解用户在Google全家桶上的日程、邮件等上下文，利用AI在用户熟睡的深夜进行异步研究，在清晨为用户呈上一套由5到10张视觉卡片组成的「Today&rsquo;s Pulse」早报。Pulse的出现，印证了ONE团队对于「清晨沙盘+主动发现」的场景直觉，是站在全球AI生产力工具前沿的。</p>
+<p>两个影响用户定位的关键决策</p>
+<p>有两个影响后续一系列设计开发的问题，在产品定位这个阶段就埋下了祸根。这两个问题都是用户定位的矛盾，分别是：</p>
+<p>老板 v.s. 员工</p>
+<p>在钉钉上，老板和员工是截然不同的画像。老板，或者说管理者，是工作的发起者，需要对接更多的员工，督办、催办员工完成任务；他们有大量的日程，他们处理员工发起的审批，给员工布置待办。相应的，员工是承接方和任务的完成方。他们一方面，打卡考勤，接受老板的任务和监督，向老板提出审批请求，完成老板的待办，另一方面，他们需要真正去填报表、写文档、联系客户。</p>
+<p>举一个更有画面感的例子：员工给老板发语音消息的比例，是老板给员工发语音消息的零头。</p>
+<p>面对这两种不同的用户画像，先服务好谁的诉求，必须有所取舍。ONE的服务对象，究竟是老板还是普通员工，是管理者还是被管理者，其实都有各自的理由。</p>
+<p>先说服务员工。前文已经说了，ONE的目标是服务大DAU且高频的用户操作。如果只服务管理者这样的「塔尖」用户，就达不成给发现带量，或者卖tokens的目的。另外，企业购买一个SaaS产品的本质，是为了更好地组织和管理自己的员工，确保每个员工可以上下一心，更高效地完成任务，达成组织目标。仅服务管理层，价值太薄。</p>
+<p>那为什么又要服务老板呢？做产品一方面看用户要什么，一方面看我们有什么。</p>
+<p>2025年7月9日，飞书开了发布会，重推Aily（飞书的AI助理）。会上谢欣借调「某app上最多的数据就是各种打卡」，力陈飞书才真正重视用户在办公场景中的信息流转和知识沉淀，更适合AI时代。</p>
+<p>确实，钉钉早期推出已读未读，重搞DING、考勤打卡、审批流等品，就是依靠服务企业管理层的监控和管理需求起家。钉钉的文档表格知识库是标准品，但是在飞书出现后，历史上长期有一段时间，这些品的基建和交互体验都是弱于竞对的。同时反向来说，由于如上的产品特性，制造业、传统企业、以及更多没有很强知识管理诉求的企业，会选择钉钉；服务好这部分企业，又让钉钉不断朝着这些企业需要的方向进化。由此形成了飞轮。</p>
+<p>钉钉上的信息枢纽，绝大多数还是管理层，他们有最多的IM消息，日程，待办，审批。ONE目标对标高级机要秘书的职能：解决信息过载，让组织中的重要事项不再遗漏，通过智能排列工作信息的优先级，来节省人的精力、注意力。在封闭开发过程中我还开过玩笑，以后宣传口径就用「ONE彻底治好了我的工作ADHD」。</p>
+<p>在钉钉，究竟谁有这么多工作需要批阅处理？那也就是老板们了。</p>
+<p>到这里，产品定位似乎被逼进了一个角落。从产品目标而言，似乎应该服务钉钉的所有用户；但从交付的维度而言，又要从老板们服务起。那么，我们也就只有一个指望，就是通过老板KOL们的带动，让越来越多的员工用户，可以并愿意在钉钉处理所有的工作内容，并且把越来越多的信息沉淀到钉钉上。放眼同时期钉钉开始在做的录音卡硬件A1，也是为了协同完成让信息上钉更加方便容易的目标。</p>
+<p>在初始定位的构思中，用户究竟是普通员工还是老板的问题，始终没有闭环。但是事情总不能无休止地讨论下去，我们就这样，带着一盒薛定谔的用户出发了。</p>
+<p>发信人 v.s. 收信人</p>
+<p>钉钉和微信最大的区别是什么？微信的立场是「收信人」。为了保护收信人的不被打扰，微信可以克制地不做已读未读，不做强触达。而钉钉的基因，从诞生的第一天起，就是永远站在「发信人」立场、为「发信人」所驱策的。在进行ONE的产品讨论时，这个点也被反复提及，具体会在下面「设计」第三章，讲「已读」的时候细讲。</p>
+<p>如果说有三种产品经理类型：布道者型/服务商型/朋友型，他们分别可以对应乔布斯，贝尼奥夫，和雷军，那么无招是典型的第一种，一个极具煽动力的典型布道者。当他在会议室里讲到十年前如何顶着压力做DING、做已读未读时，你几乎能从那些话语碎片里，看到老钉钉一以贯之的权力美学——站在发信人一侧，替组织争取绝对的确定性，用强触达把事情硬生生往前推。</p>
+<p>在企业协作的生态位里，发信人的诉求，往往与管理者的控制欲和对确定性的焦虑高度咬合。管理者购买钉钉，核心痛点是消解「我说的话，对方到底看见没有；我交代的事，到底有没有往前走」的确定性焦虑。这套身体记忆是如此成功，以至于它不可避免地流淌进ONE的血液里。为什么卡片里的消息一定要算已读，为什么系统要主动把事情推到用户面前，为什么AI忍不住要替组织去催促个体——很多看似属于交互细节的争论，答案都可以回到这个原点。</p>
+<p>然而，ONE从概念阶段开始，就试图去承接一个宏大的、甚至带有平权色彩的AI愿景：通过「事找人」来帮员工减负。这就让ONE必须去面对组织中硬币的另一面——收信人，同时也是普通员工，或者说沉默的大多数。</p>
+<p>这就带来了用户定位上的第一个内在张力：一个产品如果骨子里流淌着「发信人立场」的强控制基因，它的功能设计和算法逻辑就会不自觉地倾向于催办、督办和绝对触达；但它在对外叙事和价值承载上，却又试图去扮演一个体贴「收信人」、帮收信人过滤噪音的超级秘书。这种基因与愿景的底层拉扯，让产品在定义「我到底在为谁说话」时，从一开始就埋下了失焦的隐患。</p>
+<p>当AI成为发信人的超级代理人，自动整理出待办、未读并呈现在移动端时，收信人（普通员工）感受到的并不是「智能的平权」，而是「被凝视的加剧」。AI削弱了员工在工作流中用于喘息的「心理缓冲带」。普通员工变成了系统内的沉默大多数，他们的反抗通常极其隐蔽——比如在社媒上写劝退帖，或者在实际使用中寻找各种手段去糊弄和规避这个随时会跳出来的AI界面。</p>
+<p>竞争定位——“为什么是我们”</p>
+<ol>
+<li>为什么是钉钉</li>
+</ol>
+<p>ONE 的竞争定位，不能只看「谁也在做 AI 助手」。如果只是比模型能力、对话体验、生成质量，钉钉并不一定天然占优。真正的问题是：在 AI 时代，钉钉凭什么继续成为工作入口？</p>
+<p>这里可以看 Stack Overflow 的曲线。ChatGPT 出现之后，Stack Overflow 的提问量急剧下滑。这张图对所有工具型产品都是一个提醒：当 AI 能直接给答案时，用户不一定还会回到原来的社区、流程和入口。过去积累起来的内容、关系和使用习惯，并不会天然构成护城河。它们可能反过来成为被 AI 抽象、吸收和绕过的对象。</p>
+<p>对钉钉来说，挑战也是类似的。AI 不是给旧产品加一个聊天框，而是在重新分配入口。用户未来要完成工作，未必一定先打开某个应用、进入某个页面、点击某个功能。他可能直接对 AI 说：帮我总结会议，通知相关人，生成待办，更新项目进度，提醒我明天跟进。这个时候，谁掌握组织上下文、谁能调用真实权限、谁能完成闭环，谁才有资格成为入口。</p>
+<p>钉钉的优势正在这里。它有组织关系，有消息链路，有日程、文档、会议、审批、待办，有企业通讯录和真实工作流。它不只是一个信息容器，而是企业协作的操作现场。理论上，ONE 可以利用这些上下文，把 AI 从「回答问题」推进到「理解工作」和「推动协作」。</p>
+<p>钉钉来做这件事，有一个非常强的理由：它有真实工作现场。一个普通AI助手很难知道组织里谁和谁有关，哪条消息重要，哪个会议有后续，哪个任务真的会影响项目。钉钉知道。它有通讯录，有群聊，有日程，有文档，有审批，有会议，有待办，有企业里的关系和流程。这些是钉钉的优势。但这些也是钉钉的重量。多组织、权限、历史链路、端侧差异、客户定制、旧交互习惯，都会变成AI产品的成本。越想进入真实工作流，越要面对这些东西。</p>
+<p>我们也和一些大客户聊过，想看ONE的能力能不能覆盖他们已有的任务工作台和定制面板。结果很快发现，两者并不完全匹配。大客户要的是贴着自己业务长出来的东西：自己的流程，自己的字段，自己的任务面板，自己的管理动作。ONE要做的则是一个面向所有钉钉用户的轻入口，不是专属钉式的定开功能。</p>
+<p>这带来一个很现实的问题：钉钉是SaaS，ONE却带着很强的ToC入口想象。做得太广，就只能抓通用痛点；通用痛点又容易不够痛。做得太深，就会变成客户定制，失去全局入口的意义。ONE卡在中间：它想成为所有人的入口，又很难替任何一类人把深问题做透。</p>
+<ol start="2">
+<li>为什么是ONE——或者说，为什么不得不用AI</li>
+</ol>
+<p>讨论ONE的竞争定位，不能只问「为什么是钉钉」，还要问「为什么是ONE」。</p>
+<p>钉钉有组织关系，有消息、日程、会议、待办、文档、审批，这些确实是它做AI工作入口的底气。但ONE并不是从零开始争夺用户。它首先要面对的竞争对手，恰恰是老钉钉。</p>
+<p>用户已经有自己的工作路径：消息去消息页看，日程去日程页查，审批去审批中心批，待办去待办列表处理。这个路径未必优雅，却足够熟悉。对很多用户来说，旧系统的最大优点不是先进，而是可预期。入口在哪里、红点怎么看、消息点进去会发生什么、审批点同意后是什么结果，用户心里有数。</p>
+<p>所以如果用户在老钉钉里依靠「肉眼扫视、手动标记、特意置顶」就能应付日常工作，他们就绝不会付出注意力和信任成本去迁移到一个新卡片流上。ONE必须解决一个「不依靠ONE，用户在老钉钉里就算用断手也无法解决」的场景问题，才能击穿这里的迁移成本。</p>
+<p>这里其实有三层迁移成本。</p>
+<p>第一层是入口迁移。 用户原本打开钉钉，第一反应是看消息页。ONE如果要成为新首页，就要让用户相信：从这里开始，比从消息页开始更省事。</p>
+<p>第二层是心智迁移。 老钉钉是按工具分工：消息、日程、审批、待办，各自有边界。ONE是按事情重新组织：哪件事重要，哪件事该看，哪件事该跟。这个心智更先进，但也更不稳定，因为它要求用户相信系统的判断。</p>
+<p>第三层是责任迁移。 老路径里，用户自己决定什么时候点开消息、什么时候进入会话、什么时候处理审批；ONE主动把事情端到眼前，等于提前改变了用户和工作的距离。系统越主动，用户越会问：你凭什么现在推给我？我看见之后，会不会马上承担责任？</p>
+<p>这个「不依靠AI就无法解决」的场景到底是什么？</p>
+<p>老钉钉的局限（旧范式的死穴）： 传统的IM（消息流）是一维的时间线性结构。当一个用户面临50个活跃群聊、每天上万条信息时，无论他的肉眼有多快、操作多熟练，他也只能「一条一条地看」。在旧系统里，信息是「平铺直叙」的，前线BD聊出的一个重大客户痛点，和群里的一句「收到」、「哈哈」，在IM界面上占据的空间和红点权重完全一样。</p>
+<p>非AI无法解决的场景：高密度的「非线性逻辑缝合」。 比如你在7月3日遇到顾家家居的痛点：前线销售和供应链的协同，消息散落在「顾家生产群」、「顾家交付群」、「顾家销售群」等5多个不同的群聊里。原本老钉钉做得再好，员工也必须切换5个窗口，用大脑进行人肉记忆、联想、拼凑，才能发现「哦，原来生产群里提到的延期，是因为销售群里昨天客户改了需求」。这种跨群聊、跨时间、跨文档的「上下文网状逻辑缝合」，在老钉钉里，用户就算用断手，也只能靠大脑肉搏。只有通过基于ONE的LLM推理，才能做到「把散落在不同时空碎片里的冰鞋线索，自动编织成一条线送给用户」。</p>
+<p>这些才是ONE相比老钉钉可能成立的地方。</p>
+<p>如果ONE只是把老钉钉里已有的东西换一种样式摆出来，用户很难迁移。因为原路径虽然旧，却已经够用；新入口若只是更好看、更聪明一点、更主动一点，不足以抵消迁移成本。尤其对企业软件来说，「够用」本身就是很强的惯性。</p>
+<p>这也是ONE的竞争定位中最容易被低估的一点：它不是在和一个空白市场竞争，而是在劝用户离开一个他们已经习惯、已经会用、虽然抱怨但仍然依赖的旧系统。</p>
+<p>所以，「为什么是ONE」的答案不能停在「因为钉钉有数据」。数据只是资格，不是胜势。ONE必须证明：它不只是钉钉旧能力的一次重新摆盘，而是真的解决了老钉钉解决不了、或者解决得太费力的问题。</p>
+<p>换句话说，ONE的竞争对手有三类：除了外部的两类——飞书、企业微信这样的办公SaaS软件，和各种AI Agent；还有内部的老钉钉：这是更深的一层，要和用户已经形成的工作习惯竞争。外部竞争决定钉钉为什么要做AI，内部竞争决定用户为什么要从ONE开始工作。后一件事，比前一件事更难。</p>
+<p>动态变化的定位与阶段目标</p>
+<p>在整个开发周期中，定位和对应目标多次阶段性地标调整过，每次调整，都对应着一些不得不解决的现实问题。</p>
+<p>最早摆在团队面前的，不是某一种具体形态，而是一个很难同时满足的三角：广大基数用户、用户高频行为、用户愿意付费。</p>
+<p>最核心的处于量子纠缠态的目标三角是：</p>
+<p>•目标：广大基数用户 → 诉求：要够轻、够泛、够高频，最好每天打开 → 问题：痛点容易浅，用户不一定愿意迁移</p>
+<p>•目标：高频工作行为 → 诉求：要嵌入消息、日程、待办、会议这些每日动作 → 问题：容易变成老钉钉能力的重新摆放</p>
+<p>•目标：用户愿意付费 → 诉求：要足够深、足够具体、最好能解决业务问题 → 问题：越深越像定制，越难做成所有人的入口</p>
+<p>这三件事很难同时成：如果要大基数，就要抓广谱痛点；广谱痛点通常不够痛。如果要高频，就要进入消息、日程、待办、会议；这些老钉钉本来就能做，迁移理由不够强。如果要付费，就要解决深问题；深问题往往长在行业、业务、组织习惯里，很难靠一个通用入口解决。</p>
+<p>所以ONE早期真正的定位难题，是在「所有人都会用」「每天都会用」「有人愿意付费」之间找一个交点。这个交点本来就很窄。如果要服务广大基数用户，产品就要轻，要泛，要让足够多人每天都能打开；如果要抓高频行为，就绕不开消息、日程、待办、会议这些老钉钉本来就有的东西；如果要让用户付费，又必须解决更深、更具体、更贴近业务的问题。三者都重要，却很难靠同一个入口同时满足。</p>
+<p>这也是ONE早期定位最难的地方。它既不想只做一个小工具，也不想变成客户定制；既想覆盖所有钉钉用户，又想做出足够深的AI价值；既要让用户高频使用，又要证明这个入口不只是老钉钉换了一种摆法。</p>
+<p>用「工作 + 发现」试图同时解三角</p>
+<p>后来「工作」和「发现」的组合，可以看成对这个三角的一次求解。</p>
+<p>「工作」负责高频和大基数。消息、日程、待办、会议每天都发生，只要能把它们重新组织起来，ONE就有机会成为用户每天打开的入口。「发现」则承担另一层想象：学习内容、知识流、paper、视频化内容，理论上更接近收费场景。于是ONE既包揽钉钉全局信息，又试图用工作流给发现带量。</p>
+<p>这个组合看上去完整。工作带DAU，发现带收费，ONE做统一入口。但它也把两种意图放进了同一个页面：一种是处理工作，一种是消费内容。用户打开ONE时，最朴素的意图往往是看今天有什么事要处理，而不是突然进入一个学习流。于是「发现」在产品逻辑里负责商业想象，在用户体验里却容易变成不合时宜的打扰。</p>
+<p>「工作」模块负责广大基数和高频行为；「发现」模块负责收费想象；ONE作为统一入口，把钉钉全局信息都收进来，试图既有DAU，又有商业化，又有AI新入口的故事。</p>
+<p>这个思路内部是自洽的。工作信息天然高频，消息、日程、待办、会议每天都发生；发现内容更接近学习、成长、知识付费，理论上有收费空间。两者放在一个入口里，似乎就能让高频带动低频，让免费带动付费，让工作流带动学习流。</p>
+<p>但实际问题是，用户打开ONE的首要意图并不一定接受这种拼接。他来处理工作，不一定想学习；他来清消息，不一定想看paper；他来找今天该做什么，不一定想进入一个内容流。于是「发现」不是自然长出来的付费场景，而更像被工作流带量的商业目标。</p>
+<p>这个判断要写得克制，但可以明确。这一段的核心不是「发现不好」，而是：发现把商业发心提前塞进了工作入口。用户看着某某台的电视剧，中间突然插进来一条某某乳业的广告——你可以说它的发心是给中国人推荐好牛奶，但用户能不知道这他妈是广告吗？</p>
+<p>发布会之后，ONE又被寄予了更明确的指标。产品不再只是讲一个AI工作入口的故事，还要回答有没有人用、能不能提升效率、能不能贡献AI组织数。指标进来以后，定位自然会向更容易被计量的部分靠拢：曝光、打开、点击、AI调用、组织覆盖。只是，真正深的AI价值往往更慢，也无法通过这套指标衡量。用户希望AI帮他建待办、做搜索调研、跟进事项、跨系统执行、按自己的规则处理一类问题；但这些能力牵涉权限、稳定性、成本和长流程执行，短期内不容易被做成一个轻入口。于是ONE在现实推进中，更容易停留在让事情被看见、被整理、被触发，而不是让事情被完成。</p>
+<p>到了2025年9、10月份，随着发布会落幕，由于外界刺激与对赌指标的非连续性，原本的ONE路线开始边缘化，并出现了不小的人员流失。到了11月中旬，ONE原本「提纯信息、对抗过载」的严肃生产力中枢定位被完全解构，让位给另一套更大的说法：Agent OS，底部层层堆叠的一排对于普通打工人而言完全用不到的Agent图标，不仅在内网引发了剧烈的反弹，更遭遇了不少客户的直接质疑与投诉。但它在概念层面上，完成了决策者个人对于「AI操作系统」的宏大美学投射。</p>
+<p>这也让一线产研更加意识到，钉钉已很难长出真正刷新AI时代、尊重个体自主性的AI工作产品。新的关键词已经变成LUI + GUI、Agent OS、统一AI入口、多Agent运行态。消息、日程、考勤等高频功能，都被重新理解为可以运行的Agent；未来的Fusion界面，则被设想为承载这些Agent的新工作台。</p>
+<p>那次之后，ONE在定位上基本开始退场了。它没有立刻消失，但从「钉钉AI的答案」退成了下一套答案里的某一层；从主入口退成承载位；从新工作台的想象，逐渐收缩为负一屏。</p>
+<p>这样看，ONE 的定位变迁可以概括为几次改写：先在大基数、高频、付费之间找交点；再用工作带发现，试图同时承接 DAU 和商业想象；发布会后回到效率和 AI 组织数，被更明确的指标收束；最后让位给 Fusion，成为更大框架里的过渡层。</p>
+<p>每一次改写都有理由。问题在于，前一次留下的缝，并没有在下一次里被补上。大基数和付费深度的矛盾没有消失；工作流和学习流的错位没有消失；看见事和做完事之间的断层没有消失；老钉钉和新入口之间的迁移成本，也没有消失。</p>
+<p>定位不是命名，也不是一句对外口径。定位是一次又一次取舍以后，仍然留下来的方向。ONE 最大的遗憾，也即在此：有过很多方向，每个方向都有道理，却没有来得及把其中任何一个方向走到足够深。</p>
+<h2 id="设计第三">设计第三<a href="#%e8%ae%be%e8%ae%a1%e7%ac%ac%e4%b8%89" class="heading-anchor" aria-label=""><svg class="h-4 w-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></g></svg></a></h2><p>ONE 的设计，是一个拿着锤子找钉子的方式做产品探索的过程，一个约束收敛的过程。我们从充满想象力的讨论，到放弃一步登天找到全局最优解的幻想，逐渐纠结在一个个看似支离破碎、实则彼此耦合的产品选择中。</p>
+<p>这一章，不是为了向读者展示 ONE 当年做过几种卡片、几种交互、几次改版；而是想借 ONE 看清一件更普遍的事：AI 工作产品的设计，不是把模型能力摆上界面，也不是让系统显得更聪明。它首先是在重排人与工作的关系。</p>
+<p>谁先被提醒，谁被默认已读，谁需要解释，谁拥有关闭权，谁承担模型误判后的代价，谁能把自己的规则交给系统，谁只能接受系统安排——这些问题看似细小，却决定了一个 AI 产品究竟是在帮人掌握工作，还是帮工作更早地掌握人。</p>
+<p>如果读完这一章，读者再看到一个 AI 助手、一条智能摘要、一个自动提醒、一套 Agent 方案时，不只观察它的交互是不是够酷，而会追问「系统里原本这个功能是怎么实现的？AI 做了正功还是负功？用户在获得某种好处的时候，是否付出了更大的隐形成本？AI 如何改变了原本的责任流向？」——那么 ONE 的这段设计复盘，就不只是一个项目的旧账，而有了一点可迁移的价值。</p>
+<p>工作内容如何寄身卡片</p>
+<p>卡片形态的必要性讨论</p>
+<p>余华透露过《活着》的创作历程：动笔以前，他已经「蓄谋已久」地想写一个关于人与自己生命关系的故事，但这种宏大的主题让他苦思冥想、沉吟良久，始终找不到切口，不知道从哪里落笔。直到某天早上，他一觉醒来，忽然想到「活着」两个字，立刻对太太说：「我知道怎样写这篇小说了，因为我想出了题目，就叫《活着》。」这两个字像一把钥匙，瞬间打开了整个故事。福贵的一生——苦难、荒诞、忍耐、命运——一下子有了一个可以承载它们的容器。</p>
+<p>「基于卡片的设计」之于 ONE，就像「活着」这两个字之于余华。</p>
+<p>Agent 赛道最大的问题是：叙事强、估值高、但同质化严重，技术护城河非常容易被模型升级吞掉。从技术维度的本质来说，SaaS = 数据库 + 宜人的 UI。钉钉现有的工作内容 AI 化，做成 ONE，是一种围绕既有优势的产品设计。AI 时代，怎么才算宜人的 UI 呢？</p>
+<p>我来 ONE 的时候，ONE 就是基于「卡片」的了。</p>
+<p>卡片并非随便选择的容器，它是 ONE 把「主动服务」翻译到具体设计时，最顺手和符合想象的交互语言。我们在前两章讨论了 ONE 的发心和定位：AI 工作信息流、主动服务、让事找人、钉钉的新首页、用户的专属工作秘书。与之相配的，ONE 的设计方向关键词是「有 AI 感」和「让用户快速消费」。</p>
+<p>我们希望提供的一种体感是，当用户打开钉钉时，发现系统已经替他多看了一步、多想了一层。我们希望它不像钉钉原场域，按 IM 消息、日程、待办这样的属类，割据工作内容，按照列表时间排序、红点、DING 这样的形式，组织紧急重要程度排序，让用户在一个个 tab 下进进出出，拼凑零散的工作线索——宏大而泛泛的概念，以至于很难直接变成一个产品，直到「卡片」的概念出现——ONE 才有了一个可以寄身的容器：消息、待办、日程、会议、审批、发现，这些原本散在钉钉各处的东西，都可以被 AI 拎出来，排成一张张卡片，主动送到用户面前。</p>
+<p>ONE 像一个被收拾好的工作桌面，AI 小秘书敦淑体恤地侧立一旁伺候。当用户准备开始工作的时候，几案上已经恭敬地按序陈列好一本本需要批复的奏折。</p>
+<p>这个形态很有诱惑力。它轻巧直观，适合移动端，而且一下子让人联想到抖音的feed流，一款让C端用户沉浸上瘾的内容消费形态。因此，它极宜demo，尤宜向投资人pitch。对外沟通客户、开发布会，对内汇报集团，亦然。</p>
+<p>卡片设计的风险</p>
+<p>不过，因为卡片解决的是「展示」，并没有回答「内核」，走进具体而鸡毛的工作场景：工作并不会因为被做成卡片，就变成可以轻松消费的内容。这正是ONE的设计在历史上许多时刻陷入难产的地方。</p>
+<p>请读者与我一起想象一下卡片式的交互。可以联想Tinder、西窗烛这样的内容相对同质的图文卡片，或者抖音这样的全屏feed流。一张全屏幕的卡片送到眼前，用户只需要停留消费卡片上的内容，不需要额外的上下滑动，操作而言，只需要左滑右滑或者少数点击，系统会根据用户的主动标记或停留时长，来记录用户喜欢或不喜欢，并无限给用户推送下一张卡片的内容。</p>
+<p>由全屏的视觉展示和极简的操作可以推想，卡片更适合推荐、浏览、轻处理，也即更适合娱乐内容。这个交互操作，落在工作内容上，就会比较操蛋。工作不是消费了就结束的内容。划走一张Tinder卡片，卡片背后的用户，对你的「不感兴趣」也「不感兴趣」。但是每一张钉钉的工作卡片的背后，都可能有一个紧张等待你表态、回复或者交付的同事。</p>
+<p>这不是说卡片完全不行，事实上，有些工作确实适合卡片。</p>
+<p>比如审批就很适合。信息字段规整，核心操作单一，同意或拒绝，也正中卡片设计的下怀。待办也适合，因为它能把散落在消息、文档、会议里的信息转成一个待办对象。日程和会议准备，勉强也可以适合——这些场景的共同点是：结构相对清楚，动作相对明确，关系压力相对弱。卡片可以帮用户少看一点、少点几步、少漏一件事。</p>
+<p>不过IM消息，就是一道天堑了。</p>
+<p>IM消息如何寄身卡片</p>
+<p>IM消息在ONE呈现的必要性讨论</p>
+<p>IM是钉钉工作中最重要的一部分，占据用户 80% 以上在钉钉的停留时长。钉钉的文档知识库等知识管理既已积弱，所服务的诸传统企业，本身信息沉淀的诉求又低，IM的信息就更显重要。想要用ONE给发现带量，再用发现变现，必须培养用户用ONE办公的习惯。不带IM玩，「高频」「大DAU」的目标，就流水漂萍了。</p>
+<p>落成移动端</p>
+<p>ONE主要落在移动端。这个选择和卡片的原始设计选择是强关联的。</p>
+<p>曾经PC难为水——事实上，在ONE项目启动的初期，6、7月份就出过PC端的需求设计，里面有涉及钉钉原场域端框架改造的，还拉PC端框架的产品和技术负责人讨论过。最终没成，主要因为：卡片的设计放在桌面端，就显得格格不入，信息量比之前还低；操作起来更不方便，没法像移动端那样滑屏；考虑过类AI浏览器的方案，也即把钉钉第四屏做成copilot（现在的悟空入钉也是这样实现的），但是由于没有卡片元素，在提案初期即遭否决。另外可能还有原因：ONE是保密项目，我们只被允许不暴露具体产品形态的情况下，兜着圈和「外面」的产品开发讨论方案，对面也是一头雾水，产品讨论起来鸡同鸭讲，你画我猜。关于项目保密制度，我们会在「秩序第六」章讨论更多，本章还是聚焦前两点设计问题。不过，说起来也还好没有投入开发，不然也是徒然耗人。</p>
+<p>再说回移动端，移动端其实不适合直接处理复杂工作：屏幕小，信息承载量有限，只适合提醒和轻量读写处理。它可以提醒用户有哪些工作事项要办，排好顺序，准备好轻量的处理选项，却很难让用户真正「顺手」把这件事完整做完。写文档、填表格、写代码、跨系统查资料、整合总结分发、跟进执行，很多还是更适合在PC端完成。</p>
+<p>移动端还是PC端，这又是一盒薛定谔的用户。只是人力有限，还是要选择一端先下手为强。可以想象地，我们选了移动端，同时也一直牵挂着PC端，记为「重要不紧急」。和所有「重要不紧急」的任务一样，直到ONE死灯灭（其实倒也没有完全死），PC端都没真正被排上一天开发。</p>
+<p>实时性问题</p>
+<p>要在卡片中加入IM，就必须考虑实时性问题。整理复盘资料的时候，发现7月底在备忘录上记了一个产品卡点便签如下：</p>
+<table>
+	<thead>
+			<tr>
+					<th></th>
+			</tr>
+	</thead>
+	<tbody>
+			<tr>
+					<td>2025年7月27日15:47<br><br>731所有影响可用的卡点【PO】<br><br>++++++++++<br><br>卡片状态透传<br><br>++++++++++<br><br>卡片重复多张；<br><br>已读较久的消息，没有及时杀死（仍然作为未读卡片透出）；<br><br>消息已读后，对应红点在IM列表页清除；<br><br>+++++++++++<br><br>消息展示交互<br><br>+++++++++++<br><br>特殊消息被吞（图片，视频，和部分不支持的消息格式，会被直接过滤掉）（应该发出中括号提示被吞内容，如“[图片]”）；<br><br>语音消息无法展示“类型3的消息暂不支持展示”（应该发出语音+转文字）；<br><br>文字表情回复严重超时；<br><br>【新】封面（极速版）；<br><br>【新】消息中快捷添加todo按钮。<br><br>【P1】<br><br>文字表情一系列交互问题（无法点击撤回表情；长按选中某对话框出现的文字表情不能动态调整，如果已经发出某条表情，再次长按会重复出现该表情且不可交互，etc）；<br><br>视觉改版（“前情提要”位置上移）；<br><br>字体大小适配。<br><br>【P2】<br><br>Prompts持续优化&amp;评测。</td>
+			</tr>
+	</tbody>
+</table>
+<p>之所以会出现「卡片重复」「卡片上的消息已读，但卡片仍然以未读状态存在」「红点没有消除」的问题，核心皆因这一套卡片是由服务端上异步生产所致。不实时对IM消息卡片来说是致命的。因为用户消费的对象， 80% 以上是其收到的消息本身，而不是AI生产的内容。IM消息生产频次高、变化快，不实时就意味着对用户的欺诈。</p>
+<p>如果只是卡片重复读，或者在ONE读了一遍、回到原场域又要重读，这还只是浪费用户时间的「小」问题。而如果是被发信人编辑过的信息，用户在ONE里读了一遍编辑前的版本；亦或者是已经在原场域被发信人撤回的敏感信息，又可以在ONE的卡片里读到——这些可能就是会涉及数据泄露的大问题了。</p>
+<p>其实，如果没有对实时性要求极高的IM消息，工作卡片是非常适合由服务端异步生产的。正如前文提到的OpenAI推出的ChatGPT Pulse，也是夜里异步产生卡片给用户第二天早上起来读。这样由异步服务端生产卡片的好处是：【生产侧】处理频次低，一次输入输出完整处理，大大节省了成本；【用户侧】一次性可以读到信息量更高的内容，减少打扰，提高效率；【产品运营侧】培养周期性进入产品的习惯。可以说是个多赢。只是这样，就注定不能满足产品要做成高频的需求——这又回到了定位的不可能三角。</p>
+<p>重要性排序</p>
+<p>ONE要主动服务，第一步就是排序。ONE针对卡片重要性排序的设计，有过两种思路：</p>
+<p>1.所有工作卡片，不限类型，放在一起打散排序。这样做的好处是更加灵活，比如有三张卡片，分别是一条来自主管上级在群里@你的提问消息，一条普通的群聊消息，还有一条还有1小时截止的待办。打散排将这条紧急的待办放在重要紧急的主管未读消息之后，和一条不太重要的群聊消息之前。</p>
+<p>2.先规划各种工作卡片类型间的排序，再在每种类型内各自排序。这样做也有好处：心智更加稳定，也符合心流理论。因为人在不同的任务间切换，认知层面上是需要「重新启动」的：先处理两条消息，再处理一条待办，再处理一条日程，再回来处理两条消息，其实也是对人更加高功耗的要求。</p>
+<p>我们最后选了第二种。由此，实际开发中，ONE里的排序有两方面，一方面是各种类型卡片间的排序，这其实也就是一套人工规则；另一方面是IM消息的排序，这里面的复杂度就要高很多。（其他卡片类型内的排序也是非常简单的一句话人工规则，比如日程只和时间有关，待办也和截止时间有关。）</p>
+<p>各种类型卡片的数量级，和用户在对应原场域的工作内容量，是成比例的。IM消息占到钉钉用户工作的 80% 以上，对应的，用户每天卡片数量的大头也都出在IM卡片上。排序的设计思路上，我们主要根据组织关系（比如直属上级，重要联系人）、信息性质（比如@我、DING消息）；行为亲密度（比如会话曝光点击、发言内容长度、停留时长）等组成的上下文，来构建会话的紧急重要排序。说到底，是想让系统理解企业消息里，对一个用户个性化的真实重要性评估。</p>
+<p>卡点1：排序和分组的矛盾</p>
+<p>有一些IM原场域的特性，如果不拆碎了重整，是非常难塞进卡片排序这套逻辑里的，其中最典型的特性就是分组。</p>
+<p>一般什么样的用户会使用分组？首先，会话足够多，消息足够多，否则没必要分。其次，它在处理一些不同领域或不同角色身份的会话消息，否则也没必要分。所以概括起来，负责多个项目的信息中枢型员工更可能使用分组。这部分用户，也符合我们在用户定位里讨论的塔尖用户类型。</p>
+<p>对应的，也有两种用户常用以分组的手段。以PM为例，同时在对接许多项目，也同时在对许多不同的岗位角色沟通。这里就有两种分组思路，一种是按照项目分组，另一种是按对客户、对内部这样沟通去做分组。</p>
+<p>当用户在原场域切换分组的时候，页面上就会把这个分组下所有的会话都陈列出来，不区分已读未读，不区分重要程度。如果要做排序，那么必然未读在前——甚至只能放未读，否则是对有限卡片空间的浪费。同时，各个分组内一定会被打散：一个不重要的分组里的客户愤怒的紧急舆情质问，很有可能重要过一个重要的分组里某个内部同事的玩笑发言。所以要把分组也搬进排序卡片里，天然存在着不可调和的矛盾。</p>
+<p>我们从具象的例子走到抽象的概念，主要是这些维度上的不可调和性：</p>
+<p>•维度：分组 vs 排序</p>
+<p>•核心目标： 分组提供稳定的语义归属（谁在说什么话）；排序提供动态的行动优先级（我该先看谁）</p>
+<p>•稳定性： 分组相对长期稳定（项目、角色、主题）；排序高频波动（随时间、未读状态、紧急程度变化）</p>
+<p>•用户心理： 分组「我知道它属于哪件事」；排序「我现在该先处理哪件事」</p>
+<p>•弊端： 分组可能掩盖紧急但不常用的对话；排序可能打乱用户的熟悉结构</p>
+<p>我们实时同步处理IM消息的初衷，以及导航栏滑切的交互，决定了我们一定以「排序」为主要组织维度，「分组」作为辅助。或者说，分组应该作为排序的加权项，而不能完全照搬。我们提出过用标签形式软化和替代分组的可能性。不过这个方案最终没有通过。最后老板拍板还是希望我们把分组完整地搬进one，最后的呈现形式也比较怪异，就是单拎了一个分组的卡片类型出来，卡片上放分组消息列表，当出现未读的时候呈现整个列表。</p>
+<p>可以想象这是非常别扭的。首先，对于一些有大量分组，或者分组已经老化的用户来说，这样显著降低了卡片消费效率，其次，对于一些用户同一个会话设定在不同分组的情况，就更加难缠。</p>
+<p>这个功能做上线之后，我们项目室里就有开发拿着手机找我展示他的分组消息卡片，每张卡片上只有一两个未读会话，零零散散分了十几张卡片。他苦笑说，幽素有没有办法调整一下？这是bug吧。我说&hellip;可能没办法，这是他要的。说这话的时候，我自己也脸红，感觉自己在逃避和推卸责任，不是一个好产品。</p>
+<p>卡点2：排序被卡片交互遮住</p>
+<p>排序要成立的一个前提是，首先用户必须感知到排序。列表天然让人感知顺序。第一条、第二条、第三条摆在一起，用户会比较，也会逐渐相信这个系统把重要的东西排在前面。</p>
+<p>卡片不一样，卡片一次只出现一张。用户面对的不是一个序列，而是眼前这件事。即便再把卡片放进导航栏、横滑、头像和各种压缩空间里，用户首先感受到的，往往不是「系统帮我排好了」，而是「这个会话我看不清」「这个人是谁」「这条消息是不是已经被我读了」。智能没有消失，只是被交互遮住了。</p>
+<p>如果眼前这件事还是未读的重要消息，用户就更难感知排序的好处。这也是早期消息卡片很别扭的地方。系统花了很多力气判断重要性，用户的第一反应却不是「它排得准」，而是「它会不会替我暴露状态」。排序在卡片里被压力淹没了。</p>
+<p>所以，排序是主动服务的起点，但排序必须被合适的界面承接。否则系统判断得再多，用户也不一定感受到价值。比如，有没有可能直接做进IM列表里呢？可惜，那是ONE的命题以外的工作了。我们尝试过「向前一步」，汇报提议过这个方案，但是可以想象地没有任何结果。</p>
+<p>此外，相比「难以感知排序的好处」这种隐性debf，还有一个显著高亮的debf：用户的注意力完全被另一个问题攫取——</p>
+<p>已读恐怖主义</p>
+<p>「卧槽，这怎么直接把我已读了！」</p>
+<p>无论是内部同事还是外部用户，第一次在ONE的卡片里刷到IM消息，几乎都是这个反应。消息卡片里最棘手的问题，不是排序，而是已读未读状态。</p>
+<p>已读未读，其实也就是消息阅读状态功能，最早可以追溯到2005年，由黑莓公司在BlackBerry Messenger（BBM）中首创，设计初衷是为提升商务沟通效率。钉钉IM消息接入已读未读显示，是钉钉在2016年1月16日推出的版本1.0里的当家得意之作。</p>
+<p>已读，即开启了回复的倒计时。这在钉钉原场域，是用户早已习惯的机制，但在ONE在的卡片里却是大灾难。因为用户不再是观察未读消息列表，通过last message简单判断消息内容，再主动选择一条进入，清除已读状态，而是直接开了AI秘书呈上来的盲盒。剥夺了用户的选择权，责任和后果却要用户承担。这委屈谁受得了？</p>
+<p>那能不能在ONE里就不直接帮用户已读掉呢？内部一开始讨论过其他方案，比如「只读卡片不算已读」「进入IM详情页才算已读」。这些方案都被否决了。无招认为，这会损害发信人的利益，也会动摇钉钉的根本。</p>
+<p>这里主要是发信人立场，可能也有一点产品一致性的考虑。</p>
+<p>更糟糕的是，这里的已读，纯粹是锦衣夜行。过去钉钉做已读未读成功。对比的是微信。用户一下子就有体感了：是钉钉帮我，让我布置出去的信息都可以查看状态，让我对一件事情的进展有更强的把控力。然而在ONE里，现在收信人是清楚自己在这儿半推半就、将信将疑地已读了几条他还没准备好签收的工作任务。而与此同时，对面的发信人，其实根本分不清自己发的消息，对面究竟是在钉钉原场域还是在ONE已读了自己的消息。于是，我们千辛万苦硬着头皮做出来的已读，不仅吃收信人的瓜落，发信人也不买它的账。</p>
+<p>后续「用户」章也会提到，我们收到针对卡片形态最强烈的反馈也落在这里：「我怕客户/老板看到我已读不回。」</p>
+<p>有时候，不立刻点开消息，不是怠惰拖延，而只是给自己留下一点处理的余地。一个对自己工作内容熟稔于心的工作者，从群名、发信人和last message的上下文里，已经可以大概推知对方问什么要什么了。一个运营同事反馈过类似场景：她看到是哪个群里、哪个人 a 了她，就知道大概在问哪件事；但她还没准备好回。比如某个不是非常紧急需要的回复，可能依赖一个小时后要开的会议的结论，那么等会后有了结论再同步对方，就可以一次说清。如果现在读了，就要多解释一轮，多发一句「我看到了，但要等几点几点某某会后同步」。</p>
+<p>ONE的消息卡片把这点余地压缩了。它原本想替用户减少读信压力，实际却可能提前启动责任压力。</p>
+<p>更尴尬的是，这个设计对发信人的收益也很弱。发信人并不知道用户是在ONE里看到的，还是在会话里看到的。他只看到一个「已读」。对他来说，体感差别并不明显。所以这不是抽象的「发信人vs收信人」立场之争，而是一笔具体的收益和成本错配：发信人获得的增量很弱，收信人承担的不安很强。</p>
+<p>我后来越来越觉得，这是一个锦衣夜行的设计。它维护了一个抽象正确的立场，但真正被保护的人没有明显感知，真正付代价的人却清清楚楚。</p>
+<p>当底层规则不能动，交互就只能补洞。补得再巧，也还是洞。</p>
+<p>无望的补丁1：横滑</p>
+<p>8月25日发布会前后，ONE引入了横滑结构，从变成了Tinder进化为微信公众号。它本质上还是卡片，只是在页眉加了一排头像。这样用户能提前知道后面大概是谁的消息，也可以点击跳过某些卡片。</p>
+<p>横滑结构设计还是想解决两个问题：给用户预告感，缓解「不知道下一张是谁、但看见就已读」的压力；允许点击头像，主动跳过一些卡片。</p>
+<p>然而，交互的底层规则没变，另外还增加了两重隐形而严重的麻烦：相比原场域有 last message、有消息发出时间等，用户在 ONE 需要依靠更少的信息——仅通过头像判断可能需要跳过谁的信息；页眉加了横滑头像之后，压缩了可读空间。在一些小屏幕机型上，键盘一拉起来，甚至看不到 IM 消息本身，反而更加损失了信息效率，加重了用户的阅读负担。</p>
+<p>横滑相比原场域的好处，仅仅是减少了用户一进一出、点进一条消息查看的成本，但这对用户来说真的重要吗？假设点进点出需要耗费用户 1 秒，而判断一条消息需不需要跳过需要 10 秒。为了节省 1 秒而增加 10 秒的负担，这真的划算吗？</p>
+<p>无望的补丁2：Peekaboo</p>
+<p>Peekaboo 是我提出的。它的原理是，既然必须要标记用户已读，那么我们可以在明确标记已读的节点上略施花活。用户在横滑到下一张卡片时，只要没有完全划到下一张、没有松手，就还不算正式读到，可以理解为「预读」。这样用户可以比普通 IM 列表里的 last message 看到更多消息内容，又暂时不触发已读。</p>
+<p>这个设计纯粹是无奈的、苦中作乐的、抱有侥幸心理的、但好在也没花什么成本的——补丁包。也如预料，几乎没有用户主动发现这出精致的淘气。</p>
+<p>卡片的可玩性</p>
+<p>当然，卡片绝非一无是处——如果真是一无是处，我们也不会启动了。除了可以减少用户一进一出的操作，以及节省判断时间之外，卡片的想象空间很大，或者说可玩性很强。卡片格式可以承载非常多的内容，比如我们做过「今日消息今日毕」「今日金句」等有意思的功能：</p>
+<p>今日金句——他们的定位是消息的解构和重新组织，辅助用户快速消费信息或者重吸收。</p>
+<p>对标原场域</p>
+<p>2.3 节提到的实时性问题，其实就是对标原场域的一个细分场景。讨论和走查对标原场域，其实就是在计算用户的迁移成本。如果说，我们的最终目标是用户可以完全迁移到 ONE 上，那么 IM 消息卡片究竟对标和替代原场域什么功能的职能呢？</p>
+<p>1.首先，替代了一部分阅读消息本身内容的职能；但是并不是所有消息都适合在移动端展示呈现，如果涉及长消息、文档、链接、动态卡片，还是更适合在已经迭代了十年的原场域或者回到 PC 端查收。</p>
+<p>2.其次，替代了一部分提醒通知。我们一开始讨论希望 ONE 里读了消息可以算作「未读」，就是考虑 ONE 可以对标 notification bar 的可能性。这也很符合常理：毕竟卡片可展示空间有限，可以认为是一条长提醒。</p>
+<p>3.第三，鉴于我们做了「已读未回」「今日金句」等卡片，相当于帮用户做消息的「重吸收」，因此我们也可以对标这样一部分超越原场域范畴的工作。</p>
+<p>4.最后，消息列表。IM 消息卡片的目标，可能是要把整个消息列表吞掉。这并不是因为我们已经对标了 IM 列表的能力，而是我们在卡片的形态里，已经没有列表的容身之处了。</p>
+<p>不过，我们真能替代得了么？以IM消息列表为例，它不仅承担未读按时间排序的展示，它实际上容纳了所有的会话。当用户想要根据一些模糊的记忆，对照时间线模糊下翻寻找某个会话的时候，当用户想根据last message 大致预知未读消息中可能包含内容的时候，当用户长按某个会话，把它标记为未读的时候——还有许多其他场景，IM列表其实隐形地承担了非常多的职责。</p>
+<table>
+	<thead>
+			<tr>
+					<th></th>
+					<th></th>
+					<th></th>
+			</tr>
+	</thead>
+	<tbody>
+			<tr>
+					<td>原场域模块能力拆解：IM列表</td>
+					<td>ONE对标模块：导航栏</td>
+					<td>ONE中情况</td>
+			</tr>
+			<tr>
+					<td>高严重程度：按【处理时序】模糊查找会话</td>
+					<td>无</td>
+					<td>严重程度：高</td>
+			</tr>
+			<tr>
+					<td>按【分组】查找/管理会话</td>
+					<td>仅选出含未读的分组，以列表形式呈现；无主动查找路径</td>
+					<td>严重程度：高</td>
+			</tr>
+			<tr>
+					<td>last_msg,【预告未读】信息原文（～20字）</td>
+					<td>有</td>
+					<td>严重程度：高</td>
+			</tr>
+			<tr>
+					<td>长按出会话快捷操作</td>
+					<td>无</td>
+					<td>严重程度：低</td>
+			</tr>
+			<tr>
+					<td>last_msg,【预告未读】标签有[有人@我]直属上级“[特别关注][新会话][草稿][稍后再用]，没有[@所有人][直播][红包]etc</td>
+					<td>无</td>
+					<td>严重程度：低</td>
+			</tr>
+			<tr>
+					<td>last_msg,【监测对方已读】情况</td>
+					<td>无</td>
+					<td>严重程度：中</td>
+			</tr>
+			<tr>
+					<td>last_msg,时间</td>
+					<td>有</td>
+					<td>严重程度：中</td>
+			</tr>
+			<tr>
+					<td>对方【状态】，如“会议中”和自定义签名</td>
+					<td>无</td>
+					<td>严重程度：中</td>
+			</tr>
+			<tr>
+					<td>对方【组织】，如“@xxxx公司”</td>
+					<td>有</td>
+					<td>严重程度：中</td>
+			</tr>
+			<tr>
+					<td>对方【群性质】，如“外部群”“答疑”</td>
+					<td>无</td>
+					<td>严重程度：低</td>
+			</tr>
+			<tr>
+					<td>常驻入口：【置顶】会话/专注模式Pin住会话</td>
+					<td>无</td>
+					<td>严重程度：低</td>
+			</tr>
+	</tbody>
+</table>
+<p>另外，还有一些原场域的隐性优势我们是缺失的，比如说消息可视区域的空间。为了缓解已读的恐怖，我们做了横滑和页眉的头像，这是一块信息浓度很低，又很占空间的区域。</p>
+<p>讨论卡片形态的时候虽然兴奋，在实际推进中，由于我们把重兵压在了移动端的卡片流，产品展现出来的形态，只是把这些信息提炼成了几行简短的摘要卡片。这导致了最致命的错位：AI 在台面下做了最难的「网状逻辑缝合」，但在台面上，却只给用户呈现了一个「老钉钉里用肉眼扫一下也能看到」的简短摘要。用户感知不到那个「不依靠 AI 就无法解决的降维打击」，只看到了一个多出来的、需要大拇指去滑动的卡片。新范式的高昂信任成本（用户需要担心AI 摘要得准不准、会不会漏掉重要信息），最终败走钉钉原场域那虽然痛苦、但高度产生安全感的「手动刷红点」的肌肉记忆。</p>
+<p>成本问题</p>
+<p>如果说，上一节「2.7 对标原场域」是我们在计算用户的迁移成本，那么由于功能设计涉及AI，即必有 tokens 的消耗，我们也需要计算这个AI 秘书日常运行的成本。</p>
+<p>之前做成服务端方案时，没有考虑到实时性，成本还相对可控。要做成实施排序的方案生产出来的卡片用户却不一定消费，岂不是「损成本以奉功能完整，犹割股以啖腹，腹饱而身毙」？</p>
+<table>
+	<thead>
+			<tr>
+					<th></th>
+			</tr>
+	</thead>
+	<tbody>
+			<tr>
+					<td>2025年8月10日16:49<br><br>[反思]实时性数据 + AI<br><br>[消息AGENT]<br><br>用户消费对象： 80% + 是消费消息数据本身，而不是AI生产的内容。<br><br>数据：不实时 → 后果：用户消费不到想要的东西，生气离场，产品死掉。<br><br>AI生产物：实时 → 后果：成本超级高，入不敷出，产品死掉。<br><br>尽可能实时：不实时 → 唯一的路，先活下去再说。</td>
+			</tr>
+	</tbody>
+</table>
+<p>但是不实时是不行的。上文已经讨论过，不实施就是欺诈。我只能在心里悲壮地想：「而今不实时死，实时亦死，等死，死实时可乎？」不过办法总是人想出来的，办法总比困难多（不包括2.4.1的分组问题）。后来我们用了端上的小模型，做了实时和离线计算的组合，从某种意义上解决了这个问题。</p>
+<p>那么，IM 卡片最终服务好它的目标用户了吗？</p>
+<p>显然是没有的。除了上述提到的所有问题，有一只房间里的大象至今尚未讨论，那就是：卡片整体是用来阅读，而不是操作，或者用来查找的。</p>
+<table>
+	<thead>
+			<tr>
+					<th></th>
+			</tr>
+	</thead>
+	<tbody>
+			<tr>
+					<td>钉钉这次大改版的逻辑是什么？硬创新？ 收藏人气[24353] 回复[179]5字以上回复 时间 热度<br><br>楼主发表于：2025-12-18 09:02只看该作者<br><br>闫洪磊（三寻） 工号：107328 部门：云智能集团 芝麻：1093<br><br>针对这次钉钉UI大改版，N多人被当做小白鼠在多套UI桶内测试，内网吐槽不少了，但是至今没有看到新版产品设计理念的解释，为什么要改动已经习惯了的工作方式，发消息打电话这么高频的场景为什么隐藏这么深？？？因为功能太多？假如你真的要归类那是不是可以让我们自定义哪些是要收缩那些要固定？假如（我说是假如）新版UI一定要做下去，那么建议方案：常用操作可以自定义，例如下图中绿色区域可以自定义一些自己认为的高频场景，按照我们的工作方式应该会把【视频会议】固定在绿色区域内既然已经当了一段时间小白鼠了，那么钉钉PD是不是有足够的数据分析这个改版是不是要再继续下去？还是会听从用户的反馈，不要再强迫更改客户习惯而是提供新的UI的同时支持自定义更加符合个人工作模式！参考一下微信，这么多年了对于发消息打电话这个使用习惯改变过吗？</td>
+			</tr>
+	</tbody>
+</table>
+<p>我们在2.5节，站在发信人的立场，挣扎着做了「已读」的操作，却没在发信人面前讨到好；我们在2.7节走查了和原场域对齐还相差哪些内容一到这里，卡片对发信人来说最致命的问题立刻浮现了：消息列表承载的查找会话、管理会话的职能在卡片形态上是完全丢失的，我们做了语音指令能力来填补搜索查找，另外在卡片上加入搜索图标来缓解前者，但是效率已经大大降低。</p>
+<p>读者可以想象一下，在脑海里列出，你最近几天高频沟通的top10群聊的具体名称。由于平时我们不需要输出这个名称，所以直接输出是困难的，尽管你可以在看到它的名称时一眼认出，那就是它。同时，在IM列表上找到这个高频会话只需要2～3秒，如果你把它设成置顶，你可以凭手感在1秒内找到它。但在卡片，15秒是一个非常保守的估计。</p>
+<p>重新拆题：AI到底能帮用户读、写、管什么</p>
+<p>到10月中旬，团队已经围绕卡片、排序、已读折腾了一大圈，我逐渐强烈意识到一件事：或许设计不该先从卡片开始，而该先从用户动作开始。用户在原场域究竟在做什么？核心动作是在读、写、和管理消息（分组、打标签）。于是我们可以把IM Copilot的目标重新写成三件事：提高用户读信效率，降低用户写信门槛，兜底用户丢信风险。</p>
+<p>寻找甜区</p>
+<p>寻找甜区的思路，主要是找到用户有体感、会出现Aha moment的，和设计开发成本低的交集。</p>
+<table>
+	<thead>
+			<tr>
+					<th></th>
+					<th></th>
+					<th></th>
+			</tr>
+	</thead>
+	<tbody>
+			<tr>
+					<td></td>
+					<td>可以出Aha Moment</td>
+					<td>没感觉</td>
+			</tr>
+			<tr>
+					<td>设计开发成本低</td>
+					<td>【回复】起稿 优化中 / 【新起】具体场景起稿：客户沟通，社交发起，进度追问(某种意义上仍是回复) / 【新起】【转发】选对人+起稿 设计中 / 【素材准备】找文档-近稿文档 设计中 / 【翻译成任务】模糊跟进待办（e.g.“下周/年后”——“提醒我跟进”）设计中 / 【翻译成任务】搜索调研 / 【管理】设为免打扰 开发中</td>
+					<td>【读】未读总结（仅基础支持） / 【读】“金句” / 【读】已读未回（不痛不痒型） / 【回复】润色 / 【新起】具体场景起稿：年节祝福 / 【翻译成任务】明确具体的日程 / 【翻译成任务】字面意义的待办 / 【管理】未读重要排序</td>
+			</tr>
+			<tr>
+					<td>设计开发成本高</td>
+					<td>【读】已读未回-命中 / 【读】消息订阅 可尝试小模型 / 【读】支持秘书语音播报等特殊场景(听) 消息 / 【转发】选对上下文消息 可尝试小模型 / 【素材准备】找文档-近期文档 or 依赖知识库 / 【素材准备】生图（表情包） / 【翻译成任务】添加备注/收入到文档 / 【翻译成任务】添加注释到代码库 / 【管理】按事件维度打标 / 【管理】未读重要排序</td>
+					<td>【读】未读总结（精细优化） / 【管理】拉群 / 【管理】群发</td>
+			</tr>
+	</tbody>
+</table>
+<p>遵循这条思路，我们在ONE里做了AI回复。它后来取得了比较好的反馈，并且并入了钉钉主端，成为了灵动回复。</p>
+<p>默认值的权力：平台产品不能只靠主厨审美</p>
+<p>AI工作产品里的默认值很重要。默认是否已读，默认展示什么卡片，默认排序规则，默认是否出现发现，默认是否主动推送，默认把用户带向哪里。这些看起来是产品设置，实际上是产品价值观。</p>
+<p>大多数用户不会一项项配置，也不会花时间研究开关。默认值就是他们实际生活在里面的制度。</p>
+<p>ONE的默认值里，带着很强的产品设计者的意志。比如默认读到消息即已读，默认系统替你排序，默认工作卡片后面跟着发现，默认让用户先进入一个由系统安排好的信息流。</p>
+<p>对于一个小众产品来说，这种强风格可以成立。像番茄钟一类产品，本身未必解决多深的痛点，但它提供交互美学、节奏感和仪式感。喜欢的人来，不喜欢的人走，它像一家餐馆，有自己的菜品、审美和规矩。</p>
+<p>ONE不一样。ONE想做大DAU，想做钉钉的新入口，想覆盖广大基数用户。它更像平台，不像餐馆。平台产品当然也需要风格，但它不能要求所有人都按主厨的口味吃饭。一个小餐馆可以坚持「我就这样出品」，美团不行。美团要承载千千万万种吃法。</p>
+<p>ONE的许多设计问题，正在这里。它想做平台级入口，却采用了很强的主厨式默认。老板和少数产品设计者反复耳提面命，把自己的工作方式、审美、判断，做成了所有人的默认处境。</p>
+<p>发现是典型例子。发现不属于工作卡片，更像学习流。里面会出现paper、学习内容、视频化内容。某种意义上，它是一个被放进工作入口里的内容频道。</p>
+<p>发现的存在有几重原因：无招个人对学习内容的执念，商业化压力，以及一种组合思路——工作模块负责高频和DAU，发现模块负责知识订阅付费和token消耗。三者并不矛盾，甚至可以互相解释。问题在于用户场景。用户打开ONE，主要是处理工作。消息、日程、待办、会议都是压在眼前的事。刷完工作卡片之后，如果系统自动进入发现，开始播视频，几乎所有的用户都会被吓一跳。很多反馈也很直接：「像广告」「工作时不想看」「占地方」。</p>
+<p>后台和ONE用户反馈群里，要求把发现关掉，是非常高频的问题。几乎没有普通用户给发现正反馈。有少数老板或KP会喜欢，比如市场部KP希望用来监控舆情，但他们也更多希望自己用，并不会给全体员工开权限。不过我们对发现的期待，是老板能给全体员工开；不然这要怎么（足够高地）收费呢？</p>
+<p>这又回到平台和餐馆的问题。少数高能动用户可能喜欢学习内容，喜欢信息摄入，喜欢随时看到外部变化；多数打工人打开ONE，只想把今天的工作处理掉。发现的问题不在内容质量，而在时机和默认。学习当然有价值，可当一个人正在处理消息、会议、待办时，系统突然递来一个学习流，就很容易从服务变成岔路。</p>
+<p>从这个角度出发，也再一次印证了用户自定义的重要性。越有主观能动性的用户，越希望自己能调规则：我想看哪些人，哪些群不要提醒，发现能不能关掉，什么消息算重要，哪些卡片以后少推。可ONE早期给用户的自定义口很弱，更多让用户接受系统安排，而不是让用户驯化系统。</p>
+<p>探索非卡片的可能性：信息流</p>
+<p>上文提到过和展示过西窗烛的划卡片式交互。其实有两个非常有名的古诗文类App，还有一个叫古诗文网。古诗文网就是一个典型的无限信息流式的首页，和今日头条非常相似：所有呈现的信息可以在一个页面上，可以向下一划再划，但是不会提供像卡片那样切割出来的、一件事是一件事的手感。</p>
+<p>在 ONE 走出项目室、产研团队也收缩为一个更小规模团队的时候，这种可能性终于被我们提上日程。我们的新目标是，在一屏内展示所有重要的内容。</p>
+<p>首先，我们重新把重要未读，以列表的形放出来了，接着我们在下面同一页内，继续呈现当天重要的日程、需要做的审批和待办等等。这个形态还是受到了一些好评，尽管它失去了最初项目启动时理想主义的卡片手感。</p>
+<p>其实到后期，放弃「什么都想要」的心态，不做满手抓着金银宝翠一颗都不肯放手的强盗，反而好了。只抓重点一个心智：当首页为空时，用户即已解除当前所有紧急重要的依赖，不再是任何人的卡点。上了这个版本之后，在我们没有任何主动放量和宣传的情况下，产品还是保持比较温和的自然增长。比较令人惊喜的是留存，次流从 10% 出头涨到接近 30% 。到one入口被换成悟空的4月份之前，次日留存涨到巅峰 45% 以上。</p>
+<p>小结：形式不该凌驾于内容</p>
+<p>回头看，ONE的设计教训不在于卡片不能做。任务识别、会议准备、快速审批、AI回复都证明，卡片和AI可以很好地承接某些工作。真正的问题在于，工作产品里的「看见」从来不是中性的。看见一条消息，可能意味着已读；看见一个待办，可能意味着责任；看见一场会议，可能意味着准备；看见一个总结，可能意味着后续分发。</p>
+<p>系统把事情提前端到用户面前，不能只计算阅读效率，还要计算责任成本。设计也不只是把界面做好看，而是安排权力和责任怎么流动。</p>
+<p>AI工作产品的好设计，不是让系统更早发现工作，而是让用户更好地掌握工作。如果没有做到这一点，所谓的主动服务，只是变成对用户傲慢而爹味的控制欲。</p>
+<h2 id="用户第四">用户第四<a href="#%e7%94%a8%e6%88%b7%e7%ac%ac%e5%9b%9b" class="heading-anchor" aria-label=""><svg class="h-4 w-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></g></svg></a></h2><p>其实在我的理解和倾向上，「用户」和「设计」之间，「用户」排序应该更靠前。用户是靶子，产品是箭；焉有靶子在哪还不清楚、甚至场地和比赛项目都没确定，就先挑选箭支的道理呢？</p>
+<p>然而行文顺序最终定下是「设计第三」「用户第四」——因为就实际执行而言，ONE的开发过程确实有很多「设计」在前，而拿「用户」来贴近设计的成分。</p>
+<p>这不是钉钉独有的问题。无论是做AI产品验证idea，做其他产品，或者泛化为做一切实验假设，一旦立了项，或做出了某种初步假设，沉没成本就会让这个产品或者实验假设的发起人，下意识成为自己假设的拥。一个人提出一个念头，很快就会开始保护这个念头；一个团队做出一个形态，很快就会开始解释这个形态；一个组织投入了资源、时间、排期、汇报链路，就更难承认：也许一开始题就没问对。大型组织的沉没成本更高，因而更容易陷入自恋、自我解释和难以掉头。</p>
+<p>如果说前三章更多还是是逻辑学科，那么从本章开始，则更加偏向经验学科。前三章我们讨论了ONE如何想象世界：为什么出发，想成为什么，又怎样落到卡片、排序、已读、发现和AI回复上。到了这一章，产品终于要离开会议室、设计稿和发布会，去见真正的人。</p>
+<p>用户不会读PRD，也不会自动继承产品团队的上下文。他们不会因为我们经历了多少争论，就多给一个入口三秒钟；也不会因为某个设计是排除过许多更差方案之后的最优解，就天然理解它、支持它。他们只会在自己的工作里判断：这个东西有没有帮到我，有没有打扰我，有没有让我少做一步，还是让我多背一层负担。</p>
+<p>所以这一章不是简单的用户反馈汇总，而是ONE带着自己的理想和设计去见用户之后，用户如何验收它、拆穿它，质疑它，允许它——有时候也点亮它的其它方向。</p>
+<p>To B or Not To B, that is the question.</p>
+<p>2025年7月3日，产品师兄拉我一起和顾家家居的两位前线BD同学沟通。我们去了C6楼下的M Stand，点了四杯拿铁。两位BD聊起顾家当时正在定制开发一个内部的轻量Teambition，呈现在PC端的主页，解决各种工作信息分散在钉钉各场域的痛点。顾家的痛点和ONE的底层技术几乎完全重合——他们也是希望AI能够从海量的群聊消息、日程、历史上下文中，自动把待办事项摘取出来，进行汇总和智能推荐。</p>
+<p>这本该是一个绝佳的、能验证大模型进入真实业务语境的共创场景。</p>
+<p>但在沟通现场，当聊到我们当前主要在设计移动端时，对面的两位前线BD同学突然沉默了，并且彼此对视了一下，眼神中流露出了明显的犹疑。回到项目室，师兄私下把我拉到一边谈话，语气非常坦率：「这个后面优先级排低、甚至不考虑了。」师兄告诉我，大老板的希望肯定是我们for所有钉钉用户的，甚至可以当做「ToC效率工具」来做。这种针对大客户、在PC端搞深度定制的业务语境，不是上面想要的宏大故事。虽然现在上面也在讨论收费目标，但走这条路，最终肯定收不成钱。</p>
+<p>用户如何买单离场</p>
+<p>「有钱的捧个钱场，没钱的捧个人场。」</p>
+<p>首先，用户表达认可的最直接的方式是花钱。其次，用户表达认可的方式不只是花钱——有时候用户再认可也不会花钱，这和场景惯性下的心理预期有关。</p>
+<table>
+	<thead>
+			<tr>
+					<th></th>
+			</tr>
+	</thead>
+	<tbody>
+			<tr>
+					<td>我在办公IM消息场域愿意为了什么花钱<br><br>1、【对标原本要花时间】<br><br>(a) [强意愿]沟通dirtywork（如果能做好）（比如：打包消息历史+解释前因后果，自动发送给待沟通方）（会议时间协调也算，但我几乎不愿意花钱）；<br><br>(b) [弱意愿]（几乎完全不愿意）筛选消息优先级、清红点，etc；<br><br>(c) [理想强意愿，甚至终极目标，但当前很难实现]个人代理。<br><br>2、【对标原本要花钱】<br><br>(a) 实时沟通翻译（语音通话etc）<br><br>(b) 回复草稿润色/代写（对标grammarly、写作猫，etc）<br><br>3、【对标原本可能有损失】<br><br>(a)（已有）消息中识别任务、已读未回etc<br><br>(b) NEW !离职员工做成一个agent，让其他员工可以咨询。<br><br>4、【特殊视觉交互】视觉动物，没办法（会为了番茄钟特殊主体付费）。<br><br>已编辑<br><br>已读</td>
+			</tr>
+	</tbody>
+</table>
+<p>比如搜索，用户已经习惯了免费的Google和百度，而且他们起码达到了「可用」门槛。又比如网游，很难让已经习惯了先免费入场再买装备买道具的用户，先付费买断，即便买断价格可能比后续可能买装备道具的钱便宜很多。</p>
+<p>在企业产品中尤甚。付钱的人、使用的人、受影响的人，常常不是同一群人。老板买单，员工使用；管理员开权限，一线员工承受新流程；发信人获得确定性，收信人承担响应压力；采购决策者看组织效率，实际使用者看自己一天能不能少被打扰几次。</p>
+<p>所以判断一个用户是否接受产品，不能只听他说「挺好」还是「不好」。更要看他愿意为这个产品付出什么。他可以付钱，可以付时间，可以付注意力，可以付迁移成本，可以付组织授权，也可以付心理安全感。对ONE来说，用户愿意每天打开，是一种买单；愿意从老钉钉路径迁移到ONE，是更重的买单；愿意接受系统主动排序、提醒和已读，是心理安全感层面的买单；客户愿意把真实业务流程交给ONE，则是组织授权层面的买单。</p>
+<p>离场也不一定是卸载。企业软件里，用户很多时候没有真正「离开」的自由。他可以不点，不看，不迁移，不推荐，不授权，不把它纳入自己的真实工作流。功能还在页面上，入口还在首页里，后台也许还能看到曝光，但用户实际上已经离开了。</p>
+<p>这也是为什么用户研究不能只听嘴上的喜欢。一个用户说「这个功能不错」，却不愿意多点一次，不愿意改变路径，不愿意让团队使用，也不愿意为它承担一点风险，那么这个「不错」就很轻。相反，一个用户没有说太多好话，却愿意把自己的工作流程交出来，愿意告诉你哪些消息必须被及时响应，愿意围绕这个系统调整自己的操作，这才是更重的信号。</p>
+<p>用户最诚实的回答，往往不在嘴上，而在成本里。</p>
+<p>ONE的问题也常常出在这里。我们以为用户在评价「这个产品好不好」，但用户其实在衡量：「我要为它多付出什么？」</p>
+<p>我在「设计」章始终没有提one中发现的设计，一方面因为我没有参与过发现的设计开发，另一方面因为我自已可能也不是它的用户。我想象不到，在什么情况下，我需要在工作中打开一个视频流开始刷，也想象不到我是一个老板时，出于什么立场会给员工购买这种服务。</p>
+<p>预期与履约</p>
+<p>用户可没有参加过PRD评审，他对一款产品的预期，来自于产品的名称、交互以及他看到的宣称这个产品能做什么的广告。ONE的slogan很鼓舞人心：「AI工作信息流」「专属工作秘书」「让事找人」。不过，宣传越模糊，越漂亮，用户的心理预期也会越高。如果你说自己是提醒器，用户看到提醒，大概也就接受了；如果你说自己是秘书，用户就会期待你有秘书的分寸和能力，搞不好还会期待一个钢铁侠的小辣椒。</p>
+<p>这就是预期与履约之间的距离。</p>
+<p>ONE并非没有价值。它能整理，能排序，能总结，能提醒，也能识别一些待办。但当它被包装成一个AI工作入口、一个专属工作秘书时，当整个钉钉赋予它首页左下角这个硕大的AI入口时，用户自然会拿更高的尺子来量它。</p>
+<p>第三章讲过，设计把事情端到了用户面前。用户章要问的是：用户是否认为这篇履约。很多时候，用户并不是拒绝产品说出口的价值，而是在拒绝产品没说出口的代价。你说帮我整理工作，但没有说会改变我的已读状态；你说让我少漏消息，但没有说会多一个容易误触的入口；你说给我学习内容，但没有说它会在我处理工作时突然出现。</p>
+<p>钉钉的共创文化</p>
+<p>钉钉并非不重视用户，相反，钉钉有很强的共创文化。「与用户共创」的理念，是我在钉钉蒸馏到的最重要权重之一。就是要从共创用户——也就是钉钉的客户——身上去发现需求、挖掘需求、做出有用的产品设计。</p>
+<p>用户共创是对钉钉用户与市场研究的一种方法，是与用户深度在一起，通过观察、倾听、交互，挖掘痛点，共同发现机会、打磨产品的过程。共创过程中用户有参与感，并能产生口碑效应；共创不是去证明你的想法是对的，最终结果才能证明你是对的。</p>
+<p>共创定义 “因为不懂所以共创”。钉钉服务越来越多的企业组织，老板是最核心的KP决策者，我们不是中小企业Boss，更不懂Boss实际思考与管理痛点，钉钉从成立之初就与用户共创在一起，通过大量共创实践和产品市场检验，沉淀出钉钉特有的用户共创文化，用户在参与共创中，也促进了对产品的成就感和口碑。</p>
+<p>共创三步曲</p>
+<p>•第一步：超出期望： 在客户现场，可以适当引导说明；</p>
+<p>•第二步：新企业新用户流程验证： 人在现场，不做引导；</p>
+<p>•第三步：灰度 10% 企业，人不在现场（所有功能经过层层验证，开放部分企业先使用，才能全量发布）；</p>
+<p>共创要点</p>
+<p>•共创的核心是和用户在一起，获得信任很重要；</p>
+<p>•√观察比访谈更重要。观察、倾听、充分吸收和积极反馈，不下结论；</p>
+<p>•√最小闭环（MVP）的建立和持续打磨；</p>
+<p>•√共创不是去证明你的想法是对的，最终结果才能证明你是对的</p>
+<p>我很喜欢共创方法论里的一句话：共创不是去证明你的想法是对的，最终结果才能证明你是对的。这句话说得很好。好的共创，不是把产品拿给用户看，然后等待一句「不错」；也不是找几个客户站台，给发布会增加说服力。好的共创应该让产品团队和用户深度在一起，通过观察、倾听、交互，挖出真实痛点，发现真实机会。</p>
+<p>共创真正有价值的时候，往往不是用户夸产品，而是用户把自己的工作结构摊开给你看。</p>
+<p>我们有一家智能人事相关的供应商公司，是ONE的共创对象。他们给过一个很具体的场景。他们的客服会在那种既有销售、又有客户、又有客服的群里。群里很多消息，是前线销售和客户之间的沟通，客服并不需要每条都看，也不需要每次都出面回复。可是这个群又不能轻易屏蔽，因为一旦客户发消息提问，或者出现需要客服响应的问题，客服必须及时看到并处理。</p>
+<p>他们希望系统能做到：只有在客户发消息提问，或者这条消息确实需要客服回复时，才把这个会话的未读红点更明显地标出来，并把该会话置顶前置，成为重要未读。</p>
+<p>这个场景非常适合ONE。因为ONE本质上就在做消息优先级排序。我们规划「重要未读」的原理，本来就要判断三件事：什么样的人，在什么样的群里，发了什么主题的消息。这不是一个空泛的「帮我看消息」。它有清晰的角色关系，有明确的群场景，有具体的业务责任，也有真实的响应成本。客服不想被所有消息打扰，又不能错过真正需要自己出现的时刻。它要求系统理解的不只是文本，而是工作结构：谁说话，在哪说，说的是什么，这句话是否意味着责任轮到某个人。</p>
+<p>这类需求才是共创里最珍贵的东西。用户不是在帮你验证一张卡片，而是在把自己的工作现场拆开给你看。</p>
+<p>可惜的是，具体到这件事情，我们始终没有真正做起来。原因也很现实。它涉及比较长期的开发，需要对群、角色、消息主题、响应责任做持续建设，不是两三天就能出效果的事情。我们一直把它当作一个「重要不紧急」的任务。而当时ONE的开发，被另一套节奏牵着走。这个节奏我们后来叫「每日一包」。关于它，后面「敏捷」章节会详细讲。简单说，就是每天都要做出让用户有感知的东西，每天都要有东西给无招验收。于是团队很容易被紧急可见的任务拖住，把真正重要但不容易当天展示的事情往后推。</p>
+<p>用户给出了真实结构，组织未必接得住。这件事让我后来很长时间都觉得遗憾。因为它说明，ONE并不是完全没有遇到正确问题。正确问题出现过，而且很清楚。问题在于，正确问题常常需要时间；而项目当时最稀缺的，正是时间和耐心。用户研究能指出方向，但开发重心和迭代节奏，决定方向能不能落地。</p>
+<p>泥泞的用户现场</p>
+<p>有时候共创用户不等于真实用户，共创现场也不等于真实现场。钉钉共创要求用户有参与感，并能产生口碑效应。这当然有价值，但也意味着用户会深度介入产品过程。介入本身就是沉没成本。尤其当用户也在某种层面上「有求于」钉钉时，他对产品的评判就会变得更委婉、更合作，也更愿意替产品补全意义。</p>
+<p>当内测玩家，不是正式服玩家</p>
+<p>虽然说，钉钉「共创」的要求是：「不是去证明你的想法是对的，最终结果才能证明你是对的」，但是「共创」过程要求用户有参与感，并能产生「口碑效应」，这也就意味着需要用户的深度参与和介入，而这种介入代表着用户的沉没成本。尤其当用户也在某种层面上「有求于」钉钉的时候，这种介入会让用户对产品做出更委婉的评判。</p>
+<p>这让我想到网易互娱的《射雕》。2024年3月公测的时候，这款重金买下金庸射雕三部曲的版权的MMORPG，雄心壮志，宣称要做「150年长线运营」。传闻6年投入10亿，600人团队打造。直到25年9月，项目发布停运公告，短短一年半耳。</p>
+<p>上线前，网易内部寄予其厚望，高评分通过多轮内部专家评审，上线前的评级应该是A或者S（对比蛋仔派对是B）；但实际上线后数据惨淡，迅速凋零。核心问题是内部评审、内测用户和真实市场之间，发生了断裂。项目组精心挑了一组内测玩家，内测期间又密集发福利、深度服务和沟通，可以说用一种人弥补上了真实玩家和真实游戏之间的gap，让少数精选玩家理解策划的意图、容忍游戏阶段性的不成熟，甚至参与游戏意义的建构。</p>
+<p>可是正式上线之后，真实玩家不会自动继承这些上下文。他们没有享受到内测阶段密集的福利，也不会因为设计者曾经在游戏以外的场域，解释过很多次，就天然理解其中的设计。于是，内测阶段被验证过的「用户喜欢」，到了真实市场里验证为一种梦幻泡影。</p>
+<p>ONE也有一样的问题。我们的「内测玩家」，也就是共创用户，他们愿意给时间，愿意反馈，愿意理解产品尚未成熟的地方，也更容易被产品团队的叙事、演示和陪伴影响。但共创用户不等于真实大量使用ONE的用户：真实用户不会继承共创时的上下文。共创用户见过产品经理，普通用户只见到入口。共创用户知道我们想做什么，普通用户只知道这个东西有没有在三秒内帮到他。共创用户可以被密集运营，真实用户只能被产品本身运营。</p>
+<p>比如说ONE放在钉钉首页左下角的入口，共创用户知道我们已经排除了不少更加激进和打扰的选项，选择了一个影响相对较温和的；但直接接触上线产品的内外网用户，只会感觉这个入口很容易误触，以往习惯点这里去消息tab，被强行影响了使用习惯。</p>
+<p>内测玩家会替产品补全意义，正式用户只验收眼前价值。前者体验的是产品加服务，后者体验的仅仅是产品本身。这就是为什么很多共创里「还可以」的设计，上线后会显得突然刺眼。共创中的解释、陪伴和耐心，在正式用户那里都消失了。剩下的只有一个入口、一张卡片、一次误触、一个关不掉的模块。</p>
+<p>当用户说谎</p>
+<p>做用户研究，最容易犯的错，是把用户说的话当成事实。这里的「谎言」，不是说用户有意欺骗。更多时候，用户是礼貌的、想象中的、处在组织关系里的。尤其在企业共创里，用户面对的不是一个冷冰冰的问卷，而是一个合作关系、一个供应商、一个平台方、一个可能对自己组织有价值的机会。他说话时，会天然留余地。</p>
+<p>《The Mom Test》里有一个很有名的提醒：不要问别人「你觉得我的想法好不好」。大多数人会出于礼貌、鼓励或想象，给你一个好听但无用的答案。真正有效的问题，应该问过去事实、具体行为和真实成本。一句「挺好的」，也许只是礼貌；一句「以后会用」，也许只是当场想象；一句「这个方向有价值」，也许只是对方向的认可，和真正迁移工作流之间，还隔着很长一段路。</p>
+<p>企业场景里，这层偏差更重。老板说「这个对员工很好」，员工未必这么感受；管理员说「可以推」，一线未必愿意接；共创客户说「方向不错」，也未必意味着正式上线后，普通用户能忍受误触、打扰和额外路径。</p>
+<p>用户还会说一种「想象中的真话」。比如学习内容。理论上，没有人会反对学习；理论上，paper、行业资讯、管理知识都很有价值。可当用户正在处理消息、日程和待办时，系统突然把他带进一个学习流，实际感受可能就是「像广告」「占地方」「工作时不想看」。他并没有撒谎。他只是在两个不同场景里，给出了两个都真实的答案。</p>
+<p>所以用户的话当然要听，但不能照单全收。要听话里的意思，也要看话后的成本；要看他当场怎么说，也要看他回去怎么做；要看他愿不愿意多点一次，愿不愿意改习惯，愿不愿意让团队使用，愿不愿意把真实流程交出来。产品研究里最诚实的答案，常常不在嘴上，而在这些成本里。</p>
+<p>当设计在计划外的用户群体奏效</p>
+<p>ONE的核心共创对象一直是老板，KP，管理者，信息化负责人和采购决策者。在第二章「定位」的讨论中，也阐释过ONE的定位是面向消息爆炸的枢纽角色和管理者，故而也是优先围绕移动端展开设计。这个判断有道理，管理者的消息确实更多，决策链路更长，也更需要信息过滤。但管理者毕竟凤毛麟角，真实大量使用ONE的人，是沉默的大多数。</p>
+<p>当时有一个产品同事去广东拜访碧桂园。对方领导层非常重视ONE的能力，希望用卡片的形式，动态、智能地安排保安和保洁每天的工作内容和顺序。比如先巡逻，再清洁，再拍照反馈。做完一个任务，就check掉一张卡片。这个case很具体，也很通情达理。基层和流动性比较高的工作者，不需要学习复杂系统，也不需要自己判断优先级，只要按ONE的提醒往下执行即可。他周日赶回来参加了那周的汇报，兴冲冲向无招介绍了这个case。</p>
+<p>不过无招并不欣赏这个共创case。他的判断是，ONE不是要服务保安保洁，而是要服务老板、管理者和高净值人群。</p>
+<p>其实从这个分歧点延伸出去，不难发现，主动服务里有一个很难绕开的分岔：越是主动、越有思考的工作者，越需要保留对自己工作顺序和工作方式的掌控。AI可以辅助他，可以记忆，可以提醒，但不该用很多强规则打断他已经形成的工作节奏。反而是工作内容相对标准、任务链路相对明确的人，更可能接受卡片式的主动安排。</p>
+<p>这种计划外的用户群体比计划内的用户群体更诚实。因为他们不是被产品叙事召唤来的，而是被具体价值吸引来的。一个设计在目标用户那里不成立，却在另一群人那里成立，这不是偏题，可能恰恰是在提醒我们：真正的产品机会不在原先想象的地方。</p>
+<p>这就回到了最开始的问题：ONE到底先服务谁？如果服务管理者，就不能假装他们愿意被系统安排工作顺序。如果服务执行者，又不能假装这是一个高净值人群产品。</p>
+<p>定性研究：当用户是无招</p>
+<p>写到这里，就不得不回到无招。不是因为用户章应该突然变成一段老板画像，而是因为前面的许多问题走到这里，会集中到一个更深的原因上：ONE面对的「用户」，并不只有客户、共创对象和普通员工，也包括一个极强势、极高权重、极有产品表达欲的用户——无招本人。</p>
+<p>用户研究一般分为定性研究和定量研究。各司各组织的策略倾向不同。就我观察，字节会更喜欢做定量研究，强调北极星指标、漏斗和数据验证；钉钉更喜欢做定性研究，强调共创中的具体用户、具体场景、具体需求。</p>
+<p>有的时候我真的不太懂为什么大家特别区分toB和toC的产品，或者特别区分前台、中台、后台的产品。这些只是标签，是行业为了方便沟通发明的分类框架。但他们的本质是一样的：你要明确你的用户是谁，用户的目标是什么。我们的目标就是帮他达成他的目标。我曾经在网易伏羲lab工作。我们的客户是内部的游戏工作室，比如我服务过倩女端游，服务过逆水寒手游，工作室的目标是什么？工作室的目标是玩家的粘性，付费。他们采购伏羲的服务，本质上是希望。外包出去一部分工作目标给我们达成。无论他们提的需求是什么，我们在目标上。要和工作室对齐，这才是真正的以心印心，心心不异。</p>
+<p>在钉钉这里，服务无招也是一样的，和服务C端群体没有什么很大的区别。只是前者更加定性研究，或者更加定量研究而已。</p>
+<p>从这个意义上说，无招既是钉钉的大老板，也是钉钉的大用户。研究和服务无招，也是一种用户共创、定性研究、一种特殊情况的讨论。</p>
+<p>但定性研究不是听到一个用户说什么，就原样照做。定性研究要挖原因，挖动机，挖情绪，挖真实痛点，挖底层行为逻辑。它不只看数据多少，也不只问比例，而要搞清楚：用户为什么这么做，怎么想，在意什么，隐藏诉求是什么。要服务你的服务对象的目标，而不要服务他说出口的需求，而要观察他在现实和社媒上如何自我表达，生活中究竟如何行为。</p>
+<p>他的头像是一个武侠形象的黑白背影，上面写着「无招」两个字。这个符号本身就很有意思：武侠、背影、招式之外的招式，既有江湖气，也有强烈的自我命名。再看他过去公开演讲里表达的态度，看他在会议里如何提问、如何打断、如何兴奋、如何不耐烦，看他自己的钉钉使用数据、使用习惯和提出的具体业务需求，都能看见一套相当一致的产品人格。</p>
+<p>他是一个高密度、高能动、高控制欲的用户。他处理大量消息、会议、组织信息，需要快速推进，需要确定性，也需要一个系统把事情往前推。</p>
+<p>但无招不是普通用户。他的权力位置、信息密度、注意力阈值、工作节奏，都和普通员工不同。他是CEO，是发信人，是组织目标的承压者，也是钉钉历史成功经验的携带者。他觉得已读重要，普通员工可能感到的是被迫承担；他想要强推进，普通用户需要的是缓冲和控制；他喜欢主动掌控，普通员工可能先问「我能不能关」。</p>
+<p>更重要的是，无招回归钉钉时，身上背的不只是一个用户的痛点。</p>
+<p>2025年3月底，阿里拟收购无招创业公司「两氢一氧」的投资人股份，无招回任钉钉CEO。阿里当时的主线是「用户为先、AI驱动」，钉钉被放在AI ToB的关键入口位置。到2025年底，阿里合伙人体系在2025财年从26人缩到17人，席位更加稀缺。与此同时，周靖人因通义/Qwen体系晋升合伙人，吴嘉也被放到千问C端事业群，负责千问、夸克、AI硬件、UC等入口型业务。AI时代的「入场券」正在被重新分配，阿里内部的牌桌也在重新盘点坐席。</p>
+<p>合伙人身份正在从历史荣誉变成现役战功，从元老共同体变成战略作战席位。张勇、戴珊、彭蕾、俞永福等人的退出，意味着上一阶段阿里的组织memory被压缩；蒋凡进入合伙委员会，则意味着阿里重新把电商主战场交给能打仗的人。吴泳铭时代的阿里，不再试图维持每个山头的体面，而是在「电商」和「AI+云」两条主线上重排座次。</p>
+<p>在这样的背景下，无招回归钉钉，就被寄予别样的厚望。背井离乡的创始人重归故里，他必须证明钉钉不是旧时代的企业IM和OA，而是能成为阿里AI ToB的关键入口。吴妈召他回宫，恐怕也不是想要yesterday once more，而是想到2014年的无招，破釜沉舟，草创新业，希望这匹老骥伏枥，尚能饭耳。</p>
+<p>所以ONE的压力，从一开始就不是纯产品压力。它背后有一道更硬的组织命题。这也解释了为什么ONE这个无招回归后最重视的项目，在初始阶段过度追求「大入口」「新形态」「发布会表达」。因为它服务的不只是用户，也服务无招的自我价值证明，以及他在阿里新权力结构里的位置证明。</p>
+<p>用户需求是第一层，集团战略是第二层，个人再入场是第三层。ONE的种种纠结挣扎，恰恰来自这三层目标经常不完全一致。</p>
+<p>不过，老板的身份认同，不是用户的目标。 这句话后来反复在我脑子里回响。无招作为用户是真实的，但他是一个极端用户；无招作为CEO是关键的，但他不是普通员工；无招作为产品经理是敏锐的，但他的兴奋点不等于大众用户的兴奋点。如果把一个极端用户的痛点，当成全体用户的路径；把一个CEO的身份任务，当成产品本身的用户目标；把一个组织战役的胜负，压到一个移动端入口上，产品就容易走进怪圈。</p>
+<p>延伸：「千人千面」的AI产品服务，本质是奢侈服务下放</p>
+<p>还有一个后来才慢慢想明白的点：AI的一大价值，是把奢侈品级别的服务下放给普通人。</p>
+<p>奢华酒店会记住客人的偏好：喜欢什么水果、枕头要多高、欢迎卡写什么称呼、上一次住在哪一间房。普通酒店通常做不到。不是不想做，而是成本不允许。一个人能被记住，是因为他足够重要，或者付了足够多的钱。</p>
+<p>工作系统里也是一样。老板、核心客户、关键人物，天然有人替他筛信息、排优先级、做提醒、记偏好。他们已经享受了人工个性化服务。普通员工没有。普通用户面对的是同一套默认规则、同一块入口、同一种红点、同一份信息洪水。</p>
+<p>所以，越是已经被人肉个性化服务的人，越不容易意识到普通用户为什么需要「自定义自己的ONE」。无招看到的ONE，本来就不是一个标准用户看到的ONE；他的反馈链路、人工解释、问题响应、产品修补，天然围着他转。对他来说，系统不够个性化，不构成强痛点；对普通用户来说，这恰恰是AI最应该补上的差距。</p>
+<p>这也是ONE当时很可惜的地方。ONE早期经常试图用一个个硬规则，去cater to以无招为首的少数KP，然后期待它自然服务好大多数人。可现实是，大多数人的工作，并不是少数KP工作方式的缩小版。</p>
+<p>用户真正需要的，可能不是又多一个统一入口，而是一个逐渐学会「我是谁」的入口。AI如果只能把老板级体验再送给老板，价值并不大；它更该做的，是把过去只有少数人享受得起的贴身服务，变成每个普通工作者也能拥有的日常。谁重要、哪个群重要、什么消息该回、什么时候该提醒、发现要不要看、入口放哪里舒服——这些事情都高度依赖个人角色、组织关系、工作阶段和心理阈值。一个老板、一个客服、一个销售、一个普通员工、一个信息化负责人、一个项目经理，对「重要」的理解完全不同。</p>
+<p>到最后，我们再回看各种用户反馈，会发现一个有意思的现象：除了明确提出想关掉「发现」入口，以及解决左下角AI入口误触的问题，用户需求分布非常不集中。这个现象不能简单理解成「用户没有需求」，也不能理解成「用户说不清楚」——它更可能说明：用户真正需要的，不是又一个统一硬规则，而是更个性化的服务。</p>
+<p>于是又可以callback设计章的尾声：形式不该凌驾于内容。以有涯的设计求无涯的用户需求，无异舍本逐末，缘木求鱼。</p>
+
+  </article>
+
+  
+  
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+  <div class="post-license bg-muted/30 border-border mb-8 rounded-xl border p-6">
+    <div class="flex items-start gap-4">
+      
+      <div class="bg-primary/10 flex h-12 w-12 shrink-0 items-center justify-center rounded-lg">
+        <svg class="h-6 w-6" aria-label="许可证" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+</svg>
+      </div>
+
+      
+      <div class="min-w-0 flex-1">
+        <h3 class="text-foreground mb-2 text-lg font-semibold">
+          
+        </h3>
+
+        <div class="text-muted-foreground space-y-2 text-sm">
+          
+          
+            <p>
+              <strong>:</strong>
+              Entropy Decrease
+            </p>
+          
+
+
+          
+          <p>
+            <strong>:</strong>
+            <a
+              href="https://entropydecrease.github.io/posts/%E7%BD%AE%E8%BA%AB%E9%92%89%E5%86%85%E8%A7%A3%E8%AF%BB%E5%8F%8A%E5%8E%9F%E6%96%87%E4%B8%8A%E8%BD%AC%E8%BD%BD/"
+              class="text-primary hover:text-primary/80 break-all hyphens-auto transition-colors duration-200"
+            >
+              https://entropydecrease.github.io/posts/%E7%BD%AE%E8%BA%AB%E9%92%89%E5%86%85%E8%A7%A3%E8%AF%BB%E5%8F%8A%E5%8E%9F%E6%96%87%E4%B8%8A%E8%BD%AC%E8%BD%BD/
+            </a>
+          </p>
+
+          
+          <p>
+            <strong>:</strong>
+            
+              <a
+                href="https://creativecommons.org/licenses/by-nc-sa/4.0/"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="text-primary hover:text-primary/80 transition-colors duration-200"
+              >
+                CC BY-NC-SA 4.0
+              </a>
+            
+          </p>
+
+          
+          
+            <p class="text-xs">
+              This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License. Please attribute the source, use non-commercially, and maintain the same license.
+            </p>
+          
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+
+  
+  
+
+
+
+
+
+  <nav class="post-navigation mb-12">
+    <div class="grid grid-cols-1 gap-4 md:grid-cols-2">
+      
+      <div class="nav-item">
+        
+          <a
+            href="/posts/%E7%BD%AE%E8%BA%AB%E9%92%89%E5%86%85%E8%A7%A3%E8%AF%BB%E5%8F%8A%E5%8E%9F%E6%96%87%E4%B8%8B%E8%BD%AC%E8%BD%BD/"
+            class="group bg-card border-border hover:bg-primary/5 hover:border-primary/20 focus:ring-primary/20 flex min-h-[140px] flex-col justify-between rounded-xl border p-6 transition-all duration-300 ease-out hover:-translate-y-1 hover:scale-[1.02] hover:shadow-lg focus:ring-2 focus:outline-none"
+          >
+            <div>
+              <div class="mb-3 flex items-center gap-3">
+                <svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+</svg>
+                <span class="text-muted-foreground text-sm font-medium">
+                  
+                </span>
+              </div>
+
+              <h3
+                class="text-foreground group-hover:text-primary mb-3 line-clamp-2 text-lg leading-tight font-semibold transition-colors duration-200"
+              >
+                《置身钉内》解读及原文（下）（转载）
+              </h3>
+            </div>
+
+            <div class="text-muted-foreground mt-auto flex items-center gap-2 text-xs">
+              <svg class="h-3 w-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+</svg>
+
+              <time datetime="2026-06-11">
+                6/11/26
+              </time>
+            </div>
+          </a>
+        
+      </div>
+
+      
+      <div class="nav-item">
+        
+          <div
+            class="bg-muted/30 border-border/50 flex min-h-[140px] flex-col justify-center rounded-xl border p-6"
+          >
+            <div class="mb-3 flex items-center justify-end gap-3">
+              <span class="text-muted-foreground/50 text-sm font-medium">
+                
+              </span>
+              <svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+</svg>
+            </div>
+          </div>
+        
+      </div>
+    </div>
+  </nav>
+
+
+
+
+  
+  
+
+
+
+
+
+
+
+  <section class="related-posts mb-12">
+    
+    <div class="mb-6 flex items-center gap-3">
+      <svg class="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1" />
+</svg>
+      <h2 class="text-foreground text-2xl font-bold">
+        
+      </h2>
+    </div>
+
+    
+    <div class="grid w-full grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3">
+      
+        <article class="group">
+          <a href="/posts/%E7%BD%AE%E8%BA%AB%E9%92%89%E5%86%85%E8%A7%A3%E8%AF%BB%E5%8F%8A%E5%8E%9F%E6%96%87%E4%B8%8B%E8%BD%AC%E8%BD%BD/" class="block">
+            <div
+              class="bg-card border-border hover:bg-primary/5 hover:border-primary/20 focus:ring-primary/20 flex min-h-[120px] items-center rounded-xl border p-5 transition-all duration-300 ease-out hover:-translate-y-1 hover:scale-[1.02] hover:shadow-lg focus:ring-2 focus:outline-none"
+            >
+              <h3
+                class="text-foreground group-hover:text-primary line-clamp-3 w-full text-lg leading-snug font-semibold"
+              >
+                《置身钉内》解读及原文（下）（转载）
+              </h3>
+            </div>
+          </a>
+        </article>
+      
+        <article class="group">
+          <a href="/posts/%E7%BD%AE%E8%BA%AB%E9%92%89%E5%A4%96%E8%BD%AC%E8%BD%BD/" class="block">
+            <div
+              class="bg-card border-border hover:bg-primary/5 hover:border-primary/20 focus:ring-primary/20 flex min-h-[120px] items-center rounded-xl border p-5 transition-all duration-300 ease-out hover:-translate-y-1 hover:scale-[1.02] hover:shadow-lg focus:ring-2 focus:outline-none"
+            >
+              <h3
+                class="text-foreground group-hover:text-primary line-clamp-3 w-full text-lg leading-snug font-semibold"
+              >
+                《置身钉外》（转载）
+              </h3>
+            </div>
+          </a>
+        </article>
+      
+        <article class="group">
+          <a href="/posts/internet_viewership/" class="block">
+            <div
+              class="bg-card border-border hover:bg-primary/5 hover:border-primary/20 focus:ring-primary/20 flex min-h-[120px] items-center rounded-xl border p-5 transition-all duration-300 ease-out hover:-translate-y-1 hover:scale-[1.02] hover:shadow-lg focus:ring-2 focus:outline-none"
+            >
+              <h3
+                class="text-foreground group-hover:text-primary line-clamp-3 w-full text-lg leading-snug font-semibold"
+              >
+                “流量变现正在崩塌”，以及由此的思考
+              </h3>
+            </div>
+          </a>
+        </article>
+      
+    </div>
+  </section>
+
+
+
+
+  
+  
+
+
+      </div>
+
+      <footer class="px-4 py-6">
+  
+  
+    <nav class="mb-6">
+      <div class="flex flex-wrap items-center justify-center gap-1">
+        
+          
+          
+          
+            
+              
+            
+          
+          <a
+            href="/about/"
+            
+            class="nav-link hover:text-primary hover:bg-primary/10 text-muted-foreground flex items-center gap-2 rounded-lg px-4 py-2 text-sm font-medium transition-all duration-300 hover:scale-105"
+          >
+            
+              <svg class="h-5 w-5" aria-label="About" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
+</svg>
+
+            
+            <span>About</span>
+          </a>
+        
+          
+          
+          
+          <a
+            href="https://entropydecrease.github.io"
+            
+              target="_blank" rel="noopener noreferrer"
+            
+            class="nav-link hover:text-primary hover:bg-primary/10 text-muted-foreground flex items-center gap-2 rounded-lg px-4 py-2 text-sm font-medium transition-all duration-300 hover:scale-105"
+          >
+            
+              <svg class="h-5 w-5" aria-label="Contact" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+</svg>
+
+            
+            <span>Contact</span>
+          </a>
+        
+          
+          
+          
+          <a
+            href="/index.xml"
+            
+            class="nav-link hover:text-primary hover:bg-primary/10 text-muted-foreground flex items-center gap-2 rounded-lg px-4 py-2 text-sm font-medium transition-all duration-300 hover:scale-105"
+          >
+            
+              <svg class="h-5 w-5" aria-label="RSS Feed" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 5c7.18 0 13 5.82 13 13M6 11a7 7 0 017 7m-6 0a1 1 0 11-2 0 1 1 0 012 0z" />
+</svg>
+
+            
+            <span>RSS Feed</span>
+          </a>
+        
+      </div>
+    </nav>
+  
+
+
+  
+  
+    <div class="border-border mb-6 border-t"></div>
+  
+
+
+  
+  <div class="flex flex-col items-center justify-between gap-4 md:flex-row">
+    
+    <div class="text-muted-foreground text-center text-sm md:text-left">
+      <p class="mb-2">
+        &copy;
+        2026
+        Entropy Decrease
+      </p>
+      <p class="flex flex-wrap items-center justify-center gap-1 md:justify-start">
+        <span>Powered by</span>
+        <a
+          href="https://gohugo.io/"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="text-primary hover:text-primary/80 font-medium transition-colors duration-200 hover:underline"
+        >
+          Hugo
+        </a>
+        <span>&</span>
+        <a
+          href="https://github.com/tom2almighty/hugo-narrow"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="text-primary hover:text-primary/80 font-medium transition-colors duration-200 hover:underline"
+        >
+          Narrow
+        </a>
+      </p>
+    </div>
+
+    
+    
+      <div class="flex items-center gap-3">
+        
+          <a
+            href="https://github.com/entropydecrease"
+            
+              target="_blank" rel="noopener noreferrer"
+            
+            class="text-muted-foreground hover:text-primary focus:ring-primary/20 rounded-lg p-1 transition-all duration-300 ease-out hover:scale-110 focus:ring-2 focus:outline-none"
+            title="GitHub"
+            aria-label="GitHub"
+          >
+            
+              <svg class="h-6 w-6" aria-label="GitHub" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5c.08-1.25-.27-2.48-1-3.5c.28-1.15.28-2.35 0-3.5c0 0-1 0-3 1.5c-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.4 5.4 0 0 0 4 9c0 3.5 3 5.5 6 5.5c-.39.49-.68 1.05-.85 1.65S8.93 17.38 9 18v4"/><path d="M9 18c-4.51 2-5-2-7-2"/></g></svg>
+            
+          </a>
+        
+          <a
+            href="mailto:your.email@example.com"
+            
+            class="text-muted-foreground hover:text-primary focus:ring-primary/20 rounded-lg p-1 transition-all duration-300 ease-out hover:scale-110 focus:ring-2 focus:outline-none"
+            title="Email"
+            aria-label="Email"
+          >
+            
+              <svg class="h-6 w-6" aria-label="Email" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+</svg>
+
+            
+          </a>
+        
+      </div>
+    
+
+  </div>
+</footer>
+
+      
+
+
+
+
+
+<div
+  id="dock"
+  class="pointer-events-none fixed bottom-4 left-1/2 z-9999 w-fit -translate-x-1/2 translate-y-24 opacity-0 transition-all duration-300 ease-out sm:right-0 sm:left-0 sm:mx-auto sm:translate-x-0"
+  data-dock-mode="float"
+  role="toolbar"
+  aria-label=""
+>
+  <nav
+    class="border-border bg-card/80 scrollbar-hide xs:px-3 xs:py-2 mx-auto flex max-w-[calc(100vw-2rem)] min-w-fit items-center justify-center overflow-x-auto rounded-2xl border px-4 py-3 shadow-lg backdrop-blur-sm sm:px-4 sm:py-3"
+  >
+    
+    
+      <button
+        id="dock-back"
+        class="text-muted-foreground hover:text-primary hover:bg-primary/10 focus:ring-primary/20 xs:px-2 xs:py-1.5 flex shrink-0 items-center gap-2 rounded-lg px-3 py-2 text-sm font-medium transition-all duration-300 ease-out hover:-translate-y-0.5 hover:scale-105 focus:ring-2 focus:outline-none sm:px-3 sm:py-2"
+        title=""
+        aria-label=""
+      >
+        <svg class="h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <path d="m12 19-7-7 7-7"/>
+  <path d="M19 12H5"/>
+</svg>
+
+        <span class="hidden sm:inline"></span>
+      </button>
+
+      
+      <div class="bg-border xs:mx-1 mx-2 h-6 w-px sm:mx-2"></div>
+    
+
+
+    <button
+      id="dock-search"
+      class="text-muted-foreground hover:text-primary hover:bg-primary/10 focus:ring-primary/20 xs:px-3 xs:py-1.5 flex shrink-0 items-center gap-2 rounded-lg px-4 py-2 text-sm font-medium transition-all duration-300 ease-out hover:-translate-y-0.5 hover:scale-105 focus:ring-2 focus:outline-none sm:px-4 sm:py-2"
+      title=""
+      aria-label=""
+    >
+      <svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m21 21-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+</svg>
+
+      <span class="hidden md:inline"></span>
+    </button>
+
+    
+    <div class="bg-border xs:mx-1 mx-2 h-6 w-px sm:mx-2"></div>
+
+    
+    
+    
+
+
+    
+    <button
+      id="dock-top"
+      class="text-muted-foreground hover:text-primary hover:bg-primary/10 focus:ring-primary/20 xs:px-2 xs:py-1.5 flex shrink-0 items-center gap-2 rounded-lg px-3 py-2 text-sm font-medium transition-all duration-300 ease-out hover:-translate-y-0.5 hover:scale-105 focus:ring-2 focus:outline-none sm:px-3 sm:py-2"
+      title=""
+      aria-label=""
+    >
+      <svg class="h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <path d="m18 15-6-6-6 6"/>
+</svg>
+
+      <span class="hidden sm:inline"></span>
+    </button>
+  </nav>
+</div>
+
+
+
+  <div
+    id="dock-float-trigger"
+    class="pointer-events-auto fixed right-0 bottom-0 left-0 z-9998 cursor-pointer"
+  >
+    <div
+      class="from-muted-foreground/20 absolute inset-0 h-8 bg-linear-to-t to-transparent transition-all duration-200 ease-out"
+    ></div>
+
+    
+    <div class="relative mx-auto flex h-8 w-12 items-center justify-center">
+      <span id="dock-float-icon">
+        <svg class="h-3 w-3" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="currentColor" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6l-6 6z"/></svg>
+      </span>
+    </div>
+  </div>
+
+
+      <aside
+    id="toc-container"
+    class="toc-center"
+    data-position="center"
+  >
+      <div
+        id="toc-center"
+        class="pointer-events-none fixed top-28 right-0 left-0 z-40 mx-auto w-full max-w-4xl px-4 transition-all duration-300"
+      >
+        <div class="pointer-events-auto relative mx-auto w-fit">
+          <button
+            id="toc-center-toggle"
+            class="bg-card/80 border-border text-muted-foreground hover:text-primary hover:bg-primary/10 ring-offset-background focus-visible:ring-ring flex cursor-pointer items-center gap-2 rounded-full border px-4 py-1.5 text-sm shadow-sm backdrop-blur-sm transition-colors focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:outline-none"
+          >
+            <svg class="h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <line x1="8" x2="21" y1="6" y2="6"/>
+  <line x1="8" x2="21" y1="12" y2="12"/>
+  <line x1="8" x2="21" y1="18" y2="18"/>
+  <line x1="3" x2="3.01" y1="6" y2="6"/>
+  <line x1="3" x2="3.01" y1="12" y2="12"/>
+  <line x1="3" x2="3.01" y1="18" y2="18"/>
+</svg>
+
+            <span id="toc-center-title" class="max-w-[200px] truncate"></span>
+            <svg class="h-3 w-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+</svg>
+          </button>
+
+          
+          <div
+            id="toc-center-dropdown"
+            class="bg-card border-border scrollbar-hide absolute top-full left-1/2 mt-2 hidden max-h-[60vh] w-[280px] origin-top -translate-x-1/2 scale-95 overflow-y-auto rounded-xl border p-4 opacity-0 shadow-lg transition-all"
+          >
+            <div
+              id="toc-center-content"
+              class="[&_a]:text-muted-foreground [&_a:hover]:bg-primary/10 [&_a:hover]:text-primary [&_a.active]:bg-primary/10 [&_a.active]:text-primary text-sm [&_a]:block [&_a]:truncate [&_a]:rounded-md [&_a]:px-2 [&_a]:py-1 [&_a]:transition-colors [&_a.active]:font-medium [&_li]:my-1.5 [&_nav>ul]:pl-0 [&_ul]:list-none [&_ul]:pl-4"
+            >
+              <nav id="TableOfContents">
+  <ul>
+    <li><a href="#楔子">楔子</a></li>
+    <li><a href="#发心第一">发心第一</a></li>
+    <li><a href="#定位第二">定位第二</a></li>
+    <li><a href="#设计第三">设计第三</a></li>
+    <li><a href="#用户第四">用户第四</a></li>
+  </ul>
+</nav>
+            </div>
+          </div>
+        </div>
+      </div></aside>
+      
+<div
+  id="search-overlay"
+  class="pointer-events-none fixed inset-0 z-40 bg-black/50 opacity-0 transition-opacity duration-300"
+></div>
+
+
+<div
+  id="search-modal"
+  class="bg-card border-border pointer-events-none fixed top-1/2 left-1/2 z-50 max-h-[80vh] w-full max-w-2xl -translate-x-1/2 -translate-y-1/2 scale-95 transform overflow-hidden rounded-xl border opacity-0 shadow-xl transition-all duration-300"
+  role="dialog"
+  aria-modal="true"
+  aria-hidden="true"
+  aria-labelledby="search-title"
+  tabindex="-1"
+>
+  
+  <div class="border-border flex items-center gap-3 border-b p-4">
+    
+    <div class="text-muted-foreground h-5 w-5 shrink-0">
+      <svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m21 21-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+</svg>
+
+    </div>
+    <h2 id="search-title" class="sr-only"></h2>
+
+    
+    <div class="relative flex-1">
+      
+      <button
+        id="search-clear"
+        class="text-muted-foreground hover:text-foreground hover:bg-muted/50 pointer-events-none absolute top-1/2 left-0 z-10 h-5 w-5 -translate-y-1/2 rounded opacity-0 transition-all duration-200"
+        title=""
+        aria-label=""
+      >
+        <svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+</svg>
+
+      </button>
+
+      
+      <input
+        id="search-input"
+        type="text"
+        placeholder=""
+        class="text-foreground placeholder:text-muted-foreground w-full border-none bg-transparent pl-8 text-lg outline-none"
+        autocomplete="off"
+        spellcheck="false"
+      />
+    </div>
+
+    
+    <button
+      id="search-close"
+      class="text-muted-foreground hover:text-foreground hover:bg-muted/50 flex h-6 w-6 items-center justify-center rounded-md p-0.5 transition-all duration-200"
+      title=""
+      aria-label=""
+    >
+      <svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+</svg>
+
+    </button>
+  </div>
+
+  
+  <div id="search-results" class="max-h-96 overflow-y-auto">
+    
+    <div id="search-empty" class="flex flex-col items-center justify-center py-12 text-center">
+      <div class="bg-muted/50 mb-4 flex h-16 w-16 items-center justify-center rounded-full">
+        <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m21 21-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+</svg>
+
+      </div>
+      <h3 class="text-foreground mb-2 text-lg font-semibold">
+        
+      </h3>
+    </div>
+
+    
+    <div id="search-loading" class="flex items-center justify-center py-8" hidden>
+      <div
+        class="mr-3 h-6 w-6 animate-spin rounded-full border-2 border-current border-t-transparent"
+      ></div>
+      <span class="text-muted-foreground"></span>
+    </div>
+
+    
+    <div
+      id="search-no-results"
+      class="flex flex-col items-center justify-center py-12 text-center"
+      hidden
+    >
+      <div class="bg-muted/50 mb-4 flex h-16 w-16 items-center justify-center rounded-full">
+        <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h7" />
+</svg>
+
+      </div>
+      <h3 class="text-foreground mb-2 text-lg font-semibold">
+        
+      </h3>
+    </div>
+
+    
+    <div id="search-results-list" hidden>
+      
+      <div
+        id="search-stats"
+        class="text-muted-foreground border-border border-b px-4 py-3 text-sm"
+        data-count-other=""
+      ></div>
+
+      
+      <div id="search-items" class="divide-border divide-y" role="list">
+        
+      </div>
+    </div>
+  </div>
+
+  
+  <div class="border-border bg-muted/20 border-t px-4 py-3"><div class="text-muted-foreground flex items-center justify-between text-xs">
+      <div class="flex items-center gap-2 md:gap-4">
+        <div class="flex items-center gap-1">
+          <kbd class="bg-muted border-border rounded border px-1.5 py-0.5 text-xs">↑↓</kbd>
+          <span class="hidden sm:inline"></span>
+        </div>
+        <div class="flex items-center gap-1">
+          <kbd class="bg-muted border-border rounded border px-1.5 py-0.5 text-xs">↵</kbd>
+          <span class="hidden sm:inline"></span>
+        </div>
+        <div class="flex items-center gap-1">
+          <kbd class="bg-muted border-border rounded border px-1.5 py-0.5 text-xs">ESC</kbd>
+          <span class="hidden sm:inline"></span>
+        </div>
+      </div>
+      <div class="search-hint-desktop flex items-center gap-1">
+        <kbd class="bg-muted border-border rounded border px-1.5 py-0.5 text-xs">⌘K</kbd>
+        <span></span>
+      </div>
+    </div>
+  </div>
+</div>
+
+      
+
+
+      
+
+
+    </main>
+  </body>
+</html>

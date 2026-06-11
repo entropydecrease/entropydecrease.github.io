@@ -48,8 +48,8 @@
 
 	<meta itemprop="name" content="Posts">
 	<meta itemprop="description" content="阅读、思考、写作，都是熵减的过程">
-	<meta itemprop="datePublished" content="2026-06-08T00:00:00+00:00">
-	<meta itemprop="dateModified" content="2026-06-08T00:00:00+00:00">
+	<meta itemprop="datePublished" content="2026-06-11T00:00:00+00:00">
+	<meta itemprop="dateModified" content="2026-06-11T00:00:00+00:00">
 	<meta itemprop="image" content="https://entropydecrease.github.io/images/og-default.avif">
 
 
@@ -709,6 +709,229 @@
     
       
         <div class="space-y-4">
+          
+            
+
+
+
+
+<article class="group">
+  <a href="/posts/xargs%E5%B0%8F%E6%8A%80%E5%B7%A7%E9%9A%8F%E6%89%8B%E8%AE%B0/" class="block">
+    <div
+      class="bg-card border-border hover:bg-primary/5 hover:border-primary/20 focus:ring-primary/20 relative flex flex-col overflow-hidden rounded-xl border transition-all duration-300 ease-out hover:-translate-y-1 hover:scale-[1.02] hover:shadow-lg focus:ring-2 focus:outline-none md:flex-row"
+    >
+      
+      <div class="flex flex-1 flex-col justify-center gap-4 p-6">
+        
+        <h3
+          class="text-foreground group-hover:text-primary text-xl leading-tight font-bold transition-colors duration-200"
+        >
+          xargs小技巧随手记
+        </h3>
+
+        
+        
+          <p class="text-muted-foreground line-clamp-3 text-sm leading-relaxed md:line-clamp-2">
+            取不同数目的参数假设有一个文件a.txt
+TEXT file1 file2 file3 file4 file5 file1 file2 file3 file4 file5 xags可以跨行取指定数目的参数
+
+          </p>
+        
+
+
+        
+        <div class="text-muted-foreground mt-2 flex flex-wrap items-center gap-x-4 gap-y-2 text-sm">
+          
+          <div class="flex items-center gap-1.5">
+            <svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+</svg>
+
+            <time datetime="2025-12-16" class="font-medium">
+              December 16, 2025
+            </time>
+          </div>
+
+          
+          
+            <div class="flex items-center gap-1.5">
+              <svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+</svg>
+
+              <span class="truncate font-medium"
+                ></span
+              >
+            </div>
+          
+
+
+          
+          
+            <div class="ml-auto flex flex-wrap items-center gap-1.5 md:ml-0">
+              
+                <span
+                  class="bg-muted/50 border-muted/30 flex items-center gap-1 rounded-md border px-2 py-0.5 text-xs"
+                >
+                  <span class="font-medium">shell</span>
+                </span>
+              
+            </div>
+          
+        </div>
+      </div>
+    </div>
+  </a>
+</article>
+
+          
+            
+
+
+
+
+<article class="group">
+  <a href="/posts/%E4%BD%BF%E7%94%A8xargs%E5%92%8Cparallel%E5%B9%B6%E8%A1%8C%E8%BF%90%E8%A1%8C%E4%BB%BB%E5%8A%A1/" class="block">
+    <div
+      class="bg-card border-border hover:bg-primary/5 hover:border-primary/20 focus:ring-primary/20 relative flex flex-col overflow-hidden rounded-xl border transition-all duration-300 ease-out hover:-translate-y-1 hover:scale-[1.02] hover:shadow-lg focus:ring-2 focus:outline-none md:flex-row"
+    >
+      
+      <div class="flex flex-1 flex-col justify-center gap-4 p-6">
+        
+        <h3
+          class="text-foreground group-hover:text-primary text-xl leading-tight font-bold transition-colors duration-200"
+        >
+          使用xargs和parallel并行运行任务
+        </h3>
+
+        
+        
+          <p class="text-muted-foreground line-clamp-3 text-sm leading-relaxed md:line-clamp-2">
+            使用xargs并行运行任务 SHELL find . -name &#39;SRR*.fastq&#39; | grep -v &#39;filtered_&#39; | xargs -I &#39;{}&#39; -n 1 -P 5 fastq_quality_filter …
+          </p>
+        
+
+
+        
+        <div class="text-muted-foreground mt-2 flex flex-wrap items-center gap-x-4 gap-y-2 text-sm">
+          
+          <div class="flex items-center gap-1.5">
+            <svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+</svg>
+
+            <time datetime="2025-12-16" class="font-medium">
+              December 16, 2025
+            </time>
+          </div>
+
+          
+          
+            <div class="flex items-center gap-1.5">
+              <svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+</svg>
+
+              <span class="truncate font-medium"
+                ></span
+              >
+            </div>
+          
+
+
+          
+          
+            <div class="ml-auto flex flex-wrap items-center gap-1.5 md:ml-0">
+              
+                <span
+                  class="bg-muted/50 border-muted/30 flex items-center gap-1 rounded-md border px-2 py-0.5 text-xs"
+                >
+                  <span class="font-medium">shell</span>
+                </span>
+              
+            </div>
+          
+        </div>
+      </div>
+    </div>
+  </a>
+</article>
+
+          
+            
+
+
+
+
+<article class="group">
+  <a href="/posts/ai_misc/" class="block">
+    <div
+      class="bg-card border-border hover:bg-primary/5 hover:border-primary/20 focus:ring-primary/20 relative flex flex-col overflow-hidden rounded-xl border transition-all duration-300 ease-out hover:-translate-y-1 hover:scale-[1.02] hover:shadow-lg focus:ring-2 focus:outline-none md:flex-row"
+    >
+      
+      <div class="flex flex-1 flex-col justify-center gap-4 p-6">
+        
+        <h3
+          class="text-foreground group-hover:text-primary text-xl leading-tight font-bold transition-colors duration-200"
+        >
+          关于AI的一些思考
+        </h3>
+
+        
+        
+          <p class="text-muted-foreground line-clamp-3 text-sm leading-relaxed md:line-clamp-2">
+            关于AI的一些思考，想到哪写到哪。
+AI的头部公司里，能做出头的：1. 字节肯定算一个字节的模型虽然没有deepseqk和千问出风头，但是一方面，他的模型应该也是国内一流的，另一个很重要的方面，他的软件做得比其他家好太多，比如豆包、TRAE，断崖式领先。
+
+          </p>
+        
+
+
+        
+        <div class="text-muted-foreground mt-2 flex flex-wrap items-center gap-x-4 gap-y-2 text-sm">
+          
+          <div class="flex items-center gap-1.5">
+            <svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+</svg>
+
+            <time datetime="2025-12-15" class="font-medium">
+              December 15, 2025
+            </time>
+          </div>
+
+          
+          
+            <div class="flex items-center gap-1.5">
+              <svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+</svg>
+
+              <span class="truncate font-medium"
+                ></span
+              >
+            </div>
+          
+
+
+          
+          
+            <div class="ml-auto flex flex-wrap items-center gap-1.5 md:ml-0">
+              
+                <span
+                  class="bg-muted/50 border-muted/30 flex items-center gap-1 rounded-md border px-2 py-0.5 text-xs"
+                >
+                  <span class="font-medium">创业</span>
+                </span>
+              
+            </div>
+          
+        </div>
+      </div>
+    </div>
+  </a>
+</article>
+
           
             
 
@@ -3491,214 +3714,6 @@ PLAINTEXT 上周，Cloudflare 创始人兼 CEO 马修·普林斯（Matthew Princ
                 >
                   <span class="font-medium">经济</span>
                 </span>
-              
-            </div>
-          
-        </div>
-      </div>
-    </div>
-  </a>
-</article>
-
-          
-            
-
-
-
-
-<article class="group">
-  <a href="/posts/renzhiqiang/" class="block">
-    <div
-      class="bg-card border-border hover:bg-primary/5 hover:border-primary/20 focus:ring-primary/20 relative flex flex-col overflow-hidden rounded-xl border transition-all duration-300 ease-out hover:-translate-y-1 hover:scale-[1.02] hover:shadow-lg focus:ring-2 focus:outline-none md:flex-row"
-    >
-      
-      <div class="flex flex-1 flex-col justify-center gap-4 p-6">
-        
-        <h3
-          class="text-foreground group-hover:text-primary text-xl leading-tight font-bold transition-colors duration-200"
-        >
-          野心优雅-任志强自传
-        </h3>
-
-        
-        
-          <p class="text-muted-foreground line-clamp-3 text-sm leading-relaxed md:line-clamp-2">
-             历史上最听话的中国人对政府的指示奉若神明，更曾有“最高指示一句顶一万句”的迷信，但改革开放之后，“实践成为检验真理的唯一标准”，打破了“两个凡是”的同时也打破了神坛，让神像在倒下的同时，也让政府的指示在“摸着石头过河”中有了博弈的可能，更多的农民用生命推翻了法律的约束，并最终修 …
-          </p>
-        
-
-
-        
-        <div class="text-muted-foreground mt-2 flex flex-wrap items-center gap-x-4 gap-y-2 text-sm">
-          
-          <div class="flex items-center gap-1.5">
-            <svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
-</svg>
-
-            <time datetime="2024-07-02" class="font-medium">
-              July 2, 2024
-            </time>
-          </div>
-
-          
-          
-            <div class="flex items-center gap-1.5">
-              <svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
-</svg>
-
-              <span class="truncate font-medium"
-                ></span
-              >
-            </div>
-          
-
-
-          
-          
-            <div class="ml-auto flex flex-wrap items-center gap-1.5 md:ml-0">
-              
-            </div>
-          
-        </div>
-      </div>
-    </div>
-  </a>
-</article>
-
-          
-            
-
-
-
-
-<article class="group">
-  <a href="/posts/win_friends_and_influence_people/" class="block">
-    <div
-      class="bg-card border-border hover:bg-primary/5 hover:border-primary/20 focus:ring-primary/20 relative flex flex-col overflow-hidden rounded-xl border transition-all duration-300 ease-out hover:-translate-y-1 hover:scale-[1.02] hover:shadow-lg focus:ring-2 focus:outline-none md:flex-row"
-    >
-      
-      <div class="flex flex-1 flex-col justify-center gap-4 p-6">
-        
-        <h3
-          class="text-foreground group-hover:text-primary text-xl leading-tight font-bold transition-colors duration-200"
-        >
-          人性的弱点 - 卡耐基
-        </h3>
-
-        
-        
-          <p class="text-muted-foreground line-clamp-3 text-sm leading-relaxed md:line-clamp-2">
-            第一篇 如何与他人友好相处第一章 喜欢批评就没有朋友 批评和责备他人是没有意义的，因为那只会让人在心理上增加一层防护，并且被批评的人也会因为受到批评而竭力为自己的错误辩护。批评与责备他人也是危险的，因为它会伤害到一个人的自尊，并因此激发他对你的反抗。
-
-          </p>
-        
-
-
-        
-        <div class="text-muted-foreground mt-2 flex flex-wrap items-center gap-x-4 gap-y-2 text-sm">
-          
-          <div class="flex items-center gap-1.5">
-            <svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
-</svg>
-
-            <time datetime="2024-05-26" class="font-medium">
-              May 26, 2024
-            </time>
-          </div>
-
-          
-          
-            <div class="flex items-center gap-1.5">
-              <svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
-</svg>
-
-              <span class="truncate font-medium"
-                ></span
-              >
-            </div>
-          
-
-
-          
-          
-            <div class="ml-auto flex flex-wrap items-center gap-1.5 md:ml-0">
-              
-                <span
-                  class="bg-muted/50 border-muted/30 flex items-center gap-1 rounded-md border px-2 py-0.5 text-xs"
-                >
-                  <span class="font-medium">心理</span>
-                </span>
-              
-            </div>
-          
-        </div>
-      </div>
-    </div>
-  </a>
-</article>
-
-          
-            
-
-
-
-
-<article class="group">
-  <a href="/posts/%E6%B5%AE%E7%94%9F%E5%85%AD%E8%AE%B0/" class="block">
-    <div
-      class="bg-card border-border hover:bg-primary/5 hover:border-primary/20 focus:ring-primary/20 relative flex flex-col overflow-hidden rounded-xl border transition-all duration-300 ease-out hover:-translate-y-1 hover:scale-[1.02] hover:shadow-lg focus:ring-2 focus:outline-none md:flex-row"
-    >
-      
-      <div class="flex flex-1 flex-col justify-center gap-4 p-6">
-        
-        <h3
-          class="text-foreground group-hover:text-primary text-xl leading-tight font-bold transition-colors duration-200"
-        >
-          浮生六记
-        </h3>
-
-        
-        
-          <p class="text-muted-foreground line-clamp-3 text-sm leading-relaxed md:line-clamp-2">
-             “诗仙”李白在《春夜宴从弟桃李园序》中写道：“夫天地者，万物之逆旅也。光阴者，百代之过客也。而浮生若梦，为欢几何？”这篇千古流传的小序，抒发了诗人对生命的痛切沉思，以及“浮生若梦、为欢几何”的感伤。清代的沈复就以此为名写了《浮生六记》。 中国的古代文学，描写情爱的诗文很多，但大 …
-          </p>
-        
-
-
-        
-        <div class="text-muted-foreground mt-2 flex flex-wrap items-center gap-x-4 gap-y-2 text-sm">
-          
-          <div class="flex items-center gap-1.5">
-            <svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
-</svg>
-
-            <time datetime="2024-05-10" class="font-medium">
-              May 10, 2024
-            </time>
-          </div>
-
-          
-          
-            <div class="flex items-center gap-1.5">
-              <svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
-</svg>
-
-              <span class="truncate font-medium"
-                ></span
-              >
-            </div>
-          
-
-
-          
-          
-            <div class="ml-auto flex flex-wrap items-center gap-1.5 md:ml-0">
               
             </div>
           

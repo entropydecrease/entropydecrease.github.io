@@ -10,14 +10,28 @@
 		
 		
 		
-			<lastBuildDate>Mon, 08 Jun 2026 00:00:00 +0000</lastBuildDate>
+			<lastBuildDate>Thu, 11 Jun 2026 00:00:00 +0000</lastBuildDate>
 		
 			<atom:link href="https://entropydecrease.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
 			<item>
 				<title>AI</title>
 				<link>https://entropydecrease.github.io/tags/ai/</link>
-				<pubDate>Mon, 08 Jun 2026 00:00:00 +0000</pubDate>
+				<pubDate>Thu, 11 Jun 2026 00:00:00 +0000</pubDate>
 				<guid>https://entropydecrease.github.io/tags/ai/</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>个人成长</title>
+				<link>https://entropydecrease.github.io/tags/%E4%B8%AA%E4%BA%BA%E6%88%90%E9%95%BF/</link>
+				<pubDate>Thu, 11 Jun 2026 00:00:00 +0000</pubDate>
+				<guid>https://entropydecrease.github.io/tags/%E4%B8%AA%E4%BA%BA%E6%88%90%E9%95%BF/</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>互联网</title>
+				<link>https://entropydecrease.github.io/tags/%E4%BA%92%E8%81%94%E7%BD%91/</link>
+				<pubDate>Thu, 11 Jun 2026 00:00:00 +0000</pubDate>
+				<guid>https://entropydecrease.github.io/tags/%E4%BA%92%E8%81%94%E7%BD%91/</guid>
 				<description></description>
 			</item>
 			<item>
@@ -25,13 +39,6 @@
 				<link>https://entropydecrease.github.io/tags/%E5%A4%A7%E6%A8%A1%E5%9E%8B/</link>
 				<pubDate>Mon, 08 Jun 2026 00:00:00 +0000</pubDate>
 				<guid>https://entropydecrease.github.io/tags/%E5%A4%A7%E6%A8%A1%E5%9E%8B/</guid>
-				<description></description>
-			</item>
-			<item>
-				<title>个人成长</title>
-				<link>https://entropydecrease.github.io/tags/%E4%B8%AA%E4%BA%BA%E6%88%90%E9%95%BF/</link>
-				<pubDate>Fri, 05 Jun 2026 22:00:00 +0000</pubDate>
-				<guid>https://entropydecrease.github.io/tags/%E4%B8%AA%E4%BA%BA%E6%88%90%E9%95%BF/</guid>
 				<description></description>
 			</item>
 			<item>
@@ -88,13 +95,6 @@
 				<link>https://entropydecrease.github.io/tags/%E7%AE%A1%E7%90%86/</link>
 				<pubDate>Fri, 23 Jan 2026 00:00:00 +0000</pubDate>
 				<guid>https://entropydecrease.github.io/tags/%E7%AE%A1%E7%90%86/</guid>
-				<description></description>
-			</item>
-			<item>
-				<title>互联网</title>
-				<link>https://entropydecrease.github.io/tags/%E4%BA%92%E8%81%94%E7%BD%91/</link>
-				<pubDate>Fri, 23 Jan 2026 00:00:00 +0000</pubDate>
-				<guid>https://entropydecrease.github.io/tags/%E4%BA%92%E8%81%94%E7%BD%91/</guid>
 				<description></description>
 			</item>
 			<item>
