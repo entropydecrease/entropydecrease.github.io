@@ -3,23 +3,32 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://entropydecrease.github.io/posts/%E4%B8%AD%E5%9B%BD%E7%9A%84%E6%83%8A%E9%9B%B7-%E7%99%BD%E4%BF%AE%E5%BE%B7/</loc>
+    <lastmod>2026-06-14T11:00:00+00:00</lastmod>
+  </url><url>
     <loc>https://entropydecrease.github.io/categories/</loc>
-    <lastmod>2026-06-14T00:00:00+00:00</lastmod>
+    <lastmod>2026-06-14T11:00:00+00:00</lastmod>
   </url><url>
     <loc>https://entropydecrease.github.io/posts/</loc>
-    <lastmod>2026-06-14T00:00:00+00:00</lastmod>
+    <lastmod>2026-06-14T11:00:00+00:00</lastmod>
   </url><url>
     <loc>https://entropydecrease.github.io/tags/</loc>
-    <lastmod>2026-06-14T00:00:00+00:00</lastmod>
+    <lastmod>2026-06-14T11:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://entropydecrease.github.io/tags/%E4%B8%AA%E4%BA%BA%E6%88%90%E9%95%BF/</loc>
-    <lastmod>2026-06-14T00:00:00+00:00</lastmod>
+    <loc>https://entropydecrease.github.io/tags/%E5%AE%B6%E4%B9%A1/</loc>
+    <lastmod>2026-06-14T11:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://entropydecrease.github.io/posts/goodrest/</loc>
-    <lastmod>2026-06-14T00:00:00+00:00</lastmod>
+    <loc>https://entropydecrease.github.io/tags/%E6%8A%97%E6%88%98/</loc>
+    <lastmod>2026-06-14T11:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://entropydecrease.github.io/categories/%E9%98%85%E8%AF%BB/</loc>
-    <lastmod>2026-06-14T00:00:00+00:00</lastmod>
+    <loc>https://entropydecrease.github.io/categories/%E5%8E%86%E5%8F%B2/</loc>
+    <lastmod>2026-06-14T11:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://entropydecrease.github.io/tags/%E5%8E%86%E5%8F%B2/</loc>
+    <lastmod>2026-06-14T11:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://entropydecrease.github.io/tags/%E4%BA%BA%E7%89%A9/</loc>
+    <lastmod>2026-06-14T11:00:00+00:00</lastmod>
   </url><url>
     <loc>https://entropydecrease.github.io/categories/tech/</loc>
     <lastmod>2026-06-13T00:00:00+00:00</lastmod>
@@ -36,6 +45,9 @@
     <loc>https://entropydecrease.github.io/posts/truth_and_lie/</loc>
     <lastmod>2026-06-13T00:00:00+00:00</lastmod>
   </url><url>
+    <loc>https://entropydecrease.github.io/categories/%E9%98%85%E8%AF%BB/</loc>
+    <lastmod>2026-06-13T00:00:00+00:00</lastmod>
+  </url><url>
     <loc>https://entropydecrease.github.io/posts/%E7%BD%AE%E8%BA%AB%E9%92%89%E5%86%85%E8%A7%A3%E8%AF%BB%E5%8F%8A%E5%8E%9F%E6%96%87%E4%B8%8A%E8%BD%AC%E8%BD%BD/</loc>
     <lastmod>2026-06-11T00:00:00+00:00</lastmod>
   </url><url>
@@ -46,6 +58,9 @@
     <lastmod>2026-06-11T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://entropydecrease.github.io/tags/ai/</loc>
+    <lastmod>2026-06-11T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://entropydecrease.github.io/tags/%E4%B8%AA%E4%BA%BA%E6%88%90%E9%95%BF/</loc>
     <lastmod>2026-06-11T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://entropydecrease.github.io/tags/%E4%BA%92%E8%81%94%E7%BD%91/</loc>
@@ -81,16 +96,7 @@
     <loc>https://entropydecrease.github.io/posts/%E8%BF%99%E4%B8%80%E5%B0%8F%E6%AE%B5%E8%B7%AF%E5%8F%AF%E8%83%BD%E5%B0%B1%E6%98%AF%E5%8D%81%E5%B9%B4/</loc>
     <lastmod>2026-05-31T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://entropydecrease.github.io/categories/%E5%8E%86%E5%8F%B2/</loc>
-    <lastmod>2026-05-24T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://entropydecrease.github.io/tags/%E5%8E%86%E5%8F%B2/</loc>
-    <lastmod>2026-05-24T00:00:00+00:00</lastmod>
-  </url><url>
     <loc>https://entropydecrease.github.io/posts/%E6%BA%A5%E6%9D%B0%E8%87%AA%E4%BC%A0/</loc>
-    <lastmod>2026-05-24T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://entropydecrease.github.io/tags/%E4%BA%BA%E7%89%A9/</loc>
     <lastmod>2026-05-24T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://entropydecrease.github.io/posts/%E9%BB%84%E5%85%8B%E8%AF%9A%E5%9B%9E%E5%BF%86%E5%BD%95/</loc>
@@ -110,9 +116,6 @@
   </url><url>
     <loc>https://entropydecrease.github.io/categories/%E5%B7%A5%E4%BD%9C/</loc>
     <lastmod>2026-05-18T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://entropydecrease.github.io/tags/%E6%8A%97%E6%88%98/</loc>
-    <lastmod>2026-05-11T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://entropydecrease.github.io/posts/%E6%9D%8E%E6%B5%8E%E6%B7%B1%E8%87%AA%E8%BF%B0/</loc>
     <lastmod>2026-05-11T00:00:00+00:00</lastmod>
@@ -178,9 +181,6 @@
     <lastmod>2026-01-23T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://entropydecrease.github.io/posts/backtohometown/</loc>
-    <lastmod>2026-01-18T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://entropydecrease.github.io/tags/%E5%AE%B6%E4%B9%A1/</loc>
     <lastmod>2026-01-18T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://entropydecrease.github.io/categories/%E9%9A%8F%E7%AC%94/</loc>

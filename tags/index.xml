@@ -10,14 +10,35 @@
 		
 		
 		
-			<lastBuildDate>Sun, 14 Jun 2026 00:00:00 +0000</lastBuildDate>
+			<lastBuildDate>Sun, 14 Jun 2026 11:00:00 +0000</lastBuildDate>
 		
 			<atom:link href="https://entropydecrease.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
 			<item>
-				<title>个人成长</title>
-				<link>https://entropydecrease.github.io/tags/%E4%B8%AA%E4%BA%BA%E6%88%90%E9%95%BF/</link>
-				<pubDate>Sun, 14 Jun 2026 00:00:00 +0000</pubDate>
-				<guid>https://entropydecrease.github.io/tags/%E4%B8%AA%E4%BA%BA%E6%88%90%E9%95%BF/</guid>
+				<title>家乡</title>
+				<link>https://entropydecrease.github.io/tags/%E5%AE%B6%E4%B9%A1/</link>
+				<pubDate>Sun, 14 Jun 2026 11:00:00 +0000</pubDate>
+				<guid>https://entropydecrease.github.io/tags/%E5%AE%B6%E4%B9%A1/</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>抗战</title>
+				<link>https://entropydecrease.github.io/tags/%E6%8A%97%E6%88%98/</link>
+				<pubDate>Sun, 14 Jun 2026 11:00:00 +0000</pubDate>
+				<guid>https://entropydecrease.github.io/tags/%E6%8A%97%E6%88%98/</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>历史</title>
+				<link>https://entropydecrease.github.io/tags/%E5%8E%86%E5%8F%B2/</link>
+				<pubDate>Sun, 14 Jun 2026 11:00:00 +0000</pubDate>
+				<guid>https://entropydecrease.github.io/tags/%E5%8E%86%E5%8F%B2/</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>人物</title>
+				<link>https://entropydecrease.github.io/tags/%E4%BA%BA%E7%89%A9/</link>
+				<pubDate>Sun, 14 Jun 2026 11:00:00 +0000</pubDate>
+				<guid>https://entropydecrease.github.io/tags/%E4%BA%BA%E7%89%A9/</guid>
 				<description></description>
 			</item>
 			<item>
@@ -32,6 +53,13 @@
 				<link>https://entropydecrease.github.io/tags/ai/</link>
 				<pubDate>Thu, 11 Jun 2026 00:00:00 +0000</pubDate>
 				<guid>https://entropydecrease.github.io/tags/ai/</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>个人成长</title>
+				<link>https://entropydecrease.github.io/tags/%E4%B8%AA%E4%BA%BA%E6%88%90%E9%95%BF/</link>
+				<pubDate>Thu, 11 Jun 2026 00:00:00 +0000</pubDate>
+				<guid>https://entropydecrease.github.io/tags/%E4%B8%AA%E4%BA%BA%E6%88%90%E9%95%BF/</guid>
 				<description></description>
 			</item>
 			<item>
@@ -56,31 +84,10 @@
 				<description></description>
 			</item>
 			<item>
-				<title>历史</title>
-				<link>https://entropydecrease.github.io/tags/%E5%8E%86%E5%8F%B2/</link>
-				<pubDate>Sun, 24 May 2026 00:00:00 +0000</pubDate>
-				<guid>https://entropydecrease.github.io/tags/%E5%8E%86%E5%8F%B2/</guid>
-				<description></description>
-			</item>
-			<item>
-				<title>人物</title>
-				<link>https://entropydecrease.github.io/tags/%E4%BA%BA%E7%89%A9/</link>
-				<pubDate>Sun, 24 May 2026 00:00:00 +0000</pubDate>
-				<guid>https://entropydecrease.github.io/tags/%E4%BA%BA%E7%89%A9/</guid>
-				<description></description>
-			</item>
-			<item>
 				<title>Tools</title>
 				<link>https://entropydecrease.github.io/tags/tools/</link>
 				<pubDate>Thu, 21 May 2026 00:00:00 +0000</pubDate>
 				<guid>https://entropydecrease.github.io/tags/tools/</guid>
-				<description></description>
-			</item>
-			<item>
-				<title>抗战</title>
-				<link>https://entropydecrease.github.io/tags/%E6%8A%97%E6%88%98/</link>
-				<pubDate>Mon, 11 May 2026 00:00:00 +0000</pubDate>
-				<guid>https://entropydecrease.github.io/tags/%E6%8A%97%E6%88%98/</guid>
 				<description></description>
 			</item>
 			<item>
@@ -95,13 +102,6 @@
 				<link>https://entropydecrease.github.io/tags/%E7%AE%A1%E7%90%86/</link>
 				<pubDate>Fri, 23 Jan 2026 00:00:00 +0000</pubDate>
 				<guid>https://entropydecrease.github.io/tags/%E7%AE%A1%E7%90%86/</guid>
-				<description></description>
-			</item>
-			<item>
-				<title>家乡</title>
-				<link>https://entropydecrease.github.io/tags/%E5%AE%B6%E4%B9%A1/</link>
-				<pubDate>Sun, 18 Jan 2026 00:00:00 +0000</pubDate>
-				<guid>https://entropydecrease.github.io/tags/%E5%AE%B6%E4%B9%A1/</guid>
 				<description></description>
 			</item>
 			<item>
