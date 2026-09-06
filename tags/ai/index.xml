@@ -10,9 +10,37 @@
 		
 		
 		
-			<lastBuildDate>Mon, 13 Jul 2026 19:00:00 +0000</lastBuildDate>
+			<lastBuildDate>Thu, 03 Sep 2026 11:00:00 +0000</lastBuildDate>
 		
 			<atom:link href="https://entropydecrease.github.io/tags/ai/index.xml" rel="self" type="application/rss+xml" />
+			<item>
+				<title>一个例子，比较GP 和deepseek</title>
+				<link>https://entropydecrease.github.io/posts/%E4%B8%80%E4%B8%AA%E4%BE%8B%E5%AD%90%E6%AF%94%E8%BE%83gp-%E5%92%8Cdeepseek/</link>
+				<pubDate>Thu, 03 Sep 2026 11:00:00 +0000</pubDate>
+				<guid>https://entropydecrease.github.io/posts/%E4%B8%80%E4%B8%AA%E4%BE%8B%E5%AD%90%E6%AF%94%E8%BE%83gp-%E5%92%8Cdeepseek/</guid>
+				<description>&lt;p&gt;读书见“大慈寺兴慈老和尚竟以圆寂闻”一句，不解“以……闻”之用法。问 DeepSeek，初答有误，再问始改；又问 GPT，初答即当。由是观之，DeepSeek 与 GPT 相较，尚有差距。&lt;/p&gt;</description>
+			</item>
+			<item>
+				<title>面对AI的焦虑</title>
+				<link>https://entropydecrease.github.io/posts/%E9%9D%A2%E5%AF%B9ai%E7%9A%84%E7%84%A6%E8%99%91/</link>
+				<pubDate>Tue, 04 Aug 2026 12:00:00 +0000</pubDate>
+				<guid>https://entropydecrease.github.io/posts/%E9%9D%A2%E5%AF%B9ai%E7%9A%84%E7%84%A6%E8%99%91/</guid>
+				<description>&lt;p&gt;引用&lt;a&#xA;    href=&#34;https://www.ifanr.com/1544826&#34;target=&#34;_blank&#34;&#xA;    class=&#34;inline-flex items-center gap-1&#34;&#xA;  &gt;ifanr的一段报导&lt;svg class=&#34;h-3 w-3 flex-shrink-0&#34; id=&#34;external-link&#34; xmlns=&#34;http://www.w3.org/2000/svg&#34; viewBox=&#34;0 0 24 24&#34;&gt;&lt;path fill=&#34;none&#34; stroke=&#34;currentColor&#34; stroke-linecap=&#34;round&#34; stroke-linejoin=&#34;round&#34; stroke-width=&#34;2&#34; d=&#34;M15 3h6v6m-11 5L21 3m-3 10v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6&#34;/&gt;&lt;/svg&gt;&#xA;  &lt;/a&gt;:&lt;/p&gt;&#xA;&lt;p&gt;4 月中旬，Smalltalk 开发者、著名程序员 Kent Beck 在 Twitter 感叹：&lt;/p&gt;</description>
+			</item>
+			<item>
+				<title>关于AI的一些思考</title>
+				<link>https://entropydecrease.github.io/posts/%E5%85%B3%E4%BA%8Eai%E7%9A%84%E4%B8%80%E4%BA%9B%E6%80%9D%E8%80%83/</link>
+				<pubDate>Sun, 02 Aug 2026 12:00:00 +0000</pubDate>
+				<guid>https://entropydecrease.github.io/posts/%E5%85%B3%E4%BA%8Eai%E7%9A%84%E4%B8%80%E4%BA%9B%E6%80%9D%E8%80%83/</guid>
+				<description>&lt;p&gt;跟AI对话的时候感觉非常累，完全跟不上节奏，而且非常耗费心神。&lt;/p&gt;&#xA;&lt;p&gt;究其原因，我觉得是这样的：&lt;/p&gt;&#xA;&lt;p&gt;跟人对话的时候，对方说话的速度，跟你能够理解的速度是差不多的。一般对方说完了，你就能理解，甚至还没说完，你就能理解了。但是和AI对话的时候，AI说话（输出）的速度极快，&lt;em&gt;远远&lt;/em&gt;大于你能够理解的速度，而且AI输出之后，你需要花很长的时间去阅读、理解，尤其是当你同时开多个AI对话的时候，于是你会感觉在一场距离结束遥遥无期的对话中被快速耗尽精力，非常累。&lt;/p&gt;</description>
+			</item>
+			<item>
+				<title>「Codex &#43; ChatGPT Desktop &#43; 网页」三者协同工作流</title>
+				<link>https://entropydecrease.github.io/posts/codex--chatgpt-desktop--%E7%BD%91%E9%A1%B5%E4%B8%89%E8%80%85%E5%8D%8F%E5%90%8C%E5%B7%A5%E4%BD%9C%E6%B5%81/</link>
+				<pubDate>Mon, 20 Jul 2026 21:00:00 +0000</pubDate>
+				<guid>https://entropydecrease.github.io/posts/codex--chatgpt-desktop--%E7%BD%91%E9%A1%B5%E4%B8%89%E8%80%85%E5%8D%8F%E5%90%8C%E5%B7%A5%E4%BD%9C%E6%B5%81/</guid>
+				<description>&lt;p&gt;ok,请分享你认为目前效率最高的 「Codex + ChatGPT Desktop + 网页」三者协同工作流&lt;/p&gt;&#xA;&lt;p&gt;我自己会把三者定位得非常明确：&lt;/p&gt;&#xA;&#xA;  &lt;blockquote&#xA;    class=&#34;border-primary bg-muted/30 hover:bg-muted/40 my-6 rounded-r-lg border-l-4 py-4 pr-4 pl-6 italic transition-all duration-200 ease-out hover:translate-x-1&#34;&#xA;  &gt;&#xA;    &lt;div class=&#34;prose prose-sm max-w-none&#34;&gt;&#xA;      &lt;p&gt;&lt;strong&gt;Codex = 工程师（执行）&lt;/strong&gt;&lt;/p&gt;</description>
+			</item>
 			<item>
 				<title>AI相关观点两则</title>
 				<link>https://entropydecrease.github.io/posts/ai%E7%9B%B8%E5%85%B3%E8%A7%82%E7%82%B9%E4%B8%A4%E5%88%99/</link>

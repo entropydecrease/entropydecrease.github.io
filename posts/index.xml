@@ -10,9 +10,107 @@
 		
 		
 		
-			<lastBuildDate>Fri, 17 Jul 2026 21:00:00 +0000</lastBuildDate>
+			<lastBuildDate>Fri, 04 Sep 2026 11:00:00 +0000</lastBuildDate>
 		
 			<atom:link href="https://entropydecrease.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+			<item>
+				<title>How to hire - 如何招聘</title>
+				<link>https://entropydecrease.github.io/posts/how-to-hire-%E5%A6%82%E4%BD%95%E6%8B%9B%E8%81%98/</link>
+				<pubDate>Fri, 04 Sep 2026 11:00:00 +0000</pubDate>
+				<guid>https://entropydecrease.github.io/posts/how-to-hire-%E5%A6%82%E4%BD%95%E6%8B%9B%E8%81%98/</guid>
+				<description>&lt;p&gt;How to hire - 如何招聘，Sam Altman的另外一篇blog，也值得一读，还是deepseek中英文对照翻译，原文在&lt;a&#xA;    href=&#34;https://blog.samaltman.com/how-to-hire&#34;target=&#34;_blank&#34;&#xA;    class=&#34;inline-flex items-center gap-1&#34;&#xA;  &gt;这里&lt;svg class=&#34;h-3 w-3 flex-shrink-0&#34; id=&#34;external-link&#34; xmlns=&#34;http://www.w3.org/2000/svg&#34; viewBox=&#34;0 0 24 24&#34;&gt;&lt;path fill=&#34;none&#34; stroke=&#34;currentColor&#34; stroke-linecap=&#34;round&#34; stroke-linejoin=&#34;round&#34; stroke-width=&#34;2&#34; d=&#34;M15 3h6v6m-11 5L21 3m-3 10v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6&#34;/&gt;&lt;/svg&gt;&#xA;  &lt;/a&gt;.&lt;/p&gt;</description>
+			</item>
+			<item>
+				<title>一个例子，比较GP 和deepseek</title>
+				<link>https://entropydecrease.github.io/posts/%E4%B8%80%E4%B8%AA%E4%BE%8B%E5%AD%90%E6%AF%94%E8%BE%83gp-%E5%92%8Cdeepseek/</link>
+				<pubDate>Thu, 03 Sep 2026 11:00:00 +0000</pubDate>
+				<guid>https://entropydecrease.github.io/posts/%E4%B8%80%E4%B8%AA%E4%BE%8B%E5%AD%90%E6%AF%94%E8%BE%83gp-%E5%92%8Cdeepseek/</guid>
+				<description>&lt;p&gt;读书见“大慈寺兴慈老和尚竟以圆寂闻”一句，不解“以……闻”之用法。问 DeepSeek，初答有误，再问始改；又问 GPT，初答即当。由是观之，DeepSeek 与 GPT 相较，尚有差距。&lt;/p&gt;</description>
+			</item>
+			<item>
+				<title>Startup Playbook (创业手册) - Sam Altman</title>
+				<link>https://entropydecrease.github.io/posts/startup-playbook-%E5%88%9B%E4%B8%9A%E6%89%8B%E5%86%8C-sam-altman/</link>
+				<pubDate>Mon, 31 Aug 2026 11:00:00 +0000</pubDate>
+				<guid>https://entropydecrease.github.io/posts/startup-playbook-%E5%88%9B%E4%B8%9A%E6%89%8B%E5%86%8C-sam-altman/</guid>
+				<description>&lt;p&gt;Sam Altman的创业手册，&lt;a&#xA;    href=&#34;https://playbook.samaltman.com&#34;target=&#34;_blank&#34;&#xA;    class=&#34;inline-flex items-center gap-1&#34;&#xA;  &gt;原文在此&lt;svg class=&#34;h-3 w-3 flex-shrink-0&#34; id=&#34;external-link&#34; xmlns=&#34;http://www.w3.org/2000/svg&#34; viewBox=&#34;0 0 24 24&#34;&gt;&lt;path fill=&#34;none&#34; stroke=&#34;currentColor&#34; stroke-linecap=&#34;round&#34; stroke-linejoin=&#34;round&#34; stroke-width=&#34;2&#34; d=&#34;M15 3h6v6m-11 5L21 3m-3 10v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6&#34;/&gt;&lt;/svg&gt;&#xA;  &lt;/a&gt;，觉得很不错，所以找deepseek做了一个全文对照翻译。&lt;/p&gt;</description>
+			</item>
+			<item>
+				<title>中国的惊雷3</title>
+				<link>https://entropydecrease.github.io/posts/%E4%B8%AD%E5%9B%BD%E7%9A%84%E6%83%8A%E9%9B%B73/</link>
+				<pubDate>Sat, 29 Aug 2026 11:00:00 +0000</pubDate>
+				<guid>https://entropydecrease.github.io/posts/%E4%B8%AD%E5%9B%BD%E7%9A%84%E6%83%8A%E9%9B%B73/</guid>
+				<description>&lt;p&gt;「三民主义」这几个字虽然听过千遍万遍，但这是第一次一目了然看懂了三民主义的内容和逻辑。&lt;/p&gt;&#xA;&#xA;  &lt;blockquote&#xA;    class=&#34;border-primary bg-muted/30 hover:bg-muted/40 my-6 rounded-r-lg border-l-4 py-4 pr-4 pl-6 italic transition-all duration-200 ease-out hover:translate-x-1&#34;&#xA;  &gt;&#xA;    &lt;div class=&#34;prose prose-sm max-w-none&#34;&gt;&#xA;      &lt;p&gt;《三民主义》并不是一本完整的书，但是它在目前中国不论共产党或国民党之间的神圣性，使它成为中国最主要的政治理论。这本书的孕育时间很长，直到孙中山逝世前不久，才印成书本。其时正当他快要使他的党在自己的历史上作最大的冒险的时候，他发表了几次演讲，把演讲稿的记录本纂印成书。虽然，在付印之前，孙中山的思想是早就流传于世了。孙中山的理论是以检视中国开始的。为什么中国在国际上这样屈辱？为什么中国人民这样穷困？他的答复是简单的——因为中国弱，无教育，而且分裂。为解决这问题，他提出了三个主义。&lt;/p&gt;</description>
+			</item>
+			<item>
+				<title>从更长的时间尺度来看技术发展</title>
+				<link>https://entropydecrease.github.io/posts/%E4%BB%8E%E6%9B%B4%E9%95%BF%E7%9A%84%E6%97%B6%E9%97%B4%E5%B0%BA%E5%BA%A6%E6%9D%A5%E7%9C%8B%E6%8A%80%E6%9C%AF%E5%8F%91%E5%B1%95/</link>
+				<pubDate>Wed, 26 Aug 2026 02:00:00 +0000</pubDate>
+				<guid>https://entropydecrease.github.io/posts/%E4%BB%8E%E6%9B%B4%E9%95%BF%E7%9A%84%E6%97%B6%E9%97%B4%E5%B0%BA%E5%BA%A6%E6%9D%A5%E7%9C%8B%E6%8A%80%E6%9C%AF%E5%8F%91%E5%B1%95/</guid>
+				<description>&lt;p&gt;ourworldindata网站有一个关于&lt;a&#xA;    href=&#34;https://ourworldindata.org/technology-long-run&#34;target=&#34;_blank&#34;&#xA;    class=&#34;inline-flex items-center gap-1&#34;&#xA;  &gt;从更长时间尺度来看技术发展的文章&lt;svg class=&#34;h-3 w-3 flex-shrink-0&#34; id=&#34;external-link&#34; xmlns=&#34;http://www.w3.org/2000/svg&#34; viewBox=&#34;0 0 24 24&#34;&gt;&lt;path fill=&#34;none&#34; stroke=&#34;currentColor&#34; stroke-linecap=&#34;round&#34; stroke-linejoin=&#34;round&#34; stroke-width=&#34;2&#34; d=&#34;M15 3h6v6m-11 5L21 3m-3 10v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6&#34;/&gt;&lt;/svg&gt;&#xA;  &lt;/a&gt;&lt;/p&gt;</description>
+			</item>
+			<item>
+				<title>经济机器是如何运行的</title>
+				<link>https://entropydecrease.github.io/posts/%E7%BB%8F%E6%B5%8E%E6%9C%BA%E5%99%A8%E6%98%AF%E5%A6%82%E4%BD%95%E8%BF%90%E8%A1%8C%E7%9A%84/</link>
+				<pubDate>Sat, 22 Aug 2026 02:00:00 +0000</pubDate>
+				<guid>https://entropydecrease.github.io/posts/%E7%BB%8F%E6%B5%8E%E6%9C%BA%E5%99%A8%E6%98%AF%E5%A6%82%E4%BD%95%E8%BF%90%E8%A1%8C%E7%9A%84/</guid>
+				<description>&lt;p&gt;B站有&lt;a&#xA;    href=&#34;https://www.bilibili.com/video/BV1qG4y157qp&#34;target=&#34;_blank&#34;&#xA;    class=&#34;inline-flex items-center gap-1&#34;&#xA;  &gt;中文和英文&lt;svg class=&#34;h-3 w-3 flex-shrink-0&#34; id=&#34;external-link&#34; xmlns=&#34;http://www.w3.org/2000/svg&#34; viewBox=&#34;0 0 24 24&#34;&gt;&lt;path fill=&#34;none&#34; stroke=&#34;currentColor&#34; stroke-linecap=&#34;round&#34; stroke-linejoin=&#34;round&#34; stroke-width=&#34;2&#34; d=&#34;M15 3h6v6m-11 5L21 3m-3 10v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6&#34;/&gt;&lt;/svg&gt;&#xA;  &lt;/a&gt; 版本。&lt;/p&gt;&#xA;&lt;p&gt;达利欧的三个简单的建议：&lt;/p&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;不要让债务的增长速度超过收入的增长速度，因为这会将你压垮。&lt;/li&gt;&#xA;&lt;li&gt;不要让收入的增长速度超过生产率的增长速度，因为这最终会使你失去竞争力。&lt;/li&gt;&#xA;&lt;li&gt;尽一切努力提高生产率，因为生产率在长期里起着最关键的作用。&lt;/li&gt;&#xA;&lt;/ol&gt;&#xA;&lt;p&gt;这里还有一个&lt;a&#xA;    href=&#34;https://www.xiaoming.io/economic-machine/&#34;target=&#34;_blank&#34;&#xA;    class=&#34;inline-flex items-center gap-1&#34;&#xA;  &gt;图文版&lt;svg class=&#34;h-3 w-3 flex-shrink-0&#34; id=&#34;external-link&#34; xmlns=&#34;http://www.w3.org/2000/svg&#34; viewBox=&#34;0 0 24 24&#34;&gt;&lt;path fill=&#34;none&#34; stroke=&#34;currentColor&#34; stroke-linecap=&#34;round&#34; stroke-linejoin=&#34;round&#34; stroke-width=&#34;2&#34; d=&#34;M15 3h6v6m-11 5L21 3m-3 10v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6&#34;/&gt;&lt;/svg&gt;&#xA;  &lt;/a&gt;:&lt;/p&gt;</description>
+			</item>
+			<item>
+				<title>科学需要讲故事</title>
+				<link>https://entropydecrease.github.io/posts/%E7%A7%91%E5%AD%A6%E9%9C%80%E8%A6%81%E8%AE%B2%E6%95%85%E4%BA%8B/</link>
+				<pubDate>Mon, 10 Aug 2026 02:00:00 +0000</pubDate>
+				<guid>https://entropydecrease.github.io/posts/%E7%A7%91%E5%AD%A6%E9%9C%80%E8%A6%81%E8%AE%B2%E6%95%85%E4%BA%8B/</guid>
+				<description>&lt;p&gt;把一些很基础但是又很模糊的一些感觉给梳理清楚并理论化。&lt;/p&gt;&#xA;&lt;h2 id=&#34;导言方法结果讨论&#34;&gt;导言、方法、结果、讨论&lt;a href=&#34;#%e5%af%bc%e8%a8%80%e6%96%b9%e6%b3%95%e7%bb%93%e6%9e%9c%e8%ae%a8%e8%ae%ba&#34; class=&#34;heading-anchor&#34; aria-label=&#34;&#34;&gt;&lt;svg class=&#34;h-4 w-4&#34; aria-hidden=&#34;true&#34; xmlns=&#34;http://www.w3.org/2000/svg&#34; viewBox=&#34;0 0 24 24&#34;&gt;&lt;g fill=&#34;none&#34; stroke=&#34;currentColor&#34; stroke-linecap=&#34;round&#34; stroke-linejoin=&#34;round&#34; stroke-width=&#34;2&#34;&gt;&lt;path d=&#34;M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71&#34;/&gt;&lt;path d=&#34;M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71&#34;/&gt;&lt;/g&gt;&lt;/svg&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;导言（I）、方法（M）、结果（R）和（A）讨论（D）四个部分，成为IMRAD。&lt;/p&gt;</description>
+			</item>
+			<item>
+				<title>斯坦福监狱实验</title>
+				<link>https://entropydecrease.github.io/posts/%E6%96%AF%E5%9D%A6%E7%A6%8F%E7%9B%91%E7%8B%B1%E5%AE%9E%E9%AA%8C/</link>
+				<pubDate>Sun, 09 Aug 2026 12:00:00 +0000</pubDate>
+				<guid>https://entropydecrease.github.io/posts/%E6%96%AF%E5%9D%A6%E7%A6%8F%E7%9B%91%E7%8B%B1%E5%AE%9E%E9%AA%8C/</guid>
+				<description>&lt;p&gt;从&lt;a&#xA;    href=&#34;https://www.ruanyifeng.com/blog/2022/06/weekly-issue-209.html&#34;target=&#34;_blank&#34;&#xA;    class=&#34;inline-flex items-center gap-1&#34;&#xA;  &gt;阮一峰的周报&lt;svg class=&#34;h-3 w-3 flex-shrink-0&#34; id=&#34;external-link&#34; xmlns=&#34;http://www.w3.org/2000/svg&#34; viewBox=&#34;0 0 24 24&#34;&gt;&lt;path fill=&#34;none&#34; stroke=&#34;currentColor&#34; stroke-linecap=&#34;round&#34; stroke-linejoin=&#34;round&#34; stroke-width=&#34;2&#34; d=&#34;M15 3h6v6m-11 5L21 3m-3 10v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6&#34;/&gt;&lt;/svg&gt;&#xA;  &lt;/a&gt;看到的，他由此引发的思考是&amp;ndash;“这不禁让我思考一个问题：程序员这个职业，会如何改变一个人的性格？”&lt;/p&gt;</description>
+			</item>
+			<item>
+				<title>面对AI的焦虑</title>
+				<link>https://entropydecrease.github.io/posts/%E9%9D%A2%E5%AF%B9ai%E7%9A%84%E7%84%A6%E8%99%91/</link>
+				<pubDate>Tue, 04 Aug 2026 12:00:00 +0000</pubDate>
+				<guid>https://entropydecrease.github.io/posts/%E9%9D%A2%E5%AF%B9ai%E7%9A%84%E7%84%A6%E8%99%91/</guid>
+				<description>&lt;p&gt;引用&lt;a&#xA;    href=&#34;https://www.ifanr.com/1544826&#34;target=&#34;_blank&#34;&#xA;    class=&#34;inline-flex items-center gap-1&#34;&#xA;  &gt;ifanr的一段报导&lt;svg class=&#34;h-3 w-3 flex-shrink-0&#34; id=&#34;external-link&#34; xmlns=&#34;http://www.w3.org/2000/svg&#34; viewBox=&#34;0 0 24 24&#34;&gt;&lt;path fill=&#34;none&#34; stroke=&#34;currentColor&#34; stroke-linecap=&#34;round&#34; stroke-linejoin=&#34;round&#34; stroke-width=&#34;2&#34; d=&#34;M15 3h6v6m-11 5L21 3m-3 10v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6&#34;/&gt;&lt;/svg&gt;&#xA;  &lt;/a&gt;:&lt;/p&gt;&#xA;&lt;p&gt;4 月中旬，Smalltalk 开发者、著名程序员 Kent Beck 在 Twitter 感叹：&lt;/p&gt;</description>
+			</item>
+			<item>
+				<title>偶然看到的</title>
+				<link>https://entropydecrease.github.io/posts/%E5%81%B6%E7%84%B6%E7%9C%8B%E5%88%B0%E7%9A%84/</link>
+				<pubDate>Tue, 04 Aug 2026 12:00:00 +0000</pubDate>
+				<guid>https://entropydecrease.github.io/posts/%E5%81%B6%E7%84%B6%E7%9C%8B%E5%88%B0%E7%9A%84/</guid>
+				<description>&lt;p&gt;v思o记公众号的文章&lt;a&#xA;    href=&#34;https://mp.weixin.qq.com/s/PKGZ5_GCsHAJvARYi1hgyQ&#34;target=&#34;_blank&#34;&#xA;    class=&#34;inline-flex items-center gap-1&#34;&#xA;  &gt;2023上半年的九个觉悟&lt;svg class=&#34;h-3 w-3 flex-shrink-0&#34; id=&#34;external-link&#34; xmlns=&#34;http://www.w3.org/2000/svg&#34; viewBox=&#34;0 0 24 24&#34;&gt;&lt;path fill=&#34;none&#34; stroke=&#34;currentColor&#34; stroke-linecap=&#34;round&#34; stroke-linejoin=&#34;round&#34; stroke-width=&#34;2&#34; d=&#34;M15 3h6v6m-11 5L21 3m-3 10v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6&#34;/&gt;&lt;/svg&gt;&#xA;  &lt;/a&gt;&lt;/p&gt;&#xA;&lt;p&gt;我觉得有意思的是下面几条：&lt;/p&gt;&#xA;&lt;h2 id=&#34;一资本主义的问题&#34;&gt;一、资本主义的问题&lt;a href=&#34;#%e4%b8%80%e8%b5%84%e6%9c%ac%e4%b8%bb%e4%b9%89%e7%9a%84%e9%97%ae%e9%a2%98&#34; class=&#34;heading-anchor&#34; aria-label=&#34;&#34;&gt;&lt;svg class=&#34;h-4 w-4&#34; aria-hidden=&#34;true&#34; xmlns=&#34;http://www.w3.org/2000/svg&#34; viewBox=&#34;0 0 24 24&#34;&gt;&lt;g fill=&#34;none&#34; stroke=&#34;currentColor&#34; stroke-linecap=&#34;round&#34; stroke-linejoin=&#34;round&#34; stroke-width=&#34;2&#34;&gt;&lt;path d=&#34;M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71&#34;/&gt;&lt;path d=&#34;M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71&#34;/&gt;&lt;/g&gt;&lt;/svg&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;&lt;strong&gt;“资本主义把我们都缩减成了一个东西：消费者”&lt;/strong&gt;&lt;/p&gt;</description>
+			</item>
+			<item>
+				<title>关于AI的一些思考</title>
+				<link>https://entropydecrease.github.io/posts/%E5%85%B3%E4%BA%8Eai%E7%9A%84%E4%B8%80%E4%BA%9B%E6%80%9D%E8%80%83/</link>
+				<pubDate>Sun, 02 Aug 2026 12:00:00 +0000</pubDate>
+				<guid>https://entropydecrease.github.io/posts/%E5%85%B3%E4%BA%8Eai%E7%9A%84%E4%B8%80%E4%BA%9B%E6%80%9D%E8%80%83/</guid>
+				<description>&lt;p&gt;跟AI对话的时候感觉非常累，完全跟不上节奏，而且非常耗费心神。&lt;/p&gt;&#xA;&lt;p&gt;究其原因，我觉得是这样的：&lt;/p&gt;&#xA;&lt;p&gt;跟人对话的时候，对方说话的速度，跟你能够理解的速度是差不多的。一般对方说完了，你就能理解，甚至还没说完，你就能理解了。但是和AI对话的时候，AI说话（输出）的速度极快，&lt;em&gt;远远&lt;/em&gt;大于你能够理解的速度，而且AI输出之后，你需要花很长的时间去阅读、理解，尤其是当你同时开多个AI对话的时候，于是你会感觉在一场距离结束遥遥无期的对话中被快速耗尽精力，非常累。&lt;/p&gt;</description>
+			</item>
+			<item>
+				<title>一些真知灼见（转载）</title>
+				<link>https://entropydecrease.github.io/posts/%E4%B8%80%E4%BA%9B%E7%9C%9F%E7%9F%A5%E7%81%BC%E8%A7%81%E8%BD%AC%E8%BD%BD/</link>
+				<pubDate>Sat, 01 Aug 2026 21:00:00 +0000</pubDate>
+				<guid>https://entropydecrease.github.io/posts/%E4%B8%80%E4%BA%9B%E7%9C%9F%E7%9F%A5%E7%81%BC%E8%A7%81%E8%BD%AC%E8%BD%BD/</guid>
+				<description>&lt;p&gt;原文： &lt;a&#xA;    href=&#34;https://collabfund.com/blog/thoughts/&#34;target=&#34;_blank&#34;&#xA;    class=&#34;inline-flex items-center gap-1&#34;&#xA;  &gt;https://collabfund.com/blog/thoughts/&lt;svg class=&#34;h-3 w-3 flex-shrink-0&#34; id=&#34;external-link&#34; xmlns=&#34;http://www.w3.org/2000/svg&#34; viewBox=&#34;0 0 24 24&#34;&gt;&lt;path fill=&#34;none&#34; stroke=&#34;currentColor&#34; stroke-linecap=&#34;round&#34; stroke-linejoin=&#34;round&#34; stroke-width=&#34;2&#34; d=&#34;M15 3h6v6m-11 5L21 3m-3 10v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6&#34;/&gt;&lt;/svg&gt;&#xA;  &lt;/a&gt;&lt;/p&gt;&#xA;&lt;p&gt;看了觉得非常好，所以找AI翻译了一下，印象深刻的是下面几条：&lt;/p&gt;&#xA;&lt;p&gt;对大多数人而言，一生中最重要的决定，是是否结婚、何时结婚，以及和谁结婚。但学校从不教授这个课题。它也无法教授——每个人都不同，这件事既不能化成公式，也不能归结为统计数字。&lt;/p&gt;</description>
+			</item>
+			<item>
+				<title>「Codex &#43; ChatGPT Desktop &#43; 网页」三者协同工作流</title>
+				<link>https://entropydecrease.github.io/posts/codex--chatgpt-desktop--%E7%BD%91%E9%A1%B5%E4%B8%89%E8%80%85%E5%8D%8F%E5%90%8C%E5%B7%A5%E4%BD%9C%E6%B5%81/</link>
+				<pubDate>Mon, 20 Jul 2026 21:00:00 +0000</pubDate>
+				<guid>https://entropydecrease.github.io/posts/codex--chatgpt-desktop--%E7%BD%91%E9%A1%B5%E4%B8%89%E8%80%85%E5%8D%8F%E5%90%8C%E5%B7%A5%E4%BD%9C%E6%B5%81/</guid>
+				<description>&lt;p&gt;ok,请分享你认为目前效率最高的 「Codex + ChatGPT Desktop + 网页」三者协同工作流&lt;/p&gt;&#xA;&lt;p&gt;我自己会把三者定位得非常明确：&lt;/p&gt;&#xA;&#xA;  &lt;blockquote&#xA;    class=&#34;border-primary bg-muted/30 hover:bg-muted/40 my-6 rounded-r-lg border-l-4 py-4 pr-4 pl-6 italic transition-all duration-200 ease-out hover:translate-x-1&#34;&#xA;  &gt;&#xA;    &lt;div class=&#34;prose prose-sm max-w-none&#34;&gt;&#xA;      &lt;p&gt;&lt;strong&gt;Codex = 工程师（执行）&lt;/strong&gt;&lt;/p&gt;</description>
+			</item>
+			<item>
+				<title>《中国的惊雷之百分之八十的农民》- 白修德</title>
+				<link>https://entropydecrease.github.io/posts/%E4%B8%AD%E5%9B%BD%E7%9A%84%E6%83%8A%E9%9B%B7%E4%B9%8B%E7%99%BE%E5%88%86%E4%B9%8B%E5%85%AB%E5%8D%81%E7%9A%84%E5%86%9C%E6%B0%91-%E7%99%BD%E4%BF%AE%E5%BE%B7/</link>
+				<pubDate>Sun, 19 Jul 2026 21:00:00 +0000</pubDate>
+				<guid>https://entropydecrease.github.io/posts/%E4%B8%AD%E5%9B%BD%E7%9A%84%E6%83%8A%E9%9B%B7%E4%B9%8B%E7%99%BE%E5%88%86%E4%B9%8B%E5%85%AB%E5%8D%81%E7%9A%84%E5%86%9C%E6%B0%91-%E7%99%BD%E4%BF%AE%E5%BE%B7/</guid>
+				<description>&lt;p&gt;这是全书的第二章，从一个外国人的角度，以简短的篇幅，对中国的乡村和农民做了深刻的描述，可以和《乡土中国》对照阅读，一个是外国人的视角，一个是中国人的视角。&lt;/p&gt;</description>
+			</item>
 			<item>
 				<title>工程意识(转载)</title>
 				<link>https://entropydecrease.github.io/posts/%E5%B7%A5%E7%A8%8B%E6%84%8F%E8%AF%86%E8%BD%AC%E8%BD%BD/</link>
@@ -137,7 +235,7 @@
 				<link>https://entropydecrease.github.io/posts/%E6%B2%B3%E5%8D%97%E5%A4%A7%E9%A5%A5%E8%8D%92%E8%AF%BB%E5%90%8E%E6%84%9F/</link>
 				<pubDate>Sun, 21 Jun 2026 00:00:00 +0000</pubDate>
 				<guid>https://entropydecrease.github.io/posts/%E6%B2%B3%E5%8D%97%E5%A4%A7%E9%A5%A5%E8%8D%92%E8%AF%BB%E5%90%8E%E6%84%9F/</guid>
-				<description>&lt;p&gt;看完《1942河南大饥荒》这本书之后，心情久久不能平静，感谢有二：&lt;/p&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;大饥荒期间河南人遭受的苦难，罄竹难书。整个抗战期间的苦难，更多。从古到今，兴，百姓苦，亡，百姓苦，这家起来的苦难，究竟有多少。&lt;/li&gt;&#xA;&lt;li&gt;很想知道劫后余生的祖先们，是怎么度过这个劫难的。我爷爷是一九一几年的，据说小时候是妈妈带着出去逃荒的，那应该一九二几年到三〇年左右。我姥爷一九二三年的，今年去世，应该经历了这个大饥荒，可惜我之前没有问过他。&lt;/li&gt;&#xA;&lt;/ol&gt;</description>
+				<description>&lt;p&gt;看完《1942河南大饥荒》这本书之后，心情久久不能平静，感谢有二：&lt;/p&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;大饥荒期间河南人遭受的苦难，罄竹难书。整个抗战期间的苦难，更多。从古到今，兴，百姓苦，亡，百姓苦，这家起来的苦难，究竟有多少。&lt;/li&gt;&#xA;&lt;li&gt;很想知道劫后余生的祖先们，是怎么度过这个劫难的。我爷爷是一九一几年的，据说小时候是妈妈带着出去逃荒的，那应该一九二几年到三〇年左右。我姥爷一九二三年的，今年去世，应该经历了这个大饥荒，可惜我之前没有问过他。&lt;/li&gt;&#xA;&lt;/ol&gt;&#xA;&lt;p&gt;另外，还有一本书也值得翻一下──&lt;a&#xA;    href=&#34;https://www.shidianguji.com/ens/book/HY2507/chapter/1kpb35nwufdig&#34;target=&#34;_blank&#34;&#xA;    class=&#34;inline-flex items-center gap-1&#34;&#xA;  &gt;《豫变纪略》&lt;svg class=&#34;h-3 w-3 flex-shrink-0&#34; id=&#34;external-link&#34; xmlns=&#34;http://www.w3.org/2000/svg&#34; viewBox=&#34;0 0 24 24&#34;&gt;&lt;path fill=&#34;none&#34; stroke=&#34;currentColor&#34; stroke-linecap=&#34;round&#34; stroke-linejoin=&#34;round&#34; stroke-width=&#34;2&#34; d=&#34;M15 3h6v6m-11 5L21 3m-3 10v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6&#34;/&gt;&lt;/svg&gt;&#xA;  &lt;/a&gt;。里面提到“大饥，人相食”不止一次。&lt;/p&gt;</description>
 			</item>
 			<item>
 				<title>《1942河南大饥荒》-再转载几篇</title>
