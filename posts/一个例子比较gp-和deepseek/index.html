@@ -1,5 +1,8 @@
-<!doctype html>
-<html lang="zh-CN" data-theme="emerald">
+<!doctype html><html
+  lang="zh-Hans"
+  data-theme="emerald"
+  data-toc-pinned="false"
+>
   <head>
     <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
@@ -21,7 +24,7 @@ Deepseek&lsquo;六十九年八月十四日，大慈寺兴慈老和尚竟以圆�
   name="author"
   content="Entropy Decrease"
 />
-<meta name="language" content="en-US" />
+<meta name="language" content="zh-CN" />
 
 <meta
   name="robots"
@@ -36,7 +39,7 @@ Deepseek&lsquo;六十九年八月十四日，大慈寺兴慈老和尚竟以圆�
 	<meta property="og:site_name" content="Entropy Decrease">
 	<meta property="og:title" content="一个例子，比较GP 和deepseek">
 	<meta property="og:description" content="读书见“大慈寺兴慈老和尚竟以圆寂闻”一句，不解“以……闻”之用法。问 DeepSeek，初答有误，再问始改；又问 GPT，初答即当。由是观之，DeepSeek 与 GPT 相较，尚有差距。">
-	<meta property="og:locale" content="zh_CN">
+	<meta property="og:locale" content="zh_Hans">
 	<meta property="og:type" content="article">
 		<meta property="article:section" content="posts">
 		<meta property="article:published_time" content="2026-09-03T11:00:00+00:00">
@@ -74,8 +77,8 @@ Deepseek&lsquo;六十九年八月十四日，大慈寺兴慈老和尚竟以圆�
     
       <link
         rel="stylesheet"
-        href="/css/compiled.min.4a6fd33c0e2db207c1646e8a588be381fd817a1b0cd86004cbb040e8dcf50b31.css"
-        integrity="sha256-Sm/TPA4tsgfBZG6KWIvjgf2BehsM2GAEy7BA6Nz1CzE="
+        href="/css/compiled.min.64471d81170139f732efa014a53ac4621daf3b75ac4fc8ad317a4d80f1c66197.css"
+        integrity="sha256-ZEcdgRcBOfcy76AUpTrEYh2vO3WsT8itMXpNgPHGYZc="
         crossorigin="anonymous"
       />
     
@@ -112,8 +115,8 @@ Deepseek&lsquo;六十九年八月十四日，大慈寺兴慈老和尚竟以圆�
 
 
         <script
-          src="/js/main.f482676046fba6a50f6e6580bd1306489d4fea5f7144231757bf01af2498b168.js"
-          integrity="sha256-9IJnYEb7pqUPbmWAvRMGSJ1P6l9xRCMXV78BrySYsWg="
+          src="/js/main.b003624716b5b9344efafc302bd75df711e73d0da196be724be6daebb2b6964d.js"
+          integrity="sha256-sANiRxa1uTRO&#43;vwwK9dd9xHnPQ2hlr5yS&#43;ba67K2lk0="
           crossorigin="anonymous"
           defer
         ></script>
@@ -121,8 +124,8 @@ Deepseek&lsquo;六十九年八月十四日，大慈寺兴慈老和尚竟以圆�
 
 
             <script
-              src="/js/toc.3026ef97e410bb3e98d57739bcabc32ac568e9001b2e42385de731663378ae85.js"
-              integrity="sha256-MCbvl&#43;QQuz6Y1Xc5vKvDKsVo6QAbLkI4XecxZjN4roU="
+              src="/js/toc.4f913c419799292f98fd50ecaa57eed9432c9ab55dc7a39c5cc7bb40caf34803.js"
+              integrity="sha256-T5E8QZeZKS&#43;Y/VDsqlfu2UMsmrVdx6OcXMe7QMrzSAM="
               crossorigin="anonymous"
               defer
             ></script>
@@ -139,8 +142,8 @@ Deepseek&lsquo;六十九年八月十四日，大慈寺兴慈老和尚竟以圆�
 
 
         <script
-          src="/js/dock.fc33c1fd0e0525acdd5b7abed135239608c36a061f3b566fbc9e5841594b11af.js"
-          integrity="sha256-/DPB/Q4FJazdW3q&#43;0TUjlgjDagYfO1ZvvJ5YQVlLEa8="
+          src="/js/dock.8e3addaa9b500c783209ee7837e59045cf14528a5807aedd4cf8e8e6dffbae11.js"
+          integrity="sha256-jjrdqptQDHgyCe54N&#43;WQRc8UUopYB67dTPjo5t/7rhE="
           crossorigin="anonymous"
           defer
         ></script>
@@ -159,9 +162,13 @@ Deepseek&lsquo;六十九年八月十四日，大慈寺兴慈老和尚竟以圆�
 
 
     
-    <script>(function(){const e=localStorage.getItem("theme")||"system",n=localStorage.getItem("colorScheme")||"emerald";document.documentElement.setAttribute("data-theme",n);function t(){e==="dark"||e==="system"&&window.matchMedia("(prefers-color-scheme: dark)").matches?document.documentElement.classList.add("dark"):document.documentElement.classList.remove("dark")}t(),e==="system"&&window.matchMedia("(prefers-color-scheme: dark)").addEventListener("change",t)})()</script>
+    <script>(function(){const e=document.documentElement,o=localStorage.getItem("theme")||"system",m=localStorage.getItem("colorScheme")||"emerald",n=Number.parseInt(localStorage.getItem("contentWidth"),10),d=Number.isInteger(n)&&n>=40&&n<=90;d&&e.style.setProperty("--content-width",`${n}rem`),e.setAttribute("data-theme",m);const s=localStorage.getItem("tocPinned");(s==="true"||s==="false")&&e.setAttribute("data-toc-pinned",s);const t=Number.parseFloat(getComputedStyle(e).fontSize)||16,u="56rem",i=Number.parseFloat(u);let a=56*t;Number.isFinite(i)&&(a=/r?em\s*$/.test(u)?i*t:i),d&&(a=n*t);const r=e.clientWidth,c=Math.max(0,(r-Math.min(a,r))/2);let l="narrow";r>=64*t&&(c>=13*t?l="wide":c>=2*t&&(l="tight")),e.setAttribute("data-toc-space",l),e.style.setProperty("--toc-gutter",`${Math.round(c)}px`);function h(){o==="dark"||o==="system"&&window.matchMedia("(prefers-color-scheme: dark)").matches?e.classList.add("dark"):e.classList.remove("dark")}h(),o==="system"&&window.matchMedia("(prefers-color-scheme: dark)").addEventListener("change",h)})()</script>
   </head><body class="bg-background text-foreground min-h-screen antialiased">
-    <main class="mx-auto w-full" style="max-width: 56rem">
+    <main
+      id="page-container"
+      class="mx-auto w-full"
+      style="--content-width-base: 56rem; max-width: var(--content-width, var(--content-width-base))"
+    >
       <div
     id="reading-progress-bar"
     class="from-primary to-primary/80 pointer-events-none fixed top-0 left-0 z-50 h-[3px] w-0 bg-linear-to-r transition-[width] duration-150 ease-out"
@@ -197,7 +204,7 @@ Deepseek&lsquo;六十九年八月十四日，大慈寺兴慈老和尚竟以圆�
     })();
   </script>
 
-      <header class=" px-4 py-6">
+      <header class="sticky top-0 z-50 px-4 py-6">
   <div
     class="border-border bg-card/80 flex items-center rounded-xl border px-6 py-4 shadow-sm backdrop-blur-sm"
   >
@@ -214,7 +221,7 @@ Deepseek&lsquo;六十九年八月十四日，大慈寺兴慈老和尚竟以圆�
             aria-label="Entropy Decrease"
           >
             <img
-              src="/"
+              src="/images/logo.svg"
               alt="Entropy Decrease"
               class="h-full w-full object-cover"
             />
@@ -243,12 +250,12 @@ Deepseek&lsquo;六十九年八月十四日，大慈寺兴慈老和尚竟以圆�
                  focus:ring-primary/20 relative flex items-center gap-2 rounded-lg px-4 py-2 text-sm font-medium transition-all duration-300 ease-out hover:-translate-y-0.5 hover:scale-105 focus:ring-2 focus:outline-none"
               >
                 
-                  <svg class="h-5 w-5" aria-label="posts" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <svg class="h-5 w-5" aria-label="文章" fill="none" stroke="currentColor" viewBox="0 0 24 24">
   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 20H5a2 2 0 01-2-2V6a2 2 0 012-2h10a2 2 0 012 2v1m2 13a2 2 0 01-2-2V7m2 13a2 2 0 002-2V9a2 2 0 00-2-2h-2m-4-3H9M7 16h6M7 8h6v4H7V8z" />
 </svg>
 
                 
-                <span>posts</span>
+                <span>文章</span>
               </a>
             
           
@@ -268,12 +275,12 @@ Deepseek&lsquo;六十九年八月十四日，大慈寺兴慈老和尚竟以圆�
                  focus:ring-primary/20 relative flex items-center gap-2 rounded-lg px-4 py-2 text-sm font-medium transition-all duration-300 ease-out hover:-translate-y-0.5 hover:scale-105 focus:ring-2 focus:outline-none"
               >
                 
-                  <svg class="h-5 w-5" aria-label="categories" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <svg class="h-5 w-5" aria-label="分类" fill="none" stroke="currentColor" viewBox="0 0 24 24">
   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10" />
 </svg>
 
                 
-                <span>categories</span>
+                <span>分类</span>
               </a>
             
           
@@ -293,12 +300,12 @@ Deepseek&lsquo;六十九年八月十四日，大慈寺兴慈老和尚竟以圆�
                  focus:ring-primary/20 relative flex items-center gap-2 rounded-lg px-4 py-2 text-sm font-medium transition-all duration-300 ease-out hover:-translate-y-0.5 hover:scale-105 focus:ring-2 focus:outline-none"
               >
                 
-                  <svg class="h-5 w-5" aria-label="tags" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <svg class="h-5 w-5" aria-label="标签" fill="none" stroke="currentColor" viewBox="0 0 24 24">
   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 7h.01M7 3h5c.512 0 1.024.195 1.414.586l7 7a2 2 0 010 2.828l-7 7a2 2 0 01-2.828 0l-7-7A1.994 1.994 0 013 12V7a4 4 0 014-4z" />
 </svg>
 
                 
-                <span>tags</span>
+                <span>标签</span>
               </a>
             
           
@@ -318,12 +325,12 @@ Deepseek&lsquo;六十九年八月十四日，大慈寺兴慈老和尚竟以圆�
                  focus:ring-primary/20 relative flex items-center gap-2 rounded-lg px-4 py-2 text-sm font-medium transition-all duration-300 ease-out hover:-translate-y-0.5 hover:scale-105 focus:ring-2 focus:outline-none"
               >
                 
-                  <svg class="h-5 w-5" aria-label="archives" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <svg class="h-5 w-5" aria-label="归档" fill="none" stroke="currentColor" viewBox="0 0 24 24">
   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 8h14M5 8a2 2 0 110-4h14a2 2 0 110 4M5 8v10a2 2 0 002 2h10a2 2 0 002-2V8m-9 4h4" />
 </svg>
 
                 
-                <span>archives</span>
+                <span>归档</span>
               </a>
             
           
@@ -332,6 +339,38 @@ Deepseek&lsquo;六十九年八月十四日，大慈寺兴慈老和尚竟以圆�
 
       
       <div class="flex items-center space-x-2">
+        
+        <div class="hidden lg:block"><div class="relative">
+    <button
+      id="content-width-toggle"
+      class="dropdown-toggle border-border bg-background text-muted-foreground hover:text-primary hover:bg-primary/10 focus:ring-primary/20 flex h-10 w-10 items-center justify-center rounded-lg border transition-all duration-300 ease-out hover:scale-105 focus:ring-2 focus:outline-none active:scale-95"
+      data-dropdown-type="content-width"
+      aria-label="调整页面宽度"
+      aria-expanded="false"
+      aria-haspopup="true"
+    ><svg class="h-5 w-5 relative z-10" aria-label="调整页面宽度" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+	<path d="M0 0h24v24H0z" fill="none" />
+	<path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 12H3l3-3m0 6l-3-3m11 0h7l-3-3m0 6l3-3M3 6V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v1M3 18v1a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-1" />
+</svg>
+</button>
+
+    <div
+      id="content-width-dropdown"
+      class="dropdown-menu border-border bg-popover/95 w-64 absolute top-12 right-0 z-60 hidden rounded-lg border p-1 shadow-lg backdrop-blur-sm transition-all duration-200 ease-out"
+      data-dropdown-type="content-width"
+      
+    >
+    <div class="space-y-3 p-3">
+    <div class="flex items-center justify-between gap-4">
+    <label for="content-width-range" class="text-foreground text-sm font-medium">页面宽度</label>
+    <output id="content-width-value" for="content-width-range" class="text-muted-foreground min-w-12 text-right text-sm tabular-nums"></output>
+    </div>
+    <input id="content-width-range" class="accent-primary w-full cursor-pointer" type="range" min="40" max="90" step="1" aria-label="页面宽度" />
+    <button id="content-width-reset" type="button" class="border-border text-muted-foreground hover:bg-accent hover:text-accent-foreground focus:ring-primary/20 w-full rounded-md border px-3 py-2 text-sm transition-colors focus:ring-2 focus:outline-none">恢复默认</button>
+    </div></div>
+  </div></div>
+
+
         
         
 
@@ -342,10 +381,10 @@ Deepseek&lsquo;六十九年八月十四日，大慈寺兴慈老和尚竟以圆�
       id="color-scheme-toggle"
       class="dropdown-toggle border-border bg-background text-muted-foreground hover:text-primary hover:bg-primary/10 focus:ring-primary/20 flex h-10 w-10 items-center justify-center rounded-lg border transition-all duration-300 ease-out hover:scale-105 focus:ring-2 focus:outline-none active:scale-95"
       data-dropdown-type="color-scheme"
-      aria-label=""
+      aria-label="切换主题风格"
       aria-expanded="false"
       aria-haspopup="true"
-    ><svg class="h-5 w-5 relative z-10" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+    ><svg class="h-5 w-5 relative z-10" aria-label="切换主题风格" fill="none" stroke="currentColor" viewBox="0 0 24 24">
   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zM21 5a2 2 0 00-2-2h-4a2 2 0 00-2 2v6a2 2 0 002 2h4a2 2 0 002-2V5z" />
 </svg>
 </button>
@@ -355,7 +394,7 @@ Deepseek&lsquo;六十九年八月十四日，大慈寺兴慈老和尚竟以圆�
       class="dropdown-menu border-border bg-popover/95 w-44 absolute top-12 right-0 z-60 hidden rounded-lg border p-1 shadow-lg backdrop-blur-sm transition-all duration-200 ease-out"
       data-dropdown-type="color-scheme"
       
-    ><button data-color-scheme="default" class="text-accent-foreground hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground flex w-full items-center rounded-md px-4 py-2 text-sm transition-all duration-200 ease-out focus:outline-none"><span>Default</span></button><button data-color-scheme="claude" class="text-accent-foreground hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground flex w-full items-center rounded-md px-4 py-2 text-sm transition-all duration-200 ease-out focus:outline-none"><span>Claude</span></button><button data-color-scheme="bumblebee" class="text-accent-foreground hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground flex w-full items-center rounded-md px-4 py-2 text-sm transition-all duration-200 ease-out focus:outline-none"><span>Bumblebee</span></button><button data-color-scheme="emerald" class="text-accent-foreground hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground flex w-full items-center rounded-md px-4 py-2 text-sm transition-all duration-200 ease-out focus:outline-none"><span>Emerald</span></button><button data-color-scheme="nord" class="text-accent-foreground hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground flex w-full items-center rounded-md px-4 py-2 text-sm transition-all duration-200 ease-out focus:outline-none"><span>Nord</span></button><button data-color-scheme="sunset" class="text-accent-foreground hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground flex w-full items-center rounded-md px-4 py-2 text-sm transition-all duration-200 ease-out focus:outline-none"><span>Sunset</span></button><button data-color-scheme="abyss" class="text-accent-foreground hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground flex w-full items-center rounded-md px-4 py-2 text-sm transition-all duration-200 ease-out focus:outline-none"><span>Abyss</span></button><button data-color-scheme="dracula" class="text-accent-foreground hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground flex w-full items-center rounded-md px-4 py-2 text-sm transition-all duration-200 ease-out focus:outline-none"><span>Dracula</span></button><button data-color-scheme="amethyst" class="text-accent-foreground hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground flex w-full items-center rounded-md px-4 py-2 text-sm transition-all duration-200 ease-out focus:outline-none"><span>Amethyst</span></button><button data-color-scheme="slate" class="text-accent-foreground hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground flex w-full items-center rounded-md px-4 py-2 text-sm transition-all duration-200 ease-out focus:outline-none"><span>Slate</span></button><button data-color-scheme="twitter" class="text-accent-foreground hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground flex w-full items-center rounded-md px-4 py-2 text-sm transition-all duration-200 ease-out focus:outline-none"><span>Twitter</span></button></div>
+    ><button data-color-scheme="default" class="text-accent-foreground hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground flex w-full items-center rounded-md px-4 py-2 text-sm transition-all duration-200 ease-out focus:outline-none"><span>Default</span></button><button data-color-scheme="claude" class="text-accent-foreground hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground flex w-full items-center rounded-md px-4 py-2 text-sm transition-all duration-200 ease-out focus:outline-none"><span>Claude</span></button><button data-color-scheme="bumblebee" class="text-accent-foreground hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground flex w-full items-center rounded-md px-4 py-2 text-sm transition-all duration-200 ease-out focus:outline-none"><span>Bumblebee</span></button><button data-color-scheme="emerald" class="text-accent-foreground hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground flex w-full items-center rounded-md px-4 py-2 text-sm transition-all duration-200 ease-out focus:outline-none"><span>Emerald</span></button><button data-color-scheme="nord" class="text-accent-foreground hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground flex w-full items-center rounded-md px-4 py-2 text-sm transition-all duration-200 ease-out focus:outline-none"><span>Nord</span></button><button data-color-scheme="sunset" class="text-accent-foreground hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground flex w-full items-center rounded-md px-4 py-2 text-sm transition-all duration-200 ease-out focus:outline-none"><span>Sunset</span></button><button data-color-scheme="abyss" class="text-accent-foreground hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground flex w-full items-center rounded-md px-4 py-2 text-sm transition-all duration-200 ease-out focus:outline-none"><span>Abyss</span></button><button data-color-scheme="dracula" class="text-accent-foreground hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground flex w-full items-center rounded-md px-4 py-2 text-sm transition-all duration-200 ease-out focus:outline-none"><span>Dracula</span></button><button data-color-scheme="amethyst" class="text-accent-foreground hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground flex w-full items-center rounded-md px-4 py-2 text-sm transition-all duration-200 ease-out focus:outline-none"><span>Amethyst</span></button><button data-color-scheme="slate" class="text-accent-foreground hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground flex w-full items-center rounded-md px-4 py-2 text-sm transition-all duration-200 ease-out focus:outline-none"><span>Slate</span></button><button data-color-scheme="twitter" class="text-accent-foreground hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground flex w-full items-center rounded-md px-4 py-2 text-sm transition-all duration-200 ease-out focus:outline-none"><span>Twitter</span></button><button data-color-scheme="minimal" class="text-accent-foreground hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground flex w-full items-center rounded-md px-4 py-2 text-sm transition-all duration-200 ease-out focus:outline-none"><span>Minimal</span></button></div>
   </div>
 
 
@@ -365,18 +404,18 @@ Deepseek&lsquo;六十九年八月十四日，大慈寺兴慈老和尚竟以圆�
       id="theme-toggle"
       class="dropdown-toggle border-border bg-background text-muted-foreground hover:text-primary hover:bg-primary/10 focus:ring-primary/20 flex h-10 w-10 items-center justify-center rounded-lg border transition-all duration-300 ease-out hover:scale-105 focus:ring-2 focus:outline-none active:scale-95"
       data-dropdown-type="theme"
-      aria-label=""
+      aria-label="切换主题风格"
       aria-expanded="false"
       aria-haspopup="true"
-    ><svg class="h-5 w-5 sun-icon hidden relative z-10" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+    ><svg class="h-5 w-5 sun-icon hidden relative z-10" aria-label="亮色" fill="none" stroke="currentColor" viewBox="0 0 24 24">
   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" />
 </svg>
 
-        <svg class="h-5 w-5 moon-icon hidden relative z-10" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <svg class="h-5 w-5 moon-icon hidden relative z-10" aria-label="暗色" fill="none" stroke="currentColor" viewBox="0 0 24 24">
   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" />
 </svg>
 
-        <svg class="h-5 w-5 system-icon hidden relative z-10" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <svg class="h-5 w-5 system-icon hidden relative z-10" aria-label="跟随系统" fill="none" stroke="currentColor" viewBox="0 0 24 24">
   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
 </svg>
 </button>
@@ -386,16 +425,16 @@ Deepseek&lsquo;六十九年八月十四日，大慈寺兴慈老和尚竟以圆�
       class="dropdown-menu border-border bg-popover/95 w-40 absolute top-12 right-0 z-60 hidden rounded-lg border p-1 shadow-lg backdrop-blur-sm transition-all duration-200 ease-out"
       data-dropdown-type="theme"
       
-    ><button data-theme="light" class="text-accent-foreground hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground flex w-full items-center rounded-md px-4 py-2 text-sm transition-all duration-200 ease-out focus:outline-none"><svg class="h-5 w-5 mr-3 h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+    ><button data-theme="light" class="text-accent-foreground hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground flex w-full items-center rounded-md px-4 py-2 text-sm transition-all duration-200 ease-out focus:outline-none"><svg class="h-5 w-5 mr-3 h-4 w-4" aria-label="亮色" fill="none" stroke="currentColor" viewBox="0 0 24 24">
   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" />
 </svg>
-<span></span></button><button data-theme="dark" class="text-accent-foreground hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground flex w-full items-center rounded-md px-4 py-2 text-sm transition-all duration-200 ease-out focus:outline-none"><svg class="h-5 w-5 mr-3 h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+<span>亮色</span></button><button data-theme="dark" class="text-accent-foreground hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground flex w-full items-center rounded-md px-4 py-2 text-sm transition-all duration-200 ease-out focus:outline-none"><svg class="h-5 w-5 mr-3 h-4 w-4" aria-label="暗色" fill="none" stroke="currentColor" viewBox="0 0 24 24">
   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" />
 </svg>
-<span></span></button><button data-theme="system" class="text-accent-foreground hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground flex w-full items-center rounded-md px-4 py-2 text-sm transition-all duration-200 ease-out focus:outline-none"><svg class="h-5 w-5 mr-3 h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+<span>暗色</span></button><button data-theme="system" class="text-accent-foreground hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground flex w-full items-center rounded-md px-4 py-2 text-sm transition-all duration-200 ease-out focus:outline-none"><svg class="h-5 w-5 mr-3 h-4 w-4" aria-label="跟随系统" fill="none" stroke="currentColor" viewBox="0 0 24 24">
   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
 </svg>
-<span></span></button></div>
+<span>跟随系统</span></button></div>
   </div>
       </div>
     </div>
@@ -407,11 +446,11 @@ Deepseek&lsquo;六十九年八月十四日，大慈寺兴慈老和尚竟以圆�
 <button
   id="mobile-nav-toggle"
   class="nav-panel-toggle border-border bg-background text-muted-foreground hover:bg-accent hover:text-foreground flex h-10 w-10 items-center justify-center rounded-lg border transition-colors duration-200"
-  aria-label=""
+  aria-label="菜单"
   aria-expanded="false"
   aria-controls="mobile-nav-panel"
 >
-  <svg class="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+  <svg class="h-5 w-5" aria-label="菜单" fill="none" stroke="currentColor" viewBox="0 0 24 24">
   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
 </svg>
 
@@ -431,10 +470,10 @@ Deepseek&lsquo;六十九年八月十四日，大慈寺兴慈老和尚竟以圆�
       id="color-scheme-toggle"
       class="dropdown-toggle border-border bg-background text-muted-foreground hover:text-primary hover:bg-primary/10 focus:ring-primary/20 flex h-10 w-10 items-center justify-center rounded-lg border transition-all duration-300 ease-out hover:scale-105 focus:ring-2 focus:outline-none active:scale-95"
       data-dropdown-type="color-scheme"
-      aria-label=""
+      aria-label="切换主题风格"
       aria-expanded="false"
       aria-haspopup="true"
-    ><svg class="h-5 w-5 relative z-10" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+    ><svg class="h-5 w-5 relative z-10" aria-label="切换主题风格" fill="none" stroke="currentColor" viewBox="0 0 24 24">
   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zM21 5a2 2 0 00-2-2h-4a2 2 0 00-2 2v6a2 2 0 002 2h4a2 2 0 002-2V5z" />
 </svg>
 </button>
@@ -444,7 +483,7 @@ Deepseek&lsquo;六十九年八月十四日，大慈寺兴慈老和尚竟以圆�
       class="dropdown-menu border-border bg-popover/95 w-44 absolute top-12 right-0 z-60 hidden rounded-lg border p-1 shadow-lg backdrop-blur-sm transition-all duration-200 ease-out"
       data-dropdown-type="color-scheme"
       
-    ><button data-color-scheme="default" class="text-accent-foreground hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground flex w-full items-center rounded-md px-4 py-2 text-sm transition-all duration-200 ease-out focus:outline-none"><span>Default</span></button><button data-color-scheme="claude" class="text-accent-foreground hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground flex w-full items-center rounded-md px-4 py-2 text-sm transition-all duration-200 ease-out focus:outline-none"><span>Claude</span></button><button data-color-scheme="bumblebee" class="text-accent-foreground hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground flex w-full items-center rounded-md px-4 py-2 text-sm transition-all duration-200 ease-out focus:outline-none"><span>Bumblebee</span></button><button data-color-scheme="emerald" class="text-accent-foreground hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground flex w-full items-center rounded-md px-4 py-2 text-sm transition-all duration-200 ease-out focus:outline-none"><span>Emerald</span></button><button data-color-scheme="nord" class="text-accent-foreground hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground flex w-full items-center rounded-md px-4 py-2 text-sm transition-all duration-200 ease-out focus:outline-none"><span>Nord</span></button><button data-color-scheme="sunset" class="text-accent-foreground hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground flex w-full items-center rounded-md px-4 py-2 text-sm transition-all duration-200 ease-out focus:outline-none"><span>Sunset</span></button><button data-color-scheme="abyss" class="text-accent-foreground hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground flex w-full items-center rounded-md px-4 py-2 text-sm transition-all duration-200 ease-out focus:outline-none"><span>Abyss</span></button><button data-color-scheme="dracula" class="text-accent-foreground hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground flex w-full items-center rounded-md px-4 py-2 text-sm transition-all duration-200 ease-out focus:outline-none"><span>Dracula</span></button><button data-color-scheme="amethyst" class="text-accent-foreground hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground flex w-full items-center rounded-md px-4 py-2 text-sm transition-all duration-200 ease-out focus:outline-none"><span>Amethyst</span></button><button data-color-scheme="slate" class="text-accent-foreground hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground flex w-full items-center rounded-md px-4 py-2 text-sm transition-all duration-200 ease-out focus:outline-none"><span>Slate</span></button><button data-color-scheme="twitter" class="text-accent-foreground hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground flex w-full items-center rounded-md px-4 py-2 text-sm transition-all duration-200 ease-out focus:outline-none"><span>Twitter</span></button></div>
+    ><button data-color-scheme="default" class="text-accent-foreground hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground flex w-full items-center rounded-md px-4 py-2 text-sm transition-all duration-200 ease-out focus:outline-none"><span>Default</span></button><button data-color-scheme="claude" class="text-accent-foreground hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground flex w-full items-center rounded-md px-4 py-2 text-sm transition-all duration-200 ease-out focus:outline-none"><span>Claude</span></button><button data-color-scheme="bumblebee" class="text-accent-foreground hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground flex w-full items-center rounded-md px-4 py-2 text-sm transition-all duration-200 ease-out focus:outline-none"><span>Bumblebee</span></button><button data-color-scheme="emerald" class="text-accent-foreground hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground flex w-full items-center rounded-md px-4 py-2 text-sm transition-all duration-200 ease-out focus:outline-none"><span>Emerald</span></button><button data-color-scheme="nord" class="text-accent-foreground hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground flex w-full items-center rounded-md px-4 py-2 text-sm transition-all duration-200 ease-out focus:outline-none"><span>Nord</span></button><button data-color-scheme="sunset" class="text-accent-foreground hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground flex w-full items-center rounded-md px-4 py-2 text-sm transition-all duration-200 ease-out focus:outline-none"><span>Sunset</span></button><button data-color-scheme="abyss" class="text-accent-foreground hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground flex w-full items-center rounded-md px-4 py-2 text-sm transition-all duration-200 ease-out focus:outline-none"><span>Abyss</span></button><button data-color-scheme="dracula" class="text-accent-foreground hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground flex w-full items-center rounded-md px-4 py-2 text-sm transition-all duration-200 ease-out focus:outline-none"><span>Dracula</span></button><button data-color-scheme="amethyst" class="text-accent-foreground hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground flex w-full items-center rounded-md px-4 py-2 text-sm transition-all duration-200 ease-out focus:outline-none"><span>Amethyst</span></button><button data-color-scheme="slate" class="text-accent-foreground hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground flex w-full items-center rounded-md px-4 py-2 text-sm transition-all duration-200 ease-out focus:outline-none"><span>Slate</span></button><button data-color-scheme="twitter" class="text-accent-foreground hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground flex w-full items-center rounded-md px-4 py-2 text-sm transition-all duration-200 ease-out focus:outline-none"><span>Twitter</span></button><button data-color-scheme="minimal" class="text-accent-foreground hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground flex w-full items-center rounded-md px-4 py-2 text-sm transition-all duration-200 ease-out focus:outline-none"><span>Minimal</span></button></div>
   </div>
 
 
@@ -454,18 +493,18 @@ Deepseek&lsquo;六十九年八月十四日，大慈寺兴慈老和尚竟以圆�
       id="theme-toggle"
       class="dropdown-toggle border-border bg-background text-muted-foreground hover:text-primary hover:bg-primary/10 focus:ring-primary/20 flex h-10 w-10 items-center justify-center rounded-lg border transition-all duration-300 ease-out hover:scale-105 focus:ring-2 focus:outline-none active:scale-95"
       data-dropdown-type="theme"
-      aria-label=""
+      aria-label="切换主题风格"
       aria-expanded="false"
       aria-haspopup="true"
-    ><svg class="h-5 w-5 sun-icon hidden relative z-10" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+    ><svg class="h-5 w-5 sun-icon hidden relative z-10" aria-label="亮色" fill="none" stroke="currentColor" viewBox="0 0 24 24">
   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" />
 </svg>
 
-        <svg class="h-5 w-5 moon-icon hidden relative z-10" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <svg class="h-5 w-5 moon-icon hidden relative z-10" aria-label="暗色" fill="none" stroke="currentColor" viewBox="0 0 24 24">
   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" />
 </svg>
 
-        <svg class="h-5 w-5 system-icon hidden relative z-10" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <svg class="h-5 w-5 system-icon hidden relative z-10" aria-label="跟随系统" fill="none" stroke="currentColor" viewBox="0 0 24 24">
   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
 </svg>
 </button>
@@ -475,16 +514,16 @@ Deepseek&lsquo;六十九年八月十四日，大慈寺兴慈老和尚竟以圆�
       class="dropdown-menu border-border bg-popover/95 w-40 absolute top-12 right-0 z-60 hidden rounded-lg border p-1 shadow-lg backdrop-blur-sm transition-all duration-200 ease-out"
       data-dropdown-type="theme"
       
-    ><button data-theme="light" class="text-accent-foreground hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground flex w-full items-center rounded-md px-4 py-2 text-sm transition-all duration-200 ease-out focus:outline-none"><svg class="h-5 w-5 mr-3 h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+    ><button data-theme="light" class="text-accent-foreground hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground flex w-full items-center rounded-md px-4 py-2 text-sm transition-all duration-200 ease-out focus:outline-none"><svg class="h-5 w-5 mr-3 h-4 w-4" aria-label="亮色" fill="none" stroke="currentColor" viewBox="0 0 24 24">
   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" />
 </svg>
-<span></span></button><button data-theme="dark" class="text-accent-foreground hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground flex w-full items-center rounded-md px-4 py-2 text-sm transition-all duration-200 ease-out focus:outline-none"><svg class="h-5 w-5 mr-3 h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+<span>亮色</span></button><button data-theme="dark" class="text-accent-foreground hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground flex w-full items-center rounded-md px-4 py-2 text-sm transition-all duration-200 ease-out focus:outline-none"><svg class="h-5 w-5 mr-3 h-4 w-4" aria-label="暗色" fill="none" stroke="currentColor" viewBox="0 0 24 24">
   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" />
 </svg>
-<span></span></button><button data-theme="system" class="text-accent-foreground hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground flex w-full items-center rounded-md px-4 py-2 text-sm transition-all duration-200 ease-out focus:outline-none"><svg class="h-5 w-5 mr-3 h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+<span>暗色</span></button><button data-theme="system" class="text-accent-foreground hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground flex w-full items-center rounded-md px-4 py-2 text-sm transition-all duration-200 ease-out focus:outline-none"><svg class="h-5 w-5 mr-3 h-4 w-4" aria-label="跟随系统" fill="none" stroke="currentColor" viewBox="0 0 24 24">
   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
 </svg>
-<span></span></button></div>
+<span>跟随系统</span></button></div>
   </div>
       </div>
     </div>
@@ -496,7 +535,7 @@ Deepseek&lsquo;六十九年八月十四日，大慈寺兴慈老和尚竟以圆�
   id="mobile-nav-panel"
   class="mt-2 hidden md:hidden"
   role="navigation"
-  aria-label=""
+  aria-label="菜单"
   aria-hidden="true"
   tabindex="-1"
 >
@@ -525,12 +564,12 @@ Deepseek&lsquo;六十九年八月十四日，大慈寺兴慈老和尚竟以圆�
             
           >
             
-              <svg class="h-5 w-5" aria-label="posts" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <svg class="h-5 w-5" aria-label="文章" fill="none" stroke="currentColor" viewBox="0 0 24 24">
   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 20H5a2 2 0 01-2-2V6a2 2 0 012-2h10a2 2 0 012 2v1m2 13a2 2 0 01-2-2V7m2 13a2 2 0 002-2V9a2 2 0 00-2-2h-2m-4-3H9M7 16h6M7 8h6v4H7V8z" />
 </svg>
 
             
-            <span>posts</span>
+            <span>文章</span>
           </a>
         
       
@@ -552,12 +591,12 @@ Deepseek&lsquo;六十九年八月十四日，大慈寺兴慈老和尚竟以圆�
             
           >
             
-              <svg class="h-5 w-5" aria-label="categories" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <svg class="h-5 w-5" aria-label="分类" fill="none" stroke="currentColor" viewBox="0 0 24 24">
   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10" />
 </svg>
 
             
-            <span>categories</span>
+            <span>分类</span>
           </a>
         
       
@@ -579,12 +618,12 @@ Deepseek&lsquo;六十九年八月十四日，大慈寺兴慈老和尚竟以圆�
             
           >
             
-              <svg class="h-5 w-5" aria-label="tags" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <svg class="h-5 w-5" aria-label="标签" fill="none" stroke="currentColor" viewBox="0 0 24 24">
   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 7h.01M7 3h5c.512 0 1.024.195 1.414.586l7 7a2 2 0 010 2.828l-7 7a2 2 0 01-2.828 0l-7-7A1.994 1.994 0 013 12V7a4 4 0 014-4z" />
 </svg>
 
             
-            <span>tags</span>
+            <span>标签</span>
           </a>
         
       
@@ -606,12 +645,12 @@ Deepseek&lsquo;六十九年八月十四日，大慈寺兴慈老和尚竟以圆�
             
           >
             
-              <svg class="h-5 w-5" aria-label="archives" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <svg class="h-5 w-5" aria-label="归档" fill="none" stroke="currentColor" viewBox="0 0 24 24">
   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 8h14M5 8a2 2 0 110-4h14a2 2 0 110 4M5 8v10a2 2 0 002 2h10a2 2 0 002-2V8m-9 4h4" />
 </svg>
 
             
-            <span>archives</span>
+            <span>归档</span>
           </a>
         
       
@@ -625,7 +664,7 @@ Deepseek&lsquo;六十九年八月十四日，大慈寺兴慈老和尚竟以圆�
 
       <div class="px-4 py-6">
         
-  <nav class="breadcrumb mb-4 py-1 md:mb-6" aria-label="">
+  <nav class="breadcrumb mb-4 py-1 md:mb-6" aria-label="面包屑导航">
     <ol
       class="text-muted-foreground scrollbar-hide flex items-center space-x-1 overflow-x-auto py-1 text-sm whitespace-nowrap md:space-x-2"
     >
@@ -699,9 +738,11 @@ Deepseek&lsquo;六十九年八月十四日，大慈寺兴慈老和尚竟以圆�
 
 <div class="post-meta mb-8">
   
-  <h1 class="text-foreground mb-6 text-3xl leading-tight font-bold md:text-4xl">
-    一个例子，比较GP 和deepseek
-  </h1>
+  
+    <h1 class="text-foreground mb-6 text-3xl leading-tight font-bold md:text-4xl">
+      一个例子，比较GP 和deepseek
+    </h1>
+  
 
   
   
@@ -716,15 +757,17 @@ Deepseek&lsquo;六十九年八月十四日，大慈寺兴慈老和尚竟以圆�
           
           <div class="text-muted-foreground flex flex-wrap items-center gap-3 text-sm mb-4">
             
+            
             <div class="flex items-center gap-2">
               <svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
 </svg>
 
               <time datetime="2026-09-03">
-                September 3, 2026
+                2026年9月3日
               </time>
             </div>
+            
 
             
             
@@ -733,7 +776,7 @@ Deepseek&lsquo;六十九年八月十四日，大慈寺兴慈老和尚竟以圆�
   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
 </svg>
 
-              <span></span>
+              <span>5 分钟</span>
             </div>
             
 
@@ -744,7 +787,7 @@ Deepseek&lsquo;六十九年八月十四日，大慈寺兴慈老和尚竟以圆�
   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h7" />
 </svg>
 
-              <span></span>
+              <span>2091 字</span>
             </div>
             
           </div>
@@ -799,25 +842,25 @@ Deepseek&lsquo;六十九年八月十四日，大慈寺兴慈老和尚竟以圆�
   
   <article class="prose prose-neutral dark:prose-invert mb-12 max-w-none">
     <p>读书见“大慈寺兴慈老和尚竟以圆寂闻”一句，不解“以……闻”之用法。问 DeepSeek，初答有误，再问始改；又问 GPT，初答即当。由是观之，DeepSeek 与 GPT 相较，尚有差距。</p>
-<h1 id="deepseek">Deepseek<a href="#deepseek" class="heading-anchor" aria-label=""><svg class="h-4 w-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></g></svg></a></h1><h2 id="六十九年八月十四日大慈寺兴慈老和尚竟以圆寂闻这里的以闻是一种正确的语法吗">&lsquo;六十九年八月十四日，大慈寺兴慈老和尚竟以圆寂闻&rsquo;，这里的&rsquo;以*闻&rsquo;，是一种正确的语法吗？<a href="#%e5%85%ad%e5%8d%81%e4%b9%9d%e5%b9%b4%e5%85%ab%e6%9c%88%e5%8d%81%e5%9b%9b%e6%97%a5%e5%a4%a7%e6%85%88%e5%af%ba%e5%85%b4%e6%85%88%e8%80%81%e5%92%8c%e5%b0%9a%e7%ab%9f%e4%bb%a5%e5%9c%86%e5%af%82%e9%97%bb%e8%bf%99%e9%87%8c%e7%9a%84%e4%bb%a5%e9%97%bb%e6%98%af%e4%b8%80%e7%a7%8d%e6%ad%a3%e7%a1%ae%e7%9a%84%e8%af%ad%e6%b3%95%e5%90%97" class="heading-anchor" aria-label=""><svg class="h-4 w-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></g></svg></a></h2><p>“六十九年八月十四日，大慈寺兴慈老和尚竟以圆寂闻”这句话中的“以&hellip;闻”是一种<strong>正确且经典的文言句式</strong>。</p>
-<h3 id="-含义解析">📝 含义解析<a href="#-%e5%90%ab%e4%b9%89%e8%a7%a3%e6%9e%90" class="heading-anchor" aria-label=""><svg class="h-4 w-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></g></svg></a></h3><p>这里的“以&hellip;闻”意思是 <strong>“因……而闻名”</strong> 或 <strong>“凭借……被世人所知”</strong>。</p>
+<h1 id="deepseek">Deepseek<a href="#deepseek" class="heading-anchor" aria-label="链接到此部分"><svg class="h-4 w-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></g></svg></a></h1><h2 id="六十九年八月十四日大慈寺兴慈老和尚竟以圆寂闻这里的以闻是一种正确的语法吗">&lsquo;六十九年八月十四日，大慈寺兴慈老和尚竟以圆寂闻&rsquo;，这里的&rsquo;以*闻&rsquo;，是一种正确的语法吗？<a href="#%e5%85%ad%e5%8d%81%e4%b9%9d%e5%b9%b4%e5%85%ab%e6%9c%88%e5%8d%81%e5%9b%9b%e6%97%a5%e5%a4%a7%e6%85%88%e5%af%ba%e5%85%b4%e6%85%88%e8%80%81%e5%92%8c%e5%b0%9a%e7%ab%9f%e4%bb%a5%e5%9c%86%e5%af%82%e9%97%bb%e8%bf%99%e9%87%8c%e7%9a%84%e4%bb%a5%e9%97%bb%e6%98%af%e4%b8%80%e7%a7%8d%e6%ad%a3%e7%a1%ae%e7%9a%84%e8%af%ad%e6%b3%95%e5%90%97" class="heading-anchor" aria-label="链接到此部分"><svg class="h-4 w-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></g></svg></a></h2><p>“六十九年八月十四日，大慈寺兴慈老和尚竟以圆寂闻”这句话中的“以&hellip;闻”是一种<strong>正确且经典的文言句式</strong>。</p>
+<h3 id="-含义解析">📝 含义解析<a href="#-%e5%90%ab%e4%b9%89%e8%a7%a3%e6%9e%90" class="heading-anchor" aria-label="链接到此部分"><svg class="h-4 w-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></g></svg></a></h3><p>这里的“以&hellip;闻”意思是 <strong>“因……而闻名”</strong> 或 <strong>“凭借……被世人所知”</strong>。</p>
 <ul>
 <li><strong>“以”</strong>：介词，表示“凭借”、“因为”。</li>
 <li><strong>“闻”</strong>：动词，本义是“听到”、“闻名”。</li>
 <li>合在一起，“以圆寂闻”就是“因为圆寂这件事（本身或其所体现的修行境界）而闻名于世”。</li>
 </ul>
 <p>这是一种非常文雅、庄重的书面表达，在古文中有明确出处。例如，在《史记·廉颇蔺相如列传》中就有“<strong>以勇气闻于诸侯</strong>”，意为“凭借勇气在诸侯中闻名”，句式结构完全一致。</p>
-<h3 id="-闻的两种特殊用法">🧐 “闻”的两种特殊用法<a href="#-%e9%97%bb%e7%9a%84%e4%b8%a4%e7%a7%8d%e7%89%b9%e6%ae%8a%e7%94%a8%e6%b3%95" class="heading-anchor" aria-label=""><svg class="h-4 w-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></g></svg></a></h3><p>需要留意的是，“闻”在文言文中还有其他特殊用法，可能会造成混淆：</p>
+<h3 id="-闻的两种特殊用法">🧐 “闻”的两种特殊用法<a href="#-%e9%97%bb%e7%9a%84%e4%b8%a4%e7%a7%8d%e7%89%b9%e6%ae%8a%e7%94%a8%e6%b3%95" class="heading-anchor" aria-label="链接到此部分"><svg class="h-4 w-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></g></svg></a></h3><p>需要留意的是，“闻”在文言文中还有其他特殊用法，可能会造成混淆：</p>
 <ol>
 <li><strong>使动用法：使……知道</strong>。常见于“具以表闻”、“谨拜表以闻”，意思是“（写奏表）使（皇上）知道”。</li>
 <li><strong>向上级禀告</strong>。例如“昧死以闻”，意思是“冒着死罪来禀告（您）”。</li>
 </ol>
 <p>在这两个用法中，“闻”的动作发出者是说话人自己，对象是上级。而在你提到的这句话中，“闻”的动作发出者是“兴慈老和尚”，对象是世人，因此应理解为“闻名”，而非“使……知道”或“禀告”。</p>
-<h3 id="-总结">💎 总结<a href="#-%e6%80%bb%e7%bb%93" class="heading-anchor" aria-label=""><svg class="h-4 w-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></g></svg></a></h3><p>所以，你提到的“以圆寂闻”是一种规范且优雅的文言表达，可以理解为“因圆寂而闻名”。</p>
-<h2 id="因圆寂而闻名你再仔细分析一下要考虑圆寂是什么意思">“因圆寂而闻名”，你再仔细分析一下，要考虑「圆寂」是什么意思<a href="#%e5%9b%a0%e5%9c%86%e5%af%82%e8%80%8c%e9%97%bb%e5%90%8d%e4%bd%a0%e5%86%8d%e4%bb%94%e7%bb%86%e5%88%86%e6%9e%90%e4%b8%80%e4%b8%8b%e8%a6%81%e8%80%83%e8%99%91%e5%9c%86%e5%af%82%e6%98%af%e4%bb%80%e4%b9%88%e6%84%8f%e6%80%9d" class="heading-anchor" aria-label=""><svg class="h-4 w-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></g></svg></a></h2><p>您说得非常对，我上一轮的翻译“因圆寂而闻名”确实<strong>逻辑不通</strong>。一位老和尚通常因修行、讲经而闻名，绝不可能因为“死亡”这个行为本身而著称于世（除非是极其特殊的殉道或坐化异象，但此处并无此铺垫）。</p>
+<h3 id="-总结">💎 总结<a href="#-%e6%80%bb%e7%bb%93" class="heading-anchor" aria-label="链接到此部分"><svg class="h-4 w-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></g></svg></a></h3><p>所以，你提到的“以圆寂闻”是一种规范且优雅的文言表达，可以理解为“因圆寂而闻名”。</p>
+<h2 id="因圆寂而闻名你再仔细分析一下要考虑圆寂是什么意思">“因圆寂而闻名”，你再仔细分析一下，要考虑「圆寂」是什么意思<a href="#%e5%9b%a0%e5%9c%86%e5%af%82%e8%80%8c%e9%97%bb%e5%90%8d%e4%bd%a0%e5%86%8d%e4%bb%94%e7%bb%86%e5%88%86%e6%9e%90%e4%b8%80%e4%b8%8b%e8%a6%81%e8%80%83%e8%99%91%e5%9c%86%e5%af%82%e6%98%af%e4%bb%80%e4%b9%88%e6%84%8f%e6%80%9d" class="heading-anchor" aria-label="链接到此部分"><svg class="h-4 w-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></g></svg></a></h2><p>您说得非常对，我上一轮的翻译“因圆寂而闻名”确实<strong>逻辑不通</strong>。一位老和尚通常因修行、讲经而闻名，绝不可能因为“死亡”这个行为本身而著称于世（除非是极其特殊的殉道或坐化异象，但此处并无此铺垫）。</p>
 <p>把“圆寂”还原为“逝世”后，问题就一目了然了：<strong>“以圆寂闻”绝不能译为“因死亡而闻名”。</strong> 这里的“闻”不应取“闻名”义，而应取**“被听闻、被报到、消息传出”**的被动义。</p>
 <p>为您重新做精确的语法和语义分析：</p>
-<h3 id="1-正确的翻译">1. 正确的翻译<a href="#1-%e6%ad%a3%e7%a1%ae%e7%9a%84%e7%bf%bb%e8%af%91" class="heading-anchor" aria-label=""><svg class="h-4 w-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></g></svg></a></h3><p>这句话应译为：</p>
+<h3 id="1-正确的翻译">1. 正确的翻译<a href="#1-%e6%ad%a3%e7%a1%ae%e7%9a%84%e7%bf%bb%e8%af%91" class="heading-anchor" aria-label="链接到此部分"><svg class="h-4 w-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></g></svg></a></h3><p>这句话应译为：</p>
 
   <blockquote
     class="border-primary bg-muted/30 hover:bg-muted/40 my-6 rounded-r-lg border-l-4 py-4 pr-4 pl-6 italic transition-all duration-200 ease-out hover:translate-x-1"
@@ -857,21 +900,21 @@ Deepseek&lsquo;六十九年八月十四日，大慈寺兴慈老和尚竟以圆�
     });
   });
 </script>
-<h3 id="2-语法结构重析">2. 语法结构重析<a href="#2-%e8%af%ad%e6%b3%95%e7%bb%93%e6%9e%84%e9%87%8d%e6%9e%90" class="heading-anchor" aria-label=""><svg class="h-4 w-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></g></svg></a></h3><p>在文言文中，“以……闻”并不只有“因……而闻名”这一个固定搭配，它还有另一种结构：</p>
+<h3 id="2-语法结构重析">2. 语法结构重析<a href="#2-%e8%af%ad%e6%b3%95%e7%bb%93%e6%9e%84%e9%87%8d%e6%9e%90" class="heading-anchor" aria-label="链接到此部分"><svg class="h-4 w-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></g></svg></a></h3><p>在文言文中，“以……闻”并不只有“因……而闻名”这一个固定搭配，它还有另一种结构：</p>
 <ul>
 <li><strong>结构拆解</strong>：<code>以（介词，凭借/通过）</code> + <code>圆寂（事件宾语）</code> + <code>闻（动词，被听到、被知晓）</code>。</li>
 <li><strong>省略成分</strong>：句末实际上省略了 <code>于世人</code> 或 <code>于外</code>，即“以圆寂闻（于外）”——“凭借圆寂这件事（被外界）听闻”。</li>
 </ul>
-<h3 id="3-为什么此处必须是消息传出而非闻名">3. 为什么此处必须是“消息传出”而非“闻名”？<a href="#3-%e4%b8%ba%e4%bb%80%e4%b9%88%e6%ad%a4%e5%a4%84%e5%bf%85%e9%a1%bb%e6%98%af%e6%b6%88%e6%81%af%e4%bc%a0%e5%87%ba%e8%80%8c%e9%9d%9e%e9%97%bb%e5%90%8d" class="heading-anchor" aria-label=""><svg class="h-4 w-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></g></svg></a></h3><ul>
+<h3 id="3-为什么此处必须是消息传出而非闻名">3. 为什么此处必须是“消息传出”而非“闻名”？<a href="#3-%e4%b8%ba%e4%bb%80%e4%b9%88%e6%ad%a4%e5%a4%84%e5%bf%85%e9%a1%bb%e6%98%af%e6%b6%88%e6%81%af%e4%bc%a0%e5%87%ba%e8%80%8c%e9%9d%9e%e9%97%bb%e5%90%8d" class="heading-anchor" aria-label="链接到此部分"><svg class="h-4 w-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></g></svg></a></h3><ul>
 <li><strong>逻辑验证</strong>：如果取“闻名”，句子就变成“因为圆寂而有名”。但兴慈老和尚若是高僧，他的名望应来自于生前的修为，而非死亡本身。</li>
 <li><strong>语境验证</strong>：句中有个 <strong>“竟”</strong>（竟然、终究）。这个字在传记或新闻简报中，常用来引出<strong>既定发生的事实</strong>或<strong>令人意外/哀恸的终结</strong>。此处“竟以圆寂闻”的语感是“最终以圆寂的消息被外界所知”，即**“讣闻”**。</li>
 </ul>
-<h3 id="4-历史文献中的同类用法佐证">4. 历史文献中的同类用法佐证<a href="#4-%e5%8e%86%e5%8f%b2%e6%96%87%e7%8c%ae%e4%b8%ad%e7%9a%84%e5%90%8c%e7%b1%bb%e7%94%a8%e6%b3%95%e4%bd%90%e8%af%81" class="heading-anchor" aria-label=""><svg class="h-4 w-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></g></svg></a></h3><p>这种用法在史书和文集中非常常见，表示“上报/传出某消息”：</p>
+<h3 id="4-历史文献中的同类用法佐证">4. 历史文献中的同类用法佐证<a href="#4-%e5%8e%86%e5%8f%b2%e6%96%87%e7%8c%ae%e4%b8%ad%e7%9a%84%e5%90%8c%e7%b1%bb%e7%94%a8%e6%b3%95%e4%bd%90%e8%af%81" class="heading-anchor" aria-label="链接到此部分"><svg class="h-4 w-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></g></svg></a></h3><p>这种用法在史书和文集中非常常见，表示“上报/传出某消息”：</p>
 <ul>
 <li>**《史记·廉颇蔺相如列传》**中的“以勇气闻于诸侯”是“闻名”；</li>
 <li>但史书中常写 <strong>“以疾闻”</strong>（因病重/病逝的消息上报朝廷或传开）、“以丧闻”（丧事消息传开）。这里的“闻”都是**“使……知道”<strong>或</strong>“被报道”**，重点在“信息的传递”，而非“名声的好坏”。</li>
 </ul>
-<h3 id="5-总结">5. 总结<a href="#5-%e6%80%bb%e7%bb%93" class="heading-anchor" aria-label=""><svg class="h-4 w-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></g></svg></a></h3><p>您质疑得非常精准。“因圆寂而闻名”是望文生义的误译。正确理解应该是：</p>
+<h3 id="5-总结">5. 总结<a href="#5-%e6%80%bb%e7%bb%93" class="heading-anchor" aria-label="链接到此部分"><svg class="h-4 w-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></g></svg></a></h3><p>您质疑得非常精准。“因圆寂而闻名”是望文生义的误译。正确理解应该是：</p>
 
   <blockquote
     class="border-primary bg-muted/30 hover:bg-muted/40 my-6 rounded-r-lg border-l-4 py-4 pr-4 pl-6 italic transition-all duration-200 ease-out hover:translate-x-1"
@@ -911,7 +954,7 @@ Deepseek&lsquo;六十九年八月十四日，大慈寺兴慈老和尚竟以圆�
 </script>
 <p>所以整句话最贴切的现代汉语翻译是：
 <strong>“六十九年八月十四日，大慈寺的兴慈老和尚竟然传来了圆寂的噩耗。”</strong></p>
-<h1 id="gpt">gpt<a href="#gpt" class="heading-anchor" aria-label=""><svg class="h-4 w-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></g></svg></a></h1><h2 id="六十九年八月十四日大慈寺兴慈老和尚竟以圆寂闻这里的以闻是一种正确的语法吗-1">&lsquo;六十九年八月十四日，大慈寺兴慈老和尚竟以圆寂闻&rsquo;，这里的&rsquo;以*闻&rsquo;，是一种正确的语法吗？<a href="#%e5%85%ad%e5%8d%81%e4%b9%9d%e5%b9%b4%e5%85%ab%e6%9c%88%e5%8d%81%e5%9b%9b%e6%97%a5%e5%a4%a7%e6%85%88%e5%af%ba%e5%85%b4%e6%85%88%e8%80%81%e5%92%8c%e5%b0%9a%e7%ab%9f%e4%bb%a5%e5%9c%86%e5%af%82%e9%97%bb%e8%bf%99%e9%87%8c%e7%9a%84%e4%bb%a5%e9%97%bb%e6%98%af%e4%b8%80%e7%a7%8d%e6%ad%a3%e7%a1%ae%e7%9a%84%e8%af%ad%e6%b3%95%e5%90%97-1" class="heading-anchor" aria-label=""><svg class="h-4 w-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></g></svg></a></h2><p>从纯语法看，&lsquo;以……闻&rsquo;是成立的，但放在这句话里语义很可疑。</p>
+<h1 id="gpt">gpt<a href="#gpt" class="heading-anchor" aria-label="链接到此部分"><svg class="h-4 w-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></g></svg></a></h1><h2 id="六十九年八月十四日大慈寺兴慈老和尚竟以圆寂闻这里的以闻是一种正确的语法吗-1">&lsquo;六十九年八月十四日，大慈寺兴慈老和尚竟以圆寂闻&rsquo;，这里的&rsquo;以*闻&rsquo;，是一种正确的语法吗？<a href="#%e5%85%ad%e5%8d%81%e4%b9%9d%e5%b9%b4%e5%85%ab%e6%9c%88%e5%8d%81%e5%9b%9b%e6%97%a5%e5%a4%a7%e6%85%88%e5%af%ba%e5%85%b4%e6%85%88%e8%80%81%e5%92%8c%e5%b0%9a%e7%ab%9f%e4%bb%a5%e5%9c%86%e5%af%82%e9%97%bb%e8%bf%99%e9%87%8c%e7%9a%84%e4%bb%a5%e9%97%bb%e6%98%af%e4%b8%80%e7%a7%8d%e6%ad%a3%e7%a1%ae%e7%9a%84%e8%af%ad%e6%b3%95%e5%90%97-1" class="heading-anchor" aria-label="链接到此部分"><svg class="h-4 w-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></g></svg></a></h2><p>从纯语法看，&lsquo;以……闻&rsquo;是成立的，但放在这句话里语义很可疑。</p>
 <p>古汉语中，&lsquo;以 X 闻&rsquo;通常表示“因 X 而闻名／以 X 为人所知”，例如：</p>
 <ul>
 <li>以孝闻：以孝顺著称</li>
@@ -1072,14 +1115,14 @@ Deepseek&lsquo;六十九年八月十四日，大慈寺兴慈老和尚竟以圆�
       
       <div class="min-w-0 flex-1">
         <h3 class="text-foreground mb-2 text-lg font-semibold">
-          
+          版权声明
         </h3>
 
         <div class="text-muted-foreground space-y-2 text-sm">
           
           
             <p>
-              <strong>:</strong>
+              <strong>作者:</strong>
               Entropy Decrease
             </p>
           
@@ -1087,7 +1130,7 @@ Deepseek&lsquo;六十九年八月十四日，大慈寺兴慈老和尚竟以圆�
 
           
           <p>
-            <strong>:</strong>
+            <strong>链接:</strong>
             <a
               href="https://entropydecrease.github.io/posts/%E4%B8%80%E4%B8%AA%E4%BE%8B%E5%AD%90%E6%AF%94%E8%BE%83gp-%E5%92%8Cdeepseek/"
               class="text-primary hover:text-primary/80 break-all hyphens-auto transition-colors duration-200"
@@ -1098,7 +1141,7 @@ Deepseek&lsquo;六十九年八月十四日，大慈寺兴慈老和尚竟以圆�
 
           
           <p>
-            <strong>:</strong>
+            <strong>许可证:</strong>
             
               <a
                 href="https://creativecommons.org/licenses/by-nc-sa/4.0/"
@@ -1147,7 +1190,7 @@ Deepseek&lsquo;六十九年八月十四日，大慈寺兴慈老和尚竟以圆�
   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
 </svg>
                 <span class="text-muted-foreground text-sm font-medium">
-                  
+                  上一篇
                 </span>
               </div>
 
@@ -1164,7 +1207,7 @@ Deepseek&lsquo;六十九年八月十四日，大慈寺兴慈老和尚竟以圆�
 </svg>
 
               <time datetime="2026-08-31">
-                8/31/26
+                26/8/31
               </time>
             </div>
           </a>
@@ -1175,13 +1218,13 @@ Deepseek&lsquo;六十九年八月十四日，大慈寺兴慈老和尚竟以圆�
       <div class="nav-item">
         
           <a
-            href="/posts/how-to-hire-%E5%A6%82%E4%BD%95%E6%8B%9B%E8%81%98/"
+            href="/posts/how-to-raise-money-%E5%A6%82%E4%BD%95%E8%9E%8D%E8%B5%84/"
             class="group bg-card border-border hover:bg-primary/5 hover:border-primary/20 focus:ring-primary/20 flex min-h-[140px] flex-col justify-between rounded-xl border p-6 transition-all duration-300 ease-out hover:-translate-y-1 hover:scale-[1.02] hover:shadow-lg focus:ring-2 focus:outline-none"
           >
             <div>
               <div class="mb-3 flex items-center justify-end gap-3">
                 <span class="text-muted-foreground text-sm font-medium">
-                  
+                  下一篇
                 </span>
                 <svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
@@ -1191,13 +1234,13 @@ Deepseek&lsquo;六十九年八月十四日，大慈寺兴慈老和尚竟以圆�
               <h3
                 class="text-foreground group-hover:text-primary mb-3 line-clamp-2 text-right text-lg leading-tight font-semibold transition-colors duration-200"
               >
-                How to hire - 如何招聘
+                How to raise money - 如何融资
               </h3>
             </div>
 
             <div class="text-muted-foreground mt-auto flex items-center justify-end gap-2 text-xs">
               <time datetime="2026-09-04">
-                9/4/26
+                26/9/4
               </time>
               <svg class="h-3 w-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
@@ -1229,7 +1272,7 @@ Deepseek&lsquo;六十九年八月十四日，大慈寺兴慈老和尚竟以圆�
   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1" />
 </svg>
       <h2 class="text-foreground text-2xl font-bold">
-        
+        相关内容
       </h2>
     </div>
 
@@ -1445,7 +1488,7 @@ Deepseek&lsquo;六十九年八月十四日，大慈寺兴慈老和尚竟以圆�
   class="pointer-events-none fixed bottom-4 left-1/2 z-9999 w-fit -translate-x-1/2 translate-y-24 opacity-0 transition-all duration-300 ease-out sm:right-0 sm:left-0 sm:mx-auto sm:translate-x-0"
   data-dock-mode="float"
   role="toolbar"
-  aria-label=""
+  aria-label="快捷操作工具栏"
 >
   <nav
     class="border-border bg-card/80 scrollbar-hide xs:px-3 xs:py-2 mx-auto flex max-w-[calc(100vw-2rem)] min-w-fit items-center justify-center overflow-x-auto rounded-2xl border px-4 py-3 shadow-lg backdrop-blur-sm sm:px-4 sm:py-3"
@@ -1455,15 +1498,15 @@ Deepseek&lsquo;六十九年八月十四日，大慈寺兴慈老和尚竟以圆�
       <button
         id="dock-back"
         class="text-muted-foreground hover:text-primary hover:bg-primary/10 focus:ring-primary/20 xs:px-2 xs:py-1.5 flex shrink-0 items-center gap-2 rounded-lg px-3 py-2 text-sm font-medium transition-all duration-300 ease-out hover:-translate-y-0.5 hover:scale-105 focus:ring-2 focus:outline-none sm:px-3 sm:py-2"
-        title=""
-        aria-label=""
+        title="返回"
+        aria-label="返回"
       >
         <svg class="h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
   <path d="m12 19-7-7 7-7"/>
   <path d="M19 12H5"/>
 </svg>
 
-        <span class="hidden sm:inline"></span>
+        <span class="hidden sm:inline">返回</span>
       </button>
 
       
@@ -1474,14 +1517,14 @@ Deepseek&lsquo;六十九年八月十四日，大慈寺兴慈老和尚竟以圆�
     <button
       id="dock-search"
       class="text-muted-foreground hover:text-primary hover:bg-primary/10 focus:ring-primary/20 xs:px-3 xs:py-1.5 flex shrink-0 items-center gap-2 rounded-lg px-4 py-2 text-sm font-medium transition-all duration-300 ease-out hover:-translate-y-0.5 hover:scale-105 focus:ring-2 focus:outline-none sm:px-4 sm:py-2"
-      title=""
-      aria-label=""
+      title="搜索"
+      aria-label="搜索"
     >
       <svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m21 21-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
 </svg>
 
-      <span class="hidden md:inline"></span>
+      <span class="hidden md:inline">搜索</span>
     </button>
 
     
@@ -1496,14 +1539,14 @@ Deepseek&lsquo;六十九年八月十四日，大慈寺兴慈老和尚竟以圆�
     <button
       id="dock-top"
       class="text-muted-foreground hover:text-primary hover:bg-primary/10 focus:ring-primary/20 xs:px-2 xs:py-1.5 flex shrink-0 items-center gap-2 rounded-lg px-3 py-2 text-sm font-medium transition-all duration-300 ease-out hover:-translate-y-0.5 hover:scale-105 focus:ring-2 focus:outline-none sm:px-3 sm:py-2"
-      title=""
-      aria-label=""
+      title="返回顶部"
+      aria-label="返回顶部"
     >
       <svg class="h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
   <path d="m18 15-6-6-6 6"/>
 </svg>
 
-      <span class="hidden sm:inline"></span>
+      <span class="hidden sm:inline">顶部</span>
     </button>
   </nav>
 </div>
@@ -1529,19 +1572,32 @@ Deepseek&lsquo;六十九年八月十四日，大慈寺兴慈老和尚竟以圆�
 
       <aside
     id="toc-container"
-    class="toc-center"
-    data-position="center"
+    class="toc-side"
+    data-position="side"
   >
-      <div
-        id="toc-center"
-        class="pointer-events-none fixed top-28 right-0 left-0 z-40 mx-auto w-full max-w-4xl px-4 transition-all duration-300"
-      >
-        <div class="pointer-events-auto relative mx-auto w-fit">
-          <button
-            id="toc-center-toggle"
-            class="bg-card/80 border-border text-muted-foreground hover:text-primary hover:bg-primary/10 ring-offset-background focus-visible:ring-ring flex cursor-pointer items-center gap-2 rounded-full border px-4 py-1.5 text-sm shadow-sm backdrop-blur-sm transition-colors focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:outline-none"
-          >
-            <svg class="h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <div id="toc-layer">
+        <div id="toc-anchor">
+          <div id="toc-side">
+            
+            <div
+              id="toc-rail"
+              class="scrollbar-hide"
+              role="button"
+              tabindex="0"
+              aria-controls="toc-panel"
+              aria-expanded="false"
+              aria-label="目录"
+            ></div>
+
+            
+            <div id="toc-trigger-wrap">
+              <button
+                id="toc-trigger"
+                class="bg-card/80 border-border text-muted-foreground hover:text-primary hover:bg-primary/10 ring-offset-background focus-visible:ring-ring flex cursor-pointer items-center gap-2 rounded-full border px-4 py-1.5 text-sm shadow-sm backdrop-blur-sm transition-colors focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:outline-none"
+                aria-controls="toc-panel"
+                aria-expanded="false"
+              >
+                <svg class="h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
   <line x1="8" x2="21" y1="6" y2="6"/>
   <line x1="8" x2="21" y1="12" y2="12"/>
   <line x1="8" x2="21" y1="18" y2="18"/>
@@ -1550,22 +1606,64 @@ Deepseek&lsquo;六十九年八月十四日，大慈寺兴慈老和尚竟以圆�
   <line x1="3" x2="3.01" y1="18" y2="18"/>
 </svg>
 
-            <span id="toc-center-title" class="max-w-[200px] truncate"></span>
-            <svg class="h-3 w-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <span id="toc-trigger-title" class="max-w-[200px] truncate">目录</span>
+                <svg class="h-3 w-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
 </svg>
-          </button>
+              </button>
+            </div>
 
-          
-          <div
-            id="toc-center-dropdown"
-            class="bg-card border-border scrollbar-hide absolute top-full left-1/2 mt-2 hidden max-h-[60vh] w-[280px] origin-top -translate-x-1/2 scale-95 overflow-y-auto rounded-xl border p-4 opacity-0 shadow-lg transition-all"
-          >
-            <div
-              id="toc-center-content"
-              class="[&_a]:text-muted-foreground [&_a:hover]:bg-primary/10 [&_a:hover]:text-primary [&_a.active]:bg-primary/10 [&_a.active]:text-primary text-sm [&_a]:block [&_a]:truncate [&_a]:rounded-md [&_a]:px-2 [&_a]:py-1 [&_a]:transition-colors [&_a.active]:font-medium [&_li]:my-1.5 [&_nav>ul]:pl-0 [&_ul]:list-none [&_ul]:pl-4"
-            >
-              <nav id="TableOfContents">
+            
+            <div id="toc-panel" class="scrollbar-hide overflow-y-auto">
+              <div
+                class="text-foreground mb-3 flex items-center justify-between gap-2 text-sm font-bold"
+              >
+                <span class="truncate">目录</span>
+                <div class="flex shrink-0 items-center gap-1">
+                  <button
+                    id="toc-pin"
+                    class="text-muted-foreground hover:text-primary hover:bg-primary/10 focus-visible:ring-ring cursor-pointer items-center rounded p-1 transition-colors focus-visible:ring-2 focus-visible:outline-none"
+                    aria-pressed="false"
+                    aria-label="固定目录"
+                    title="固定目录"
+                    data-label-pin="固定目录"
+                    data-label-unpin="取消固定目录"
+                  >
+                    <span id="toc-pin-on">
+                      <svg class="h-3 w-3" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <path d="M12 17v5"/>
+  <path d="M9 10.76a2 2 0 0 1-1.11 1.79l-1.78.9A2 2 0 0 0 5 15.24V16a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-.76a2 2 0 0 0-1.11-1.79l-1.78-.9A2 2 0 0 1 15 10.76V7a1 1 0 0 1 1-1 2 2 0 0 0 0-4H8a2 2 0 0 0 0 4 1 1 0 0 1 1 1z"/>
+</svg>
+
+                    </span>
+                    <span id="toc-pin-off">
+                      <svg class="h-3 w-3" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <path d="M12 17v5"/>
+  <path d="M15 9.34V7a1 1 0 0 1 1-1 2 2 0 0 0 0-4H7.89"/>
+  <path d="M9 9v1.76a2 2 0 0 1-1.11 1.79l-1.78.9A2 2 0 0 0 5 15.24V16a1 1 0 0 0 1 1h11"/>
+  <path d="m2 2 20 20"/>
+</svg>
+
+                    </span>
+                  </button>
+                  <button
+                    id="toc-close"
+                    class="text-muted-foreground hover:text-foreground focus-visible:ring-ring cursor-pointer items-center rounded p-1 transition-colors focus-visible:ring-2 focus-visible:outline-none"
+                    aria-label="关闭目录"
+                    title="关闭目录"
+                  >
+                    <svg class="h-3 w-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+</svg>
+
+                  </button>
+                </div>
+              </div>
+              <div
+                id="toc-side-content"
+                class="[&_a]:text-muted-foreground [&_a:hover]:bg-primary/10 [&_a:hover]:text-primary [&_a.active]:bg-primary/10 [&_a.active]:text-primary text-sm [&_a]:block [&_a]:rounded-md [&_a]:px-2 [&_a]:py-1 [&_a]:wrap-break-word [&_a]:whitespace-normal [&_a]:transition-colors [&_a.active]:font-medium [&_li]:my-1.5 [&_nav>ul]:pl-0 [&_ul]:list-none [&_ul]:pl-4"
+              >
+                <nav id="TableOfContents">
   <ul>
     <li><a href="#六十九年八月十四日大慈寺兴慈老和尚竟以圆寂闻这里的以闻是一种正确的语法吗">&lsquo;六十九年八月十四日，大慈寺兴慈老和尚竟以圆寂闻&rsquo;，这里的&rsquo;以*闻&rsquo;，是一种正确的语法吗？</a>
       <ul>
@@ -1589,6 +1687,7 @@ Deepseek&lsquo;六十九年八月十四日，大慈寺兴慈老和尚竟以圆�
     <li><a href="#六十九年八月十四日大慈寺兴慈老和尚竟以圆寂闻这里的以闻是一种正确的语法吗-1">&lsquo;六十九年八月十四日，大慈寺兴慈老和尚竟以圆寂闻&rsquo;，这里的&rsquo;以*闻&rsquo;，是一种正确的语法吗？</a></li>
   </ul>
 </nav>
+              </div>
             </div>
           </div>
         </div>
@@ -1618,7 +1717,7 @@ Deepseek&lsquo;六十九年八月十四日，大慈寺兴慈老和尚竟以圆�
 </svg>
 
     </div>
-    <h2 id="search-title" class="sr-only"></h2>
+    <h2 id="search-title" class="sr-only">搜索</h2>
 
     
     <div class="relative flex-1">
@@ -1626,8 +1725,8 @@ Deepseek&lsquo;六十九年八月十四日，大慈寺兴慈老和尚竟以圆�
       <button
         id="search-clear"
         class="text-muted-foreground hover:text-foreground hover:bg-muted/50 pointer-events-none absolute top-1/2 left-0 z-10 h-5 w-5 -translate-y-1/2 rounded opacity-0 transition-all duration-200"
-        title=""
-        aria-label=""
+        title="清空"
+        aria-label="清空"
       >
         <svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
@@ -1639,7 +1738,7 @@ Deepseek&lsquo;六十九年八月十四日，大慈寺兴慈老和尚竟以圆�
       <input
         id="search-input"
         type="text"
-        placeholder=""
+        placeholder="搜索文章..."
         class="text-foreground placeholder:text-muted-foreground w-full border-none bg-transparent pl-8 text-lg outline-none"
         autocomplete="off"
         spellcheck="false"
@@ -1650,8 +1749,8 @@ Deepseek&lsquo;六十九年八月十四日，大慈寺兴慈老和尚竟以圆�
     <button
       id="search-close"
       class="text-muted-foreground hover:text-foreground hover:bg-muted/50 flex h-6 w-6 items-center justify-center rounded-md p-0.5 transition-all duration-200"
-      title=""
-      aria-label=""
+      title="关闭"
+      aria-label="关闭"
     >
       <svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
@@ -1671,7 +1770,7 @@ Deepseek&lsquo;六十九年八月十四日，大慈寺兴慈老和尚竟以圆�
 
       </div>
       <h3 class="text-foreground mb-2 text-lg font-semibold">
-        
+        开始搜索
       </h3>
     </div>
 
@@ -1680,7 +1779,7 @@ Deepseek&lsquo;六十九年八月十四日，大慈寺兴慈老和尚竟以圆�
       <div
         class="mr-3 h-6 w-6 animate-spin rounded-full border-2 border-current border-t-transparent"
       ></div>
-      <span class="text-muted-foreground"></span>
+      <span class="text-muted-foreground">搜索中...</span>
     </div>
 
     
@@ -1696,7 +1795,7 @@ Deepseek&lsquo;六十九年八月十四日，大慈寺兴慈老和尚竟以圆�
 
       </div>
       <h3 class="text-foreground mb-2 text-lg font-semibold">
-        
+        未找到结果
       </h3>
     </div>
 
@@ -1706,7 +1805,7 @@ Deepseek&lsquo;六十九年八月十四日，大慈寺兴慈老和尚竟以圆�
       <div
         id="search-stats"
         class="text-muted-foreground border-border border-b px-4 py-3 text-sm"
-        data-count-other=""
+        data-count-other="找到 %d 个结果"
       ></div>
 
       
@@ -1721,20 +1820,20 @@ Deepseek&lsquo;六十九年八月十四日，大慈寺兴慈老和尚竟以圆�
       <div class="flex items-center gap-2 md:gap-4">
         <div class="flex items-center gap-1">
           <kbd class="bg-muted border-border rounded border px-1.5 py-0.5 text-xs">↑↓</kbd>
-          <span class="hidden sm:inline"></span>
+          <span class="hidden sm:inline">导航</span>
         </div>
         <div class="flex items-center gap-1">
           <kbd class="bg-muted border-border rounded border px-1.5 py-0.5 text-xs">↵</kbd>
-          <span class="hidden sm:inline"></span>
+          <span class="hidden sm:inline">选择</span>
         </div>
         <div class="flex items-center gap-1">
           <kbd class="bg-muted border-border rounded border px-1.5 py-0.5 text-xs">ESC</kbd>
-          <span class="hidden sm:inline"></span>
+          <span class="hidden sm:inline">关闭</span>
         </div>
       </div>
       <div class="search-hint-desktop flex items-center gap-1">
         <kbd class="bg-muted border-border rounded border px-1.5 py-0.5 text-xs">⌘K</kbd>
-        <span></span>
+        <span>快捷键</span>
       </div>
     </div>
   </div>

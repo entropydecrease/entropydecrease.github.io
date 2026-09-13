@@ -1,5 +1,8 @@
-<!doctype html>
-<html lang="zh-CN" data-theme="emerald">
+<!doctype html><html
+  lang="zh-Hans"
+  data-theme="emerald"
+  data-toc-pinned="false"
+>
   <head>
     <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
@@ -27,7 +30,7 @@
   name="author"
   content="Entropy Decrease"
 />
-<meta name="language" content="en-US" />
+<meta name="language" content="zh-CN" />
 
 <meta
   name="robots"
@@ -44,7 +47,7 @@
 	<meta property="og:description" content="原文抄录自 《1942河南大饥荒》。
 特派记者“流萤”系列灾区通讯
 无尽长的死亡线——记陇海线上的灾胞">
-	<meta property="og:locale" content="zh_CN">
+	<meta property="og:locale" content="zh_Hans">
 	<meta property="og:type" content="article">
 		<meta property="article:section" content="posts">
 		<meta property="article:published_time" content="2026-06-20T00:00:00+00:00">
@@ -88,8 +91,8 @@
     
       <link
         rel="stylesheet"
-        href="/css/compiled.min.4a6fd33c0e2db207c1646e8a588be381fd817a1b0cd86004cbb040e8dcf50b31.css"
-        integrity="sha256-Sm/TPA4tsgfBZG6KWIvjgf2BehsM2GAEy7BA6Nz1CzE="
+        href="/css/compiled.min.64471d81170139f732efa014a53ac4621daf3b75ac4fc8ad317a4d80f1c66197.css"
+        integrity="sha256-ZEcdgRcBOfcy76AUpTrEYh2vO3WsT8itMXpNgPHGYZc="
         crossorigin="anonymous"
       />
     
@@ -126,8 +129,8 @@
 
 
         <script
-          src="/js/main.f482676046fba6a50f6e6580bd1306489d4fea5f7144231757bf01af2498b168.js"
-          integrity="sha256-9IJnYEb7pqUPbmWAvRMGSJ1P6l9xRCMXV78BrySYsWg="
+          src="/js/main.b003624716b5b9344efafc302bd75df711e73d0da196be724be6daebb2b6964d.js"
+          integrity="sha256-sANiRxa1uTRO&#43;vwwK9dd9xHnPQ2hlr5yS&#43;ba67K2lk0="
           crossorigin="anonymous"
           defer
         ></script>
@@ -135,8 +138,8 @@
 
 
             <script
-              src="/js/toc.3026ef97e410bb3e98d57739bcabc32ac568e9001b2e42385de731663378ae85.js"
-              integrity="sha256-MCbvl&#43;QQuz6Y1Xc5vKvDKsVo6QAbLkI4XecxZjN4roU="
+              src="/js/toc.4f913c419799292f98fd50ecaa57eed9432c9ab55dc7a39c5cc7bb40caf34803.js"
+              integrity="sha256-T5E8QZeZKS&#43;Y/VDsqlfu2UMsmrVdx6OcXMe7QMrzSAM="
               crossorigin="anonymous"
               defer
             ></script>
@@ -153,8 +156,8 @@
 
 
         <script
-          src="/js/dock.fc33c1fd0e0525acdd5b7abed135239608c36a061f3b566fbc9e5841594b11af.js"
-          integrity="sha256-/DPB/Q4FJazdW3q&#43;0TUjlgjDagYfO1ZvvJ5YQVlLEa8="
+          src="/js/dock.8e3addaa9b500c783209ee7837e59045cf14528a5807aedd4cf8e8e6dffbae11.js"
+          integrity="sha256-jjrdqptQDHgyCe54N&#43;WQRc8UUopYB67dTPjo5t/7rhE="
           crossorigin="anonymous"
           defer
         ></script>
@@ -173,9 +176,13 @@
 
 
     
-    <script>(function(){const e=localStorage.getItem("theme")||"system",n=localStorage.getItem("colorScheme")||"emerald";document.documentElement.setAttribute("data-theme",n);function t(){e==="dark"||e==="system"&&window.matchMedia("(prefers-color-scheme: dark)").matches?document.documentElement.classList.add("dark"):document.documentElement.classList.remove("dark")}t(),e==="system"&&window.matchMedia("(prefers-color-scheme: dark)").addEventListener("change",t)})()</script>
+    <script>(function(){const e=document.documentElement,o=localStorage.getItem("theme")||"system",m=localStorage.getItem("colorScheme")||"emerald",n=Number.parseInt(localStorage.getItem("contentWidth"),10),d=Number.isInteger(n)&&n>=40&&n<=90;d&&e.style.setProperty("--content-width",`${n}rem`),e.setAttribute("data-theme",m);const s=localStorage.getItem("tocPinned");(s==="true"||s==="false")&&e.setAttribute("data-toc-pinned",s);const t=Number.parseFloat(getComputedStyle(e).fontSize)||16,u="56rem",i=Number.parseFloat(u);let a=56*t;Number.isFinite(i)&&(a=/r?em\s*$/.test(u)?i*t:i),d&&(a=n*t);const r=e.clientWidth,c=Math.max(0,(r-Math.min(a,r))/2);let l="narrow";r>=64*t&&(c>=13*t?l="wide":c>=2*t&&(l="tight")),e.setAttribute("data-toc-space",l),e.style.setProperty("--toc-gutter",`${Math.round(c)}px`);function h(){o==="dark"||o==="system"&&window.matchMedia("(prefers-color-scheme: dark)").matches?e.classList.add("dark"):e.classList.remove("dark")}h(),o==="system"&&window.matchMedia("(prefers-color-scheme: dark)").addEventListener("change",h)})()</script>
   </head><body class="bg-background text-foreground min-h-screen antialiased">
-    <main class="mx-auto w-full" style="max-width: 56rem">
+    <main
+      id="page-container"
+      class="mx-auto w-full"
+      style="--content-width-base: 56rem; max-width: var(--content-width, var(--content-width-base))"
+    >
       <div
     id="reading-progress-bar"
     class="from-primary to-primary/80 pointer-events-none fixed top-0 left-0 z-50 h-[3px] w-0 bg-linear-to-r transition-[width] duration-150 ease-out"
@@ -211,7 +218,7 @@
     })();
   </script>
 
-      <header class=" px-4 py-6">
+      <header class="sticky top-0 z-50 px-4 py-6">
   <div
     class="border-border bg-card/80 flex items-center rounded-xl border px-6 py-4 shadow-sm backdrop-blur-sm"
   >
@@ -228,7 +235,7 @@
             aria-label="Entropy Decrease"
           >
             <img
-              src="/"
+              src="/images/logo.svg"
               alt="Entropy Decrease"
               class="h-full w-full object-cover"
             />
@@ -257,12 +264,12 @@
                  focus:ring-primary/20 relative flex items-center gap-2 rounded-lg px-4 py-2 text-sm font-medium transition-all duration-300 ease-out hover:-translate-y-0.5 hover:scale-105 focus:ring-2 focus:outline-none"
               >
                 
-                  <svg class="h-5 w-5" aria-label="posts" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <svg class="h-5 w-5" aria-label="文章" fill="none" stroke="currentColor" viewBox="0 0 24 24">
   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 20H5a2 2 0 01-2-2V6a2 2 0 012-2h10a2 2 0 012 2v1m2 13a2 2 0 01-2-2V7m2 13a2 2 0 002-2V9a2 2 0 00-2-2h-2m-4-3H9M7 16h6M7 8h6v4H7V8z" />
 </svg>
 
                 
-                <span>posts</span>
+                <span>文章</span>
               </a>
             
           
@@ -282,12 +289,12 @@
                  focus:ring-primary/20 relative flex items-center gap-2 rounded-lg px-4 py-2 text-sm font-medium transition-all duration-300 ease-out hover:-translate-y-0.5 hover:scale-105 focus:ring-2 focus:outline-none"
               >
                 
-                  <svg class="h-5 w-5" aria-label="categories" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <svg class="h-5 w-5" aria-label="分类" fill="none" stroke="currentColor" viewBox="0 0 24 24">
   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10" />
 </svg>
 
                 
-                <span>categories</span>
+                <span>分类</span>
               </a>
             
           
@@ -307,12 +314,12 @@
                  focus:ring-primary/20 relative flex items-center gap-2 rounded-lg px-4 py-2 text-sm font-medium transition-all duration-300 ease-out hover:-translate-y-0.5 hover:scale-105 focus:ring-2 focus:outline-none"
               >
                 
-                  <svg class="h-5 w-5" aria-label="tags" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <svg class="h-5 w-5" aria-label="标签" fill="none" stroke="currentColor" viewBox="0 0 24 24">
   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 7h.01M7 3h5c.512 0 1.024.195 1.414.586l7 7a2 2 0 010 2.828l-7 7a2 2 0 01-2.828 0l-7-7A1.994 1.994 0 013 12V7a4 4 0 014-4z" />
 </svg>
 
                 
-                <span>tags</span>
+                <span>标签</span>
               </a>
             
           
@@ -332,12 +339,12 @@
                  focus:ring-primary/20 relative flex items-center gap-2 rounded-lg px-4 py-2 text-sm font-medium transition-all duration-300 ease-out hover:-translate-y-0.5 hover:scale-105 focus:ring-2 focus:outline-none"
               >
                 
-                  <svg class="h-5 w-5" aria-label="archives" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <svg class="h-5 w-5" aria-label="归档" fill="none" stroke="currentColor" viewBox="0 0 24 24">
   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 8h14M5 8a2 2 0 110-4h14a2 2 0 110 4M5 8v10a2 2 0 002 2h10a2 2 0 002-2V8m-9 4h4" />
 </svg>
 
                 
-                <span>archives</span>
+                <span>归档</span>
               </a>
             
           
@@ -346,6 +353,38 @@
 
       
       <div class="flex items-center space-x-2">
+        
+        <div class="hidden lg:block"><div class="relative">
+    <button
+      id="content-width-toggle"
+      class="dropdown-toggle border-border bg-background text-muted-foreground hover:text-primary hover:bg-primary/10 focus:ring-primary/20 flex h-10 w-10 items-center justify-center rounded-lg border transition-all duration-300 ease-out hover:scale-105 focus:ring-2 focus:outline-none active:scale-95"
+      data-dropdown-type="content-width"
+      aria-label="调整页面宽度"
+      aria-expanded="false"
+      aria-haspopup="true"
+    ><svg class="h-5 w-5 relative z-10" aria-label="调整页面宽度" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+	<path d="M0 0h24v24H0z" fill="none" />
+	<path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 12H3l3-3m0 6l-3-3m11 0h7l-3-3m0 6l3-3M3 6V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v1M3 18v1a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-1" />
+</svg>
+</button>
+
+    <div
+      id="content-width-dropdown"
+      class="dropdown-menu border-border bg-popover/95 w-64 absolute top-12 right-0 z-60 hidden rounded-lg border p-1 shadow-lg backdrop-blur-sm transition-all duration-200 ease-out"
+      data-dropdown-type="content-width"
+      
+    >
+    <div class="space-y-3 p-3">
+    <div class="flex items-center justify-between gap-4">
+    <label for="content-width-range" class="text-foreground text-sm font-medium">页面宽度</label>
+    <output id="content-width-value" for="content-width-range" class="text-muted-foreground min-w-12 text-right text-sm tabular-nums"></output>
+    </div>
+    <input id="content-width-range" class="accent-primary w-full cursor-pointer" type="range" min="40" max="90" step="1" aria-label="页面宽度" />
+    <button id="content-width-reset" type="button" class="border-border text-muted-foreground hover:bg-accent hover:text-accent-foreground focus:ring-primary/20 w-full rounded-md border px-3 py-2 text-sm transition-colors focus:ring-2 focus:outline-none">恢复默认</button>
+    </div></div>
+  </div></div>
+
+
         
         
 
@@ -356,10 +395,10 @@
       id="color-scheme-toggle"
       class="dropdown-toggle border-border bg-background text-muted-foreground hover:text-primary hover:bg-primary/10 focus:ring-primary/20 flex h-10 w-10 items-center justify-center rounded-lg border transition-all duration-300 ease-out hover:scale-105 focus:ring-2 focus:outline-none active:scale-95"
       data-dropdown-type="color-scheme"
-      aria-label=""
+      aria-label="切换主题风格"
       aria-expanded="false"
       aria-haspopup="true"
-    ><svg class="h-5 w-5 relative z-10" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+    ><svg class="h-5 w-5 relative z-10" aria-label="切换主题风格" fill="none" stroke="currentColor" viewBox="0 0 24 24">
   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zM21 5a2 2 0 00-2-2h-4a2 2 0 00-2 2v6a2 2 0 002 2h4a2 2 0 002-2V5z" />
 </svg>
 </button>
@@ -369,7 +408,7 @@
       class="dropdown-menu border-border bg-popover/95 w-44 absolute top-12 right-0 z-60 hidden rounded-lg border p-1 shadow-lg backdrop-blur-sm transition-all duration-200 ease-out"
       data-dropdown-type="color-scheme"
       
-    ><button data-color-scheme="default" class="text-accent-foreground hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground flex w-full items-center rounded-md px-4 py-2 text-sm transition-all duration-200 ease-out focus:outline-none"><span>Default</span></button><button data-color-scheme="claude" class="text-accent-foreground hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground flex w-full items-center rounded-md px-4 py-2 text-sm transition-all duration-200 ease-out focus:outline-none"><span>Claude</span></button><button data-color-scheme="bumblebee" class="text-accent-foreground hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground flex w-full items-center rounded-md px-4 py-2 text-sm transition-all duration-200 ease-out focus:outline-none"><span>Bumblebee</span></button><button data-color-scheme="emerald" class="text-accent-foreground hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground flex w-full items-center rounded-md px-4 py-2 text-sm transition-all duration-200 ease-out focus:outline-none"><span>Emerald</span></button><button data-color-scheme="nord" class="text-accent-foreground hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground flex w-full items-center rounded-md px-4 py-2 text-sm transition-all duration-200 ease-out focus:outline-none"><span>Nord</span></button><button data-color-scheme="sunset" class="text-accent-foreground hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground flex w-full items-center rounded-md px-4 py-2 text-sm transition-all duration-200 ease-out focus:outline-none"><span>Sunset</span></button><button data-color-scheme="abyss" class="text-accent-foreground hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground flex w-full items-center rounded-md px-4 py-2 text-sm transition-all duration-200 ease-out focus:outline-none"><span>Abyss</span></button><button data-color-scheme="dracula" class="text-accent-foreground hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground flex w-full items-center rounded-md px-4 py-2 text-sm transition-all duration-200 ease-out focus:outline-none"><span>Dracula</span></button><button data-color-scheme="amethyst" class="text-accent-foreground hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground flex w-full items-center rounded-md px-4 py-2 text-sm transition-all duration-200 ease-out focus:outline-none"><span>Amethyst</span></button><button data-color-scheme="slate" class="text-accent-foreground hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground flex w-full items-center rounded-md px-4 py-2 text-sm transition-all duration-200 ease-out focus:outline-none"><span>Slate</span></button><button data-color-scheme="twitter" class="text-accent-foreground hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground flex w-full items-center rounded-md px-4 py-2 text-sm transition-all duration-200 ease-out focus:outline-none"><span>Twitter</span></button></div>
+    ><button data-color-scheme="default" class="text-accent-foreground hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground flex w-full items-center rounded-md px-4 py-2 text-sm transition-all duration-200 ease-out focus:outline-none"><span>Default</span></button><button data-color-scheme="claude" class="text-accent-foreground hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground flex w-full items-center rounded-md px-4 py-2 text-sm transition-all duration-200 ease-out focus:outline-none"><span>Claude</span></button><button data-color-scheme="bumblebee" class="text-accent-foreground hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground flex w-full items-center rounded-md px-4 py-2 text-sm transition-all duration-200 ease-out focus:outline-none"><span>Bumblebee</span></button><button data-color-scheme="emerald" class="text-accent-foreground hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground flex w-full items-center rounded-md px-4 py-2 text-sm transition-all duration-200 ease-out focus:outline-none"><span>Emerald</span></button><button data-color-scheme="nord" class="text-accent-foreground hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground flex w-full items-center rounded-md px-4 py-2 text-sm transition-all duration-200 ease-out focus:outline-none"><span>Nord</span></button><button data-color-scheme="sunset" class="text-accent-foreground hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground flex w-full items-center rounded-md px-4 py-2 text-sm transition-all duration-200 ease-out focus:outline-none"><span>Sunset</span></button><button data-color-scheme="abyss" class="text-accent-foreground hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground flex w-full items-center rounded-md px-4 py-2 text-sm transition-all duration-200 ease-out focus:outline-none"><span>Abyss</span></button><button data-color-scheme="dracula" class="text-accent-foreground hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground flex w-full items-center rounded-md px-4 py-2 text-sm transition-all duration-200 ease-out focus:outline-none"><span>Dracula</span></button><button data-color-scheme="amethyst" class="text-accent-foreground hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground flex w-full items-center rounded-md px-4 py-2 text-sm transition-all duration-200 ease-out focus:outline-none"><span>Amethyst</span></button><button data-color-scheme="slate" class="text-accent-foreground hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground flex w-full items-center rounded-md px-4 py-2 text-sm transition-all duration-200 ease-out focus:outline-none"><span>Slate</span></button><button data-color-scheme="twitter" class="text-accent-foreground hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground flex w-full items-center rounded-md px-4 py-2 text-sm transition-all duration-200 ease-out focus:outline-none"><span>Twitter</span></button><button data-color-scheme="minimal" class="text-accent-foreground hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground flex w-full items-center rounded-md px-4 py-2 text-sm transition-all duration-200 ease-out focus:outline-none"><span>Minimal</span></button></div>
   </div>
 
 
@@ -379,18 +418,18 @@
       id="theme-toggle"
       class="dropdown-toggle border-border bg-background text-muted-foreground hover:text-primary hover:bg-primary/10 focus:ring-primary/20 flex h-10 w-10 items-center justify-center rounded-lg border transition-all duration-300 ease-out hover:scale-105 focus:ring-2 focus:outline-none active:scale-95"
       data-dropdown-type="theme"
-      aria-label=""
+      aria-label="切换主题风格"
       aria-expanded="false"
       aria-haspopup="true"
-    ><svg class="h-5 w-5 sun-icon hidden relative z-10" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+    ><svg class="h-5 w-5 sun-icon hidden relative z-10" aria-label="亮色" fill="none" stroke="currentColor" viewBox="0 0 24 24">
   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" />
 </svg>
 
-        <svg class="h-5 w-5 moon-icon hidden relative z-10" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <svg class="h-5 w-5 moon-icon hidden relative z-10" aria-label="暗色" fill="none" stroke="currentColor" viewBox="0 0 24 24">
   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" />
 </svg>
 
-        <svg class="h-5 w-5 system-icon hidden relative z-10" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <svg class="h-5 w-5 system-icon hidden relative z-10" aria-label="跟随系统" fill="none" stroke="currentColor" viewBox="0 0 24 24">
   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
 </svg>
 </button>
@@ -400,16 +439,16 @@
       class="dropdown-menu border-border bg-popover/95 w-40 absolute top-12 right-0 z-60 hidden rounded-lg border p-1 shadow-lg backdrop-blur-sm transition-all duration-200 ease-out"
       data-dropdown-type="theme"
       
-    ><button data-theme="light" class="text-accent-foreground hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground flex w-full items-center rounded-md px-4 py-2 text-sm transition-all duration-200 ease-out focus:outline-none"><svg class="h-5 w-5 mr-3 h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+    ><button data-theme="light" class="text-accent-foreground hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground flex w-full items-center rounded-md px-4 py-2 text-sm transition-all duration-200 ease-out focus:outline-none"><svg class="h-5 w-5 mr-3 h-4 w-4" aria-label="亮色" fill="none" stroke="currentColor" viewBox="0 0 24 24">
   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" />
 </svg>
-<span></span></button><button data-theme="dark" class="text-accent-foreground hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground flex w-full items-center rounded-md px-4 py-2 text-sm transition-all duration-200 ease-out focus:outline-none"><svg class="h-5 w-5 mr-3 h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+<span>亮色</span></button><button data-theme="dark" class="text-accent-foreground hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground flex w-full items-center rounded-md px-4 py-2 text-sm transition-all duration-200 ease-out focus:outline-none"><svg class="h-5 w-5 mr-3 h-4 w-4" aria-label="暗色" fill="none" stroke="currentColor" viewBox="0 0 24 24">
   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" />
 </svg>
-<span></span></button><button data-theme="system" class="text-accent-foreground hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground flex w-full items-center rounded-md px-4 py-2 text-sm transition-all duration-200 ease-out focus:outline-none"><svg class="h-5 w-5 mr-3 h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+<span>暗色</span></button><button data-theme="system" class="text-accent-foreground hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground flex w-full items-center rounded-md px-4 py-2 text-sm transition-all duration-200 ease-out focus:outline-none"><svg class="h-5 w-5 mr-3 h-4 w-4" aria-label="跟随系统" fill="none" stroke="currentColor" viewBox="0 0 24 24">
   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
 </svg>
-<span></span></button></div>
+<span>跟随系统</span></button></div>
   </div>
       </div>
     </div>
@@ -421,11 +460,11 @@
 <button
   id="mobile-nav-toggle"
   class="nav-panel-toggle border-border bg-background text-muted-foreground hover:bg-accent hover:text-foreground flex h-10 w-10 items-center justify-center rounded-lg border transition-colors duration-200"
-  aria-label=""
+  aria-label="菜单"
   aria-expanded="false"
   aria-controls="mobile-nav-panel"
 >
-  <svg class="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+  <svg class="h-5 w-5" aria-label="菜单" fill="none" stroke="currentColor" viewBox="0 0 24 24">
   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
 </svg>
 
@@ -445,10 +484,10 @@
       id="color-scheme-toggle"
       class="dropdown-toggle border-border bg-background text-muted-foreground hover:text-primary hover:bg-primary/10 focus:ring-primary/20 flex h-10 w-10 items-center justify-center rounded-lg border transition-all duration-300 ease-out hover:scale-105 focus:ring-2 focus:outline-none active:scale-95"
       data-dropdown-type="color-scheme"
-      aria-label=""
+      aria-label="切换主题风格"
       aria-expanded="false"
       aria-haspopup="true"
-    ><svg class="h-5 w-5 relative z-10" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+    ><svg class="h-5 w-5 relative z-10" aria-label="切换主题风格" fill="none" stroke="currentColor" viewBox="0 0 24 24">
   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zM21 5a2 2 0 00-2-2h-4a2 2 0 00-2 2v6a2 2 0 002 2h4a2 2 0 002-2V5z" />
 </svg>
 </button>
@@ -458,7 +497,7 @@
       class="dropdown-menu border-border bg-popover/95 w-44 absolute top-12 right-0 z-60 hidden rounded-lg border p-1 shadow-lg backdrop-blur-sm transition-all duration-200 ease-out"
       data-dropdown-type="color-scheme"
       
-    ><button data-color-scheme="default" class="text-accent-foreground hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground flex w-full items-center rounded-md px-4 py-2 text-sm transition-all duration-200 ease-out focus:outline-none"><span>Default</span></button><button data-color-scheme="claude" class="text-accent-foreground hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground flex w-full items-center rounded-md px-4 py-2 text-sm transition-all duration-200 ease-out focus:outline-none"><span>Claude</span></button><button data-color-scheme="bumblebee" class="text-accent-foreground hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground flex w-full items-center rounded-md px-4 py-2 text-sm transition-all duration-200 ease-out focus:outline-none"><span>Bumblebee</span></button><button data-color-scheme="emerald" class="text-accent-foreground hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground flex w-full items-center rounded-md px-4 py-2 text-sm transition-all duration-200 ease-out focus:outline-none"><span>Emerald</span></button><button data-color-scheme="nord" class="text-accent-foreground hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground flex w-full items-center rounded-md px-4 py-2 text-sm transition-all duration-200 ease-out focus:outline-none"><span>Nord</span></button><button data-color-scheme="sunset" class="text-accent-foreground hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground flex w-full items-center rounded-md px-4 py-2 text-sm transition-all duration-200 ease-out focus:outline-none"><span>Sunset</span></button><button data-color-scheme="abyss" class="text-accent-foreground hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground flex w-full items-center rounded-md px-4 py-2 text-sm transition-all duration-200 ease-out focus:outline-none"><span>Abyss</span></button><button data-color-scheme="dracula" class="text-accent-foreground hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground flex w-full items-center rounded-md px-4 py-2 text-sm transition-all duration-200 ease-out focus:outline-none"><span>Dracula</span></button><button data-color-scheme="amethyst" class="text-accent-foreground hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground flex w-full items-center rounded-md px-4 py-2 text-sm transition-all duration-200 ease-out focus:outline-none"><span>Amethyst</span></button><button data-color-scheme="slate" class="text-accent-foreground hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground flex w-full items-center rounded-md px-4 py-2 text-sm transition-all duration-200 ease-out focus:outline-none"><span>Slate</span></button><button data-color-scheme="twitter" class="text-accent-foreground hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground flex w-full items-center rounded-md px-4 py-2 text-sm transition-all duration-200 ease-out focus:outline-none"><span>Twitter</span></button></div>
+    ><button data-color-scheme="default" class="text-accent-foreground hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground flex w-full items-center rounded-md px-4 py-2 text-sm transition-all duration-200 ease-out focus:outline-none"><span>Default</span></button><button data-color-scheme="claude" class="text-accent-foreground hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground flex w-full items-center rounded-md px-4 py-2 text-sm transition-all duration-200 ease-out focus:outline-none"><span>Claude</span></button><button data-color-scheme="bumblebee" class="text-accent-foreground hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground flex w-full items-center rounded-md px-4 py-2 text-sm transition-all duration-200 ease-out focus:outline-none"><span>Bumblebee</span></button><button data-color-scheme="emerald" class="text-accent-foreground hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground flex w-full items-center rounded-md px-4 py-2 text-sm transition-all duration-200 ease-out focus:outline-none"><span>Emerald</span></button><button data-color-scheme="nord" class="text-accent-foreground hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground flex w-full items-center rounded-md px-4 py-2 text-sm transition-all duration-200 ease-out focus:outline-none"><span>Nord</span></button><button data-color-scheme="sunset" class="text-accent-foreground hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground flex w-full items-center rounded-md px-4 py-2 text-sm transition-all duration-200 ease-out focus:outline-none"><span>Sunset</span></button><button data-color-scheme="abyss" class="text-accent-foreground hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground flex w-full items-center rounded-md px-4 py-2 text-sm transition-all duration-200 ease-out focus:outline-none"><span>Abyss</span></button><button data-color-scheme="dracula" class="text-accent-foreground hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground flex w-full items-center rounded-md px-4 py-2 text-sm transition-all duration-200 ease-out focus:outline-none"><span>Dracula</span></button><button data-color-scheme="amethyst" class="text-accent-foreground hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground flex w-full items-center rounded-md px-4 py-2 text-sm transition-all duration-200 ease-out focus:outline-none"><span>Amethyst</span></button><button data-color-scheme="slate" class="text-accent-foreground hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground flex w-full items-center rounded-md px-4 py-2 text-sm transition-all duration-200 ease-out focus:outline-none"><span>Slate</span></button><button data-color-scheme="twitter" class="text-accent-foreground hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground flex w-full items-center rounded-md px-4 py-2 text-sm transition-all duration-200 ease-out focus:outline-none"><span>Twitter</span></button><button data-color-scheme="minimal" class="text-accent-foreground hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground flex w-full items-center rounded-md px-4 py-2 text-sm transition-all duration-200 ease-out focus:outline-none"><span>Minimal</span></button></div>
   </div>
 
 
@@ -468,18 +507,18 @@
       id="theme-toggle"
       class="dropdown-toggle border-border bg-background text-muted-foreground hover:text-primary hover:bg-primary/10 focus:ring-primary/20 flex h-10 w-10 items-center justify-center rounded-lg border transition-all duration-300 ease-out hover:scale-105 focus:ring-2 focus:outline-none active:scale-95"
       data-dropdown-type="theme"
-      aria-label=""
+      aria-label="切换主题风格"
       aria-expanded="false"
       aria-haspopup="true"
-    ><svg class="h-5 w-5 sun-icon hidden relative z-10" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+    ><svg class="h-5 w-5 sun-icon hidden relative z-10" aria-label="亮色" fill="none" stroke="currentColor" viewBox="0 0 24 24">
   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" />
 </svg>
 
-        <svg class="h-5 w-5 moon-icon hidden relative z-10" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <svg class="h-5 w-5 moon-icon hidden relative z-10" aria-label="暗色" fill="none" stroke="currentColor" viewBox="0 0 24 24">
   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" />
 </svg>
 
-        <svg class="h-5 w-5 system-icon hidden relative z-10" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <svg class="h-5 w-5 system-icon hidden relative z-10" aria-label="跟随系统" fill="none" stroke="currentColor" viewBox="0 0 24 24">
   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
 </svg>
 </button>
@@ -489,16 +528,16 @@
       class="dropdown-menu border-border bg-popover/95 w-40 absolute top-12 right-0 z-60 hidden rounded-lg border p-1 shadow-lg backdrop-blur-sm transition-all duration-200 ease-out"
       data-dropdown-type="theme"
       
-    ><button data-theme="light" class="text-accent-foreground hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground flex w-full items-center rounded-md px-4 py-2 text-sm transition-all duration-200 ease-out focus:outline-none"><svg class="h-5 w-5 mr-3 h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+    ><button data-theme="light" class="text-accent-foreground hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground flex w-full items-center rounded-md px-4 py-2 text-sm transition-all duration-200 ease-out focus:outline-none"><svg class="h-5 w-5 mr-3 h-4 w-4" aria-label="亮色" fill="none" stroke="currentColor" viewBox="0 0 24 24">
   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" />
 </svg>
-<span></span></button><button data-theme="dark" class="text-accent-foreground hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground flex w-full items-center rounded-md px-4 py-2 text-sm transition-all duration-200 ease-out focus:outline-none"><svg class="h-5 w-5 mr-3 h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+<span>亮色</span></button><button data-theme="dark" class="text-accent-foreground hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground flex w-full items-center rounded-md px-4 py-2 text-sm transition-all duration-200 ease-out focus:outline-none"><svg class="h-5 w-5 mr-3 h-4 w-4" aria-label="暗色" fill="none" stroke="currentColor" viewBox="0 0 24 24">
   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" />
 </svg>
-<span></span></button><button data-theme="system" class="text-accent-foreground hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground flex w-full items-center rounded-md px-4 py-2 text-sm transition-all duration-200 ease-out focus:outline-none"><svg class="h-5 w-5 mr-3 h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+<span>暗色</span></button><button data-theme="system" class="text-accent-foreground hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground flex w-full items-center rounded-md px-4 py-2 text-sm transition-all duration-200 ease-out focus:outline-none"><svg class="h-5 w-5 mr-3 h-4 w-4" aria-label="跟随系统" fill="none" stroke="currentColor" viewBox="0 0 24 24">
   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
 </svg>
-<span></span></button></div>
+<span>跟随系统</span></button></div>
   </div>
       </div>
     </div>
@@ -510,7 +549,7 @@
   id="mobile-nav-panel"
   class="mt-2 hidden md:hidden"
   role="navigation"
-  aria-label=""
+  aria-label="菜单"
   aria-hidden="true"
   tabindex="-1"
 >
@@ -539,12 +578,12 @@
             
           >
             
-              <svg class="h-5 w-5" aria-label="posts" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <svg class="h-5 w-5" aria-label="文章" fill="none" stroke="currentColor" viewBox="0 0 24 24">
   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 20H5a2 2 0 01-2-2V6a2 2 0 012-2h10a2 2 0 012 2v1m2 13a2 2 0 01-2-2V7m2 13a2 2 0 002-2V9a2 2 0 00-2-2h-2m-4-3H9M7 16h6M7 8h6v4H7V8z" />
 </svg>
 
             
-            <span>posts</span>
+            <span>文章</span>
           </a>
         
       
@@ -566,12 +605,12 @@
             
           >
             
-              <svg class="h-5 w-5" aria-label="categories" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <svg class="h-5 w-5" aria-label="分类" fill="none" stroke="currentColor" viewBox="0 0 24 24">
   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10" />
 </svg>
 
             
-            <span>categories</span>
+            <span>分类</span>
           </a>
         
       
@@ -593,12 +632,12 @@
             
           >
             
-              <svg class="h-5 w-5" aria-label="tags" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <svg class="h-5 w-5" aria-label="标签" fill="none" stroke="currentColor" viewBox="0 0 24 24">
   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 7h.01M7 3h5c.512 0 1.024.195 1.414.586l7 7a2 2 0 010 2.828l-7 7a2 2 0 01-2.828 0l-7-7A1.994 1.994 0 013 12V7a4 4 0 014-4z" />
 </svg>
 
             
-            <span>tags</span>
+            <span>标签</span>
           </a>
         
       
@@ -620,12 +659,12 @@
             
           >
             
-              <svg class="h-5 w-5" aria-label="archives" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <svg class="h-5 w-5" aria-label="归档" fill="none" stroke="currentColor" viewBox="0 0 24 24">
   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 8h14M5 8a2 2 0 110-4h14a2 2 0 110 4M5 8v10a2 2 0 002 2h10a2 2 0 002-2V8m-9 4h4" />
 </svg>
 
             
-            <span>archives</span>
+            <span>归档</span>
           </a>
         
       
@@ -639,7 +678,7 @@
 
       <div class="px-4 py-6">
         
-  <nav class="breadcrumb mb-4 py-1 md:mb-6" aria-label="">
+  <nav class="breadcrumb mb-4 py-1 md:mb-6" aria-label="面包屑导航">
     <ol
       class="text-muted-foreground scrollbar-hide flex items-center space-x-1 overflow-x-auto py-1 text-sm whitespace-nowrap md:space-x-2"
     >
@@ -713,9 +752,11 @@
 
 <div class="post-meta mb-8">
   
-  <h1 class="text-foreground mb-6 text-3xl leading-tight font-bold md:text-4xl">
-    《豫灾剪影》较全的几篇
-  </h1>
+  
+    <h1 class="text-foreground mb-6 text-3xl leading-tight font-bold md:text-4xl">
+      《豫灾剪影》较全的几篇
+    </h1>
+  
 
   
   
@@ -730,15 +771,17 @@
           
           <div class="text-muted-foreground flex flex-wrap items-center gap-3 text-sm mb-4">
             
+            
             <div class="flex items-center gap-2">
               <svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
 </svg>
 
               <time datetime="2026-06-20">
-                June 20, 2026
+                2026年6月20日
               </time>
             </div>
+            
 
             
             
@@ -747,7 +790,7 @@
   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
 </svg>
 
-              <span></span>
+              <span>74 分钟</span>
             </div>
             
 
@@ -758,7 +801,7 @@
   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h7" />
 </svg>
 
-              <span></span>
+              <span>36833 字</span>
             </div>
             
           </div>
@@ -823,7 +866,7 @@
     <p>原文抄录自 《1942河南大饥荒》。</p>
 <hr>
 <p>特派记者“流萤”系列灾区通讯</p>
-<h2 id="无尽长的死亡线">无尽长的死亡线<a href="#%e6%97%a0%e5%b0%bd%e9%95%bf%e7%9a%84%e6%ad%bb%e4%ba%a1%e7%ba%bf" class="heading-anchor" aria-label=""><svg class="h-4 w-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></g></svg></a></h2><p>——记陇海线上的灾胞</p>
+<h2 id="无尽长的死亡线">无尽长的死亡线<a href="#%e6%97%a0%e5%b0%bd%e9%95%bf%e7%9a%84%e6%ad%bb%e4%ba%a1%e7%ba%bf" class="heading-anchor" aria-label="链接到此部分"><svg class="h-4 w-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></g></svg></a></h2><p>——记陇海线上的灾胞</p>
 <p>《前锋报》特派驻洛记者 李蕤</p>
 <p>1943年2月19日、20日连载</p>
 <p>（一）</p>
@@ -856,7 +899,7 @@
 <p>河南有三千万人，把沦陷区的不自由同胞除下，还有一千八百万人。这一千八百万人，在抗战中是一支很大的力量。连年军粮第一、兵役第一，在今年这样严重的灾情下，征实征购还是第一。无论如何，也应该让这一千多万人活下去，不应让他们再像热锅上的蚂蚁一般在无尽长的死亡线上挣扎。</p>
 <hr>
 <p>灾区通讯之一</p>
-<h2 id="喑哑的呼声">喑哑的呼声<a href="#%e5%96%91%e5%93%91%e7%9a%84%e5%91%bc%e5%a3%b0" class="heading-anchor" aria-label=""><svg class="h-4 w-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></g></svg></a></h2><p>本报特派员 流萤</p>
+<h2 id="喑哑的呼声">喑哑的呼声<a href="#%e5%96%91%e5%93%91%e7%9a%84%e5%91%bc%e5%a3%b0" class="heading-anchor" aria-label="链接到此部分"><svg class="h-4 w-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></g></svg></a></h2><p>本报特派员 流萤</p>
 <p>《前锋报》1943年4月6日</p>
 <p>亲爱的读者：你们必须密切地注视这件事实，并且想法改变这件事实，便是：河南一百一十县的三千万人，十分之九在饥寒交迫中，正在大批地死亡着，继续不断地死亡着。</p>
 <p>河南农民，是一头牛，一只骆驼。忠诚、驯顺、忍耐，是河南农民的特点。抗战六年来，河南农民抢先拿出自己所有的一切交给国家，默默地捧出汗水换来的粮食，默默捧出自己的儿子。谁都知道河南兵役第一，征购征实第一。</p>
@@ -881,7 +924,7 @@
 <p>三月廿七日于偃师</p>
 <hr>
 <p>灾区通讯之二</p>
-<h2 id="走出灾民的大聚口">走出灾民的“大聚口”<a href="#%e8%b5%b0%e5%87%ba%e7%81%be%e6%b0%91%e7%9a%84%e5%a4%a7%e8%81%9a%e5%8f%a3" class="heading-anchor" aria-label=""><svg class="h-4 w-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></g></svg></a></h2><p>本报特派员 流萤</p>
+<h2 id="走出灾民的大聚口">走出灾民的“大聚口”<a href="#%e8%b5%b0%e5%87%ba%e7%81%be%e6%b0%91%e7%9a%84%e5%a4%a7%e8%81%9a%e5%8f%a3" class="heading-anchor" aria-label="链接到此部分"><svg class="h-4 w-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></g></svg></a></h2><p>本报特派员 流萤</p>
 <p>《前锋报》1943年4月8日</p>
 <p>洛阳，这个号称“九朝古都”的历史名城，今天成为河南三千万农民向外逃荒的“大聚口”。</p>
 <p>由于开封已经沦陷，黄河已经“改道”，在黄河新道西岸的邙山陵上，日本兵已经建立了可以“拊郑州之背”的桥头堡。河南半壁河山，都化作了遍地烽火和遍地饥馑的人间地狱，只有从洛阳到西安，还有一段铁路通向“西省”，通向“大后方”。于是，成千累万的灾民，便像热锅底的蚂蚁一样，从四面八方向洛阳汇聚，希冀冲出死亡圈，让火车把自己带到可以活命的地方。</p>
@@ -909,7 +952,7 @@
 <p>这三条尸身，大约是天将黄昏时看到的缘故，他们一直贴在我的脑子上，尤其那披散在地面上的黑发，我一静下来，便飘在我的眼前。</p>
 <hr>
 <p>灾区通讯之三</p>
-<h2 id="风砂七十里">风砂七十里<a href="#%e9%a3%8e%e7%a0%82%e4%b8%83%e5%8d%81%e9%87%8c" class="heading-anchor" aria-label=""><svg class="h-4 w-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></g></svg></a></h2><p>本报特派员 流萤</p>
+<h2 id="风砂七十里">风砂七十里<a href="#%e9%a3%8e%e7%a0%82%e4%b8%83%e5%8d%81%e9%87%8c" class="heading-anchor" aria-label="链接到此部分"><svg class="h-4 w-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></g></svg></a></h2><p>本报特派员 流萤</p>
 <p>《前锋报》1943年4月10日</p>
 <p>（一）蒺藜也能做“馍”</p>
 <p>一到偃师县城，便看到一个和平常不同的现象，那就是粮行的增多。许多从前卖京货、开旅馆的所在，都变成了粮行。长街的粮食簸箩，一个挨着一个，远远望过去，宛如万朵花树齐开，真好像丰年一样。而卖小吃的人，也从城里一直蔓延到关外，连大路边也成了摊贩集中的场所。</p>
@@ -956,7 +999,7 @@
 <p>三月三十日于汜水</p>
 <hr>
 <p>灾区通讯之四</p>
-<h2 id="从巩县到汜水">从巩县到汜水<a href="#%e4%bb%8e%e5%b7%a9%e5%8e%bf%e5%88%b0%e6%b1%9c%e6%b0%b4" class="heading-anchor" aria-label=""><svg class="h-4 w-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></g></svg></a></h2><p>本报特派员 流萤</p>
+<h2 id="从巩县到汜水">从巩县到汜水<a href="#%e4%bb%8e%e5%b7%a9%e5%8e%bf%e5%88%b0%e6%b1%9c%e6%b0%b4" class="heading-anchor" aria-label="链接到此部分"><svg class="h-4 w-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></g></svg></a></h2><p>本报特派员 流萤</p>
 <p>《前锋报》1943年4月14日</p>
 <p>（一）数百里外运苲草</p>
 <p>巩县的旧城东边，因为地势太低，那一片早成了一个湖泊，每一次当我从那里经过的时候，湖面上照例飘荡着许多打鱼的小舟，湖岸上满是花红柳绿的捣衣女子，夏天更是满湖莲花，游人如织。</p>
@@ -984,7 +1027,7 @@
 <p>听他们说，专吃这东西的人，拉不下大便，日子久了，便肚皮膨胀，脸皮浮肿。但他们好像谁也不管这些，因为他们捱过一天是一天呀！</p>
 <hr>
 <p>灾区通讯之五</p>
-<h2 id="惊人的古董集">惊人的“古董集”<a href="#%e6%83%8a%e4%ba%ba%e7%9a%84%e5%8f%a4%e8%91%a3%e9%9b%86" class="heading-anchor" aria-label=""><svg class="h-4 w-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></g></svg></a></h2><p>本报特派员 流萤</p>
+<h2 id="惊人的古董集">惊人的“古董集”<a href="#%e6%83%8a%e4%ba%ba%e7%9a%84%e5%8f%a4%e8%91%a3%e9%9b%86" class="heading-anchor" aria-label="链接到此部分"><svg class="h-4 w-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></g></svg></a></h2><p>本报特派员 流萤</p>
 <p>《前锋报》1943年4月15日</p>
 <p>（一）悲惨的“繁荣”</p>
 <p>在洛阳的时候，我曾惊叹过那里“东北运动场”野集市的畸形繁荣。但越往东行，越发现洛阳的野集市只不过是大巫中的小巫。偃师、巩县、汜水、荥阳，几乎各个小县都有，同时，任何地方，它的规模都较洛阳的为大。</p>
@@ -1005,7 +1048,7 @@
 <p>四月三日于荥阳</p>
 <hr>
 <p>灾区通讯之六</p>
-<h2 id="雨天绝粮记">雨天绝粮记<a href="#%e9%9b%a8%e5%a4%a9%e7%bb%9d%e7%b2%ae%e8%ae%b0" class="heading-anchor" aria-label=""><svg class="h-4 w-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></g></svg></a></h2><p>本报特派员 流萤</p>
+<h2 id="雨天绝粮记">雨天绝粮记<a href="#%e9%9b%a8%e5%a4%a9%e7%bb%9d%e7%b2%ae%e8%ae%b0" class="heading-anchor" aria-label="链接到此部分"><svg class="h-4 w-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></g></svg></a></h2><p>本报特派员 流萤</p>
 <p>《前锋报》1943年4月16日</p>
 <p>（一）凄惨的乡村</p>
 <p>现在让我浪费一点笔墨，写一写我的故乡。因为这里多山，属于丘陵地带，土质瘠薄，一向是汜水最容易受旱灾的地方。它是汜水乡村的一个细胞，它代表汜水乡村一般的情况。而同时，我的家，便不折不扣是一个灾民的家庭。</p>
@@ -1039,7 +1082,7 @@
 <p>我离开乡村时，第一行政区专员区署正雷厉风行的查封大户的存粮，积极展开分保自救的工作，王专员更躬亲往各县视察。这种行政义举，实在是灾民的福音。政府是民众的保障，官吏是民众的父母。把“灾荒财”从土豪劣绅的腹中挖出来救济民众，实在是刻不容缓的事。</p>
 <hr>
 <p>灾区通讯之七</p>
-<h2 id="友情的巨手">友情的巨手<a href="#%e5%8f%8b%e6%83%85%e7%9a%84%e5%b7%a8%e6%89%8b" class="heading-anchor" aria-label=""><svg class="h-4 w-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></g></svg></a></h2><p>——记郑州国际救济会</p>
+<h2 id="友情的巨手">友情的巨手<a href="#%e5%8f%8b%e6%83%85%e7%9a%84%e5%b7%a8%e6%89%8b" class="heading-anchor" aria-label="链接到此部分"><svg class="h-4 w-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></g></svg></a></h2><p>——记郑州国际救济会</p>
 <p>本报特派员 流萤</p>
 <p>《前锋报》1943年4月17日</p>
 <p>在彭赍光司令处正谈关于郑州的灾情和救灾、物价和限价等问题的时候，从门外进来两位匆忙的来客，一胖一瘦，一老一少。老的较胖的是外国人，少的较瘦的是中国人，他们脸上都挂着汗珠，一进来，便直截了当地和彭司令说：“我们的谈话很快，只要两分钟便可以谈完。”</p>
@@ -1070,7 +1113,7 @@
 <p>四月十日于郑州</p>
 <p>灾区通讯之八</p>
 <hr>
-<h2 id="死角的弦上">“死角”的弦上<sup id="fnref:5"><a href="#fn:5" class="footnote-ref" role="doc-noteref">5</a></sup><a href="#%e6%ad%bb%e8%a7%92%e7%9a%84%e5%bc%a6%e4%b8%8a" class="heading-anchor" aria-label=""><svg class="h-4 w-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></g></svg></a></h2><p>——郑州灾情一瞥</p>
+<h2 id="死角的弦上">“死角”的弦上<sup id="fnref:5"><a href="#fn:5" class="footnote-ref" role="doc-noteref">5</a></sup><a href="#%e6%ad%bb%e8%a7%92%e7%9a%84%e5%bc%a6%e4%b8%8a" class="heading-anchor" aria-label="链接到此部分"><svg class="h-4 w-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></g></svg></a></h2><p>——郑州灾情一瞥</p>
 <p>本报特派员 流萤</p>
 <p>《前锋报》1943年4月21日</p>
 <p>（一）各处灾民的总汇</p>
@@ -1109,7 +1152,7 @@
 <p>古书载“人自相食”、“易子而食”的事，我们读着的时候，常为之毛骨悚然，不意我们今天却目睹了“亲子相食”的事。这真是惨绝人寰，不应出现在二十世纪的惨剧。</p>
 <hr>
 <p>灾区通讯之九</p>
-<h2 id="灾村风景线">灾村风景线<sup id="fnref:6"><a href="#fn:6" class="footnote-ref" role="doc-noteref">6</a></sup><a href="#%e7%81%be%e6%9d%91%e9%a3%8e%e6%99%af%e7%ba%bf" class="heading-anchor" aria-label=""><svg class="h-4 w-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></g></svg></a></h2><p>本报特派员 流萤</p>
+<h2 id="灾村风景线">灾村风景线<sup id="fnref:6"><a href="#fn:6" class="footnote-ref" role="doc-noteref">6</a></sup><a href="#%e7%81%be%e6%9d%91%e9%a3%8e%e6%99%af%e7%ba%bf" class="heading-anchor" aria-label="链接到此部分"><svg class="h-4 w-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></g></svg></a></h2><p>本报特派员 流萤</p>
 <p>《前锋报》1943年4月</p>
 <p>（一） 夜半树梢上的黑影</p>
 <p>春到了人间了，瘦干的土地上，又钻出了草的青芽，折秃了顶的树干上，又发出了稀疏的小叶。</p>
@@ -1142,7 +1185,7 @@
 <p>严重的灾荒，好似从海洋上越过、横卷一切的飓风一样，它改变了社会生活的正常轨道。饥饿的火焰，烧毁了人类的优美本性，这是非常可怕的事！</p>
 <hr>
 <p>灾区通讯之十</p>
-<h2 id="郑州救灾运动的春潮">郑州救灾运动的春潮<sup id="fnref:7"><a href="#fn:7" class="footnote-ref" role="doc-noteref">7</a></sup><a href="#%e9%83%91%e5%b7%9e%e6%95%91%e7%81%be%e8%bf%90%e5%8a%a8%e7%9a%84%e6%98%a5%e6%bd%ae" class="heading-anchor" aria-label=""><svg class="h-4 w-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></g></svg></a></h2><p>本报特派员 流萤</p>
+<h2 id="郑州救灾运动的春潮">郑州救灾运动的春潮<sup id="fnref:7"><a href="#fn:7" class="footnote-ref" role="doc-noteref">7</a></sup><a href="#%e9%83%91%e5%b7%9e%e6%95%91%e7%81%be%e8%bf%90%e5%8a%a8%e7%9a%84%e6%98%a5%e6%bd%ae" class="heading-anchor" aria-label="链接到此部分"><svg class="h-4 w-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></g></svg></a></h2><p>本报特派员 流萤</p>
 <p>《前锋报》1943年5月5日、6日连载</p>
 <p>时序踏入四月，灾荒比任何时期都更严重，奸商豪富在盘算着利用这仅有的一两个月，再吸干些穷人的血。而我们的政府，则是在各种困难情况中，想尽法子加强救济，扩大救济，希望把未死的人从死亡的巨口中拖出来。</p>
 <p>我到郑州的时候，那里的救灾已经从零星的施舍而变为有计划的运动。党政军学及社会团体，视线力量都集中在一件事情上——省政府一再急如星火的下令，把救灾运动作为目前行政的中心工作。</p>
@@ -1181,7 +1224,7 @@
 <p>综合郑州的救济机关，可以救济一万一千人不死，但非救不活的灾民，郑县在五万以上，那么便是三分之二还在饥寒交迫中，而从邻县逃往的流浪灾民，还在这个数目以外。希望各方的力量，帮助这个救灾运动的发展扩大，使广大灾民熬过灾荒路程，使十分之九的人们都能够不死，为抗建大业继续贡献力量。</p>
 <hr>
 <p>灾区通讯之十一</p>
-<h2 id="粮仓里的骨山">粮仓里的骨山<sup id="fnref1:7"><a href="#fn:7" class="footnote-ref" role="doc-noteref">7</a></sup><a href="#%e7%b2%ae%e4%bb%93%e9%87%8c%e7%9a%84%e9%aa%a8%e5%b1%b1" class="heading-anchor" aria-label=""><svg class="h-4 w-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></g></svg></a></h2><p>——汝南的灾情和大贪污案</p>
+<h2 id="粮仓里的骨山">粮仓里的骨山<sup id="fnref1:7"><a href="#fn:7" class="footnote-ref" role="doc-noteref">7</a></sup><a href="#%e7%b2%ae%e4%bb%93%e9%87%8c%e7%9a%84%e9%aa%a8%e5%b1%b1" class="heading-anchor" aria-label="链接到此部分"><svg class="h-4 w-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></g></svg></a></h2><p>——汝南的灾情和大贪污案</p>
 <p>本报特派员 流萤</p>
 <p>《前锋报》1943年5月15日、16日连载</p>
 <p>（一）</p>
@@ -1214,7 +1257,7 @@
 <p>“人民罄其所有，贡献国家”，那是应该的。为了抗战建国大业的完成，他们什么话都没有说。但是，贪官却戴着国家的帽子，利用政府交给他的职权，在人民的沉重负担外更剔尽他们的骨缝，把千万人的脂膏都吞进他一二人的肚子，这是如何可怕的事！</p>
 <p>李蕤（1911—1998），原名赵悔深，“流萤”是其笔名之一。生于河南荥阳一个贫苦农民家庭。1929年考入洛阳“省立第四师范”，1932年入开封“省立第一师范”。1935年加入北方“左联”，1936年进河南大学文史系。抗战爆发后，先后任郑州《大刚报》、洛阳《阵中日报》、南阳《前锋报》、开封《前锋报·中国时报》联合版记者、副刊编辑、主笔等。1948年8月携全家进入豫西解放区。新中国成立后任河南省文联副主席。1952年入朝采访，1953年调往武汉，任中南文联及中南作家协会副主席。20世纪80年代任武汉市作协主席。出版过《李蕤文集》四卷等。</p>
 <hr>
-<h2 id="豫灾剪影序言">《豫灾剪影》序言<a href="#%e8%b1%ab%e7%81%be%e5%89%aa%e5%bd%b1%e5%ba%8f%e8%a8%80" class="heading-anchor" aria-label=""><svg class="h-4 w-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></g></svg></a></h2><p>李静之</p>
+<h2 id="豫灾剪影序言">《豫灾剪影》序言<a href="#%e8%b1%ab%e7%81%be%e5%89%aa%e5%bd%b1%e5%ba%8f%e8%a8%80" class="heading-anchor" aria-label="链接到此部分"><svg class="h-4 w-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></g></svg></a></h2><p>李静之</p>
 <p>我们中国所遭的战祸是史所未有，我们河南所遭的大灾也是史无前例，在国家遭受空前大战中，河南遭受了空前大灾，这是河南的浩劫，也是国家的不幸。从前在史书上，古人诗文中看到的形容灾荒惨状的记载，总以为是文人过甚其词，现在竟有事实把不能令人相信的记载状述都一一为之证实。同时使我们知道河南这次灾情之惨，确是空前。对这惨重的灾情，我们不但呼吁救济，而实地看看，据实择要记载，写成实录，使远方人、后代人借以明了河南灾情的实相，并替国家保留几片段史料，也是我们义不容辞的职责。</p>
 <p>灾遍全省，区域广大，处处都看到，势不可能，只有择灾情最重的陇海线洛阳至郑州那一段，去看看，豹窥一斑，全可概见。</p>
 <p>本社同人对于救灾，都很热心，远驻洛阳的特派记者赵悔深先生自也不例外。我们有了这个意思，写信同他商量，他就不避苦难慨然应允，愿单骑到灾情严重的郑州、荥、汜去看看。这本小册子，就是悔深先生深入灾区的见闻实录。</p>
@@ -1223,7 +1266,7 @@
 <p>民国三十二年五月四日</p>
 <p>李静之（1901—1988），原名李海晏，字静之。河南南阳地区方城人。1928年考入北京大学国学门研究生。1942年初创办《前锋报》，任社长。1942年河南大灾中，委派特约记者赵悔深赴灾区采访，在《前锋报》上连载了10多篇反映大灾惨况的通讯报道，组织撰写了近百篇呼吁救灾的社评。新中国成立后，为“民革”成员。20世纪80年代以后，任河南省政协副秘书长、“民革”中央监察委员会委员、河南省文史资料研究委员会副主任等。</p>
 <hr>
-<h2 id="豫灾剪影重印后记">《豫灾剪影》重印后记<a href="#%e8%b1%ab%e7%81%be%e5%89%aa%e5%bd%b1%e9%87%8d%e5%8d%b0%e5%90%8e%e8%ae%b0" class="heading-anchor" aria-label=""><svg class="h-4 w-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></g></svg></a></h2><p>李 蕤</p>
+<h2 id="豫灾剪影重印后记">《豫灾剪影》重印后记<a href="#%e8%b1%ab%e7%81%be%e5%89%aa%e5%bd%b1%e9%87%8d%e5%8d%b0%e5%90%8e%e8%ae%b0" class="heading-anchor" aria-label="链接到此部分"><svg class="h-4 w-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></g></svg></a></h2><p>李 蕤</p>
 <p>1942年，河南发生一次大旱灾。那次旱灾，河南人民被活活饿死的，据官方的数字，是300万人（有的讲达500万人）。当时执政的国民党政府，不仅见死不救，照旧征粮征兵，而且趁火打劫，加强剥削压榨，把千百万人民驱入加速死亡的深渊。千百万无告的人民，像大火中的蝼蚁、严霜中的黄叶一样，辗转在死亡线上。灾区范围之大，包括中原半壁河山，从京汉线到陇海线，川流不息，尽是衣服褴褛、面黄肌瘦、携儿带女、辗转向西奔逃的人流，构成一条无尽长的死亡线。</p>
 <p>当时，重庆《大公报》有一位记者，名张高峰，他从华北回来，经过河南，从洛阳到叶县沿途，目睹了灾情的严重，写了一篇通讯，透露了灾情的信息。重庆《大公报》社根据这篇通讯，写了一篇社论，题为《看重庆，念中原》，大意是说重庆花天酒地，纸醉金迷，而中原却有大批灾民饿死，希望当局予以注意。《大公报》因此触怒了国民党当局，被责令停刊三天。豫籍国民参政员郭仲隗在重庆开会，因为大声疾呼为灾民请命，弹劾了孔祥熙的荒淫无度和汤恩伯在河南的暴政，汤恩伯恼羞成怒，在郭仲隗先生由渝返豫途中埋伏许多特务，企图对郭进行暗杀。在这种白色恐怖的气氛笼罩之下，河南300万人民饿死之前连呐喊几声的权利也被剥夺了。“无声的死亡是人间最悲惨的事”，而这死亡的不是一两个人，而是几百万人。</p>
 <p>就在这个时候，南阳《前锋报》给我写信，聘我作为“特派记者”，到灾区看看，写一些关于灾区情况的报告。</p>
@@ -1294,14 +1337,14 @@
       
       <div class="min-w-0 flex-1">
         <h3 class="text-foreground mb-2 text-lg font-semibold">
-          
+          版权声明
         </h3>
 
         <div class="text-muted-foreground space-y-2 text-sm">
           
           
             <p>
-              <strong>:</strong>
+              <strong>作者:</strong>
               Entropy Decrease
             </p>
           
@@ -1309,7 +1352,7 @@
 
           
           <p>
-            <strong>:</strong>
+            <strong>链接:</strong>
             <a
               href="https://entropydecrease.github.io/posts/%E8%B1%AB%E7%81%BE%E5%89%AA%E5%BD%B1%E8%BE%83%E5%85%A8%E7%9A%84%E5%87%A0%E7%AF%87/"
               class="text-primary hover:text-primary/80 break-all hyphens-auto transition-colors duration-200"
@@ -1320,7 +1363,7 @@
 
           
           <p>
-            <strong>:</strong>
+            <strong>许可证:</strong>
             
               <a
                 href="https://creativecommons.org/licenses/by-nc-sa/4.0/"
@@ -1369,7 +1412,7 @@
   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
 </svg>
                 <span class="text-muted-foreground text-sm font-medium">
-                  
+                  上一篇
                 </span>
               </div>
 
@@ -1386,7 +1429,7 @@
 </svg>
 
               <time datetime="2026-06-15">
-                6/15/26
+                26/6/15
               </time>
             </div>
           </a>
@@ -1403,7 +1446,7 @@
             <div>
               <div class="mb-3 flex items-center justify-end gap-3">
                 <span class="text-muted-foreground text-sm font-medium">
-                  
+                  下一篇
                 </span>
                 <svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
@@ -1419,7 +1462,7 @@
 
             <div class="text-muted-foreground mt-auto flex items-center justify-end gap-2 text-xs">
               <time datetime="2026-06-20">
-                6/20/26
+                26/6/20
               </time>
               <svg class="h-3 w-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
@@ -1451,7 +1494,7 @@
   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1" />
 </svg>
       <h2 class="text-foreground text-2xl font-bold">
-        
+        相关内容
       </h2>
     </div>
 
@@ -1667,7 +1710,7 @@
   class="pointer-events-none fixed bottom-4 left-1/2 z-9999 w-fit -translate-x-1/2 translate-y-24 opacity-0 transition-all duration-300 ease-out sm:right-0 sm:left-0 sm:mx-auto sm:translate-x-0"
   data-dock-mode="float"
   role="toolbar"
-  aria-label=""
+  aria-label="快捷操作工具栏"
 >
   <nav
     class="border-border bg-card/80 scrollbar-hide xs:px-3 xs:py-2 mx-auto flex max-w-[calc(100vw-2rem)] min-w-fit items-center justify-center overflow-x-auto rounded-2xl border px-4 py-3 shadow-lg backdrop-blur-sm sm:px-4 sm:py-3"
@@ -1677,15 +1720,15 @@
       <button
         id="dock-back"
         class="text-muted-foreground hover:text-primary hover:bg-primary/10 focus:ring-primary/20 xs:px-2 xs:py-1.5 flex shrink-0 items-center gap-2 rounded-lg px-3 py-2 text-sm font-medium transition-all duration-300 ease-out hover:-translate-y-0.5 hover:scale-105 focus:ring-2 focus:outline-none sm:px-3 sm:py-2"
-        title=""
-        aria-label=""
+        title="返回"
+        aria-label="返回"
       >
         <svg class="h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
   <path d="m12 19-7-7 7-7"/>
   <path d="M19 12H5"/>
 </svg>
 
-        <span class="hidden sm:inline"></span>
+        <span class="hidden sm:inline">返回</span>
       </button>
 
       
@@ -1696,14 +1739,14 @@
     <button
       id="dock-search"
       class="text-muted-foreground hover:text-primary hover:bg-primary/10 focus:ring-primary/20 xs:px-3 xs:py-1.5 flex shrink-0 items-center gap-2 rounded-lg px-4 py-2 text-sm font-medium transition-all duration-300 ease-out hover:-translate-y-0.5 hover:scale-105 focus:ring-2 focus:outline-none sm:px-4 sm:py-2"
-      title=""
-      aria-label=""
+      title="搜索"
+      aria-label="搜索"
     >
       <svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m21 21-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
 </svg>
 
-      <span class="hidden md:inline"></span>
+      <span class="hidden md:inline">搜索</span>
     </button>
 
     
@@ -1718,14 +1761,14 @@
     <button
       id="dock-top"
       class="text-muted-foreground hover:text-primary hover:bg-primary/10 focus:ring-primary/20 xs:px-2 xs:py-1.5 flex shrink-0 items-center gap-2 rounded-lg px-3 py-2 text-sm font-medium transition-all duration-300 ease-out hover:-translate-y-0.5 hover:scale-105 focus:ring-2 focus:outline-none sm:px-3 sm:py-2"
-      title=""
-      aria-label=""
+      title="返回顶部"
+      aria-label="返回顶部"
     >
       <svg class="h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
   <path d="m18 15-6-6-6 6"/>
 </svg>
 
-      <span class="hidden sm:inline"></span>
+      <span class="hidden sm:inline">顶部</span>
     </button>
   </nav>
 </div>
@@ -1751,19 +1794,32 @@
 
       <aside
     id="toc-container"
-    class="toc-center"
-    data-position="center"
+    class="toc-side"
+    data-position="side"
   >
-      <div
-        id="toc-center"
-        class="pointer-events-none fixed top-28 right-0 left-0 z-40 mx-auto w-full max-w-4xl px-4 transition-all duration-300"
-      >
-        <div class="pointer-events-auto relative mx-auto w-fit">
-          <button
-            id="toc-center-toggle"
-            class="bg-card/80 border-border text-muted-foreground hover:text-primary hover:bg-primary/10 ring-offset-background focus-visible:ring-ring flex cursor-pointer items-center gap-2 rounded-full border px-4 py-1.5 text-sm shadow-sm backdrop-blur-sm transition-colors focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:outline-none"
-          >
-            <svg class="h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <div id="toc-layer">
+        <div id="toc-anchor">
+          <div id="toc-side">
+            
+            <div
+              id="toc-rail"
+              class="scrollbar-hide"
+              role="button"
+              tabindex="0"
+              aria-controls="toc-panel"
+              aria-expanded="false"
+              aria-label="目录"
+            ></div>
+
+            
+            <div id="toc-trigger-wrap">
+              <button
+                id="toc-trigger"
+                class="bg-card/80 border-border text-muted-foreground hover:text-primary hover:bg-primary/10 ring-offset-background focus-visible:ring-ring flex cursor-pointer items-center gap-2 rounded-full border px-4 py-1.5 text-sm shadow-sm backdrop-blur-sm transition-colors focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:outline-none"
+                aria-controls="toc-panel"
+                aria-expanded="false"
+              >
+                <svg class="h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
   <line x1="8" x2="21" y1="6" y2="6"/>
   <line x1="8" x2="21" y1="12" y2="12"/>
   <line x1="8" x2="21" y1="18" y2="18"/>
@@ -1772,22 +1828,64 @@
   <line x1="3" x2="3.01" y1="18" y2="18"/>
 </svg>
 
-            <span id="toc-center-title" class="max-w-[200px] truncate"></span>
-            <svg class="h-3 w-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <span id="toc-trigger-title" class="max-w-[200px] truncate">目录</span>
+                <svg class="h-3 w-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
 </svg>
-          </button>
+              </button>
+            </div>
 
-          
-          <div
-            id="toc-center-dropdown"
-            class="bg-card border-border scrollbar-hide absolute top-full left-1/2 mt-2 hidden max-h-[60vh] w-[280px] origin-top -translate-x-1/2 scale-95 overflow-y-auto rounded-xl border p-4 opacity-0 shadow-lg transition-all"
-          >
-            <div
-              id="toc-center-content"
-              class="[&_a]:text-muted-foreground [&_a:hover]:bg-primary/10 [&_a:hover]:text-primary [&_a.active]:bg-primary/10 [&_a.active]:text-primary text-sm [&_a]:block [&_a]:truncate [&_a]:rounded-md [&_a]:px-2 [&_a]:py-1 [&_a]:transition-colors [&_a.active]:font-medium [&_li]:my-1.5 [&_nav>ul]:pl-0 [&_ul]:list-none [&_ul]:pl-4"
-            >
-              <nav id="TableOfContents">
+            
+            <div id="toc-panel" class="scrollbar-hide overflow-y-auto">
+              <div
+                class="text-foreground mb-3 flex items-center justify-between gap-2 text-sm font-bold"
+              >
+                <span class="truncate">目录</span>
+                <div class="flex shrink-0 items-center gap-1">
+                  <button
+                    id="toc-pin"
+                    class="text-muted-foreground hover:text-primary hover:bg-primary/10 focus-visible:ring-ring cursor-pointer items-center rounded p-1 transition-colors focus-visible:ring-2 focus-visible:outline-none"
+                    aria-pressed="false"
+                    aria-label="固定目录"
+                    title="固定目录"
+                    data-label-pin="固定目录"
+                    data-label-unpin="取消固定目录"
+                  >
+                    <span id="toc-pin-on">
+                      <svg class="h-3 w-3" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <path d="M12 17v5"/>
+  <path d="M9 10.76a2 2 0 0 1-1.11 1.79l-1.78.9A2 2 0 0 0 5 15.24V16a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-.76a2 2 0 0 0-1.11-1.79l-1.78-.9A2 2 0 0 1 15 10.76V7a1 1 0 0 1 1-1 2 2 0 0 0 0-4H8a2 2 0 0 0 0 4 1 1 0 0 1 1 1z"/>
+</svg>
+
+                    </span>
+                    <span id="toc-pin-off">
+                      <svg class="h-3 w-3" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <path d="M12 17v5"/>
+  <path d="M15 9.34V7a1 1 0 0 1 1-1 2 2 0 0 0 0-4H7.89"/>
+  <path d="M9 9v1.76a2 2 0 0 1-1.11 1.79l-1.78.9A2 2 0 0 0 5 15.24V16a1 1 0 0 0 1 1h11"/>
+  <path d="m2 2 20 20"/>
+</svg>
+
+                    </span>
+                  </button>
+                  <button
+                    id="toc-close"
+                    class="text-muted-foreground hover:text-foreground focus-visible:ring-ring cursor-pointer items-center rounded p-1 transition-colors focus-visible:ring-2 focus-visible:outline-none"
+                    aria-label="关闭目录"
+                    title="关闭目录"
+                  >
+                    <svg class="h-3 w-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+</svg>
+
+                  </button>
+                </div>
+              </div>
+              <div
+                id="toc-side-content"
+                class="[&_a]:text-muted-foreground [&_a:hover]:bg-primary/10 [&_a:hover]:text-primary [&_a.active]:bg-primary/10 [&_a.active]:text-primary text-sm [&_a]:block [&_a]:rounded-md [&_a]:px-2 [&_a]:py-1 [&_a]:wrap-break-word [&_a]:whitespace-normal [&_a]:transition-colors [&_a.active]:font-medium [&_li]:my-1.5 [&_nav>ul]:pl-0 [&_ul]:list-none [&_ul]:pl-4"
+              >
+                <nav id="TableOfContents">
   <ul>
     <li><a href="#无尽长的死亡线">无尽长的死亡线</a></li>
     <li><a href="#喑哑的呼声">喑哑的呼声</a></li>
@@ -1805,6 +1903,7 @@
     <li><a href="#豫灾剪影重印后记">《豫灾剪影》重印后记</a></li>
   </ul>
 </nav>
+              </div>
             </div>
           </div>
         </div>
@@ -1834,7 +1933,7 @@
 </svg>
 
     </div>
-    <h2 id="search-title" class="sr-only"></h2>
+    <h2 id="search-title" class="sr-only">搜索</h2>
 
     
     <div class="relative flex-1">
@@ -1842,8 +1941,8 @@
       <button
         id="search-clear"
         class="text-muted-foreground hover:text-foreground hover:bg-muted/50 pointer-events-none absolute top-1/2 left-0 z-10 h-5 w-5 -translate-y-1/2 rounded opacity-0 transition-all duration-200"
-        title=""
-        aria-label=""
+        title="清空"
+        aria-label="清空"
       >
         <svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
@@ -1855,7 +1954,7 @@
       <input
         id="search-input"
         type="text"
-        placeholder=""
+        placeholder="搜索文章..."
         class="text-foreground placeholder:text-muted-foreground w-full border-none bg-transparent pl-8 text-lg outline-none"
         autocomplete="off"
         spellcheck="false"
@@ -1866,8 +1965,8 @@
     <button
       id="search-close"
       class="text-muted-foreground hover:text-foreground hover:bg-muted/50 flex h-6 w-6 items-center justify-center rounded-md p-0.5 transition-all duration-200"
-      title=""
-      aria-label=""
+      title="关闭"
+      aria-label="关闭"
     >
       <svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
@@ -1887,7 +1986,7 @@
 
       </div>
       <h3 class="text-foreground mb-2 text-lg font-semibold">
-        
+        开始搜索
       </h3>
     </div>
 
@@ -1896,7 +1995,7 @@
       <div
         class="mr-3 h-6 w-6 animate-spin rounded-full border-2 border-current border-t-transparent"
       ></div>
-      <span class="text-muted-foreground"></span>
+      <span class="text-muted-foreground">搜索中...</span>
     </div>
 
     
@@ -1912,7 +2011,7 @@
 
       </div>
       <h3 class="text-foreground mb-2 text-lg font-semibold">
-        
+        未找到结果
       </h3>
     </div>
 
@@ -1922,7 +2021,7 @@
       <div
         id="search-stats"
         class="text-muted-foreground border-border border-b px-4 py-3 text-sm"
-        data-count-other=""
+        data-count-other="找到 %d 个结果"
       ></div>
 
       
@@ -1937,20 +2036,20 @@
       <div class="flex items-center gap-2 md:gap-4">
         <div class="flex items-center gap-1">
           <kbd class="bg-muted border-border rounded border px-1.5 py-0.5 text-xs">↑↓</kbd>
-          <span class="hidden sm:inline"></span>
+          <span class="hidden sm:inline">导航</span>
         </div>
         <div class="flex items-center gap-1">
           <kbd class="bg-muted border-border rounded border px-1.5 py-0.5 text-xs">↵</kbd>
-          <span class="hidden sm:inline"></span>
+          <span class="hidden sm:inline">选择</span>
         </div>
         <div class="flex items-center gap-1">
           <kbd class="bg-muted border-border rounded border px-1.5 py-0.5 text-xs">ESC</kbd>
-          <span class="hidden sm:inline"></span>
+          <span class="hidden sm:inline">关闭</span>
         </div>
       </div>
       <div class="search-hint-desktop flex items-center gap-1">
         <kbd class="bg-muted border-border rounded border px-1.5 py-0.5 text-xs">⌘K</kbd>
-        <span></span>
+        <span>快捷键</span>
       </div>
     </div>
   </div>

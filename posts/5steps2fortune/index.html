@@ -1,5 +1,8 @@
-<!doctype html>
-<html lang="zh-CN" data-theme="emerald">
+<!doctype html><html
+  lang="zh-Hans"
+  data-theme="emerald"
+  data-toc-pinned="false"
+>
   <head>
     <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
@@ -21,7 +24,7 @@
   name="author"
   content="Entropy Decrease"
 />
-<meta name="language" content="en-US" />
+<meta name="language" content="zh-CN" />
 
 <meta
   name="robots"
@@ -37,7 +40,7 @@
 	<meta property="og:title" content="5步实现财务自由">
 	<meta property="og:description" content="【个人总结：不值得读。】
 花钱的道路千千万，挣钱的道路就两条：工作，让钱替我们工作。 在交易股票时，崩盘对我们来说，并不是真正的威胁，相反，我们却有可能在股市崩盘时通过股票交易为未来的高收益埋下伏笔。 不要买奢侈品公司的股票，要买与国计民生相关的公司的股票，这种投资是最安全、最有利可图的投资，具有抵抗通货膨胀或者货币改革的优点，还能为你带来收益。 制胜股市 12 原则1、在实践中成长2、锻炼自己的耐心我们需要耐心等待，直到这个时机到来，然后抓住它。">
-	<meta property="og:locale" content="zh_CN">
+	<meta property="og:locale" content="zh_Hans">
 	<meta property="og:type" content="article">
 		<meta property="article:section" content="posts">
 		<meta property="article:published_time" content="2023-12-03T16:42:53+00:00">
@@ -76,8 +79,8 @@
     
       <link
         rel="stylesheet"
-        href="/css/compiled.min.4a6fd33c0e2db207c1646e8a588be381fd817a1b0cd86004cbb040e8dcf50b31.css"
-        integrity="sha256-Sm/TPA4tsgfBZG6KWIvjgf2BehsM2GAEy7BA6Nz1CzE="
+        href="/css/compiled.min.64471d81170139f732efa014a53ac4621daf3b75ac4fc8ad317a4d80f1c66197.css"
+        integrity="sha256-ZEcdgRcBOfcy76AUpTrEYh2vO3WsT8itMXpNgPHGYZc="
         crossorigin="anonymous"
       />
     
@@ -114,8 +117,8 @@
 
 
         <script
-          src="/js/main.f482676046fba6a50f6e6580bd1306489d4fea5f7144231757bf01af2498b168.js"
-          integrity="sha256-9IJnYEb7pqUPbmWAvRMGSJ1P6l9xRCMXV78BrySYsWg="
+          src="/js/main.b003624716b5b9344efafc302bd75df711e73d0da196be724be6daebb2b6964d.js"
+          integrity="sha256-sANiRxa1uTRO&#43;vwwK9dd9xHnPQ2hlr5yS&#43;ba67K2lk0="
           crossorigin="anonymous"
           defer
         ></script>
@@ -123,8 +126,8 @@
 
 
             <script
-              src="/js/toc.3026ef97e410bb3e98d57739bcabc32ac568e9001b2e42385de731663378ae85.js"
-              integrity="sha256-MCbvl&#43;QQuz6Y1Xc5vKvDKsVo6QAbLkI4XecxZjN4roU="
+              src="/js/toc.4f913c419799292f98fd50ecaa57eed9432c9ab55dc7a39c5cc7bb40caf34803.js"
+              integrity="sha256-T5E8QZeZKS&#43;Y/VDsqlfu2UMsmrVdx6OcXMe7QMrzSAM="
               crossorigin="anonymous"
               defer
             ></script>
@@ -141,8 +144,8 @@
 
 
         <script
-          src="/js/dock.fc33c1fd0e0525acdd5b7abed135239608c36a061f3b566fbc9e5841594b11af.js"
-          integrity="sha256-/DPB/Q4FJazdW3q&#43;0TUjlgjDagYfO1ZvvJ5YQVlLEa8="
+          src="/js/dock.8e3addaa9b500c783209ee7837e59045cf14528a5807aedd4cf8e8e6dffbae11.js"
+          integrity="sha256-jjrdqptQDHgyCe54N&#43;WQRc8UUopYB67dTPjo5t/7rhE="
           crossorigin="anonymous"
           defer
         ></script>
@@ -161,9 +164,13 @@
 
 
     
-    <script>(function(){const e=localStorage.getItem("theme")||"system",n=localStorage.getItem("colorScheme")||"emerald";document.documentElement.setAttribute("data-theme",n);function t(){e==="dark"||e==="system"&&window.matchMedia("(prefers-color-scheme: dark)").matches?document.documentElement.classList.add("dark"):document.documentElement.classList.remove("dark")}t(),e==="system"&&window.matchMedia("(prefers-color-scheme: dark)").addEventListener("change",t)})()</script>
+    <script>(function(){const e=document.documentElement,o=localStorage.getItem("theme")||"system",m=localStorage.getItem("colorScheme")||"emerald",n=Number.parseInt(localStorage.getItem("contentWidth"),10),d=Number.isInteger(n)&&n>=40&&n<=90;d&&e.style.setProperty("--content-width",`${n}rem`),e.setAttribute("data-theme",m);const s=localStorage.getItem("tocPinned");(s==="true"||s==="false")&&e.setAttribute("data-toc-pinned",s);const t=Number.parseFloat(getComputedStyle(e).fontSize)||16,u="56rem",i=Number.parseFloat(u);let a=56*t;Number.isFinite(i)&&(a=/r?em\s*$/.test(u)?i*t:i),d&&(a=n*t);const r=e.clientWidth,c=Math.max(0,(r-Math.min(a,r))/2);let l="narrow";r>=64*t&&(c>=13*t?l="wide":c>=2*t&&(l="tight")),e.setAttribute("data-toc-space",l),e.style.setProperty("--toc-gutter",`${Math.round(c)}px`);function h(){o==="dark"||o==="system"&&window.matchMedia("(prefers-color-scheme: dark)").matches?e.classList.add("dark"):e.classList.remove("dark")}h(),o==="system"&&window.matchMedia("(prefers-color-scheme: dark)").addEventListener("change",h)})()</script>
   </head><body class="bg-background text-foreground min-h-screen antialiased">
-    <main class="mx-auto w-full" style="max-width: 56rem">
+    <main
+      id="page-container"
+      class="mx-auto w-full"
+      style="--content-width-base: 56rem; max-width: var(--content-width, var(--content-width-base))"
+    >
       <div
     id="reading-progress-bar"
     class="from-primary to-primary/80 pointer-events-none fixed top-0 left-0 z-50 h-[3px] w-0 bg-linear-to-r transition-[width] duration-150 ease-out"
@@ -199,7 +206,7 @@
     })();
   </script>
 
-      <header class=" px-4 py-6">
+      <header class="sticky top-0 z-50 px-4 py-6">
   <div
     class="border-border bg-card/80 flex items-center rounded-xl border px-6 py-4 shadow-sm backdrop-blur-sm"
   >
@@ -216,7 +223,7 @@
             aria-label="Entropy Decrease"
           >
             <img
-              src="/"
+              src="/images/logo.svg"
               alt="Entropy Decrease"
               class="h-full w-full object-cover"
             />
@@ -245,12 +252,12 @@
                  focus:ring-primary/20 relative flex items-center gap-2 rounded-lg px-4 py-2 text-sm font-medium transition-all duration-300 ease-out hover:-translate-y-0.5 hover:scale-105 focus:ring-2 focus:outline-none"
               >
                 
-                  <svg class="h-5 w-5" aria-label="posts" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <svg class="h-5 w-5" aria-label="文章" fill="none" stroke="currentColor" viewBox="0 0 24 24">
   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 20H5a2 2 0 01-2-2V6a2 2 0 012-2h10a2 2 0 012 2v1m2 13a2 2 0 01-2-2V7m2 13a2 2 0 002-2V9a2 2 0 00-2-2h-2m-4-3H9M7 16h6M7 8h6v4H7V8z" />
 </svg>
 
                 
-                <span>posts</span>
+                <span>文章</span>
               </a>
             
           
@@ -270,12 +277,12 @@
                  focus:ring-primary/20 relative flex items-center gap-2 rounded-lg px-4 py-2 text-sm font-medium transition-all duration-300 ease-out hover:-translate-y-0.5 hover:scale-105 focus:ring-2 focus:outline-none"
               >
                 
-                  <svg class="h-5 w-5" aria-label="categories" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <svg class="h-5 w-5" aria-label="分类" fill="none" stroke="currentColor" viewBox="0 0 24 24">
   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10" />
 </svg>
 
                 
-                <span>categories</span>
+                <span>分类</span>
               </a>
             
           
@@ -295,12 +302,12 @@
                  focus:ring-primary/20 relative flex items-center gap-2 rounded-lg px-4 py-2 text-sm font-medium transition-all duration-300 ease-out hover:-translate-y-0.5 hover:scale-105 focus:ring-2 focus:outline-none"
               >
                 
-                  <svg class="h-5 w-5" aria-label="tags" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <svg class="h-5 w-5" aria-label="标签" fill="none" stroke="currentColor" viewBox="0 0 24 24">
   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 7h.01M7 3h5c.512 0 1.024.195 1.414.586l7 7a2 2 0 010 2.828l-7 7a2 2 0 01-2.828 0l-7-7A1.994 1.994 0 013 12V7a4 4 0 014-4z" />
 </svg>
 
                 
-                <span>tags</span>
+                <span>标签</span>
               </a>
             
           
@@ -320,12 +327,12 @@
                  focus:ring-primary/20 relative flex items-center gap-2 rounded-lg px-4 py-2 text-sm font-medium transition-all duration-300 ease-out hover:-translate-y-0.5 hover:scale-105 focus:ring-2 focus:outline-none"
               >
                 
-                  <svg class="h-5 w-5" aria-label="archives" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <svg class="h-5 w-5" aria-label="归档" fill="none" stroke="currentColor" viewBox="0 0 24 24">
   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 8h14M5 8a2 2 0 110-4h14a2 2 0 110 4M5 8v10a2 2 0 002 2h10a2 2 0 002-2V8m-9 4h4" />
 </svg>
 
                 
-                <span>archives</span>
+                <span>归档</span>
               </a>
             
           
@@ -334,6 +341,38 @@
 
       
       <div class="flex items-center space-x-2">
+        
+        <div class="hidden lg:block"><div class="relative">
+    <button
+      id="content-width-toggle"
+      class="dropdown-toggle border-border bg-background text-muted-foreground hover:text-primary hover:bg-primary/10 focus:ring-primary/20 flex h-10 w-10 items-center justify-center rounded-lg border transition-all duration-300 ease-out hover:scale-105 focus:ring-2 focus:outline-none active:scale-95"
+      data-dropdown-type="content-width"
+      aria-label="调整页面宽度"
+      aria-expanded="false"
+      aria-haspopup="true"
+    ><svg class="h-5 w-5 relative z-10" aria-label="调整页面宽度" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+	<path d="M0 0h24v24H0z" fill="none" />
+	<path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 12H3l3-3m0 6l-3-3m11 0h7l-3-3m0 6l3-3M3 6V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v1M3 18v1a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-1" />
+</svg>
+</button>
+
+    <div
+      id="content-width-dropdown"
+      class="dropdown-menu border-border bg-popover/95 w-64 absolute top-12 right-0 z-60 hidden rounded-lg border p-1 shadow-lg backdrop-blur-sm transition-all duration-200 ease-out"
+      data-dropdown-type="content-width"
+      
+    >
+    <div class="space-y-3 p-3">
+    <div class="flex items-center justify-between gap-4">
+    <label for="content-width-range" class="text-foreground text-sm font-medium">页面宽度</label>
+    <output id="content-width-value" for="content-width-range" class="text-muted-foreground min-w-12 text-right text-sm tabular-nums"></output>
+    </div>
+    <input id="content-width-range" class="accent-primary w-full cursor-pointer" type="range" min="40" max="90" step="1" aria-label="页面宽度" />
+    <button id="content-width-reset" type="button" class="border-border text-muted-foreground hover:bg-accent hover:text-accent-foreground focus:ring-primary/20 w-full rounded-md border px-3 py-2 text-sm transition-colors focus:ring-2 focus:outline-none">恢复默认</button>
+    </div></div>
+  </div></div>
+
+
         
         
 
@@ -344,10 +383,10 @@
       id="color-scheme-toggle"
       class="dropdown-toggle border-border bg-background text-muted-foreground hover:text-primary hover:bg-primary/10 focus:ring-primary/20 flex h-10 w-10 items-center justify-center rounded-lg border transition-all duration-300 ease-out hover:scale-105 focus:ring-2 focus:outline-none active:scale-95"
       data-dropdown-type="color-scheme"
-      aria-label=""
+      aria-label="切换主题风格"
       aria-expanded="false"
       aria-haspopup="true"
-    ><svg class="h-5 w-5 relative z-10" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+    ><svg class="h-5 w-5 relative z-10" aria-label="切换主题风格" fill="none" stroke="currentColor" viewBox="0 0 24 24">
   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zM21 5a2 2 0 00-2-2h-4a2 2 0 00-2 2v6a2 2 0 002 2h4a2 2 0 002-2V5z" />
 </svg>
 </button>
@@ -357,7 +396,7 @@
       class="dropdown-menu border-border bg-popover/95 w-44 absolute top-12 right-0 z-60 hidden rounded-lg border p-1 shadow-lg backdrop-blur-sm transition-all duration-200 ease-out"
       data-dropdown-type="color-scheme"
       
-    ><button data-color-scheme="default" class="text-accent-foreground hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground flex w-full items-center rounded-md px-4 py-2 text-sm transition-all duration-200 ease-out focus:outline-none"><span>Default</span></button><button data-color-scheme="claude" class="text-accent-foreground hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground flex w-full items-center rounded-md px-4 py-2 text-sm transition-all duration-200 ease-out focus:outline-none"><span>Claude</span></button><button data-color-scheme="bumblebee" class="text-accent-foreground hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground flex w-full items-center rounded-md px-4 py-2 text-sm transition-all duration-200 ease-out focus:outline-none"><span>Bumblebee</span></button><button data-color-scheme="emerald" class="text-accent-foreground hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground flex w-full items-center rounded-md px-4 py-2 text-sm transition-all duration-200 ease-out focus:outline-none"><span>Emerald</span></button><button data-color-scheme="nord" class="text-accent-foreground hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground flex w-full items-center rounded-md px-4 py-2 text-sm transition-all duration-200 ease-out focus:outline-none"><span>Nord</span></button><button data-color-scheme="sunset" class="text-accent-foreground hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground flex w-full items-center rounded-md px-4 py-2 text-sm transition-all duration-200 ease-out focus:outline-none"><span>Sunset</span></button><button data-color-scheme="abyss" class="text-accent-foreground hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground flex w-full items-center rounded-md px-4 py-2 text-sm transition-all duration-200 ease-out focus:outline-none"><span>Abyss</span></button><button data-color-scheme="dracula" class="text-accent-foreground hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground flex w-full items-center rounded-md px-4 py-2 text-sm transition-all duration-200 ease-out focus:outline-none"><span>Dracula</span></button><button data-color-scheme="amethyst" class="text-accent-foreground hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground flex w-full items-center rounded-md px-4 py-2 text-sm transition-all duration-200 ease-out focus:outline-none"><span>Amethyst</span></button><button data-color-scheme="slate" class="text-accent-foreground hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground flex w-full items-center rounded-md px-4 py-2 text-sm transition-all duration-200 ease-out focus:outline-none"><span>Slate</span></button><button data-color-scheme="twitter" class="text-accent-foreground hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground flex w-full items-center rounded-md px-4 py-2 text-sm transition-all duration-200 ease-out focus:outline-none"><span>Twitter</span></button></div>
+    ><button data-color-scheme="default" class="text-accent-foreground hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground flex w-full items-center rounded-md px-4 py-2 text-sm transition-all duration-200 ease-out focus:outline-none"><span>Default</span></button><button data-color-scheme="claude" class="text-accent-foreground hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground flex w-full items-center rounded-md px-4 py-2 text-sm transition-all duration-200 ease-out focus:outline-none"><span>Claude</span></button><button data-color-scheme="bumblebee" class="text-accent-foreground hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground flex w-full items-center rounded-md px-4 py-2 text-sm transition-all duration-200 ease-out focus:outline-none"><span>Bumblebee</span></button><button data-color-scheme="emerald" class="text-accent-foreground hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground flex w-full items-center rounded-md px-4 py-2 text-sm transition-all duration-200 ease-out focus:outline-none"><span>Emerald</span></button><button data-color-scheme="nord" class="text-accent-foreground hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground flex w-full items-center rounded-md px-4 py-2 text-sm transition-all duration-200 ease-out focus:outline-none"><span>Nord</span></button><button data-color-scheme="sunset" class="text-accent-foreground hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground flex w-full items-center rounded-md px-4 py-2 text-sm transition-all duration-200 ease-out focus:outline-none"><span>Sunset</span></button><button data-color-scheme="abyss" class="text-accent-foreground hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground flex w-full items-center rounded-md px-4 py-2 text-sm transition-all duration-200 ease-out focus:outline-none"><span>Abyss</span></button><button data-color-scheme="dracula" class="text-accent-foreground hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground flex w-full items-center rounded-md px-4 py-2 text-sm transition-all duration-200 ease-out focus:outline-none"><span>Dracula</span></button><button data-color-scheme="amethyst" class="text-accent-foreground hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground flex w-full items-center rounded-md px-4 py-2 text-sm transition-all duration-200 ease-out focus:outline-none"><span>Amethyst</span></button><button data-color-scheme="slate" class="text-accent-foreground hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground flex w-full items-center rounded-md px-4 py-2 text-sm transition-all duration-200 ease-out focus:outline-none"><span>Slate</span></button><button data-color-scheme="twitter" class="text-accent-foreground hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground flex w-full items-center rounded-md px-4 py-2 text-sm transition-all duration-200 ease-out focus:outline-none"><span>Twitter</span></button><button data-color-scheme="minimal" class="text-accent-foreground hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground flex w-full items-center rounded-md px-4 py-2 text-sm transition-all duration-200 ease-out focus:outline-none"><span>Minimal</span></button></div>
   </div>
 
 
@@ -367,18 +406,18 @@
       id="theme-toggle"
       class="dropdown-toggle border-border bg-background text-muted-foreground hover:text-primary hover:bg-primary/10 focus:ring-primary/20 flex h-10 w-10 items-center justify-center rounded-lg border transition-all duration-300 ease-out hover:scale-105 focus:ring-2 focus:outline-none active:scale-95"
       data-dropdown-type="theme"
-      aria-label=""
+      aria-label="切换主题风格"
       aria-expanded="false"
       aria-haspopup="true"
-    ><svg class="h-5 w-5 sun-icon hidden relative z-10" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+    ><svg class="h-5 w-5 sun-icon hidden relative z-10" aria-label="亮色" fill="none" stroke="currentColor" viewBox="0 0 24 24">
   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" />
 </svg>
 
-        <svg class="h-5 w-5 moon-icon hidden relative z-10" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <svg class="h-5 w-5 moon-icon hidden relative z-10" aria-label="暗色" fill="none" stroke="currentColor" viewBox="0 0 24 24">
   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" />
 </svg>
 
-        <svg class="h-5 w-5 system-icon hidden relative z-10" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <svg class="h-5 w-5 system-icon hidden relative z-10" aria-label="跟随系统" fill="none" stroke="currentColor" viewBox="0 0 24 24">
   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
 </svg>
 </button>
@@ -388,16 +427,16 @@
       class="dropdown-menu border-border bg-popover/95 w-40 absolute top-12 right-0 z-60 hidden rounded-lg border p-1 shadow-lg backdrop-blur-sm transition-all duration-200 ease-out"
       data-dropdown-type="theme"
       
-    ><button data-theme="light" class="text-accent-foreground hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground flex w-full items-center rounded-md px-4 py-2 text-sm transition-all duration-200 ease-out focus:outline-none"><svg class="h-5 w-5 mr-3 h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+    ><button data-theme="light" class="text-accent-foreground hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground flex w-full items-center rounded-md px-4 py-2 text-sm transition-all duration-200 ease-out focus:outline-none"><svg class="h-5 w-5 mr-3 h-4 w-4" aria-label="亮色" fill="none" stroke="currentColor" viewBox="0 0 24 24">
   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" />
 </svg>
-<span></span></button><button data-theme="dark" class="text-accent-foreground hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground flex w-full items-center rounded-md px-4 py-2 text-sm transition-all duration-200 ease-out focus:outline-none"><svg class="h-5 w-5 mr-3 h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+<span>亮色</span></button><button data-theme="dark" class="text-accent-foreground hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground flex w-full items-center rounded-md px-4 py-2 text-sm transition-all duration-200 ease-out focus:outline-none"><svg class="h-5 w-5 mr-3 h-4 w-4" aria-label="暗色" fill="none" stroke="currentColor" viewBox="0 0 24 24">
   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" />
 </svg>
-<span></span></button><button data-theme="system" class="text-accent-foreground hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground flex w-full items-center rounded-md px-4 py-2 text-sm transition-all duration-200 ease-out focus:outline-none"><svg class="h-5 w-5 mr-3 h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+<span>暗色</span></button><button data-theme="system" class="text-accent-foreground hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground flex w-full items-center rounded-md px-4 py-2 text-sm transition-all duration-200 ease-out focus:outline-none"><svg class="h-5 w-5 mr-3 h-4 w-4" aria-label="跟随系统" fill="none" stroke="currentColor" viewBox="0 0 24 24">
   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
 </svg>
-<span></span></button></div>
+<span>跟随系统</span></button></div>
   </div>
       </div>
     </div>
@@ -409,11 +448,11 @@
 <button
   id="mobile-nav-toggle"
   class="nav-panel-toggle border-border bg-background text-muted-foreground hover:bg-accent hover:text-foreground flex h-10 w-10 items-center justify-center rounded-lg border transition-colors duration-200"
-  aria-label=""
+  aria-label="菜单"
   aria-expanded="false"
   aria-controls="mobile-nav-panel"
 >
-  <svg class="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+  <svg class="h-5 w-5" aria-label="菜单" fill="none" stroke="currentColor" viewBox="0 0 24 24">
   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
 </svg>
 
@@ -433,10 +472,10 @@
       id="color-scheme-toggle"
       class="dropdown-toggle border-border bg-background text-muted-foreground hover:text-primary hover:bg-primary/10 focus:ring-primary/20 flex h-10 w-10 items-center justify-center rounded-lg border transition-all duration-300 ease-out hover:scale-105 focus:ring-2 focus:outline-none active:scale-95"
       data-dropdown-type="color-scheme"
-      aria-label=""
+      aria-label="切换主题风格"
       aria-expanded="false"
       aria-haspopup="true"
-    ><svg class="h-5 w-5 relative z-10" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+    ><svg class="h-5 w-5 relative z-10" aria-label="切换主题风格" fill="none" stroke="currentColor" viewBox="0 0 24 24">
   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zM21 5a2 2 0 00-2-2h-4a2 2 0 00-2 2v6a2 2 0 002 2h4a2 2 0 002-2V5z" />
 </svg>
 </button>
@@ -446,7 +485,7 @@
       class="dropdown-menu border-border bg-popover/95 w-44 absolute top-12 right-0 z-60 hidden rounded-lg border p-1 shadow-lg backdrop-blur-sm transition-all duration-200 ease-out"
       data-dropdown-type="color-scheme"
       
-    ><button data-color-scheme="default" class="text-accent-foreground hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground flex w-full items-center rounded-md px-4 py-2 text-sm transition-all duration-200 ease-out focus:outline-none"><span>Default</span></button><button data-color-scheme="claude" class="text-accent-foreground hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground flex w-full items-center rounded-md px-4 py-2 text-sm transition-all duration-200 ease-out focus:outline-none"><span>Claude</span></button><button data-color-scheme="bumblebee" class="text-accent-foreground hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground flex w-full items-center rounded-md px-4 py-2 text-sm transition-all duration-200 ease-out focus:outline-none"><span>Bumblebee</span></button><button data-color-scheme="emerald" class="text-accent-foreground hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground flex w-full items-center rounded-md px-4 py-2 text-sm transition-all duration-200 ease-out focus:outline-none"><span>Emerald</span></button><button data-color-scheme="nord" class="text-accent-foreground hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground flex w-full items-center rounded-md px-4 py-2 text-sm transition-all duration-200 ease-out focus:outline-none"><span>Nord</span></button><button data-color-scheme="sunset" class="text-accent-foreground hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground flex w-full items-center rounded-md px-4 py-2 text-sm transition-all duration-200 ease-out focus:outline-none"><span>Sunset</span></button><button data-color-scheme="abyss" class="text-accent-foreground hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground flex w-full items-center rounded-md px-4 py-2 text-sm transition-all duration-200 ease-out focus:outline-none"><span>Abyss</span></button><button data-color-scheme="dracula" class="text-accent-foreground hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground flex w-full items-center rounded-md px-4 py-2 text-sm transition-all duration-200 ease-out focus:outline-none"><span>Dracula</span></button><button data-color-scheme="amethyst" class="text-accent-foreground hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground flex w-full items-center rounded-md px-4 py-2 text-sm transition-all duration-200 ease-out focus:outline-none"><span>Amethyst</span></button><button data-color-scheme="slate" class="text-accent-foreground hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground flex w-full items-center rounded-md px-4 py-2 text-sm transition-all duration-200 ease-out focus:outline-none"><span>Slate</span></button><button data-color-scheme="twitter" class="text-accent-foreground hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground flex w-full items-center rounded-md px-4 py-2 text-sm transition-all duration-200 ease-out focus:outline-none"><span>Twitter</span></button></div>
+    ><button data-color-scheme="default" class="text-accent-foreground hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground flex w-full items-center rounded-md px-4 py-2 text-sm transition-all duration-200 ease-out focus:outline-none"><span>Default</span></button><button data-color-scheme="claude" class="text-accent-foreground hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground flex w-full items-center rounded-md px-4 py-2 text-sm transition-all duration-200 ease-out focus:outline-none"><span>Claude</span></button><button data-color-scheme="bumblebee" class="text-accent-foreground hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground flex w-full items-center rounded-md px-4 py-2 text-sm transition-all duration-200 ease-out focus:outline-none"><span>Bumblebee</span></button><button data-color-scheme="emerald" class="text-accent-foreground hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground flex w-full items-center rounded-md px-4 py-2 text-sm transition-all duration-200 ease-out focus:outline-none"><span>Emerald</span></button><button data-color-scheme="nord" class="text-accent-foreground hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground flex w-full items-center rounded-md px-4 py-2 text-sm transition-all duration-200 ease-out focus:outline-none"><span>Nord</span></button><button data-color-scheme="sunset" class="text-accent-foreground hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground flex w-full items-center rounded-md px-4 py-2 text-sm transition-all duration-200 ease-out focus:outline-none"><span>Sunset</span></button><button data-color-scheme="abyss" class="text-accent-foreground hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground flex w-full items-center rounded-md px-4 py-2 text-sm transition-all duration-200 ease-out focus:outline-none"><span>Abyss</span></button><button data-color-scheme="dracula" class="text-accent-foreground hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground flex w-full items-center rounded-md px-4 py-2 text-sm transition-all duration-200 ease-out focus:outline-none"><span>Dracula</span></button><button data-color-scheme="amethyst" class="text-accent-foreground hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground flex w-full items-center rounded-md px-4 py-2 text-sm transition-all duration-200 ease-out focus:outline-none"><span>Amethyst</span></button><button data-color-scheme="slate" class="text-accent-foreground hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground flex w-full items-center rounded-md px-4 py-2 text-sm transition-all duration-200 ease-out focus:outline-none"><span>Slate</span></button><button data-color-scheme="twitter" class="text-accent-foreground hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground flex w-full items-center rounded-md px-4 py-2 text-sm transition-all duration-200 ease-out focus:outline-none"><span>Twitter</span></button><button data-color-scheme="minimal" class="text-accent-foreground hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground flex w-full items-center rounded-md px-4 py-2 text-sm transition-all duration-200 ease-out focus:outline-none"><span>Minimal</span></button></div>
   </div>
 
 
@@ -456,18 +495,18 @@
       id="theme-toggle"
       class="dropdown-toggle border-border bg-background text-muted-foreground hover:text-primary hover:bg-primary/10 focus:ring-primary/20 flex h-10 w-10 items-center justify-center rounded-lg border transition-all duration-300 ease-out hover:scale-105 focus:ring-2 focus:outline-none active:scale-95"
       data-dropdown-type="theme"
-      aria-label=""
+      aria-label="切换主题风格"
       aria-expanded="false"
       aria-haspopup="true"
-    ><svg class="h-5 w-5 sun-icon hidden relative z-10" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+    ><svg class="h-5 w-5 sun-icon hidden relative z-10" aria-label="亮色" fill="none" stroke="currentColor" viewBox="0 0 24 24">
   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" />
 </svg>
 
-        <svg class="h-5 w-5 moon-icon hidden relative z-10" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <svg class="h-5 w-5 moon-icon hidden relative z-10" aria-label="暗色" fill="none" stroke="currentColor" viewBox="0 0 24 24">
   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" />
 </svg>
 
-        <svg class="h-5 w-5 system-icon hidden relative z-10" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <svg class="h-5 w-5 system-icon hidden relative z-10" aria-label="跟随系统" fill="none" stroke="currentColor" viewBox="0 0 24 24">
   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
 </svg>
 </button>
@@ -477,16 +516,16 @@
       class="dropdown-menu border-border bg-popover/95 w-40 absolute top-12 right-0 z-60 hidden rounded-lg border p-1 shadow-lg backdrop-blur-sm transition-all duration-200 ease-out"
       data-dropdown-type="theme"
       
-    ><button data-theme="light" class="text-accent-foreground hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground flex w-full items-center rounded-md px-4 py-2 text-sm transition-all duration-200 ease-out focus:outline-none"><svg class="h-5 w-5 mr-3 h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+    ><button data-theme="light" class="text-accent-foreground hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground flex w-full items-center rounded-md px-4 py-2 text-sm transition-all duration-200 ease-out focus:outline-none"><svg class="h-5 w-5 mr-3 h-4 w-4" aria-label="亮色" fill="none" stroke="currentColor" viewBox="0 0 24 24">
   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" />
 </svg>
-<span></span></button><button data-theme="dark" class="text-accent-foreground hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground flex w-full items-center rounded-md px-4 py-2 text-sm transition-all duration-200 ease-out focus:outline-none"><svg class="h-5 w-5 mr-3 h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+<span>亮色</span></button><button data-theme="dark" class="text-accent-foreground hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground flex w-full items-center rounded-md px-4 py-2 text-sm transition-all duration-200 ease-out focus:outline-none"><svg class="h-5 w-5 mr-3 h-4 w-4" aria-label="暗色" fill="none" stroke="currentColor" viewBox="0 0 24 24">
   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" />
 </svg>
-<span></span></button><button data-theme="system" class="text-accent-foreground hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground flex w-full items-center rounded-md px-4 py-2 text-sm transition-all duration-200 ease-out focus:outline-none"><svg class="h-5 w-5 mr-3 h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+<span>暗色</span></button><button data-theme="system" class="text-accent-foreground hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground flex w-full items-center rounded-md px-4 py-2 text-sm transition-all duration-200 ease-out focus:outline-none"><svg class="h-5 w-5 mr-3 h-4 w-4" aria-label="跟随系统" fill="none" stroke="currentColor" viewBox="0 0 24 24">
   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
 </svg>
-<span></span></button></div>
+<span>跟随系统</span></button></div>
   </div>
       </div>
     </div>
@@ -498,7 +537,7 @@
   id="mobile-nav-panel"
   class="mt-2 hidden md:hidden"
   role="navigation"
-  aria-label=""
+  aria-label="菜单"
   aria-hidden="true"
   tabindex="-1"
 >
@@ -527,12 +566,12 @@
             
           >
             
-              <svg class="h-5 w-5" aria-label="posts" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <svg class="h-5 w-5" aria-label="文章" fill="none" stroke="currentColor" viewBox="0 0 24 24">
   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 20H5a2 2 0 01-2-2V6a2 2 0 012-2h10a2 2 0 012 2v1m2 13a2 2 0 01-2-2V7m2 13a2 2 0 002-2V9a2 2 0 00-2-2h-2m-4-3H9M7 16h6M7 8h6v4H7V8z" />
 </svg>
 
             
-            <span>posts</span>
+            <span>文章</span>
           </a>
         
       
@@ -554,12 +593,12 @@
             
           >
             
-              <svg class="h-5 w-5" aria-label="categories" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <svg class="h-5 w-5" aria-label="分类" fill="none" stroke="currentColor" viewBox="0 0 24 24">
   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10" />
 </svg>
 
             
-            <span>categories</span>
+            <span>分类</span>
           </a>
         
       
@@ -581,12 +620,12 @@
             
           >
             
-              <svg class="h-5 w-5" aria-label="tags" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <svg class="h-5 w-5" aria-label="标签" fill="none" stroke="currentColor" viewBox="0 0 24 24">
   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 7h.01M7 3h5c.512 0 1.024.195 1.414.586l7 7a2 2 0 010 2.828l-7 7a2 2 0 01-2.828 0l-7-7A1.994 1.994 0 013 12V7a4 4 0 014-4z" />
 </svg>
 
             
-            <span>tags</span>
+            <span>标签</span>
           </a>
         
       
@@ -608,12 +647,12 @@
             
           >
             
-              <svg class="h-5 w-5" aria-label="archives" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <svg class="h-5 w-5" aria-label="归档" fill="none" stroke="currentColor" viewBox="0 0 24 24">
   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 8h14M5 8a2 2 0 110-4h14a2 2 0 110 4M5 8v10a2 2 0 002 2h10a2 2 0 002-2V8m-9 4h4" />
 </svg>
 
             
-            <span>archives</span>
+            <span>归档</span>
           </a>
         
       
@@ -627,7 +666,7 @@
 
       <div class="px-4 py-6">
         
-  <nav class="breadcrumb mb-4 py-1 md:mb-6" aria-label="">
+  <nav class="breadcrumb mb-4 py-1 md:mb-6" aria-label="面包屑导航">
     <ol
       class="text-muted-foreground scrollbar-hide flex items-center space-x-1 overflow-x-auto py-1 text-sm whitespace-nowrap md:space-x-2"
     >
@@ -701,9 +740,11 @@
 
 <div class="post-meta mb-8">
   
-  <h1 class="text-foreground mb-6 text-3xl leading-tight font-bold md:text-4xl">
-    5步实现财务自由
-  </h1>
+  
+    <h1 class="text-foreground mb-6 text-3xl leading-tight font-bold md:text-4xl">
+      5步实现财务自由
+    </h1>
+  
 
   
   
@@ -718,15 +759,17 @@
           
           <div class="text-muted-foreground flex flex-wrap items-center gap-3 text-sm mb-4">
             
+            
             <div class="flex items-center gap-2">
               <svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
 </svg>
 
               <time datetime="2023-12-03">
-                December 3, 2023
+                2023年12月3日
               </time>
             </div>
+            
 
             
             
@@ -735,7 +778,7 @@
   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
 </svg>
 
-              <span></span>
+              <span>3 分钟</span>
             </div>
             
 
@@ -746,7 +789,7 @@
   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h7" />
 </svg>
 
-              <span></span>
+              <span>1130 字</span>
             </div>
             
           </div>
@@ -787,19 +830,19 @@
 <li>在交易股票时，崩盘对我们来说，并不是真正的威胁，相反，我们却有可能在股市崩盘时通过股票交易为未来的高收益埋下伏笔。</li>
 <li>不要买奢侈品公司的股票，要买与国计民生相关的公司的股票，这种投资是最安全、最有利可图的投资，具有抵抗通货膨胀或者货币改革的优点，还能为你带来收益。</li>
 </ul>
-<h2 id="制胜股市-12-原则">制胜股市 12 原则<a href="#%e5%88%b6%e8%83%9c%e8%82%a1%e5%b8%82-12-%e5%8e%9f%e5%88%99" class="heading-anchor" aria-label=""><svg class="h-4 w-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></g></svg></a></h2><h3 id="1在实践中成长">1、在实践中成长<a href="#1%e5%9c%a8%e5%ae%9e%e8%b7%b5%e4%b8%ad%e6%88%90%e9%95%bf" class="heading-anchor" aria-label=""><svg class="h-4 w-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></g></svg></a></h3><h3 id="2锻炼自己的耐心">2、锻炼自己的耐心<a href="#2%e9%94%bb%e7%82%bc%e8%87%aa%e5%b7%b1%e7%9a%84%e8%80%90%e5%bf%83" class="heading-anchor" aria-label=""><svg class="h-4 w-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></g></svg></a></h3><p>我们需要耐心等待，直到这个时机到来，然后抓住它。</p>
-<h3 id="3先使用模拟账户一年之后逐步提高交易金额">3、先使用模拟账户一年之后，逐步提高交易金额<a href="#3%e5%85%88%e4%bd%bf%e7%94%a8%e6%a8%a1%e6%8b%9f%e8%b4%a6%e6%88%b7%e4%b8%80%e5%b9%b4%e4%b9%8b%e5%90%8e%e9%80%90%e6%ad%a5%e6%8f%90%e9%ab%98%e4%ba%a4%e6%98%93%e9%87%91%e9%a2%9d" class="heading-anchor" aria-label=""><svg class="h-4 w-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></g></svg></a></h3><h3 id="4寻找志同道合者">4、寻找志同道合者<a href="#4%e5%af%bb%e6%89%be%e5%bf%97%e5%90%8c%e9%81%93%e5%90%88%e8%80%85" class="heading-anchor" aria-label=""><svg class="h-4 w-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></g></svg></a></h3><p>与志同道合的人一起训练会对你有很大的帮助，大家可以互相吸取经验，一起交流分享。</p>
-<h3 id="5交易策略要符合自己的个性">5、交易策略要符合自己的个性<a href="#5%e4%ba%a4%e6%98%93%e7%ad%96%e7%95%a5%e8%a6%81%e7%ac%a6%e5%90%88%e8%87%aa%e5%b7%b1%e7%9a%84%e4%b8%aa%e6%80%a7" class="heading-anchor" aria-label=""><svg class="h-4 w-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></g></svg></a></h3><p>我们需要弄清楚什么策略适合我们，让我们感到舒适。理想情况下，有股票交易应像一场游戏，我们既要严肃认真对待，又要感到愉悦。</p>
-<h3 id="6制定交易方案并记录交易过程">6、制定交易方案并记录交易过程<a href="#6%e5%88%b6%e5%ae%9a%e4%ba%a4%e6%98%93%e6%96%b9%e6%a1%88%e5%b9%b6%e8%ae%b0%e5%bd%95%e4%ba%a4%e6%98%93%e8%bf%87%e7%a8%8b" class="heading-anchor" aria-label=""><svg class="h-4 w-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></g></svg></a></h3><p>请问每一笔交易制定一个具体的执行计划：我因为什么建仓？我希实现多少收益？我的方案 B 是什么？
+<h2 id="制胜股市-12-原则">制胜股市 12 原则<a href="#%e5%88%b6%e8%83%9c%e8%82%a1%e5%b8%82-12-%e5%8e%9f%e5%88%99" class="heading-anchor" aria-label="链接到此部分"><svg class="h-4 w-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></g></svg></a></h2><h3 id="1在实践中成长">1、在实践中成长<a href="#1%e5%9c%a8%e5%ae%9e%e8%b7%b5%e4%b8%ad%e6%88%90%e9%95%bf" class="heading-anchor" aria-label="链接到此部分"><svg class="h-4 w-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></g></svg></a></h3><h3 id="2锻炼自己的耐心">2、锻炼自己的耐心<a href="#2%e9%94%bb%e7%82%bc%e8%87%aa%e5%b7%b1%e7%9a%84%e8%80%90%e5%bf%83" class="heading-anchor" aria-label="链接到此部分"><svg class="h-4 w-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></g></svg></a></h3><p>我们需要耐心等待，直到这个时机到来，然后抓住它。</p>
+<h3 id="3先使用模拟账户一年之后逐步提高交易金额">3、先使用模拟账户一年之后，逐步提高交易金额<a href="#3%e5%85%88%e4%bd%bf%e7%94%a8%e6%a8%a1%e6%8b%9f%e8%b4%a6%e6%88%b7%e4%b8%80%e5%b9%b4%e4%b9%8b%e5%90%8e%e9%80%90%e6%ad%a5%e6%8f%90%e9%ab%98%e4%ba%a4%e6%98%93%e9%87%91%e9%a2%9d" class="heading-anchor" aria-label="链接到此部分"><svg class="h-4 w-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></g></svg></a></h3><h3 id="4寻找志同道合者">4、寻找志同道合者<a href="#4%e5%af%bb%e6%89%be%e5%bf%97%e5%90%8c%e9%81%93%e5%90%88%e8%80%85" class="heading-anchor" aria-label="链接到此部分"><svg class="h-4 w-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></g></svg></a></h3><p>与志同道合的人一起训练会对你有很大的帮助，大家可以互相吸取经验，一起交流分享。</p>
+<h3 id="5交易策略要符合自己的个性">5、交易策略要符合自己的个性<a href="#5%e4%ba%a4%e6%98%93%e7%ad%96%e7%95%a5%e8%a6%81%e7%ac%a6%e5%90%88%e8%87%aa%e5%b7%b1%e7%9a%84%e4%b8%aa%e6%80%a7" class="heading-anchor" aria-label="链接到此部分"><svg class="h-4 w-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></g></svg></a></h3><p>我们需要弄清楚什么策略适合我们，让我们感到舒适。理想情况下，有股票交易应像一场游戏，我们既要严肃认真对待，又要感到愉悦。</p>
+<h3 id="6制定交易方案并记录交易过程">6、制定交易方案并记录交易过程<a href="#6%e5%88%b6%e5%ae%9a%e4%ba%a4%e6%98%93%e6%96%b9%e6%a1%88%e5%b9%b6%e8%ae%b0%e5%bd%95%e4%ba%a4%e6%98%93%e8%bf%87%e7%a8%8b" class="heading-anchor" aria-label="链接到此部分"><svg class="h-4 w-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></g></svg></a></h3><p>请问每一笔交易制定一个具体的执行计划：我因为什么建仓？我希实现多少收益？我的方案 B 是什么？
 在交易计划中，要把这些确定好并写下来。此外，还要坚持写交易日志，以图表或文字的形式都可以，里面要记录你做过的所有交易。每进行一笔交易后，写进日志里的内容一定不要删除，也不要修改。这样便于你在事后追溯自己的行为。</p>
-<h3 id="7控制自己的情绪">7、控制自己的情绪<a href="#7%e6%8e%a7%e5%88%b6%e8%87%aa%e5%b7%b1%e7%9a%84%e6%83%85%e7%bb%aa" class="heading-anchor" aria-label=""><svg class="h-4 w-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></g></svg></a></h3><p>在股市里，畏惧（迟迟不敢开始交易）和贪婪（用力过猛、不假思索）都不是好的情绪。有的时候，贪婪之心会阻碍一些人进行必要的风险控制。
+<h3 id="7控制自己的情绪">7、控制自己的情绪<a href="#7%e6%8e%a7%e5%88%b6%e8%87%aa%e5%b7%b1%e7%9a%84%e6%83%85%e7%bb%aa" class="heading-anchor" aria-label="链接到此部分"><svg class="h-4 w-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></g></svg></a></h3><p>在股市里，畏惧（迟迟不敢开始交易）和贪婪（用力过猛、不假思索）都不是好的情绪。有的时候，贪婪之心会阻碍一些人进行必要的风险控制。
 我所指的控制自己的情绪，不一定是指时时刻刻遏制自己，因为长此以往，这会让你感到非常压抑。
 我的意思是说，我们可以关注和感受自己的真实情绪，然后去优化他们，比如 针对畏惧心理，我们可以问问自己最坏的情况是什么？可以分析一下，自己某一次为何表现出贪婪或者吝啬？导致贪婪的导火索是什么？你觉得自己错过了什么？你为什么一分钱都不想出？你要保证自己在头脑清晰、全神贯注的情况下采取行动。</p>
-<h3 id="8接受损失">8、接受损失<a href="#8%e6%8e%a5%e5%8f%97%e6%8d%9f%e5%a4%b1" class="heading-anchor" aria-label=""><svg class="h-4 w-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></g></svg></a></h3><p>很多人往往会倾向于在亏损的情况下仍然长期持有</p>
-<h3 id="9赚了钱也要脚踏实地">9、赚了钱也要脚踏实地<a href="#9%e8%b5%9a%e4%ba%86%e9%92%b1%e4%b9%9f%e8%a6%81%e8%84%9a%e8%b8%8f%e5%ae%9e%e5%9c%b0" class="heading-anchor" aria-label=""><svg class="h-4 w-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></g></svg></a></h3><h3 id="10区分资本和流动资金">10、区分资本和流动资金<a href="#10%e5%8c%ba%e5%88%86%e8%b5%84%e6%9c%ac%e5%92%8c%e6%b5%81%e5%8a%a8%e8%b5%84%e9%87%91" class="heading-anchor" aria-label=""><svg class="h-4 w-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></g></svg></a></h3><p>我们首先需要关注的是每个月都产生收益，都有规律的现金流。在这个过程中，相对来说，我们的股票价值没有那么重要，如果我们的股票价格下跌了，我们可以等待，甚至在五年、十年或者十五年之后才卖。在此期间，如果能经常性得获得月度收入，那么在某一刻，我们一定会感到非常开心</p>
-<h3 id="11先别辞掉工作就算已经能靠股市收入养活自己">11、先别辞掉工作，就算已经能靠股市收入养活自己<a href="#11%e5%85%88%e5%88%ab%e8%be%9e%e6%8e%89%e5%b7%a5%e4%bd%9c%e5%b0%b1%e7%ae%97%e5%b7%b2%e7%bb%8f%e8%83%bd%e9%9d%a0%e8%82%a1%e5%b8%82%e6%94%b6%e5%85%a5%e5%85%bb%e6%b4%bb%e8%87%aa%e5%b7%b1" class="heading-anchor" aria-label=""><svg class="h-4 w-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></g></svg></a></h3><h3 id="12把握正确的退出时机">12、把握正确的退出时机<a href="#12%e6%8a%8a%e6%8f%a1%e6%ad%a3%e7%a1%ae%e7%9a%84%e9%80%80%e5%87%ba%e6%97%b6%e6%9c%ba" class="heading-anchor" aria-label=""><svg class="h-4 w-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></g></svg></a></h3><p>有些东西，不是多多益善。</p>
-<h2 id="投资原则">投资原则<a href="#%e6%8a%95%e8%b5%84%e5%8e%9f%e5%88%99" class="heading-anchor" aria-label=""><svg class="h-4 w-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></g></svg></a></h2><h3 id="1只有在-100-理解一项投资的情况下才能投资">1、只有在 100% 理解一项投资的情况下才能投资<a href="#1%e5%8f%aa%e6%9c%89%e5%9c%a8-100-%e7%90%86%e8%a7%a3%e4%b8%80%e9%a1%b9%e6%8a%95%e8%b5%84%e7%9a%84%e6%83%85%e5%86%b5%e4%b8%8b%e6%89%8d%e8%83%bd%e6%8a%95%e8%b5%84" class="heading-anchor" aria-label=""><svg class="h-4 w-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></g></svg></a></h3><p>使用工具 Value Line</p>
-<h3 id="2只有在能够确定一项投资的公允价格的情况下才能投资">2、只有在能够确定一项投资的公允价格的情况下才能投资<a href="#2%e5%8f%aa%e6%9c%89%e5%9c%a8%e8%83%bd%e5%a4%9f%e7%a1%ae%e5%ae%9a%e4%b8%80%e9%a1%b9%e6%8a%95%e8%b5%84%e7%9a%84%e5%85%ac%e5%85%81%e4%bb%b7%e6%a0%bc%e7%9a%84%e6%83%85%e5%86%b5%e4%b8%8b%e6%89%8d%e8%83%bd%e6%8a%95%e8%b5%84" class="heading-anchor" aria-label=""><svg class="h-4 w-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></g></svg></a></h3><h3 id="3只有在机会-风险比例大于或等于-31-的情况下才能投资">3、只有在机会-风险比例大于或等于 3:1 的情况下才能投资<a href="#3%e5%8f%aa%e6%9c%89%e5%9c%a8%e6%9c%ba%e4%bc%9a-%e9%a3%8e%e9%99%a9%e6%af%94%e4%be%8b%e5%a4%a7%e4%ba%8e%e6%88%96%e7%ad%89%e4%ba%8e-31-%e7%9a%84%e6%83%85%e5%86%b5%e4%b8%8b%e6%89%8d%e8%83%bd%e6%8a%95%e8%b5%84" class="heading-anchor" aria-label=""><svg class="h-4 w-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></g></svg></a></h3><h3 id="4只有在资本获得百分之百保障的情况下才能投资">4、只有在资本获得百分之百保障的情况下才能投资<a href="#4%e5%8f%aa%e6%9c%89%e5%9c%a8%e8%b5%84%e6%9c%ac%e8%8e%b7%e5%be%97%e7%99%be%e5%88%86%e4%b9%8b%e7%99%be%e4%bf%9d%e9%9a%9c%e7%9a%84%e6%83%85%e5%86%b5%e4%b8%8b%e6%89%8d%e8%83%bd%e6%8a%95%e8%b5%84" class="heading-anchor" aria-label=""><svg class="h-4 w-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></g></svg></a></h3><p>不要轻易允许自己赔钱</p>
+<h3 id="8接受损失">8、接受损失<a href="#8%e6%8e%a5%e5%8f%97%e6%8d%9f%e5%a4%b1" class="heading-anchor" aria-label="链接到此部分"><svg class="h-4 w-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></g></svg></a></h3><p>很多人往往会倾向于在亏损的情况下仍然长期持有</p>
+<h3 id="9赚了钱也要脚踏实地">9、赚了钱也要脚踏实地<a href="#9%e8%b5%9a%e4%ba%86%e9%92%b1%e4%b9%9f%e8%a6%81%e8%84%9a%e8%b8%8f%e5%ae%9e%e5%9c%b0" class="heading-anchor" aria-label="链接到此部分"><svg class="h-4 w-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></g></svg></a></h3><h3 id="10区分资本和流动资金">10、区分资本和流动资金<a href="#10%e5%8c%ba%e5%88%86%e8%b5%84%e6%9c%ac%e5%92%8c%e6%b5%81%e5%8a%a8%e8%b5%84%e9%87%91" class="heading-anchor" aria-label="链接到此部分"><svg class="h-4 w-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></g></svg></a></h3><p>我们首先需要关注的是每个月都产生收益，都有规律的现金流。在这个过程中，相对来说，我们的股票价值没有那么重要，如果我们的股票价格下跌了，我们可以等待，甚至在五年、十年或者十五年之后才卖。在此期间，如果能经常性得获得月度收入，那么在某一刻，我们一定会感到非常开心</p>
+<h3 id="11先别辞掉工作就算已经能靠股市收入养活自己">11、先别辞掉工作，就算已经能靠股市收入养活自己<a href="#11%e5%85%88%e5%88%ab%e8%be%9e%e6%8e%89%e5%b7%a5%e4%bd%9c%e5%b0%b1%e7%ae%97%e5%b7%b2%e7%bb%8f%e8%83%bd%e9%9d%a0%e8%82%a1%e5%b8%82%e6%94%b6%e5%85%a5%e5%85%bb%e6%b4%bb%e8%87%aa%e5%b7%b1" class="heading-anchor" aria-label="链接到此部分"><svg class="h-4 w-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></g></svg></a></h3><h3 id="12把握正确的退出时机">12、把握正确的退出时机<a href="#12%e6%8a%8a%e6%8f%a1%e6%ad%a3%e7%a1%ae%e7%9a%84%e9%80%80%e5%87%ba%e6%97%b6%e6%9c%ba" class="heading-anchor" aria-label="链接到此部分"><svg class="h-4 w-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></g></svg></a></h3><p>有些东西，不是多多益善。</p>
+<h2 id="投资原则">投资原则<a href="#%e6%8a%95%e8%b5%84%e5%8e%9f%e5%88%99" class="heading-anchor" aria-label="链接到此部分"><svg class="h-4 w-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></g></svg></a></h2><h3 id="1只有在-100-理解一项投资的情况下才能投资">1、只有在 100% 理解一项投资的情况下才能投资<a href="#1%e5%8f%aa%e6%9c%89%e5%9c%a8-100-%e7%90%86%e8%a7%a3%e4%b8%80%e9%a1%b9%e6%8a%95%e8%b5%84%e7%9a%84%e6%83%85%e5%86%b5%e4%b8%8b%e6%89%8d%e8%83%bd%e6%8a%95%e8%b5%84" class="heading-anchor" aria-label="链接到此部分"><svg class="h-4 w-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></g></svg></a></h3><p>使用工具 Value Line</p>
+<h3 id="2只有在能够确定一项投资的公允价格的情况下才能投资">2、只有在能够确定一项投资的公允价格的情况下才能投资<a href="#2%e5%8f%aa%e6%9c%89%e5%9c%a8%e8%83%bd%e5%a4%9f%e7%a1%ae%e5%ae%9a%e4%b8%80%e9%a1%b9%e6%8a%95%e8%b5%84%e7%9a%84%e5%85%ac%e5%85%81%e4%bb%b7%e6%a0%bc%e7%9a%84%e6%83%85%e5%86%b5%e4%b8%8b%e6%89%8d%e8%83%bd%e6%8a%95%e8%b5%84" class="heading-anchor" aria-label="链接到此部分"><svg class="h-4 w-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></g></svg></a></h3><h3 id="3只有在机会-风险比例大于或等于-31-的情况下才能投资">3、只有在机会-风险比例大于或等于 3:1 的情况下才能投资<a href="#3%e5%8f%aa%e6%9c%89%e5%9c%a8%e6%9c%ba%e4%bc%9a-%e9%a3%8e%e9%99%a9%e6%af%94%e4%be%8b%e5%a4%a7%e4%ba%8e%e6%88%96%e7%ad%89%e4%ba%8e-31-%e7%9a%84%e6%83%85%e5%86%b5%e4%b8%8b%e6%89%8d%e8%83%bd%e6%8a%95%e8%b5%84" class="heading-anchor" aria-label="链接到此部分"><svg class="h-4 w-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></g></svg></a></h3><h3 id="4只有在资本获得百分之百保障的情况下才能投资">4、只有在资本获得百分之百保障的情况下才能投资<a href="#4%e5%8f%aa%e6%9c%89%e5%9c%a8%e8%b5%84%e6%9c%ac%e8%8e%b7%e5%be%97%e7%99%be%e5%88%86%e4%b9%8b%e7%99%be%e4%bf%9d%e9%9a%9c%e7%9a%84%e6%83%85%e5%86%b5%e4%b8%8b%e6%89%8d%e8%83%bd%e6%8a%95%e8%b5%84" class="heading-anchor" aria-label="链接到此部分"><svg class="h-4 w-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></g></svg></a></h3><p>不要轻易允许自己赔钱</p>
 
   </article>
 
@@ -831,14 +874,14 @@
       
       <div class="min-w-0 flex-1">
         <h3 class="text-foreground mb-2 text-lg font-semibold">
-          
+          版权声明
         </h3>
 
         <div class="text-muted-foreground space-y-2 text-sm">
           
           
             <p>
-              <strong>:</strong>
+              <strong>作者:</strong>
               Entropy Decrease
             </p>
           
@@ -846,7 +889,7 @@
 
           
           <p>
-            <strong>:</strong>
+            <strong>链接:</strong>
             <a
               href="https://entropydecrease.github.io/posts/5steps2fortune/"
               class="text-primary hover:text-primary/80 break-all hyphens-auto transition-colors duration-200"
@@ -857,7 +900,7 @@
 
           
           <p>
-            <strong>:</strong>
+            <strong>许可证:</strong>
             
               <a
                 href="https://creativecommons.org/licenses/by-nc-sa/4.0/"
@@ -906,7 +949,7 @@
   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
 </svg>
                 <span class="text-muted-foreground text-sm font-medium">
-                  
+                  上一篇
                 </span>
               </div>
 
@@ -923,7 +966,7 @@
 </svg>
 
               <time datetime="2023-12-02">
-                12/2/23
+                23/12/2
               </time>
             </div>
           </a>
@@ -940,7 +983,7 @@
             <div>
               <div class="mb-3 flex items-center justify-end gap-3">
                 <span class="text-muted-foreground text-sm font-medium">
-                  
+                  下一篇
                 </span>
                 <svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
@@ -956,7 +999,7 @@
 
             <div class="text-muted-foreground mt-auto flex items-center justify-end gap-2 text-xs">
               <time datetime="2023-12-04">
-                12/4/23
+                23/12/4
               </time>
               <svg class="h-3 w-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
@@ -1145,7 +1188,7 @@
   class="pointer-events-none fixed bottom-4 left-1/2 z-9999 w-fit -translate-x-1/2 translate-y-24 opacity-0 transition-all duration-300 ease-out sm:right-0 sm:left-0 sm:mx-auto sm:translate-x-0"
   data-dock-mode="float"
   role="toolbar"
-  aria-label=""
+  aria-label="快捷操作工具栏"
 >
   <nav
     class="border-border bg-card/80 scrollbar-hide xs:px-3 xs:py-2 mx-auto flex max-w-[calc(100vw-2rem)] min-w-fit items-center justify-center overflow-x-auto rounded-2xl border px-4 py-3 shadow-lg backdrop-blur-sm sm:px-4 sm:py-3"
@@ -1155,15 +1198,15 @@
       <button
         id="dock-back"
         class="text-muted-foreground hover:text-primary hover:bg-primary/10 focus:ring-primary/20 xs:px-2 xs:py-1.5 flex shrink-0 items-center gap-2 rounded-lg px-3 py-2 text-sm font-medium transition-all duration-300 ease-out hover:-translate-y-0.5 hover:scale-105 focus:ring-2 focus:outline-none sm:px-3 sm:py-2"
-        title=""
-        aria-label=""
+        title="返回"
+        aria-label="返回"
       >
         <svg class="h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
   <path d="m12 19-7-7 7-7"/>
   <path d="M19 12H5"/>
 </svg>
 
-        <span class="hidden sm:inline"></span>
+        <span class="hidden sm:inline">返回</span>
       </button>
 
       
@@ -1174,14 +1217,14 @@
     <button
       id="dock-search"
       class="text-muted-foreground hover:text-primary hover:bg-primary/10 focus:ring-primary/20 xs:px-3 xs:py-1.5 flex shrink-0 items-center gap-2 rounded-lg px-4 py-2 text-sm font-medium transition-all duration-300 ease-out hover:-translate-y-0.5 hover:scale-105 focus:ring-2 focus:outline-none sm:px-4 sm:py-2"
-      title=""
-      aria-label=""
+      title="搜索"
+      aria-label="搜索"
     >
       <svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m21 21-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
 </svg>
 
-      <span class="hidden md:inline"></span>
+      <span class="hidden md:inline">搜索</span>
     </button>
 
     
@@ -1196,14 +1239,14 @@
     <button
       id="dock-top"
       class="text-muted-foreground hover:text-primary hover:bg-primary/10 focus:ring-primary/20 xs:px-2 xs:py-1.5 flex shrink-0 items-center gap-2 rounded-lg px-3 py-2 text-sm font-medium transition-all duration-300 ease-out hover:-translate-y-0.5 hover:scale-105 focus:ring-2 focus:outline-none sm:px-3 sm:py-2"
-      title=""
-      aria-label=""
+      title="返回顶部"
+      aria-label="返回顶部"
     >
       <svg class="h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
   <path d="m18 15-6-6-6 6"/>
 </svg>
 
-      <span class="hidden sm:inline"></span>
+      <span class="hidden sm:inline">顶部</span>
     </button>
   </nav>
 </div>
@@ -1229,19 +1272,32 @@
 
       <aside
     id="toc-container"
-    class="toc-center"
-    data-position="center"
+    class="toc-side"
+    data-position="side"
   >
-      <div
-        id="toc-center"
-        class="pointer-events-none fixed top-28 right-0 left-0 z-40 mx-auto w-full max-w-4xl px-4 transition-all duration-300"
-      >
-        <div class="pointer-events-auto relative mx-auto w-fit">
-          <button
-            id="toc-center-toggle"
-            class="bg-card/80 border-border text-muted-foreground hover:text-primary hover:bg-primary/10 ring-offset-background focus-visible:ring-ring flex cursor-pointer items-center gap-2 rounded-full border px-4 py-1.5 text-sm shadow-sm backdrop-blur-sm transition-colors focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:outline-none"
-          >
-            <svg class="h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <div id="toc-layer">
+        <div id="toc-anchor">
+          <div id="toc-side">
+            
+            <div
+              id="toc-rail"
+              class="scrollbar-hide"
+              role="button"
+              tabindex="0"
+              aria-controls="toc-panel"
+              aria-expanded="false"
+              aria-label="目录"
+            ></div>
+
+            
+            <div id="toc-trigger-wrap">
+              <button
+                id="toc-trigger"
+                class="bg-card/80 border-border text-muted-foreground hover:text-primary hover:bg-primary/10 ring-offset-background focus-visible:ring-ring flex cursor-pointer items-center gap-2 rounded-full border px-4 py-1.5 text-sm shadow-sm backdrop-blur-sm transition-colors focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:outline-none"
+                aria-controls="toc-panel"
+                aria-expanded="false"
+              >
+                <svg class="h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
   <line x1="8" x2="21" y1="6" y2="6"/>
   <line x1="8" x2="21" y1="12" y2="12"/>
   <line x1="8" x2="21" y1="18" y2="18"/>
@@ -1250,22 +1306,64 @@
   <line x1="3" x2="3.01" y1="18" y2="18"/>
 </svg>
 
-            <span id="toc-center-title" class="max-w-[200px] truncate"></span>
-            <svg class="h-3 w-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <span id="toc-trigger-title" class="max-w-[200px] truncate">目录</span>
+                <svg class="h-3 w-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
 </svg>
-          </button>
+              </button>
+            </div>
 
-          
-          <div
-            id="toc-center-dropdown"
-            class="bg-card border-border scrollbar-hide absolute top-full left-1/2 mt-2 hidden max-h-[60vh] w-[280px] origin-top -translate-x-1/2 scale-95 overflow-y-auto rounded-xl border p-4 opacity-0 shadow-lg transition-all"
-          >
-            <div
-              id="toc-center-content"
-              class="[&_a]:text-muted-foreground [&_a:hover]:bg-primary/10 [&_a:hover]:text-primary [&_a.active]:bg-primary/10 [&_a.active]:text-primary text-sm [&_a]:block [&_a]:truncate [&_a]:rounded-md [&_a]:px-2 [&_a]:py-1 [&_a]:transition-colors [&_a.active]:font-medium [&_li]:my-1.5 [&_nav>ul]:pl-0 [&_ul]:list-none [&_ul]:pl-4"
-            >
-              <nav id="TableOfContents">
+            
+            <div id="toc-panel" class="scrollbar-hide overflow-y-auto">
+              <div
+                class="text-foreground mb-3 flex items-center justify-between gap-2 text-sm font-bold"
+              >
+                <span class="truncate">目录</span>
+                <div class="flex shrink-0 items-center gap-1">
+                  <button
+                    id="toc-pin"
+                    class="text-muted-foreground hover:text-primary hover:bg-primary/10 focus-visible:ring-ring cursor-pointer items-center rounded p-1 transition-colors focus-visible:ring-2 focus-visible:outline-none"
+                    aria-pressed="false"
+                    aria-label="固定目录"
+                    title="固定目录"
+                    data-label-pin="固定目录"
+                    data-label-unpin="取消固定目录"
+                  >
+                    <span id="toc-pin-on">
+                      <svg class="h-3 w-3" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <path d="M12 17v5"/>
+  <path d="M9 10.76a2 2 0 0 1-1.11 1.79l-1.78.9A2 2 0 0 0 5 15.24V16a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-.76a2 2 0 0 0-1.11-1.79l-1.78-.9A2 2 0 0 1 15 10.76V7a1 1 0 0 1 1-1 2 2 0 0 0 0-4H8a2 2 0 0 0 0 4 1 1 0 0 1 1 1z"/>
+</svg>
+
+                    </span>
+                    <span id="toc-pin-off">
+                      <svg class="h-3 w-3" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <path d="M12 17v5"/>
+  <path d="M15 9.34V7a1 1 0 0 1 1-1 2 2 0 0 0 0-4H7.89"/>
+  <path d="M9 9v1.76a2 2 0 0 1-1.11 1.79l-1.78.9A2 2 0 0 0 5 15.24V16a1 1 0 0 0 1 1h11"/>
+  <path d="m2 2 20 20"/>
+</svg>
+
+                    </span>
+                  </button>
+                  <button
+                    id="toc-close"
+                    class="text-muted-foreground hover:text-foreground focus-visible:ring-ring cursor-pointer items-center rounded p-1 transition-colors focus-visible:ring-2 focus-visible:outline-none"
+                    aria-label="关闭目录"
+                    title="关闭目录"
+                  >
+                    <svg class="h-3 w-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+</svg>
+
+                  </button>
+                </div>
+              </div>
+              <div
+                id="toc-side-content"
+                class="[&_a]:text-muted-foreground [&_a:hover]:bg-primary/10 [&_a:hover]:text-primary [&_a.active]:bg-primary/10 [&_a.active]:text-primary text-sm [&_a]:block [&_a]:rounded-md [&_a]:px-2 [&_a]:py-1 [&_a]:wrap-break-word [&_a]:whitespace-normal [&_a]:transition-colors [&_a.active]:font-medium [&_li]:my-1.5 [&_nav>ul]:pl-0 [&_ul]:list-none [&_ul]:pl-4"
+              >
+                <nav id="TableOfContents">
   <ul>
     <li><a href="#制胜股市-12-原则">制胜股市 12 原则</a>
       <ul>
@@ -1293,6 +1391,7 @@
     </li>
   </ul>
 </nav>
+              </div>
             </div>
           </div>
         </div>
@@ -1322,7 +1421,7 @@
 </svg>
 
     </div>
-    <h2 id="search-title" class="sr-only"></h2>
+    <h2 id="search-title" class="sr-only">搜索</h2>
 
     
     <div class="relative flex-1">
@@ -1330,8 +1429,8 @@
       <button
         id="search-clear"
         class="text-muted-foreground hover:text-foreground hover:bg-muted/50 pointer-events-none absolute top-1/2 left-0 z-10 h-5 w-5 -translate-y-1/2 rounded opacity-0 transition-all duration-200"
-        title=""
-        aria-label=""
+        title="清空"
+        aria-label="清空"
       >
         <svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
@@ -1343,7 +1442,7 @@
       <input
         id="search-input"
         type="text"
-        placeholder=""
+        placeholder="搜索文章..."
         class="text-foreground placeholder:text-muted-foreground w-full border-none bg-transparent pl-8 text-lg outline-none"
         autocomplete="off"
         spellcheck="false"
@@ -1354,8 +1453,8 @@
     <button
       id="search-close"
       class="text-muted-foreground hover:text-foreground hover:bg-muted/50 flex h-6 w-6 items-center justify-center rounded-md p-0.5 transition-all duration-200"
-      title=""
-      aria-label=""
+      title="关闭"
+      aria-label="关闭"
     >
       <svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
@@ -1375,7 +1474,7 @@
 
       </div>
       <h3 class="text-foreground mb-2 text-lg font-semibold">
-        
+        开始搜索
       </h3>
     </div>
 
@@ -1384,7 +1483,7 @@
       <div
         class="mr-3 h-6 w-6 animate-spin rounded-full border-2 border-current border-t-transparent"
       ></div>
-      <span class="text-muted-foreground"></span>
+      <span class="text-muted-foreground">搜索中...</span>
     </div>
 
     
@@ -1400,7 +1499,7 @@
 
       </div>
       <h3 class="text-foreground mb-2 text-lg font-semibold">
-        
+        未找到结果
       </h3>
     </div>
 
@@ -1410,7 +1509,7 @@
       <div
         id="search-stats"
         class="text-muted-foreground border-border border-b px-4 py-3 text-sm"
-        data-count-other=""
+        data-count-other="找到 %d 个结果"
       ></div>
 
       
@@ -1425,20 +1524,20 @@
       <div class="flex items-center gap-2 md:gap-4">
         <div class="flex items-center gap-1">
           <kbd class="bg-muted border-border rounded border px-1.5 py-0.5 text-xs">↑↓</kbd>
-          <span class="hidden sm:inline"></span>
+          <span class="hidden sm:inline">导航</span>
         </div>
         <div class="flex items-center gap-1">
           <kbd class="bg-muted border-border rounded border px-1.5 py-0.5 text-xs">↵</kbd>
-          <span class="hidden sm:inline"></span>
+          <span class="hidden sm:inline">选择</span>
         </div>
         <div class="flex items-center gap-1">
           <kbd class="bg-muted border-border rounded border px-1.5 py-0.5 text-xs">ESC</kbd>
-          <span class="hidden sm:inline"></span>
+          <span class="hidden sm:inline">关闭</span>
         </div>
       </div>
       <div class="search-hint-desktop flex items-center gap-1">
         <kbd class="bg-muted border-border rounded border px-1.5 py-0.5 text-xs">⌘K</kbd>
-        <span></span>
+        <span>快捷键</span>
       </div>
     </div>
   </div>

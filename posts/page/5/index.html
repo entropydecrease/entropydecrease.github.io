@@ -1,5 +1,8 @@
-<!doctype html>
-<html lang="zh-CN" data-theme="emerald">
+<!doctype html><html
+  lang="zh-Hans"
+  data-theme="emerald"
+  data-toc-pinned="false"
+>
   <head>
     <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
@@ -20,7 +23,7 @@
   name="author"
   content="Entropy Decrease"
 />
-<meta name="language" content="en-US" />
+<meta name="language" content="zh-CN" />
 
 <meta
   name="robots"
@@ -35,7 +38,7 @@
 	<meta property="og:site_name" content="Entropy Decrease">
 	<meta property="og:title" content="Posts">
 	<meta property="og:description" content="阅读、思考、写作，都是熵减的过程">
-	<meta property="og:locale" content="zh_CN">
+	<meta property="og:locale" content="zh_Hans">
 	<meta property="og:type" content="website">
 		<meta property="og:image" content="https://entropydecrease.github.io/images/og-default.avif">
 
@@ -74,8 +77,8 @@
     
       <link
         rel="stylesheet"
-        href="/css/compiled.min.4a6fd33c0e2db207c1646e8a588be381fd817a1b0cd86004cbb040e8dcf50b31.css"
-        integrity="sha256-Sm/TPA4tsgfBZG6KWIvjgf2BehsM2GAEy7BA6Nz1CzE="
+        href="/css/compiled.min.64471d81170139f732efa014a53ac4621daf3b75ac4fc8ad317a4d80f1c66197.css"
+        integrity="sha256-ZEcdgRcBOfcy76AUpTrEYh2vO3WsT8itMXpNgPHGYZc="
         crossorigin="anonymous"
       />
     
@@ -112,8 +115,8 @@
 
 
         <script
-          src="/js/main.f482676046fba6a50f6e6580bd1306489d4fea5f7144231757bf01af2498b168.js"
-          integrity="sha256-9IJnYEb7pqUPbmWAvRMGSJ1P6l9xRCMXV78BrySYsWg="
+          src="/js/main.b003624716b5b9344efafc302bd75df711e73d0da196be724be6daebb2b6964d.js"
+          integrity="sha256-sANiRxa1uTRO&#43;vwwK9dd9xHnPQ2hlr5yS&#43;ba67K2lk0="
           crossorigin="anonymous"
           defer
         ></script>
@@ -133,8 +136,8 @@
 
 
         <script
-          src="/js/dock.fc33c1fd0e0525acdd5b7abed135239608c36a061f3b566fbc9e5841594b11af.js"
-          integrity="sha256-/DPB/Q4FJazdW3q&#43;0TUjlgjDagYfO1ZvvJ5YQVlLEa8="
+          src="/js/dock.8e3addaa9b500c783209ee7837e59045cf14528a5807aedd4cf8e8e6dffbae11.js"
+          integrity="sha256-jjrdqptQDHgyCe54N&#43;WQRc8UUopYB67dTPjo5t/7rhE="
           crossorigin="anonymous"
           defer
         ></script>
@@ -153,9 +156,13 @@
 
 
     
-    <script>(function(){const e=localStorage.getItem("theme")||"system",n=localStorage.getItem("colorScheme")||"emerald";document.documentElement.setAttribute("data-theme",n);function t(){e==="dark"||e==="system"&&window.matchMedia("(prefers-color-scheme: dark)").matches?document.documentElement.classList.add("dark"):document.documentElement.classList.remove("dark")}t(),e==="system"&&window.matchMedia("(prefers-color-scheme: dark)").addEventListener("change",t)})()</script>
+    <script>(function(){const e=document.documentElement,o=localStorage.getItem("theme")||"system",m=localStorage.getItem("colorScheme")||"emerald",n=Number.parseInt(localStorage.getItem("contentWidth"),10),d=Number.isInteger(n)&&n>=40&&n<=90;d&&e.style.setProperty("--content-width",`${n}rem`),e.setAttribute("data-theme",m);const s=localStorage.getItem("tocPinned");(s==="true"||s==="false")&&e.setAttribute("data-toc-pinned",s);const t=Number.parseFloat(getComputedStyle(e).fontSize)||16,u="56rem",i=Number.parseFloat(u);let a=56*t;Number.isFinite(i)&&(a=/r?em\s*$/.test(u)?i*t:i),d&&(a=n*t);const r=e.clientWidth,c=Math.max(0,(r-Math.min(a,r))/2);let l="narrow";r>=64*t&&(c>=13*t?l="wide":c>=2*t&&(l="tight")),e.setAttribute("data-toc-space",l),e.style.setProperty("--toc-gutter",`${Math.round(c)}px`);function h(){o==="dark"||o==="system"&&window.matchMedia("(prefers-color-scheme: dark)").matches?e.classList.add("dark"):e.classList.remove("dark")}h(),o==="system"&&window.matchMedia("(prefers-color-scheme: dark)").addEventListener("change",h)})()</script>
   </head><body class="bg-background text-foreground min-h-screen antialiased">
-    <main class="mx-auto w-full" style="max-width: 56rem">
+    <main
+      id="page-container"
+      class="mx-auto w-full"
+      style="--content-width-base: 56rem; max-width: var(--content-width, var(--content-width-base))"
+    >
       <div
     id="reading-progress-bar"
     class="from-primary to-primary/80 pointer-events-none fixed top-0 left-0 z-50 h-[3px] w-0 bg-linear-to-r transition-[width] duration-150 ease-out"
@@ -191,7 +198,7 @@
     })();
   </script>
 
-      <header class=" px-4 py-6">
+      <header class="sticky top-0 z-50 px-4 py-6">
   <div
     class="border-border bg-card/80 flex items-center rounded-xl border px-6 py-4 shadow-sm backdrop-blur-sm"
   >
@@ -208,7 +215,7 @@
             aria-label="Entropy Decrease"
           >
             <img
-              src="/"
+              src="/images/logo.svg"
               alt="Entropy Decrease"
               class="h-full w-full object-cover"
             />
@@ -237,12 +244,12 @@
                  focus:ring-primary/20 relative flex items-center gap-2 rounded-lg px-4 py-2 text-sm font-medium transition-all duration-300 ease-out hover:-translate-y-0.5 hover:scale-105 focus:ring-2 focus:outline-none"
               >
                 
-                  <svg class="h-5 w-5" aria-label="posts" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <svg class="h-5 w-5" aria-label="文章" fill="none" stroke="currentColor" viewBox="0 0 24 24">
   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 20H5a2 2 0 01-2-2V6a2 2 0 012-2h10a2 2 0 012 2v1m2 13a2 2 0 01-2-2V7m2 13a2 2 0 002-2V9a2 2 0 00-2-2h-2m-4-3H9M7 16h6M7 8h6v4H7V8z" />
 </svg>
 
                 
-                <span>posts</span>
+                <span>文章</span>
               </a>
             
           
@@ -262,12 +269,12 @@
                  focus:ring-primary/20 relative flex items-center gap-2 rounded-lg px-4 py-2 text-sm font-medium transition-all duration-300 ease-out hover:-translate-y-0.5 hover:scale-105 focus:ring-2 focus:outline-none"
               >
                 
-                  <svg class="h-5 w-5" aria-label="categories" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <svg class="h-5 w-5" aria-label="分类" fill="none" stroke="currentColor" viewBox="0 0 24 24">
   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10" />
 </svg>
 
                 
-                <span>categories</span>
+                <span>分类</span>
               </a>
             
           
@@ -287,12 +294,12 @@
                  focus:ring-primary/20 relative flex items-center gap-2 rounded-lg px-4 py-2 text-sm font-medium transition-all duration-300 ease-out hover:-translate-y-0.5 hover:scale-105 focus:ring-2 focus:outline-none"
               >
                 
-                  <svg class="h-5 w-5" aria-label="tags" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <svg class="h-5 w-5" aria-label="标签" fill="none" stroke="currentColor" viewBox="0 0 24 24">
   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 7h.01M7 3h5c.512 0 1.024.195 1.414.586l7 7a2 2 0 010 2.828l-7 7a2 2 0 01-2.828 0l-7-7A1.994 1.994 0 013 12V7a4 4 0 014-4z" />
 </svg>
 
                 
-                <span>tags</span>
+                <span>标签</span>
               </a>
             
           
@@ -312,12 +319,12 @@
                  focus:ring-primary/20 relative flex items-center gap-2 rounded-lg px-4 py-2 text-sm font-medium transition-all duration-300 ease-out hover:-translate-y-0.5 hover:scale-105 focus:ring-2 focus:outline-none"
               >
                 
-                  <svg class="h-5 w-5" aria-label="archives" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <svg class="h-5 w-5" aria-label="归档" fill="none" stroke="currentColor" viewBox="0 0 24 24">
   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 8h14M5 8a2 2 0 110-4h14a2 2 0 110 4M5 8v10a2 2 0 002 2h10a2 2 0 002-2V8m-9 4h4" />
 </svg>
 
                 
-                <span>archives</span>
+                <span>归档</span>
               </a>
             
           
@@ -326,6 +333,38 @@
 
       
       <div class="flex items-center space-x-2">
+        
+        <div class="hidden lg:block"><div class="relative">
+    <button
+      id="content-width-toggle"
+      class="dropdown-toggle border-border bg-background text-muted-foreground hover:text-primary hover:bg-primary/10 focus:ring-primary/20 flex h-10 w-10 items-center justify-center rounded-lg border transition-all duration-300 ease-out hover:scale-105 focus:ring-2 focus:outline-none active:scale-95"
+      data-dropdown-type="content-width"
+      aria-label="调整页面宽度"
+      aria-expanded="false"
+      aria-haspopup="true"
+    ><svg class="h-5 w-5 relative z-10" aria-label="调整页面宽度" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+	<path d="M0 0h24v24H0z" fill="none" />
+	<path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 12H3l3-3m0 6l-3-3m11 0h7l-3-3m0 6l3-3M3 6V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v1M3 18v1a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-1" />
+</svg>
+</button>
+
+    <div
+      id="content-width-dropdown"
+      class="dropdown-menu border-border bg-popover/95 w-64 absolute top-12 right-0 z-60 hidden rounded-lg border p-1 shadow-lg backdrop-blur-sm transition-all duration-200 ease-out"
+      data-dropdown-type="content-width"
+      
+    >
+    <div class="space-y-3 p-3">
+    <div class="flex items-center justify-between gap-4">
+    <label for="content-width-range" class="text-foreground text-sm font-medium">页面宽度</label>
+    <output id="content-width-value" for="content-width-range" class="text-muted-foreground min-w-12 text-right text-sm tabular-nums"></output>
+    </div>
+    <input id="content-width-range" class="accent-primary w-full cursor-pointer" type="range" min="40" max="90" step="1" aria-label="页面宽度" />
+    <button id="content-width-reset" type="button" class="border-border text-muted-foreground hover:bg-accent hover:text-accent-foreground focus:ring-primary/20 w-full rounded-md border px-3 py-2 text-sm transition-colors focus:ring-2 focus:outline-none">恢复默认</button>
+    </div></div>
+  </div></div>
+
+
         
         
 
@@ -336,10 +375,10 @@
       id="color-scheme-toggle"
       class="dropdown-toggle border-border bg-background text-muted-foreground hover:text-primary hover:bg-primary/10 focus:ring-primary/20 flex h-10 w-10 items-center justify-center rounded-lg border transition-all duration-300 ease-out hover:scale-105 focus:ring-2 focus:outline-none active:scale-95"
       data-dropdown-type="color-scheme"
-      aria-label=""
+      aria-label="切换主题风格"
       aria-expanded="false"
       aria-haspopup="true"
-    ><svg class="h-5 w-5 relative z-10" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+    ><svg class="h-5 w-5 relative z-10" aria-label="切换主题风格" fill="none" stroke="currentColor" viewBox="0 0 24 24">
   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zM21 5a2 2 0 00-2-2h-4a2 2 0 00-2 2v6a2 2 0 002 2h4a2 2 0 002-2V5z" />
 </svg>
 </button>
@@ -349,7 +388,7 @@
       class="dropdown-menu border-border bg-popover/95 w-44 absolute top-12 right-0 z-60 hidden rounded-lg border p-1 shadow-lg backdrop-blur-sm transition-all duration-200 ease-out"
       data-dropdown-type="color-scheme"
       
-    ><button data-color-scheme="default" class="text-accent-foreground hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground flex w-full items-center rounded-md px-4 py-2 text-sm transition-all duration-200 ease-out focus:outline-none"><span>Default</span></button><button data-color-scheme="claude" class="text-accent-foreground hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground flex w-full items-center rounded-md px-4 py-2 text-sm transition-all duration-200 ease-out focus:outline-none"><span>Claude</span></button><button data-color-scheme="bumblebee" class="text-accent-foreground hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground flex w-full items-center rounded-md px-4 py-2 text-sm transition-all duration-200 ease-out focus:outline-none"><span>Bumblebee</span></button><button data-color-scheme="emerald" class="text-accent-foreground hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground flex w-full items-center rounded-md px-4 py-2 text-sm transition-all duration-200 ease-out focus:outline-none"><span>Emerald</span></button><button data-color-scheme="nord" class="text-accent-foreground hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground flex w-full items-center rounded-md px-4 py-2 text-sm transition-all duration-200 ease-out focus:outline-none"><span>Nord</span></button><button data-color-scheme="sunset" class="text-accent-foreground hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground flex w-full items-center rounded-md px-4 py-2 text-sm transition-all duration-200 ease-out focus:outline-none"><span>Sunset</span></button><button data-color-scheme="abyss" class="text-accent-foreground hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground flex w-full items-center rounded-md px-4 py-2 text-sm transition-all duration-200 ease-out focus:outline-none"><span>Abyss</span></button><button data-color-scheme="dracula" class="text-accent-foreground hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground flex w-full items-center rounded-md px-4 py-2 text-sm transition-all duration-200 ease-out focus:outline-none"><span>Dracula</span></button><button data-color-scheme="amethyst" class="text-accent-foreground hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground flex w-full items-center rounded-md px-4 py-2 text-sm transition-all duration-200 ease-out focus:outline-none"><span>Amethyst</span></button><button data-color-scheme="slate" class="text-accent-foreground hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground flex w-full items-center rounded-md px-4 py-2 text-sm transition-all duration-200 ease-out focus:outline-none"><span>Slate</span></button><button data-color-scheme="twitter" class="text-accent-foreground hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground flex w-full items-center rounded-md px-4 py-2 text-sm transition-all duration-200 ease-out focus:outline-none"><span>Twitter</span></button></div>
+    ><button data-color-scheme="default" class="text-accent-foreground hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground flex w-full items-center rounded-md px-4 py-2 text-sm transition-all duration-200 ease-out focus:outline-none"><span>Default</span></button><button data-color-scheme="claude" class="text-accent-foreground hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground flex w-full items-center rounded-md px-4 py-2 text-sm transition-all duration-200 ease-out focus:outline-none"><span>Claude</span></button><button data-color-scheme="bumblebee" class="text-accent-foreground hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground flex w-full items-center rounded-md px-4 py-2 text-sm transition-all duration-200 ease-out focus:outline-none"><span>Bumblebee</span></button><button data-color-scheme="emerald" class="text-accent-foreground hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground flex w-full items-center rounded-md px-4 py-2 text-sm transition-all duration-200 ease-out focus:outline-none"><span>Emerald</span></button><button data-color-scheme="nord" class="text-accent-foreground hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground flex w-full items-center rounded-md px-4 py-2 text-sm transition-all duration-200 ease-out focus:outline-none"><span>Nord</span></button><button data-color-scheme="sunset" class="text-accent-foreground hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground flex w-full items-center rounded-md px-4 py-2 text-sm transition-all duration-200 ease-out focus:outline-none"><span>Sunset</span></button><button data-color-scheme="abyss" class="text-accent-foreground hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground flex w-full items-center rounded-md px-4 py-2 text-sm transition-all duration-200 ease-out focus:outline-none"><span>Abyss</span></button><button data-color-scheme="dracula" class="text-accent-foreground hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground flex w-full items-center rounded-md px-4 py-2 text-sm transition-all duration-200 ease-out focus:outline-none"><span>Dracula</span></button><button data-color-scheme="amethyst" class="text-accent-foreground hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground flex w-full items-center rounded-md px-4 py-2 text-sm transition-all duration-200 ease-out focus:outline-none"><span>Amethyst</span></button><button data-color-scheme="slate" class="text-accent-foreground hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground flex w-full items-center rounded-md px-4 py-2 text-sm transition-all duration-200 ease-out focus:outline-none"><span>Slate</span></button><button data-color-scheme="twitter" class="text-accent-foreground hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground flex w-full items-center rounded-md px-4 py-2 text-sm transition-all duration-200 ease-out focus:outline-none"><span>Twitter</span></button><button data-color-scheme="minimal" class="text-accent-foreground hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground flex w-full items-center rounded-md px-4 py-2 text-sm transition-all duration-200 ease-out focus:outline-none"><span>Minimal</span></button></div>
   </div>
 
 
@@ -359,18 +398,18 @@
       id="theme-toggle"
       class="dropdown-toggle border-border bg-background text-muted-foreground hover:text-primary hover:bg-primary/10 focus:ring-primary/20 flex h-10 w-10 items-center justify-center rounded-lg border transition-all duration-300 ease-out hover:scale-105 focus:ring-2 focus:outline-none active:scale-95"
       data-dropdown-type="theme"
-      aria-label=""
+      aria-label="切换主题风格"
       aria-expanded="false"
       aria-haspopup="true"
-    ><svg class="h-5 w-5 sun-icon hidden relative z-10" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+    ><svg class="h-5 w-5 sun-icon hidden relative z-10" aria-label="亮色" fill="none" stroke="currentColor" viewBox="0 0 24 24">
   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" />
 </svg>
 
-        <svg class="h-5 w-5 moon-icon hidden relative z-10" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <svg class="h-5 w-5 moon-icon hidden relative z-10" aria-label="暗色" fill="none" stroke="currentColor" viewBox="0 0 24 24">
   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" />
 </svg>
 
-        <svg class="h-5 w-5 system-icon hidden relative z-10" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <svg class="h-5 w-5 system-icon hidden relative z-10" aria-label="跟随系统" fill="none" stroke="currentColor" viewBox="0 0 24 24">
   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
 </svg>
 </button>
@@ -380,16 +419,16 @@
       class="dropdown-menu border-border bg-popover/95 w-40 absolute top-12 right-0 z-60 hidden rounded-lg border p-1 shadow-lg backdrop-blur-sm transition-all duration-200 ease-out"
       data-dropdown-type="theme"
       
-    ><button data-theme="light" class="text-accent-foreground hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground flex w-full items-center rounded-md px-4 py-2 text-sm transition-all duration-200 ease-out focus:outline-none"><svg class="h-5 w-5 mr-3 h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+    ><button data-theme="light" class="text-accent-foreground hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground flex w-full items-center rounded-md px-4 py-2 text-sm transition-all duration-200 ease-out focus:outline-none"><svg class="h-5 w-5 mr-3 h-4 w-4" aria-label="亮色" fill="none" stroke="currentColor" viewBox="0 0 24 24">
   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" />
 </svg>
-<span></span></button><button data-theme="dark" class="text-accent-foreground hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground flex w-full items-center rounded-md px-4 py-2 text-sm transition-all duration-200 ease-out focus:outline-none"><svg class="h-5 w-5 mr-3 h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+<span>亮色</span></button><button data-theme="dark" class="text-accent-foreground hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground flex w-full items-center rounded-md px-4 py-2 text-sm transition-all duration-200 ease-out focus:outline-none"><svg class="h-5 w-5 mr-3 h-4 w-4" aria-label="暗色" fill="none" stroke="currentColor" viewBox="0 0 24 24">
   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" />
 </svg>
-<span></span></button><button data-theme="system" class="text-accent-foreground hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground flex w-full items-center rounded-md px-4 py-2 text-sm transition-all duration-200 ease-out focus:outline-none"><svg class="h-5 w-5 mr-3 h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+<span>暗色</span></button><button data-theme="system" class="text-accent-foreground hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground flex w-full items-center rounded-md px-4 py-2 text-sm transition-all duration-200 ease-out focus:outline-none"><svg class="h-5 w-5 mr-3 h-4 w-4" aria-label="跟随系统" fill="none" stroke="currentColor" viewBox="0 0 24 24">
   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
 </svg>
-<span></span></button></div>
+<span>跟随系统</span></button></div>
   </div>
       </div>
     </div>
@@ -401,11 +440,11 @@
 <button
   id="mobile-nav-toggle"
   class="nav-panel-toggle border-border bg-background text-muted-foreground hover:bg-accent hover:text-foreground flex h-10 w-10 items-center justify-center rounded-lg border transition-colors duration-200"
-  aria-label=""
+  aria-label="菜单"
   aria-expanded="false"
   aria-controls="mobile-nav-panel"
 >
-  <svg class="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+  <svg class="h-5 w-5" aria-label="菜单" fill="none" stroke="currentColor" viewBox="0 0 24 24">
   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
 </svg>
 
@@ -425,10 +464,10 @@
       id="color-scheme-toggle"
       class="dropdown-toggle border-border bg-background text-muted-foreground hover:text-primary hover:bg-primary/10 focus:ring-primary/20 flex h-10 w-10 items-center justify-center rounded-lg border transition-all duration-300 ease-out hover:scale-105 focus:ring-2 focus:outline-none active:scale-95"
       data-dropdown-type="color-scheme"
-      aria-label=""
+      aria-label="切换主题风格"
       aria-expanded="false"
       aria-haspopup="true"
-    ><svg class="h-5 w-5 relative z-10" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+    ><svg class="h-5 w-5 relative z-10" aria-label="切换主题风格" fill="none" stroke="currentColor" viewBox="0 0 24 24">
   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zM21 5a2 2 0 00-2-2h-4a2 2 0 00-2 2v6a2 2 0 002 2h4a2 2 0 002-2V5z" />
 </svg>
 </button>
@@ -438,7 +477,7 @@
       class="dropdown-menu border-border bg-popover/95 w-44 absolute top-12 right-0 z-60 hidden rounded-lg border p-1 shadow-lg backdrop-blur-sm transition-all duration-200 ease-out"
       data-dropdown-type="color-scheme"
       
-    ><button data-color-scheme="default" class="text-accent-foreground hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground flex w-full items-center rounded-md px-4 py-2 text-sm transition-all duration-200 ease-out focus:outline-none"><span>Default</span></button><button data-color-scheme="claude" class="text-accent-foreground hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground flex w-full items-center rounded-md px-4 py-2 text-sm transition-all duration-200 ease-out focus:outline-none"><span>Claude</span></button><button data-color-scheme="bumblebee" class="text-accent-foreground hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground flex w-full items-center rounded-md px-4 py-2 text-sm transition-all duration-200 ease-out focus:outline-none"><span>Bumblebee</span></button><button data-color-scheme="emerald" class="text-accent-foreground hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground flex w-full items-center rounded-md px-4 py-2 text-sm transition-all duration-200 ease-out focus:outline-none"><span>Emerald</span></button><button data-color-scheme="nord" class="text-accent-foreground hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground flex w-full items-center rounded-md px-4 py-2 text-sm transition-all duration-200 ease-out focus:outline-none"><span>Nord</span></button><button data-color-scheme="sunset" class="text-accent-foreground hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground flex w-full items-center rounded-md px-4 py-2 text-sm transition-all duration-200 ease-out focus:outline-none"><span>Sunset</span></button><button data-color-scheme="abyss" class="text-accent-foreground hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground flex w-full items-center rounded-md px-4 py-2 text-sm transition-all duration-200 ease-out focus:outline-none"><span>Abyss</span></button><button data-color-scheme="dracula" class="text-accent-foreground hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground flex w-full items-center rounded-md px-4 py-2 text-sm transition-all duration-200 ease-out focus:outline-none"><span>Dracula</span></button><button data-color-scheme="amethyst" class="text-accent-foreground hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground flex w-full items-center rounded-md px-4 py-2 text-sm transition-all duration-200 ease-out focus:outline-none"><span>Amethyst</span></button><button data-color-scheme="slate" class="text-accent-foreground hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground flex w-full items-center rounded-md px-4 py-2 text-sm transition-all duration-200 ease-out focus:outline-none"><span>Slate</span></button><button data-color-scheme="twitter" class="text-accent-foreground hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground flex w-full items-center rounded-md px-4 py-2 text-sm transition-all duration-200 ease-out focus:outline-none"><span>Twitter</span></button></div>
+    ><button data-color-scheme="default" class="text-accent-foreground hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground flex w-full items-center rounded-md px-4 py-2 text-sm transition-all duration-200 ease-out focus:outline-none"><span>Default</span></button><button data-color-scheme="claude" class="text-accent-foreground hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground flex w-full items-center rounded-md px-4 py-2 text-sm transition-all duration-200 ease-out focus:outline-none"><span>Claude</span></button><button data-color-scheme="bumblebee" class="text-accent-foreground hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground flex w-full items-center rounded-md px-4 py-2 text-sm transition-all duration-200 ease-out focus:outline-none"><span>Bumblebee</span></button><button data-color-scheme="emerald" class="text-accent-foreground hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground flex w-full items-center rounded-md px-4 py-2 text-sm transition-all duration-200 ease-out focus:outline-none"><span>Emerald</span></button><button data-color-scheme="nord" class="text-accent-foreground hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground flex w-full items-center rounded-md px-4 py-2 text-sm transition-all duration-200 ease-out focus:outline-none"><span>Nord</span></button><button data-color-scheme="sunset" class="text-accent-foreground hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground flex w-full items-center rounded-md px-4 py-2 text-sm transition-all duration-200 ease-out focus:outline-none"><span>Sunset</span></button><button data-color-scheme="abyss" class="text-accent-foreground hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground flex w-full items-center rounded-md px-4 py-2 text-sm transition-all duration-200 ease-out focus:outline-none"><span>Abyss</span></button><button data-color-scheme="dracula" class="text-accent-foreground hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground flex w-full items-center rounded-md px-4 py-2 text-sm transition-all duration-200 ease-out focus:outline-none"><span>Dracula</span></button><button data-color-scheme="amethyst" class="text-accent-foreground hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground flex w-full items-center rounded-md px-4 py-2 text-sm transition-all duration-200 ease-out focus:outline-none"><span>Amethyst</span></button><button data-color-scheme="slate" class="text-accent-foreground hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground flex w-full items-center rounded-md px-4 py-2 text-sm transition-all duration-200 ease-out focus:outline-none"><span>Slate</span></button><button data-color-scheme="twitter" class="text-accent-foreground hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground flex w-full items-center rounded-md px-4 py-2 text-sm transition-all duration-200 ease-out focus:outline-none"><span>Twitter</span></button><button data-color-scheme="minimal" class="text-accent-foreground hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground flex w-full items-center rounded-md px-4 py-2 text-sm transition-all duration-200 ease-out focus:outline-none"><span>Minimal</span></button></div>
   </div>
 
 
@@ -448,18 +487,18 @@
       id="theme-toggle"
       class="dropdown-toggle border-border bg-background text-muted-foreground hover:text-primary hover:bg-primary/10 focus:ring-primary/20 flex h-10 w-10 items-center justify-center rounded-lg border transition-all duration-300 ease-out hover:scale-105 focus:ring-2 focus:outline-none active:scale-95"
       data-dropdown-type="theme"
-      aria-label=""
+      aria-label="切换主题风格"
       aria-expanded="false"
       aria-haspopup="true"
-    ><svg class="h-5 w-5 sun-icon hidden relative z-10" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+    ><svg class="h-5 w-5 sun-icon hidden relative z-10" aria-label="亮色" fill="none" stroke="currentColor" viewBox="0 0 24 24">
   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" />
 </svg>
 
-        <svg class="h-5 w-5 moon-icon hidden relative z-10" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <svg class="h-5 w-5 moon-icon hidden relative z-10" aria-label="暗色" fill="none" stroke="currentColor" viewBox="0 0 24 24">
   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" />
 </svg>
 
-        <svg class="h-5 w-5 system-icon hidden relative z-10" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <svg class="h-5 w-5 system-icon hidden relative z-10" aria-label="跟随系统" fill="none" stroke="currentColor" viewBox="0 0 24 24">
   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
 </svg>
 </button>
@@ -469,16 +508,16 @@
       class="dropdown-menu border-border bg-popover/95 w-40 absolute top-12 right-0 z-60 hidden rounded-lg border p-1 shadow-lg backdrop-blur-sm transition-all duration-200 ease-out"
       data-dropdown-type="theme"
       
-    ><button data-theme="light" class="text-accent-foreground hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground flex w-full items-center rounded-md px-4 py-2 text-sm transition-all duration-200 ease-out focus:outline-none"><svg class="h-5 w-5 mr-3 h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+    ><button data-theme="light" class="text-accent-foreground hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground flex w-full items-center rounded-md px-4 py-2 text-sm transition-all duration-200 ease-out focus:outline-none"><svg class="h-5 w-5 mr-3 h-4 w-4" aria-label="亮色" fill="none" stroke="currentColor" viewBox="0 0 24 24">
   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" />
 </svg>
-<span></span></button><button data-theme="dark" class="text-accent-foreground hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground flex w-full items-center rounded-md px-4 py-2 text-sm transition-all duration-200 ease-out focus:outline-none"><svg class="h-5 w-5 mr-3 h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+<span>亮色</span></button><button data-theme="dark" class="text-accent-foreground hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground flex w-full items-center rounded-md px-4 py-2 text-sm transition-all duration-200 ease-out focus:outline-none"><svg class="h-5 w-5 mr-3 h-4 w-4" aria-label="暗色" fill="none" stroke="currentColor" viewBox="0 0 24 24">
   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" />
 </svg>
-<span></span></button><button data-theme="system" class="text-accent-foreground hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground flex w-full items-center rounded-md px-4 py-2 text-sm transition-all duration-200 ease-out focus:outline-none"><svg class="h-5 w-5 mr-3 h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+<span>暗色</span></button><button data-theme="system" class="text-accent-foreground hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground flex w-full items-center rounded-md px-4 py-2 text-sm transition-all duration-200 ease-out focus:outline-none"><svg class="h-5 w-5 mr-3 h-4 w-4" aria-label="跟随系统" fill="none" stroke="currentColor" viewBox="0 0 24 24">
   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
 </svg>
-<span></span></button></div>
+<span>跟随系统</span></button></div>
   </div>
       </div>
     </div>
@@ -490,7 +529,7 @@
   id="mobile-nav-panel"
   class="mt-2 hidden md:hidden"
   role="navigation"
-  aria-label=""
+  aria-label="菜单"
   aria-hidden="true"
   tabindex="-1"
 >
@@ -519,12 +558,12 @@
             aria-current="page"
           >
             
-              <svg class="h-5 w-5" aria-label="posts" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <svg class="h-5 w-5" aria-label="文章" fill="none" stroke="currentColor" viewBox="0 0 24 24">
   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 20H5a2 2 0 01-2-2V6a2 2 0 012-2h10a2 2 0 012 2v1m2 13a2 2 0 01-2-2V7m2 13a2 2 0 002-2V9a2 2 0 00-2-2h-2m-4-3H9M7 16h6M7 8h6v4H7V8z" />
 </svg>
 
             
-            <span>posts</span>
+            <span>文章</span>
           </a>
         
       
@@ -546,12 +585,12 @@
             
           >
             
-              <svg class="h-5 w-5" aria-label="categories" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <svg class="h-5 w-5" aria-label="分类" fill="none" stroke="currentColor" viewBox="0 0 24 24">
   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10" />
 </svg>
 
             
-            <span>categories</span>
+            <span>分类</span>
           </a>
         
       
@@ -573,12 +612,12 @@
             
           >
             
-              <svg class="h-5 w-5" aria-label="tags" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <svg class="h-5 w-5" aria-label="标签" fill="none" stroke="currentColor" viewBox="0 0 24 24">
   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 7h.01M7 3h5c.512 0 1.024.195 1.414.586l7 7a2 2 0 010 2.828l-7 7a2 2 0 01-2.828 0l-7-7A1.994 1.994 0 013 12V7a4 4 0 014-4z" />
 </svg>
 
             
-            <span>tags</span>
+            <span>标签</span>
           </a>
         
       
@@ -600,12 +639,12 @@
             
           >
             
-              <svg class="h-5 w-5" aria-label="archives" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <svg class="h-5 w-5" aria-label="归档" fill="none" stroke="currentColor" viewBox="0 0 24 24">
   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 8h14M5 8a2 2 0 110-4h14a2 2 0 110 4M5 8v10a2 2 0 002 2h10a2 2 0 002-2V8m-9 4h4" />
 </svg>
 
             
-            <span>archives</span>
+            <span>归档</span>
           </a>
         
       
@@ -619,7 +658,7 @@
 
       <div class="px-4 py-6">
         
-  <nav class="breadcrumb mb-4 py-1 md:mb-6" aria-label="">
+  <nav class="breadcrumb mb-4 py-1 md:mb-6" aria-label="面包屑导航">
     <ol
       class="text-muted-foreground scrollbar-hide flex items-center space-x-1 overflow-x-auto py-1 text-sm whitespace-nowrap md:space-x-2"
     >
@@ -662,31 +701,25 @@
 
         
   
-  
-  
 
 
-  <div class="mx-auto py-6">
+  
+  <header class="mb-8">
+    <h1 class="text-foreground mb-4 text-3xl font-bold">
+      Posts
+    </h1>
+
     
-    <header class="mb-8">
-      <h1 class="text-foreground mb-4 text-3xl font-bold">
-        Posts
-      </h1>
-
-      
 
 
-      
+    
+    
       <div class="text-muted-foreground mt-4 flex items-center gap-4 text-sm">
         <div class="flex items-center gap-1">
           <svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 7v10a2 2 0 002 2h14a2 2 0 002-2V9a2 2 0 00-2-2h-6l-2-2H5a2 2 0 00-2 2z" />
 </svg>
-          <span>
-            
-              
-            
-          </span>
+          <span>199 个页面</span>
         </div>
         
           <div class="flex items-center gap-1">
@@ -702,15 +735,87 @@
           </div>
         
       </div>
-    </header>
+    
+  </header>
 
-    
-    
-    
+  
+  
+    <div class="space-y-4">
       
-        <div class="space-y-4">
+        
+
+
+
+
+<article class="group">
+  <a href="/posts/%E4%B8%96%E7%95%8C%E6%9D%AF%E7%9A%84%E5%9B%9E%E5%BF%86/" class="block">
+    <div
+      class="bg-card border-border hover:bg-primary/5 hover:border-primary/20 focus:ring-primary/20 relative flex flex-col overflow-hidden rounded-xl border transition-all duration-300 ease-out hover:-translate-y-1 hover:scale-[1.02] hover:shadow-lg focus:ring-2 focus:outline-none md:flex-row"
+    >
+      
+      <div class="flex flex-1 flex-col justify-center gap-4 p-6">
+        
+        <h3
+          class="text-foreground group-hover:text-primary text-xl leading-tight font-bold transition-colors duration-200"
+        >
+          世界杯的回忆
+        </h3>
+
+        
+        
+          <p class="text-muted-foreground line-clamp-3 text-sm leading-relaxed md:line-clamp-2">
+            没空看世界杯，只听到一些新闻。但是年纪大了，容易回首往事。
+2002年世界杯，中国队和巴西、土耳其、哥斯达黎加同组。
+赛前中国队的理想是，输巴西、平土耳其、赢哥斯达黎加，靠净胜球出线。
+
+          </p>
+        
+
+
+        
+        <div class="text-muted-foreground mt-2 flex flex-wrap items-center gap-x-4 gap-y-2 text-sm">
           
-            
+          
+            <div class="flex items-center gap-1.5">
+              <svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+</svg>
+
+              <time datetime="2022-11-27" class="font-medium">
+                2022年11月27日
+              </time>
+            </div>
+          
+
+
+          
+          
+            <div class="flex items-center gap-1.5">
+              <svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+</svg>
+
+              <span class="truncate font-medium"
+                >2 分钟</span
+              >
+            </div>
+          
+
+
+          
+          
+            <div class="ml-auto flex flex-wrap items-center gap-1.5 md:ml-0">
+              
+            </div>
+          
+        </div>
+      </div>
+    </div>
+  </a>
+</article>
+
+      
+        
 
 
 
@@ -741,15 +846,18 @@
         
         <div class="text-muted-foreground mt-2 flex flex-wrap items-center gap-x-4 gap-y-2 text-sm">
           
-          <div class="flex items-center gap-1.5">
-            <svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          
+            <div class="flex items-center gap-1.5">
+              <svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
 </svg>
 
-            <time datetime="2022-11-19" class="font-medium">
-              November 19, 2022
-            </time>
-          </div>
+              <time datetime="2022-11-19" class="font-medium">
+                2022年11月19日
+              </time>
+            </div>
+          
+
 
           
           
@@ -759,7 +867,7 @@
 </svg>
 
               <span class="truncate font-medium"
-                ></span
+                >1 分钟</span
               >
             </div>
           
@@ -783,8 +891,8 @@
   </a>
 </article>
 
-          
-            
+      
+        
 
 
 
@@ -806,8 +914,7 @@
         
         
           <p class="text-muted-foreground line-clamp-3 text-sm leading-relaxed md:line-clamp-2">
-            怎么引用另外一个markdown文件https://gohugo.io/content-management/cross-references/ 方法是是用 shortcode
-Shortcodes for creating links to documents. The ref …
+            怎么引用另外一个markdown文件https://gohugo.io/content-management/cross-references/ 
           </p>
         
 
@@ -815,15 +922,18 @@ Shortcodes for creating links to documents. The ref …
         
         <div class="text-muted-foreground mt-2 flex flex-wrap items-center gap-x-4 gap-y-2 text-sm">
           
-          <div class="flex items-center gap-1.5">
-            <svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          
+            <div class="flex items-center gap-1.5">
+              <svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
 </svg>
 
-            <time datetime="2022-09-18" class="font-medium">
-              September 18, 2022
-            </time>
-          </div>
+              <time datetime="2022-09-18" class="font-medium">
+                2022年9月18日
+              </time>
+            </div>
+          
+
 
           
           
@@ -833,7 +943,7 @@ Shortcodes for creating links to documents. The ref …
 </svg>
 
               <span class="truncate font-medium"
-                ></span
+                >2 分钟</span
               >
             </div>
           
@@ -857,8 +967,8 @@ Shortcodes for creating links to documents. The ref …
   </a>
 </article>
 
-          
-            
+      
+        
 
 
 
@@ -889,15 +999,18 @@ Shortcodes for creating links to documents. The ref …
         
         <div class="text-muted-foreground mt-2 flex flex-wrap items-center gap-x-4 gap-y-2 text-sm">
           
-          <div class="flex items-center gap-1.5">
-            <svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          
+            <div class="flex items-center gap-1.5">
+              <svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
 </svg>
 
-            <time datetime="2022-09-18" class="font-medium">
-              September 18, 2022
-            </time>
-          </div>
+              <time datetime="2022-09-18" class="font-medium">
+                2022年9月18日
+              </time>
+            </div>
+          
+
 
           
           
@@ -907,7 +1020,7 @@ Shortcodes for creating links to documents. The ref …
 </svg>
 
               <span class="truncate font-medium"
-                ></span
+                >2 分钟</span
               >
             </div>
           
@@ -937,8 +1050,8 @@ Shortcodes for creating links to documents. The ref …
   </a>
 </article>
 
-          
-            
+      
+        
 
 
 
@@ -969,15 +1082,18 @@ Shortcodes for creating links to documents. The ref …
         
         <div class="text-muted-foreground mt-2 flex flex-wrap items-center gap-x-4 gap-y-2 text-sm">
           
-          <div class="flex items-center gap-1.5">
-            <svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          
+            <div class="flex items-center gap-1.5">
+              <svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
 </svg>
 
-            <time datetime="2022-09-17" class="font-medium">
-              September 17, 2022
-            </time>
-          </div>
+              <time datetime="2022-09-17" class="font-medium">
+                2022年9月17日
+              </time>
+            </div>
+          
+
 
           
           
@@ -987,7 +1103,7 @@ Shortcodes for creating links to documents. The ref …
 </svg>
 
               <span class="truncate font-medium"
-                ></span
+                >1 分钟</span
               >
             </div>
           
@@ -1001,8 +1117,8 @@ Shortcodes for creating links to documents. The ref …
   </a>
 </article>
 
-          
-            
+      
+        
 
 
 
@@ -1033,15 +1149,18 @@ Shortcodes for creating links to documents. The ref …
         
         <div class="text-muted-foreground mt-2 flex flex-wrap items-center gap-x-4 gap-y-2 text-sm">
           
-          <div class="flex items-center gap-1.5">
-            <svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          
+            <div class="flex items-center gap-1.5">
+              <svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
 </svg>
 
-            <time datetime="2022-07-12" class="font-medium">
-              July 12, 2022
-            </time>
-          </div>
+              <time datetime="2022-07-12" class="font-medium">
+                2022年7月12日
+              </time>
+            </div>
+          
+
 
           
           
@@ -1051,7 +1170,7 @@ Shortcodes for creating links to documents. The ref …
 </svg>
 
               <span class="truncate font-medium"
-                ></span
+                >7 分钟</span
               >
             </div>
           
@@ -1087,8 +1206,8 @@ Shortcodes for creating links to documents. The ref …
   </a>
 </article>
 
-          
-            
+      
+        
 
 
 
@@ -1119,15 +1238,18 @@ https://mavis.readthedocs.io/en/stable/ 理论与模型介绍在 …
         
         <div class="text-muted-foreground mt-2 flex flex-wrap items-center gap-x-4 gap-y-2 text-sm">
           
-          <div class="flex items-center gap-1.5">
-            <svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          
+            <div class="flex items-center gap-1.5">
+              <svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
 </svg>
 
-            <time datetime="2022-05-12" class="font-medium">
-              May 12, 2022
-            </time>
-          </div>
+              <time datetime="2022-05-12" class="font-medium">
+                2022年5月12日
+              </time>
+            </div>
+          
+
 
           
           
@@ -1137,7 +1259,7 @@ https://mavis.readthedocs.io/en/stable/ 理论与模型介绍在 …
 </svg>
 
               <span class="truncate font-medium"
-                ></span
+                >8 分钟</span
               >
             </div>
           
@@ -1151,8 +1273,8 @@ https://mavis.readthedocs.io/en/stable/ 理论与模型介绍在 …
   </a>
 </article>
 
-          
-            
+      
+        
 
 
 
@@ -1182,15 +1304,18 @@ https://mavis.readthedocs.io/en/stable/ 理论与模型介绍在 …
         
         <div class="text-muted-foreground mt-2 flex flex-wrap items-center gap-x-4 gap-y-2 text-sm">
           
-          <div class="flex items-center gap-1.5">
-            <svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          
+            <div class="flex items-center gap-1.5">
+              <svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
 </svg>
 
-            <time datetime="2022-05-05" class="font-medium">
-              May 5, 2022
-            </time>
-          </div>
+              <time datetime="2022-05-05" class="font-medium">
+                2022年5月5日
+              </time>
+            </div>
+          
+
 
           
           
@@ -1200,7 +1325,7 @@ https://mavis.readthedocs.io/en/stable/ 理论与模型介绍在 …
 </svg>
 
               <span class="truncate font-medium"
-                ></span
+                >1 分钟</span
               >
             </div>
           
@@ -1224,8 +1349,8 @@ https://mavis.readthedocs.io/en/stable/ 理论与模型介绍在 …
   </a>
 </article>
 
-          
-            
+      
+        
 
 
 
@@ -1257,15 +1382,18 @@ https://mavis.readthedocs.io/en/stable/ 理论与模型介绍在 …
         
         <div class="text-muted-foreground mt-2 flex flex-wrap items-center gap-x-4 gap-y-2 text-sm">
           
-          <div class="flex items-center gap-1.5">
-            <svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          
+            <div class="flex items-center gap-1.5">
+              <svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
 </svg>
 
-            <time datetime="2022-05-02" class="font-medium">
-              May 2, 2022
-            </time>
-          </div>
+              <time datetime="2022-05-02" class="font-medium">
+                2022年5月2日
+              </time>
+            </div>
+          
+
 
           
           
@@ -1275,7 +1403,7 @@ https://mavis.readthedocs.io/en/stable/ 理论与模型介绍在 …
 </svg>
 
               <span class="truncate font-medium"
-                ></span
+                >74 分钟</span
               >
             </div>
           
@@ -1289,8 +1417,8 @@ https://mavis.readthedocs.io/en/stable/ 理论与模型介绍在 …
   </a>
 </article>
 
-          
-            
+      
+        
 
 
 
@@ -1320,15 +1448,18 @@ https://mavis.readthedocs.io/en/stable/ 理论与模型介绍在 …
         
         <div class="text-muted-foreground mt-2 flex flex-wrap items-center gap-x-4 gap-y-2 text-sm">
           
-          <div class="flex items-center gap-1.5">
-            <svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          
+            <div class="flex items-center gap-1.5">
+              <svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
 </svg>
 
-            <time datetime="2022-05-01" class="font-medium">
-              May 1, 2022
-            </time>
-          </div>
+              <time datetime="2022-05-01" class="font-medium">
+                2022年5月1日
+              </time>
+            </div>
+          
+
 
           
           
@@ -1338,7 +1469,7 @@ https://mavis.readthedocs.io/en/stable/ 理论与模型介绍在 …
 </svg>
 
               <span class="truncate font-medium"
-                ></span
+                >2 分钟</span
               >
             </div>
           
@@ -1356,8 +1487,8 @@ https://mavis.readthedocs.io/en/stable/ 理论与模型介绍在 …
   </a>
 </article>
 
-          
-            
+      
+        
 
 
 
@@ -1379,7 +1510,7 @@ https://mavis.readthedocs.io/en/stable/ 理论与模型介绍在 …
         
         
           <p class="text-muted-foreground line-clamp-3 text-sm leading-relaxed md:line-clamp-2">
-            gnomAD af only vcfhttps://github.com/broadinstitute/gatk/blob/master/scripts/mutect2_wdl/mutect_resources.wdl to remove QUAL and all fields …
+            gnomAD af only vcfhttps://github.com/broadinstitute/gatk/blob/master/scripts/mutect2_wdl/mutect_resources.wdl 
           </p>
         
 
@@ -1387,15 +1518,18 @@ https://mavis.readthedocs.io/en/stable/ 理论与模型介绍在 …
         
         <div class="text-muted-foreground mt-2 flex flex-wrap items-center gap-x-4 gap-y-2 text-sm">
           
-          <div class="flex items-center gap-1.5">
-            <svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          
+            <div class="flex items-center gap-1.5">
+              <svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
 </svg>
 
-            <time datetime="2022-05-01" class="font-medium">
-              May 1, 2022
-            </time>
-          </div>
+              <time datetime="2022-05-01" class="font-medium">
+                2022年5月1日
+              </time>
+            </div>
+          
+
 
           
           
@@ -1405,7 +1539,7 @@ https://mavis.readthedocs.io/en/stable/ 理论与模型介绍在 …
 </svg>
 
               <span class="truncate font-medium"
-                ></span
+                >3 分钟</span
               >
             </div>
           
@@ -1429,8 +1563,8 @@ https://mavis.readthedocs.io/en/stable/ 理论与模型介绍在 …
   </a>
 </article>
 
-          
-            
+      
+        
 
 
 
@@ -1460,15 +1594,18 @@ https://mavis.readthedocs.io/en/stable/ 理论与模型介绍在 …
         
         <div class="text-muted-foreground mt-2 flex flex-wrap items-center gap-x-4 gap-y-2 text-sm">
           
-          <div class="flex items-center gap-1.5">
-            <svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          
+            <div class="flex items-center gap-1.5">
+              <svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
 </svg>
 
-            <time datetime="2022-05-01" class="font-medium">
-              May 1, 2022
-            </time>
-          </div>
+              <time datetime="2022-05-01" class="font-medium">
+                2022年5月1日
+              </time>
+            </div>
+          
+
 
           
           
@@ -1478,7 +1615,7 @@ https://mavis.readthedocs.io/en/stable/ 理论与模型介绍在 …
 </svg>
 
               <span class="truncate font-medium"
-                ></span
+                >3 分钟</span
               >
             </div>
           
@@ -1502,8 +1639,8 @@ https://mavis.readthedocs.io/en/stable/ 理论与模型介绍在 …
   </a>
 </article>
 
-          
-            
+      
+        
 
 
 
@@ -1533,15 +1670,18 @@ https://mavis.readthedocs.io/en/stable/ 理论与模型介绍在 …
         
         <div class="text-muted-foreground mt-2 flex flex-wrap items-center gap-x-4 gap-y-2 text-sm">
           
-          <div class="flex items-center gap-1.5">
-            <svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          
+            <div class="flex items-center gap-1.5">
+              <svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
 </svg>
 
-            <time datetime="2022-05-01" class="font-medium">
-              May 1, 2022
-            </time>
-          </div>
+              <time datetime="2022-05-01" class="font-medium">
+                2022年5月1日
+              </time>
+            </div>
+          
+
 
           
           
@@ -1551,7 +1691,7 @@ https://mavis.readthedocs.io/en/stable/ 理论与模型介绍在 …
 </svg>
 
               <span class="truncate font-medium"
-                ></span
+                >1 分钟</span
               >
             </div>
           
@@ -1575,8 +1715,8 @@ https://mavis.readthedocs.io/en/stable/ 理论与模型介绍在 …
   </a>
 </article>
 
-          
-            
+      
+        
 
 
 
@@ -1606,15 +1746,18 @@ https://mavis.readthedocs.io/en/stable/ 理论与模型介绍在 …
         
         <div class="text-muted-foreground mt-2 flex flex-wrap items-center gap-x-4 gap-y-2 text-sm">
           
-          <div class="flex items-center gap-1.5">
-            <svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          
+            <div class="flex items-center gap-1.5">
+              <svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
 </svg>
 
-            <time datetime="2022-05-01" class="font-medium">
-              May 1, 2022
-            </time>
-          </div>
+              <time datetime="2022-05-01" class="font-medium">
+                2022年5月1日
+              </time>
+            </div>
+          
+
 
           
           
@@ -1624,7 +1767,7 @@ https://mavis.readthedocs.io/en/stable/ 理论与模型介绍在 …
 </svg>
 
               <span class="truncate font-medium"
-                ></span
+                >2 分钟</span
               >
             </div>
           
@@ -1654,8 +1797,8 @@ https://mavis.readthedocs.io/en/stable/ 理论与模型介绍在 …
   </a>
 </article>
 
-          
-            
+      
+        
 
 
 
@@ -1686,15 +1829,18 @@ Before running VVP, a background must be built. …
         
         <div class="text-muted-foreground mt-2 flex flex-wrap items-center gap-x-4 gap-y-2 text-sm">
           
-          <div class="flex items-center gap-1.5">
-            <svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          
+            <div class="flex items-center gap-1.5">
+              <svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
 </svg>
 
-            <time datetime="2022-05-01" class="font-medium">
-              May 1, 2022
-            </time>
-          </div>
+              <time datetime="2022-05-01" class="font-medium">
+                2022年5月1日
+              </time>
+            </div>
+          
+
 
           
           
@@ -1704,7 +1850,7 @@ Before running VVP, a background must be built. …
 </svg>
 
               <span class="truncate font-medium"
-                ></span
+                >1 分钟</span
               >
             </div>
           
@@ -1728,8 +1874,8 @@ Before running VVP, a background must be built. …
   </a>
 </article>
 
-          
-            
+      
+        
 
 
 
@@ -1759,15 +1905,18 @@ Before running VVP, a background must be built. …
         
         <div class="text-muted-foreground mt-2 flex flex-wrap items-center gap-x-4 gap-y-2 text-sm">
           
-          <div class="flex items-center gap-1.5">
-            <svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          
+            <div class="flex items-center gap-1.5">
+              <svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
 </svg>
 
-            <time datetime="2022-05-01" class="font-medium">
-              May 1, 2022
-            </time>
-          </div>
+              <time datetime="2022-05-01" class="font-medium">
+                2022年5月1日
+              </time>
+            </div>
+          
+
 
           
           
@@ -1777,7 +1926,7 @@ Before running VVP, a background must be built. …
 </svg>
 
               <span class="truncate font-medium"
-                ></span
+                >19 分钟</span
               >
             </div>
           
@@ -1801,8 +1950,8 @@ Before running VVP, a background must be built. …
   </a>
 </article>
 
-          
-            
+      
+        
 
 
 
@@ -1833,15 +1982,18 @@ Before running VVP, a background must be built. …
         
         <div class="text-muted-foreground mt-2 flex flex-wrap items-center gap-x-4 gap-y-2 text-sm">
           
-          <div class="flex items-center gap-1.5">
-            <svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          
+            <div class="flex items-center gap-1.5">
+              <svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
 </svg>
 
-            <time datetime="2022-05-01" class="font-medium">
-              May 1, 2022
-            </time>
-          </div>
+              <time datetime="2022-05-01" class="font-medium">
+                2022年5月1日
+              </time>
+            </div>
+          
+
 
           
           
@@ -1851,7 +2003,7 @@ Before running VVP, a background must be built. …
 </svg>
 
               <span class="truncate font-medium"
-                ></span
+                >1 分钟</span
               >
             </div>
           
@@ -1875,8 +2027,8 @@ Before running VVP, a background must be built. …
   </a>
 </article>
 
-          
-            
+      
+        
 
 
 
@@ -1907,15 +2059,18 @@ Before running VVP, a background must be built. …
         
         <div class="text-muted-foreground mt-2 flex flex-wrap items-center gap-x-4 gap-y-2 text-sm">
           
-          <div class="flex items-center gap-1.5">
-            <svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          
+            <div class="flex items-center gap-1.5">
+              <svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
 </svg>
 
-            <time datetime="2022-05-01" class="font-medium">
-              May 1, 2022
-            </time>
-          </div>
+              <time datetime="2022-05-01" class="font-medium">
+                2022年5月1日
+              </time>
+            </div>
+          
+
 
           
           
@@ -1925,7 +2080,7 @@ Before running VVP, a background must be built. …
 </svg>
 
               <span class="truncate font-medium"
-                ></span
+                >2 分钟</span
               >
             </div>
           
@@ -1949,8 +2104,8 @@ Before running VVP, a background must be built. …
   </a>
 </article>
 
-          
-            
+      
+        
 
 
 
@@ -1980,15 +2135,18 @@ Before running VVP, a background must be built. …
         
         <div class="text-muted-foreground mt-2 flex flex-wrap items-center gap-x-4 gap-y-2 text-sm">
           
-          <div class="flex items-center gap-1.5">
-            <svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          
+            <div class="flex items-center gap-1.5">
+              <svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
 </svg>
 
-            <time datetime="2022-05-01" class="font-medium">
-              May 1, 2022
-            </time>
-          </div>
+              <time datetime="2022-05-01" class="font-medium">
+                2022年5月1日
+              </time>
+            </div>
+          
+
 
           
           
@@ -1998,7 +2156,7 @@ Before running VVP, a background must be built. …
 </svg>
 
               <span class="truncate font-medium"
-                ></span
+                >1 分钟</span
               >
             </div>
           
@@ -2016,8 +2174,8 @@ Before running VVP, a background must be built. …
   </a>
 </article>
 
-          
-            
+      
+        
 
 
 
@@ -2048,15 +2206,18 @@ Filter variants per region (in this example, print out only …
         
         <div class="text-muted-foreground mt-2 flex flex-wrap items-center gap-x-4 gap-y-2 text-sm">
           
-          <div class="flex items-center gap-1.5">
-            <svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          
+            <div class="flex items-center gap-1.5">
+              <svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
 </svg>
 
-            <time datetime="2021-10-01" class="font-medium">
-              October 1, 2021
-            </time>
-          </div>
+              <time datetime="2021-10-01" class="font-medium">
+                2021年10月1日
+              </time>
+            </div>
+          
+
 
           
           
@@ -2066,7 +2227,7 @@ Filter variants per region (in this example, print out only …
 </svg>
 
               <span class="truncate font-medium"
-                ></span
+                >2 分钟</span
               >
             </div>
           
@@ -2090,8 +2251,8 @@ Filter variants per region (in this example, print out only …
   </a>
 </article>
 
-          
-            
+      
+        
 
 
 
@@ -2122,15 +2283,18 @@ Filter variants per region (in this example, print out only …
         
         <div class="text-muted-foreground mt-2 flex flex-wrap items-center gap-x-4 gap-y-2 text-sm">
           
-          <div class="flex items-center gap-1.5">
-            <svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          
+            <div class="flex items-center gap-1.5">
+              <svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
 </svg>
 
-            <time datetime="2020-02-23" class="font-medium">
-              February 23, 2020
-            </time>
-          </div>
+              <time datetime="2020-02-23" class="font-medium">
+                2020年2月23日
+              </time>
+            </div>
+          
+
 
           
           
@@ -2140,7 +2304,7 @@ Filter variants per region (in this example, print out only …
 </svg>
 
               <span class="truncate font-medium"
-                ></span
+                >2 分钟</span
               >
             </div>
           
@@ -2170,8 +2334,8 @@ Filter variants per region (in this example, print out only …
   </a>
 </article>
 
-          
-            
+      
+        
 
 
 
@@ -2193,7 +2357,7 @@ Filter variants per region (in this example, print out only …
         
         
           <p class="text-muted-foreground line-clamp-3 text-sm leading-relaxed md:line-clamp-2">
-            安装 SHELL wget ftp://webdata2:webdata2@ussd-ftp.illumina.com/downloads/software/bcl2fastq/bcl2fastq2-v2.17.1.14.tar.zip tar -zxvf …
+            安装 SHELL 折叠 复制 wget ftp://webdata2:webdata2@ussd-ftp.illumina.com/downloads/software/bcl2fastq/bcl2fastq2-v2.17.1.14.tar.zip tar -zxvf …
           </p>
         
 
@@ -2201,15 +2365,18 @@ Filter variants per region (in this example, print out only …
         
         <div class="text-muted-foreground mt-2 flex flex-wrap items-center gap-x-4 gap-y-2 text-sm">
           
-          <div class="flex items-center gap-1.5">
-            <svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          
+            <div class="flex items-center gap-1.5">
+              <svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
 </svg>
 
-            <time datetime="2020-02-23" class="font-medium">
-              February 23, 2020
-            </time>
-          </div>
+              <time datetime="2020-02-23" class="font-medium">
+                2020年2月23日
+              </time>
+            </div>
+          
+
 
           
           
@@ -2219,7 +2386,7 @@ Filter variants per region (in this example, print out only …
 </svg>
 
               <span class="truncate font-medium"
-                ></span
+                >1 分钟</span
               >
             </div>
           
@@ -2249,8 +2416,8 @@ Filter variants per region (in this example, print out only …
   </a>
 </article>
 
-          
-            
+      
+        
 
 
 
@@ -2280,15 +2447,18 @@ Filter variants per region (in this example, print out only …
         
         <div class="text-muted-foreground mt-2 flex flex-wrap items-center gap-x-4 gap-y-2 text-sm">
           
-          <div class="flex items-center gap-1.5">
-            <svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          
+            <div class="flex items-center gap-1.5">
+              <svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
 </svg>
 
-            <time datetime="2020-02-23" class="font-medium">
-              February 23, 2020
-            </time>
-          </div>
+              <time datetime="2020-02-23" class="font-medium">
+                2020年2月23日
+              </time>
+            </div>
+          
+
 
           
           
@@ -2298,7 +2468,7 @@ Filter variants per region (in this example, print out only …
 </svg>
 
               <span class="truncate font-medium"
-                ></span
+                >3 分钟</span
               >
             </div>
           
@@ -2328,8 +2498,8 @@ Filter variants per region (in this example, print out only …
   </a>
 </article>
 
-          
-            
+      
+        
 
 
 
@@ -2352,7 +2522,7 @@ Filter variants per region (in this example, print out only …
         
           <p class="text-muted-foreground line-clamp-3 text-sm leading-relaxed md:line-clamp-2">
             GRCh37 还是 GRCh38GRCh37 == hg19，GRCh38 ＝＝ hg38
-理论上来讲，GRCh38是新的人类基因组的参考组装，相对GRCh37(hg19)来说，更接近人类真正的基因组。但是由于历史原因，之前很多的数据库对老版本的GRCh37支持的比较好。 …
+
           </p>
         
 
@@ -2360,15 +2530,18 @@ Filter variants per region (in this example, print out only …
         
         <div class="text-muted-foreground mt-2 flex flex-wrap items-center gap-x-4 gap-y-2 text-sm">
           
-          <div class="flex items-center gap-1.5">
-            <svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          
+            <div class="flex items-center gap-1.5">
+              <svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
 </svg>
 
-            <time datetime="2020-02-23" class="font-medium">
-              February 23, 2020
-            </time>
-          </div>
+              <time datetime="2020-02-23" class="font-medium">
+                2020年2月23日
+              </time>
+            </div>
+          
+
 
           
           
@@ -2378,7 +2551,7 @@ Filter variants per region (in this example, print out only …
 </svg>
 
               <span class="truncate font-medium"
-                ></span
+                >2 分钟</span
               >
             </div>
           
@@ -2402,8 +2575,8 @@ Filter variants per region (in this example, print out only …
   </a>
 </article>
 
-          
-            
+      
+        
 
 
 
@@ -2426,7 +2599,7 @@ Filter variants per region (in this example, print out only …
         
           <p class="text-muted-foreground line-clamp-3 text-sm leading-relaxed md:line-clamp-2">
              在文件RunInfo.xml里面，有关于NextSeq500 flowcell的描述：
-XML &lt;FlowcellLayout LaneCount=&#34;4&#34; SurfaceCount=&#34;2&#34; SwathCount=&#34;3&#34; …
+XML 折叠 复制 &lt;FlowcellLayout LaneCount=&#34;4&#34; SurfaceCount=&#34;2&#34; …
           </p>
         
 
@@ -2434,15 +2607,18 @@ XML &lt;FlowcellLayout LaneCount=&#34;4&#34; SurfaceCount=&#34;2&#34; SwathCount
         
         <div class="text-muted-foreground mt-2 flex flex-wrap items-center gap-x-4 gap-y-2 text-sm">
           
-          <div class="flex items-center gap-1.5">
-            <svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          
+            <div class="flex items-center gap-1.5">
+              <svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
 </svg>
 
-            <time datetime="2018-01-01" class="font-medium">
-              January 1, 2018
-            </time>
-          </div>
+              <time datetime="2018-01-01" class="font-medium">
+                2018年1月1日
+              </time>
+            </div>
+          
+
 
           
           
@@ -2452,7 +2628,7 @@ XML &lt;FlowcellLayout LaneCount=&#34;4&#34; SurfaceCount=&#34;2&#34; SwathCount
 </svg>
 
               <span class="truncate font-medium"
-                ></span
+                >1 分钟</span
               >
             </div>
           
@@ -2482,8 +2658,8 @@ XML &lt;FlowcellLayout LaneCount=&#34;4&#34; SurfaceCount=&#34;2&#34; SwathCount
   </a>
 </article>
 
-          
-            
+      
+        
 
 
 
@@ -2515,15 +2691,18 @@ install required …
         
         <div class="text-muted-foreground mt-2 flex flex-wrap items-center gap-x-4 gap-y-2 text-sm">
           
-          <div class="flex items-center gap-1.5">
-            <svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          
+            <div class="flex items-center gap-1.5">
+              <svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
 </svg>
 
-            <time datetime="2016-04-11" class="font-medium">
-              April 11, 2016
-            </time>
-          </div>
+              <time datetime="2016-04-11" class="font-medium">
+                2016年4月11日
+              </time>
+            </div>
+          
+
 
           
           
@@ -2533,7 +2712,7 @@ install required …
 </svg>
 
               <span class="truncate font-medium"
-                ></span
+                >1 分钟</span
               >
             </div>
           
@@ -2557,8 +2736,8 @@ install required …
   </a>
 </article>
 
-          
-            
+      
+        
 
 
 
@@ -2588,15 +2767,18 @@ install required …
         
         <div class="text-muted-foreground mt-2 flex flex-wrap items-center gap-x-4 gap-y-2 text-sm">
           
-          <div class="flex items-center gap-1.5">
-            <svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          
+            <div class="flex items-center gap-1.5">
+              <svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
 </svg>
 
-            <time datetime="2016-02-22" class="font-medium">
-              February 22, 2016
-            </time>
-          </div>
+              <time datetime="2016-02-22" class="font-medium">
+                2016年2月22日
+              </time>
+            </div>
+          
+
 
           
           
@@ -2606,7 +2788,7 @@ install required …
 </svg>
 
               <span class="truncate font-medium"
-                ></span
+                >1 分钟</span
               >
             </div>
           
@@ -2636,8 +2818,8 @@ install required …
   </a>
 </article>
 
-          
-            
+      
+        
 
 
 
@@ -2669,15 +2851,18 @@ install required …
         
         <div class="text-muted-foreground mt-2 flex flex-wrap items-center gap-x-4 gap-y-2 text-sm">
           
-          <div class="flex items-center gap-1.5">
-            <svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          
+            <div class="flex items-center gap-1.5">
+              <svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
 </svg>
 
-            <time datetime="2015-12-06" class="font-medium">
-              December 6, 2015
-            </time>
-          </div>
+              <time datetime="2015-12-06" class="font-medium">
+                2015年12月6日
+              </time>
+            </div>
+          
+
 
           
           
@@ -2687,7 +2872,7 @@ install required …
 </svg>
 
               <span class="truncate font-medium"
-                ></span
+                >14 分钟</span
               >
             </div>
           
@@ -2717,8 +2902,8 @@ install required …
   </a>
 </article>
 
-          
-            
+      
+        
 
 
 
@@ -2740,7 +2925,7 @@ install required …
         
         
           <p class="text-muted-foreground line-clamp-3 text-sm leading-relaxed md:line-clamp-2">
-            automatically attach to a tmux session via SSH PLAINTEXT alias alias_name=&#39;ssh username@servername -t &#34;tmux attach || tmux&#34; …
+            automatically attach to a tmux session via SSH PLAINTEXT 折叠 复制 alias alias_name=&#39;ssh username@servername -t &#34;tmux attach || …
           </p>
         
 
@@ -2748,15 +2933,18 @@ install required …
         
         <div class="text-muted-foreground mt-2 flex flex-wrap items-center gap-x-4 gap-y-2 text-sm">
           
-          <div class="flex items-center gap-1.5">
-            <svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          
+            <div class="flex items-center gap-1.5">
+              <svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
 </svg>
 
-            <time datetime="2015-11-03" class="font-medium">
-              November 3, 2015
-            </time>
-          </div>
+              <time datetime="2015-11-03" class="font-medium">
+                2015年11月3日
+              </time>
+            </div>
+          
+
 
           
           
@@ -2766,7 +2954,7 @@ install required …
 </svg>
 
               <span class="truncate font-medium"
-                ></span
+                >1 分钟</span
               >
             </div>
           
@@ -2790,8 +2978,8 @@ install required …
   </a>
 </article>
 
-          
-            
+      
+        
 
 
 
@@ -2822,15 +3010,18 @@ install required …
         
         <div class="text-muted-foreground mt-2 flex flex-wrap items-center gap-x-4 gap-y-2 text-sm">
           
-          <div class="flex items-center gap-1.5">
-            <svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          
+            <div class="flex items-center gap-1.5">
+              <svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
 </svg>
 
-            <time datetime="2015-07-02" class="font-medium">
-              July 2, 2015
-            </time>
-          </div>
+              <time datetime="2015-07-02" class="font-medium">
+                2015年7月2日
+              </time>
+            </div>
+          
+
 
           
           
@@ -2840,7 +3031,7 @@ install required …
 </svg>
 
               <span class="truncate font-medium"
-                ></span
+                >1 分钟</span
               >
             </div>
           
@@ -2864,8 +3055,8 @@ install required …
   </a>
 </article>
 
-          
-            
+      
+        
 
 
 
@@ -2896,15 +3087,18 @@ install required …
         
         <div class="text-muted-foreground mt-2 flex flex-wrap items-center gap-x-4 gap-y-2 text-sm">
           
-          <div class="flex items-center gap-1.5">
-            <svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          
+            <div class="flex items-center gap-1.5">
+              <svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
 </svg>
 
-            <time datetime="2015-06-19" class="font-medium">
-              June 19, 2015
-            </time>
-          </div>
+              <time datetime="2015-06-19" class="font-medium">
+                2015年6月19日
+              </time>
+            </div>
+          
+
 
           
           
@@ -2914,7 +3108,7 @@ install required …
 </svg>
 
               <span class="truncate font-medium"
-                ></span
+                >2 分钟</span
               >
             </div>
           
@@ -2938,8 +3132,8 @@ install required …
   </a>
 </article>
 
-          
-            
+      
+        
 
 
 
@@ -2970,15 +3164,18 @@ http://apple.stackexchange.com/questions/22297/is-bash-in-osx-case-insensitive H
         
         <div class="text-muted-foreground mt-2 flex flex-wrap items-center gap-x-4 gap-y-2 text-sm">
           
-          <div class="flex items-center gap-1.5">
-            <svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          
+            <div class="flex items-center gap-1.5">
+              <svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
 </svg>
 
-            <time datetime="2015-05-07" class="font-medium">
-              May 7, 2015
-            </time>
-          </div>
+              <time datetime="2015-05-07" class="font-medium">
+                2015年5月7日
+              </time>
+            </div>
+          
+
 
           
           
@@ -2988,7 +3185,7 @@ http://apple.stackexchange.com/questions/22297/is-bash-in-osx-case-insensitive H
 </svg>
 
               <span class="truncate font-medium"
-                ></span
+                >1 分钟</span
               >
             </div>
           
@@ -3002,8 +3199,8 @@ http://apple.stackexchange.com/questions/22297/is-bash-in-osx-case-insensitive H
   </a>
 </article>
 
-          
-            
+      
+        
 
 
 
@@ -3035,15 +3232,18 @@ http://apple.stackexchange.com/questions/22297/is-bash-in-osx-case-insensitive H
         
         <div class="text-muted-foreground mt-2 flex flex-wrap items-center gap-x-4 gap-y-2 text-sm">
           
-          <div class="flex items-center gap-1.5">
-            <svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          
+            <div class="flex items-center gap-1.5">
+              <svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
 </svg>
 
-            <time datetime="2015-04-13" class="font-medium">
-              April 13, 2015
-            </time>
-          </div>
+              <time datetime="2015-04-13" class="font-medium">
+                2015年4月13日
+              </time>
+            </div>
+          
+
 
           
           
@@ -3053,7 +3253,7 @@ http://apple.stackexchange.com/questions/22297/is-bash-in-osx-case-insensitive H
 </svg>
 
               <span class="truncate font-medium"
-                ></span
+                >1 分钟</span
               >
             </div>
           
@@ -3077,8 +3277,8 @@ http://apple.stackexchange.com/questions/22297/is-bash-in-osx-case-insensitive H
   </a>
 </article>
 
-          
-            
+      
+        
 
 
 
@@ -3110,15 +3310,18 @@ Finder -&gt; goto &ldquo;/Volumes&rdquo; will see a backup disk
         
         <div class="text-muted-foreground mt-2 flex flex-wrap items-center gap-x-4 gap-y-2 text-sm">
           
-          <div class="flex items-center gap-1.5">
-            <svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          
+            <div class="flex items-center gap-1.5">
+              <svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
 </svg>
 
-            <time datetime="2015-04-11" class="font-medium">
-              April 11, 2015
-            </time>
-          </div>
+              <time datetime="2015-04-11" class="font-medium">
+                2015年4月11日
+              </time>
+            </div>
+          
+
 
           
           
@@ -3128,7 +3331,7 @@ Finder -&gt; goto &ldquo;/Volumes&rdquo; will see a backup disk
 </svg>
 
               <span class="truncate font-medium"
-                ></span
+                >1 分钟</span
               >
             </div>
           
@@ -3152,8 +3355,8 @@ Finder -&gt; goto &ldquo;/Volumes&rdquo; will see a backup disk
   </a>
 </article>
 
-          
-            
+      
+        
 
 
 
@@ -3185,15 +3388,18 @@ Finder -&gt; goto &ldquo;/Volumes&rdquo; will see a backup disk
         
         <div class="text-muted-foreground mt-2 flex flex-wrap items-center gap-x-4 gap-y-2 text-sm">
           
-          <div class="flex items-center gap-1.5">
-            <svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          
+            <div class="flex items-center gap-1.5">
+              <svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
 </svg>
 
-            <time datetime="2015-04-05" class="font-medium">
-              April 5, 2015
-            </time>
-          </div>
+              <time datetime="2015-04-05" class="font-medium">
+                2015年4月5日
+              </time>
+            </div>
+          
+
 
           
           
@@ -3203,7 +3409,7 @@ Finder -&gt; goto &ldquo;/Volumes&rdquo; will see a backup disk
 </svg>
 
               <span class="truncate font-medium"
-                ></span
+                >1 分钟</span
               >
             </div>
           
@@ -3221,8 +3427,8 @@ Finder -&gt; goto &ldquo;/Volumes&rdquo; will see a backup disk
   </a>
 </article>
 
-          
-            
+      
+        
 
 
 
@@ -3253,15 +3459,18 @@ The atrun utility runs commands queued by at(1). It is invoked periodically by �
         
         <div class="text-muted-foreground mt-2 flex flex-wrap items-center gap-x-4 gap-y-2 text-sm">
           
-          <div class="flex items-center gap-1.5">
-            <svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          
+            <div class="flex items-center gap-1.5">
+              <svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
 </svg>
 
-            <time datetime="2015-04-01" class="font-medium">
-              April 1, 2015
-            </time>
-          </div>
+              <time datetime="2015-04-01" class="font-medium">
+                2015年4月1日
+              </time>
+            </div>
+          
+
 
           
           
@@ -3271,7 +3480,7 @@ The atrun utility runs commands queued by at(1). It is invoked periodically by �
 </svg>
 
               <span class="truncate font-medium"
-                ></span
+                >1 分钟</span
               >
             </div>
           
@@ -3295,8 +3504,8 @@ The atrun utility runs commands queued by at(1). It is invoked periodically by �
   </a>
 </article>
 
-          
-            
+      
+        
 
 
 
@@ -3326,15 +3535,18 @@ The atrun utility runs commands queued by at(1). It is invoked periodically by �
         
         <div class="text-muted-foreground mt-2 flex flex-wrap items-center gap-x-4 gap-y-2 text-sm">
           
-          <div class="flex items-center gap-1.5">
-            <svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          
+            <div class="flex items-center gap-1.5">
+              <svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
 </svg>
 
-            <time datetime="2015-03-25" class="font-medium">
-              March 25, 2015
-            </time>
-          </div>
+              <time datetime="2015-03-25" class="font-medium">
+                2015年3月25日
+              </time>
+            </div>
+          
+
 
           
           
@@ -3344,7 +3556,7 @@ The atrun utility runs commands queued by at(1). It is invoked periodically by �
 </svg>
 
               <span class="truncate font-medium"
-                ></span
+                >3 分钟</span
               >
             </div>
           
@@ -3368,8 +3580,8 @@ The atrun utility runs commands queued by at(1). It is invoked periodically by �
   </a>
 </article>
 
-          
-            
+      
+        
 
 
 
@@ -3401,15 +3613,18 @@ mail.app &ndash;&gt; File …
         
         <div class="text-muted-foreground mt-2 flex flex-wrap items-center gap-x-4 gap-y-2 text-sm">
           
-          <div class="flex items-center gap-1.5">
-            <svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          
+            <div class="flex items-center gap-1.5">
+              <svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
 </svg>
 
-            <time datetime="2015-03-24" class="font-medium">
-              March 24, 2015
-            </time>
-          </div>
+              <time datetime="2015-03-24" class="font-medium">
+                2015年3月24日
+              </time>
+            </div>
+          
+
 
           
           
@@ -3419,7 +3634,7 @@ mail.app &ndash;&gt; File …
 </svg>
 
               <span class="truncate font-medium"
-                ></span
+                >1 分钟</span
               >
             </div>
           
@@ -3437,8 +3652,8 @@ mail.app &ndash;&gt; File …
   </a>
 </article>
 
-          
-            
+      
+        
 
 
 
@@ -3469,15 +3684,18 @@ mail.app &ndash;&gt; File …
         
         <div class="text-muted-foreground mt-2 flex flex-wrap items-center gap-x-4 gap-y-2 text-sm">
           
-          <div class="flex items-center gap-1.5">
-            <svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          
+            <div class="flex items-center gap-1.5">
+              <svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
 </svg>
 
-            <time datetime="2015-03-14" class="font-medium">
-              March 14, 2015
-            </time>
-          </div>
+              <time datetime="2015-03-14" class="font-medium">
+                2015年3月14日
+              </time>
+            </div>
+          
+
 
           
           
@@ -3487,7 +3705,7 @@ mail.app &ndash;&gt; File …
 </svg>
 
               <span class="truncate font-medium"
-                ></span
+                >2 分钟</span
               >
             </div>
           
@@ -3511,11 +3729,8 @@ mail.app &ndash;&gt; File …
   </a>
 </article>
 
-          
-        </div>
       
-    
-
+    </div>
 
     
     
@@ -3525,7 +3740,7 @@ mail.app &ndash;&gt; File …
 
   <nav
     class="pagination mt-12"
-    aria-label=""
+    aria-label="第 5 页，共 5 页"
   >
     <div class="flex items-center justify-center gap-2">
       
@@ -3533,12 +3748,12 @@ mail.app &ndash;&gt; File …
         <a
           href="/posts/page/4/"
           class="bg-card border-border hover:bg-accent/50 hover:border-primary/20 inline-flex items-center gap-2 rounded-lg border px-4 py-2 font-medium transition-all duration-300"
-          aria-label=""
+          aria-label="上一页"
         >
           <svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
 </svg>
-          <span class="hidden sm:inline"></span>
+          <span class="hidden sm:inline">上一页</span>
         </a>
       
 
@@ -3621,7 +3836,7 @@ mail.app &ndash;&gt; File …
         <span
           class="bg-muted/30 border-border/50 text-muted-foreground inline-flex cursor-not-allowed items-center gap-2 rounded-lg border px-4 py-2"
         >
-          <span class="hidden sm:inline"></span>
+          <span class="hidden sm:inline">下一页</span>
           <svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
 </svg>
@@ -3632,7 +3847,7 @@ mail.app &ndash;&gt; File …
   </nav>
 
 
-  </div>
+  
 
       </div>
 
@@ -3791,7 +4006,7 @@ mail.app &ndash;&gt; File …
   class="pointer-events-none fixed bottom-4 left-1/2 z-9999 w-fit -translate-x-1/2 translate-y-24 opacity-0 transition-all duration-300 ease-out sm:right-0 sm:left-0 sm:mx-auto sm:translate-x-0"
   data-dock-mode="float"
   role="toolbar"
-  aria-label=""
+  aria-label="快捷操作工具栏"
 >
   <nav
     class="border-border bg-card/80 scrollbar-hide xs:px-3 xs:py-2 mx-auto flex max-w-[calc(100vw-2rem)] min-w-fit items-center justify-center overflow-x-auto rounded-2xl border px-4 py-3 shadow-lg backdrop-blur-sm sm:px-4 sm:py-3"
@@ -3801,15 +4016,15 @@ mail.app &ndash;&gt; File …
       <button
         id="dock-back"
         class="text-muted-foreground hover:text-primary hover:bg-primary/10 focus:ring-primary/20 xs:px-2 xs:py-1.5 flex shrink-0 items-center gap-2 rounded-lg px-3 py-2 text-sm font-medium transition-all duration-300 ease-out hover:-translate-y-0.5 hover:scale-105 focus:ring-2 focus:outline-none sm:px-3 sm:py-2"
-        title=""
-        aria-label=""
+        title="返回"
+        aria-label="返回"
       >
         <svg class="h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
   <path d="m12 19-7-7 7-7"/>
   <path d="M19 12H5"/>
 </svg>
 
-        <span class="hidden sm:inline"></span>
+        <span class="hidden sm:inline">返回</span>
       </button>
 
       
@@ -3820,14 +4035,14 @@ mail.app &ndash;&gt; File …
     <button
       id="dock-search"
       class="text-muted-foreground hover:text-primary hover:bg-primary/10 focus:ring-primary/20 xs:px-3 xs:py-1.5 flex shrink-0 items-center gap-2 rounded-lg px-4 py-2 text-sm font-medium transition-all duration-300 ease-out hover:-translate-y-0.5 hover:scale-105 focus:ring-2 focus:outline-none sm:px-4 sm:py-2"
-      title=""
-      aria-label=""
+      title="搜索"
+      aria-label="搜索"
     >
       <svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m21 21-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
 </svg>
 
-      <span class="hidden md:inline"></span>
+      <span class="hidden md:inline">搜索</span>
     </button>
 
     
@@ -3842,14 +4057,14 @@ mail.app &ndash;&gt; File …
     <button
       id="dock-top"
       class="text-muted-foreground hover:text-primary hover:bg-primary/10 focus:ring-primary/20 xs:px-2 xs:py-1.5 flex shrink-0 items-center gap-2 rounded-lg px-3 py-2 text-sm font-medium transition-all duration-300 ease-out hover:-translate-y-0.5 hover:scale-105 focus:ring-2 focus:outline-none sm:px-3 sm:py-2"
-      title=""
-      aria-label=""
+      title="返回顶部"
+      aria-label="返回顶部"
     >
       <svg class="h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
   <path d="m18 15-6-6-6 6"/>
 </svg>
 
-      <span class="hidden sm:inline"></span>
+      <span class="hidden sm:inline">顶部</span>
     </button>
   </nav>
 </div>
@@ -3899,7 +4114,7 @@ mail.app &ndash;&gt; File …
 </svg>
 
     </div>
-    <h2 id="search-title" class="sr-only"></h2>
+    <h2 id="search-title" class="sr-only">搜索</h2>
 
     
     <div class="relative flex-1">
@@ -3907,8 +4122,8 @@ mail.app &ndash;&gt; File …
       <button
         id="search-clear"
         class="text-muted-foreground hover:text-foreground hover:bg-muted/50 pointer-events-none absolute top-1/2 left-0 z-10 h-5 w-5 -translate-y-1/2 rounded opacity-0 transition-all duration-200"
-        title=""
-        aria-label=""
+        title="清空"
+        aria-label="清空"
       >
         <svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
@@ -3920,7 +4135,7 @@ mail.app &ndash;&gt; File …
       <input
         id="search-input"
         type="text"
-        placeholder=""
+        placeholder="搜索文章..."
         class="text-foreground placeholder:text-muted-foreground w-full border-none bg-transparent pl-8 text-lg outline-none"
         autocomplete="off"
         spellcheck="false"
@@ -3931,8 +4146,8 @@ mail.app &ndash;&gt; File …
     <button
       id="search-close"
       class="text-muted-foreground hover:text-foreground hover:bg-muted/50 flex h-6 w-6 items-center justify-center rounded-md p-0.5 transition-all duration-200"
-      title=""
-      aria-label=""
+      title="关闭"
+      aria-label="关闭"
     >
       <svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
@@ -3952,7 +4167,7 @@ mail.app &ndash;&gt; File …
 
       </div>
       <h3 class="text-foreground mb-2 text-lg font-semibold">
-        
+        开始搜索
       </h3>
     </div>
 
@@ -3961,7 +4176,7 @@ mail.app &ndash;&gt; File …
       <div
         class="mr-3 h-6 w-6 animate-spin rounded-full border-2 border-current border-t-transparent"
       ></div>
-      <span class="text-muted-foreground"></span>
+      <span class="text-muted-foreground">搜索中...</span>
     </div>
 
     
@@ -3977,7 +4192,7 @@ mail.app &ndash;&gt; File …
 
       </div>
       <h3 class="text-foreground mb-2 text-lg font-semibold">
-        
+        未找到结果
       </h3>
     </div>
 
@@ -3987,7 +4202,7 @@ mail.app &ndash;&gt; File …
       <div
         id="search-stats"
         class="text-muted-foreground border-border border-b px-4 py-3 text-sm"
-        data-count-other=""
+        data-count-other="找到 %d 个结果"
       ></div>
 
       
@@ -4002,20 +4217,20 @@ mail.app &ndash;&gt; File …
       <div class="flex items-center gap-2 md:gap-4">
         <div class="flex items-center gap-1">
           <kbd class="bg-muted border-border rounded border px-1.5 py-0.5 text-xs">↑↓</kbd>
-          <span class="hidden sm:inline"></span>
+          <span class="hidden sm:inline">导航</span>
         </div>
         <div class="flex items-center gap-1">
           <kbd class="bg-muted border-border rounded border px-1.5 py-0.5 text-xs">↵</kbd>
-          <span class="hidden sm:inline"></span>
+          <span class="hidden sm:inline">选择</span>
         </div>
         <div class="flex items-center gap-1">
           <kbd class="bg-muted border-border rounded border px-1.5 py-0.5 text-xs">ESC</kbd>
-          <span class="hidden sm:inline"></span>
+          <span class="hidden sm:inline">关闭</span>
         </div>
       </div>
       <div class="search-hint-desktop flex items-center gap-1">
         <kbd class="bg-muted border-border rounded border px-1.5 py-0.5 text-xs">⌘K</kbd>
-        <span></span>
+        <span>快捷键</span>
       </div>
     </div>
   </div>

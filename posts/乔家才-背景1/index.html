@@ -1,5 +1,8 @@
-<!doctype html>
-<html lang="zh-CN" data-theme="emerald">
+<!doctype html><html
+  lang="zh-Hans"
+  data-theme="emerald"
+  data-toc-pinned="false"
+>
   <head>
     <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
@@ -21,7 +24,7 @@
   name="author"
   content="Entropy Decrease"
 />
-<meta name="language" content="en-US" />
+<meta name="language" content="zh-CN" />
 
 <meta
   name="robots"
@@ -36,7 +39,7 @@
 	<meta property="og:site_name" content="Entropy Decrease">
 	<meta property="og:title" content="关山烟尘记-乔家才背景之一">
 	<meta property="og:description" content="说明 找到一本乔家才所做的《关山烟尘记》，因是繁体、竖排，且扫描质量不佳，几乎不能阅读，遂用AI进行OCR、繁体转简体并校对，后面会分几部分贴出来。">
-	<meta property="og:locale" content="zh_CN">
+	<meta property="og:locale" content="zh_Hans">
 	<meta property="og:type" content="article">
 		<meta property="article:section" content="posts">
 		<meta property="article:published_time" content="2026-04-14T00:00:00+00:00">
@@ -74,8 +77,8 @@
     
       <link
         rel="stylesheet"
-        href="/css/compiled.min.4a6fd33c0e2db207c1646e8a588be381fd817a1b0cd86004cbb040e8dcf50b31.css"
-        integrity="sha256-Sm/TPA4tsgfBZG6KWIvjgf2BehsM2GAEy7BA6Nz1CzE="
+        href="/css/compiled.min.64471d81170139f732efa014a53ac4621daf3b75ac4fc8ad317a4d80f1c66197.css"
+        integrity="sha256-ZEcdgRcBOfcy76AUpTrEYh2vO3WsT8itMXpNgPHGYZc="
         crossorigin="anonymous"
       />
     
@@ -112,8 +115,8 @@
 
 
         <script
-          src="/js/main.f482676046fba6a50f6e6580bd1306489d4fea5f7144231757bf01af2498b168.js"
-          integrity="sha256-9IJnYEb7pqUPbmWAvRMGSJ1P6l9xRCMXV78BrySYsWg="
+          src="/js/main.b003624716b5b9344efafc302bd75df711e73d0da196be724be6daebb2b6964d.js"
+          integrity="sha256-sANiRxa1uTRO&#43;vwwK9dd9xHnPQ2hlr5yS&#43;ba67K2lk0="
           crossorigin="anonymous"
           defer
         ></script>
@@ -121,8 +124,8 @@
 
 
             <script
-              src="/js/toc.3026ef97e410bb3e98d57739bcabc32ac568e9001b2e42385de731663378ae85.js"
-              integrity="sha256-MCbvl&#43;QQuz6Y1Xc5vKvDKsVo6QAbLkI4XecxZjN4roU="
+              src="/js/toc.4f913c419799292f98fd50ecaa57eed9432c9ab55dc7a39c5cc7bb40caf34803.js"
+              integrity="sha256-T5E8QZeZKS&#43;Y/VDsqlfu2UMsmrVdx6OcXMe7QMrzSAM="
               crossorigin="anonymous"
               defer
             ></script>
@@ -139,8 +142,8 @@
 
 
         <script
-          src="/js/dock.fc33c1fd0e0525acdd5b7abed135239608c36a061f3b566fbc9e5841594b11af.js"
-          integrity="sha256-/DPB/Q4FJazdW3q&#43;0TUjlgjDagYfO1ZvvJ5YQVlLEa8="
+          src="/js/dock.8e3addaa9b500c783209ee7837e59045cf14528a5807aedd4cf8e8e6dffbae11.js"
+          integrity="sha256-jjrdqptQDHgyCe54N&#43;WQRc8UUopYB67dTPjo5t/7rhE="
           crossorigin="anonymous"
           defer
         ></script>
@@ -159,9 +162,13 @@
 
 
     
-    <script>(function(){const e=localStorage.getItem("theme")||"system",n=localStorage.getItem("colorScheme")||"emerald";document.documentElement.setAttribute("data-theme",n);function t(){e==="dark"||e==="system"&&window.matchMedia("(prefers-color-scheme: dark)").matches?document.documentElement.classList.add("dark"):document.documentElement.classList.remove("dark")}t(),e==="system"&&window.matchMedia("(prefers-color-scheme: dark)").addEventListener("change",t)})()</script>
+    <script>(function(){const e=document.documentElement,o=localStorage.getItem("theme")||"system",m=localStorage.getItem("colorScheme")||"emerald",n=Number.parseInt(localStorage.getItem("contentWidth"),10),d=Number.isInteger(n)&&n>=40&&n<=90;d&&e.style.setProperty("--content-width",`${n}rem`),e.setAttribute("data-theme",m);const s=localStorage.getItem("tocPinned");(s==="true"||s==="false")&&e.setAttribute("data-toc-pinned",s);const t=Number.parseFloat(getComputedStyle(e).fontSize)||16,u="56rem",i=Number.parseFloat(u);let a=56*t;Number.isFinite(i)&&(a=/r?em\s*$/.test(u)?i*t:i),d&&(a=n*t);const r=e.clientWidth,c=Math.max(0,(r-Math.min(a,r))/2);let l="narrow";r>=64*t&&(c>=13*t?l="wide":c>=2*t&&(l="tight")),e.setAttribute("data-toc-space",l),e.style.setProperty("--toc-gutter",`${Math.round(c)}px`);function h(){o==="dark"||o==="system"&&window.matchMedia("(prefers-color-scheme: dark)").matches?e.classList.add("dark"):e.classList.remove("dark")}h(),o==="system"&&window.matchMedia("(prefers-color-scheme: dark)").addEventListener("change",h)})()</script>
   </head><body class="bg-background text-foreground min-h-screen antialiased">
-    <main class="mx-auto w-full" style="max-width: 56rem">
+    <main
+      id="page-container"
+      class="mx-auto w-full"
+      style="--content-width-base: 56rem; max-width: var(--content-width, var(--content-width-base))"
+    >
       <div
     id="reading-progress-bar"
     class="from-primary to-primary/80 pointer-events-none fixed top-0 left-0 z-50 h-[3px] w-0 bg-linear-to-r transition-[width] duration-150 ease-out"
@@ -197,7 +204,7 @@
     })();
   </script>
 
-      <header class=" px-4 py-6">
+      <header class="sticky top-0 z-50 px-4 py-6">
   <div
     class="border-border bg-card/80 flex items-center rounded-xl border px-6 py-4 shadow-sm backdrop-blur-sm"
   >
@@ -214,7 +221,7 @@
             aria-label="Entropy Decrease"
           >
             <img
-              src="/"
+              src="/images/logo.svg"
               alt="Entropy Decrease"
               class="h-full w-full object-cover"
             />
@@ -243,12 +250,12 @@
                  focus:ring-primary/20 relative flex items-center gap-2 rounded-lg px-4 py-2 text-sm font-medium transition-all duration-300 ease-out hover:-translate-y-0.5 hover:scale-105 focus:ring-2 focus:outline-none"
               >
                 
-                  <svg class="h-5 w-5" aria-label="posts" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <svg class="h-5 w-5" aria-label="文章" fill="none" stroke="currentColor" viewBox="0 0 24 24">
   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 20H5a2 2 0 01-2-2V6a2 2 0 012-2h10a2 2 0 012 2v1m2 13a2 2 0 01-2-2V7m2 13a2 2 0 002-2V9a2 2 0 00-2-2h-2m-4-3H9M7 16h6M7 8h6v4H7V8z" />
 </svg>
 
                 
-                <span>posts</span>
+                <span>文章</span>
               </a>
             
           
@@ -268,12 +275,12 @@
                  focus:ring-primary/20 relative flex items-center gap-2 rounded-lg px-4 py-2 text-sm font-medium transition-all duration-300 ease-out hover:-translate-y-0.5 hover:scale-105 focus:ring-2 focus:outline-none"
               >
                 
-                  <svg class="h-5 w-5" aria-label="categories" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <svg class="h-5 w-5" aria-label="分类" fill="none" stroke="currentColor" viewBox="0 0 24 24">
   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10" />
 </svg>
 
                 
-                <span>categories</span>
+                <span>分类</span>
               </a>
             
           
@@ -293,12 +300,12 @@
                  focus:ring-primary/20 relative flex items-center gap-2 rounded-lg px-4 py-2 text-sm font-medium transition-all duration-300 ease-out hover:-translate-y-0.5 hover:scale-105 focus:ring-2 focus:outline-none"
               >
                 
-                  <svg class="h-5 w-5" aria-label="tags" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <svg class="h-5 w-5" aria-label="标签" fill="none" stroke="currentColor" viewBox="0 0 24 24">
   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 7h.01M7 3h5c.512 0 1.024.195 1.414.586l7 7a2 2 0 010 2.828l-7 7a2 2 0 01-2.828 0l-7-7A1.994 1.994 0 013 12V7a4 4 0 014-4z" />
 </svg>
 
                 
-                <span>tags</span>
+                <span>标签</span>
               </a>
             
           
@@ -318,12 +325,12 @@
                  focus:ring-primary/20 relative flex items-center gap-2 rounded-lg px-4 py-2 text-sm font-medium transition-all duration-300 ease-out hover:-translate-y-0.5 hover:scale-105 focus:ring-2 focus:outline-none"
               >
                 
-                  <svg class="h-5 w-5" aria-label="archives" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <svg class="h-5 w-5" aria-label="归档" fill="none" stroke="currentColor" viewBox="0 0 24 24">
   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 8h14M5 8a2 2 0 110-4h14a2 2 0 110 4M5 8v10a2 2 0 002 2h10a2 2 0 002-2V8m-9 4h4" />
 </svg>
 
                 
-                <span>archives</span>
+                <span>归档</span>
               </a>
             
           
@@ -332,6 +339,38 @@
 
       
       <div class="flex items-center space-x-2">
+        
+        <div class="hidden lg:block"><div class="relative">
+    <button
+      id="content-width-toggle"
+      class="dropdown-toggle border-border bg-background text-muted-foreground hover:text-primary hover:bg-primary/10 focus:ring-primary/20 flex h-10 w-10 items-center justify-center rounded-lg border transition-all duration-300 ease-out hover:scale-105 focus:ring-2 focus:outline-none active:scale-95"
+      data-dropdown-type="content-width"
+      aria-label="调整页面宽度"
+      aria-expanded="false"
+      aria-haspopup="true"
+    ><svg class="h-5 w-5 relative z-10" aria-label="调整页面宽度" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+	<path d="M0 0h24v24H0z" fill="none" />
+	<path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 12H3l3-3m0 6l-3-3m11 0h7l-3-3m0 6l3-3M3 6V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v1M3 18v1a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-1" />
+</svg>
+</button>
+
+    <div
+      id="content-width-dropdown"
+      class="dropdown-menu border-border bg-popover/95 w-64 absolute top-12 right-0 z-60 hidden rounded-lg border p-1 shadow-lg backdrop-blur-sm transition-all duration-200 ease-out"
+      data-dropdown-type="content-width"
+      
+    >
+    <div class="space-y-3 p-3">
+    <div class="flex items-center justify-between gap-4">
+    <label for="content-width-range" class="text-foreground text-sm font-medium">页面宽度</label>
+    <output id="content-width-value" for="content-width-range" class="text-muted-foreground min-w-12 text-right text-sm tabular-nums"></output>
+    </div>
+    <input id="content-width-range" class="accent-primary w-full cursor-pointer" type="range" min="40" max="90" step="1" aria-label="页面宽度" />
+    <button id="content-width-reset" type="button" class="border-border text-muted-foreground hover:bg-accent hover:text-accent-foreground focus:ring-primary/20 w-full rounded-md border px-3 py-2 text-sm transition-colors focus:ring-2 focus:outline-none">恢复默认</button>
+    </div></div>
+  </div></div>
+
+
         
         
 
@@ -342,10 +381,10 @@
       id="color-scheme-toggle"
       class="dropdown-toggle border-border bg-background text-muted-foreground hover:text-primary hover:bg-primary/10 focus:ring-primary/20 flex h-10 w-10 items-center justify-center rounded-lg border transition-all duration-300 ease-out hover:scale-105 focus:ring-2 focus:outline-none active:scale-95"
       data-dropdown-type="color-scheme"
-      aria-label=""
+      aria-label="切换主题风格"
       aria-expanded="false"
       aria-haspopup="true"
-    ><svg class="h-5 w-5 relative z-10" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+    ><svg class="h-5 w-5 relative z-10" aria-label="切换主题风格" fill="none" stroke="currentColor" viewBox="0 0 24 24">
   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zM21 5a2 2 0 00-2-2h-4a2 2 0 00-2 2v6a2 2 0 002 2h4a2 2 0 002-2V5z" />
 </svg>
 </button>
@@ -355,7 +394,7 @@
       class="dropdown-menu border-border bg-popover/95 w-44 absolute top-12 right-0 z-60 hidden rounded-lg border p-1 shadow-lg backdrop-blur-sm transition-all duration-200 ease-out"
       data-dropdown-type="color-scheme"
       
-    ><button data-color-scheme="default" class="text-accent-foreground hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground flex w-full items-center rounded-md px-4 py-2 text-sm transition-all duration-200 ease-out focus:outline-none"><span>Default</span></button><button data-color-scheme="claude" class="text-accent-foreground hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground flex w-full items-center rounded-md px-4 py-2 text-sm transition-all duration-200 ease-out focus:outline-none"><span>Claude</span></button><button data-color-scheme="bumblebee" class="text-accent-foreground hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground flex w-full items-center rounded-md px-4 py-2 text-sm transition-all duration-200 ease-out focus:outline-none"><span>Bumblebee</span></button><button data-color-scheme="emerald" class="text-accent-foreground hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground flex w-full items-center rounded-md px-4 py-2 text-sm transition-all duration-200 ease-out focus:outline-none"><span>Emerald</span></button><button data-color-scheme="nord" class="text-accent-foreground hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground flex w-full items-center rounded-md px-4 py-2 text-sm transition-all duration-200 ease-out focus:outline-none"><span>Nord</span></button><button data-color-scheme="sunset" class="text-accent-foreground hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground flex w-full items-center rounded-md px-4 py-2 text-sm transition-all duration-200 ease-out focus:outline-none"><span>Sunset</span></button><button data-color-scheme="abyss" class="text-accent-foreground hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground flex w-full items-center rounded-md px-4 py-2 text-sm transition-all duration-200 ease-out focus:outline-none"><span>Abyss</span></button><button data-color-scheme="dracula" class="text-accent-foreground hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground flex w-full items-center rounded-md px-4 py-2 text-sm transition-all duration-200 ease-out focus:outline-none"><span>Dracula</span></button><button data-color-scheme="amethyst" class="text-accent-foreground hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground flex w-full items-center rounded-md px-4 py-2 text-sm transition-all duration-200 ease-out focus:outline-none"><span>Amethyst</span></button><button data-color-scheme="slate" class="text-accent-foreground hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground flex w-full items-center rounded-md px-4 py-2 text-sm transition-all duration-200 ease-out focus:outline-none"><span>Slate</span></button><button data-color-scheme="twitter" class="text-accent-foreground hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground flex w-full items-center rounded-md px-4 py-2 text-sm transition-all duration-200 ease-out focus:outline-none"><span>Twitter</span></button></div>
+    ><button data-color-scheme="default" class="text-accent-foreground hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground flex w-full items-center rounded-md px-4 py-2 text-sm transition-all duration-200 ease-out focus:outline-none"><span>Default</span></button><button data-color-scheme="claude" class="text-accent-foreground hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground flex w-full items-center rounded-md px-4 py-2 text-sm transition-all duration-200 ease-out focus:outline-none"><span>Claude</span></button><button data-color-scheme="bumblebee" class="text-accent-foreground hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground flex w-full items-center rounded-md px-4 py-2 text-sm transition-all duration-200 ease-out focus:outline-none"><span>Bumblebee</span></button><button data-color-scheme="emerald" class="text-accent-foreground hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground flex w-full items-center rounded-md px-4 py-2 text-sm transition-all duration-200 ease-out focus:outline-none"><span>Emerald</span></button><button data-color-scheme="nord" class="text-accent-foreground hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground flex w-full items-center rounded-md px-4 py-2 text-sm transition-all duration-200 ease-out focus:outline-none"><span>Nord</span></button><button data-color-scheme="sunset" class="text-accent-foreground hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground flex w-full items-center rounded-md px-4 py-2 text-sm transition-all duration-200 ease-out focus:outline-none"><span>Sunset</span></button><button data-color-scheme="abyss" class="text-accent-foreground hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground flex w-full items-center rounded-md px-4 py-2 text-sm transition-all duration-200 ease-out focus:outline-none"><span>Abyss</span></button><button data-color-scheme="dracula" class="text-accent-foreground hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground flex w-full items-center rounded-md px-4 py-2 text-sm transition-all duration-200 ease-out focus:outline-none"><span>Dracula</span></button><button data-color-scheme="amethyst" class="text-accent-foreground hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground flex w-full items-center rounded-md px-4 py-2 text-sm transition-all duration-200 ease-out focus:outline-none"><span>Amethyst</span></button><button data-color-scheme="slate" class="text-accent-foreground hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground flex w-full items-center rounded-md px-4 py-2 text-sm transition-all duration-200 ease-out focus:outline-none"><span>Slate</span></button><button data-color-scheme="twitter" class="text-accent-foreground hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground flex w-full items-center rounded-md px-4 py-2 text-sm transition-all duration-200 ease-out focus:outline-none"><span>Twitter</span></button><button data-color-scheme="minimal" class="text-accent-foreground hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground flex w-full items-center rounded-md px-4 py-2 text-sm transition-all duration-200 ease-out focus:outline-none"><span>Minimal</span></button></div>
   </div>
 
 
@@ -365,18 +404,18 @@
       id="theme-toggle"
       class="dropdown-toggle border-border bg-background text-muted-foreground hover:text-primary hover:bg-primary/10 focus:ring-primary/20 flex h-10 w-10 items-center justify-center rounded-lg border transition-all duration-300 ease-out hover:scale-105 focus:ring-2 focus:outline-none active:scale-95"
       data-dropdown-type="theme"
-      aria-label=""
+      aria-label="切换主题风格"
       aria-expanded="false"
       aria-haspopup="true"
-    ><svg class="h-5 w-5 sun-icon hidden relative z-10" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+    ><svg class="h-5 w-5 sun-icon hidden relative z-10" aria-label="亮色" fill="none" stroke="currentColor" viewBox="0 0 24 24">
   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" />
 </svg>
 
-        <svg class="h-5 w-5 moon-icon hidden relative z-10" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <svg class="h-5 w-5 moon-icon hidden relative z-10" aria-label="暗色" fill="none" stroke="currentColor" viewBox="0 0 24 24">
   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" />
 </svg>
 
-        <svg class="h-5 w-5 system-icon hidden relative z-10" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <svg class="h-5 w-5 system-icon hidden relative z-10" aria-label="跟随系统" fill="none" stroke="currentColor" viewBox="0 0 24 24">
   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
 </svg>
 </button>
@@ -386,16 +425,16 @@
       class="dropdown-menu border-border bg-popover/95 w-40 absolute top-12 right-0 z-60 hidden rounded-lg border p-1 shadow-lg backdrop-blur-sm transition-all duration-200 ease-out"
       data-dropdown-type="theme"
       
-    ><button data-theme="light" class="text-accent-foreground hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground flex w-full items-center rounded-md px-4 py-2 text-sm transition-all duration-200 ease-out focus:outline-none"><svg class="h-5 w-5 mr-3 h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+    ><button data-theme="light" class="text-accent-foreground hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground flex w-full items-center rounded-md px-4 py-2 text-sm transition-all duration-200 ease-out focus:outline-none"><svg class="h-5 w-5 mr-3 h-4 w-4" aria-label="亮色" fill="none" stroke="currentColor" viewBox="0 0 24 24">
   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" />
 </svg>
-<span></span></button><button data-theme="dark" class="text-accent-foreground hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground flex w-full items-center rounded-md px-4 py-2 text-sm transition-all duration-200 ease-out focus:outline-none"><svg class="h-5 w-5 mr-3 h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+<span>亮色</span></button><button data-theme="dark" class="text-accent-foreground hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground flex w-full items-center rounded-md px-4 py-2 text-sm transition-all duration-200 ease-out focus:outline-none"><svg class="h-5 w-5 mr-3 h-4 w-4" aria-label="暗色" fill="none" stroke="currentColor" viewBox="0 0 24 24">
   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" />
 </svg>
-<span></span></button><button data-theme="system" class="text-accent-foreground hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground flex w-full items-center rounded-md px-4 py-2 text-sm transition-all duration-200 ease-out focus:outline-none"><svg class="h-5 w-5 mr-3 h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+<span>暗色</span></button><button data-theme="system" class="text-accent-foreground hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground flex w-full items-center rounded-md px-4 py-2 text-sm transition-all duration-200 ease-out focus:outline-none"><svg class="h-5 w-5 mr-3 h-4 w-4" aria-label="跟随系统" fill="none" stroke="currentColor" viewBox="0 0 24 24">
   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
 </svg>
-<span></span></button></div>
+<span>跟随系统</span></button></div>
   </div>
       </div>
     </div>
@@ -407,11 +446,11 @@
 <button
   id="mobile-nav-toggle"
   class="nav-panel-toggle border-border bg-background text-muted-foreground hover:bg-accent hover:text-foreground flex h-10 w-10 items-center justify-center rounded-lg border transition-colors duration-200"
-  aria-label=""
+  aria-label="菜单"
   aria-expanded="false"
   aria-controls="mobile-nav-panel"
 >
-  <svg class="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+  <svg class="h-5 w-5" aria-label="菜单" fill="none" stroke="currentColor" viewBox="0 0 24 24">
   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
 </svg>
 
@@ -431,10 +470,10 @@
       id="color-scheme-toggle"
       class="dropdown-toggle border-border bg-background text-muted-foreground hover:text-primary hover:bg-primary/10 focus:ring-primary/20 flex h-10 w-10 items-center justify-center rounded-lg border transition-all duration-300 ease-out hover:scale-105 focus:ring-2 focus:outline-none active:scale-95"
       data-dropdown-type="color-scheme"
-      aria-label=""
+      aria-label="切换主题风格"
       aria-expanded="false"
       aria-haspopup="true"
-    ><svg class="h-5 w-5 relative z-10" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+    ><svg class="h-5 w-5 relative z-10" aria-label="切换主题风格" fill="none" stroke="currentColor" viewBox="0 0 24 24">
   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zM21 5a2 2 0 00-2-2h-4a2 2 0 00-2 2v6a2 2 0 002 2h4a2 2 0 002-2V5z" />
 </svg>
 </button>
@@ -444,7 +483,7 @@
       class="dropdown-menu border-border bg-popover/95 w-44 absolute top-12 right-0 z-60 hidden rounded-lg border p-1 shadow-lg backdrop-blur-sm transition-all duration-200 ease-out"
       data-dropdown-type="color-scheme"
       
-    ><button data-color-scheme="default" class="text-accent-foreground hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground flex w-full items-center rounded-md px-4 py-2 text-sm transition-all duration-200 ease-out focus:outline-none"><span>Default</span></button><button data-color-scheme="claude" class="text-accent-foreground hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground flex w-full items-center rounded-md px-4 py-2 text-sm transition-all duration-200 ease-out focus:outline-none"><span>Claude</span></button><button data-color-scheme="bumblebee" class="text-accent-foreground hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground flex w-full items-center rounded-md px-4 py-2 text-sm transition-all duration-200 ease-out focus:outline-none"><span>Bumblebee</span></button><button data-color-scheme="emerald" class="text-accent-foreground hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground flex w-full items-center rounded-md px-4 py-2 text-sm transition-all duration-200 ease-out focus:outline-none"><span>Emerald</span></button><button data-color-scheme="nord" class="text-accent-foreground hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground flex w-full items-center rounded-md px-4 py-2 text-sm transition-all duration-200 ease-out focus:outline-none"><span>Nord</span></button><button data-color-scheme="sunset" class="text-accent-foreground hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground flex w-full items-center rounded-md px-4 py-2 text-sm transition-all duration-200 ease-out focus:outline-none"><span>Sunset</span></button><button data-color-scheme="abyss" class="text-accent-foreground hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground flex w-full items-center rounded-md px-4 py-2 text-sm transition-all duration-200 ease-out focus:outline-none"><span>Abyss</span></button><button data-color-scheme="dracula" class="text-accent-foreground hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground flex w-full items-center rounded-md px-4 py-2 text-sm transition-all duration-200 ease-out focus:outline-none"><span>Dracula</span></button><button data-color-scheme="amethyst" class="text-accent-foreground hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground flex w-full items-center rounded-md px-4 py-2 text-sm transition-all duration-200 ease-out focus:outline-none"><span>Amethyst</span></button><button data-color-scheme="slate" class="text-accent-foreground hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground flex w-full items-center rounded-md px-4 py-2 text-sm transition-all duration-200 ease-out focus:outline-none"><span>Slate</span></button><button data-color-scheme="twitter" class="text-accent-foreground hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground flex w-full items-center rounded-md px-4 py-2 text-sm transition-all duration-200 ease-out focus:outline-none"><span>Twitter</span></button></div>
+    ><button data-color-scheme="default" class="text-accent-foreground hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground flex w-full items-center rounded-md px-4 py-2 text-sm transition-all duration-200 ease-out focus:outline-none"><span>Default</span></button><button data-color-scheme="claude" class="text-accent-foreground hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground flex w-full items-center rounded-md px-4 py-2 text-sm transition-all duration-200 ease-out focus:outline-none"><span>Claude</span></button><button data-color-scheme="bumblebee" class="text-accent-foreground hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground flex w-full items-center rounded-md px-4 py-2 text-sm transition-all duration-200 ease-out focus:outline-none"><span>Bumblebee</span></button><button data-color-scheme="emerald" class="text-accent-foreground hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground flex w-full items-center rounded-md px-4 py-2 text-sm transition-all duration-200 ease-out focus:outline-none"><span>Emerald</span></button><button data-color-scheme="nord" class="text-accent-foreground hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground flex w-full items-center rounded-md px-4 py-2 text-sm transition-all duration-200 ease-out focus:outline-none"><span>Nord</span></button><button data-color-scheme="sunset" class="text-accent-foreground hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground flex w-full items-center rounded-md px-4 py-2 text-sm transition-all duration-200 ease-out focus:outline-none"><span>Sunset</span></button><button data-color-scheme="abyss" class="text-accent-foreground hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground flex w-full items-center rounded-md px-4 py-2 text-sm transition-all duration-200 ease-out focus:outline-none"><span>Abyss</span></button><button data-color-scheme="dracula" class="text-accent-foreground hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground flex w-full items-center rounded-md px-4 py-2 text-sm transition-all duration-200 ease-out focus:outline-none"><span>Dracula</span></button><button data-color-scheme="amethyst" class="text-accent-foreground hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground flex w-full items-center rounded-md px-4 py-2 text-sm transition-all duration-200 ease-out focus:outline-none"><span>Amethyst</span></button><button data-color-scheme="slate" class="text-accent-foreground hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground flex w-full items-center rounded-md px-4 py-2 text-sm transition-all duration-200 ease-out focus:outline-none"><span>Slate</span></button><button data-color-scheme="twitter" class="text-accent-foreground hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground flex w-full items-center rounded-md px-4 py-2 text-sm transition-all duration-200 ease-out focus:outline-none"><span>Twitter</span></button><button data-color-scheme="minimal" class="text-accent-foreground hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground flex w-full items-center rounded-md px-4 py-2 text-sm transition-all duration-200 ease-out focus:outline-none"><span>Minimal</span></button></div>
   </div>
 
 
@@ -454,18 +493,18 @@
       id="theme-toggle"
       class="dropdown-toggle border-border bg-background text-muted-foreground hover:text-primary hover:bg-primary/10 focus:ring-primary/20 flex h-10 w-10 items-center justify-center rounded-lg border transition-all duration-300 ease-out hover:scale-105 focus:ring-2 focus:outline-none active:scale-95"
       data-dropdown-type="theme"
-      aria-label=""
+      aria-label="切换主题风格"
       aria-expanded="false"
       aria-haspopup="true"
-    ><svg class="h-5 w-5 sun-icon hidden relative z-10" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+    ><svg class="h-5 w-5 sun-icon hidden relative z-10" aria-label="亮色" fill="none" stroke="currentColor" viewBox="0 0 24 24">
   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" />
 </svg>
 
-        <svg class="h-5 w-5 moon-icon hidden relative z-10" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <svg class="h-5 w-5 moon-icon hidden relative z-10" aria-label="暗色" fill="none" stroke="currentColor" viewBox="0 0 24 24">
   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" />
 </svg>
 
-        <svg class="h-5 w-5 system-icon hidden relative z-10" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <svg class="h-5 w-5 system-icon hidden relative z-10" aria-label="跟随系统" fill="none" stroke="currentColor" viewBox="0 0 24 24">
   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
 </svg>
 </button>
@@ -475,16 +514,16 @@
       class="dropdown-menu border-border bg-popover/95 w-40 absolute top-12 right-0 z-60 hidden rounded-lg border p-1 shadow-lg backdrop-blur-sm transition-all duration-200 ease-out"
       data-dropdown-type="theme"
       
-    ><button data-theme="light" class="text-accent-foreground hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground flex w-full items-center rounded-md px-4 py-2 text-sm transition-all duration-200 ease-out focus:outline-none"><svg class="h-5 w-5 mr-3 h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+    ><button data-theme="light" class="text-accent-foreground hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground flex w-full items-center rounded-md px-4 py-2 text-sm transition-all duration-200 ease-out focus:outline-none"><svg class="h-5 w-5 mr-3 h-4 w-4" aria-label="亮色" fill="none" stroke="currentColor" viewBox="0 0 24 24">
   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" />
 </svg>
-<span></span></button><button data-theme="dark" class="text-accent-foreground hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground flex w-full items-center rounded-md px-4 py-2 text-sm transition-all duration-200 ease-out focus:outline-none"><svg class="h-5 w-5 mr-3 h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+<span>亮色</span></button><button data-theme="dark" class="text-accent-foreground hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground flex w-full items-center rounded-md px-4 py-2 text-sm transition-all duration-200 ease-out focus:outline-none"><svg class="h-5 w-5 mr-3 h-4 w-4" aria-label="暗色" fill="none" stroke="currentColor" viewBox="0 0 24 24">
   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" />
 </svg>
-<span></span></button><button data-theme="system" class="text-accent-foreground hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground flex w-full items-center rounded-md px-4 py-2 text-sm transition-all duration-200 ease-out focus:outline-none"><svg class="h-5 w-5 mr-3 h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+<span>暗色</span></button><button data-theme="system" class="text-accent-foreground hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground flex w-full items-center rounded-md px-4 py-2 text-sm transition-all duration-200 ease-out focus:outline-none"><svg class="h-5 w-5 mr-3 h-4 w-4" aria-label="跟随系统" fill="none" stroke="currentColor" viewBox="0 0 24 24">
   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
 </svg>
-<span></span></button></div>
+<span>跟随系统</span></button></div>
   </div>
       </div>
     </div>
@@ -496,7 +535,7 @@
   id="mobile-nav-panel"
   class="mt-2 hidden md:hidden"
   role="navigation"
-  aria-label=""
+  aria-label="菜单"
   aria-hidden="true"
   tabindex="-1"
 >
@@ -525,12 +564,12 @@
             
           >
             
-              <svg class="h-5 w-5" aria-label="posts" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <svg class="h-5 w-5" aria-label="文章" fill="none" stroke="currentColor" viewBox="0 0 24 24">
   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 20H5a2 2 0 01-2-2V6a2 2 0 012-2h10a2 2 0 012 2v1m2 13a2 2 0 01-2-2V7m2 13a2 2 0 002-2V9a2 2 0 00-2-2h-2m-4-3H9M7 16h6M7 8h6v4H7V8z" />
 </svg>
 
             
-            <span>posts</span>
+            <span>文章</span>
           </a>
         
       
@@ -552,12 +591,12 @@
             
           >
             
-              <svg class="h-5 w-5" aria-label="categories" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <svg class="h-5 w-5" aria-label="分类" fill="none" stroke="currentColor" viewBox="0 0 24 24">
   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10" />
 </svg>
 
             
-            <span>categories</span>
+            <span>分类</span>
           </a>
         
       
@@ -579,12 +618,12 @@
             
           >
             
-              <svg class="h-5 w-5" aria-label="tags" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <svg class="h-5 w-5" aria-label="标签" fill="none" stroke="currentColor" viewBox="0 0 24 24">
   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 7h.01M7 3h5c.512 0 1.024.195 1.414.586l7 7a2 2 0 010 2.828l-7 7a2 2 0 01-2.828 0l-7-7A1.994 1.994 0 013 12V7a4 4 0 014-4z" />
 </svg>
 
             
-            <span>tags</span>
+            <span>标签</span>
           </a>
         
       
@@ -606,12 +645,12 @@
             
           >
             
-              <svg class="h-5 w-5" aria-label="archives" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <svg class="h-5 w-5" aria-label="归档" fill="none" stroke="currentColor" viewBox="0 0 24 24">
   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 8h14M5 8a2 2 0 110-4h14a2 2 0 110 4M5 8v10a2 2 0 002 2h10a2 2 0 002-2V8m-9 4h4" />
 </svg>
 
             
-            <span>archives</span>
+            <span>归档</span>
           </a>
         
       
@@ -625,7 +664,7 @@
 
       <div class="px-4 py-6">
         
-  <nav class="breadcrumb mb-4 py-1 md:mb-6" aria-label="">
+  <nav class="breadcrumb mb-4 py-1 md:mb-6" aria-label="面包屑导航">
     <ol
       class="text-muted-foreground scrollbar-hide flex items-center space-x-1 overflow-x-auto py-1 text-sm whitespace-nowrap md:space-x-2"
     >
@@ -699,9 +738,11 @@
 
 <div class="post-meta mb-8">
   
-  <h1 class="text-foreground mb-6 text-3xl leading-tight font-bold md:text-4xl">
-    关山烟尘记-乔家才背景之一
-  </h1>
+  
+    <h1 class="text-foreground mb-6 text-3xl leading-tight font-bold md:text-4xl">
+      关山烟尘记-乔家才背景之一
+    </h1>
+  
 
   
   
@@ -716,15 +757,17 @@
           
           <div class="text-muted-foreground flex flex-wrap items-center gap-3 text-sm mb-4">
             
+            
             <div class="flex items-center gap-2">
               <svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
 </svg>
 
               <time datetime="2026-04-14">
-                April 14, 2026
+                2026年4月14日
               </time>
             </div>
+            
 
             
             
@@ -733,7 +776,7 @@
   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
 </svg>
 
-              <span></span>
+              <span>108 分钟</span>
             </div>
             
 
@@ -744,7 +787,7 @@
   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h7" />
 </svg>
 
-              <span></span>
+              <span>53654 字</span>
             </div>
             
           </div>
@@ -871,9 +914,9 @@
     href="https://whatot.github.io/leeao/01.%E8%87%AA%E4%BC%A0%E5%9B%9E%E5%BF%86%E7%B1%BB/%E6%88%91%E6%9C%80%E9%9A%BE%E5%BF%98%E7%9A%84%E4%BA%8B%E5%92%8C%E4%BA%BA.html#%E6%88%91%E6%9C%80%E9%9A%BE%E5%BF%98%E7%9A%84%E4%B8%80%E4%B8%AA%E5%9B%BD%E7%89%B9"target="_blank"
     class="inline-flex items-center gap-1"
   >我最难忘的一个国特<svg class="h-3 w-3 flex-shrink-0" id="external-link" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 3h6v6m-11 5L21 3m-3 10v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/></svg>
-  </a><a href="#%e6%88%91%e6%9c%80%e9%9a%be%e5%bf%98%e7%9a%84%e4%b8%80%e4%b8%aa%e5%9b%bd%e7%89%b9" class="heading-anchor" aria-label=""><svg class="h-4 w-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></g></svg></a></h2><p>八十九岁的乔家才将军死了，九年前，他预立遗嘱说：“骨灰永留台湾，不要携回大陆。……我对留在大陆之子女未尽教养之责，内疚很深，希我妻替我多多照顾，以弥补我之愧疚。”但是，当他在大陆的子女奔丧来台时候，所分到的财产，却只是官定最高价码的五分之一——各四十万元。谷正文将军私下告诉我：“乔老死前跟我说：‘我不要把遗产分给共产党！’”哪怕共产党是他的子女，他也不愿，他的内疚，挡不住他的仇共，他不让共产党来共他的产，可真顽固到底了。这位顽固的将军生前最后五年里，与我有一场笔仗、一段交谊、和一件耐人寻味的“托文之举”——他把他一直隐密不宣的《乔家才入狱记》托交到我手里，听我造成发表的事实，留下最珍贵的蒋介石黑牢史料。如今他死了，我汇集这五年来的有关文献于后，纪念这位我最难忘的一个国特。</p>
+  </a><a href="#%e6%88%91%e6%9c%80%e9%9a%be%e5%bf%98%e7%9a%84%e4%b8%80%e4%b8%aa%e5%9b%bd%e7%89%b9" class="heading-anchor" aria-label="链接到此部分"><svg class="h-4 w-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></g></svg></a></h2><p>八十九岁的乔家才将军死了，九年前，他预立遗嘱说：“骨灰永留台湾，不要携回大陆。……我对留在大陆之子女未尽教养之责，内疚很深，希我妻替我多多照顾，以弥补我之愧疚。”但是，当他在大陆的子女奔丧来台时候，所分到的财产，却只是官定最高价码的五分之一——各四十万元。谷正文将军私下告诉我：“乔老死前跟我说：‘我不要把遗产分给共产党！’”哪怕共产党是他的子女，他也不愿，他的内疚，挡不住他的仇共，他不让共产党来共他的产，可真顽固到底了。这位顽固的将军生前最后五年里，与我有一场笔仗、一段交谊、和一件耐人寻味的“托文之举”——他把他一直隐密不宣的《乔家才入狱记》托交到我手里，听我造成发表的事实，留下最珍贵的蒋介石黑牢史料。如今他死了，我汇集这五年来的有关文献于后，纪念这位我最难忘的一个国特。</p>
 <p>1994 年 7 月 25 日</p>
-<h3 id="附录一-给李敖先生的信乔家才">附录一 给李敖先生的信（乔家才）<a href="#%e9%99%84%e5%bd%95%e4%b8%80-%e7%bb%99%e6%9d%8e%e6%95%96%e5%85%88%e7%94%9f%e7%9a%84%e4%bf%a1%e4%b9%94%e5%ae%b6%e6%89%8d" class="heading-anchor" aria-label=""><svg class="h-4 w-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></g></svg></a></h3><h4 id="一给李敖先生第一信">一、给李敖先生第一信<a href="#%e4%b8%80%e7%bb%99%e6%9d%8e%e6%95%96%e5%85%88%e7%94%9f%e7%ac%ac%e4%b8%80%e4%bf%a1" class="heading-anchor" aria-label=""><svg class="h-4 w-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></g></svg></a></h4><p>敖之先生：</p>
+<h3 id="附录一-给李敖先生的信乔家才">附录一 给李敖先生的信（乔家才）<a href="#%e9%99%84%e5%bd%95%e4%b8%80-%e7%bb%99%e6%9d%8e%e6%95%96%e5%85%88%e7%94%9f%e7%9a%84%e4%bf%a1%e4%b9%94%e5%ae%b6%e6%89%8d" class="heading-anchor" aria-label="链接到此部分"><svg class="h-4 w-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></g></svg></a></h3><h4 id="一给李敖先生第一信">一、给李敖先生第一信<a href="#%e4%b8%80%e7%bb%99%e6%9d%8e%e6%95%96%e5%85%88%e7%94%9f%e7%ac%ac%e4%b8%80%e4%bf%a1" class="heading-anchor" aria-label="链接到此部分"><svg class="h-4 w-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></g></svg></a></h4><p>敖之先生：</p>
 <p>谢谢赠我尊著五巨册！</p>
 <p>《二二八研究》网罗了那么多的文章，客观详尽，好极了。你的结论，非常正确。三十多年前坐牢，和陈仪的浙江省政府秘书长张宣泽坐在一个牢房里。他说为日本人利用过的流氓，回台后分批训练，有一批还未训练的流氓，成了二二八主要发动者，正与尊著结论吻合。</p>
 <p>奉上拙著《为历史作证》一册，221 页至 265 页为戴笠辩诬，系反驳文强和沈醉而作。沈醉曾在香港镜报发表《不是答辩只作说明》。沈醉不是不答辩，而是无法答辩。一个人自己不顾自己的人格，总会感到惭愧的。沈醉为文不可靠，他的文章不能作为历史资料。</p>
@@ -881,12 +924,12 @@
 <p>抗战八年，我在北方，邢森洲大多在国外工作，成绩辉煌，惜久不见面。邢森洲是一位很重视道德的人，沈醉把他描写成不顾廉耻的小人，令人痛恨！敬颂</p>
 <p>著安！</p>
 <p>乔家才谨上七十八年 5 月 4 日</p>
-<h4 id="二给李敖先生第二信">二、给李敖先生第二信<a href="#%e4%ba%8c%e7%bb%99%e6%9d%8e%e6%95%96%e5%85%88%e7%94%9f%e7%ac%ac%e4%ba%8c%e4%bf%a1" class="heading-anchor" aria-label=""><svg class="h-4 w-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></g></svg></a></h4><p>敖之先生：</p>
+<h4 id="二给李敖先生第二信">二、给李敖先生第二信<a href="#%e4%ba%8c%e7%bb%99%e6%9d%8e%e6%95%96%e5%85%88%e7%94%9f%e7%ac%ac%e4%ba%8c%e4%bf%a1" class="heading-anchor" aria-label="链接到此部分"><svg class="h-4 w-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></g></svg></a></h4><p>敖之先生：</p>
 <p>我的文章拙劣，但力求真实、公正。</p>
 <p>戴笠先生确为古今难得一见之人物，八年抗战中，任何人的功劳，都不能和他比较，但他没有表白，连一枚勋章都没有。我出牢后，心有不平，才开始将他的一切公开发表，曾遭受当权者打击。闻你将出版有关戴笠的书籍，希望你公正，至少要采纳部分正确的材料。他忠于蒋，而他的死，无异是蒋杀死的。影印一份附上。祝</p>
 <p>著安！</p>
 <p>乔家才七十八年 6 月 14 日</p>
-<h4 id="三给李敖先生第三信">三、给李敖先生第三信<a href="#%e4%b8%89%e7%bb%99%e6%9d%8e%e6%95%96%e5%85%88%e7%94%9f%e7%ac%ac%e4%b8%89%e4%bf%a1" class="heading-anchor" aria-label=""><svg class="h-4 w-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></g></svg></a></h4><p>敖之先生：</p>
+<h4 id="三给李敖先生第三信">三、给李敖先生第三信<a href="#%e4%b8%89%e7%bb%99%e6%9d%8e%e6%95%96%e5%85%88%e7%94%9f%e7%ac%ac%e4%b8%89%e4%bf%a1" class="heading-anchor" aria-label="链接到此部分"><svg class="h-4 w-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></g></svg></a></h4><p>敖之先生：</p>
 <p>谢谢你赠我《军统内幕》！</p>
 <p>李敖出版社新版《军统内幕》，我不赞成，也不反对。因为出版业者有他的生意经，有他的打算，旁人不能置喙。不过你在缘起将我和沈醉混在一起，我不同意。我坐九年牢，出牢后，“一与之齐，终身不改”，怎么能和沈醉坐了共产党十六年牢，出牢后辱骂他工作了十八年的军统局相比呢？</p>
 <p>沈醉不仅是“反复小人”，而且卑鄙无耻。你捧他“此公纵‘小人’而有圣人行”，未免过火，忠奸颠倒，善恶不分，万难苟同。你说：“沈醉不复沈醉，沈醉醒矣！”是你在说醉话，李敖醉矣！</p>
@@ -905,7 +948,7 @@
 <p>沈醉要从戴笠的走狗变成周恩来的走狗，诚惶诚恐，要讨新主子的欢心，摇尾乞怜还不够，必须良心一横，狠狠地咬旧主子几口，于是《军统内幕》出笼了。</p>
 <p>军统局的工作，百分之九十九是对日抗战、敌后的情报战、破坏军事设施、汉奸制裁；战区的游击战、伪军策反、物资抢购；大后方的治安维持、防间防谍、镇压反动，项目繁多，工作繁忙。对付共产党，不过百分之一二。撰写《军统内幕》，不提对日作战的种种工作，专为讨周总理欢心，加油添醋，专写些对付共产党的工作，能算内幕吗？</p>
 <p>再就马汉三被杀一事而言，马之被杀真正原因，因为他身为北平市民政局局长，没有把毛人凤局长的女友刘秋芳选为北平市选出的立法委员。所谓贪污，拥郑反毛，帮李宗仁竞选副总统，只是所加的罪名而已。郑介民做过军统局早期的华北特派员，所以和华北工作的同志，关系比较密切，马汉三对人处世非常通达，不会拥这个倒那个。马汉三是军统局华北办事处主任，和李宗仁没有直接关系，和李宗仁有关系的是张家铨，他是行营第二处长。三十七年李宗仁当选为副总统，老总统很不高兴，不把马汉三和李宗仁扯在一起，就杀不了他，说他帮李宗仁助选，马汉三就死定了。军统内幕根本没有说刘秋芳竞选北平市立法委员，是沈醉不知内幕。</p>
-<h3 id="附录二-乔家才将军来信书后李敖">附录二 乔家才将军来信书后（李敖）<a href="#%e9%99%84%e5%bd%95%e4%ba%8c-%e4%b9%94%e5%ae%b6%e6%89%8d%e5%b0%86%e5%86%9b%e6%9d%a5%e4%bf%a1%e4%b9%a6%e5%90%8e%e6%9d%8e%e6%95%96" class="heading-anchor" aria-label=""><svg class="h-4 w-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></g></svg></a></h3><p>乔家才将军现年八十四岁，他是山西省交城县人。1926 年入黄埔军校，与国民党情报头子戴笠同期，不过他的水乎要比戴笠高得多，他在黄埔毕业后，在 1930 年曾入北平民国大学政治经济系。1931 年九一八事变后，他参加了军事委员会调查统计局，从事对日情报作战。1936 年任北平（今北京）站站长。1937 年七七事变后，日军进北平，他仍继续潜伏北平，搜集情报。1938 年调到后方，督察河南工作。1939 年督察华北敌后工作，几为日军所捕。1940 年任军统局督察室主任。1941 年任晋东站站长兼二十七军参谋处副处长，在太行山打游击。1943 年任财政部陕西缉私处处长。1944 年任军统局华北办事处主任，旋任第一战区晋冀豫边区党政军工作总队总队长。1945 年任中美合作所陕坝第四训练班副主任。1946 年主持山西整肃汉奸工作，后任中央警校北平特警班副主任。1947 年赴美考察，返国后任保密局北平站站长，并于 1948 年当选国大代表。</p>
+<h3 id="附录二-乔家才将军来信书后李敖">附录二 乔家才将军来信书后（李敖）<a href="#%e9%99%84%e5%bd%95%e4%ba%8c-%e4%b9%94%e5%ae%b6%e6%89%8d%e5%b0%86%e5%86%9b%e6%9d%a5%e4%bf%a1%e4%b9%a6%e5%90%8e%e6%9d%8e%e6%95%96" class="heading-anchor" aria-label="链接到此部分"><svg class="h-4 w-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></g></svg></a></h3><p>乔家才将军现年八十四岁，他是山西省交城县人。1926 年入黄埔军校，与国民党情报头子戴笠同期，不过他的水乎要比戴笠高得多，他在黄埔毕业后，在 1930 年曾入北平民国大学政治经济系。1931 年九一八事变后，他参加了军事委员会调查统计局，从事对日情报作战。1936 年任北平（今北京）站站长。1937 年七七事变后，日军进北平，他仍继续潜伏北平，搜集情报。1938 年调到后方，督察河南工作。1939 年督察华北敌后工作，几为日军所捕。1940 年任军统局督察室主任。1941 年任晋东站站长兼二十七军参谋处副处长，在太行山打游击。1943 年任财政部陕西缉私处处长。1944 年任军统局华北办事处主任，旋任第一战区晋冀豫边区党政军工作总队总队长。1945 年任中美合作所陕坝第四训练班副主任。1946 年主持山西整肃汉奸工作，后任中央警校北平特警班副主任。1947 年赴美考察，返国后任保密局北平站站长，并于 1948 年当选国大代表。</p>
 <p>正在乔家才将军身膺北方情报重寄和国大代表的当儿，军统局局长毛人凤到了北平。1948 年 7 月 1 日，毛人凤约乔家才将军和当天下台的北平市民政局长马汉三开会，当场把他们五花大绑，分别塞进两辆汽车，送入监牢，并钉上脚镣，对付自己人，一如对付江洋大盗。八天后，由保密局军法处长李希成押解，运到南京下狱。中秋过后，改移常州。在常州狱里，他的一个学生偷偷告诉他，见报得知马汉三已经被枪毙了，报上还说乔家才判了无期徒刑。——被判了无期徒刑，当事人自己还不知道，也不被告知，国民党特务机构的黑暗与恐怖，由此可见一斑了。</p>
 <p>1948 年 11 月，四个枪兵押解乔家才将军重返南京。12 月 1 日，就跟十几个难友一道，押上轮船，直抵台湾。他在不幸中真是大幸，他早来台湾一步，因为第二年大陆失守前，蒋介石下令毛人凤，家法处分的囚犯中，五年以下徒刑的一律释放，五年以上的一律枪毙。由于先期运台，乃得死里逃生。</p>
 <p>乔家才将军到台湾后，一路坐牢。前后坐了九年后，毛人凤死了，他给放了出来。他这牢可坐得神来之牢，他回忆：“我坐了九年牢，未经正式军法审判，我没有看见过起诉书、也没有看见过判决书，不知身犯何罪，害得妻离子散，惨绝人寰。”——国民党特务机构，对自己的首席大将都可无法无天，如此对待，其他小人物或局外人，更可想而知了。</p>
@@ -938,7 +981,7 @@
 <p>我很佩服在乔家才将军不肯批评毛人凤以上的人物时刻，沈醉挺身批评了他们。乔家才将军对沈醉苛责，反倒对毛人凤以上的人物宽假，这不是“真实”、也不是“公正”、更不是真的中华文化！</p>
 <p>乔家才将军并非不深明大义，例如他在《为历史作证》中指出：“人人都知道杀害岳飞的是卖国贼大奸臣秦桧，其实秦桧是在背黑锅，真正要杀岳飞的不是秦桧，而是宋高宗赵构。”可怜的是，我们的现代岳飞，却迷糊到明于知古而昧于察今，他被现代秦桧整得家破人亡，却还高喊领袖英明呢！</p>
 <p>1989 年 8 月 31 日-9 月 4 日</p>
-<h3 id="附录三-不是答辩只作说明沈醉">附录三 不是答辩只作说明（沈醉）<a href="#%e9%99%84%e5%bd%95%e4%b8%89-%e4%b8%8d%e6%98%af%e7%ad%94%e8%be%a9%e5%8f%aa%e4%bd%9c%e8%af%b4%e6%98%8e%e6%b2%88%e9%86%89" class="heading-anchor" aria-label=""><svg class="h-4 w-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></g></svg></a></h3><p>感谢乔家才骂我</p>
+<h3 id="附录三-不是答辩只作说明沈醉">附录三 不是答辩只作说明（沈醉）<a href="#%e9%99%84%e5%bd%95%e4%b8%89-%e4%b8%8d%e6%98%af%e7%ad%94%e8%be%a9%e5%8f%aa%e4%bd%9c%e8%af%b4%e6%98%8e%e6%b2%88%e9%86%89" class="heading-anchor" aria-label="链接到此部分"><svg class="h-4 w-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></g></svg></a></h3><p>感谢乔家才骂我</p>
 <p>从去冬以来，台湾来京的亲友，不少人以爱护的口吻告诉我，说台湾有人写文章不断骂我，而且收入了他的选集中，他们希望我千万不要为此事而生气。我听后总是大笑一阵，然后坦然地说：有人写文章骂，说明我还有骂的价值，而能收入其选集中，我不但不会生气，还要表示感谢。一个人在一生中，能有几个够条件被别人写到书上去骂？不管怎样，名留书上的时间，总会比我活在世上的时间要长得多，这不是坏事而是好事，所以我绝不会因为被骂了一通，就那么沉不住气，只希望有机会能拜读一下全文就满意了。</p>
 <p>不少亲友很够交情，几个月内，我先后收到从美国、日本、香港等处寄来的老同事乔家才先生的大作《浩然集》十九部之多，我除留两部外，其他均捐赠有关部门和送与几位有关人士作参考。乔先生的大作共五册，其中一册《为历史作证》中，有一段说“沈醉是反复无常的小人”，写得不太长，正如他在该文后面所说：“……怕污了我的笔墨。”这次骂得不太痛快，连我这被骂的也没有过上瘾。幸好乔先生有位朋友从纽约到台湾，寒喧几句之后就说乔先生骂得还不够，因拙著《我所知道的戴笠》一书，在美国（也许在欧洲、亚洲也一样）到处可以看见，他们认为这“绝不是沈醉本人作品，是由共产党干部捉刀代笔，利用他的名字而已……”。由于看了拙著之后，认为我“诬蔑了蒋委员长和戴笠将军，丑化了国民政府……”，所以阅后“令人发指”。真没有想到，我一本书会使得我一些旧同事（当然是指在军统局工作过的同事），气成那个样子，真是抱歉得很。</p>
 <p>乔先生经这位纽约来客（此公大名已有人告诉我）一番劝导之后，便又再来一篇洋洋万余字的长文大骂一通。我看了倒有点舒适感，它比上篇几千字像样一些了。不过乔先生在《再为戴笠辩诬》中用的小标题是“共干捉刀沈醉署名”。但提出的问题那么不着边际，我不想加以答辩，只想说明几点，因为将来或有见面之时，何必破口大骂呢？</p>
@@ -948,7 +991,7 @@
 <p>所谓共干捉刀沈醉署名</p>
 <p>据说，乔先生又有位朋友告诉他这样一个消息：“沈醉人格太低，良心太坏，居心叵测，早已遭受天谴，祸延子女。他的子女，不是瞎子，就是拐子。”这真是“大快人心”的事！可惜老天爷并不是那样不公正。我的几个孩子（包括孙子、外孙），不但个个健康，而且都是游泳健将，女儿中还有一个被选上“健美妈妈”。但和乔先生相比，我就大有逊色了。乔先生的大公子在大陆上早已成了光荣的中国共产党党员，而女公子最近申请加入“民革”（即国民党革命委员会）也得到批准。而我在国内唯一的女儿，虽已当上了编辑，但还不够加入共产党的条件。她的履历表上，在党派一栏中，仍然只能填上“群众”。这一点，乔先生很值得安慰，也很值得骄傲吧！</p>
 <p>至于在乔先生笔下，一再提到我写的东西是“共干捉刀沈醉署名”。可能乔先生还是用四十年前的眼光来度我。当时我只会在公文上批几个字。我估计，最近台湾李敖先生写的关于“蒋家父子……”一文中提到“沈醉以前是蒋手下……写了几本回忆录，台湾的地下出版商已经出版了四本。”乔先生如果想再找材料骂我，这四本书大可翻一翻。在拙著《我这三十年》（国内发行一百五十万册，还有英文和日文版本。香港版《大陆生活三十年》由香港镜报出版，已连续发行了四版）。香港版上册第 40 页中我写道：“有人说我是人民的罪人，我怎么也想不通……所谓罪者，只是由于‘成者为王，败者为寇’的缘故罢了。……戴笠过去一直培养我，我对戴笠一直有着深厚的感情，你要说戴笠如何……我却认为戴笠是个智勇双全的奇男子。”同书下册第 3 页中我又写道：“我站在戴笠的墓前，不由得思绪万千，……自己过去追随戴笠干下的罪行，早已深恶痛绝，但对戴笠个人的私情，却总是有些难以忘怀。想到共产党人如此不念旧恶的宽大胸怀，想到戴笠依旧安静地长眠地下，我激动异常。”试想，以上这些用白纸黑字印在书上的话，如果不是出自我的手笔，别人会有这样的感触吗？我 1981 年在香港撰写《战犯改造所见闻》时，不少记者看我连底稿都不打，在稿纸上一气呵成，很感惊异。很多人认为我在北京写东西揭露国民党过去的罪行，不是自己本意，而是骗取信任。可是我到了香港，并没有投奔“自由世界”去充当“反共义士”，领取大笔奖赏，出卖自己的灵魂。我本来有一年的假期，但不到一个月我便回到北京。我认为这是在十亿中国人民面前，保持了自己的气节。扪心自问，我是站在全国人民一边，无愧于做一个站起来的中国人。阁下的笔再骂得凶一些，也无损于我的为人！（香港式《镜报月刊》，1988 年 6 月号）</p>
-<h3 id="附录四-发表乔家才入狱记述缘李敖">附录四 发表《乔家才入狱记》述缘（李敖）<a href="#%e9%99%84%e5%bd%95%e5%9b%9b-%e5%8f%91%e8%a1%a8%e4%b9%94%e5%ae%b6%e6%89%8d%e5%85%a5%e7%8b%b1%e8%ae%b0%e8%bf%b0%e7%bc%98%e6%9d%8e%e6%95%96" class="heading-anchor" aria-label=""><svg class="h-4 w-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></g></svg></a></h3><p>《乔家才入狱记》是我定的题目，原名《入狱记》，又名《南柯一梦》，为了彰显作者的身份，我特改定为这样的题目。这一改定，并没经过乔家才将军同意，一如我发表这四万八千字的文章，并没经过乔家才将军同意一样。</p>
+<h3 id="附录四-发表乔家才入狱记述缘李敖">附录四 发表《乔家才入狱记》述缘（李敖）<a href="#%e9%99%84%e5%bd%95%e5%9b%9b-%e5%8f%91%e8%a1%a8%e4%b9%94%e5%ae%b6%e6%89%8d%e5%85%a5%e7%8b%b1%e8%ae%b0%e8%bf%b0%e7%bc%98%e6%9d%8e%e6%95%96" class="heading-anchor" aria-label="链接到此部分"><svg class="h-4 w-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></g></svg></a></h3><p>《乔家才入狱记》是我定的题目，原名《入狱记》，又名《南柯一梦》，为了彰显作者的身份，我特改定为这样的题目。这一改定，并没经过乔家才将军同意，一如我发表这四万八千字的文章，并没经过乔家才将军同意一样。</p>
 <p>乔家才将军现年八十五岁。他是黄埔四期的毕业生，再入北平民国大学政治经济系。九一八事变后，应黄埔同学戴笠之邀，入军统局，先后任北平站站长、军统局督察室主任、晋东站站长兼二十七军参谋处副处长、陕西缉私处处长、华北办事处主任、第一战区晋冀豫边区党政军工作总队总队长、中美合作所陕坝第四训练班副主任、中央警校北平特警班副主任、保密局北平站站长，并当选国大代表。</p>
 <p>戴笠死后，正在乔家才将军身膺北方情报重寄和国大代表的当儿，军统局局长毛人凤到了北平。1948 年 7 月 1 日，毛人凤约乔家才将军和当天下台的北平市民政局长马汉三开会，当场把他们五花大绑，分别塞进两辆汽车，送入监牢，并钉上脚镣，对付自己人，一如对付江洋大盗。八天后，由保密局军法处长李希成押解，运到南京下狱。中秋过后，改移常州。在常州狱里，他的一个学生偷偷告诉他，见报得知马汉三已经被枪毙了，报上还说乔家才判了无期徒刑。——被判了无期徒刑，当事人自己还不知道，也不被告知，蒋介石特务机构的黑暗与恐怖，由此可见一斑了。</p>
 <p>1948 年 11 月，四个枪兵押解乔家才将军重返南京。12 月 1 日，就跟十几个难友一道，押上轮船，直抵台湾。他在不幸中真是大幸，他早来台湾一步，因为第二年大陆失守前，蒋介石下令毛人凤，家法处分的囚犯中，五年以下徒刑的一律释放，五年以上的一律枪毙。由于先期运台，乃得死里逃生。</p>
@@ -958,7 +1001,7 @@
 <p>看了《乔家才入狱记》，我们才感到这一冤狱，真正的制片不是毛人凤，而是毛人凤背后的蒋介石。蒋介石以九字御批“乔家才无期徒刑可也！”定此现代风波亭，其草菅人命、其蹂躏人权、其无情无义于自己学生同志功臣，草草九字，已跃然纸上。读《乔家才入狱记》，只有把握住这一脉络，才能体会到这四万八千字的真正血泪。</p>
 <p>《乔家才入狱记》毕竟“落到敌人手里”，如今给发表出来，也算一段佳话。我相信发表的结果，绝非“罪过大矣”，反倒“善莫大焉”。——鉴往而知来、温故而知新、发黑暗而曝光明，都是这一发表带给我们的新意义，乔家才将军字字看来皆是血，九年辛苦不寻常，留给人间这样不寻常的文献证据，真令我们有“正义在兹”之感，我们真要佩服他。</p>
 <p>1990 年 10 月 5 日</p>
-<h3 id="附录五-乔家才入狱记乔家才">附录五 乔家才入狱记（乔家才）<a href="#%e9%99%84%e5%bd%95%e4%ba%94-%e4%b9%94%e5%ae%b6%e6%89%8d%e5%85%a5%e7%8b%b1%e8%ae%b0%e4%b9%94%e5%ae%b6%e6%89%8d" class="heading-anchor" aria-label=""><svg class="h-4 w-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></g></svg></a></h3><p>写在前面</p>
+<h3 id="附录五-乔家才入狱记乔家才">附录五 乔家才入狱记（乔家才）<a href="#%e9%99%84%e5%bd%95%e4%ba%94-%e4%b9%94%e5%ae%b6%e6%89%8d%e5%85%a5%e7%8b%b1%e8%ae%b0%e4%b9%94%e5%ae%b6%e6%89%8d" class="heading-anchor" aria-label="链接到此部分"><svg class="h-4 w-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></g></svg></a></h3><p>写在前面</p>
 <p>入狱记撰好，不打算公开发表，怕落到敌人手里，用做攻击我政府不民主的具体例证，则罪过大矣！后来看到刘仲康著作：“保密局长毛人凤先生，三十七年 7 月间，从北平到济南。此行任务，是处理北平市政府民政局长、也是军统局开山的老同志马汉三背离团体的案子。马被扣，奉当局核准判处死刑。同案几位与马有相同历史，又同一政治企图的人，都分别处刑。”</p>
 <p>又叙述毛人凤先生所说的话：“讵料戴先生尸骨未寒，竟有若干年的老同志企图背叛团体，离开领袖领导的革命大道。为整饬纪律，不得不忍痛制裁，非主谋分子，一概不咎云云。”</p>
 <p>这是一种既恐吓又安抚的说辞，盖恐大家不服。毛人凤先生把我关起来以后，到天津、到太原、到济南，向同志们宣传恐吓，做以上的宣布。</p>
@@ -1355,14 +1398,14 @@
       
       <div class="min-w-0 flex-1">
         <h3 class="text-foreground mb-2 text-lg font-semibold">
-          
+          版权声明
         </h3>
 
         <div class="text-muted-foreground space-y-2 text-sm">
           
           
             <p>
-              <strong>:</strong>
+              <strong>作者:</strong>
               Entropy Decrease
             </p>
           
@@ -1370,7 +1413,7 @@
 
           
           <p>
-            <strong>:</strong>
+            <strong>链接:</strong>
             <a
               href="https://entropydecrease.github.io/posts/%E4%B9%94%E5%AE%B6%E6%89%8D-%E8%83%8C%E6%99%AF1/"
               class="text-primary hover:text-primary/80 break-all hyphens-auto transition-colors duration-200"
@@ -1381,7 +1424,7 @@
 
           
           <p>
-            <strong>:</strong>
+            <strong>许可证:</strong>
             
               <a
                 href="https://creativecommons.org/licenses/by-nc-sa/4.0/"
@@ -1430,7 +1473,7 @@
   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
 </svg>
                 <span class="text-muted-foreground text-sm font-medium">
-                  
+                  上一篇
                 </span>
               </div>
 
@@ -1447,7 +1490,7 @@
 </svg>
 
               <time datetime="2026-04-14">
-                4/14/26
+                26/4/14
               </time>
             </div>
           </a>
@@ -1464,7 +1507,7 @@
             <div>
               <div class="mb-3 flex items-center justify-end gap-3">
                 <span class="text-muted-foreground text-sm font-medium">
-                  
+                  下一篇
                 </span>
                 <svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
@@ -1480,7 +1523,7 @@
 
             <div class="text-muted-foreground mt-auto flex items-center justify-end gap-2 text-xs">
               <time datetime="2026-04-14">
-                4/14/26
+                26/4/14
               </time>
               <svg class="h-3 w-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
@@ -1512,7 +1555,7 @@
   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1" />
 </svg>
       <h2 class="text-foreground text-2xl font-bold">
-        
+        相关内容
       </h2>
     </div>
 
@@ -1728,7 +1771,7 @@
   class="pointer-events-none fixed bottom-4 left-1/2 z-9999 w-fit -translate-x-1/2 translate-y-24 opacity-0 transition-all duration-300 ease-out sm:right-0 sm:left-0 sm:mx-auto sm:translate-x-0"
   data-dock-mode="float"
   role="toolbar"
-  aria-label=""
+  aria-label="快捷操作工具栏"
 >
   <nav
     class="border-border bg-card/80 scrollbar-hide xs:px-3 xs:py-2 mx-auto flex max-w-[calc(100vw-2rem)] min-w-fit items-center justify-center overflow-x-auto rounded-2xl border px-4 py-3 shadow-lg backdrop-blur-sm sm:px-4 sm:py-3"
@@ -1738,15 +1781,15 @@
       <button
         id="dock-back"
         class="text-muted-foreground hover:text-primary hover:bg-primary/10 focus:ring-primary/20 xs:px-2 xs:py-1.5 flex shrink-0 items-center gap-2 rounded-lg px-3 py-2 text-sm font-medium transition-all duration-300 ease-out hover:-translate-y-0.5 hover:scale-105 focus:ring-2 focus:outline-none sm:px-3 sm:py-2"
-        title=""
-        aria-label=""
+        title="返回"
+        aria-label="返回"
       >
         <svg class="h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
   <path d="m12 19-7-7 7-7"/>
   <path d="M19 12H5"/>
 </svg>
 
-        <span class="hidden sm:inline"></span>
+        <span class="hidden sm:inline">返回</span>
       </button>
 
       
@@ -1757,14 +1800,14 @@
     <button
       id="dock-search"
       class="text-muted-foreground hover:text-primary hover:bg-primary/10 focus:ring-primary/20 xs:px-3 xs:py-1.5 flex shrink-0 items-center gap-2 rounded-lg px-4 py-2 text-sm font-medium transition-all duration-300 ease-out hover:-translate-y-0.5 hover:scale-105 focus:ring-2 focus:outline-none sm:px-4 sm:py-2"
-      title=""
-      aria-label=""
+      title="搜索"
+      aria-label="搜索"
     >
       <svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m21 21-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
 </svg>
 
-      <span class="hidden md:inline"></span>
+      <span class="hidden md:inline">搜索</span>
     </button>
 
     
@@ -1779,14 +1822,14 @@
     <button
       id="dock-top"
       class="text-muted-foreground hover:text-primary hover:bg-primary/10 focus:ring-primary/20 xs:px-2 xs:py-1.5 flex shrink-0 items-center gap-2 rounded-lg px-3 py-2 text-sm font-medium transition-all duration-300 ease-out hover:-translate-y-0.5 hover:scale-105 focus:ring-2 focus:outline-none sm:px-3 sm:py-2"
-      title=""
-      aria-label=""
+      title="返回顶部"
+      aria-label="返回顶部"
     >
       <svg class="h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
   <path d="m18 15-6-6-6 6"/>
 </svg>
 
-      <span class="hidden sm:inline"></span>
+      <span class="hidden sm:inline">顶部</span>
     </button>
   </nav>
 </div>
@@ -1812,19 +1855,32 @@
 
       <aside
     id="toc-container"
-    class="toc-center"
-    data-position="center"
+    class="toc-side"
+    data-position="side"
   >
-      <div
-        id="toc-center"
-        class="pointer-events-none fixed top-28 right-0 left-0 z-40 mx-auto w-full max-w-4xl px-4 transition-all duration-300"
-      >
-        <div class="pointer-events-auto relative mx-auto w-fit">
-          <button
-            id="toc-center-toggle"
-            class="bg-card/80 border-border text-muted-foreground hover:text-primary hover:bg-primary/10 ring-offset-background focus-visible:ring-ring flex cursor-pointer items-center gap-2 rounded-full border px-4 py-1.5 text-sm shadow-sm backdrop-blur-sm transition-colors focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:outline-none"
-          >
-            <svg class="h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <div id="toc-layer">
+        <div id="toc-anchor">
+          <div id="toc-side">
+            
+            <div
+              id="toc-rail"
+              class="scrollbar-hide"
+              role="button"
+              tabindex="0"
+              aria-controls="toc-panel"
+              aria-expanded="false"
+              aria-label="目录"
+            ></div>
+
+            
+            <div id="toc-trigger-wrap">
+              <button
+                id="toc-trigger"
+                class="bg-card/80 border-border text-muted-foreground hover:text-primary hover:bg-primary/10 ring-offset-background focus-visible:ring-ring flex cursor-pointer items-center gap-2 rounded-full border px-4 py-1.5 text-sm shadow-sm backdrop-blur-sm transition-colors focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:outline-none"
+                aria-controls="toc-panel"
+                aria-expanded="false"
+              >
+                <svg class="h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
   <line x1="8" x2="21" y1="6" y2="6"/>
   <line x1="8" x2="21" y1="12" y2="12"/>
   <line x1="8" x2="21" y1="18" y2="18"/>
@@ -1833,22 +1889,64 @@
   <line x1="3" x2="3.01" y1="18" y2="18"/>
 </svg>
 
-            <span id="toc-center-title" class="max-w-[200px] truncate"></span>
-            <svg class="h-3 w-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <span id="toc-trigger-title" class="max-w-[200px] truncate">目录</span>
+                <svg class="h-3 w-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
 </svg>
-          </button>
+              </button>
+            </div>
 
-          
-          <div
-            id="toc-center-dropdown"
-            class="bg-card border-border scrollbar-hide absolute top-full left-1/2 mt-2 hidden max-h-[60vh] w-[280px] origin-top -translate-x-1/2 scale-95 overflow-y-auto rounded-xl border p-4 opacity-0 shadow-lg transition-all"
-          >
-            <div
-              id="toc-center-content"
-              class="[&_a]:text-muted-foreground [&_a:hover]:bg-primary/10 [&_a:hover]:text-primary [&_a.active]:bg-primary/10 [&_a.active]:text-primary text-sm [&_a]:block [&_a]:truncate [&_a]:rounded-md [&_a]:px-2 [&_a]:py-1 [&_a]:transition-colors [&_a.active]:font-medium [&_li]:my-1.5 [&_nav>ul]:pl-0 [&_ul]:list-none [&_ul]:pl-4"
-            >
-              <nav id="TableOfContents">
+            
+            <div id="toc-panel" class="scrollbar-hide overflow-y-auto">
+              <div
+                class="text-foreground mb-3 flex items-center justify-between gap-2 text-sm font-bold"
+              >
+                <span class="truncate">目录</span>
+                <div class="flex shrink-0 items-center gap-1">
+                  <button
+                    id="toc-pin"
+                    class="text-muted-foreground hover:text-primary hover:bg-primary/10 focus-visible:ring-ring cursor-pointer items-center rounded p-1 transition-colors focus-visible:ring-2 focus-visible:outline-none"
+                    aria-pressed="false"
+                    aria-label="固定目录"
+                    title="固定目录"
+                    data-label-pin="固定目录"
+                    data-label-unpin="取消固定目录"
+                  >
+                    <span id="toc-pin-on">
+                      <svg class="h-3 w-3" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <path d="M12 17v5"/>
+  <path d="M9 10.76a2 2 0 0 1-1.11 1.79l-1.78.9A2 2 0 0 0 5 15.24V16a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-.76a2 2 0 0 0-1.11-1.79l-1.78-.9A2 2 0 0 1 15 10.76V7a1 1 0 0 1 1-1 2 2 0 0 0 0-4H8a2 2 0 0 0 0 4 1 1 0 0 1 1 1z"/>
+</svg>
+
+                    </span>
+                    <span id="toc-pin-off">
+                      <svg class="h-3 w-3" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <path d="M12 17v5"/>
+  <path d="M15 9.34V7a1 1 0 0 1 1-1 2 2 0 0 0 0-4H7.89"/>
+  <path d="M9 9v1.76a2 2 0 0 1-1.11 1.79l-1.78.9A2 2 0 0 0 5 15.24V16a1 1 0 0 0 1 1h11"/>
+  <path d="m2 2 20 20"/>
+</svg>
+
+                    </span>
+                  </button>
+                  <button
+                    id="toc-close"
+                    class="text-muted-foreground hover:text-foreground focus-visible:ring-ring cursor-pointer items-center rounded p-1 transition-colors focus-visible:ring-2 focus-visible:outline-none"
+                    aria-label="关闭目录"
+                    title="关闭目录"
+                  >
+                    <svg class="h-3 w-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+</svg>
+
+                  </button>
+                </div>
+              </div>
+              <div
+                id="toc-side-content"
+                class="[&_a]:text-muted-foreground [&_a:hover]:bg-primary/10 [&_a:hover]:text-primary [&_a.active]:bg-primary/10 [&_a.active]:text-primary text-sm [&_a]:block [&_a]:rounded-md [&_a]:px-2 [&_a]:py-1 [&_a]:wrap-break-word [&_a]:whitespace-normal [&_a]:transition-colors [&_a.active]:font-medium [&_li]:my-1.5 [&_nav>ul]:pl-0 [&_ul]:list-none [&_ul]:pl-4"
+              >
+                <nav id="TableOfContents">
   <ul>
     <li><a href="#我最难忘的一个国特">我最难忘的一个国特</a>
       <ul>
@@ -1867,6 +1965,7 @@
     </li>
   </ul>
 </nav>
+              </div>
             </div>
           </div>
         </div>
@@ -1896,7 +1995,7 @@
 </svg>
 
     </div>
-    <h2 id="search-title" class="sr-only"></h2>
+    <h2 id="search-title" class="sr-only">搜索</h2>
 
     
     <div class="relative flex-1">
@@ -1904,8 +2003,8 @@
       <button
         id="search-clear"
         class="text-muted-foreground hover:text-foreground hover:bg-muted/50 pointer-events-none absolute top-1/2 left-0 z-10 h-5 w-5 -translate-y-1/2 rounded opacity-0 transition-all duration-200"
-        title=""
-        aria-label=""
+        title="清空"
+        aria-label="清空"
       >
         <svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
@@ -1917,7 +2016,7 @@
       <input
         id="search-input"
         type="text"
-        placeholder=""
+        placeholder="搜索文章..."
         class="text-foreground placeholder:text-muted-foreground w-full border-none bg-transparent pl-8 text-lg outline-none"
         autocomplete="off"
         spellcheck="false"
@@ -1928,8 +2027,8 @@
     <button
       id="search-close"
       class="text-muted-foreground hover:text-foreground hover:bg-muted/50 flex h-6 w-6 items-center justify-center rounded-md p-0.5 transition-all duration-200"
-      title=""
-      aria-label=""
+      title="关闭"
+      aria-label="关闭"
     >
       <svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
@@ -1949,7 +2048,7 @@
 
       </div>
       <h3 class="text-foreground mb-2 text-lg font-semibold">
-        
+        开始搜索
       </h3>
     </div>
 
@@ -1958,7 +2057,7 @@
       <div
         class="mr-3 h-6 w-6 animate-spin rounded-full border-2 border-current border-t-transparent"
       ></div>
-      <span class="text-muted-foreground"></span>
+      <span class="text-muted-foreground">搜索中...</span>
     </div>
 
     
@@ -1974,7 +2073,7 @@
 
       </div>
       <h3 class="text-foreground mb-2 text-lg font-semibold">
-        
+        未找到结果
       </h3>
     </div>
 
@@ -1984,7 +2083,7 @@
       <div
         id="search-stats"
         class="text-muted-foreground border-border border-b px-4 py-3 text-sm"
-        data-count-other=""
+        data-count-other="找到 %d 个结果"
       ></div>
 
       
@@ -1999,20 +2098,20 @@
       <div class="flex items-center gap-2 md:gap-4">
         <div class="flex items-center gap-1">
           <kbd class="bg-muted border-border rounded border px-1.5 py-0.5 text-xs">↑↓</kbd>
-          <span class="hidden sm:inline"></span>
+          <span class="hidden sm:inline">导航</span>
         </div>
         <div class="flex items-center gap-1">
           <kbd class="bg-muted border-border rounded border px-1.5 py-0.5 text-xs">↵</kbd>
-          <span class="hidden sm:inline"></span>
+          <span class="hidden sm:inline">选择</span>
         </div>
         <div class="flex items-center gap-1">
           <kbd class="bg-muted border-border rounded border px-1.5 py-0.5 text-xs">ESC</kbd>
-          <span class="hidden sm:inline"></span>
+          <span class="hidden sm:inline">关闭</span>
         </div>
       </div>
       <div class="search-hint-desktop flex items-center gap-1">
         <kbd class="bg-muted border-border rounded border px-1.5 py-0.5 text-xs">⌘K</kbd>
-        <span></span>
+        <span>快捷键</span>
       </div>
     </div>
   </div>
